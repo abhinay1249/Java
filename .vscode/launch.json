@@ -1,0 +1,357 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Mappractice",
+            "request": "launch",
+            "mainClass": "Mappractice",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "Posititonofelement",
+            "request": "launch",
+            "mainClass": "Posititonofelement",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "Repeatedvalue",
+            "request": "launch",
+            "mainClass": "Repeatedvalue",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "Highestnumber",
+            "request": "launch",
+            "mainClass": "Highestnumber",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Abstract_class",
+            "request": "launch",
+            "mainClass": "Abstract_class",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "Access_modifier",
+            "request": "launch",
+            "mainClass": "Access_modifier",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "Annotation",
+            "request": "launch",
+            "mainClass": "Annotation",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "Arraylist",
+            "request": "launch",
+            "mainClass": "Arraylist",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "Mergelists",
+            "request": "launch",
+            "mainClass": "Collections_Assignment.Mergelists",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "Repeatedvalue",
+            "request": "launch",
+            "mainClass": "Collections_Assignment.Repeatedvalue",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "Splitlists",
+            "request": "launch",
+            "mainClass": "Collections_Assignment.Splitlists",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "Sum",
+            "request": "launch",
+            "mainClass": "Collections_Assignment.Sum",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "Sumofeven",
+            "request": "launch",
+            "mainClass": "Collections_Assignment.Sumofeven",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "Customexception",
+            "request": "launch",
+            "mainClass": "Customexception",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "Enum_class",
+            "request": "launch",
+            "mainClass": "Enum_class",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "Enum_if_and_switch",
+            "request": "launch",
+            "mainClass": "Enum_if_and_switch",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "Exception",
+            "request": "launch",
+            "mainClass": "Exception",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "Exception_handling",
+            "request": "launch",
+            "mainClass": "Exception_handling",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "Exception_throw",
+            "request": "launch",
+            "mainClass": "Exception_throw",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "Files",
+            "request": "launch",
+            "mainClass": "Files",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "FizzBuzz",
+            "request": "launch",
+            "mainClass": "FizzBuzz",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "Functional_interface",
+            "request": "launch",
+            "mainClass": "Functional_interface",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "Hello",
+            "request": "launch",
+            "mainClass": "Hello",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "Interface",
+            "request": "launch",
+            "mainClass": "Interface",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "Linkedlistpractice",
+            "request": "launch",
+            "mainClass": "Linkedlistpractice",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "Multiplecatch",
+            "request": "launch",
+            "mainClass": "Multiplecatch",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "Packages",
+            "request": "launch",
+            "mainClass": "Packages",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "Palindrome",
+            "request": "launch",
+            "mainClass": "Palindrome",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "Reverse_a_String",
+            "request": "launch",
+            "mainClass": "Reverse_a_String",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "Stackpractice",
+            "request": "launch",
+            "mainClass": "Stackpractice",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "Textbufferedwriter",
+            "request": "launch",
+            "mainClass": "Textbufferedwriter",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "Textfilebuffered",
+            "request": "launch",
+            "mainClass": "Textfilebuffered",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "Textfileoutputstream",
+            "request": "launch",
+            "mainClass": "Textfileoutputstream",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "Textfilereader",
+            "request": "launch",
+            "mainClass": "Textfilereader",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "Textfiles",
+            "request": "launch",
+            "mainClass": "Textfiles",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "Textfilescanner",
+            "request": "launch",
+            "mainClass": "Textfilescanner",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "Textfilewriter",
+            "request": "launch",
+            "mainClass": "Textfilewriter",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "Trywithresources",
+            "request": "launch",
+            "mainClass": "Trywithresources",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "Var",
+            "request": "launch",
+            "mainClass": "Var",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "Vectorpractice",
+            "request": "launch",
+            "mainClass": "Vectorpractice",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "Wrapper_class",
+            "request": "launch",
+            "mainClass": "Wrapper_class",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "a",
+            "request": "launch",
+            "mainClass": "a",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "aanda_class",
+            "request": "launch",
+            "mainClass": "aanda_class",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "ar",
+            "request": "launch",
+            "mainClass": "ar",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "java",
+            "request": "launch",
+            "mainClass": "java",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "lo",
+            "request": "launch",
+            "mainClass": "lo",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "o",
+            "request": "launch",
+            "mainClass": "o",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "re",
+            "request": "launch",
+            "mainClass": "re",
+            "projectName": "Java_2499f017"
+        },
+        {
+            "type": "java",
+            "name": "varshini",
+            "request": "launch",
+            "mainClass": "varshini",
+            "projectName": "Java_2499f017"
+        }
+    ]
+}
