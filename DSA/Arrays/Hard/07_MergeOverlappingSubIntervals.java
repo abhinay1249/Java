@@ -36,7 +36,7 @@ class Main{
 
             Arrays.sort(nums, (left,right) -> Integer.compare(left[0],right[0]));                        
 
-            for(int idx_1 = 0 ; idx_1 < length ; idx_1++){                              //T.C = O(N LOG N) + O(2N), S.C = O(N)
+            for(int idx_1 = 0 ; idx_1 < length ; idx_1++){                              //T.C = O(N LOG N) + O(N^2), S.C = O(N)
                 int start = nums[idx_1][0];
                 int end = nums[idx_1][1];
 
