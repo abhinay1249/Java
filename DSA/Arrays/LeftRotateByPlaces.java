@@ -1,10 +1,13 @@
 class Main {
     
-    // ----------------- Brute Force Approach -------------------
+    // ============================ Brute Force Approach ============================================
 
     static int[] leftRotateByPlaces(int[] arr,int k){
         int n = arr.length;
         k%=n;
+        
+        if(n==0 || n==1) return;
+
         int[] temp = new int[n];
         
         for(int i = 0; i < k;i++){
@@ -26,7 +29,7 @@ class Main {
         return arr;
     }
 
-    // ----------------- Optimal Approach -------------------
+    // =================================== Optimal Approach =========================================
 
     static void reverse(int start,int end,int[]arr){
         while(start<end){
@@ -42,6 +45,9 @@ class Main {
         int a = 0;
         int n = arr.length;
         k%=n;
+
+        if(n==0 || n==1) return;
+
         reverse(a,k-1,arr);
         reverse(k,n-1,arr);
         reverse(a,n-1,arr);
