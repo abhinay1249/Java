@@ -1,4 +1,4 @@
-//Problem Statement: Given an integer array sorted in non-decreasing order, 
+// Problem Statement: Given an integer array sorted in non-decreasing order, 
 // remove the duplicates in place such that each unique element appears only once. The relative order of the elements should be kept the same.
 
 // If there are k elements after removing the duplicates, 
