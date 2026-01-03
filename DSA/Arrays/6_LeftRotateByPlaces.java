@@ -1,3 +1,5 @@
+// Problem Statement: Given an array of integers, rotating array of elements by k elements left.
+
 class Main {
     
     // ============================ Brute Force Approach ============================================
