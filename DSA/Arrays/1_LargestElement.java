@@ -1,7 +1,22 @@
-// ======================= Optimal Approach =======================================
+// Problem Statement: Given an array, we have to find the largest element in the array.
+
+import java.util.*;
 
 class Main {
+
+// ======================= Brute Force Approach =======================================
+
     static int largest(int[] arr){
+
+        Arrays.sort(arr);
+
+        return arr[arr.length-1];
+    }
+
+// ======================= Optimal Approach =======================================
+
+
+    static int largest_1(int[] arr){
         int n = arr.length;
         int largest = arr[0];
         
@@ -12,7 +27,10 @@ class Main {
     }
     public static void main(String[] args) {
         int [] arr = {2,5,1,32,10};
+        int [] arr_1 = {2,5,1,32,10};
         int result = largest(arr);
+        int result_1 = largest_1(arr);
         System.out.println(result);
+        System.out.println(result_1);
     }
 }
