@@ -68,13 +68,39 @@ class Main {
         return missingNumber;
     }
     
+    // ======================= Best Optimal Approach Using XOR =======================================
+
+    static int missingNumber_3(int[] arr){
+        int xor1 = 0;
+        int xor2 = 0;
+        int length = arr.length;
+        
+        // for(int i = 1 ; i <= length ;i++){
+        //     xor1^=i;
+        // }
+        
+        for(int i = 0 ; i < length ;i++){
+            xor2^=arr[i];
+            xor1^=(i+1);
+        }
+        xor1^=length+1;
+        
+        int missingNumber = xor1^xor2;
+        
+        return missingNumber; 
+    }
+    
+
     public static void main(String[] args) {
         int[] arr = {9,6,4,2,3,5,7,0,1};
+        int[] arr_1 = {9,6,4,2,3,5,7,1};
         int result = missingNumber(arr);
         int result_1 = missingNumber_1(arr);
         int result_2 = missingNumber_2(arr);
+        int result_3 = missingNumber_3(arr_1);
         System.out.println(result);
         System.out.println(result_1);
         System.out.println(result_2);
+        System.out.println(result_3);
     }
 }
