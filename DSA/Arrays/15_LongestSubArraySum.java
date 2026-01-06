@@ -81,11 +81,15 @@ class Main {
 		int sum =  0;
 		int i = 0;
 		for(int j = 0 ; j < nums.length ; j++){
-			sum+=nums[j];
+			if(sum<nums.length){
+				sum+=nums[j];
+			}
 
 			if(sum==k){
-				maxLength = Math.max(maxLength, j-i+1);
-			}else if(sum>k){
+				maxLength = Math.max(maxLength, j-i+1);				// ---> T.C = O(2N)
+			}
+			
+			while(i <= j && sum>k){
 				sum-=nums[i];
 				i++;
 			}
