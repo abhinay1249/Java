@@ -72,15 +72,37 @@ class Main {
 
 	    return maxSubArrayLength;
     }
+
+	// ======================== Optimal Approach =======================================
+
+	static int longestSubArray_3(int[] nums, int k){
+
+		int maxLength = 0;
+		int sum =  0;
+		int i = 0;
+		for(int j = 0 ; j < nums.length ; j++){
+			sum+=nums[j];
+
+			if(sum==k){
+				maxLength = Math.max(maxLength, j-i+1);
+			}else if(sum>k){
+				sum-=nums[i];
+				i++;
+			}
+		}
+		return maxLength;
+	}
     
     public static void main(String[] args) {
         int[] nums = {1,0,0,0,0,2,1,3,2};
-        int k = 5;
+        int k = 4;
         int result = longestSubArray(nums, k);
         int result_1 = longestSubArray_1(nums, k);
         int result_2 = longestSubArray_2(nums, k);
+        int result_3 = longestSubArray_3(nums, k);
         System.out.println(result);
         System.out.println(result_1);
         System.out.println(result_2);
+        System.out.println(result_3);
     }
 }
