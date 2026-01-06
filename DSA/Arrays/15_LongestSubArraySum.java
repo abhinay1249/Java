@@ -49,7 +49,7 @@ class Main {
 
 	// ======================= Better Approach =======================================
 
-	static int longestSubArray(int[] nums, int k){
+	static int longestSubArray_2(int[] nums, int k){
 	
 	    int prefixSum = 0;
 	    int maxSubArrayLength = 0;
@@ -77,7 +77,9 @@ class Main {
         int k = 5;
         int result = longestSubArray(nums, k);
         int result_1 = longestSubArray_1(nums, k);
+        int result_2 = longestSubArray_2(nums, k);
         System.out.println(result);
         System.out.println(result_1);
+        System.out.println(result_2);
     }
 }
