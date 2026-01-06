@@ -1,6 +1,9 @@
+import java.util.*;
 
 class Main {
     
+	// ======================= Brute Force Approach =======================================
+
     static int longestSubArray(int[] nums, int value){
 
 	    int maxSubArrayLength = 0;
@@ -23,6 +26,8 @@ class Main {
 	    return maxSubArrayLength;
     }
 
+	// ======================= Better Brute Force Approach ============================
+
     static int longestSubArray_1(int[] nums, int value){
 
 	    int maxSubArrayLength = 0;
@@ -39,6 +44,31 @@ class Main {
 	    if(maxSubArrayLength == 0){
 	    	return 0;
 	    }
+	    return maxSubArrayLength;
+    }
+
+	// ======================= Better Approach =======================================
+
+	static int longestSubArray(int[] nums, int k){
+	
+	    int prefixSum = 0;
+	    int maxSubArrayLength = 0;
+
+	    Map<Integer, Integer> indexing = new HashMap<>();
+
+	    for(int i = 0 ; i < nums.length ; i++){
+		
+		    prefixSum+=nums[i];
+
+		    if(prefixSum == k){
+			    maxSubArrayLength = i+1;
+		    }else if(indexing.containsKey(prefixSum-k)){
+			    maxSubArrayLength = Math.max(maxSubArrayLength, i - indexing.get(prefixSum-k));
+		    }
+		
+		    indexing.putIfAbsent(prefixSum, i);
+	    }
+
 	    return maxSubArrayLength;
     }
     
