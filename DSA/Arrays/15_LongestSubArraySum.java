@@ -48,5 +48,6 @@ class Main {
         int result = longestSubArray(nums, k);
         int result_1 = longestSubArray_1(nums, k);
         System.out.println(result);
+        System.out.println(result_1);
     }
 }
