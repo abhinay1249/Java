@@ -65,15 +65,16 @@ class Main {
 		    }else if(indexing.containsKey(prefixSum-k)){
 			    maxSubArrayLength = Math.max(maxSubArrayLength, i - indexing.get(prefixSum-k));
 		    }
-		
-		    indexing.putIfAbsent(prefixSum, i);
+			if(!indexing.containsKey(prefixSum)){
+		    	indexing.putIfAbsent(prefixSum, i);
+			}
 	    }
 
 	    return maxSubArrayLength;
     }
     
     public static void main(String[] args) {
-        int[] nums = {1,1,2,1,3,2};
+        int[] nums = {1,0,0,0,0,2,1,3,2};
         int k = 5;
         int result = longestSubArray(nums, k);
         int result_1 = longestSubArray_1(nums, k);
