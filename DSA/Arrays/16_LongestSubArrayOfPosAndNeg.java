@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Main {
     
 	// ======================= Brute Force Approach =======================================
@@ -44,9 +46,36 @@ class Main {
 	    }
 	    return maxSubArrayLength;
     }
+
+    static int longestSubArray_2(int[] nums, int k){
+
+	    int prefixSum = 0;
+	    int maxSubArrayLength= 0;
+	    Map<Integer, Integer> prefixSumMap = new TreeMap<>();
+    
+	    for(int i = 0; i < nums.length ; i++){
+	    	prefixSum+=nums[i];
+    
+	    	if(prefixSum == k){
+	    		maxSubArrayLength = Math.max(maxSubArrayLength, i+1);	
+	    	}
+
+	    	else if(prefixSumMap.containsKey(prefixSum - k)){
+	    		maxSubArrayLength = Math.max(maxSubArrayLength, i - prefixSumMap.get(prefixSum-k));
+	    	}
+            if(!prefixSumMap.containsKey(prefixSum)){
+	    	    prefixSumMap.putIfAbsent(prefixSum,i);
+	        }
+	    }
+
+        if(maxSubArrayLength == 0){
+	    	return 0;
+	    }
+        return maxSubArrayLength;    
+    }
     public static void main(String[] args) {
-        int[] nums = {1,0,0,0,0,2,1,3,2};
-        int k = 4;
+        int[] nums = {-1,0,0,0,3,0,-1,1,1,2,-1,4,-1};
+        int k = 1;
         int result = longestSubArray(nums, k);
         int result_1 = longestSubArray_1(nums, k);
         int result_2 = longestSubArray_2(nums, k);
