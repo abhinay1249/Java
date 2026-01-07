@@ -1,3 +1,7 @@
+// Problem Statement: Given an array nums of size n and an integer k, 
+// find the length of the longest sub-array that sums to k. If no such sub-array exists, return 0.
+
+
 import java.util.*;
 
 class Main {
@@ -69,7 +73,9 @@ class Main {
 		    	indexing.putIfAbsent(prefixSum, i);
 			}
 	    }
-
+		if(maxSubArrayLength == 0){
+	    	return 0;
+	    }
 	    return maxSubArrayLength;
     }
 
@@ -94,6 +100,9 @@ class Main {
 				i++;
 			}
 		}
+		if(maxSubArrayLength == 0){
+	    	return 0;
+	    }
 		return maxLength;
 	}
     
