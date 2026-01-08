@@ -1,5 +1,11 @@
 
+import java.util.*;
+
+
 class Main {
+
+	// ======================= Brute Force Approach - Variant - 1 =======================================
+    
     static boolean twoSum(int[] nums, int target){
 	
 	    int sumOfNumbers = 0;
@@ -14,6 +20,8 @@ class Main {
 	    return false;
     }
 
+	// ======================= Brute Force Approach - Variant - 2 =======================================
+    
 	static List<Integer> twoSum_1(int[] nums, int target){
 	    List<Integer> indices = new ArrayList<>();
 	    
@@ -31,6 +39,8 @@ class Main {
 	    return indices;
     }
 
+	// ======================= Better Approach - 1 =======================================
+    
     static Boolean twoSum_2(int[] nums, int target){
 	
 	    Map<Integer, Integer> twoSumMap = new TreeMap<>();
@@ -44,6 +54,9 @@ class Main {
 	    }
 	    return false;
     }
+
+	// ======================= Better Approach - 1 and Optimal Approach -2 =======================================
+    
 
     static int[] twoSum_3(int[] nums, int target){
 	
@@ -59,6 +72,9 @@ class Main {
 	    return new int[]{-1,-1};
     }
     
+	// ======================= Optimal Approach - 1 =======================================
+    
+
     static Boolean twoSum_4(int[] nums, int target){
 	    Arrays.sort(nums);
 	    int left = 0, right = nums.length-1;
@@ -78,9 +94,21 @@ class Main {
     }
     
     public static void main(String[] args) {
-        int[] arr = {2,6,5,8,11};
+        int[] nums = {2,6,5,8,11};
         int target = 14;
-        boolean result = twoSum(arr,target);
+        boolean result = twoSum(nums,target);
         System.out.println(result);
+		List<Integer> result_1 = new ArrayList<>(twoSum_1(nums,target));
+        for(int i : result_1){
+            System.out.println(i);
+        }
+        boolean result_2 = twoSum_2(nums,target);
+        System.out.println(result_2);
+        int[] result_3 = twoSum_3(nums,target);
+        for(int i=0;i<result_3.length;i++){
+            System.out.println(result_3[i]);
+        }
+        boolean result_4 = twoSum_4(nums,target);
+        System.out.println(result_4);
     }
 }
