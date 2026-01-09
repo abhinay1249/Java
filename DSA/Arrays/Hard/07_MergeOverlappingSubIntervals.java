@@ -23,7 +23,7 @@ class Main{
 
     // =================================== Brute Force Approach ===========================================
 
-        public static List<List<Integer>> mergeOverlapIntervals(int[][]nums){
+        public static List<List<Integer>> mergeOverlapIntervals(int[][] nums){
         
             int length = nums.length;
             List<List<Integer>> mergeInterval = new ArrayList<>();
