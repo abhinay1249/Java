@@ -57,6 +57,7 @@ class Main{
                 
                 mergeInterval.add(Arrays.asList(start,end));
             }
+            
             return mergeInterval;
         }
     
