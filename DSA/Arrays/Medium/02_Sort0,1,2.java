@@ -45,7 +45,7 @@ class Main {
        return nums; 
     }
 
-    // ======================= Optimal Approach =======================================
+    // ======================= Optimal Approach [DUTCH NATIONAL FLAG ALGORITHM] =======================================
     
     static void swap(int num1, int num2, int[] nums){
 	    int temp = nums[num1];
