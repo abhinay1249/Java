@@ -2,6 +2,7 @@ import java.util.*;
 
 class Main {
 
+	// ======================= Brute Force Approach =======================================
 	
     static int majorityElement(int[] nums){
 	    
@@ -24,6 +25,8 @@ class Main {
 	    return element;
     }
     
+	// ======================= Better Approach =======================================
+
     static int majorityElement_1(int[] nums){
 	
 	    Map<Integer,Integer> freqCount = new TreeMap<>();
@@ -42,6 +45,8 @@ class Main {
     	}
 	    return majorityElement;
     }
+
+	// ======================= Optimal Approach [MOORE'S VOTING ALGORITHM] =======================================
 
 	static int majorityElement_2(int[] nums){
 	    int element = nums[0];
