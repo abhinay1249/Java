@@ -1,6 +1,8 @@
 import java.util.*;
 
 class Main {
+
+	
     static int majorityElement(int[] nums){
 	    
 	    int element = -1;
@@ -38,6 +40,35 @@ class Main {
 			    majorityElement = value.getKey();
 		    }
     	}
+	    return majorityElement;
+    }
+
+	static int majorityElement_2(int[] nums){
+	    int element = nums[0];
+	    int majorityElement = 0;
+	    int count = 0;
+
+	    for(int i = 0 ; i < nums.length ; i++){
+		    if(element == nums[i]){
+			    count++;
+		    }else if(element != nums[i]){
+			    count--;
+		    }
+
+		    if(count == 0){
+			    element = nums[i+1];
+		    }   
+	    }
+	
+	    for(int i : nums){
+		    if(element == i){
+			    count++;
+		    }
+		    if(count>nums.length/2){
+		        majorityElement=i;
+	        }
+	    }
+
 	    return majorityElement;
     }
     
