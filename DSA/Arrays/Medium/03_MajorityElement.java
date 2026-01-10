@@ -52,6 +52,7 @@ class Main {
 	    int element = nums[0];
 	    int majorityElement = 0;
 	    int count = 0;
+		int counter = 0;
 
 	    for(int i = 0 ; i < nums.length ; i++){
 		    if(element == nums[i]){
@@ -67,22 +68,25 @@ class Main {
 	
 	    for(int i : nums){
 		    if(element == i){
-			    count++;
+			    counter++;
 		    }
-		    if(count>nums.length/2){
-		        majorityElement=i;
+		    if(counter>nums.length/2){
+		        return i;
 	        }
 	    }
 
-	    return majorityElement;
+	    return -1;
     }
     
     public static void main(String[] args) {
         int[] nums = {1, 1, 1, 2, 1, 2};
         int[] nums_1 = {7, 0, 0, 1, 7, 7, 2, 7, 7};
+        int[] nums_2 = {3,2,3};
         int result = majorityElement(nums);
         int result_1 = majorityElement_1(nums_1);
+        int result_2 = majorityElement_2(nums_2);
         System.out.println(result);
         System.out.println(result_1);
+        System.out.println(result_2);
     }
 }
