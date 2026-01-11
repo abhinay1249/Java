@@ -41,7 +41,6 @@ class Main {
 	    }
 	
 	    int majorityElement = 0;
-	    int maxCount = 0;
 	
 	    for(Map.Entry<Integer,Integer> value : freqCount.entrySet()){
 		    if(value.getValue() > nums.length/2){
