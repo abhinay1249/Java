@@ -57,6 +57,39 @@ class Main {
 	        return maxSum;
         }
 
+    // ======================= Optimal Approach [KADANE'S ALGORITHM] with FOLLOW UP Question to print the SubArray =======================
+
+        static void maxSubArraySum_3(int[] nums){
+	        int sum = 0;
+    	    int maxSum = Integer.MIN_VALUE;
+            int start = 0, ansStart = -1, ansEnd = -1;
+
+	        for(int i = 0 ; i < nums.length ; i++){
+                
+                if(sum == 0){
+                    start = i;
+                }
+
+		        sum+=nums[i];
+
+		        if(sum > maxSum){
+		    	    maxSum = sum;
+                    ansStart = start;
+                    ansEnd = i;
+		        }
+
+		        if(sum < 0){
+		    	    sum = 0;
+	        	}
+	        }
+            System.out.print("[ ");
+            for(int i = ansStart ; i <= ansEnd ; i++){
+                System.out.print(nums[i]+" ");
+            }
+            System.out.print("]");
+            System.out.println();
+        }
+
     public static void main(String[] args) {
 
         int[] nums = {2, 3, 5, -2, 7, -4};
@@ -64,6 +97,7 @@ class Main {
         int result = maxSubArraySum(nums);
         int result_1 = maxSubArraySum_1(nums);
         int result_2 = maxSubArraySum_2(nums_1);
+        maxSubArraySum_3(nums);
         System.out.println(result);
         System.out.println(result_1);
         System.out.println(result_2);
