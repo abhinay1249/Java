@@ -57,7 +57,7 @@ class Main {
 	        return maxSum;
         }
 
-    // ======================= Optimal Approach [KADANE'S ALGORITHM] with FOLLOW UP Question to print the SubArray =======================
+    // ======================= FOLLOW UP Question to Print the SubArray =======================
 
         static void maxSubArraySum_3(int[] nums){
 	        int sum = 0;
