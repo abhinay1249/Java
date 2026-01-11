@@ -21,6 +21,7 @@ class Main {
             System.out.print(temp[i]+" ");
         }
         System.out.println();
+        
         return temp;
     }
     
