@@ -51,7 +51,7 @@ class Main {
 	    return maxSubArrayLength;
     }
 
-	// ======================= Better Approach =======================================
+	// ======================= Better Approach 	USING PREFIX SUM =======================================
 
 	static int longestSubArray_2(int[] nums, int k){
 	
@@ -84,31 +84,34 @@ class Main {
 	static int longestSubArray_3(int[] nums, int k){
 
 		int maxLength = 0;
-		int sum =  0;
-		int i = 0;
-		for(int j = 0 ; j < nums.length ; j++){
-			if(sum<nums.length){
-				sum+=nums[j];
+		int sum = nums[0];
+		int i = 0, j = 0;
+
+		while(j<nums.length){
+
+			while(i <= j && sum>k){
+				sum-=nums[i];
+				i++;
 			}
 
 			if(sum==k){
 				maxLength = Math.max(maxLength, j-i+1);				// ---> T.C = O(2N)
 			}
-			
-			while(i <= j && sum>k){
-				sum-=nums[i];
-				i++;
+
+			j++;
+			if(j<nums.length){
+				sum+=nums[j];
 			}
 		}
-		if(maxSubArrayLength == 0){
+		if(maxLength == 0){
 	    	return 0;
 	    }
 		return maxLength;
 	}
     
     public static void main(String[] args) {
-        int[] nums = {1,0,0,0,0,2,1,3,2};
-        int k = 4;
+        int[] nums = {10,5,8,3,7,1,9};
+        int k = 18;
         int result = longestSubArray(nums, k);
         int result_1 = longestSubArray_1(nums, k);
         int result_2 = longestSubArray_2(nums, k);
