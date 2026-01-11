@@ -69,25 +69,22 @@ class Main {
         int n = arr_1.length;
         int m = arr_2.length;
         List<Integer> union = new ArrayList<>();;
-        int i=0, j=0, idx=0;
+        int i=0, j=0;
         
         while(i<n && j<m){
-            if(arr_1[i]<=arr_2[j]){
+            if(arr_1[i] < arr_2[j]){
                 if(union.size()==0 || union.get(union.size()-1)!=arr_1[i]){
                     union.add(arr_1[i]);
-                    idx++;
                 }
                 i++;
             }else if(arr_1[i]>arr_2[j]){
                 if(union.size()==0 || union.get(union.size()-1)!=arr_2[j]){
                     union.add(arr_2[j]);
-                    idx++;
                 }
                 j++;
             }else{
                 if(union.size()==0 || union.get(union.size()-1)!=arr_1[i]){
                     union.add(arr_1[i]);
-                    idx++;
                 }
                 i++;
                 j++;
@@ -97,7 +94,6 @@ class Main {
         while(i<n){
             if(union.size()==0 || union.get(union.size()-1)!=arr_1[i]){
                 union.add(arr_1[i]);
-                idx++;
             }
             i++;
         }
@@ -105,7 +101,6 @@ class Main {
         while(j<m){
             if(union.size()==0 || union.get(union.size()-1)!=arr_2[j]){
                 union.add(arr_2[j]);
-                idx++;
             }
             j++;
         }
