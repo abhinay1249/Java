@@ -50,6 +50,8 @@ class Main {
 	    return maxSubArrayLength;
     }
 
+	// ======================= Optimal Approach USING PREFIX SUM =======================
+
     static int longestSubArray_2(int[] nums, int k){
 
 	    int prefixSum = 0;
