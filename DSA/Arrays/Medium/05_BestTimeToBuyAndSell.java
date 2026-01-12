@@ -1,49 +1,56 @@
 class Main{
 
-    static int buyAndSell(int[] nums){
-        int maxProfit = 0;
-        
-        for(int i = 0 ; i < nums.length ; i++){
-            for(int j = i+1 ; j < nums.length ; j++){
-                if(nums[j]>nums[i]){
-                    maxProfit = Math.max(maxProfit,nums[j]-nums[i]);
+    // ======================= Brute Force Approach =======================================
+
+        static int buyAndSell(int[] nums){
+            int maxProfit = 0;
+            
+            for(int i = 0 ; i < nums.length ; i++){
+                for(int j = i+1 ; j < nums.length ; j++){
+                    if(nums[j]>nums[i]){
+                        maxProfit = Math.max(maxProfit,nums[j]-nums[i]);
+                    }
                 }
             }
+            if(maxProfit == 0) return 0;
+            return maxProfit;
         }
-        if(maxProfit == 0) return 0;
-        return maxProfit;
-    }
 
-    static int buyAndSell_1(int[] nums){
-        int maxProfit = 0;
-        int minCost = nums[0];
-        int cost = 0;
-        
-        for(int i = 1; i < nums.length ; i++){
-            cost = nums[i] - minCost;
-            maxProfit = Math.max(maxProfit, cost);
-            
-            minCost = Math.min(minCost,nums[i]);
-        }
-        return maxProfit;
-    }
+    // ======================= Optimal Approach - 1 =======================================
+    
+        static int buyAndSell_1(int[] nums){
+            int maxProfit = 0;
+            int minCost = nums[0];
+            int cost = 0;
 
-    static int buyAndSell_2(int[] nums){
+            for(int i = 1; i < nums.length ; i++){
 
-        int minPrice = Integer.MAX_VALUE;
-        int maxProfit = 0;
+                cost = nums[i] - minCost;
+                maxProfit = Math.max(maxProfit, cost);
 
-        for(int i = 0 ; i < nums.length ; i++){
-            
-            if(nums[i]<minPrice){
-                minPrice=nums[i];
-            }else{
-                maxProfit = Math.max(maxProfit, nums[i] - minPrice);
+                minCost = Math.min(minCost,nums[i]);
             }
+            return maxProfit;
         }
 
-        return maxProfit;
-    }
+    // ======================= Optimal Approach - 2 =======================================
+
+        static int buyAndSell_2(int[] nums){
+
+            int minPrice = Integer.MAX_VALUE;
+            int maxProfit = 0;
+
+            for(int i = 0 ; i < nums.length ; i++){
+
+                if(nums[i]<minPrice){
+                    minPrice=nums[i];
+                }else{
+                    maxProfit = Math.max(maxProfit, nums[i] - minPrice);
+                }
+            }
+
+            return maxProfit;
+        }
 
     public static void main(String[] args){
         int[] prices = {7,1,5,3,6,4};
