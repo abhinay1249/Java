@@ -1,3 +1,11 @@
+// Problem Statement: Given an integer array nums, 
+// find the subarray with the largest sum and return the sum of the elements present in that subarray.
+// A subarray is a contiguous non-empty sequence of elements within an array.
+
+// Follow-up Question:
+// Can you print the subarray that has the maximum sum?
+
+
 class Main {
     
 
