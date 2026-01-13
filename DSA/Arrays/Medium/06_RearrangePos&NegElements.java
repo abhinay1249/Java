@@ -68,9 +68,9 @@ class Main {
             }
 
             if(pos.size()>neg.size()){
-                for(int i = 0 ; i < neg.size() ; i++){                  // T.C = O(N) + O(min(pos,neg)) + O(left overs)
-                    nums[i*2] = pos.get(i);                             //     O(N) + [ O(0) + (O(N){left overs})  + {0(N/2)+O(0)}]
-                    nums[i*2+1] = neg.get(i);
+                for(int i = 0 ; i < neg.size() ; i++){                 // T.C = O(N) + O(min(pos,neg)) + O(left overs)
+                    nums[i*2] = pos.get(i);                            //       O(N) + [ O(0) + (O(N){left overs})  + {0(N/2)+O(0)}]
+                    nums[i*2+1] = neg.get(i);                          //       O(N) + O(N) = O(2N)
                 }
                 int idx = neg.size()*2;
 
