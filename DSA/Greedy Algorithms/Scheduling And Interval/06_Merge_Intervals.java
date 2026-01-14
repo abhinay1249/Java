@@ -65,7 +65,7 @@ class Main {
     // ============================ Greedy Algorithm Approach ================================
 
         public static int[][] mergeIntervals_1(int[][] intervals){
-
+            
         }
 
     public static void main(String[] args) {

@@ -86,7 +86,7 @@ class Main{
                     mergeInterval.add(Arrays.asList(start,end));
                 }else{
                     List<Integer> lastNum = mergeInterval.get(mergeInterval.size()-1);
-                    end = lastNum.set(1,Math.max(end,lastNum.get(1)));
+                    lastNum.set(1,Math.max(end,lastNum.get(1)));
                 }
             }
             return mergeInterval;
