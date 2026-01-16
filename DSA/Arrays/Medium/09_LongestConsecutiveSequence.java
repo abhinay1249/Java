@@ -65,7 +65,7 @@ class Main {
                 hs.add(nums[i]);
             }
 
-            for(int i : nums){
+            for(int i : hs){
                 if(!hs.contains(i-1)){                              // T.C = O(2N), S.C = O(N)
                     int count = 0;
                     while(hs.contains(i++)){
