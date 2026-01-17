@@ -50,7 +50,7 @@ class Main {
                     count=1;
                     lastSmaller = nums[i];
                 }
-                 maxConsequence = Math.max(maxConsequence,count);
+                maxConsequence = Math.max(maxConsequence,count);
             }
         	return maxConsequence;
         }
