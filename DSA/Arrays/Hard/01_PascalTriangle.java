@@ -1,11 +1,11 @@
-// Problem Statement: Write a program to generate Pascal's triangle. 
+// Problem Statement : Write a program to generate Pascal's triangle. 
 // In Pascal’s triangle, each number is the sum of the two numbers directly 
 
 
 // Example 1:
 
-// Input: N = 5, r = 5, c = 3 
-// Output: Element at position (r, c): 6
+// Input : N = 5, r = 5, c = 3 
+// Output : Element at position (r, c): 6
 // N-th row of Pascal’s triangle: 1 4 6 4 1
 // First n rows of Pascal’s triangle:
 // 1 
@@ -17,8 +17,8 @@
 
 // Example 2:
 
-// Input: N = 1, r = 1, c = 1
-// Output: Element at position (r, c): 1
+// Input : N = 1, r = 1, c = 1
+// Output : Element at position (r, c): 1
 // N-th row of Pascal’s triangle: 1
 // First n rows of Pascal’s triangle:
 // 1  
