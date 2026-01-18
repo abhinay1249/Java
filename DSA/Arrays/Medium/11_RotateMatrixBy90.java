@@ -33,7 +33,7 @@ class Main {
         }
 
         static void swap(int left, int right, int[][] nums){
-            int temp = nums[left][right];
+            int temp = nums[left][right];                                   // T.C = O(N/2 * N/2) + O(N * N/2), S.C = O(1)
             nums[left][right] = nums[right][left];
             nums[right][left] = temp;
         }
