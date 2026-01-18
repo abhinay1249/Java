@@ -16,7 +16,7 @@ class Main {
 	            while(top <= bottom && left <= right){
 
 	    	    for(int i = left ; i <= right ; i++){
-	    		    spiralMatrix.add(nums[top][i]);             
+	    		    spiralMatrix.add(nums[top][i]);             // T.C = O(n *m), S.C = O(n * m)
 	    	    }
 	    	    top++;
 
