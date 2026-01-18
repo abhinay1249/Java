@@ -1,0 +1,52 @@
+import java.util.*;
+
+class Main {
+
+    // ======================= Only Approach =======================================
+
+        static List<Integer> spiralMatrix(int[][] nums){
+        
+	        int n = nums.length;
+	        int m = nums[0].length;
+	        int left = 0, right = n - 1, top = 0, bottom = n - 1;
+    
+	        List<Integer> spiralMatrix = new ArrayList<>();
+
+
+	            while(top <= bottom && left <= right){
+
+	    	    for(int i = left ; i <= right ; i++){
+	    		    spiralMatrix.add(nums[top][i]);             
+	    	    }
+	    	    top++;
+
+	    	    for(int i = top ; i <= bottom ; i++){
+	    		    spiralMatrix.add(nums[i][right]);
+	    	    }
+	    	    right--;
+
+	    	    if(top <= bottom){
+	    		    for(int i = right ; i >= left ; i--){
+	    			    spiralMatrix.add(nums[bottom][i]);
+	    		    }
+	    		    bottom--;
+	    	    }	
+    
+	    	    if(left <= right){
+	    		    for(int i = bottom ; i >= top ; i--){
+	    			    spiralMatrix.add(nums[i][left]);
+	    		    }
+	    		    left++;
+	        	}
+	        }
+	        return spiralMatrix;	
+        }
+
+    public static void main(String[] args) {
+        int[][] matrix = { { 1, 2, 3, 4 },{ 5, 6, 7, 8 },{ 9, 10, 11, 12 },{ 13, 14, 15, 16 } };
+        List<Integer> result = spiralMatrix(matrix);
+        for(int i : result){
+            System.out.print(i+" ");   
+        }
+    }
+}
