@@ -68,7 +68,7 @@ class Main {
 	    	    }
 	        }
 	       for(int i = 0 ; i < m ; i++){
-	    		    reverse(0,transpose[i].length-1,i,transpose);
+	    		reverse(0,transpose[i].length-1,i,transpose);
 	        }
 	        return transpose;
         }
