@@ -8,7 +8,7 @@ class Main {
         
 	        int n = nums.length;
 	        int m = nums[0].length;
-	        int left = 0, right = n - 1, top = 0, bottom = n - 1;
+	        int left = 0, right = m - 1, top = 0, bottom = n - 1;
     
 	        List<Integer> spiralMatrix = new ArrayList<>();
 
