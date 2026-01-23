@@ -4,7 +4,7 @@ class Main {
 
     // Give me the Exact Value For the Row And Column Provided
 
-    // ==================================== Brute Force Approach =======================================
+    // ==================================== Brute Force Approach ======================================
 
         static int pascalValue(int row, int col){
             int num = 1, denom = 1, sub = 1, result = 1;
