@@ -72,12 +72,3 @@ class Main {
         System.out.println(result_1);
     }
 }
-
-
-class Main {
-    
-    public static void main(String[] args) {
-
-
-    }
-}
