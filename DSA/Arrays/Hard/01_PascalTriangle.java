@@ -1,3 +1,4 @@
+import java.util.*;
 
 class Main {
 
@@ -40,7 +41,30 @@ class Main {
 
     // ==================================== Brute Force Approach ========================================
 
-        
+        static int permute(int nthrow, int col){
+            int value = 1;
+
+            for(int row = 0; row < col ; row++){
+                value*=(nthrow-row-1);
+                value/=(row+1);
+            }
+            return value;
+        }
+
+        static void nthRowValues(int nthRow){
+            
+            List<Integer> values = new ArrayList<>();
+
+            int value = 1;
+
+            for(int row = 0 ; row < nthRow ; row++){
+                values.add(permute(nthRow, row));
+            }
+
+            for(int i : values){
+                System.out.print(i+" ");
+            }
+        }
 
     // ==================================== Optimal Approach ===========================================
 
@@ -49,11 +73,10 @@ class Main {
         int n = 6;
         int row = 6;
         int col = 3;
-        NthRowOfTraingle(n);
-        NthRowOfTraingle_1(n);
-        int result = pascalValue(row, col);
-        int result_1 = pascalValue_1(row, col);
-        System.out.println(result);
-        System.out.println(result_1);
+        // int result = pascalValue(row, col);
+        // int result_1 = pascalValue_1(row, col);
+        // System.out.println(result);
+        // System.out.println(result_1);
+        nthRowValues(n);
     }
 }
