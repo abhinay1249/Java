@@ -74,9 +74,9 @@ class Main {
 	        int value = 1;
 	        values.add(value);
 
-	        for(int row = 0 ; row < nthRow-1 ; row++){
-		        value *= (nthRow - row - 1);
-		        value /= (row+1);
+	        for(int row = 1 ; row < nthRow ; row++){
+		        value *= (nthRow - 1);
+		        value /= (row);
 	            values.add(value);
             }
 
@@ -93,9 +93,9 @@ class Main {
 	        int value = 1;
             values.add(value);
 
-	        for(int row = 0 ; row < nthRow - 1; row++){
-	        	value *= (nthRow - row - 1);
-	        	value /= (row+1);
+	        for(int row = 1 ; row < nthRow ; row++){
+	        	value *= (nthRow - 1);
+	        	value /= (row);
 	            values.add(value);
             }
 
