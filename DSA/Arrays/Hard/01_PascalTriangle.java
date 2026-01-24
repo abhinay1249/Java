@@ -1,4 +1,4 @@
-// Problem Statement: Write a program to generate Pascal's triangle. In Pascal’s triangle, each number is the sum of the two numbers directly
+// Problem Statement: Write a program to generate Pascal's triangle. In Pascal’s triangle, each number is the sum of the two numbers directly 
 
 import java.util.*;
 
@@ -90,23 +90,55 @@ class Main {
 
     // Print the entire Pascal Triangle.
 
+
+    // ==================================== Optima Approach ===========================================
+
+        static int permutation(int row, int col){
+            int value = 1;
+            for(int valueidx = 0 ; valueidx < col ; valueidx++){
+                value *= row-valueidx;
+                value /= valueidx+1;
+            }
+            return value;
+        }
+
+        static void pascalTriangle(int nthRows){
+        
+            List<List<Integer>> pascalTriangle = new ArrayList<>();
+        
+            for(int row = 0 ; row < nthRows ; row++){
+
+                List<Integer> temp = new ArrayList<>();
+
+                for(int col = 0 ; col <= row ; col++){                          //T.C = O(N^3), S.C = O(1)
+                    temp.add(permutation(row, col));
+                }
+                pascalTriangle.add(temp);
+            }
+            for(List<Integer> res : pascalTriangle){
+                System.out.println(res+" ");
+            }    
+        }
+
+    // ==================================== Optimal Approach ===========================================
+
+
         static List<Integer> nthRowsValues(int nthRow){
 	
 	        List<Integer> values = new ArrayList<>();
 	        int value = 1;
             values.add(value);
 
-	        for(int row = 0 ; row < nthRow - 1; row++){
-	        	value *= (nthRow - row - 1);
-	        	value /= (row+1);
+	        for(int row = 1 ; row < nthRow; row++){
+	        	value *= (nthRow - row);                                    //T.C = O(N^2), S.C = O(1)
+	        	value /= (row);
 	            values.add(value);
             }
-
             return values;
         }
 
 
-        static void pascalTriangle(int size){
+        static void pascalTriangle_1(int size){
         
         	List<List<Integer>> pascalTriangle = new ArrayList<>();
 
@@ -120,15 +152,16 @@ class Main {
         }
 
     public static void main(String[] args) {
-        int n = 6;
+        int n = 7;
         int row = 6;
         int col = 3;
-        // int result = pascalValue(row, col);
-        // int result_1 = pascalValue_1(row, col);
-        // System.out.println(result);
-        // System.out.println(result_1);
-        // nthRowValues(n);
-        // nthRowValues_1(n);
+        int result = pascalValue(row, col);
+        int result_1 = pascalValue_1(row, col);
+        System.out.println(result);
+        System.out.println(result_1);
+        nthRowValues(n);
+        nthRowValues_1(n);
         pascalTriangle(n);
+        pascalTriangle_1(n);
     }
 }
