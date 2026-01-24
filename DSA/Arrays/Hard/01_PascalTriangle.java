@@ -68,6 +68,25 @@ class Main {
 
     // ==================================== Optimal Approach ===========================================
 
+        static void nthRowValues_1(int nthRow){
+            
+            System.out.println();
+
+	        List<Integer> values = new ArrayList<>();
+	        int value = 1;
+	        values.add(value);
+
+	        for(int row = 0 ; row < nthRow-1 ; row++){
+		        value *= (nthRow - row - 1);
+		        value /= (row+1);
+	            values.add(value);
+            }
+
+            for(int nthRowValues : values){
+    	        System.out.print(nthRowValues+" ");
+            }
+        }
+
 
     public static void main(String[] args) {
         int n = 6;
@@ -78,5 +97,6 @@ class Main {
         // System.out.println(result);
         // System.out.println(result_1);
         nthRowValues(n);
+        nthRowValues_1(n);
     }
 }
