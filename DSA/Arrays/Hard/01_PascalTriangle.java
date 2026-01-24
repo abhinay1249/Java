@@ -85,16 +85,47 @@ class Main {
             }
         }
 
+    // Print the entire Pascal Triangle.
+
+        static List<Integer> nthRowsValues(int nthRow){
+	
+	        List<Integer> values = new ArrayList<>();
+	        int value = 1;
+            values.add(value);
+
+	        for(int row = 0 ; row < nthRow - 1; row++){
+	        	value *= (nthRow - row - 1);
+	        	value /= (row+1);
+	            values.add(value);
+            }
+
+            return values;
+        }
+
+
+        static void pascalTriangle(int size){
+        
+        	List<List<Integer>> pascalTriangle = new ArrayList<>();
+
+        	for(int rows = 1 ; rows <= size; rows++){
+        		List<Integer> row = nthRowsValues(rows);
+        		pascalTriangle.add(row);
+            }
+            for(List<Integer> pascalTriangleRows : pascalTriangle){
+            	System.out.print(pascalTriangleRows+" ");
+            }
+        }
 
     public static void main(String[] args) {
         int n = 6;
         int row = 6;
         int col = 3;
-        int result = pascalValue(row, col);
-        int result_1 = pascalValue_1(row, col);
-        System.out.println(result);
-        System.out.println(result_1);
-        nthRowValues(n);
-        nthRowValues_1(n);
+        // int result = pascalValue(row, col);
+        // int result_1 = pascalValue_1(row, col);
+        // System.out.println(result);
+        // System.out.println(result_1);
+        // nthRowValues(n);
+        // nthRowValues_1(n);
+        pascalTriangle(n);
     }
 }
