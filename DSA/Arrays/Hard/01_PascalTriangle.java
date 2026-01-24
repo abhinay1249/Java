@@ -1,3 +1,5 @@
+// Problem Statement: Write a program to generate Pascal's triangle. In Pascal’s triangle, each number is the sum of the two numbers directly
+
 import java.util.*;
 
 class Main {
@@ -13,7 +15,7 @@ class Main {
                 num *= i;
             }
 
-            for(int i = col-1; i > 0 ; i--){
+            for(int i = col-1; i > 0 ; i--){                                //T.C = O(N * R), S.C = O(1)
                 denom *= i;
             }
 
@@ -28,10 +30,11 @@ class Main {
     // ==================================== Optimal Approach =========================================
         
         static int pascalValue_1(int row, int col){
+
             int result = 1;
 
             for(int i = 0 ; i < col ; i++){
-                result = result * (row-i-1);
+                result = result * (row-i-1);                                //T.C = O(N), S.C = O(1)
                 result= result / (i+1);
             }
             return result;
@@ -55,8 +58,8 @@ class Main {
             
             List<Integer> values = new ArrayList<>();
 
-            int value = 1;
-
+            int value = 1;                                                  //T.C = O(N * R), S.C = O(1)
+                                                                            
             for(int row = 0 ; row < nthRow ; row++){
                 values.add(permute(nthRow, row));
             }
@@ -74,9 +77,9 @@ class Main {
 	        int value = 1;
 	        values.add(value);
 
-	        for(int row = 1 ; row < nthRow ; row++){
-		        value *= (nthRow - 1);
-		        value /= (row);
+	        for(int row = 0 ; row < nthRow-1 ; row++){
+		        value *= (nthRow - row - 1);
+		        value /= (row+1);                                               //T.C = O(N), S.C = O(1)
 	            values.add(value);
             }
 
@@ -93,9 +96,9 @@ class Main {
 	        int value = 1;
             values.add(value);
 
-	        for(int row = 1 ; row < nthRow ; row++){
-	        	value *= (nthRow - 1);
-	        	value /= (row);
+	        for(int row = 0 ; row < nthRow - 1; row++){
+	        	value *= (nthRow - row - 1);
+	        	value /= (row+1);
 	            values.add(value);
             }
 
