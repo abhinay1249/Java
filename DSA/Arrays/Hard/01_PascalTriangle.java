@@ -4,7 +4,7 @@ import java.util.*;
 
 class Main {
 
-    // Give me the Exact Value For the Row And Column Provided
+    // GIVE ME THE EXACT VALUE FOR THE ROW AND COLUMN PROVIDED
 
     // ==================================== Brute Force Approach =====================================
 
@@ -40,7 +40,7 @@ class Main {
             return result;
         }
 
-    // Print the Entire Row of the Given Nth Row Of Pascal's Triangle
+    // PRINT THE ENTIRE ROW OF THE GIVEN NTH ROW OF PASCAL’S TRIANGLE
 
     // ==================================== Brute Force Approach ========================================
 
