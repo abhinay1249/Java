@@ -91,7 +91,7 @@ class Main {
     // Print the entire Pascal Triangle.
 
 
-    // ==================================== Optima Approach ===========================================
+    // ==================================== Optimal Approach ===========================================
 
         static int permutation(int row, int col){
             int value = 1;
