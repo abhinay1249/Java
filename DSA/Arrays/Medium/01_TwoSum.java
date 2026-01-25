@@ -45,7 +45,7 @@ class Main {
 		    return indices;
     	}
 
-	// ======================= Better Approach - 1 =======================================
+	// ======================= Better Approach Variant - 1 =======================================
     
     	static Boolean twoSum_2(int[] nums, int target){
 		
@@ -61,7 +61,7 @@ class Main {
 		    return false;
     	}
 
-	// ======================= Better Approach - 1 and Optimal Approach -2 =======================================
+	// ======================= Optimal Approach Variant -2 =======================================
     
 
     	static int[] twoSum_3(int[] nums, int target){
@@ -78,7 +78,7 @@ class Main {
 		    return new int[]{-1,-1};
     	}
 	
-	// ======================= Optimal Approach - 1 =======================================
+	// ======================= Optimal Approach Variant- 1 =======================================
     
 
     	static Boolean twoSum_4(int[] nums, int target){
