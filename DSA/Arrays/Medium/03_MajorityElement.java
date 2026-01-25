@@ -54,7 +54,6 @@ class Main {
 
 	static int majorityElement_2(int[] nums){
 	    int element = nums[0];
-	    int majorityElement = 0;
 	    int count = 0;
 		int counter = 0;
 
@@ -66,7 +65,8 @@ class Main {
 		    }
 
 		    if(count == 0){
-			    element = nums[i+1];
+				count=1;
+			    element = nums[i];
 		    }   
 	    }
 	
