@@ -1,3 +1,7 @@
+// Problem Statement: Given an integer array nums of size n. 
+// Return all elements which appear more than n/3 times in the array. 
+// The output can be returned in any order.
+
 import java.util.*;
 
 class Main {
