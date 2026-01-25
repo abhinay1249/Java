@@ -88,8 +88,8 @@ class Main {
             }
         }
 
-    // Print the entire Pascal Triangle.
 
+    // PRINT THE ENTIRE PASCAL TRIANGLE
 
     // ==================================== Optimal Approach ===========================================
 
