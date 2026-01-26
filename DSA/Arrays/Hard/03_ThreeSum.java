@@ -27,6 +27,29 @@ class Main {
             }
             return new ArrayList<>(unqTriplets);	
         }
+    // ==================================== Better Approach ===========================================
+
+        static List<List<Integer>> threeSum_1(int[] nums){
+	        int length = nums.length;
+	        Set<List<Integer>> unqTriplets = new HashSet<>();
+	        Set<Integer> elements = new HashSet<>();
+    
+	        for(int index_1 = 0 ; index_1 < length ; index_1++){
+		        for(int index_2 = index_1+1 ; index_2 < length ; index_2++){
+		    	    int k = -(nums[index_1]+nums[index_2]);
+		        	if(elements.contains(k)){
+		    		    List<Integer> triplets = Arrays.asList(nums[index_1],nums[index_2],k);
+		    		    Collections.sort(triplets);
+		    		    unqTriplets.add(triplets);
+		    		    elements.add(nums[index_2]);
+		    	    }else{
+		    	        elements.add(nums[index_2]);	
+                    }
+		        }
+		        elements.clear();
+	        }
+	        return new ArrayList<>(unqTriplets);
+        }
 
     public static void main(String[] args) {
         int[] nums = {-1,0,1,2,-1,-4};
