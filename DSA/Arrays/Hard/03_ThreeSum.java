@@ -68,7 +68,7 @@ class Main {
 	            int index_3 = length - 1;
 
         	    while(index_2 < index_3){
-	    	        int sum = nums[index_1] +nums[index_2]+nums[index_3];
+	    	        int sum = nums[index_1] +nums[index_2]+nums[index_3];           //T.C = O(N log N)+O(N*N), S.C = O(no of unique triplets)
     
 	    	        if(sum < 0){
 	    			    index_2++;
