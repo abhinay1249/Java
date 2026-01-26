@@ -27,6 +27,7 @@ class Main {
             }
             return new ArrayList<>(unqTriplets);	
         }
+
     // ==================================== Better Approach ===========================================
 
         static List<List<Integer>> threeSum_1(int[] nums){
@@ -50,6 +51,46 @@ class Main {
 	        }
 	        return new ArrayList<>(unqTriplets);
         }
+
+    // ==================================== Optimal Approach ===========================================
+
+        static List<List<Integer>> threeSum_2(int[] nums){
+        
+        	List<List<Integer>> triplets = new ArrayList<>();
+	        int length = nums.length;	
+	        Arrays.sort(nums);
+    
+            for(int index_1 = 0 ; index_1 < length ; index_1++){
+                if(index_1>0 && nums[index_1] == nums[index_1-1]){
+                    continue;
+                }
+                int index_2 = index_1+1;
+	            int index_3 = length - 1;
+
+        	    while(index_2 < index_3){
+	    	        int sum = nums[index_1] +nums[index_2]+nums[index_3];
+    
+	    	        if(sum < 0){
+	    			    index_2++;
+                    }else if(sum > 0){
+	    			    index_3--;
+                    }else{
+                        List<Integer> elementList = Arrays.asList(nums[index_1],nums[index_2],nums[index_3]);
+	    	            triplets.add(elementList);
+                        index_2++;
+                        index_3--;
+	    	            while(index_2 < index_3 && nums[index_2] == nums[index_2-1]){
+	    		            index_2++;
+                        }
+	    	            while(index_2 < index_3 && nums[index_3] == nums[index_3+1]){
+	    		            index_3--;
+                        }
+                    }
+        	    }
+            }
+            return triplets;
+        }
+
 
     public static void main(String[] args) {
         int[] nums = {-1,0,1,2,-1,-4};
