@@ -35,7 +35,7 @@ class Main {
 	        Set<Integer> elements = new HashSet<>();
     
 	        for(int index_1 = 0 ; index_1 < length ; index_1++){                     // T.C = O(N^2 *Log(M))
-		        for(int index_2 = index_1+1 ; index_2 < length ; index_2++){        //  S.C = O(N)
+		        for(int index_2 = index_1+1 ; index_2 < length ; index_2++){        //  S.C = O(N) + 2*O(no of triplets)
 		    	    int k = -(nums[index_1]+nums[index_2]);          
 		        	if(elements.contains(k)){
 		    		    List<Integer> triplets = Arrays.asList(nums[index_1],nums[index_2],k);
