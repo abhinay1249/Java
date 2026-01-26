@@ -16,7 +16,7 @@ class Main {
 
             for(int index_1 = 0 ; index_1 < length - 2 ; index_1++){
                 for(int index_2 = index_1+1 ; index_2 < length - 1 ; index_2++){
-                    for(int index_3 = index_2+1 ; index_3 < length ; index_3++){         // T.C = O(N^3 * log(no of unique triplets))
+                    for(int index_3 = index_2+1 ; index_3 < length ; index_3++){         // T.C = O(N^3 * Log(no of unique triplets))
 	                    if(nums[index_1]+nums[index_2]+nums[index_3] == 0){              // S.C = 2 * O(no of triplets)
 	    	                    List<Integer> triplets = Arrays.asList(nums[index_1],nums[index_2],nums[index_3]);
 	    	                    Collections.sort(triplets);
