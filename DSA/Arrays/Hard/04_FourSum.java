@@ -33,7 +33,7 @@ class Main {
 	    
 	        for(int index_1 = 0 ; index_1 < length ; index_1++){
 	    	    for(int index_2 = index_1+1 ; index_2 < length ; index_2++){
-	    		    for(int index_3 = index_2+1 ; index_3 < length ; index_3++){            // T.C = O(N^3 *Log(M)), S.C =  2 * O(no of quadra)
+	    		    for(int index_3 = index_2+1 ; index_3 < length ; index_3++){            // T.C = O(N^3 *Log(M)), S.C = O(N) + 2 * O(no of quadra)
 	    			    long sum = (long) nums[index_1]+nums[index_2]+nums[index_3];
 
                         long element = (long) target - sum;
