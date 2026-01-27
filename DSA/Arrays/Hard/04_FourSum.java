@@ -11,7 +11,7 @@ class Main {
             for(int i = 0 ; i < n-3 ; i++){
                 for(int j = i+1 ; j < n-2 ; j++){
                     for(int k = j+1 ;  k < n -1 ; k++){
-                        for(int l = k+1 ; l < n ; l++){                                 // T.C = O(N^4), S.C =  
+                        for(int l = k+1 ; l < n ; l++){                                 // T.C = O(N^4), S.C = 2 * O(no of quadra)
                             if(nums[i]+nums[j]+nums[k]+nums[l] == target){
                                 List<Integer> elements = Arrays.asList(nums[i],nums[j],nums[k],nums[l]);
                                 Collections.sort(elements);
