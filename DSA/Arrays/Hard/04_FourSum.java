@@ -23,7 +23,33 @@ class Main {
             }
             return new ArrayList<>(elementList);
         }
+    
+    // ==================================== Better Approach ===========================================
+    
+        static List<List<Integer>> fourSum(int[] nums, int target){
+	        int length = nums.length;
+	        Set<List<Integer>> quadra = new HashSet<>();
+	        Set<Long> elementCheck = new HashSet<>();
+	    
+	        for(int index_1 = 0 ; index_1 < length ; index_1++){
+	    	    for(int index_2 = index_1+1 ; index_2 < length ; index_2++){
+	    		    for(int index_3 = index_2+1 ; index_3 < length ; index_3++){
+	    			    long sum = (long) nums[index_1]+nums[index_2]+nums[index_3];
 
+                        long element = (long) target - sum;
+	    			    if(elementCheck.contains(element)){
+	    				    List<Integer> temp = Arrays.asList(nums[index_1],nums[index_2],nums[index_3],(int)element);
+	    				    Collections.sort(temp);
+	    				    quadra.add(temp);
+                        }
+                        elementCheck.add((long)nums[index_3]);
+                    }
+                    elementCheck.clear();
+                }
+            }
+            return new ArrayList<>(quadra);
+        }
+        
     public static void main(String[] args) {
         int[] nums = {4,3,3,4,4,2,1,2,1,1};
         int target = 9;
