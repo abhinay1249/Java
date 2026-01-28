@@ -105,6 +105,7 @@ class Main {
             }
             return quadraplets;
         }
+        
     public static void main(String[] args) {
         int[] nums = {4,3,3,4,4,2,1,2,1,1};
         int target = 9;
