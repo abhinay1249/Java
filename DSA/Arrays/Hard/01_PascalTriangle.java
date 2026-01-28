@@ -91,7 +91,7 @@ class Main {
 
     // PRINT THE ENTIRE PASCAL TRIANGLE
 
-    // ==================================== Optimal Approach ===========================================
+    // ==================================== Brute-Force Approach ===========================================
 
         static int permutation(int row, int col){
             int value = 1;
