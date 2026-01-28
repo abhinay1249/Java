@@ -26,7 +26,7 @@ class Main {
     
     // ==================================== Better Approach ===========================================
     
-        static List<List<Integer>> fourSum(int[] nums, int target){
+        static List<List<Integer>> fourSum_1(int[] nums, int target){
 	        int length = nums.length;
 	        Set<List<Integer>> quadra = new HashSet<>();
 	        Set<Long> elementCheck = new HashSet<>();
@@ -50,6 +50,57 @@ class Main {
             return new ArrayList<>(quadra);
         }
 
+    // ==================================== Optimal Approach ===========================================
+
+        static List<List<Integer>> fourSum_2(int[] nums, int target){
+        
+	        int length = nums.length;
+
+	        List<List<Integer>>  quadraplets = new ArrayList<>();
+
+            if(length<4){
+                return quadraplets;
+            }
+
+	        Arrays.sort(nums);
+
+	        for(int idx_1 = 0 ; idx_1 < length ; idx_1++){
+	    	    if(idx_1>0 && nums[idx_1] == nums[idx_1-1]){
+	    		    continue;
+                }
+	    	    for(int idx_2 = idx_1+1 ; idx_2 < length ; idx_2++){
+	    		    if(idx_2>idx_1+1 && nums[idx_2] == nums[idx_2-1]){
+	    			    continue;
+                    }
+                    int left = idx_2+1;
+                    int right = length -1;
+
+                    while(left<right){
+                    	long sum = (long)(nums[idx_1]+nums[idx_2]);
+                    	sum+=(long)(nums[left]+nums[right]);
+
+                    	if(sum < target){
+                    		left++;
+                        }else if(sum>target){
+                        	right--;
+                        }else{
+                        	List<Integer> elementList = Arrays.asList(nums[idx_1],nums[idx_2],nums[left],nums[right]);
+                        	quadraplets.add(elementList);
+                        	left++;
+                        	right--;
+
+                            while(left < right && nums[left] == nums[left-1]){
+	                            left++;
+                            }
+                            while(left < right && nums[right] == nums[right+1]){
+	                            right--;
+                            }
+                        }
+                    }   
+                }   
+            }
+            return quadraplets;
+        }
     public static void main(String[] args) {
         int[] nums = {4,3,3,4,4,2,1,2,1,1};
         int target = 9;
