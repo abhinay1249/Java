@@ -1,7 +1,7 @@
 class Main {
 
 
-    // ==================================== Brute Force Approach ===========================================
+    // ==================================== Brute Force Approach ======================================
 
         static int subArraysOfXor(int[] nums, int target){
 
