@@ -42,6 +42,32 @@ class Main {
             }
             return count;
         }
+
+    // ==================================== Optimal Approach ===========================================
+
+        static int subArraysOfXor_2(int[] nums, int target){
+            int length = nums.length;
+            if(length == 0) return 0;
+
+            int xor = 0;
+            int count = 0;
+
+            Map<Integer,Integer> freqCount = new HashMap<>();
+
+            freqCount.put(0,1);
+
+            for(int idx = 0 ; idx < length ; idx++){
+                xor ^= nums[idx];
+
+                int requiredElement = xor ^ target;
+
+                if(freqCount.containsKey(requiredElement)){
+                    count += freqCount.get(requiredElement);
+                }
+                freqCount.put(xor,freqCount.getOrDefault(xor,0)+1);
+            }    
+            return count;
+        }
     
     public static void main(String[] args) {
         int[] nums = {4,2,2,6,4};
