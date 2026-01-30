@@ -12,7 +12,7 @@ class Main {
     
 	        for(int idx_1 = 0; idx_1 < length ; idx_1++){
 	    	    for(int idx_2 = idx_1; idx_2 < length ; idx_2++){
-	    		    int xor = 0;
+	    		    int xor = 0;                                                          // T.C = O(N^3), S.C = O(1)
 	    		    for(int values = idx_1 ; values <= idx_2 ; values++){
 	    			    xor ^= nums[values];
 	    			    if(xor == target){
@@ -33,7 +33,7 @@ class Main {
             for(int idx_1 = 0 ; idx_1 < length ; idx_1++){
                 int xor = 0;
                 for(int idx_2 = idx_1 ; idx_2 < length ; idx_2++){
-                    xor^=nums[idx_2];
+                    xor^=nums[idx_2];                                                      // T.C = O(N^2), S.C = O(1)
                     if(xor == target){
                         count++;
                     }
@@ -54,7 +54,7 @@ class Main {
 
             Map<Integer,Integer> freqCount = new HashMap<>();
 
-            freqCount.put(0,1);
+            freqCount.put(0,1);                                                     // T.C = O(N * N Log N), S.C = O(N)
 
             for(int idx = 0 ; idx < length ; idx++){
                 xor ^= nums[idx];

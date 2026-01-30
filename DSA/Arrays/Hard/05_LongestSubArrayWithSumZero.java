@@ -11,7 +11,7 @@ class Main {
 	        if(length == 0) return -1;
 	        int maxLength = Integer.MIN_VALUE;
 
-	        for(int idx_1= 0 ; idx_1 < length ; idx_1++){           // T.C = O(N^2), S.C = O(1)
+	        for(int idx_1= 0 ; idx_1 < length ; idx_1++){                       // T.C = O(N^2), S.C = O(1)
 	    	    int sum = 0;
 	    	    for(int idx_2 = idx_1 ; idx_2 < length ; idx_2++){
 	    		    sum += nums[idx_2];
