@@ -44,6 +44,35 @@ class Main{
             }
             return mergeInterval;
         }
+    
+    // ==================================== Optimal Approach ===========================================
+
+        static List<List<Integer>> mergeOverlapIntervals(int[][]nums){
+            int length = nums.length;
+            List<List<Integer>> mergeInterval = new ArrayList<>();
+
+            if(length == 0) return mergeInterval;
+
+            if(length == 1){
+                mergeInterval.add(Arrays.asList(nums[0][0],nums[0][1]));
+                return mergeInterval;
+            }
+
+            Arrays.sort(nums, (left,right) -> Integer.compare(left[0],right[0]));
+
+            for(int idx = 0 ; idx < length ; idx++){
+                int start = nums[idx][0];
+                int end = nums[idx][1];
+
+                if(mergeInterval.isEmpty() || mergeInterval.get(mergeInterval.size()-1).get(1)<nums[idx][0]){
+                    mergeInterval.add(Arrays.asList(start,end));
+                }else{
+                    List<Integer> lastNum = mergeInterval.get(mergeInterval.size()-1);
+                    end = lastNum.set(1,Math.max(end,lastNum.get(1)));
+                }
+            }
+            return mergeInterval;
+        }
 
     public static void main(String[] args) {
 
