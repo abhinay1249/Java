@@ -46,6 +46,7 @@ class Main{
     // ==================================== Optimal Approach ===========================================
 
         static List<List<Integer>> mergeOverlapIntervals_1(int[][]nums){
+
             int length = nums.length;
             List<List<Integer>> mergeInterval = new ArrayList<>();
 
