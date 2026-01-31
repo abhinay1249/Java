@@ -55,7 +55,7 @@ class Main{
 
             if(length == 1){
                 mergeInterval.add(Arrays.asList(nums[0][0],nums[0][1]));
-                return mergeInterval;
+                return mergeInterval;                                                   // T.C = O(N LOG N) + O(N), S.C = O(N)
             }
 
             Arrays.sort(nums, (left,right) -> Integer.compare(left[0],right[0]));
