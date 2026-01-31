@@ -16,9 +16,9 @@ public List<List<Integer>> mergeOverlapIntervals(int[][]nums){
             mergeInterval.add(Arrays.asList(nums[0][0],nums[0][1]));
         }
         
-        Arrays.sort(nums, (left,right) -> Integer.compare(left[0],right[0]));
-        
-        for(int idx_1 = 0 ; idx_1 < length ; idx_1++){
+        Arrays.sort(nums, (left,right) -> Integer.compare(left[0],right[0]));                        
+            
+        for(int idx_1 = 0 ; idx_1 < length ; idx_1++){                              //T.C = O(N LOG N) + O(2N), S.C = O(N)
             int start = nums[idx_1][0];
             int end = nums[idx_1][1];
             
