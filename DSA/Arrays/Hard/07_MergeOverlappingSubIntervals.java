@@ -76,6 +76,7 @@ class Main{
 
         int[][] nums = {{1,3},{2,6},{8,10},{15,18}};
         List<List<Integer>> res = mergeOverlapIntervals(nums);
+        
         for(List<Integer> value: res){
             System.out.println(value);   
         }
