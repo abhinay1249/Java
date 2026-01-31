@@ -6,7 +6,6 @@ import java.util.*;
 
 class Main{
 
-
     // ==================================== Brute Force Approach ===========================================
 
         static  List<List<Integer>> mergeOverlapIntervals(int[][]nums){
