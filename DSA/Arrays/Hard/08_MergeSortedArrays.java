@@ -19,6 +19,8 @@ class Main {
             return nums1;
     
         }
+    
+    // ==================================== Optimal Approach ===========================================
 
     public static void main(String[] args) {
         int[] nums1 = {0, 2, 7, 8, 0, 0, 0};
