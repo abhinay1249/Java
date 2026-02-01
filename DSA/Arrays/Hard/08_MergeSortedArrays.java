@@ -17,7 +17,6 @@ class Main{
             Arrays.sort(nums1);
 
             return nums1;
-            // return nums2;
     
         }
     
@@ -38,7 +37,7 @@ class Main{
                     nums1[index] = nums2[right];
                     right--;
                     index--;
-                }else if(nums1[left]>=nums2[right]){
+                }else if(nums1[left]>=nums2[right]){                             //T.C = O(M+N), S.C = O(1)
                     nums1[index] = nums1[left];
                     index--;
                     left--;
@@ -51,7 +50,6 @@ class Main{
                 right--;
             }
             return nums1;
-            // return nums2;
         }
 
 
