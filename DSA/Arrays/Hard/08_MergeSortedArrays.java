@@ -17,7 +17,7 @@ class Main {
 	                index++;
 	                left++;
 	            }else{
-	                result[index] = nums1[right];
+	                result[index] = nums1[right];                       //T.C = O(M+N) + O(M+N), S.C = O(M+N)
 	                index++;
 	                right++;
 	            }
@@ -58,7 +58,7 @@ class Main {
 
             while(left>=0 && right < n){
                 if(nums[left] > nums1[right]){
-                    swap(left,right,nums,nums1);
+                    swap(left,right,nums,nums1);                                 //T.C = O(M+N), S.C = O(1)
                     left--;
                     right++;
                 }else{
