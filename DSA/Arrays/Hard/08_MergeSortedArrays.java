@@ -38,7 +38,34 @@ class Main {
 	   // return nums1;
     }
     
+    static void swap(int left, int right, int[]nums, int[] nums1){
+        
+        int temp = nums[left];
+        nums[left] = nums1[right];
+        nums1[right] = temp;
+
+    }
     
+    static int[] mergeTwoSortedArray_1(int[] nums, int[] nums1, int m , int n){
+	    
+	    int left = m-1 ;
+	    int right = 0;
+        
+        while(left>=0 && right < n){
+            if(nums[left] > nums1[right]){
+                swap(left,right,nums,nums1);
+                left--;
+                right++;
+            }else{
+                break;
+            }
+        }
+        Arrays.sort(nums);
+        Arrays.sort(nums1);
+        
+	    return nums;
+	   // return nums1;
+    }
 
     public static void main(String[] args) {
         int[] nums = {1,3,5,7};
