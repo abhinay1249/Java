@@ -58,7 +58,7 @@ class Main {
 
             while(left>=0 && right < n){
                 if(nums[left] > nums1[right]){
-                    swap(left,right,nums,nums1);                                 //T.C = O(M+N), S.C = O(1)
+                    swap(left,right,nums,nums1);                          //T.C = O(min(m,n))+ O(N LOG N)+O(M LOG M), S.C = O(1)
                     left--;
                     right++;
                 }else{
