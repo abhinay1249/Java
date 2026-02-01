@@ -1,3 +1,16 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
 import java.util.*;
 
 class Main {
@@ -68,6 +81,41 @@ class Main {
             Arrays.sort(nums);
             Arrays.sort(nums1);
 
+	        return nums;
+	       // return nums1;
+        }
+
+    // ==================================== Optimal Approach USING GAP METHOD (SHELL SORT)===========================================
+
+        static void swapIfGreater(int[]nums,int[]nums1,int idx1,int idx2){
+            if(nums[idx1]>nums1[idx2]){
+                swap(idx1,idx2,nums,nums1);
+            }
+        }
+
+        static int[] mergeTwoSortedArray_2(int[] nums, int[] nums1, int m , int n){
+        
+	        int length = (m+n);
+	        int gap = (length/2) + (length%2);
+    
+	        while(gap>0){
+	            int left = 0;
+	            int right = left + gap;
+    
+	            while(right < length){                                              //T.C = log(M+N) * O(M+N), S.C = O(1)
+	                if(left<m && right>=m){
+	                    swapIfGreater(nums,nums1,left,right-m);
+	                }else if(left>=m){
+	                    swapIfGreater(nums1,nums1,left-m,right-m);
+	                }else{
+	                    swapIfGreater(nums,nums,left,right);
+	                }
+	                left++;
+	                right++;
+	            }
+	            if(gap == 1) break;
+	            gap = (gap/2) + (gap%2);
+	        }
 	        return nums;
 	       // return nums1;
         }
