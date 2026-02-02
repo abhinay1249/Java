@@ -14,7 +14,7 @@ class Main {
     
 	        for(int number = 1; number <= length ; number++){
 	            int count = 0;
-	    	    for(int index = 0 ; index < length ; index++){                  // T.C 
+	    	    for(int index = 0 ; index < length ; index++){                  // T.C = O(N^2), S.C = O(1)
 	    		    if(number == nums[index]){
 	                    count++;
                     }
