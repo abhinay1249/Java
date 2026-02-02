@@ -2,6 +2,7 @@ import java.util.*;
 
 class Main {
 
+    // ==================================== Brute Force Approach ===========================================
 
 
         static int[] missingAndRepeated(int[] nums){
@@ -13,7 +14,7 @@ class Main {
     
 	        for(int number = 1; number <= length ; number++){
 	            int count = 0;
-	    	    for(int index = 0 ; index < length ; index++){
+	    	    for(int index = 0 ; index < length ; index++){                  // T.C 
 	    		    if(number == nums[index]){
 	                    count++;
                     }
@@ -24,7 +25,7 @@ class Main {
                     }
 	    	    }
             }
-    
+
             numbers[0] = missingNumber;
             numbers[1] = repeatedNumber;
             return numbers;
