@@ -31,6 +31,9 @@ class Main {
             return numbers;
         }
 
+    // ==================================== Better Approach ===========================================
+
+
         static int[] missingAndRepeated_1(int[] nums){
 	        int length = nums.length;
 	        Map<Integer, Integer> freqCount = new HashMap<>();
