@@ -42,7 +42,7 @@ class Main {
 	        int repeatedNumber = -1;
 
 	        for(int idx = 1; idx <= length ; idx++){
-		        freqCount.put(idx,freqCount.getOrDefault(idx,0)+1);
+		        freqCount.put(idx,freqCount.getOrDefault(idx,0)+1);                 // T.C = O(n log m)*2+O(N), S.C = O(N)
             }
 
 	        for(int idx = 0; idx < length ; idx++){
