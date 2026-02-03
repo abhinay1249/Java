@@ -139,16 +139,8 @@ class Main {
                 xor^=(idx+1);
             }
 
-            int bitNumber = xor & ~(xor-1);
-            int bitNumber = 0;
-
-            while(){
-                if((xor & (1<<bitNumber))!=0){
-                    break;
-                }
-                bitNumber++;
-            }
-
+            int bitNumber = xor & ~(xor-1);                         // T.C = O(4N), S.C = O(1)
+                                            
             int zero = 0;
             int one = 0;
 
