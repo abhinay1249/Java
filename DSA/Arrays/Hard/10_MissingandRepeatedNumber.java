@@ -125,6 +125,65 @@ class Main {
             return numbers;
         }
     
+    
+
+        static int[] missingAndRepeated_3(int[] nums){
+            int length = nums.length;
+            int[] numbers = new int[2];
+            int xor = 0;
+            int missingNumber = -1;
+            int repeatedNumber = -1;
+
+            for(int idx = 0 ; idx < length ; idx++){
+                xor^=nums[idx];
+                xor^=(idx+1);
+            }
+
+            int bitNumber = xor & ~(xor-1);
+            int bitNumber = 0;
+
+            while(){
+                if((xor & (1<<bitNumber))!=0){
+                    break;
+                }
+                bitNumber++;
+            }
+
+            int zero = 0;
+            int one = 0;
+
+            for(int idx = 0 ; idx < length ; idx++){
+                if((nums[idx] & bitNumber)!=0){
+                    one^=nums[idx];
+                }else{
+                    zero^=nums[idx];
+                }
+            }
+
+            for(int idx = 1 ; idx <=length ; idx++){
+                if((idx & bitNumber)!=0){
+                    one^=idx;
+                }else{
+                    zero^=idx;
+                }
+            }
+
+            int count = 0;
+
+            for(int idx = 0 ; idx < length ; idx++){
+                if(one == nums[idx]){
+                    count++;
+                }
+            }
+            if(count == 2){
+                numbers[0]=zero;
+                numbers[1]=one;
+            }
+            numbers[0] = one;
+            numbers[1] = zero;
+            return numbers;
+        }
+    
 
 
     public static void main(String[] args) {
