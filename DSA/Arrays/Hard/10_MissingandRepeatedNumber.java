@@ -37,7 +37,7 @@ class Main {
             return numbers;
         }
 
-    // ==================================== Better Approach - 1 Using HashMap ===========================================
+    // =============================== Better Approach - 1 Using HashMap =====================================
 
 
         static int[] missingAndRepeated_1(int[] nums){
