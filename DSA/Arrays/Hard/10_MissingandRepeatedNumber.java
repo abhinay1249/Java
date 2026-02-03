@@ -125,7 +125,7 @@ class Main {
             return numbers;
         }
     
-    
+    // ==================================== Optimal Approach - 2 Using XOR (BIT MANIPULATION) ===========================================
 
         static int[] missingAndRepeated_3(int[] nums){
             int length = nums.length;
