@@ -31,7 +31,7 @@ class Main {
             return numbers;
         }
 
-    // ==================================== Better Approach ===========================================
+    // ==================================== Better Approach - 1 Using HashMap ===========================================
 
 
         static int[] missingAndRepeated_1(int[] nums){
@@ -64,10 +64,38 @@ class Main {
             return numbers;
         }
 
+    // ==================================== Better Approach - 2 Using HashArray ===========================================
+
+        static int[] missingAndRepeated_2(int[] nums){
+
+	        int length = nums.length;
+	        int[] hashArray = new int[length+1];
+	        int[] numbers = new int[2];
+	        int missingNumber = -1;
+	        int repeatedNumber = -1;
+
+	        for(int idx = 0; idx < length ; idx++){
+		        hashArray[nums[idx]]++;                                             // T.C = O(2N), S.C = O(N)
+            }
+
+	        for(int idx = 1; idx < hashArray.length ; idx++){
+                if(hashArray[idx]==0){
+                    missingNumber=idx;
+                }else if(hashArray[idx]==2){
+                    repeatedNumber=idx;
+                }
+            }     
+
+            numbers[0] = missingNumber;
+            numbers[1] = repeatedNumber;
+
+            return numbers;
+        }
+
 
     public static void main(String[] args) {
         int[] nums = {1, 2, 3, 4, 5, 6, 6}; 
-        int[] result = missingAndRepeated(nums);
+        int[] result = missingAndRepeated_2(nums);
         
         for(int values : result){
             System.out.print(values+" ");
