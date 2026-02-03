@@ -92,6 +92,40 @@ class Main {
             return numbers;
         }
 
+    // ==================================== Optimal Approach - 1 Using Math ===========================================
+
+        static int[] missingAndRepeated_2(int[] nums){
+        
+            long length = nums.length;
+
+            int[] numbers = new int[2];
+
+            long sumOfNumbers = (length * (length+1))/2;
+
+            long sumOfSquaresOfNumbers = (length * (length+1) * (2* length+1))/6;
+
+            long sum = 0, sumOfSquares = 0;
+
+            for(int idx = 0 ; idx < length ; idx++){                                    // T.C = O(N), S.C = O(1)
+                sum+=nums[idx];   
+                sumOfSquares += (long) nums[idx] *(long) nums[idx];
+            }
+
+            long eqn1 = (sum - sumOfNumbers);
+            long eqn2 = (sumOfSquares - sumOfSquaresOfNumbers);
+
+            eqn2 = eqn2/eqn1;
+
+            long repeatedNumber = (eqn2+eqn1)/2;
+            long missingNumber = eqn2 - repeatedNumber;
+
+            numbers[0] = (int)repeatedNumber;
+            numbers[1] = (int)missingNumber;
+
+            return numbers;
+        }
+    
+
 
     public static void main(String[] args) {
         int[] nums = {1, 2, 3, 4, 5, 6, 6}; 
@@ -100,6 +134,5 @@ class Main {
         for(int values : result){
             System.out.print(values+" ");
         }
-       
     }
 }
