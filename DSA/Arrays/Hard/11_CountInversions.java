@@ -12,7 +12,7 @@ class Main {
 	        if(length < 2){
 	            return count;
 	        }           
-	        for(int index_1 =0 ; index_1 < length-1 ; index_1++){
+	        for(int index_1 =0 ; index_1 < length-1 ; index_1++){                   // T.C = O(N^2) S.C = O(1)
 	    	    for(int index_2 = index_1+1 ; index_2 < length ; index_2++){
 	    		    if(nums[index_1]>nums[index_2]){
 	    			    count++;
