@@ -37,8 +37,8 @@ class Main {
                 }else if(nums[left]>nums[right]){
 	                temp.add(nums[right]);
 	                count+=(mid-left+1);
-	                right++;                                             // T.C = O(N LOG N), S.C = O(N) 
-                }
+	                right++;                             // T.C = O(N LOG N), S.C = O(N) Incase given array cannot be modified then simply clone it.
+                }                                                                        // nums1.clone(nums); 
             }
 
             while(left<=mid){
