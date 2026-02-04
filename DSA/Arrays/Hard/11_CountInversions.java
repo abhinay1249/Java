@@ -21,6 +21,7 @@ class Main {
             }
             return count;
         }
+        
     // ==================================== Optimal Approach ===========================================
 
         static int merge(int[] nums, int low, int mid, int high){
