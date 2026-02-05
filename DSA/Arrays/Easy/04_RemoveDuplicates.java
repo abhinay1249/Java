@@ -36,9 +36,9 @@ class Main {
         int i = 0;
         
         for(int j = 1; j < n ; j++){
-
+                                                                                
             if(arr[j]!=arr[i]){
-                arr[i+1]=arr[j];
+                arr[i+1]=arr[j];                                    // T.C = O(N) , S.C = O(1)
                 i++;
             }
         }
