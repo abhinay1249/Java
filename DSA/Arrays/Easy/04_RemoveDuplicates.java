@@ -18,7 +18,7 @@ class Main {
         int n = arr.length;
         int index = 0;
         for(int i = 0 ; i < n ; i++){
-            if(!(al.contains(arr[i]))){
+            if(!(al.contains(arr[i]))){                             // T.C = O(N) , S.C = O(N)
                 al.add(arr[i]);
                 arr[index]=arr[i];
                 index++;
