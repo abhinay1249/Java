@@ -57,7 +57,7 @@ class Main {
         Map<Integer,Integer> freqCount = new HashMap<>();
     
         for(int i = 0; i < arrayLength ; i++){
-            freqCount.put(nums[i],freqCount.getOrDefault(nums[i]    ,0)+1);
+            freqCount.put(nums[i],freqCount.getOrDefault(nums[i],0)+1);             // T.C = O(N log M)+O(N) , S.C = O(N)
         }
     
         for(Map.Entry<Integer,Integer> value : freqCount.entrySet()){
