@@ -87,6 +87,7 @@ class Main {
 		int i = 0, j = 0;
 
 		while(j<nums.length){
+			sum+=nums[j];
 
 			while(i <= j && sum>k){
 				sum-=nums[i];
@@ -96,11 +97,8 @@ class Main {
 			if(sum==k){
 				maxLength = Math.max(maxLength, j-i+1);				// T.C = O(N), S.C = O(1) 
 			}
-
+			
 			j++;
-			if(j<nums.length){
-				sum+=nums[j];
-			}
 		}
 		if(maxLength == 0){
 	    	return 0;
