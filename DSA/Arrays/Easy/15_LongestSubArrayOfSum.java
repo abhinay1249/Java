@@ -94,7 +94,7 @@ class Main {
 			}
 
 			if(sum==k){
-				maxLength = Math.max(maxLength, j-i+1);				// ---> T.C = O(2N)
+				maxLength = Math.max(maxLength, j-i+1);				// T.C = O(N), S.C = O(1) 
 			}
 
 			j++;
