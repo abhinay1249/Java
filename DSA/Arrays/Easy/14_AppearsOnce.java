@@ -74,7 +74,7 @@ class Main {
         
         int appearOnce = 0;
         
-        for(int i = 0; i < nums.length ; i++){
+        for(int i = 0; i < nums.length ; i++){                          // T.C = O(N) , S.C = O(1)
             appearOnce^=nums[i];
         }
         return appearOnce;
