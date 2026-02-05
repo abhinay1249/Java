@@ -16,7 +16,7 @@ class Main {
 	    	for(int j = i ; j < nums.length ; j++){
 	    		int sumOfElements = 0;
 	    		
-	    		for(int k = i ; k <= j; k++){
+	    		for(int k = i ; k <= j; k++){							// T.C = O(N^3) , S.C = O(1)
 	    			sumOfElements += nums[k];
 	    		}
 	    		if(sumOfElements == value){
