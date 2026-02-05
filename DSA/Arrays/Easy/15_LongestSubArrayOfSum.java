@@ -60,8 +60,8 @@ class Main {
 
 	    Map<Integer, Integer> indexing = new HashMap<>();
 
-	    for(int i = 0 ; i < nums.length ; i++){
-		
+	    for(int i = 0 ; i < nums.length ; i++){									// T.C = O(N) + O(N LOG M) , S.C = O(N)
+																				
 		    prefixSum+=nums[i];
 
 		    if(prefixSum == k){
