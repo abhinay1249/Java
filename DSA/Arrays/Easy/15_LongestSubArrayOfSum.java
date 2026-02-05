@@ -37,8 +37,8 @@ class Main {
 	    int maxSubArrayLength = 0;
 	    
 	    for(int i = 0; i < nums.length ; i++){
-			int sumOfElements = 0;
-	    	for(int j = i ; j < nums.length ; j++){
+			int sumOfElements = 0;	
+	    	for(int j = i ; j < nums.length ; j++){								// T.C = O(N^2) , S.C = O(1)
 	    		sumOfElements += nums[j];
 	    		if(sumOfElements == value){
 	    			maxSubArrayLength = Math.max(maxSubArrayLength, j-i+1);
@@ -69,9 +69,8 @@ class Main {
 		    }else if(indexing.containsKey(prefixSum-k)){
 			    maxSubArrayLength = Math.max(maxSubArrayLength, i - indexing.get(prefixSum-k));
 		    }
-			if(!indexing.containsKey(prefixSum)){
-		    	indexing.putIfAbsent(prefixSum, i);
-			}
+			
+		    indexing.putIfAbsent(prefixSum, i);
 	    }
 		if(maxSubArrayLength == 0){
 	    	return 0;
