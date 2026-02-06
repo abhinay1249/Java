@@ -16,15 +16,15 @@ class Main {
 	    int maxCount = 0;
 
 	    for(int i = 0 ; i < nums.length;i++){
-	        int count = 0;
+	        int count = 0;												// T.C = O(N^2) S.C = O(1)
 		    for(int j = 0 ; j < nums.length ; j++){
 			    if(nums[i]==nums[j]){
 				    count++;
 			    }
 		    }
 		  if(count > (lengthOfArray/2)){
-		      element = nums[i];
-		      break;
+		    element = nums[i];
+		    break;
 		  }
 	    }
 	    return element;
@@ -36,7 +36,7 @@ class Main {
 	
 	    Map<Integer,Integer> freqCount = new TreeMap<>();
 	
-	    for(int i = 0; i < nums.length; i++){
+	    for(int i = 0; i < nums.length; i++){												// T.C = O(N log M) + O(N) S.C = O(1)
 		    freqCount.put(nums[i],freqCount.getOrDefault(nums[i],0)+1);
 	    }
 	
@@ -62,7 +62,7 @@ class Main {
 			    count++;
 		    }else if(element != nums[i]){
 			    count--;
-		    }
+		    }															// T.C = O(N) + O(N) S.C = O(1)
 
 		    if(count == 0){
 				count=1;
