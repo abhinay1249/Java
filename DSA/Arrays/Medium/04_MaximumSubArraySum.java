@@ -16,7 +16,7 @@ class Main {
 	        int maxSum = Integer.MIN_VALUE;
     
 	        for(int i = 0 ; i < nums.length ; i++){
-	    	    for(int j = i ; j < nums.length ; j++){
+	    	    for(int j = i ; j < nums.length ; j++){							// T.C = O(N^3) S.C = O(1)
 	    		    int sum = 0;
     
 	    		    for(int k = i ; k <= j ; k++){
@@ -36,7 +36,7 @@ class Main {
     
 	        for(int i = 0 ; i < nums.length ; i++){
 	            int sum = 0;
-	    	    for(int j = i ; j < nums.length ; j++){
+	    	    for(int j = i ; j < nums.length ; j++){								// T.C = O(N^2) S.C = O(1) 
 	    			sum+=nums[j];
 	    			maxSum = Math.max(sum, maxSum);
 	    		}
