@@ -37,11 +37,11 @@ class Main {
 	        for(int i = 0 ; i < nums.length ; i++){
 	            int sum = 0;
 	    	    for(int j = i ; j < nums.length ; j++){
-	    			    sum+=nums[j];
-	    			    maxSum = Math.max(sum, maxSum);
+	    			sum+=nums[j];
+	    			maxSum = Math.max(sum, maxSum);
 	    		}
             }   
-                return maxSum;
+            return maxSum;
         }
 
     // ======================= Optimal Approach [KADANE'S ALGORITHM] =======================
