@@ -74,7 +74,7 @@ class Main {
         private static void swap(int left, int right, int[] nums){
         
 	        int temp = nums[left];
-	        nums[left] = nums[right];                                           // T.C = O(N! * N), S.C = O(1) 
+	        nums[left] = nums[right];                                           // T.C = O(3N), S.C = O(1) 
 	        nums[right] = temp;
         }
 
