@@ -49,7 +49,7 @@ class Main {
                 return nums[0];
             } 
 
-            for(int idx = 0 ; idx < length ; idx++){                            // T.C = O(N^2) S.C = O(1
+            for(int idx = 0 ; idx < length ; idx++){                            // T.C = O(N^2) S.C = O(1)
                 if(nums[idx]==0){
                     continue;
                 }
@@ -67,6 +67,40 @@ class Main {
             }
             return maxProduct;
         }
+
+    // =============================== Optimal Approach =====================================
+
+        static int maxProduct_2(int[] nums) {
+            int length = nums.length;
+            int maxProduct = 0;
+
+            if(length == 0){
+                return maxProduct;
+            }else if(length == 1){
+                return nums[0];
+            } 
+
+            int prefix = 1;
+            int suffix = 1;                                                         // T.C = O(N) S.C = O(1)
+
+            for(int idx = 0 ; idx < length ; idx++){
+
+                if(prefix == 0){
+                    prefix = 1;
+                }
+
+                if(suffix == 0){
+                    suffix = 1;
+                }
+
+                prefix *= nums[idx];
+                suffix *= nums[length-idx-1];
+
+                maxProduct = Math.max(maxProduct,Math.max(prefix,suffix));
+            }
+            return maxProduct;
+        }
+
     public static void main(String[] args) {
         int[] nums = {2,3,-2,4};
         int result = maxProduct_1(nums);
