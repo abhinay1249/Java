@@ -27,7 +27,6 @@ class Main {
         static int merge(int[] nums, int low, int mid, int high){
 	        List<Integer> temp = new ArrayList<>();
 	        int count = 0;
-	        int length = nums.length;
 	        int left = low;
 	        int right = mid+1;
 
@@ -60,7 +59,7 @@ class Main {
         }
 
         static int mergeSort(int[] nums, int low, int high){
-	        int length = nums.length;
+
 	        int mid = low + ((high - low)/2);
 	        int count = 0;
 
@@ -79,7 +78,7 @@ class Main {
         }
 
     public static void main(String[] args) {
-        int[] nums = {5,3,2,1,4};
+        int[] nums = {5,4,3,2,1};
         int result = countInversions_1(nums);
         System.out.println(result);
     }
