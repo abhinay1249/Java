@@ -25,28 +25,32 @@ class Main {
     // ==================================== Optimal Approach ===========================================
 
         static void merge(int[] nums, int low, int mid, int high){
-	           List<Integer> temp = new ArrayList<>();
-	           int left = low;
-	           int right = mid+1;
+
+	        List<Integer> temp = new ArrayList<>();
+	        int left = low;
+	        int right = mid+1;
     
 
-	           while(left<=mid && right<=high){
+	        while(left<=mid && right<=high){
 	       	    if(nums[left] <= nums[right]){
 	       		    temp.add(nums[left]);
 	       		    left++;
-                }else if(nums[left]>nums[right]){               // T.C = O(N LOG N)
+                }else if(nums[left]>nums[right]){               // T.C = 2 (O(N LOG N)) S.C = O(N)
 	                   temp.add(nums[right]);
 	                   right++;
                 }
             }
+
             while(left<=mid){
 	               temp.add(nums[left]);
 	               left++;
             }
+
             while(right<=high){
 	               temp.add(nums[right]);
 	               right++;
             }
+
             for(int idx = low ; idx <= high ; idx++){
                 nums[idx] = temp.get(idx - low);
             }
