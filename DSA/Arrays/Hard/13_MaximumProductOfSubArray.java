@@ -49,7 +49,7 @@ class Main {
                 return nums[0];
             } 
 
-            for(int idx = 0 ; idx < length ; idx++){
+            for(int idx = 0 ; idx < length ; idx++){                            // T.C = O(N^2) S.C = O(1
                 if(nums[idx]==0){
                     continue;
                 }
