@@ -3,7 +3,7 @@
 
 class Main {
     
-    // ------------------------------ Lower Bound --------------------------------------
+    // ------------------------------ Lower Bound [Smallest Index] --------------------------------------
 
     static int lowerBound(int[] nums, int target){
         
@@ -24,7 +24,7 @@ class Main {
         return ans;
     }
 
-    // -------------------------------- Upper Bound --------------------------------------
+    // -------------------------------- Upper Bound [Smallest Index] --------------------------------------
 
     public static void main(String[] args) {
         int[] nums = {1,3,4,5,7,9,10,13,15};
