@@ -1,11 +1,34 @@
-// Problem Statement: You are given a sorted array arr of distinct values and a target value x. You need to search for the index of the target value in the array.
+// Problem Statement: ou're given an sorted array arr of n integers and an integer x. Find the floor and ceiling of x in arr[0..n-1]. \
+// The floor of x is the largest element in the array which is smaller than or equal to x. 
+// The ceiling of x is the smallest element in the array greater than or equal to x
 
 
 class Main {
     
-    // ------------------------------ Optimal Approach --------------------------------------
+    // ------------------------------ Floor Approach --------------------------------------
 
-        static int insertPosition(int[] nums, int target){
+        static int floor(int[] nums, int target){
+
+            int length = nums.length;
+            int low = 0, high = length - 1;
+            int ans = length;
+
+            while(low <= high){                                             // T.C = O(log N) S.C = O(1)
+                int mid = low + ((high-low)/2);
+
+                if(nums[mid] <= target){
+                    ans = nums[mid];
+                    low = mid+1;
+                }else{
+                    high = mid - 1;
+                }
+            }
+            return ans;
+        }
+
+    // ------------------------------ Ceil Approach --------------------------------------
+
+        static int ceil(int[] nums, int target){
 
             int length = nums.length;
             int low = 0, high = length - 1;
@@ -15,7 +38,7 @@ class Main {
                 int mid = low + ((high-low)/2);
 
                 if(nums[mid] >= target){
-                    ans = mid;
+                    ans = nums[mid];
                     high = mid - 1;
                 }else{
                     low = mid+1;
@@ -28,8 +51,10 @@ class Main {
 
     public static void main(String[] args) {
         int[] nums = {1,3,4,5,7,9,10,13,15};
-        int target = 10;
-        int result = insertPosition(nums,target);
+        int target = 14;
+        int result = floor(nums,target);
+        int result1 = ceil(nums,target);
         System.out.println(result);
+        System.out.println(result1);
     }
 }
