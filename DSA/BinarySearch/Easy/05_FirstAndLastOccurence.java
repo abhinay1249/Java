@@ -1,6 +1,6 @@
 class Main {
 
-    
+    // ======================= Brute Force Approach =======================================
     
         static int lastOccurence(int[] nums, int target){
 
@@ -8,7 +8,7 @@ class Main {
             int lastOccurence = -1;
             int firstOccurence = -1;
 
-            for(int index = 0 ; index < length ; index++){
+            for(int index = 0 ; index < length ; index++){                  // T.C = O(N) S.C = O(1)
                 if(nums[index] == target){
                     firstOccurence = index;
                     break;
