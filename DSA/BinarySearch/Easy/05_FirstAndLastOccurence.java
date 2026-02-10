@@ -97,7 +97,7 @@ class Main {
             return new int[]{first,upperBound(nums,target)-1};
         }
 
-    // ======================= Optimal Approach =======================================
+    // ======================= Optimal Approach using Binary Search =======================================
 
         static int firstOccurence(int[] nums, int target){
             
@@ -109,7 +109,7 @@ class Main {
 
                 int mid = low +((high - low)/2);
 
-                if(nums[mid] == target){
+                if(nums[mid] == target){                                     // T.C = 2 * O(log N) S.C = O(1)
                     first = mid;
                     high = mid - 1;
                 }else if(nums[mid] > target){
@@ -142,11 +142,22 @@ class Main {
             }
             return last;
         }
+
+        static int[] firstAnsLastOccurence_3(int[] nums, int target){
+
+            int length = nums.length;
+            int first = firstOccurence(nums,target);
+            if(first == -1){
+                return new int[]{-1,-1};
+            }
+            return new int[]{first,lastOccurence(nums,target)};
+        }
+
     
     public static void main(String[] args) {
         int[] nums = {1,2,4,4,4,4,4,9,11};
         int target = 5;
-        int[] result = firstAndLastOccurence_2(nums,target);
+        int[] result = firstAndLastOccurence_3(nums,target);
 
         for(int val : result){
             System.out.println(val);
