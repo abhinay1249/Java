@@ -1,8 +1,10 @@
+
+
 class Main {
 
     // ======================= Brute Force Approach =======================================
     
-        static int lastOccurence(int[] nums, int target){
+        static int firstAnsLastOccurence(int[] nums, int target){
 
             int length = nums.length;
             int lastOccurence = -1;
@@ -14,6 +16,7 @@ class Main {
                     break;
                 }
             }
+
             for(int index = length-1 ; index >= 0 ; index--){
                 if(nums[index] == target){
                     lastOccurence = index;
@@ -27,7 +30,7 @@ class Main {
     public static void main(String[] args) {
         int[] nums = {1,2,4,4,4,4,4,9,11};
         int target = 5;
-        int result = lastOccurence(nums,target);
+        int result = firstAnsLastOccurence(nums,target);
         System.out.println(result);
     }
 }
