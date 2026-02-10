@@ -3,7 +3,7 @@
 
 class Main {
     
-    // ------------------------------ Optimal Approach --------------------------------------
+    // =============================== Optimal Approach =================================================
 
         static int insertPosition(int[] nums, int target){
 
