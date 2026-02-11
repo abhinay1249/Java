@@ -12,9 +12,9 @@ class Main {
 
             int length = nums.length;
             boolean result = false;
-    
+
             for(int index = 0 ; index < length ; index++){
-                if(nums[index] == target){
+                if(nums[index] == target){                          // T.C = O(N), S.C = O(1)
                     result = true;
                     break;
                 }
