@@ -23,7 +23,7 @@ class Main {
 
     // ======================= Optimal Approach =======================================
 
-        static int rotatedSortedArray(int[] nums, int target){
+        static int rotatedSortedArray_1(int[] nums, int target){
 
             int length = nums.length;
             int ans = -1;
@@ -59,7 +59,7 @@ class Main {
 
         int[] nums = {4,5,6,7,0,1,2};
         int target = 0;
-        int result = rotatedSortedArray(nums,target);
+        int result = rotatedSortedArray_1(nums,target);
         System.out.println(result);
     }
 }

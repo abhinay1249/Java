@@ -24,22 +24,28 @@ class Main {
 
     // ======================= Optimal Approach =======================================
 
-        static int rotatedSortedArray(int[] nums, int target){
+        static int rotatedSortedArray_1(int[] nums, int target){
 
             int length = nums.length;
-            int ans = -1;
+            boolean result = false;
             int low = 0, high = length - 1;
 
             while(low <= high){
 
-                int mid = low + ((high - low)/2);
+                int mid = low + ((high-low)/2);
 
-                if(nums[mid]==target){
-                    ans = mid;
-                    break;
+                if(nums[mid] == target){
+                    result = true;
+                    return result;                                              // T.C = O(LOG N), S.C = O(1)
                 }
 
-                if(nums[low] <= nums[mid]){                                     // T.C = O(LOG N), S.C = O(1)
+                if(nums[low] == nums[mid] && nums[mid] == nums[high]){
+                    low++;
+                    high--;
+                    continue;
+                }
+
+                if(nums[low]<=nums[mid]){
                     if(nums[low] <= target && target <= nums[mid]){
                         high = mid - 1;
                     }else{
@@ -53,7 +59,7 @@ class Main {
                     }
                 }
             }
-            return ans;
+            return result;
         }
 
     public static void main(String[] args) {
