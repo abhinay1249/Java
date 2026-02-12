@@ -1,3 +1,7 @@
+// Problem Statement: Given an integer array arr of size N, sorted in ascending order (with distinct values), the array is rotated at any index which is unknown.
+// Find the minimum element in the array.
+
+
 class Main {
     
     static int minimumInSortedArray(int[] nums){
