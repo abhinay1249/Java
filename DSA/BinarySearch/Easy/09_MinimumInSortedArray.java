@@ -3,7 +3,7 @@ class Main {
     static int minimumInSortedArray(int[] nums){
         
         int length = nums.length;
-        int minValue = Integer.MAX_VALUE;   
+        int minValue = Integer.MAX_VALUE;                       // T.C = O(N), S.C = O(1)
         
         for(int index = 0 ; index < length ; index++){
             
@@ -20,7 +20,7 @@ class Main {
         
         while(low <= high){
             
-            int mid = low + ((high - low)/2);
+            int mid = low + ((high - low)/2);                       // T.C = O(Log N), S.C = O(1)
             
             if(nums[low] <= nums[mid]){
                 minValue = Math.min(nums[low],minValue);
