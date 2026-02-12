@@ -21,7 +21,7 @@ class Main {
             return result;
         }
 
-    // ======================= Optimal Approach =======================================
+    // ======================= Optimal Approach ============================================
 
         static int rotatedSortedArray_1(int[] nums, int target){
 
