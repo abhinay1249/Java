@@ -30,6 +30,14 @@ class Main {
 
                 int mid = low + ((high - low)/2);                       // T.C = O(Log N), S.C = O(1)
 
+                // Handles Duplicates
+                
+                if(nums[low] == nums[mid] && nums[mid] == nums[high]){
+                    low++;
+                    high--;
+                    continue;   
+                }
+
                 // Optional-->[For more optimized time complexity]
 
                 if(nums[low] <= nums[high]){
