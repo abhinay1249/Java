@@ -2,14 +2,16 @@ import java.util.*;
 
 class Main {
     
+    // ======================= Brute Force Approach ===================================
+
     static int singleElement(int[] nums){
         int length = nums.length;
         
         if(length == 1) return nums[0];
         
-        Map<Integer,Integer> freqCount = new HashMap<>();
+        Map<Integer,Integer> freqCount = new HashMap<>();                     // T.C = O(N LOG M)+ O(N), S.C = O(N/2+1)        
         
-        for(int index = 0 ; index < length ; index++){
+        for(int index = 0 ; index < length ; index++){                                      
             freqCount.put(nums[index],freqCount.getOrDefault(nums[index],0)+1);
         }
         
@@ -24,13 +26,15 @@ class Main {
         return singleElement;
     }
     
+    // ======================= Better Approach ===================================
+
     static int singleElement_1(int[] nums){
         int length = nums.length;
         int singleElement = 0;
        
        if(length == 1) return nums[0];
        
-        for(int index = 0 ; index < length ; index++){
+        for(int index = 0 ; index < length ; index++){                      // T.C = O(N), S.C = O(1)
             singleElement ^= nums[index];
         }
         return singleElement;
