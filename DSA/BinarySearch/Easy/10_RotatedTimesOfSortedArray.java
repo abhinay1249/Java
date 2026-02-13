@@ -39,9 +39,41 @@ class Main {
             }
             return rotatedTimes;
         }
+
+    // ======================= Optimal Approach =======================================
+
+        static int rotatedTimes_1(int[] nums){
+        
+            int length = nums.length;
+            int minValue = Integer.MAX_VALUE;
+            int rotatedTimes = 0;
+            int low = 0 , high = length - 1;
+
+            while(low <= high){
+                int mid = low + ((high-low)/2);
+
+                if(nums[low]<=nums[high]){
+                    minValue = Math.min(nums[low],minValue);            // T.C = O(Log N), S.C = O(1)
+                    rotatedTimes = low;
+                    break;
+                }
+
+                if(nums[low]<=nums[mid]){
+                    minValue = Math.min(nums[low],minValue);
+                    rotatedTimes = low;
+                    low = mid + 1;
+                }else{
+                    minValue = Math.min(nums[mid],minValue);
+                    rotatedTimes = mid;
+                    high = mid - 1;
+                }
+            }
+            return rotatedTimes;
+        }
+
     public static void main(String[] args) {
         int[] nums = {4,5,6,7,0,1,2,3};
-        int result = rotatedTimes(nums);
+        int result = rotatedTimes_2(nums);
         System.out.println(result);
     }
 }
