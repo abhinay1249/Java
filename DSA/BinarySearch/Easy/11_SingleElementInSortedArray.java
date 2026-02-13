@@ -2,7 +2,7 @@ import java.util.*;
 
 class Main {
     
-    // ======================= Brute Force Approach ===================================
+    // ======================= Brute Force Approach ===========================
 
     static int singleElement(int[] nums){
         int length = nums.length;
@@ -26,7 +26,7 @@ class Main {
         return singleElement;
     }
     
-    // ======================= Better Approach ===================================
+    // ======================= Better Approach =================================
 
     static int singleElement_1(int[] nums){
         int length = nums.length;
