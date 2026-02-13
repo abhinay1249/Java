@@ -52,6 +52,14 @@ class Main {
             while(low <= high){
                 int mid = low + ((high-low)/2);
 
+                // Handles Duplicates
+                
+                if(nums[low] == nums[mid] && nums[mid] == nums[high]){
+                    low++;
+                    high--;
+                    continue;   
+                }
+
                 if(nums[low]<=nums[high]){
                     minValue = Math.min(nums[low],minValue);            // T.C = O(Log N), S.C = O(1)
                     rotatedTimes = low;
