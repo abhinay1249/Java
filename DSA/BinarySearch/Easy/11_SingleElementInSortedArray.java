@@ -53,7 +53,7 @@ class Main {
 
             int low = 1, high = length - 2;
 
-            if(nums[low] != nums[low-1]) return nums[low-1];
+            if(nums[low] != nums[low-1]) return nums[low-1];                    // T.C = O(Log N), S.C = O(1)
             if(nums[high] != nums[high+1]) return nums[high+1];
 
             int singleElement = -1;
