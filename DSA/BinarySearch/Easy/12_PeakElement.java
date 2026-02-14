@@ -8,7 +8,7 @@ class Main {
 
             if(length == 1) return 0;
 
-            int peakElementIdx = 0;                                             // T.C = O(N), S.C = O(1)
+            int peakElementIdx = -1;                                             // T.C = O(N), S.C = O(1)
 
             for(int index = 0 ; index < length ; index++){
 
@@ -22,9 +22,9 @@ class Main {
             return peakElementIdx;
         }
     
-    // ======================= Optimal Force Approach (When Only Single Peak Element Exists in Array)===========================
+    // ======================= Optimal Force Approach ===========================
 
-        static int singlePeakElement(int[] nums){
+        static int peakElement_1(int[] nums){
 
             int length= nums.length;
 
@@ -34,7 +34,7 @@ class Main {
 
             if(nums[length-2]<nums[length-1]) return length -1;                   // T.C = O(Log N), S.C = O(1)
 
-            int peakElementIndex = 0;
+            int peakElementIndex = -1;
 
             int low = 1, high = length - 2;
 
@@ -56,7 +56,7 @@ class Main {
     
     public static void main(String[] args) {
         int[] nums = {1,10,13,7,6,5,4,2,1,0};
-        int result = singlePeakElement(nums);
+        int result = peakElement_1(nums);
         System.out.println(result);
     }
 }
