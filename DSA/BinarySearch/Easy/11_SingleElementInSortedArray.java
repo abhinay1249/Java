@@ -45,10 +45,45 @@ class Main {
     
     // ======================= Optimal Approach =================================
 
+        static int singleElement_2(int[] nums){
+        
+            int length = nums.length;
+
+            if(length == 1) return nums[0];
+
+            int low = 1, high = length - 2;
+
+            if(nums[low] != nums[low-1]) return nums[low-1];
+            if(nums[high] != nums[high+1]) return nums[high+1];
+
+            int singleElement = -1;
+
+            while(low <= high){
+
+                int mid = low + ((high-low)/2);
+
+                if(nums[mid] != nums[mid-1] && nums[mid] != nums[mid+1]){
+                        singleElement = nums[mid];
+                        break;
+                }
+
+                int prevIdx = mid - 1;
+                int nextIdx = mid + 1;
+
+                int prevElement = nums[mid -1], nextElement = nums[mid+1];
+
+                if(((prevIdx%2==0) && nums[mid]==prevElement) || ((nextIdx%2==1) && nums[mid]==nextElement)){
+                    low = mid + 1;
+                }else{
+                    high = mid - 1;
+                }
+            }
+            return singleElement;
+        }
 
     public static void main(String[] args) {
         int[] nums = {1,1,2,2,3,3,4,5,5,6,6};
-        int result = singleElement_1(nums);
+        int result = singleElement_2(nums);
         System.out.println(result);
     }
 }
