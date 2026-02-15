@@ -9,14 +9,14 @@ class Main {
     // ==================================== Brute Force Approach =====================================
 
         static int pascalValue(int row, int col){
-            
+
             int num = 1, denom = 1, sub = 1, result = 1;
 
             for(int i = row-1 ; i > 0 ; i--){
                 num *= i;
             }
 
-            for(int i = col-1; i > 0 ; i--){                                //T.C = O(N * R), S.C = O(1)
+            for(int i = col-1; i > 0 ; i--){                                //T.C = O(row!)+ O(col!) + O((row-col)!), S.C = O(1)
                 denom *= i;
             }
 
