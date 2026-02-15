@@ -36,7 +36,7 @@ class Main {
             int result = 1;
 
             for(int i = 0 ; i < col ; i++){
-                result = result * (row-i-1);                                //T.C = O(N), S.C = O(1)
+                result = result * (row-i);                                //T.C = O(N), S.C = O(1)
                 result= result / (i+1);
             }
             return result;
