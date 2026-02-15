@@ -1,4 +1,5 @@
-// Problem Statement: Write a program to generate Pascal's triangle. In Pascal’s triangle, each number is the sum of the two numbers directly 
+// Problem Statement: Write a program to generate Pascal's triangle. 
+// In Pascal’s triangle, each number is the sum of the two numbers directly 
 
 import java.util.*;
 
