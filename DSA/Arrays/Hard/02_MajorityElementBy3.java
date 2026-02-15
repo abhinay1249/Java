@@ -100,8 +100,8 @@ class Main {
         int[] nums = {1, 2, 1, 1, 3, 2};
         int[] nums_1 = {0,0,0};
         List<Integer> result = majorityElement(nums);
-        List<Integer> result = majorityElement_1(nums);
-        List<Integer> result = majorityElement_2(nums_1);
+        List<Integer> result_1 = majorityElement_1(nums);
+        List<Integer> result_2 = majorityElement_2(nums_1);
         for(int i : result){
             System.out.println(i);
     
