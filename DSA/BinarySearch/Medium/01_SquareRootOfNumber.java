@@ -1,3 +1,5 @@
+
+
 class Main {
     
     static int sqrtOfNumber(int value){
