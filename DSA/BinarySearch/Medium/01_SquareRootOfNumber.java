@@ -1,4 +1,6 @@
-
+// Problem Statement: You are given a positive integer n. 
+// Your task is to find and return its square root. 
+// If ‘n’ is not a perfect square, then return the floor value of sqrt(n).
 
 class Main {
     
@@ -34,7 +36,7 @@ class Main {
 
             while(low <= high){
 
-                int mid = low + ((high-low)/2);
+                int mid = low + ((high-low)/2);                                 //T.C = O(N), S.C = O(1)
                 int sqaures = (mid * mid);
 
                 if(squares <= low){
