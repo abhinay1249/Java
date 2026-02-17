@@ -36,14 +36,14 @@ class Main {
 
             while(low <= high){
 
-                int mid = low + ((high-low)/2);                                 //T.C = O(N), S.C = O(1)
-                int sqaures = (mid * mid);
+                long mid = low + ((high-low)/2);                                 //T.C = O(N), S.C = O(1)
+                long squares = (mid * mid);
 
                 if(squares <= low){
-                    result = mid;
-                    low = mid + 1;
+                    result = (int) mid;
+                    low = (int) mid + 1;
                 }else if(squares > value){
-                    high = mid - 1;
+                    high = (int) mid - 1;
                 }
             }
             return result;
