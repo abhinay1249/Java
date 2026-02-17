@@ -36,7 +36,7 @@ class Main {
 
             while(low <= high){
 
-                long mid = low + ((high-low)/2);                                 //T.C = O(N), S.C = O(1)
+                long mid = low + ((high-low)/2);                                 //T.C = O(Log N), S.C = O(1)
                 long squares = (mid * mid);
 
                 if(squares <= low){
