@@ -49,7 +49,6 @@ class Main {
         static int kokoEatingBananas_1(int[] piles, int hours){
 
             int maxBananas = Arrays.stream(piles).max().getAsInt();
-            Arrays.sort(piles);
             int low = 1 , high = maxBananas;
 
             while(low <= high){
