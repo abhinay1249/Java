@@ -32,7 +32,38 @@ class Main {
             return maxBananas;
         }
 
+    // =========================== Optimal Approach ==============================
 
+        static long calculateMinBananas_1(int[] piles, int minBananas){
+            int length = piles.length;
+            int bananasPerHour = 0;
+            long minSpeed = 0;
+
+            for(int index = 0 ; index < length ; index++){
+                bananasPerHour = (int) Math.ceil((double)piles[index]/minBananas);
+                minSpeed += bananasPerHour;
+            }
+            return minSpeed;                                                    // T.C = O(log2(max[piles])) * O(N), S.C = O(1)
+        }
+    
+        static int kokoEatingBananas_1(int[] piles, int hours){
+
+            int maxBananas = Arrays.stream(piles).max().getAsInt();
+            Arrays.sort(piles);
+            int low = 1 , high = maxBananas;
+
+            while(low <= high){
+                int mid = low + ((high - low)/2);
+                long result = calculateMinBananas_1(piles, mid);
+
+                if(result <= hours){
+                   high = mid - 1;
+                }else{
+                    low = mid + 1;
+                }
+            }
+            return low;
+        }
 
     public static void main(String[] args) {
         int[] piles = {332484035,524908576,855865114,632922376,222257295,690155293,112677673,679580077,337406589,290818316,877337160,901728858,679284947,688210097,692137887,718203285,629455728,941802184};
