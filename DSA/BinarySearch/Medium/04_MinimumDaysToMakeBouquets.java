@@ -66,7 +66,7 @@ class Main {
                     countOfRoses = 0;
                 }
             }
-            totalBouquets += (countOfRoses/k);
+            totalBouquets += (countOfRoses/k);                            // T.C = O(log(Max-Min)+1) * O(N) , S.C = O(1)
 
             if(totalBouquets>=m) return true;
             return false;
@@ -96,7 +96,7 @@ class Main {
             }
             return result;
         }
-        
+
     public static void main(String[] args) {
 
         int[] days = {7, 7, 7, 7, 13, 11, 12, 7};
