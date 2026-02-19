@@ -1,3 +1,9 @@
+// Problem Statement: You are given 'N’ roses and you are also given an array 'arr' where 'arr[i]' denotes that the 'ith' rose will bloom on the 'arr[i]th' day. 
+// You can only pick already bloomed roses that are adjacent to make a bouquet. 
+// You are also told that you require exactly 'k' adjacent bloomed roses to make a single bouquet. 
+// Find the minimum number of days required to make at least ‘m' bouquets each containing 'k' roses. Return -1 if it is not possible.
+
+
 import java.util.*;
 
 class Main {
@@ -43,6 +49,7 @@ class Main {
             }
             return -1;
         }
+
     public static void main(String[] args) {
         int[] days = {7, 7, 7, 7, 13, 11, 12, 7};
         int m = 2;
