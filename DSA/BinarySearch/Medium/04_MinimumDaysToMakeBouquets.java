@@ -8,7 +8,7 @@ import java.util.*;
 
 class Main {
     
-     // =========================== Brute Force Approach ==============================
+    // =========================== Brute Force Approach ==============================
 
         static boolean possibleDay(int[] days, int day, int m , int k){
 
@@ -49,8 +49,56 @@ class Main {
             }
             return -1;
         }
+    
+    // =========================== Optimal Approach ==============================
 
+        static boolean possibleDay_1(int[] days, int day, int m , int k){
+        
+            int length = days.length;
+            int countOfRoses = 0;
+            int totalBouquets = 0; 
+
+            for(int index = 0 ; index < length ; index++){
+                if(days[index] <= day){
+                    countOfRoses++;
+                }else{
+                    totalBouquets += (countOfRoses/k);
+                    countOfRoses = 0;
+                }
+            }
+            totalBouquets += (countOfRoses/k);
+
+            if(totalBouquets>=m) return true;
+            return false;
+        }
+    
+        static int minimumNumberOfDays_1(int[] days,int m, int k){
+
+            int length = days.length;
+            long minRosesRequired = (long) m*k;
+            int result = -1;
+
+            if(length < minRosesRequired){
+                return -1;
+            }
+
+            int low = Arrays.stream(days).min().getAsInt();
+            int high = Arrays.stream(days).max().getAsInt();
+
+            while(low <= high){
+                int mid = low + ((high-low)/2);
+                if(possibleDay(days,mid,m,k) == true){
+                    result = mid;
+                    high = mid - 1;
+                }else{
+                    low = mid + 1;
+                }
+            }
+            return result;
+        }
+        
     public static void main(String[] args) {
+
         int[] days = {7, 7, 7, 7, 13, 11, 12, 7};
         int m = 2;
         int k = 3;
