@@ -2,45 +2,82 @@ import java.util.*;
 
 class Main {
     
-    private static int summationOfWeights(int[] weights){
-        int sumOfWeights = 0;
-        int length = weights.length;
-        for(int weight = 0 ; weight < length ; weight++){
-            sumOfWeights += weights[weight];
-        }
-        return sumOfWeights;
-    }
-    
-    private static int requriedDays(int[] weights, int capacity){
-        int daysRequired = 1;
-        int load = 0;
-        int length = weights.length;
-        for(int weight = 0 ; weight < length ; weight++){
-            if(load + weights[weight] > capacity){
-                daysRequired++;
-                load = weights[weight];
-            }else{
-                load+=weights[weight];
+    // =========================== Brute Force Approach ==============================
+
+        private static int summationOfWeights(int[] weights){
+            int sumOfWeights = 0;
+            int length = weights.length;
+            for(int weight = 0 ; weight < length ; weight++){
+                sumOfWeights += weights[weight];
             }
+            return sumOfWeights;
         }
-        return daysRequired;
-    }
+
+        private static int requriedDays(int[] weights, int capacity){
+            int daysRequired = 1;
+            int load = 0;
+            int length = weights.length;
+            for(int weight = 0 ; weight < length ; weight++){
+                if(load + weights[weight] > capacity){                  // T.C = O((maxSum - maxNum)+1) * O(N), S.c = O(1)
+                    daysRequired++;
+                    load = weights[weight];
+                }else{
+                    load+=weights[weight];
+                }
+            }
+            return daysRequired;
+        }
+
+        static int minimumCapacity(int[] weights, int days){
+
+            int start = Arrays.stream(weights).max().getAsInt(); 
+            int end = summationOfWeights(weights);
+
+            for(int capacity = start ; capacity <= end ; capacity++){
+
+                int noOfDays =  requriedDays(weights,capacity);
+                if(noOfDays <= days){
+                    return capacity;
+                }
+            }
+            return -1;
+        }
+
+    // =========================== Optimal Approach ==============================
+
+        private static int requriedDays_1(int[] weights, int capacity){
+            int daysRequired = 1;
+            int load = 0;
+            int length = weights.length;
+            for(int weight = 0 ; weight < length ; weight++){
+                if(load + weights[weight] > capacity){
+                    daysRequired++;
+                    load = weights[weight];
+                }else{
+                    load+=weights[weight];
+                }
+            }
+            return daysRequired;
+        }
     
-    static int minimumCapacity(int[] weights, int days){
-        
-        int start = Arrays.stream(weights).max().getAsInt(); 
-        int end = summationOfWeights(weights);
-        
-        for(int capacity = start ; capacity <= end ; capacity++){
+        static int minimumCapacity_1(int[] weights, int days){
             
-            int noOfDays =  requriedDays(weights,capacity);
-            if(noOfDays <= days){
-                return capacity;
+            int low = Arrays.stream(weights).max().getAsInt(); 
+            int high = Arrays.stream(weights).sum();
+            
+            while(low <= high){
+                int mid = low +((high - low)/2);
+                int noOfDays = requriedDays_1(weights,mid);
+                
+                if(noOfDays <= days){
+                    high = mid - 1;
+                }else{
+                    low = mid+1;
+                }
             }
+            return low;
         }
-        return -1;
-    }
-    
+
     public static void main(String[] args) {
         int[] weights = {3,2,2,4,1,4};
         int days = 3;
