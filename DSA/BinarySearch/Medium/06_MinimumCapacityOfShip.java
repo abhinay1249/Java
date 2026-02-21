@@ -54,7 +54,7 @@ class Main {
                     daysRequired++;
                     load = weights[weight];
                 }else{
-                    load+=weights[weight];
+                    load+=weights[weight];                                // T.C = O(Log((maxSum - maxNum)+1)) * O(N) , S.C = O(1)
                 }
             }
             return daysRequired;
