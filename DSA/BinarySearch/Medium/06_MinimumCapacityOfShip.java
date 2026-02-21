@@ -26,7 +26,7 @@ class Main {
             int load = 0;
             int length = weights.length;
             for(int weight = 0 ; weight < length ; weight++){
-                if(load + weights[weight] > capacity){                  // T.C = O((maxSum - maxNum)+1) * O(N), S.c = O(1)
+                if(load + weights[weight] > capacity){                  // T.C = O((maxSum - maxNum)+1) * O(N), S.C = O(1)
                     daysRequired++;
                     load = weights[weight];
                 }else{
