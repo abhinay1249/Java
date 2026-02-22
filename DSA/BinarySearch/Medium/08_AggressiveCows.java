@@ -12,7 +12,7 @@ class Main {
 
                 if(stalls[index]-lastCow >= distance){
                     countOfCows++;
-                    lastCow = stalls[index];
+                    lastCow = stalls[index];                            
                 }
                 if(countOfCows >= cows){
                     return true;
@@ -20,7 +20,7 @@ class Main {
             }
             return false;
         }
-        
+
         static int maxPossibleOfMinDistance(int[] stalls, int cows){
             int length = stalls.length;
 
@@ -29,7 +29,7 @@ class Main {
             Arrays.sort(stalls);
 
             int min = stalls[0];
-            int max = stalls[length-1];
+            int max = stalls[length-1];                                // T.C = O(N log N) + O(max-min) * O(N) , S.C = O(1)
 
             if(cows == 2){
                 return (max-min);
