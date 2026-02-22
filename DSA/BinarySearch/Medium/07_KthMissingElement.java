@@ -1,3 +1,7 @@
+// Problem Statement: You are given a strictly increasing array ‘vec’ and a positive integer 'k'. 
+// Find the 'kth' positive integer missing from 'vec'.
+
+
 class Main {
     
     // =========================== Brute Force Approach ==============================
@@ -39,6 +43,7 @@ class Main {
             }
             return low + k;
         }
+
     public static void main(String[] args) {
         int[] nums = {1,3,5,10,15};
         int k = 9;
