@@ -96,7 +96,6 @@ class Main {
             return high;
         }
     
-    
     public static void main(String[] args) {
         int[] stalls = {0, 3, 4, 7, 10, 9};
         int cows = 3;
