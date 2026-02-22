@@ -2,6 +2,8 @@ import java.util.*;
 
 class Main {
     
+    // =========================== Brute Force Approach ==============================    
+
         private static boolean possibleCows(int[] stalls,int distance,int cows){
 
             int countOfCows = 1;
@@ -45,6 +47,10 @@ class Main {
             }
             return -1;
         }
+
+    // =========================== Optimal Approach ==============================
+
+    
     
     public static void main(String[] args) {
         int[] stalls = {0, 3, 4, 7, 10, 9};
