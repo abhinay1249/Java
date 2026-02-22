@@ -50,6 +50,51 @@ class Main {
 
     // =========================== Optimal Approach ==============================
 
+        private static boolean possibleCows_1(int[] stalls,int distance,int cows){
+        
+            int countOfCows = 1;
+            int lastCow = stalls[0];
+            int length = stalls.length;
+
+            for(int index = 1 ; index < length ; index++){
+
+                if(stalls[index]-lastCow >= distance){
+                    countOfCows++;
+                    lastCow = stalls[index];
+                }
+                if(countOfCows >= cows){
+                    return true;
+                }
+            }
+            return false;
+        }
+        static int maxPossibleOfMinDistance_1(int[] stalls, int cows){
+            int length = stalls.length;
+
+            if(cows <= 1) return -1;
+
+            Arrays.sort(stalls);
+
+            int min = stalls[0];                                      // T.C = O(N log N) + O(log(max-min)) * O(N) , S.C = O(1)
+            int max = stalls[length-1];
+
+            int low = 1, high = (max-min);
+
+            if(cows == 2){
+                return (max-min);
+            }
+
+            while(low <= high){
+                int mid = (low  + (high-low)/2);
+
+                if(possibleCows(stalls,mid,cows)==true){
+                    low = mid + 1;
+                }else{
+                    high = mid - 1;
+                }
+            }
+            return high;
+        }
     
     
     public static void main(String[] args) {
