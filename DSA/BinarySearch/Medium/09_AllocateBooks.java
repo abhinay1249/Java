@@ -2,6 +2,8 @@ import java.util.*;
 
 class Main {
 
+    // =========================== Brute Force Approach ============================== 
+
         static int noOfStudents(int[]pages,int maxPages,int students){
 
             int length = pages.length;
@@ -24,7 +26,7 @@ class Main {
 
             int length = pages.length;
 
-            if(length<students) return -1;
+            if(length<students) return -1;                              // T.C = O(sumOfElements - maxNumber) * O(N) S.C = O(1)
             if(length == 1) return Arrays.stream(pages).sum();
 
             int low = Arrays.stream(pages).max().getAsInt();
@@ -33,7 +35,7 @@ class Main {
             for(int maxPages = low ; maxPages <= high ; maxPages++){
 
                 int countOfStudents = noOfStudents(pages,maxPages,students);
-                
+
                 if(countOfStudents == students){
                     return maxPages;
                 }
