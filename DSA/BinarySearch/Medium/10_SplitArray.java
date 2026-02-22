@@ -37,6 +37,46 @@ class Main {
         }
         return -1;
     }
+
+    static int subArraySum_1(int[] nums,int largestSum ,int subArrays){
+        
+        int length = nums.length;
+        int sum = 0;
+        int countOfSubArrays = 1;
+        
+        for(int index = 0 ; index < length ; index++){
+            if(sum+nums[index]<=largestSum){
+                sum+=nums[index];
+            }else{
+                countOfSubArrays++;
+                sum = nums[index];
+            }
+        }
+        return countOfSubArrays;
+    }
+    
+    static int minimumLargestSum_1(int[] nums, int noOfSubArrays){
+        
+        int length = nums.length;
+        if(length < noOfSubArrays) return -1;
+        
+        int low = Arrays.stream(nums).max().getAsInt();
+        int high = Arrays.stream(nums).sum(); 
+        
+        if(length == noOfSubArrays) return low;
+        
+        while(low <= high){
+            int mid = low + ((high - low)/2);
+            int subArrays = subArraySum(nums,mid,noOfSubArrays);
+            if(subArrays <= noOfSubArrays){
+                high = mid - 1;
+            }else{
+                low = mid +1;
+            }
+        }
+        return low;
+    }
+
     public static void main(String[] args) {
         int[] nums = {2,3,1,1,1,1,1};
         int subArrays = 5;
