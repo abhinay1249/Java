@@ -68,6 +68,7 @@ class Main {
             }
             return false;
         }
+        
         static int maxPossibleOfMinDistance_1(int[] stalls, int cows){
             int length = stalls.length;
 
