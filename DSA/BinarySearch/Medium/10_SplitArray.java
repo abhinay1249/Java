@@ -11,7 +11,7 @@ class Main {
         for(int index = 0 ; index < length ; index++){
             if(sum+nums[index]<=largestSum){
                 sum+=nums[index];
-            }else{
+            }else{                                                  // T.C = O(sumOfElements - maxNumber) * O(N) + O(2N), S.C = O(1)
                 countOfSubArrays++;
                 sum = nums[index];
             }
@@ -65,7 +65,7 @@ class Main {
         
         if(length == noOfSubArrays) return low;
         
-        while(low <= high){
+        while(low <= high){                                     // T.C = O(Log(sumOfElements - maxNumber)) * O(N) + O(2N) ,S.C = O(1) 
             int mid = low + ((high - low)/2);
             int subArrays = subArraySum(nums,mid,noOfSubArrays);
             if(subArrays <= noOfSubArrays){
