@@ -45,6 +45,37 @@ class Main {
             }
         }
 
+    // =========================== Better Approach ============================== 
+
+        static double findMedianSortedArrays_1(int[] nums1, int[] nums2) {
+        
+            int length_1 = nums1.length;
+            int length_2 = nums2.length;
+            int totalLength = (length_1+length_2);
+
+            int left = 0, left_1 = 0;
+
+            int prev = 0, curr = 0;
+            int count = 0;                              // T.C = O(M + N) , S.C = O(1)
+
+            while(count <= totalLength/2){
+
+                prev = curr;                                
+
+                if(left < length_1 && (left_1 >= length_2 || nums1[left] <= nums2[left_1])){
+                    curr = nums1[left++];
+                }else{
+                    curr = nums2[left_1++];
+                }
+                count++;
+            }
+
+            if(totalLength%2 == 0){
+                return (double) ((double)(prev+curr)/2);
+            }
+            return (double) curr;
+        }
+
     public static void main(String[] args) {
         int[] nums1 = {2,4,6};
         int[] nums2 = {1,3,5};
