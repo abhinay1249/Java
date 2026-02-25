@@ -65,7 +65,7 @@ class Main {
 
                 if(left_1 <= right_2 && left_2 <= right_1){
                     return Math.max(left_1,left_2);
-                }else if(left_1 > right_2){
+                }else if(left_1 > right_2){                     / T.C = O(min(logM,logN)) , S.C = O(1)
                     high = mid_1 - 1;
                 }else{
                     low = mid_1 + 1;
