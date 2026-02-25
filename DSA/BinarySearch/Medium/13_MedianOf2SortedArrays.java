@@ -87,7 +87,7 @@ class Main {
             int length1 = nums1.length;
             int length2 = nums2.length;
 
-            if(length1 > length2) return a(nums2,nums1);
+            if(length1 > length2) return medianOfSortedArrays_2(nums2,nums1);
             int totalLength = length1+length2;
             int totalElementsOnLeft = (totalLength+1)/2;
 
