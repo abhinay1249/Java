@@ -33,6 +33,48 @@ class Main {
 
             return sortedArray.get(k-1);
         }
+
+
+    
+    // =========================== Optimal Approach ==============================   
+
+        static int kthElement_1(int[] nums1, int[] nums2, int k){
+        
+            int length_1 = nums1.length;
+            int length_2 = nums2.length;
+
+            if(length_1 > length_2){
+                return kthElement_1(nums2,nums1,k);
+            }
+
+            int low = Math.max(0,k-length_2), high = Math.min(k,length_1);
+
+            while(low <= high){
+                int mid_1 = low + ((high-low)/2);
+                int mid_2 = k - mid_1;
+
+                int left_1 = Integer.MIN_VALUE;
+                int left_2 = Integer.MIN_VALUE;
+                int right_1 = Integer.MAX_VALUE;
+                int right_2 = Integer.MAX_VALUE;
+
+                if(mid_1 - 1 >= 0) left_1 = nums1[mid_1-1];
+                if(mid_2 - 1 >= 0) left_2 = nums2[mid_2-1];
+                if(mid_1 < length_1) right_1 = nums1[mid_1];
+                if(mid_2 < length_2) right_2 = nums2[mid_2];
+
+                if(left_1 <= right_2 && left_2 <= right_1){
+                    return Math.max(left_1,left_2);
+                }else if(left_1 > right_2){
+                    high = mid_1 - 1;
+                }else{
+                    low = mid_1 + 1;
+                }
+            }
+            return 0;
+        }
+
+        
     
     public static void main(String[] args) {
             int[] nums1 = {100, 112, 256, 349, 770};
