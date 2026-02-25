@@ -95,7 +95,7 @@ class Main {
             int low = 0, high = length1;
 
             while(low <= high){
-                int left1 = Integer.MIN_VALUE;                          // T.C = O(log(M + N)) , S.C = O(1)
+                int left1 = Integer.MIN_VALUE;                          // T.C = O(min(logM,logN)) , S.C = O(1)
                 int left2 = Integer.MIN_VALUE;
                 int right1 = Integer.MAX_VALUE;
                 int right2 = Integer.MAX_VALUE;
