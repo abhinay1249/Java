@@ -9,7 +9,7 @@ class Main {
 
     // =========================== Brute Force Approach ============================== 
 
-        static double findMedianSortedArrays(int[] nums1, int[] nums2) {
+        static double medianOfSortedArrays(int[] nums1, int[] nums2) {
 
             int nums1Length = nums1.length;
             int nums2Length = nums2.length;
@@ -52,7 +52,7 @@ class Main {
 
     // =========================== Better Approach ============================== 
 
-        static double findMedianSortedArrays_1(int[] nums1, int[] nums2) {
+        static double medianOfSortedArrays_1(int[] nums1, int[] nums2) {
         
             int length_1 = nums1.length;
             int length_2 = nums2.length;
@@ -81,10 +81,53 @@ class Main {
             return (double) curr;
         }
 
+    // =========================== Optimal Approach ==============================     
+
+        static double medianOfSortedArrays_2(int[] nums1, int[] nums2){
+            int length1 = nums1.length;
+            int length2 = nums2.length;
+
+            if(length1 > length2) return a(nums2,nums1);
+            int totalLength = length1+length2;
+            int totalElementsOnLeft = (totalLength+1)/2;
+
+            int low = 0, high = length1;
+
+            while(low <= high){
+                int left1 = Integer.MIN_VALUE;                          // T.C = O(log(M + N)) , S.C = O(1)
+                int left2 = Integer.MIN_VALUE;
+                int right1 = Integer.MAX_VALUE;
+                int right2 = Integer.MAX_VALUE;
+
+                int mid1 = low+((high-low)/2);
+                int mid2 = totalElementsOnLeft - mid1;
+
+                if(mid1>0) left1 = nums1[mid1 - 1];
+                if(mid2>0) left2 = nums2[mid2 - 1];
+
+                if(mid1<length1) right1 = nums1[mid1];
+                if(mid2<length2) right2 = nums2[mid2];
+
+                if(left1 < right2 && left2 < right1){
+                    if(totalLength%2==0){
+                        return ((double)(Math.max(left1,left2)+Math.min(right1,right2))/2);
+                    }else{
+                        return (double)Math.max(left1,left2);
+                    }
+                }
+                else if(left1 > right2){
+                    high = mid1 - 1;
+                }else{
+                    low = mid1 + 1;
+                }
+            }
+            return 0;
+        }
+
     public static void main(String[] args) {
         int[] nums1 = {2,4,6};
         int[] nums2 = {1,3,5};
-        double result = findMedianSortedArrays(nums1,nums2);
+        double result = medianOfSortedArrays(nums1,nums2);
         System.out.println(result);
     }
 }
