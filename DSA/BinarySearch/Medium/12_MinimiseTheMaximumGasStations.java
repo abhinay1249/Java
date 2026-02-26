@@ -18,7 +18,7 @@ class Main {
                         maxIndex = index;
                     }
                 }
-                howMany[maxIndex]++;
+                howMany[maxIndex]++;                            // T.C = O(gasStations*N) + O(N), S.C = O(Length-1) 
             }
 
             double maxAns = -1;
