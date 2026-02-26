@@ -34,8 +34,6 @@ class Main {
             return sortedArray.get(k-1);
         }
 
-
-    
     // =========================== Optimal Approach ==============================   
 
         static int kthElement_1(int[] nums1, int[] nums2, int k){
@@ -54,7 +52,7 @@ class Main {
                 int mid_2 = k - mid_1;
 
                 int left_1 = Integer.MIN_VALUE;
-                int left_2 = Integer.MIN_VALUE;
+                int left_2 = Integer.MIN_VALUE;                              // T.C = O(min(logM,logN)) , S.C = O(1)
                 int right_1 = Integer.MAX_VALUE;
                 int right_2 = Integer.MAX_VALUE;
 
@@ -65,7 +63,7 @@ class Main {
 
                 if(left_1 <= right_2 && left_2 <= right_1){
                     return Math.max(left_1,left_2);
-                }else if(left_1 > right_2){                     / T.C = O(min(logM,logN)) , S.C = O(1)
+                }else if(left_1 > right_2){                     
                     high = mid_1 - 1;
                 }else{
                     low = mid_1 + 1;
@@ -74,8 +72,6 @@ class Main {
             return 0;
         }
 
-        
-    
     public static void main(String[] args) {
             int[] nums1 = {100, 112, 256, 349, 770};
         int[] nums2 = {72, 86, 113, 119, 265, 445, 892};
