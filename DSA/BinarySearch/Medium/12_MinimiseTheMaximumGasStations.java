@@ -4,6 +4,18 @@
 // Let 'dist' be the maximum value of the distance between adjacent gas stations after adding k new gas stations. 
 // Find the minimum value of ‘dist’.
 
+import java.util.*;
+
+
+class Pair{
+    double distance;
+    int index;
+    
+    Pair(double distance, int index){
+        this.distance = distance;
+        this.index = index;
+    }
+}
 
 class Main {
 
@@ -37,6 +49,30 @@ class Main {
                 maxAns = Math.max(maxAns,sectionLength);
             }
             return maxAns;
+        }
+
+    // =========================== Better Approach ============================== 
+
+        static double minimumGasStationsDistance(int[] nums,int k){
+            int length = nums.length;
+            int[] howMany = new int[length-1];
+
+            Queue<Pair> pq = new PriorityQueue<>((a,b)->Double.compare(b.distance,a.distance));
+
+            for(int index = 0 ; index < length -1 ; index++){
+                pq.add(new Pair(nums[index+1]-nums[index],index));
+            }
+
+            for(int gs = 1; gs <=k ; gs++){
+                Pair top = pq.poll();
+                int index = top.index;
+                howMany[index]++;
+
+                double difference = nums[index+1]-nums[index];
+                double newDistance = difference/(howMany[index]+1);
+                pq.add(new Pair(newDistance,index));
+            }
+            return pq.peek().distance;
         }
 
     public static void main(String[] args) {
