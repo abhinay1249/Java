@@ -76,6 +76,10 @@ class Main {
     
     // =========================== Optimal Approach ============================== 
 
+        static double minimumGasStationsDistance_2(int[] nums, int k){
+            
+        }
+
     public static void main(String[] args) {
         int[] nums = {1,2,3,4,5};
         int k = 4;
