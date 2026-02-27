@@ -1,3 +1,5 @@
+// Problem Statement: Given two sorted arrays a and b of size m and n respectively. Find the kth element of the final sorted array.
+
 import java.util.*;
 
 class Main {
