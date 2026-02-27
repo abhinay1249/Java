@@ -73,6 +73,8 @@ class Main {
             }
             return pq.peek().distance;
         }
+    
+    // =========================== Optimal Approach ============================== 
 
     public static void main(String[] args) {
         int[] nums = {1,2,3,4,5};
