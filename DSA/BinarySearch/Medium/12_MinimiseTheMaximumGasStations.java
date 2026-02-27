@@ -6,7 +6,6 @@
 
 import java.util.*;
 
-
 class Pair{
     double distance;
     int index;
