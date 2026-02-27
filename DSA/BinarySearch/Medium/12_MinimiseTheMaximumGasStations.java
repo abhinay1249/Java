@@ -53,7 +53,7 @@ class Main {
 
     // =========================== Better Approach ============================== 
 
-        static double minimumGasStationsDistance(int[] nums,int k){
+        static double minimumGasStationsDistance_1(int[] nums,int k){
             int length = nums.length;
             int[] howMany = new int[length-1];
 
@@ -63,7 +63,7 @@ class Main {
                 pq.add(new Pair(nums[index+1]-nums[index],index));
             }
 
-            for(int gs = 1; gs <=k ; gs++){
+            for(int gasStation = 1; gasStation <=k ; gasStation++){
                 Pair top = pq.poll();
                 int index = top.index;
                 howMany[index]++;                                   // T.C = O(N LOG N)+O(K LOG N), S.C = 2(O(Length-1))
