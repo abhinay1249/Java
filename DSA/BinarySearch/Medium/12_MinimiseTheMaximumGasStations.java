@@ -66,7 +66,7 @@ class Main {
             for(int gs = 1; gs <=k ; gs++){
                 Pair top = pq.poll();
                 int index = top.index;
-                howMany[index]++;
+                howMany[index]++;                                   // T.C = O(N LOG N)+O(K LOG N), S.C = 2(O(Length-1))
 
                 double difference = nums[index+1]-nums[index];
                 double newDistance = difference/(howMany[index]+1);
