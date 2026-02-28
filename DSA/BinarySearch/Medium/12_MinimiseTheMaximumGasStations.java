@@ -103,7 +103,7 @@ class Main {
 
             double maxVal = 1e-6;
 
-            while((high-low)>maxVal){                                   // T.C = O(), S.C = O(1)
+            while((high-low)>maxVal){                               // T.C = O(Length-1) + O(Length-1log(maxDifference)), S.C = O(1)
                 double mid = low + ((high-low)/2);
                 int count = gasStationsRequired(mid,nums);
 
