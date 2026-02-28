@@ -25,6 +25,8 @@ class Main {
             return row;
         }
 
+    // =========================== Optimal Approach ==============================
+
         static int rowWithMaximumOne_1(int[][]mat,int rowsLength,int colsLength){
         
             int rowCount = -1;
