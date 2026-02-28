@@ -37,7 +37,7 @@ class Main {
                 int low = 0, high = colsLength-1;
 
                 while(low <= high){
-                    int mid = low + ((high-low)/2);
+                    int mid = low + ((high-low)/2);             // T.C = O(Rows log (Cols)) S.C = O(1)
 
                     if(mat[rows][mid]==1){
                         high = mid - 1;
