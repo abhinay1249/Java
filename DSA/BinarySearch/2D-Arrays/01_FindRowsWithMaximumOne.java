@@ -2,6 +2,7 @@
 // All the rows are sorted in ascending order. Your task is to find the index of the row with the maximum number of ones. 
 // Note: If two rows have the same number of ones, consider the one with a smaller index. If there's no row with at least single 1, return -1
 
+
 class Main {
 
     // =========================== Brute Force Approach ==============================
@@ -41,12 +42,12 @@ class Main {
                 int low = 0, high = colsLength-1;
 
                 while(low <= high){
-                    int mid = low + ((high-low)/2);             // T.C = O(Rows log (Cols)) S.C = O(1)
+                    int mid = low + ((high-low)/2);            
 
                     if(mat[rows][mid]==1){
                         high = mid - 1;
                     }else{
-                        low = mid + 1;
+                        low = mid + 1;                          // T.C = O(Rows log (Cols)) S.C = O(1)
                     }
                 }
                 int countOfOne = colsLength - low;
