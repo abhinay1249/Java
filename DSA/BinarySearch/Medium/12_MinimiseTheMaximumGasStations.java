@@ -79,7 +79,7 @@ class Main {
         static int gasStationsRequired(double distance, int[] nums){
             int count = 0;
             int length = nums.length;
-            
+
             for(int index = 1 ; index < length;index++){
                 int numbersInBetween =(int) ((nums[index]-nums[index-1])/distance);
                 if((nums[index]-nums[index-1]) == numbersInBetween*distance){
@@ -89,24 +89,24 @@ class Main {
             }
             return count;
         }
-        
+
         static double minimiseTheMaximumDistance_2(int[] nums, int k){
-            
+
             int length = nums.length;
             int maxDifference = -1;
-            
+
             for(int index = 0 ; index < length - 1 ; index++){
                 maxDifference = Math.max(nums[index+1]-nums[index],maxDifference);
             }
-            
+
             double low = 0, high = maxDifference;
-            
+
             double maxVal = 1e-6;
-            
-            while((high-low)>maxVal){
+
+            while((high-low)>maxVal){                                   // T.C = O(), S.C = O(1)
                 double mid = low + ((high-low)/2);
                 int count = gasStationsRequired(mid,nums);
-                
+
                 if(count > k){
                     low = mid;
                 }else{
