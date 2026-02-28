@@ -14,7 +14,7 @@ class Main {
                         count++;
                     }
                 }
-                if(rowCount < count){                               // T.C = O(N^2) S.C = O(1)
+                if(rowCount < count){                               // T.C = O(Rows X Cols) S.C = O(1)
                     rowCount = count;
                     row = rows;
                 }
