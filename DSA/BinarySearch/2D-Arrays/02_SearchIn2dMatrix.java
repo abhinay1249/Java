@@ -44,10 +44,10 @@ class Main {
             int cols = matrix[0].length;
 
             for(int rows = 0 ; rows < matrix.length ; rows++){
-                    if(matrix[rows][0]<=target && target <= matrix[rows][cols-1]){
-                        elementFound = binarySearch(matrix[rows],target);
-                        break;
-                    }
+                if(matrix[rows][0]<=target && target <= matrix[rows][cols-1]){
+                    elementFound = binarySearch(matrix[rows],target);
+                    break;
+                }
             }
             return elementFound;
         }
