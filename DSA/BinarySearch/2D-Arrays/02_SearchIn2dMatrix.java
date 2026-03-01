@@ -51,6 +51,35 @@ class Main {
             }
             return elementFound;
         }
+
+    // =========================== Optimal Approach ==============================
+
+        static boolean searchIn2DMatrix_2(int[][] matrix, int target){
+        
+            boolean elementFound = false;
+            int noOfRows = matrix.length;
+            int noOfCols = matrix[0].length;
+            int low = 0 ;
+            int high = (noOfRows * noOfCols)-1;
+
+            while(low <= high){
+                int mid = low + ((high-low)/2);
+
+                int row = mid / noOfCols;                   // T.C = O(Log(Rows * Cols)) , S.C = O(1)                                   
+                int col = mid % noOfCols;                       
+
+                if(matrix[row][col]==target){
+                    elementFound = true;                
+                    break;
+                }else if(matrix[row][col]<target){
+                    low = mid + 1;
+                }else{
+                    high = mid - 1;
+                }
+            }
+            return elementFound;
+        }
+
     public static void main(String[] args) {
         int[][] matrix = {{1,2,3,4},{5,6,7,8},{9,10,11,12}};
         int target = 8;
