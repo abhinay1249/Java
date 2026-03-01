@@ -19,11 +19,38 @@ class Main {
 
     // =========================== Better Approach ==============================
 
-        static boolean searchIn2DMatrix_1(int[][] matrix, int target){
-            
+        static boolean binarySearch(int[] mat, int target){
+            int length = mat.length;
+
+            int low = 0, high = length -1;
+
+            while(low <= high){
+                int mid = low+((high-low)/2);
+
+                if(mat[mid]==target){
+                    return true;
+                }else if(mat[mid]<target){                              // T.C = O(Log(Cols)) + O(Rows) , S.C = O(1)
+                    low = mid + 1;
+                }else{
+                    high = mid - 1;
+                }
+            }
+            return false;
         }
 
+        static boolean searchIn2DMatrix_1(int[][] matrix, int target){
 
+            boolean elementFound = false;
+            int cols = matrix[0].length;
+
+            for(int rows = 0 ; rows < matrix.length ; rows++){
+                    if(matrix[rows][0]<=target && target <= matrix[rows][cols-1]){
+                        elementFound = binarySearch(matrix[rows],target);
+                        break;
+                    }
+            }
+            return elementFound;
+        }
     public static void main(String[] args) {
         int[][] matrix = {{1,2,3,4},{5,6,7,8},{9,10,11,12}};
         int target = 8;
