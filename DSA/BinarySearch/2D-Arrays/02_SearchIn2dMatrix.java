@@ -29,7 +29,7 @@ class Main {
 
                 if(mat[mid]==target){
                     return true;
-                }else if(mat[mid]<target){                              // T.C = O(Log(Cols)) + O(Rows) , S.C = O(1)
+                }else if(mat[mid]<target){                              // T.C = O(Rows * Log(Cols)) , S.C = O(1)
                     low = mid + 1;
                 }else{
                     high = mid - 1;
