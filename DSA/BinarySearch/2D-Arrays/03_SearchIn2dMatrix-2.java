@@ -43,10 +43,31 @@ class Main {
 
             for(int rows = 0 ; rows < matrix.length ; rows++){
 
-                int elementIndex = binarySearch(matrix[rows],target);            // T.C = O(Rows * Log(Cols)) , S.C = O(1)
-                
+                int elementIndex = binarySearch(matrix[rows],target);           
                 if(elementIndex!=-1){
                     return new int[]{rows,elementIndex};
+                }
+            }
+            return new int[]{-1,-1};
+        }
+
+    // =========================== Optimal Approach ==============================
+
+        static boolean searchIn2DMatrix2_2(int[][] matrix, int target){
+        
+            int noOfRows = matrix.length;
+            int noOfCols = matrix[0].length;
+            int row = 0 ;
+            int col = noOfCols-1;
+
+            while(row < noOfRows && col >=0){
+
+                if(matrix[row][col]==target){
+                    return new int[]{row,col};                  // T.C = O(Log(Rows * Cols)) , S.C = O(1)
+                }else if(matrix[row][col]<target){
+                    row++;
+                }else{
+                    col--;
                 }
             }
             return new int[]{-1,-1};
