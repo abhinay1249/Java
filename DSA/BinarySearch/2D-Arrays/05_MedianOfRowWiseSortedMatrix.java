@@ -16,7 +16,7 @@ class Main {
                     sortedArray.add(matrix[row][col]);
                 }
             }
-            Collections.sort(sortedArray);                       // T.C = O(Rows * Cols) + O(Rows * Cols log (Rows * Cols)), S.C = O(1)
+            Collections.sort(sortedArray);                   // T.C = O(Rows * Cols) + O(Rows * Cols log (Rows * Cols)), S.C = O(Rows + Cols)
 
             int medianValue = sortedArray.get((rowLength * colLength)/2);
 
