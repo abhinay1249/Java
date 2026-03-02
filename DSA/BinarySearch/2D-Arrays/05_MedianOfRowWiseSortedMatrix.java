@@ -4,7 +4,7 @@ class Main {
 
     // =========================== Brute Force Approach ==============================
 
-        static int medianOf2dMatrix(int[][] matrix){
+        static int medianOf2dMatrix_1(int[][] matrix){
 
             int rowLength = matrix.length;
             int colLength = matrix[0].length;
@@ -16,7 +16,7 @@ class Main {
                     sortedArray.add(matrix[row][col]);
                 }
             }
-            Collections.sort(sortedArray);                   // T.C = O(Rows * Cols) + O(Rows * Cols log (Rows * Cols)), S.C = O(Rows + Cols)
+            Collections.sort(sortedArray);                // T.C = O(Rows * Cols) + O(Rows * Cols log (Rows * Cols)), S.C = O(Rows + Cols)
 
             int medianValue = sortedArray.get((rowLength * colLength)/2);
 
@@ -25,10 +25,64 @@ class Main {
 
     // =========================== Optimal Approach ==============================
 
-        static int medianOf2dMatrix(int[][] matrix){
-        
+        static int upperBound(int[] rows, int target){
+
+            int length = rows.length;
+            int ans = length;
+            int low = 0;
+            int high = length - 1;
+
+            while(low <= high){
+                int mid = low + ((high-low)/2);
+
+                if(rows[mid]>target){
+                    ans = mid;
+                    high = mid - 1;
+                }else{
+                    low = mid + 1;
+                }
+            }
+            return ans;
         }
 
+        static int smallerElementsRequired(int[][] matrix,int target){
+
+            int count = 0;
+            int rowLength = matrix.length;
+
+            for(int index = 0 ; index < rowLength ; index++){
+                count += upperBound(matrix[index],target);
+            }
+            return count;
+        }
+
+        static int medianOfRowSortedWise_1(int[][]matrix){
+            int low = Integer.MAX_VALUE;
+            int high = Integer.MIN_VALUE;
+
+            int rowLength = matrix.length;                     // T.C =O(log(10^9) * (RowLength * log(RowLength))), S.C = O(1)
+            int colLength = matrix[0].length;
+
+            for(int index = 0 ; index < rowLength ; index++){
+                low = Math.min(low,matrix[index][0]);
+                high = Math.max(high,matrix[index][colLength-1]);
+            }
+
+            int required = (rowLength * colLength)/2;
+
+            while(low <= high){
+                int mid = low + ((high-low)/2);
+
+                int countOfElements = smallerElementsRequired(matrix,mid);
+
+                if(countOfElements <= required){
+                    low = mid + 1;
+                }else{
+                    high = mid - 1;
+                }
+            }
+            return low;
+        }
 
     public static void main(String[] args) {
         int[][] matrix = {{1,5,7,9,11},{2,3,4,5,10},{9,10,12,14,16}};
