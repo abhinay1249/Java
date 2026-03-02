@@ -52,7 +52,7 @@ class Main {
 
 	        for(int i = 0 ; i < nums.length ; i++){
 
-		        sum+=nums[i]; 											// T.C = O(N) + O(N) S.C = O(1)
+		        sum+=nums[i]; 											// T.C = O(N) S.C = O(1)
 
 		        if(sum > maxSum){
 		    	    maxSum = sum;
