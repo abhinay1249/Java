@@ -11,7 +11,7 @@ class Main {
 
                 if(ch == '('){
                     if(counter > 0){
-                        result+='(';                            // T.C = O(N^2), S.C = O(1)
+                        result+='(';                                // T.C = O(N^2), S.C = O(1)
                     }
                     counter++;
                 }else if(ch == ')'){
