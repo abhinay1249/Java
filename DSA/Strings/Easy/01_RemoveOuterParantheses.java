@@ -31,7 +31,9 @@ class Main {
             StringBuilder result = new StringBuilder();
             int counter = 0;
 
-            for(char ch : s.toCharArray()){
+            for(int index = 0 ; index < s.length() ; index++){
+
+                char ch = s.charAt(index);
 
                 if(ch == '('){
                     if(counter > 0){
