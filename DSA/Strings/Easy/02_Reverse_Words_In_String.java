@@ -13,6 +13,12 @@ class Main {
         
     }
 
+    // ======================= Optimal Approach ===============================
+
+    static String reverseWordsInString_1(String s){
+        
+    }
+
     public static void main(String[] args) {
        String s = "welcome to the jungle";
        String result = reverseWordsInString(s);
