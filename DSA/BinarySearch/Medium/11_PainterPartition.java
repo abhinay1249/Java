@@ -61,7 +61,7 @@ class Main {
                     sumOfUnits+=boards[index];
                 }else{
                     paintersCount++;
-                    sumOfUnits=boards[index];
+                    sumOfUnits=boards[index];                  // T.C = O(Log(sumOfElements - maxNumber)) * O(N) + O(2N) ,S.C = O(1)
                 }
             }
             return paintersCount;
@@ -76,7 +76,7 @@ class Main {
             int low = Arrays.stream(boards).max().getAsInt();
             int high = Arrays.stream(boards).sum();
 
-            while(low <= high){                                  // T.C = O(Log(sumOfElements - maxNumber)) * O(N) + O(2N) ,S.C = O(1)                                   
+            while(low <= high){                                                                     
 
                 int mid = low + ((high-low)/2);
                 int paintersCount = noOfPainters(boards,mid,painters);
