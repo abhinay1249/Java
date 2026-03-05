@@ -47,7 +47,7 @@ class Main {
             if(length == 1){
                 return s;
             }
-            
+
             StringBuilder word = new StringBuilder();
 
             List<String> words = new ArrayList<>();
@@ -69,6 +69,13 @@ class Main {
 
             return reverseWords; 
         }
+    
+    // ======================= Optimal Approach ===============================
+
+        static String reverseWordsInString_2(String s){
+        
+        }
+
 
     public static void main(String[] args) {
        String s = "welcome to the jungle";
