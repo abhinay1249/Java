@@ -15,22 +15,23 @@ class Main {
         if(length == 1){
             return s;
         }
-        String word = "";
+        String word = "";                           
         
-        List<String> words = new ArrayList<>();
+        List<String> words = new ArrayList<>();                         
         
         for(int character = 0 ; character < length ; character++){
             
             while(character < length && s.charAt(character) != ' '){
                 word+=s.charAt(character);
-                character++;
-            }
+                character++;                
+            }                                           // T.C = O(N^2) + O(N) + O(N) , S.C = O(words in sentence)
             
             if(word.length() > 0){
                 words.add(word);
                 word="";
             }
         }
+
         Collections.reverse(words);
         String reverseWords = String.join(" ",words);
         
