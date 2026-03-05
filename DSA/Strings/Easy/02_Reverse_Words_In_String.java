@@ -92,7 +92,7 @@ class Main {
                 }
 
                 if(word.length() > 0){
-                    word = new StringBuilder(reverse(word.toString()));
+                    word.reverse();
                     reverseWords.append(" ").append(word);
                     word.setLength(0);
                 }
