@@ -72,13 +72,38 @@ class Main {
     
     // ======================= Optimal Approach ===============================
 
-        static String reverseWordsInString_2(String s){
-        
+        static String reverse(String s){
+            StringBuilder sb = new StringBuilder(s);
+            return  sb.reverse().toString();
+        }
+
+        static String reverseWordsInString_1(String s){
+            int length = s.length();
+            StringBuilder word = new StringBuilder();
+            StringBuilder reverseWords = new StringBuilder();
+
+            s = reverse(s);
+
+            for(int character = 0 ; character < length ; character++){
+
+                while(character < length && s.charAt(character) != ' '){
+                    word.append(s.charAt(character));
+                    character++;
+                }
+
+                if(word.length() > 0){
+                    word = new StringBuilder(reverse(word.toString()));
+                    reverseWords.append(" ").append(word);
+                    word.setLength(0);
+                }
+            }
+
+            return reverseWords.substring(1);
         }
 
 
     public static void main(String[] args) {
-       String s = "welcome to the jungle";
+       String s = "Hi I am Abhinay";
        String result = reverseWordsInString(s);
     }
 }
