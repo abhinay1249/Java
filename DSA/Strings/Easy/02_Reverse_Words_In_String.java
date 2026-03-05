@@ -8,41 +8,67 @@ class Main {
 
     // ======================= Brute-Force Approach ===============================
 
-    static String reverseWordsInString(String s){
-        
-        int length = s.length();
+        static String reverseWordsInString(String s){
 
-        if(length == 1){
-            return s;
-        }
-        String word = "";                           
-        
-        List<String> words = new ArrayList<>();                         
-        
-        for(int character = 0 ; character < length ; character++){
-            
-            while(character < length && s.charAt(character) != ' '){
-                word+=s.charAt(character);
-                character++;                
-            }                                           // T.C = O(N^2) + O(N) + O(N) , S.C = O(words in sentence)
-            
-            if(word.length() > 0){
-                words.add(word);
-                word="";
+            int length = s.length();
+
+            if(length == 1){
+                return s;
             }
+            String word = "";                           
+
+            List<String> words = new ArrayList<>();                         
+
+            for(int character = 0 ; character < length ; character++){
+
+                while(character < length && s.charAt(character) != ' '){
+                    word+=s.charAt(character);
+                    character++;                
+                }                                           // T.C = O(N^2) + O(N) + O(N) , S.C = O(words in sentence)
+
+                if(word.length() > 0){
+                    words.add(word);
+                    word="";
+                }
+            }
+
+            Collections.reverse(words);
+            String reverseWords = String.join(" ",words);
+
+            return reverseWords; 
         }
 
-        Collections.reverse(words);
-        String reverseWords = String.join(" ",words);
-        
-        return reverseWords; 
-    }
+    // ======================= Better Approach ===============================
 
-    // ======================= Optimal Approach ===============================
+        static String reverseWordsInString_1(String s){
 
-    static String reverseWordsInString_1(String s){
-        
-    }
+            int length = s.length();
+
+            if(length == 1){
+                return s;
+            }
+            
+            StringBuilder word = new StringBuilder();
+
+            List<String> words = new ArrayList<>();
+
+            for(int character = 0 ; character < length ; character++){
+
+                while(character < length && s.charAt(character) != ' '){
+                    word.append(s.charAt(character));
+                    character++;
+                }
+
+                if(word.length() > 0){                       // T.C = O(N) + O(N) + O(N) , S.C = O(words in sentence)
+                    words.add(word.toString());
+                    word.setLength(0);                              
+                }
+            }
+            Collections.reverse(words);
+            String reverseWords = String.join(" ",words);
+
+            return reverseWords; 
+        }
 
     public static void main(String[] args) {
        String s = "welcome to the jungle";
