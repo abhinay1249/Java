@@ -91,7 +91,7 @@ class Main {
                     character++;
                 }
 
-                if(word.length() > 0){
+                if(word.length() > 0){                          // T.C = O(N) + O(N) + O(N), S.C = O(1)
                     word.reverse();
                     reverseWords.append(" ").append(word);
                     word.setLength(0);
