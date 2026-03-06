@@ -7,6 +7,27 @@ class Main {
 
     static String largestOddNumberInString(String s){
         
+        int pointer = s.length()-1;
+        int idx = -1;
+        
+        while(pointer >= 0){
+            char ch = s.charAt(pointer);
+            int number = Integer.valueOf(ch);
+            
+            if(number % 2 == 0){
+                pointer--;
+            }else{
+                idx = pointer;
+                break;
+            }
+        }
+        String word = "";
+        for(int index = 0 ; index <= idx ; index++){
+            char ch = s.charAt(index);
+            word+=ch;
+        }
+        return word;
+        
     }
 
     // ======================= Optimal Approach ===============================
