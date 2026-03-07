@@ -34,6 +34,10 @@ class Main{
             int sLength = s.length();
             int tLength = t.length();
 
+            if(s.length() != t.length()){
+                return false;
+            }
+
             Map<Character,Character> charMap= new HashMap<>();
 
             for(int index = 0 ; index < sLength ; index++){
