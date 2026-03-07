@@ -57,7 +57,7 @@ class Main {
         }
 
     public static void main(String[] args) {
-       String s = "5347";
+       String s = "002643183929089473";
        String result = largestOddNumberInString_1(s);
        System.out.println(result);
     }
