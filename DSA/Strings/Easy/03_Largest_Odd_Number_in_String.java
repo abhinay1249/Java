@@ -17,12 +17,13 @@ class Main {
 
                 if(number % 2 == 0){
                     pointer--;
-                }else{
+                }else{                                               // T.C = O(N) +  O(N), S.C = O(N)
                     idx = pointer;
                     break;
                 }
             }
-            String word = "";
+
+            StringBuilder word = new StringBuilder();
 
             for(int index = 0 ; index <= idx ; index++){
                 char ch = s.charAt(index);
@@ -30,10 +31,10 @@ class Main {
                 if(index ==0 && ch == '0'){
                     continue;
                 }
-                
-                word+=ch;
+
+                word.append(ch);
             }
-            return word;
+            return word.toString();
 
         }
 
