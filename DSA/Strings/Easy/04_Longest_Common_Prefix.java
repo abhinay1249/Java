@@ -6,6 +6,11 @@ class Main {
         static String longestCommonPrefix(String[] s){
 
             int elementLength = s[0].length();
+            
+            if(elementLength == 0){
+                return "";
+            }
+            
             int length = s.length;
             StringBuilder prefix = new StringBuilder();                 // T.C = O(N * M) , S.C = O(Characters)=O(M)
 
