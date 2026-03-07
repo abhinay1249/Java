@@ -34,15 +34,14 @@ class Main {
 
                 word.append(ch);
             }
-            return word.toString();
-
+            return word.toString().replaceFirst("^0+","");
         }
 
     // ======================= Optimal Approach ===============================
 
-    static String largestOddNumberInString_1(String s){
-        
-    }
+        static String largestOddNumberInString_1(String s){
+            
+        }
 
     public static void main(String[] args) {
        String s = "5347";
