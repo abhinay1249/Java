@@ -22,9 +22,15 @@ class Main {
             return prefix.toString();
         }
 
+    // ======================= Optimal Approach ===============================
+
+        static String longestCommonPrefix_1(String[] s){
+
+        }
+        
     public static void main(String[] args) {
        String[] strings = {"flower", "flow", "flight"};
-       String result = longestCommonPrefix(strings);
+       String result = longestCommonPrefix_1(strings);
        System.out.println(result);
     }
 }
