@@ -27,6 +27,10 @@ class Main {
             for(int index = 0 ; index <= idx ; index++){
                 char ch = s.charAt(index);
 
+                if(index ==0 && ch == '0'){
+                    continue;
+                }
+                
                 word+=ch;
             }
             return word;
