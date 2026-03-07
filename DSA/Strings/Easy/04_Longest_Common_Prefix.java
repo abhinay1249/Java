@@ -10,7 +10,7 @@ class Main {
             if(elementLength == 0){
                 return "";
             }
-            
+
             int length = s.length;
             StringBuilder prefix = new StringBuilder();                 // T.C = O(N * M) , S.C = O(Characters)=O(M)
 
@@ -31,10 +31,35 @@ class Main {
 
         static String longestCommonPrefix_1(String[] s){
 
+            int elementLength = s[0].length();
+            if(elementLength == 0){
+                return "";
+            }
+            int length = s.length;
+            Arrays.sort(s);
+
+            int index = 0;
+            int firstElementLength = s[0].length();
+            int lastElementLength = s[length-1].length();       // T.C = O(N Log (M+N)), S.C = O(1)
+
+            int minLength = Math.min(lastElementLength,firstElementLength);
+
+            while(index < minLength){
+                char ch = s[0].charAt(index);
+                char ch_1 = s[length-1].charAt(index);
+
+                if(ch == ch_1){
+                    index++;
+                }else{
+                    return s[0].substring(0,index);
+                }
+            }
+            return s[0].substring(0,minLength);
         }
         
     public static void main(String[] args) {
-       String[] strings = {"flower", "flow", "flight"};
+       String[] strings = {"zebra", "zen", "zealot"};
+       String[] strings_1 = {"zea", "zea", "zea"};
        String result = longestCommonPrefix_1(strings);
        System.out.println(result);
     }
