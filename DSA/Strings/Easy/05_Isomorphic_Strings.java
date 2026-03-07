@@ -11,7 +11,7 @@ class Main{
                     char firstCharacter_s = s.charAt(index);
                     char secondCharacter_s = s.charAt(character);
                     char firstCharacter_t = t.charAt(index);
-                    char secondCharacter_t = t.charAt(character);           
+                    char secondCharacter_t = t.charAt(character);           // T.C = O(N^2), S.C = O(1)
 
                     if(firstCharacter_s == secondCharacter_s){
                         if(firstCharacter_t != secondCharacter_t){
@@ -26,7 +26,7 @@ class Main{
             }
             return true;
         }
-        
+
     public static void main(String[] args){
         String s = "kite";
         String t = "tart";
