@@ -27,6 +27,34 @@ class Main{
             return true;
         }
 
+    // ======================= Better Approach ===============================
+
+        static boolean isIsomorphic(String s, String t) {
+
+            int sLength = s.length();
+            int tLength = t.length();
+
+            Map<Character,Character> charMap= new HashMap<>();
+
+            for(int index = 0 ; index < sLength ; index++){
+                char firstString = s.charAt(index);
+                char secondString = t.charAt(index);                // T.C = O(N), S.C = O(N)
+
+                if(charMap.containsKey(firstString)){
+                    if(charMap.get(firstString) != secondString){
+                        return false;
+                    }
+                }else{
+                    if(charMap.containsValue(secondString)){
+                        return false;
+                    }else{
+                        charMap.put(firstString,secondString);
+                    }
+                }
+            }
+            return true;
+        }
+
     public static void main(String[] args){
         String s = "kite";
         String t = "tart";
