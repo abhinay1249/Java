@@ -40,7 +40,7 @@ class Main {
 
             int index = 0;
             int firstElementLength = s[0].length();
-            int lastElementLength = s[length-1].length();       // T.C = O(N Log (M+N)), S.C = O(1)
+            int lastElementLength = s[length-1].length();                   // T.C = O(N Log (M+N)), S.C = O(1)
 
             int minLength = Math.min(lastElementLength,firstElementLength);
 
