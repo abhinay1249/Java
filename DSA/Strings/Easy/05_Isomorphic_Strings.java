@@ -29,7 +29,7 @@ class Main{
 
     // ======================= Better Approach ===============================
 
-        static boolean isIsomorphic(String s, String t) {
+        static boolean isIsomorphic_1(String s, String t) {
 
             int sLength = s.length();
             int tLength = t.length();
@@ -55,6 +55,35 @@ class Main{
                         charMap.put(firstString,secondString);
                     }
                 }
+            }
+            return true;
+        }
+        
+    // ======================= Optimal Approach ===============================
+
+        static boolean isIsomorphic_2(String s, String t) {
+
+            int[] mapS = new int[256];
+            int[] mapT = new int[256];
+
+            int length = s.length();
+
+            if(s.length() != t.length()){
+                return false;
+            }
+
+            for(int index = 0 ; index < length ; index++){
+
+                char c1 = s.charAt(index);
+                char c2 = t.charAt(index);                          // T.C = O(N), S.C = O(1)
+
+
+                if(mapS[c1] != mapT[c2]){
+                    return false;
+                }
+
+                mapS[c1] = index + 1;
+                mapT[c2] = index + 1;
             }
             return true;
         }
