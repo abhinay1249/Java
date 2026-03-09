@@ -38,7 +38,7 @@ class Main{
 
             String word = s+s;
 
-            if(word.contains(goal)){                        // T.C = O(N^2), S.C = O(N)
+            if(word.contains(goal)){                        // T.C = O(N*M), S.C = O(N)
                 return true;
             }
 
