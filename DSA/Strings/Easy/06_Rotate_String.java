@@ -26,6 +26,21 @@ class Main{
         return false;
     }
 
+    static boolean rotateString_1(String s, String goal){
+
+        if(s.length() != goal.length()){
+            return false;
+        }
+        
+        String word = s+s;
+        
+        if(word.contains(goal)){                        // T.C = O(N^2), S.C = O(N)
+            return true;
+        }
+        
+        return false;
+    }
+
     public static void main(String[] args){
         String s = "rotation";
         String goal = 'tionrota';
