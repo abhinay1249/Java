@@ -4,42 +4,46 @@
 
 class Main{
 
-    static boolean rotateString(String s, String goal){
+    // ======================= Brute-Force Approach ===============================
 
-        if(s.length() != goal.length()){
+        static boolean rotateString(String s, String goal){
+
+            if(s.length() != goal.length()){
+                return false;
+            }
+
+            StringBuilder word = new StringBuilder(s);
+
+            int length = s.length();
+
+            for(int index = 0 ; index < length ; index++){
+                char ch = s.charAt(index);                                  // T.C = O(N^2), S.C = O(N)  
+                word.append(ch);
+            }
+
+            if(word.toString().contains(goal)){
+                return true;
+            }
+
             return false;
         }
-        
-        StringBuilder word = new StringBuilder(s);
-        
-        int length = s.length();
-        
-        for(int index = 0 ; index < length ; index++){
-            char ch = s.charAt(index);                                  // T.C = O(N^2), S.C = O(N)  
-            word.append(ch);
-        }
-        
-        if(word.toString().contains(goal)){
-            return true;
-        }
-        
-        return false;
-    }
+    
+    // ======================= Brute-Force Approach (Reduced Code) ===============================
 
-    static boolean rotateString_1(String s, String goal){
+        static boolean rotateString_1(String s, String goal){
 
-        if(s.length() != goal.length()){
+            if(s.length() != goal.length()){
+                return false;
+            }
+
+            String word = s+s;
+
+            if(word.contains(goal)){                        // T.C = O(N^2), S.C = O(N)
+                return true;
+            }
+
             return false;
         }
-        
-        String word = s+s;
-        
-        if(word.contains(goal)){                        // T.C = O(N^2), S.C = O(N)
-            return true;
-        }
-        
-        return false;
-    }
 
     public static void main(String[] args){
         String s = "rotation";
