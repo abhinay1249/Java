@@ -5,7 +5,25 @@
 class Main{
 
     static boolean rotateString(String s, String goal){
-
+        
+        if(s.length() != goal.length()){
+            return false;
+        }
+        
+        StringBuilder word = new StringBuilder(s);
+        
+        int length = s.length();
+        
+        for(int index = 0 ; index < length ; index++){
+            char ch = s.charAt(index);
+            word.append(ch);
+        }
+        
+        if(word.toString().contains(goal)){
+            return true;
+        }
+        
+        return false;
     }
 
     public static void main(String[] args){
