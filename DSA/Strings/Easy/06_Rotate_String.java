@@ -5,7 +5,7 @@
 class Main{
 
     static boolean rotateString(String s, String goal){
-        
+
         if(s.length() != goal.length()){
             return false;
         }
@@ -15,7 +15,7 @@ class Main{
         int length = s.length();
         
         for(int index = 0 ; index < length ; index++){
-            char ch = s.charAt(index);
+            char ch = s.charAt(index);                                  // T.C = O(N^2), S.C = O(N)  
             word.append(ch);
         }
         
