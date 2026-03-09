@@ -45,6 +45,13 @@ class Main{
             return false;
         }
 
+    // ======================= Optimal Approach - KMP ALgorithm ===============================
+        
+        static boolean rotateString_2(String s, String goal){
+
+            
+        }
+
     public static void main(String[] args){
         String s = "rotation";
         String goal = 'tionrota';
