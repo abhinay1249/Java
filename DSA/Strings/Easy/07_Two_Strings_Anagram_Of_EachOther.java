@@ -3,7 +3,9 @@
 
 class Main{
 
-
+        static boolean validateStringsAsAnagram(String s1, String s2){
+            
+        }
     public static void main(String[] args){
         
     }
