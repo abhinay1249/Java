@@ -49,12 +49,58 @@ class Main{
         
         static boolean rotateString_2(String s, String goal){
 
-            
+            int length = s.length();
+            int goalLength = goal.length();
+
+            StringBuilder word = new StringBuilder(s);
+
+            word.append(s);
+
+            int len = 0;
+
+            int index = 1;
+
+            int[] lsp = new int[goalLength];
+
+            while(index < goalLength){
+                if(goal.charAt(index) == goal.charAt(len)){
+                    len++;
+                    lsp[index]=len;
+                    index++;
+                }else{
+                    if(len != 0){
+                        len = lsp[len-1];
+                    }else{
+                        lsp[index] = 0;
+                        index++;
+                    }
+                }
+            }
+            int pointer_1 = 0; 
+            int pointer_2 = 0; 
+
+            while(pointer_1 < word.length()){
+                if(word.charAt(pointer_1) == goal.charAt(pointer_2)){
+                    pointer_1++;
+                    pointer_2++;
+                }
+
+                if(pointer_2 == goalLength){
+                    return true;
+                }else if(pointer_1 < word.length() && word.charAt(pointer_1) != goal.charAt(pointer_2)){
+                    if(pointer_2 != 0){
+                        pointer_2 = lsp[pointer_2-1];
+                    }else{
+                        pointer_1++;
+                    }
+                }        
+            }
+            return false;
         }
 
     public static void main(String[] args){
         String s = "rotation";
-        String goal = 'tionrota';
+        String goal = "tionrota";
 
         boolean result = rotateString(s, goal);
 
