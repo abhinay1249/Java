@@ -70,7 +70,7 @@ class Main{
                 }else{
                     if(len != 0){
                         len = lsp[len-1];
-                    }else{
+                    }else{                                          // T.C = O(N) + O(N) + O(N), S.C = O(N)
                         lsp[index] = 0;
                         index++;
                     }
