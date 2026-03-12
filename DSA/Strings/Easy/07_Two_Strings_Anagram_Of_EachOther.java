@@ -17,7 +17,7 @@ class Main{
             char[] arr_1 = t.toCharArray();
 
             Arrays.sort(arr);
-            Arrays.sort(arr_1);
+            Arrays.sort(arr_1);                                         // T.C = O(2 N Log N) + O(N), S.C = O(N)
 
             String word = new String(arr);
             String word_1 = new String(arr_1);
