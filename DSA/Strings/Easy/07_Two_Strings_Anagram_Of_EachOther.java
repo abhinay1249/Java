@@ -14,28 +14,24 @@ class Main{
                 return false;
             }
 
-            char[] arr = s.toCharArray();
-            char[] arr_1 = t.toCharArray();
+            char[] char_1 = s.toCharArray();
+            char[] char_2 = t.toCharArray();
 
-            Arrays.sort(arr);
-            Arrays.sort(arr_1);                                         // T.C = O(2 N Log N) + O(N), S.C = O(N)
-
-            String word = new String(arr);
-            String word_1 = new String(arr_1);
+            Arrays.sort(char_1);
+            Arrays.sort(char_2);                                // T.C = O(2 N LOG N) + O(N) , S.C = O(2N)
 
             int index_1 = 0, index_2 = 0;
 
             while(index_1 < sLength && index_2 < tLength){
-                char ch = word.charAt(index_1);
-                char sh = word_1.charAt(index_2);
 
-                if(ch != sh){
+                if(char_1[index_1] != char_2[index_2]){
                     return false;
                 }
+
                 index_1++;
                 index_2++;
             }
-            return true;                        
+            return true;                      
         }
 
     // ======================= Optimal Approach ===============================
