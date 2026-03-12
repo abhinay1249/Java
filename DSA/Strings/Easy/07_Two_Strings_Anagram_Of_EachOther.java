@@ -1,5 +1,6 @@
 // Problem Statement: Given two strings, check if two strings are anagrams of each other or not.
 
+import java.util.*;
 
 class Main{
 
@@ -37,10 +38,16 @@ class Main{
             return true;                        
         }
 
+    // ======================= Optimal Approach ===============================
+
+        static boolean validateStringsAsAnagram_1(String s1, String s2){
+                      
+        }
+
     public static void main(String[] args){
         String s = "caac";
         String t = "ccaa";
-        boolean result = twoStringsAnagram(s,t);
+        boolean result = twoStringsAnagram_1(s,t);
         System.out.println(result);
     }
 }
