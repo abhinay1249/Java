@@ -39,31 +39,31 @@ class Main{
         static boolean validateStringsAsAnagram_1(String s1, String s2){
             int sLength = s.length();
             int tLength = t.length();
-            
+
             if(sLength != tLength){
                 return false;
             }
-            
+
             int[] charCount = new int[26];
-            
+
             s=s.toLowerCase();
             t=t.toLowerCase();
-            
-            s= s.replace(" ","");
+
+            s= s.replace(" ","");                                       // T.C = O(N), S.C = O(1)
             t= t.replace(" ","");
-            
+
             for(int index = 0 ; index < sLength ; index++){
                 char ch = s.charAt(index);
                 int idx = ch - 'a';
                 charCount[idx]++;
             }
-            
+
             for(int index = 0 ; index < tLength ; index++){
                 char ch = t.charAt(index);
                 int idx = ch - 'a';
                 charCount[idx]--;
             }
-            
+
             for(int value : charCount){
                 if(value != 0){
                     return false;
