@@ -3,6 +3,11 @@
 
 
 class Main{
+
+    static boolean sortedCharactersNyFrequency(String s){
+
+    } 
+    
     public static void main(String[] args){
         
     }
