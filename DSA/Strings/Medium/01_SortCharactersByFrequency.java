@@ -12,7 +12,7 @@ class Main{
 
         for(int index = 0 ; index < length ; index++){
             char ch = s.charAt(index);
-            charCount.put(ch,charCount.getOrDefault(ch,0)+1);
+            charCount.put(ch,charCount.getOrDefault(ch,0)+1);               // T.C = , S.C = 
         }
 
         List<Map.Entry<Character,Integer>> chars = new ArrayList<>(charCount.entrySet());
