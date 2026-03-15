@@ -1,10 +1,11 @@
 // Problem Statement: You are given a string s. Return the array of unique characters, sorted by highest to lowest occurring characters.
 // If two or more characters have same frequency then arrange them in alphabetic order.
 
+import java.util.*;
 
 class Main{
 
-    static boolean sortCharactersByFrequency(String s){
+    static String sortCharactersByFrequency(String s){
                 
         Map<Character,Integer> charCount = new HashMap<>();
 
@@ -33,7 +34,7 @@ class Main{
     } 
 
     public static void main(String[] args){
-        String s = "cccaaa";
+        String s = "Aabb";
         String result = sortCharactersByFrequency(s);
         System.out.println(result);
     }
