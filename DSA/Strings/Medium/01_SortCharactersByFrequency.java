@@ -4,7 +4,7 @@
 
 class Main{
 
-    static boolean sortedCharactersNyFrequency(String s){
+    static boolean sortCharactersByFrequency(String s){
                 
         Map<Character,Integer> charCount = new HashMap<>();
 
@@ -33,6 +33,8 @@ class Main{
     } 
 
     public static void main(String[] args){
-        
+        String s = "cccaaa";
+        String result = sortCharactersByFrequency(s);
+        System.out.println(result);
     }
 }
