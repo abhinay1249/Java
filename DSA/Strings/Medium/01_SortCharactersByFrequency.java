@@ -12,7 +12,7 @@ class Main{
 
         for(int index = 0 ; index < length ; index++){
             char ch = s.charAt(index);
-            charCount.put(ch,charCount.getOrDefault(ch,0)+1);               // T.C = O(), S.C = O() 
+            charCount.put(ch,charCount.getOrDefault(ch,0)+1);            // T.C = O(N)+O(K)+O(K LOG K)+O(N), S.C = O(K)+O(K)+O(N) 
         }
 
         List<Map.Entry<Character,Integer>> chars = new ArrayList<>(charCount.entrySet());
