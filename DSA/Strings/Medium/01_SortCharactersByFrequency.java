@@ -76,7 +76,7 @@ class Main{
 
     public static void main(String[] args){
         String s = "Aabb";
-        String result = sortCharactersByFrequency(s);
+        String result = sortCharactersByFrequency_1(s);
         System.out.println(result);
     }
 }
