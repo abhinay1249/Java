@@ -14,7 +14,7 @@ class Main {
             for(int index = 0 ; index < length ; index++){
                 char ch = s.charAt(index);
 
-                if(ch == '('){                                     
+                if(ch == '('){                                      // T.C = O(N), S.C = O(1)
                     count++;
                 }else if(ch == ')'){
                     count--;
