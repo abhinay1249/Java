@@ -12,8 +12,9 @@ import java.util.*;
 class Main {
     
     // ======================= Optimal Approach ===============================
-    
+
         static int romanToInteger(String s){
+
             int length = s.length();
 
             Map<Character,Integer> romanValues = new HashMap<>();
@@ -23,7 +24,7 @@ class Main {
             romanValues.put('X',10);
             romanValues.put('L',50);
             romanValues.put('C',100);
-            romanValues.put('D',500);
+            romanValues.put('D',500);                           // T.C = O(N), S.C = O(1)
             romanValues.put('M',1000);
 
             int index = 0;
