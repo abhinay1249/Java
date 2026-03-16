@@ -31,6 +31,43 @@ class Main{
 
         return word.toString();
 
+    }
+
+    static String sortCharactersByFrequency_1(String s){
+        
+        int length = s.length();
+        
+        Map<Character,Integer> charCount = new HashMap<>();
+        
+        for(char ch : s.toCharArray()){
+            charCount.put(ch,charCount.getOrDefault(ch,0)+1);  
+        }
+        
+        List<Character>[] buckets = new ArrayList[length+1];
+        
+        for(int index = 0 ; index <= length ; index++){
+            buckets[index] = new ArrayList<>();
+        }
+        
+        for(Map.Entry<Character,Integer> chars : charCount.entrySet()){
+            char ch = chars.getKey();
+            int count = chars.getValue();
+            
+            buckets[count].add(ch);
+        }
+        
+        StringBuilder word = new StringBuilder();
+        
+        for(int index = length; index >= 1 ; index--){
+            for(char ch : buckets[index]){
+            
+                for(int count = 0 ; count < index ; count++){
+                    word.append(ch);
+                }
+            }
+        }
+        
+        return word.toString();
     } 
 
     public static void main(String[] args){
