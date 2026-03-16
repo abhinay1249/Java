@@ -46,7 +46,7 @@ class Main{
         List<Character>[] buckets = new ArrayList[length+1];
         
         for(int index = 0 ; index <= length ; index++){
-            buckets[index] = new ArrayList<>();
+            buckets[index] = new ArrayList<>();                             // T.C = O(N), S.C = O(N)
         }
         
         for(Map.Entry<Character,Integer> chars : charCount.entrySet()){
@@ -66,7 +66,7 @@ class Main{
                 }
             }
         }
-        
+
         return word.toString();
     } 
 
