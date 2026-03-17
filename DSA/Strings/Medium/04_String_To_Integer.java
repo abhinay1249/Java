@@ -1,5 +1,6 @@
 // Problem Statement: Implement the function myAtoi(s) which converts the given string s to a 32-bit signed integer.
-// Steps to Implement: 1. First, ignore any leading whitespace characters ' ' until the first non-whitespace character is found.
+// Steps to Implement: 
+// 1. First, ignore any leading whitespace characters ' ' until the first non-whitespace character is found.
 // 2. Check the next character to determine the sign. If it’s a '-', the number should be negative. 
 //      If it’s a '+', the number should be positive. If neither is found, assume the number is positive.
 // 3. Read the digits and convert them into a number. 
