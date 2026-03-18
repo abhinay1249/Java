@@ -1,0 +1,2 @@
+// Problem Statement: You are given a string s and a positive integer k.
+// Return the number of substrings that contain exactly k distinct characters.
