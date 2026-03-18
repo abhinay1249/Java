@@ -10,7 +10,11 @@
 // 5. Finally, return the computed number after applying all the above steps
 
 class Main {
-        
+    
+    static boolean isDigit(char ch){
+        return ch >= '0' && ch <= '9';    
+    }
+    
     static int stringToInteger(String s){
         int length = s.length();
         
