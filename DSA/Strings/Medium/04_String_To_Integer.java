@@ -37,7 +37,7 @@ class Main {
                     sign = -1;
                     index++;
                 }else if(s.charAt(index)=='+'){
-                    index++;                                        // T.C = O(N), S.C = O(1)
+                    index++;                                    // T.C = O(N), S.C = O(1)
                 }
             }
 
