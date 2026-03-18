@@ -16,36 +16,36 @@ class Main {
         static boolean isDigit(char ch){
             return ch >= '0' && ch <= '9';    
         }
-        
+
         static int stringToInteger(String s){
             int length = s.length();
-            
+
             if(length == 0){
                 return 0;
             }
-            
-            int index = 0;
-            
+
+            int index = 0;                                          
+
             while(index < length && s.charAt(index)==' '){
                 index++;
             }
-            
+
             int sign = 1;
-            
+
             if(index < length){
                 if(s.charAt(index)=='-'){
                     sign = -1;
                     index++;
                 }else if(s.charAt(index)=='+'){
-                    index++;
+                    index++;                                        // T.C = O(N), S.C = O(1)
                 }
             }
-            
+
             int num = 0;
-            
+
             while(index < length && isDigit(s.charAt(index))){
                 int digit = s.charAt(index) - '0';
-                
+
                 if(num == Integer.MAX_VALUE/10){
                     if(sign == 1){
                         if(digit >= 7){
@@ -57,7 +57,7 @@ class Main {
                         }
                     }
                 }
-                
+
                 if(num > Integer.MAX_VALUE/10){
                     if(sign == 1){
                         return Integer.MAX_VALUE;
@@ -65,11 +65,11 @@ class Main {
                         return Integer.MIN_VALUE;
                     }
                 }
-                
+
                 num = num * 10 + digit;
                 index++;
             }
-            
+
             return sign * num;
         }
     
