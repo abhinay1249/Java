@@ -11,65 +11,67 @@
 
 class Main {
     
-    static boolean isDigit(char ch){
-        return ch >= '0' && ch <= '9';    
-    }
-    
-    static int stringToInteger(String s){
-        int length = s.length();
-        
-        if(length == 0){
-            return 0;
+    // ======================= Optimal Approach ===============================
+
+        static boolean isDigit(char ch){
+            return ch >= '0' && ch <= '9';    
         }
         
-        int index = 0;
-        
-        while(index < length && s.charAt(index)==' '){
-            index++;
-        }
-        
-        int sign = 1;
-        
-        if(index < length){
-            if(s.charAt(index)=='-'){
-                sign = -1;
-                index++;
-            }else if(s.charAt(index)=='+'){
+        static int stringToInteger(String s){
+            int length = s.length();
+            
+            if(length == 0){
+                return 0;
+            }
+            
+            int index = 0;
+            
+            while(index < length && s.charAt(index)==' '){
                 index++;
             }
-        }
-        
-        int num = 0;
-        
-        while(index < length && isDigit(s.charAt(index))){
-            int digit = s.charAt(index) - '0';
             
-            if(num == Integer.MAX_VALUE/10){
-                if(sign == 1){
-                    if(digit >= 7){
-                        return Integer.MAX_VALUE;
+            int sign = 1;
+            
+            if(index < length){
+                if(s.charAt(index)=='-'){
+                    sign = -1;
+                    index++;
+                }else if(s.charAt(index)=='+'){
+                    index++;
+                }
+            }
+            
+            int num = 0;
+            
+            while(index < length && isDigit(s.charAt(index))){
+                int digit = s.charAt(index) - '0';
+                
+                if(num == Integer.MAX_VALUE/10){
+                    if(sign == 1){
+                        if(digit >= 7){
+                            return Integer.MAX_VALUE;
+                        }
+                    }else if(sign == -1){
+                        if(digit >= 8){
+                            return Integer.MIN_VALUE;
+                        }
                     }
-                }else if(sign == -1){
-                    if(digit >= 8){
+                }
+                
+                if(num > Integer.MAX_VALUE/10){
+                    if(sign == 1){
+                        return Integer.MAX_VALUE;
+                    }else if(sign == -1){
                         return Integer.MIN_VALUE;
                     }
                 }
+                
+                num = num * 10 + digit;
+                index++;
             }
             
-            if(num > Integer.MAX_VALUE/10){
-                if(sign == 1){
-                    return Integer.MAX_VALUE;
-                }else if(sign == -1){
-                    return Integer.MIN_VALUE;
-                }
-            }
-            
-            num = num * 10 + digit;
-            index++;
+            return sign * num;
         }
-        
-        return sign * num;
-    }
     
     public static void main(String[] args) {
         String s ="  -424153abueath";
