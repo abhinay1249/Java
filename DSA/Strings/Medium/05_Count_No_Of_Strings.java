@@ -20,7 +20,7 @@ class Main {
                 nums[ch - 'a']++;
 
                 if(nums[ch - 'a'] == 1){
-                    distinct++;
+                    distinct++;                                         // T.C = O(N), S.C = O(1)
                 }
 
                 while(distinct > k){
