@@ -19,16 +19,16 @@ class Main {
                 int low = index;
                 int high = index;
 
-                while(s.charAt(low) == s.charAt(high)){
+                while(low >= 0 && high < length && s.charAt(low) == s.charAt(high)){
                     low--;
                     high++;
 
-                    if(low == -1 || high == length){                        // T.C = O(N^2), S.C = O(1)
-                        break;
-                    }
+                    // if(low == -1 || high == length){                        
+                    //     break;
+                    // }
                 }
 
-                String palindrome = s.substring(low+1,high);
+                String palindrome = s.substring(low+1,high);            // T.C = O(N^2), S.C = O(1)
                 if(palindrome.length() > lps.length()){
                     lps = palindrome;
                 }
@@ -36,13 +36,13 @@ class Main {
                 low = index - 1;
                 high = index;
 
-                while(s.charAt(low) == s.charAt(high)){
+                while(low >= 0 && high < length && s.charAt(low) == s.charAt(high)){
                     low--;
                     high++;
 
-                    if(low == -1 || high == length){
-                        break;
-                    } 
+                    // if(low == -1 || high == length){
+                    //     break;
+                    // } 
                 }
 
                 palindrome = s.substring(low+1,high);
