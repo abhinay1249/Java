@@ -42,7 +42,7 @@ class Main {
 
             int index = 0;
             int firstElementLength = s[0].length();
-            int lastElementLength = s[length-1].length();                   // T.C = O(N Log (M+N)), S.C = O(1)
+            int lastElementLength = s[length-1].length();                   
 
             int minLength = Math.min(lastElementLength,firstElementLength);
 
@@ -50,7 +50,7 @@ class Main {
                 char ch = s[0].charAt(index);
                 char ch_1 = s[length-1].charAt(index);
 
-                if(ch == ch_1){
+                if(ch == ch_1){                                        // T.C = O(N Log (M+N)), S.C = O(1)
                     index++;
                 }else{
                     return s[0].substring(0,index);
