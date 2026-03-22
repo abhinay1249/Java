@@ -53,6 +53,14 @@ class Main {
             return lps;
         }
     
+    // ======================== Optimal Approach ===============================
+
+        static String longestPalindromeSubstring_1(String s){
+
+            
+        }
+
+
     public static void main(String[] args) {
         String s = "aaaa";
         String result = longestPalindromeSubstring(s);
