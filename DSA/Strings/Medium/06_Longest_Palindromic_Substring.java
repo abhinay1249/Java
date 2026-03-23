@@ -56,7 +56,55 @@ class Main {
     // ======================== Optimal Approach ===============================
 
         static String longestPalindromeSubstring_1(String s){
+            
+            int length = s.length();
+        
+            StringBuilder newString = new StringBuilder("#");
 
+            for(int index = 0 ; index < length ; index++){
+                char ch = s.charAt(index);
+                newString.append(ch);
+                newString.append('#');
+            }
+
+            int center = 0, rightBoundary = 0;
+
+            int[] p = new int[newString.length()];
+
+            int longestCenter = 0, longestLength = 0;
+
+            for(int index = 0 ; index < newString.length() ; index++){
+
+                int mirror = 2 * center - index;
+
+                if(index < rightBoundary){
+                    p[index] = Math.max(0,Math.min(rightBoundary - index,p[mirror]));
+                }
+
+                int left = index - (p[index] + 1);
+                int right = index + (p[index] + 1);
+
+                while(left >=0 && right < newString.length() && newString.charAt(left) == newString.charAt(right)){
+                    left--;
+                    right++;
+                    p[index]++;
+                }
+
+
+                if(p[index] >= longestLength){
+                    longestCenter = index;
+                    longestLength = p[index];
+                }
+
+
+                if(index + p[index] > rightBoundary){
+                    center = index;
+                    rightBoundary = index + p[index];
+                }
+
+            }
+
+            return newString.substring(longestCenter - longestLength, longestCenter + longestLength).replace("#","");
             
         }
 
