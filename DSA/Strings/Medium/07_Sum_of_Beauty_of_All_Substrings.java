@@ -42,8 +42,10 @@ class Main {
             return totalSum;
         }
 
+    // ======================== Optimal Approach ===============================
+   
         static int sumOfAllSubstrings_1(String s) {
-            
+
             int length = s.length();
 
             if(length == 1){
@@ -57,7 +59,7 @@ class Main {
 
                     freq[s.charAt(index_1) - 'a']++;
 
-                    int min = Integer.MAX_VALUE;
+                    int min = Integer.MAX_VALUE;                                // T.C = O(N^2), S.C = O(1)
                     int max = Integer.MIN_VALUE;
 
                     for(int value = 0 ; value < 26 ; value++){
