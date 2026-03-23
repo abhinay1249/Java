@@ -56,7 +56,7 @@ class Main {
     // ======================== Optimal Approach ===============================
 
         static String longestPalindromeSubstring_1(String s){
-            
+
             int length = s.length();
         
             StringBuilder newString = new StringBuilder("#");
@@ -67,7 +67,7 @@ class Main {
                 newString.append('#');
             }
 
-            int center = 0, rightBoundary = 0;
+            int center = 0, rightBoundary = 0;              // T.C = O(N), S.C = O(N)
 
             int[] p = new int[newString.length()];
 
