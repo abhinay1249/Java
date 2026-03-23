@@ -10,7 +10,7 @@ import java.util.*;
 class Main {
 
     // ======================= Brute-Force Approach ===============================
-    
+
         static int sumOfAllSubstrings(String s){
             int length = s.length();
 
@@ -42,6 +42,37 @@ class Main {
             return totalSum;
         }
 
+        static int sumOfAllSubstrings_1(String s) {
+            
+            int length = s.length();
+
+            if(length == 1){
+                return 0;
+            }
+            int totalSum = 0;
+
+            for(int index = 0 ; index < length ; index++){
+                int[] freq = new int[26];
+                for(int index_1 = index ; index_1 < length ; index_1++){
+
+                    freq[s.charAt(index_1) - 'a']++;
+
+                    int min = Integer.MAX_VALUE;
+                    int max = Integer.MIN_VALUE;
+
+                    for(int value = 0 ; value < 26 ; value++){
+
+                        if(freq[value]!=0){
+                            max = Math.max(max,freq[value]);
+                            min = Math.min(min,freq[value]);
+                        }
+
+                    }
+                    totalSum+= max - min;
+                }
+
+            }
+        }
 
     public static void main(String[] args) {
         String s = "aabcbaa";
