@@ -9,6 +9,8 @@ import java.util.*;
 
 class Main {
 
+    // ======================= Brute-Force Approach ===============================
+    
         static int sumOfAllSubstrings(String s){
             int length = s.length();
 
