@@ -24,7 +24,7 @@ class Main {
 
             Map<Character,Integer> freqCount = new HashMap<>();
 
-            int totalSum = 0;                                                   //T.C = O(N^3), S.C = O(1)
+            int totalSum = 0;                                                           //T.C = O(N^3), S.C = O(1)
 
             for(int index = 0 ; index < length ; index++){
                 for(int index_1 = index ; index_1 < length ; index_1++){
@@ -59,7 +59,7 @@ class Main {
 
                     freq[s.charAt(index_1) - 'a']++;
 
-                    int min = Integer.MAX_VALUE;                                // T.C = O(N^2), S.C = O(1)
+                    int min = Integer.MAX_VALUE;                                        // T.C = O(N^2), S.C = O(1)
                     int max = Integer.MIN_VALUE;
 
                     for(int value = 0 ; value < 26 ; value++){
