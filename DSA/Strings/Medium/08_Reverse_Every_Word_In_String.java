@@ -7,35 +7,39 @@
 import java.util.*;
 
 class Main {
-    static String reverseWordsInString(String s){
-        int length = s.length();
-        
-        if(length == 1 && s.charAt(0)!=' '){
-            return s;
-        }
-        
-        StringBuilder word = new StringBuilder();
-        
-        List<String> words = new ArrayList<>();
-        
-        for(int character = 0 ; character < length ; character++){
-            
-            while(character < length && s.charAt(character)!=' '){
-                word.append(s.charAt(character));
-                character++;
+
+    // ======================= Brute-Force Approach ===============================
+
+        static String reverseWordsInString(String s){
+            int length = s.length();
+
+            if(length == 1 && s.charAt(0)!=' '){
+                return s;
             }
-            
-            if(word.length() > 0){
-                words.add(word.toString());
-                word.setLength(0);
+
+            StringBuilder word = new StringBuilder();
+
+            List<String> words = new ArrayList<>();
+
+            for(int character = 0 ; character < length ; character++){
+
+                while(character < length && s.charAt(character)!=' '){
+                    word.append(s.charAt(character));
+                    character++;
+                }
+
+                if(word.length() > 0){
+                    words.add(word.toString());
+                    word.setLength(0);
+                }
             }
+
+            Collections.reverse(words);
+            String reverseWord = String.join(" ",words);
+
+            return reverseWord;
         }
-        
-        Collections.reverse(words);
-        String reverseWord = String.join(" ",words);
-        
-        return reverseWord;
-    }
+
     public static void main(String[] args) {
         String s = " amazing coding skills ";
         String result = reverseWordsInString(s);
