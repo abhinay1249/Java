@@ -42,9 +42,32 @@ class Main {
     
     // ======================== Optimal Approach ===============================
 
+        static String reverseWordsInString_1(String s){
+        
+            String str = reverse(s);
+
+            StringBuilder words = new StringBuilder();
+            StringBuilder reverseWord = new StringBuilder();
+
+            for(int character = 0 ; character < str.length() ; character++){
+
+                while(character < str.length() && str.charAt(character)!=' '){
+                    words.append(str.charAt(character));
+                    character++;
+                }
+
+                if(words.length() > 0){                                                 // T.C = O(N) + O(N) + O(N), S.C = O(1)
+                    words.reverse();
+                    reverseWord.append(" ").append(words);
+                    words.setLength(0);
+                }
+            }
+
+            return reverseWord.substring(1);
+        }
         
     public static void main(String[] args) {
-        String s = " amazing coding skills ";
+        String s = "  Love is Java ";
         String result = reverseWordsInString(s);
         System.out.println(result);
     }
