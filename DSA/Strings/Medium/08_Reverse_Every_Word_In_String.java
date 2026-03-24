@@ -19,7 +19,7 @@ class Main {
 
             StringBuilder word = new StringBuilder();
 
-            List<String> words = new ArrayList<>();
+            List<String> words = new ArrayList<>();                       // T.C = O(N) + O(N) + O(N), S.C = O(words in sentence)
 
             for(int character = 0 ; character < length ; character++){
 
