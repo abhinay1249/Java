@@ -72,8 +72,8 @@ class Main {
                     }
                     totalSum+= max - min;
                 }
-
             }
+            return totalSum;
         }
 
     public static void main(String[] args) {
