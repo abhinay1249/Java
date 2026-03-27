@@ -3,26 +3,6 @@
 // The words in s are separated by at least one space. 
 // Return a string with the words in reverse order, concatenated by a single space.
 
-// Example 1:
-// Input:
-//  s = " -12345"  
-// Output:
-//  -12345  
-// Explanation:
-  
-// Ignore leading whitespaces.  
-// The sign '-' is encountered, indicating the number is negative.  
-// Digits 12345 are read and converted to -12345.
-
-// Example 2:
-// Input:
-//  s = "4193 with words"  
-// Output:
-//  4193  
-// Explanation:
-  
-// Read the digits 4193 and stop when encountering the first non-digit character (w).
-
 
 
 import java.util.*;
