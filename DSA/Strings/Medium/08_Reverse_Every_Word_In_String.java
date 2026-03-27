@@ -4,7 +4,6 @@
 // Return a string with the words in reverse order, concatenated by a single space.
 
 
-
 import java.util.*;
 
 class Main {
