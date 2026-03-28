@@ -72,9 +72,6 @@ class Main {
 			
 		    indexing.putIfAbsent(prefixSum, i);
 	    }
-		if(maxSubArrayLength == 0){
-	    	return 0;
-	    }
 	    return maxSubArrayLength;
     }
 
