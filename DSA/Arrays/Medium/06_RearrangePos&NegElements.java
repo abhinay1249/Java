@@ -104,8 +104,8 @@ class Main {
                 }
             }else{
                 for(int i = 0 ; i < pos.size() ; i++){
-                    nums[i*2+1] = neg.get(i);
                     nums[i*2] = pos.get(i);
+                    nums[i*2+1] = neg.get(i);
                 }
 
                 int idx1 = pos.size()*2;
