@@ -97,9 +97,6 @@ class Main {
 			
 			j++;
 		}
-		if(maxLength == 0){
-	    	return 0;
-	    }
 		return maxLength;
 	}
     
