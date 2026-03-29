@@ -50,7 +50,7 @@ class Main {
         static int longestConsecutive_1(int[] nums){
         
         	int n = nums.length;
-        	int maxConsequence = Integer.MIN_VALUE;
+        	int maxConsecutive = Integer.MIN_VALUE;
             int count = 0;
             int lastSmaller = Integer.MIN_VALUE;
             Arrays.sort(nums);
@@ -62,11 +62,11 @@ class Main {
                     lastSmaller = nums[i];
                 }else if(nums[i]!=lastSmaller){
                     count=1;
-                    lastSmaller = nums[i];
+                    lastSmaller = num   s[i];
                 }
-                maxConsequence = Math.max(maxConsequence,count);
+                maxConsecutive = Math.max(maxConsecutive,count);
             }
-        	return maxConsequence;
+        	return maxConsecutive;
         }
 
     // ======================= Optimal Approach =======================================
@@ -74,7 +74,9 @@ class Main {
         static int longestConsecutive_2(int[] nums){
         
             Set<Integer> hs = new HashSet<>();
-            int maxConsequence = Integer.MIN_VALUE;
+
+            int maxConsecutive = Integer.MIN_VALUE;
+            
             for(int i = 0 ; i < nums.length ; i++){
                 hs.add(nums[i]);
             }
@@ -82,13 +84,13 @@ class Main {
             for(int i : hs){
                 if(!hs.contains(i-1)){                              // T.C = O(2N), S.C = O(N)
                     int count = 0;
-                    while(hs.contains(i++)){
+                    while(hs.contains(i+1)){
                         count++;
                     }
-                    maxConsequence = Math.max(maxConsequence, count);
+                    maxConsecutive = Math.max(maxConsecutive, count);
                 }
             }
-        	return maxConsequence;
+        	return maxConsecutive;
         }
     
 
