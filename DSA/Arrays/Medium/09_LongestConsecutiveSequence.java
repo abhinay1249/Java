@@ -83,8 +83,10 @@ class Main {
 
             for(int i : hs){
                 if(!hs.contains(i-1)){                              // T.C = O(2N), S.C = O(N)
-                    int count = 0;
-                    while(hs.contains(i+1)){
+                    int count = 1;
+                    int x = i
+                    while(hs.contains(x+1)){
+                        x = x+1;
                         count++;
                     }
                     maxConsecutive = Math.max(maxConsecutive, count);
