@@ -30,7 +30,7 @@ class Main {
         static int longestConsecutive(int[] nums){
         
         	int n = nums.length;
-        	int maxConsequence = Integer.MIN_VALUE;             // T.C = O(N^2), S.C = O(1)
+        	int maxConsecutive = Integer.MIN_VALUE;             // T.C = O(N^2), S.C = O(1)
 
         	for(int i = 0 ; i < n ; i++){
         		int x = nums[i];
@@ -40,9 +40,9 @@ class Main {
         			x+=1;
         			count+=1;
         		}
-        		maxConsequence = Math.max(maxConsequence, count);
+        		maxConsecutive = Math.max(maxConsecutive, count);
         	}
-        	return maxConsequence;
+        	return maxConsecutive;
         }
 
     // ======================= Better Approach =======================================
