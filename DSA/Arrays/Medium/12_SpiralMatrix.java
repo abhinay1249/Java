@@ -25,33 +25,31 @@ class Main {
 	        List<Integer> spiralMatrix = new ArrayList<>();
 
 
-	            while(top <= bottom && left <= right){
-
-	    	    for(int i = left ; i <= right ; i++){
+	        while(top <= bottom && left <= right){
+	    		for(int i = left ; i <= right ; i++){
 	    		    spiralMatrix.add(nums[top][i]);             // T.C = O(n *m), S.C = O(n * m)
-	    	    }
-	    	    top++;
-
-	    	    for(int i = top ; i <= bottom ; i++){
+	    		}
+	    		top++;
+	    		for(int i = top ; i <= bottom ; i++){
 	    		    spiralMatrix.add(nums[i][right]);
-	    	    }
-	    	    right--;
-
-	    	    if(top <= bottom){
+	    		}
+	    		right--;
+	    		if(top <= bottom){
 	    		    for(int i = right ; i >= left ; i--){
 	    			    spiralMatrix.add(nums[bottom][i]);
 	    		    }
 	    		    bottom--;
-	    	    }	
-    
-	    	    if(left <= right){
+	    		}	
+
+	    		if(left <= right){
 	    		    for(int i = bottom ; i >= top ; i--){
 	    			    spiralMatrix.add(nums[i][left]);
 	    		    }
 	    		    left++;
 	        	}
 	        }
-	        return spiralMatrix;	
+
+		    return spiralMatrix;	
         }
 
     public static void main(String[] args) {
