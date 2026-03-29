@@ -84,7 +84,7 @@ class Main {
             for(int i : hs){
                 if(!hs.contains(i-1)){                              // T.C = O(2N), S.C = O(N)
                     int count = 1;
-                    int x = i
+                    int x = i;
                     while(hs.contains(x+1)){
                         x = x+1;
                         count++;
