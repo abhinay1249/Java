@@ -153,9 +153,9 @@ class Main {
 	        int value = 1;
             values.add(value);
 
-	        for(int row = 1 ; row < nthRow; row++){
+	        for(int row = 0 ; row < nthRow-1; row++){
 	        	value *= (nthRow - row);                                    //T.C = O(N^2), S.C = O(1)
-	        	value /= (row);
+	        	value /= (row+1);
 	            values.add(value);
             }
             return values;
