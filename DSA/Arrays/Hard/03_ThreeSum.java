@@ -2,6 +2,20 @@
 // In short, you need to return an array of all the unique triplets [arr[a], arr[b], arr[c]] such that i!=j, j!=k, k!=i, and their sum is equal to zero.
 
 
+// Example 1:
+
+// Input: nums = [-1,0,1,2,-1,-4]
+// Output : [[-1,-1,2],[-1,0,1]]
+// Explanation : Out of all possible unique triplets possible, [-1,-1,2] and [-1,0,1] satisfy the condition of summing up to zero with i!=j!=k
+
+
+// Example 2:
+
+// Input : nums=[-1,0,1,0]
+// Output : [[-1,0,1],[-1,1,0]]
+// Explanation : Out of all possible unique triplets possible, [-1,0,1] and [-1,1,0] satisfy the condition of summing up to zero with i!=j!=k
+
+
 import java.util.*;
 
 class Main {
