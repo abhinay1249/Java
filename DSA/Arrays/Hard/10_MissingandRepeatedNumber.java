@@ -4,6 +4,18 @@
 // Note: You are not allowed to modify the original array.
 
 
+// Example 1:
+
+// Input : nums = [3, 5, 4, 1, 1]  
+// Output : [1, 2]  
+// Explanation : 1 appears twice in the array, and 2 is missing from the array. So the output is [1, 2].
+
+// Example 2:
+
+// Input : nums = [1, 2, 3, 6, 7, 5, 7]  
+// Output : [7, 4]  
+// Explanation : 7 appears twice in the array, and 4 is missing from the array. So the output is [7, 4].
+
 import java.util.*;
 
 class Main {
