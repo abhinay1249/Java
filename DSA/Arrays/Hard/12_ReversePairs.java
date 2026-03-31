@@ -1,3 +1,9 @@
+// Problem Statement: Given an array of numbers, you need to return the count of reverse pairs. 
+// Reverse Pairs are those pairs where i<j and arr[i]>2*arr[j].
+
+
+
+
 import java.util.*;
 
 class Main {
@@ -87,7 +93,7 @@ class Main {
     
         }
 
-        static int reversePairs(int[]nums){
+        static int reversePair(int[]nums){
 	           int length = nums.length;
 	           return mergeSort(nums,0,length-1);
         }
