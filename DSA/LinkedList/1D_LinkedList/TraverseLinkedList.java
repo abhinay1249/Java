@@ -31,6 +31,23 @@ class Node{
         return head;
     }
 
+    static int lengthOfLL(int[] nums){
+
+        Node head = Node.convertArrayToLL(nums);
+
+        Node temp = head;
+        
+        int count = 0;
+
+        while(temp != null){
+            temp=temp.pointer;
+            count++;
+        }
+
+        return count;
+
+    }
+
 }
 
 class Main{
@@ -42,8 +59,12 @@ class Main{
         Node temp = head;
 
         while(temp != null){
-            System.out.print(temp.data+" ");
+            // System.out.print(temp.data+" ");
             temp=temp.pointer;
         }
+
+        int length = Node.lengthOfLL(nums);
+
+        System.out.println(length);
     }
 }
