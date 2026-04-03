@@ -90,6 +90,36 @@ class Node{
             }
             return head;
         }
+
+    // ================================ Removal Of Value Node ==============================================
+        
+        static Node removeOfValue(Node head, int target){
+
+            if(head == null){
+                return head;
+            }
+
+            while(head!= null && target == head.data){
+                head = head.pointer;
+            }
+
+            Node temp = head;
+
+            Node prev = null;
+
+            while(temp != null){
+                int value = temp.data;
+
+                if(value == target){
+                    prev.pointer = prev.pointer.pointer;
+                }else{
+                    prev = temp;
+                }
+                
+                temp = temp.pointer;
+            }
+            return head;
+        } 
     
 }   
 
@@ -103,6 +133,7 @@ class Main{
         Node head_1 = Node.convertArrayToLinkedList(nums);
         Node head_2 = Node.convertArrayToLinkedList(nums);
         Node head_3 = Node.convertArrayToLinkedList(nums);
+        Node head_4 = Node.convertArrayToLinkedList(nums);
 
         System.out.print("LinkedList --> ");
         while(head_1!=null){
@@ -141,6 +172,17 @@ class Main{
         while(atPosition != null){
             System.out.print(atPosition.data+" ");
             atPosition = atPosition.pointer;
+        }
+
+        System.out.println();
+
+        Node value = Node.removeAtPosition(head_4,262);
+ 
+        System.out.print("Removal At Position --> ");
+
+        while(value != null){
+            System.out.print(value.data+" ");
+            value = value.pointer;
         }
     }
     
