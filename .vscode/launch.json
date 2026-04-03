@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "Java_3df404fa"
+        },
+        {
+            "type": "java",
             "name": "Mappractice",
             "request": "launch",
             "mainClass": "Mappractice",
