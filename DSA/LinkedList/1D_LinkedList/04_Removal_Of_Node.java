@@ -11,7 +11,7 @@ class Node{
         this.pointer = null;
     }
 
-    // ================================ Convert Array into Linked List ==============================================
+    // ================================ Convert Array into Linked List =====================================
 
         static Node convertArrayToLinkedList(int[] nums){
 
@@ -31,7 +31,7 @@ class Node{
 
         }
 
-    // ================================ Removal Of Head ==============================================
+    // ================================ Removal Of Head Node ==============================================
 
         static Node deleteHead(Node head){
             if(head == null) return null;
@@ -41,7 +41,7 @@ class Node{
             return head;
         }
 
-    // ================================ Removal Of Tail ==============================================
+    // ================================ Removal Of Tail Node ==============================================
 
         static Node deleteTail(Node head){
             if(head == null || head.pointer == null){
@@ -58,6 +58,28 @@ class Node{
 
             return head;
         }
+
+    // ================================ Removal Of Node at Kth Position ==============================================
+
+        static Node removeAtPosition(Node head, int target){
+            Node temp = head;
+
+            int count = 0;
+
+            Node prev = null;
+
+            while(temp != null){
+                count++;
+
+                if(count == target){
+                    prev.pointer = prev.pointer.pointer;
+                }
+                prev = temp;
+                temp = temp.pointer;
+            }
+            return head;
+        }
+    
 }   
 
 
@@ -66,10 +88,23 @@ class Main{
     public static void main(String[] args) {
         int[] nums = {12,45,356,553,262,90};
 
+        Node head_0 = Node.convertArrayToLinkedList(nums);
         Node head_1 = Node.convertArrayToLinkedList(nums);
+        Node head_2 = Node.convertArrayToLinkedList(nums);
+        Node head_3 = Node.convertArrayToLinkedList(nums);
 
-        Node head = Node.deleteHead(head_1);
+        System.out.print("LinkedList --> ");
+        while(head_1!=null){
+            System.out.print(head_1.data+" ");
+            head_1 = head_1.pointer;
+        }
 
+        System.out.println();
+
+        Node head = Node.deleteHead(head_0);
+
+        System.out.print("Removal of Head --> ");
+        
         while(head!=null){
             System.out.print(head.data+" ");
             head = head.pointer;
@@ -77,11 +112,24 @@ class Main{
 
         System.out.println();
 
-        Node tail = Node.deleteTail(head_1);
+        Node tail = Node.deleteTail(head_2);
+
+        System.out.print("Removal of Tail --> ");
 
         while(tail != null){
             System.out.print(tail.data+" ");
             tail = tail.pointer;
+        }
+
+        System.out.println();
+
+        Node atPosition = Node.removeAtPosition(head_3,4);
+ 
+        System.out.print("Removal At Position --> ");
+
+        while(atPosition != null){
+            System.out.print(atPosition.data+" ");
+            atPosition = atPosition.pointer;
         }
     }
     
