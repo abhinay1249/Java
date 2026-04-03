@@ -62,6 +62,17 @@ class Node{
     // ================================ Removal Of Node at Kth Position ==============================================
 
         static Node removeAtPosition(Node head, int target){
+
+            if(head == null){
+                return head;
+            }
+
+            if(target == 1){
+                head = head.pointer;
+
+                return head;
+            }
+
             Node temp = head;
 
             int count = 0;
@@ -104,7 +115,7 @@ class Main{
         Node head = Node.deleteHead(head_0);
 
         System.out.print("Removal of Head --> ");
-        
+
         while(head!=null){
             System.out.print(head.data+" ");
             head = head.pointer;
