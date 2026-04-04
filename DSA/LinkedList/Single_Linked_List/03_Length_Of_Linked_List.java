@@ -47,25 +47,6 @@ class Node{
         return count;
 
     }
-
-    static boolean isPresent(int[] nums, int value){
-        
-        Node head = Node.convertArrayToLL(nums);
-
-        Node temp = head;
-        
-        boolean isPresent = false;
-
-        while(temp != null){
-            if(temp.data == value){
-                return true;
-            }
-            temp=temp.pointer;
-        }
-
-        return isPresent;
-    }
-
 }
 
 class Main{
@@ -84,9 +65,5 @@ class Main{
         int length = Node.lengthOfLL(nums);
 
         System.out.println(length);
-
-        boolean result = Node.isPresent(nums,134);
-
-        System.out.println(result);
     }
 }
