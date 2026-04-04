@@ -92,7 +92,7 @@ class Node{
                 return head;
             }
 
-            if(head != null && head.data == value){
+            if(head.data == value){
                 Node temp = new Node(element,head);
                 return temp;
             }
