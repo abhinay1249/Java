@@ -12,70 +12,78 @@ class Node{
         this.pointer = null;
     }
     
-    static Node convert(int[] nums){
-        int length = nums.length;
-        
-        Node head = new Node(nums[0]);
-        
-        Node mover = head;
-        
-        for(int i = 1 ; i < length ; i++){
-            Node temp = new Node(nums[i]);
-            mover.pointer = temp;
-            mover= temp;
-        }
-        
-        return head;
-    }
-    
-    static Node insertAtHead(Node head, int val){
-        Node temp = new Node(val,head);
-        return temp;
-    }
-    
-    static Node insertAtTail(Node head, int val){
-        if(head == null){
-            return new Node(val,null);    
-        }
-        
-        Node temp = head;
-        
-        while(temp.pointer != null){
-            temp = temp.pointer;
-        }
-        temp.pointer = new Node(val,null);
-        return head;
-    }
-    
-    static Node insertAtKthPos(Node head, int element, int k){
-        if(head == null){
-            if(k == 1){
-                return new Node(element,null);
+    // ================================ Convert Array into Linked List =====================================
+
+        static Node convert(int[] nums){
+            int length = nums.length;
+
+            Node head = new Node(nums[0]);
+
+            Node mover = head;
+
+            for(int i = 1 ; i < length ; i++){
+                Node temp = new Node(nums[i]);
+                mover.pointer = temp;
+                mover= temp;
             }
+
+            return head;
         }
 
-        if(k == 1){
-            Node temp = new Node(element,head);
+    // ================================ Insertion At Head =====================================
+    
+        static Node insertAtHead(Node head, int val){
+            Node temp = new Node(val,head);
             return temp;
         }
-        
-        Node temp = head;
-        
-        int count = 0;
-        
-        while(temp != null){
-            count++;
-            
-            if(count == k-1){
-                Node newNode = new Node(element);
-                newNode.pointer = temp.pointer;
-                temp.pointer = newNode;
-                break;
+    
+    // ================================ Insertion At Tail =====================================
+
+        static Node insertAtTail(Node head, int val){
+            if(head == null){
+                return new Node(val,null);    
             }
-            temp = temp.pointer;
+
+            Node temp = head;
+
+            while(temp.pointer != null){
+                temp = temp.pointer;
+            }
+            temp.pointer = new Node(val,null);
+            return head;
         }
-        return head;
-    }
+    
+    // ================================ Insertion At KthPos =====================================
+
+        static Node insertAtKthPos(Node head, int element, int k){
+            if(head == null){
+                if(k == 1){
+                    return new Node(element,null);
+                }
+            }
+        
+            if(k == 1){
+                Node temp = new Node(element,head);
+                return temp;
+            }
+            
+            Node temp = head;
+            
+            int count = 0;
+            
+            while(temp != null){
+                count++;
+                
+                if(count == k-1){
+                    Node newNode = new Node(element);
+                    newNode.pointer = temp.pointer;
+                    temp.pointer = newNode;
+                    break;
+                }
+                temp = temp.pointer;
+            }
+            return head;
+        }
     
     public static void main(String[] args) {
         int[] nums = {1,2,3,4,5,6};
