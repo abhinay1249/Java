@@ -61,19 +61,19 @@ class Node{
                     return new Node(element,null);
                 }
             }
-        
+
             if(k == 1){
                 Node temp = new Node(element,head);
                 return temp;
             }
-            
+
             Node temp = head;
-            
+
             int count = 0;
-            
+
             while(temp != null){
                 count++;
-                
+
                 if(count == k-1){
                     Node newNode = new Node(element);
                     newNode.pointer = temp.pointer;
@@ -85,11 +85,40 @@ class Node{
             return head;
         }
     
+    // ================================ Insertion At Before Value =====================================
+
+        static Node insertAtBeforeValue(Node head, int element, int value){
+            if(head == null){
+                return head;
+            }
+
+            if(head != null && head.data == value){
+                Node temp = new Node(element,head);
+                return temp;
+            }
+            Node temp = head;
+            Node prev = null;
+            Node newNode = new Node(element);
+
+            while(temp != null){
+                if(temp.data == value){
+                    newNode.pointer = prev.pointer;
+                    prev.pointer = newNode;
+                    break;
+                }else{
+                    prev = temp;
+                }
+                temp = temp.pointer;
+            }
+            return head;
+        }   
     public static void main(String[] args) {
         int[] nums = {1,2,3,4,5,6};
+        // int[] nums_1 = {1,1,1,1,1,1};
         Node head_1 = convert(nums);
         Node head_2 = convert(nums);
         Node head_3 = convert(nums);
+        // Node head_4 = convert(nums_1);
         Node head_4 = convert(nums);
         
         System.out.print("Linked List --> ");
@@ -131,6 +160,17 @@ class Node{
         while(insertAtKthPos != null){
             System.out.print(insertAtKthPos.data+" ");
             insertAtKthPos = insertAtKthPos.pointer;
+        }
+
+        System.out.println();
+        
+        System.out.print("Insertion At Before Value --> ");
+        
+        Node insertAtBeforeValue = insertAtBeforeValue(head_4,100,4);
+        
+        while(insertAtBeforeValue != null){
+            System.out.print(insertAtBeforeValue.data+" ");
+            insertAtBeforeValue = insertAtBeforeValue.pointer;
         }
     
     }
