@@ -36,7 +36,7 @@ class Node{
             return head;
         }
 
-    // ================================ Removal Of Head Node ==============================================
+    // ================================ Print Doubly Linked List ==============================================
     
         private static void print(Node head){
 
@@ -48,7 +48,7 @@ class Node{
             }
         }
 
-    // ================================ Removal Of Tail Node ==============================================
+    // ================================ Removal Of Head Node ==============================================
 
         private static Node deletionAtHead(Node head){
 
@@ -67,27 +67,28 @@ class Node{
             return head;
         }
     
-    private static Node deletionAtTail(Node head){
-        
-        if(head == null) return head;
-        
-        if(head.prevptr == null && head.nextptr == null){
-            return null;   
-        }
-        
-        Node temp = head;
-        
-        while(temp != null){
-            Node ahead = temp.nextptr;
-            if(ahead.nextptr == null){
-                ahead.prevptr = null;
-                temp.nextptr = null;
-                break;
+    // ================================ Removal Of Tail Node ==============================================
+    
+        private static Node deletionAtTail(Node head){
+
+            if(head == null) return head;
+
+            if(head.prevptr == null && head.nextptr == null){
+                return null;   
             }
-            temp = temp.nextptr;
+
+            Node tail = head;
+
+            while(tail.nextptr != null){
+                tail = tail.nextptr;
+            }
+
+            Node prev = tail.prevptr;
+            prev.nextptr = null;
+            tail.prevptr = null;
+
+            return head;
         }
-        return head;
-    }
     
     
     public static void main(String[] args){
