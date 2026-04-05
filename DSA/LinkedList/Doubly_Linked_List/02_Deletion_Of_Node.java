@@ -93,7 +93,35 @@ class Node{
     // ================================ Removal Of Kth Position Node ==============================================
 
         private static Node deletionAtKthPos(Node head, int k){
-            
+
+            Node temp = head;
+
+            int count = 0;
+
+            while(temp != null){
+                count++;
+                if(count == k){
+                    break;   
+                }
+                temp = temp.nextptr;
+            }
+
+            Node prev = temp.prevptr;
+            Node front = temp.nextptr;
+
+            if(prev == null && front == null){
+                return null;
+            }else if(prev == null){
+                return deletionAtHead(temp);
+            }else if(front == null){
+                return deletionAtTail(temp); 
+            }else{
+                prev.nextptr = temp.nextptr;
+                front.prevptr = temp.prevptr;
+                temp.nextptr = null;
+                temp.prevptr = null;
+            }
+            return head;
         }
     
     
@@ -104,6 +132,7 @@ class Node{
         Node head = convert(nums);
         Node head_1 = convert(nums);
         Node head_2 = convert(nums);
+        Node head_3 = convert(nums);
         
         System.out.print("Doubly Linked List --> ");
         
@@ -126,5 +155,13 @@ class Node{
         Node deletionAtTail = deletionAtTail(head_2);
         
         print(deletionAtTail);
+
+        System.out.println();
+        
+        System.out.print("Deletion At Kth Node --> ");
+        
+        Node deletionAtKthPos = deletionAtKthPos(head_3,1);
+        
+        print(deletionAtKthPos);
     }
 }
