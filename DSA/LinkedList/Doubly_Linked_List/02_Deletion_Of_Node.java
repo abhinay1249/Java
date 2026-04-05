@@ -1,3 +1,5 @@
+package DSA.LinkedList.Doubly_Linked_List;
+
 class Node{
     int data;
     Node nextptr;
@@ -49,19 +51,19 @@ class Node{
     // ================================ Removal Of Tail Node ==============================================
 
         private static Node deletionAtHead(Node head){
-            
+
             if(head == null) return head;
-            
+
             if(head.prevptr == null && head.nextptr == null){
                 return null;   
             }
-            
+
             Node prev = head;
-            
+
             head = head.nextptr;
             head.prevptr = null;
             prev.nextptr = null;
-            
+
             return head;
         }
     
