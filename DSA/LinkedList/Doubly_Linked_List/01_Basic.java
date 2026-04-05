@@ -19,7 +19,7 @@ class Node{
         
         int length = nums.length;
         
-        Node head = new Node(nums[0],null,null);
+        Node head = new Node(nums[0]);
         
         Node prev = head;
         
