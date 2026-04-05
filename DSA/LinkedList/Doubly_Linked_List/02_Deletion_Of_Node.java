@@ -59,17 +59,40 @@ class Node{
         return head;
     }
     
+    private static Node deletionAtTail(Node head){
+        
+        if(head == null) return head;
+        
+        if(head.prevptr == null && head.nextptr == null){
+            return null;   
+        }
+        
+        Node temp = head;
+        
+        while(temp != null){
+            Node ahead = temp.nextptr;
+            if(ahead.nextptr == null){
+                ahead.prevptr = null;
+                temp.nextptr = null;
+                break;
+            }
+            temp = temp.nextptr;
+        }
+        return head;
+    }
+    
     
     public static void main(String[] args){
         int[] nums = {1,2,3,4,5,6,7,8};
+        // int[] nums = {1};
         
         Node head = convert(nums);
         Node head_1 = convert(nums);
         Node head_2 = convert(nums);
         
-        Node dll = head;
-        
         System.out.print("Doubly Linked List --> ");
+        
+        Node dll = head;
         
         print(dll);
         
@@ -80,6 +103,13 @@ class Node{
         Node deletionAtHead = deletionAtHead(head_1);
         
         print(deletionAtHead);
-
+        
+        System.out.println();
+        
+        System.out.print("Deletion Of Tail Node --> ");
+        
+        Node deletionAtTail = deletionAtTail(head_2);
+        
+        print(deletionAtTail);
     }
 }
