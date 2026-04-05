@@ -15,49 +15,55 @@ class Node{
         this.prevptr = null;
     }
     
-    private static Node convert(int[] nums){
-        
-        int length = nums.length;
-        
-        Node head = new Node(nums[0],null,null);
-        
-        Node prev = head;
-        
-        for(int i = 1 ; i < length ; i++){
-            Node temp = new Node(nums[i],null,prev);
-            prev.nextptr = temp;
-            prev = temp;
+    // ================================ Convert Array into Doubly Linked List =====================================
+
+        private static Node convert(int[] nums){
+
+            int length = nums.length;
+
+            Node head = new Node(nums[0],null,null);
+
+            Node prev = head;
+
+            for(int i = 1 ; i < length ; i++){
+                Node temp = new Node(nums[i],null,prev);
+                prev.nextptr = temp;
+                prev = temp;
+            }
+
+            return head;
         }
-        
-        return head;
-    }
+
+    // ================================ Removal Of Head Node ==============================================
     
-    private static void print(Node head){
-        
-        Node dll = head;
-        
-        while(dll != null){
-            System.out.print(dll.data + " ");
-            dll = dll.nextptr;
+        private static void print(Node head){
+
+            Node dll = head;
+
+            while(dll != null){
+                System.out.print(dll.data + " ");
+                dll = dll.nextptr;
+            }
         }
-    }
-    
-    private static Node deletionAtHead(Node head){
-        
-        if(head == null) return head;
-        
-        if(head.prevptr == null && head.nextptr == null){
-            return null;   
+
+    // ================================ Removal Of Tail Node ==============================================
+
+        private static Node deletionAtHead(Node head){
+            
+            if(head == null) return head;
+            
+            if(head.prevptr == null && head.nextptr == null){
+                return null;   
+            }
+            
+            Node prev = head;
+            
+            head = head.nextptr;
+            head.prevptr = null;
+            prev.nextptr = null;
+            
+            return head;
         }
-        
-        Node prev = head;
-        
-        head = head.nextptr;
-        head.prevptr = null;
-        prev.nextptr = null;
-        
-        return head;
-    }
     
     private static Node deletionAtTail(Node head){
         
