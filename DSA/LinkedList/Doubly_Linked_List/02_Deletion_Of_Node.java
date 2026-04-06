@@ -104,15 +104,17 @@ class Node{
                 temp = temp.nextptr;
             }
 
+            if(temp == null) return head;
+
             Node prev = temp.prevptr;
             Node front = temp.nextptr;
 
             if(prev == null && front == null){
                 return null;
             }else if(prev == null){
-                return deletionAtHead(temp);
+                return deletionAtHead(head);
             }else if(front == null){
-                return deletionAtTail(temp); 
+                return deletionAtTail(head); 
             }else{
                 prev.nextptr = temp.nextptr;
                 front.prevptr = temp.prevptr;
@@ -124,8 +126,34 @@ class Node{
     
     // ================================ Removal Of Value Node ==============================================
 
-        private static Node deletionOfValue(Node k, int elementNode){
+        private static Node deletionOfValue(Node head, int elementNode){
             
+            if(head == null) return null;
+            
+            Node temp = head;
+            
+            while(temp != null){
+                if(temp.data == elementNode){
+                    if(temp.prevptr == null){
+                        return deletionAtHead(head);
+                    }
+                    if(temp.nextptr == null){
+                    return deletionAtTail(head);
+                }
+                    Node prev = temp.prevptr;
+                    Node front = temp.nextptr;
+            
+                    front.prevptr = prev;
+                    prev.nextptr = front;
+                    
+                    temp.nextptr = null;
+                    temp.prevptr=null;
+                    
+                    break;   
+                }
+                temp = temp.nextptr;
+            }
+            return head;
         }
 
 
@@ -137,6 +165,7 @@ class Node{
         Node head_1 = convert(nums);
         Node head_2 = convert(nums);
         Node head_3 = convert(nums);
+        Node head_4 = convert(nums);
         
         System.out.print("Doubly Linked List --> ");
         
@@ -167,5 +196,13 @@ class Node{
         Node deletionAtKthPos = deletionAtKthPos(head_3,1);
         
         print(deletionAtKthPos);
+
+        System.out.println();
+        
+        System.out.print("Deletion Of Value Node --> ");
+        
+        Node deletionOfValue = deletionOfValue(head_4,1);
+        
+        print(deletionOfValue);
     }
 }
