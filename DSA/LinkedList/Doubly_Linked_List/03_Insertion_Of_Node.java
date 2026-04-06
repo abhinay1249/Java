@@ -57,6 +57,24 @@ class Node{
             return newHead;
         }
 
+    // ================================ Insertion Of Node Before Tail ==============================================
+        
+        private static Node insertionAtBeforeTail(Node head, int val){
+            Node temp = head;
+            Node newNode = new Node(val,null,null);
+            while(temp != null){
+                if(temp.nextptr == null){
+                    Node prev = temp.prevptr;
+                    prev.nextptr = newNode;
+                    newNode.prevptr = prev;
+                    newNode.nextptr = temp;
+                    temp.prevptr = newNode;
+                }
+                temp = temp.nextptr;
+            }
+            return head;
+        }
+
     public static void main(String[] args){
         int[] nums = {1,2,3,4,5,6,7,8};
         // int[] nums = {1};
@@ -80,6 +98,16 @@ class Node{
         Node insertionAtBeforeHead = insertionAtBeforeHead(head_1,10);
         
         print(insertionAtBeforeHead);
+        
+        System.out.println();
+        
+        System.out.print("Insertion Of Node Before Tail --> ");
+        
+        Node insertionAtBeforeTail = insertionAtBeforeTail(head_2,100);
+        
+        print(insertionAtBeforeTail);
+
+        System.out.println();
         
 
     }
