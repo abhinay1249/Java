@@ -109,6 +109,18 @@ class Node{
 
         System.out.println();
         
-
+        // System.out.print("Deletion At Kth Node --> ");
+        
+        // Node deletionAtKthPos = deletionAtKthPos(head_3,10);
+        
+        // print(deletionAtKthPos);
+        
+        // System.out.println();
+        
+        // System.out.print("Deletion Of Value Node --> ");
+        
+        // Node deletionOfValue = deletionOfValue(head_4,1);
+        
+        // print(deletionOfValue);
     }
 }
