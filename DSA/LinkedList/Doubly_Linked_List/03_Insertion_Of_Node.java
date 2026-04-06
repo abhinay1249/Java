@@ -100,6 +100,29 @@ class Node{
 
             return head;
         }
+
+    // ================================ Insertion Of Node At Value ========================================== 
+
+        private static Node insertionAtValue(Node head, int val,int element){
+        
+            if(val == head.data){
+                return insertionAtBeforeHead(head,element);
+            }
+            Node temp = head;
+
+            while(temp != null){
+                if(temp.data == val){
+                    Node prev = temp.prevptr;
+                    Node newNode = new Node(element,temp,prev);
+                    prev.nextptr = newNode;
+                    temp.prevptr = newNode;
+                    break;
+                }
+                temp = temp.nextptr;
+            }
+
+            return head;
+        }
     public static void main(String[] args){
         int[] nums = {1,2,3,4,5,6,7,8};
         // int[] nums = {1};
