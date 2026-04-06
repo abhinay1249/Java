@@ -75,6 +75,31 @@ class Node{
             return head;
         }
 
+    // ================================ Insertion Of Node At Kth Position ==========================================
+        
+        private static Node insertionAtKthPos(Node head, int val, int pos){
+
+            if(pos == 1){
+                return insertionAtBeforeHead(head,val);
+            }
+
+            Node temp = head;
+            int count = 0;
+
+            while(temp != null){
+                count++;
+                if(count == pos){
+                    Node prev = temp.prevptr;
+                    Node newNode = new Node(val,temp,prev);
+                    prev.nextptr = newNode;
+                    temp.prevptr = newNode;
+                    break;
+                }
+                temp = temp.nextptr;
+            }
+
+            return head;
+        }
     public static void main(String[] args){
         int[] nums = {1,2,3,4,5,6,7,8};
         // int[] nums = {1};
@@ -109,13 +134,13 @@ class Node{
 
         System.out.println();
         
-        // System.out.print("Deletion At Kth Node --> ");
+        System.out.print("Deletion At Kth Node --> ");
         
-        // Node deletionAtKthPos = deletionAtKthPos(head_3,10);
+        Node insertionAtKthPos = insertionAtKthPos(head_3,49,3);
         
-        // print(deletionAtKthPos);
+        print(insertionAtKthPos);
         
-        // System.out.println();
+        System.out.println();
         
         // System.out.print("Deletion Of Value Node --> ");
         
