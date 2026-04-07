@@ -1,6 +1,15 @@
 // Problem Statement: Given a doubly linked list of size ‘N’ consisting of positive integers, 
 // your task is to reverse it and return the head of the modified doubly linked list.
 
+// Examples
+
+// Input : DLL - 1 <-> 2 <-> 3 <-> 4
+
+// Output : DLL - 4 <-> 3 <-> 2 <-> 1
+
+// Explanation : The doubly linked list is reversed and its last node is returned at the new head pointer.
+
+
 import java.util.*;
 
 class Node{
