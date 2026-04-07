@@ -1,3 +1,4 @@
+package Easy;
 class Node{
 
     int data;
