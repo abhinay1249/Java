@@ -1,3 +1,6 @@
+// Problem Statement: Given a doubly linked list of size ‘N’ consisting of positive integers, 
+// your task is to reverse it and return the head of the modified doubly linked list.
+
 import java.util.*;
 
 class Node{
@@ -38,25 +41,27 @@ class Node{
         }
     }
 
-    private static Node reverseADLL(Node head){
-        Node temp = head;
-        
-        Stack<Integer> st = new Stack<>();
-        
-        while(temp != null){
-            st.add(temp.data);
-            temp = temp.nextptr;
+    // =========================== Brute Force Approach ==============================
+
+        private static Node reverseADLL(Node head){
+            Node temp = head;
+            
+            Stack<Integer> st = new Stack<>();
+            
+            while(temp != null){
+                st.add(temp.data);                              
+                temp = temp.nextptr;
+            }
+            
+            temp = head;
+            
+            while(temp != null){
+                temp.data = st.peek();
+                st.pop();
+                temp = temp.nextptr;
+            }
+            return head;
         }
-        
-        temp = head;
-        
-        while(temp != null){
-            temp.data = st.peek();
-            st.pop();
-            temp = temp.nextptr;
-        }
-        return head;
-    }
     
     public static void main(String[] args) {
         int[] nums = {1,2,3,4,5,6,7,8};
