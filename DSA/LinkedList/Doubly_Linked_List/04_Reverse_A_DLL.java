@@ -71,6 +71,24 @@ class Node{
             }
             return head;
         }
+
+    // =========================== Optimal Approach ==============================
+
+        private static Node reverseADLL_1(Node head){
+            Node current = head;
+
+            Node last = null;
+
+            while(current != null){
+                last = current.prevptr;
+                current.prevptr = current.nextptr;                      // T.C = O(N), S.C = O(1)
+                current.nextptr = last;
+
+                current = current.prevptr;
+            }
+
+            return last.prevptr;
+        }
     
     public static void main(String[] args) {
         int[] nums = {1,2,3,4,5,6,7,8};
@@ -95,5 +113,11 @@ class Node{
         print(reverseADLL);
         
         System.out.println();
+        
+        System.out.print("Reverse Of DLL --> ");
+        
+        Node reverseADLL_1 = reverseADLL_1(head_2);
+        
+        print(reverseADLL_1);
     }
 }
