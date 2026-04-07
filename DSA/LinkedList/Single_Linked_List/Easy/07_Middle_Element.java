@@ -11,3 +11,10 @@
 // Input: LL: 1  2  3  4  5  6
 // Output: 4
 // Explanation : In this example, the linked list has an even number of nodes hence we return the second middle node which is 4.
+
+
+class Node{
+    public static void main(String[] args) {
+        int[] nums = {1,2,3,4,5,6};
+    }
+}
