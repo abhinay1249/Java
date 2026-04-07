@@ -59,7 +59,7 @@ class Node{
             
             while(temp != null){
                 st.add(temp.data);                              
-                temp = temp.nextptr;
+                temp = temp.nextptr;                            // T.C = O(2N), S.C = O(N)
             }
             
             temp = head;
