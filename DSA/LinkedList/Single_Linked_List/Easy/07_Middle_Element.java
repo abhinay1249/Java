@@ -44,6 +44,11 @@ class Node{
     // ================================ Brute Force Approach =======================================
 
         private static Node middleElement(Node head){
+
+            if(head == null || head.nextptr == null){
+                return head;
+            }
+
             Node current = head;
 
             int counter = 0;
@@ -55,14 +60,14 @@ class Node{
 
             current = head;
             Node prev = null;
-            Node result = null;
+            Node result = null; 
 
             if(counter%2 == 1){
                 int target =(int) Math.ceil(counter/2.0);
                 int pointer = 0;
 
                 while(current != null){
-                    pointer++;
+                    pointer++;                                              // T.C = O(2N), S.C = O(1)
                     if(pointer == target){
                         result = prev.nextptr;
                         break;
