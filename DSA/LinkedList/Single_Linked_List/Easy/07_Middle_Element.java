@@ -67,7 +67,7 @@ class Node{
                 int pointer = 0;
 
                 while(current != null){
-                    pointer++;                                              // T.C = O(2N), S.C = O(1)
+                    pointer++;                                              // T.C = O(N + N/2), S.C = O(1)
                     if(pointer == target){
                         result = prev.nextptr;
                         break;
