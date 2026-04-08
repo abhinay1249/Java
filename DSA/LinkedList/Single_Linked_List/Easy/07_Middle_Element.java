@@ -27,61 +27,65 @@ class Node{
         this.nextptr = null;
     }
 
-    private static Node convert(int[] nums){
-        int length = nums.length;
-        Node head = new Node(nums[0]);
-        Node mover = head;
-        for(int i = 1 ; i < length ; i++){
-            Node temp = new Node(nums[i]);
-            mover.nextptr = temp;
-            mover= temp;
+    // ================================ Convert Array into Linked List ===========================
+
+        private static Node convert(int[] nums){
+            int length = nums.length;
+            Node head = new Node(nums[0]);
+            Node mover = head;
+            for(int i = 1 ; i < length ; i++){
+                Node temp = new Node(nums[i]);
+                mover.nextptr = temp;
+                mover= temp;
+            }
+            return head;
         }
-        return head;
-    }
     
-    
-    private static Node middleElement(Node head){
-        Node current = head;
-        
-        int counter = 0;
-        
-        while(current != null){
-            counter++;
-            current = current.nextptr;
-        }
-        
-        current = head;
-        Node prev = null;
-        Node result = null;
-        
-        if(counter%2 == 1){
-            int target =(int) Math.ceil(counter/2.0);
-            int pointer = 0;
-            
+    // ================================ Brute Force Approach =======================================
+
+        private static Node middleElement(Node head){
+            Node current = head;
+
+            int counter = 0;
+
             while(current != null){
-                pointer++;
-                if(pointer == target){
-                    result = prev.nextptr;
-                    break;
-                }
-                prev = current;
+                counter++;
                 current = current.nextptr;
             }
-        }else{
-            int target = counter/2;
-            int pointer = 0;
-            
-            while(current.nextptr != null){
-                pointer++;
-                if(pointer == target){
-                    result = current.nextptr;
-                    break;
+
+            current = head;
+            Node prev = null;
+            Node result = null;
+
+            if(counter%2 == 1){
+                int target =(int) Math.ceil(counter/2.0);
+                int pointer = 0;
+
+                while(current != null){
+                    pointer++;
+                    if(pointer == target){
+                        result = prev.nextptr;
+                        break;
+                    }
+                    prev = current;
+                    current = current.nextptr;
                 }
-                current = current.nextptr;
+
+            }else{
+                int target = counter/2;
+                int pointer = 0;
+
+                while(current.nextptr != null){
+                    pointer++;
+                    if(pointer == target){
+                        result = current.nextptr;
+                        break;
+                    }
+                    current = current.nextptr;
+                }
             }
+            return result;
         }
-        return result;
-    }
     
     
     public static void main(String[] args) {
