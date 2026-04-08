@@ -47,7 +47,7 @@ class Node{
         
         while(current != null){
             counter++;
-             current = current.nextptr;
+            current = current.nextptr;
         }
         
         current = head;
