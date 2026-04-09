@@ -92,6 +92,24 @@ class Node{
             return result;
         }
     
+    // ================================ Optimal Approach =======================================
+
+        private static Node middleElement_1(Node head){
+
+            if(head == null || head.nextptr == null){
+                return head;
+            }
+
+            Node slowPtr = head;
+            Node fastPtr = head;
+
+            while(fastPtr != null && fastPtr.nextptr != null && slowPtr != null){
+                slowPtr = slowPtr.nextptr;
+                fastPtr = fastPtr.nextptr.nextptr;
+            }
+
+            return slowPtr;
+        }
     
     public static void main(String[] args) {
         int[] nums = {1,2,3,4,5};
@@ -99,6 +117,8 @@ class Node{
         
         Node head_1 = convert(nums);
         Node head_2 = convert(nums_1);
+        Node head_3 = convert(nums_1);
+        Node head_4 = convert(nums_1);
     
         
         System.out.print("Result --> ");
@@ -110,5 +130,17 @@ class Node{
         System.out.print("Result --> ");
         Node result_1 = middleElement(head_2);
         System.out.print(result_1.data);
+
+        System.out.println();
+
+        System.out.print("Result --> ");
+        Node result_2 = middleElement_1(head_3);
+        System.out.print(result_2.data);
+        
+        System.out.println();
+        
+        System.out.print("Result --> ");
+        Node result_3 = middleElement_1(head_4);
+        System.out.print(result_3.data);
     }
 }
