@@ -117,7 +117,7 @@ class Node{
         
         Node head_1 = convert(nums);
         Node head_2 = convert(nums_1);
-        Node head_3 = convert(nums_1);
+        Node head_3 = convert(nums);
         Node head_4 = convert(nums_1);
     
         
