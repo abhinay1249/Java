@@ -1,3 +1,6 @@
+// Problem Statement: Given the head of a singly linked list, write a program to reverse the linked list
+// and return the head pointer to the reversed list.
+
 class Node{
     int data;
     Node nextptr;
@@ -30,5 +33,7 @@ class Node{
         int[] nums = {1,2,3,4,5};
         
         Node head_1 = convert(nums);
+
+
     }
 }
