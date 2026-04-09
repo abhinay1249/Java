@@ -100,7 +100,7 @@ class Node{
                 return head;
             }
 
-            Node slowPtr = head;
+            Node slowPtr = head;                                         // T.C = O(N/2), S.C = O(1)
             Node fastPtr = head;
 
             while(fastPtr != null && fastPtr.nextptr != null && slowPtr != null){
