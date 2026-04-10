@@ -48,7 +48,7 @@ class Node{
             }
         }
 
-    // ================================ Brute Force Approach ========================================
+    // ================================ Brute Force Approach [Iterative] ========================================
 
         private static Node reverseLL(Node head) {
             if(head == null || head.nextptr == null){
@@ -74,7 +74,7 @@ class Node{
             return head;
         }
 
-    // ================================ Optimal Approach ========================================
+    // ================================ Optimal Approach [Iterative] ========================================
 
         private static Node reverseLL_1(Node head){
             Node temp = head;
