@@ -36,9 +36,21 @@ class Node{
             return head;
         }
 
+    // ================================ Print Singly Linked List ==============================================
+    
+        private static void print(Node head){
+
+            Node dll = head;
+
+            while(dll != null){
+                System.out.print(dll.data + " ");
+                dll = dll.nextptr;
+            }
+        }
+
     // ================================ Brute Force Approach ========================================
 
-        public Node reverseList(Node head) {
+        private static Node reverseLL(Node head) {
             if(head == null || head.nextptr == null){
                 return head;
             }
@@ -62,10 +74,43 @@ class Node{
             return head;
         }
 
+    // ================================ Optimal Approach ========================================
+
+        private static Node reverseLL_1(Node head){
+            Node temp = head;
+            
+            Node prev = null;
+            
+            Node front = null;
+            
+            while(temp != null){
+                front = temp.nextptr;
+                temp.nextptr = prev;
+                prev = temp;
+                temp = front;
+            }
+
+            return prev;
+        }
+
     public static void main(String[] args) {
         int[] nums = {1,2,3,4,5};
-        
+
+
         Node head_1 = convert(nums);
+        Node head_2 = convert(nums);
+        
+        Node result = reverseLL(head_1);
+        
+        print(result);
+        
+        System.out.println();
+
+        Node result_1 = reverseLL_1(head_2);
+        
+        print(result_1);
+        
+        System.out.println();
 
 
     }
