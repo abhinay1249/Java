@@ -6,6 +6,7 @@
 // Explanation: After reversing the linked list, 
 // the new head will point to the tail of the old linked list.
 
+import java.util.*;
 
 class Node{
     int data;
@@ -32,6 +33,32 @@ class Node{
                 mover.nextptr = temp;
                 mover= temp;
             }
+            return head;
+        }
+
+    // ================================ Brute Force Approach ========================================
+
+        public Node reverseList(Node head) {
+            if(head == null || head.nextptr == null){
+                return head;
+            }
+
+            Node temp = head;
+            Stack<Integer> st = new Stack<Integer>();
+
+            while(temp != null){
+                st.add(temp.data);
+                temp = temp.nextptr;
+            }
+
+            temp = head;
+
+            while(temp != null){
+                temp.data = st.peek();
+                st.pop();
+                temp = temp.nextptr;
+            }
+
             return head;
         }
 
