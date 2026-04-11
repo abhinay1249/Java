@@ -54,7 +54,7 @@ class Node{
                 return head;
             }
 
-            Node newHead = reverseLL(head.nextptr);                     // T.C = O(N), S.C = O(1)
+            Node newHead = reverseLL(head.nextptr);                     // T.C = O(N), S.C = O(N)
             Node front = head.nextptr;
             front.nextptr = head;
             head.nextptr = null;
