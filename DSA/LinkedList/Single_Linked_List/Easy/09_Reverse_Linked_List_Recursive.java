@@ -35,7 +35,7 @@ class Node{
             return head;
         }
 
-    // ================================ Print Singly Linked List ==============================================
+    // ================================ Print Singly Linked List =================================
     
         private static void print(Node head){
 
