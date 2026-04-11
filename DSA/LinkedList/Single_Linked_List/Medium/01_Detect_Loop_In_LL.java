@@ -27,29 +27,33 @@ class Node{
         this.data = data;
         this.next = null;
     }
-    
-    static Node convert(int[] nums){
-        int length = nums.length;
-        
-        Node head = new Node(nums[0]);
-        
-        Node mover = head;
-        
-        for(int index = 1 ; index < length ; index++){
-            Node temp = new Node(nums[index]);
-            mover.next = temp;
-            mover = temp;
+
+    // ================================ Convert Array into Linked List =====================================
+
+        static Node convert(int[] nums){
+            int length = nums.length;
+
+            Node head = new Node(nums[0]);
+
+            Node mover = head;
+
+            for(int index = 1 ; index < length ; index++){
+                Node temp = new Node(nums[index]);
+                mover.next = temp;
+                mover = temp;
+            }
+
+            return head;
         }
-        
-        return head;
-    }
-    
+
+    // ================================ Brute Force Approach =====================================
+
         static boolean detectLoop(Node head){
             Node temp = head;
             boolean flag = false;
-            
+
             Map<Node,Integer> hm = new HashMap<>();
-            
+
             while(temp != null){
                 if(hm.containsKey(temp)){
                     flag = true;
@@ -58,6 +62,25 @@ class Node{
                     hm.put(temp,hm.getOrDefault(temp,0)+1);
                 }
                 temp = temp.next;
+            }
+            return flag;
+        }
+
+    // ================================ Optimal Approach =====================================
+
+        static boolean detectLoop_1(Node head){
+
+            boolean flag = false;
+            Node slow = head;
+            Node fast = head;
+
+            while(fast != null && fast.next != null){
+                slow = slow.next;
+                fast = fast.next.next;
+                if(slow == fast){
+                    flag = true;
+                    break;
+                }
             }
             return flag;
         }
@@ -82,6 +105,27 @@ class Node{
         temp.next = thirdNode;
         
         boolean res = detectLoop(head);
-        System.out.println(res);
+        System.out.print(res);
+        
+        System.out.println();
+        
+        Node head_1 = convert(nums);
+        
+        Node temp_1 = head_1;
+        Node thirdNode_1 = null;
+        int count_1 = 1;
+        
+        while(temp_1.next != null){
+            if(count_1==3){
+                thirdNode_1 = temp_1;
+            }
+            temp_1 = temp_1.next;
+            count_1++;
+        }
+        
+        temp_1.next = thirdNode_1;
+        
+        boolean res_1 = detectLoop_1(head_1);
+        System.out.println(res_1);
     }
 }
