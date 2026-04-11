@@ -48,70 +48,29 @@ class Node{
             }
         }
 
-    // ================================ Brute Force Approach [Iterative] ========================================
+    // ================================ Recursive Approach ========================================
 
         private static Node reverseLL(Node head) {
             if(head == null || head.nextptr == null){
                 return head;
             }
 
-            Node temp = head;
-            Stack<Integer> st = new Stack<Integer>();
+            Node newHead = reverseLL(head.nextptr);
+            Node front = head.nextptr;
+            front.nextptr = head;
+            head.nextptr = null;
 
-            while(temp != null){
-                st.add(temp.data);
-                temp = temp.nextptr;
-            }                                                               // T.C = O(2N), S.C = O(N) 
-
-            temp = head;
-
-            while(temp != null){
-                temp.data = st.peek();
-                st.pop();
-                temp = temp.nextptr;
-            }
-
-            return head;
-        }
-
-    // ================================ Optimal Approach [Iterative] ========================================
-
-        private static Node reverseLL_1(Node head){
-            Node temp = head;
-            
-            Node prev = null;
-            
-            Node front = null;
-            
-            while(temp != null){
-                front = temp.nextptr;                               // T.C = O(N), S.C = O(1)
-                temp.nextptr = prev;
-                prev = temp;
-                temp = front;
-            }
-
-            return prev;
+            return newHead;
         }
 
     public static void main(String[] args) {
         int[] nums = {1,2,3,4,5};
 
-
-        Node head_1 = convert(nums);
-        Node head_2 = convert(nums);
+        Node head = convert(nums);
         
-        Node result = reverseLL(head_1);
+        Node result = reverseLL(head);
         
         print(result);
-        
-        System.out.println();
-
-        Node result_1 = reverseLL_1(head_2);
-        
-        print(result_1);
-        
-        System.out.println();
-
 
     }
 }
