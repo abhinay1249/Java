@@ -55,7 +55,7 @@ class Node{
             Map<Node,Integer> hm = new HashMap<>();
 
             while(temp != null){
-                if(hm.containsKey(temp)){
+                if(hm.containsKey(temp)){                               // T.C= O(N), S.C = O(N)
                     flag = true;
                     break;
                 }else{
@@ -77,7 +77,7 @@ class Node{
             while(fast != null && fast.next != null){
                 slow = slow.next;
                 fast = fast.next.next;
-                if(slow == fast){
+                if(slow == fast){                                      // T.C= O(N), S.C = O(1)
                     flag = true;
                     break;
                 }
