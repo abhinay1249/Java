@@ -6,7 +6,6 @@
 // Explanation: After reversing the linked list, 
 // the new head will point to the tail of the old linked list.
 
-import java.util.*;
 
 class Node{
     int data;
@@ -55,7 +54,7 @@ class Node{
                 return head;
             }
 
-            Node newHead = reverseLL(head.nextptr);
+            Node newHead = reverseLL(head.nextptr);                     // T.C = O(N), S.C = O(1)
             Node front = head.nextptr;
             front.nextptr = head;
             head.nextptr = null;
