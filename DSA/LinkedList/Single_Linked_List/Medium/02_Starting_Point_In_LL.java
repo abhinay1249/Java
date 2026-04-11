@@ -34,6 +34,8 @@ class Node{
 
             return head;
         }
+
+        
     
     // ================================ Brute Force Approach ===================================
 
@@ -52,6 +54,37 @@ class Node{
                 }
                 temp = temp.next;
             }
+            return startPoint;
+        }
+
+    // ================================ Optimal Approach ===================================
+
+        static Node detectCycleStart_1(Node head){
+
+            if(head == null){
+                return head;
+            }
+
+            Node slow = head;
+            Node fast = head;
+
+             Node startPoint = null;
+
+            while(fast != null && fast.next != null){
+                slow = slow.next;
+                fast = fast.next.next;                              // T.C = O(N), S.C = O(1)
+
+                if(slow == fast){
+                    slow = head;
+                    while(slow != fast){
+                        slow = slow.next;
+                        fast = fast.next;
+                    }
+                    startPoint = slow;
+                    break;
+                }
+            }
+
             return startPoint;
         }
     
@@ -78,5 +111,24 @@ class Node{
         System.out.print(res.data);
         
         System.out.println();
+        
+        Node head_1 = convert(nums);
+        
+        Node temp_1 = head_1;
+        Node thirdNode_1 = null;
+        int count_1 = 1;
+        
+        while(temp_1.next != null){
+            if(count_1==3){
+                thirdNode_1 = temp_1;
+            }
+            temp_1 = temp_1.next;
+            count_1++;
+        }
+        
+        temp_1.next = thirdNode_1;
+        
+        Node res_1 = detectCycleStart_1(head_1);
+        System.out.print(res_1.data);
     }
 }
