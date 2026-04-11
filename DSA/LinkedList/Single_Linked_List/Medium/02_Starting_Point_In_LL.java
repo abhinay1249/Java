@@ -17,39 +17,43 @@ class Node{
         this.next = null;
     }
     
-    static Node convert(int[] nums){
-        int length = nums.length;
-        
-        Node head = new Node(nums[0]);
-        
-        Node mover = head;
-        
-        for(int index = 1 ; index < length ; index++){
-            Node temp = new Node(nums[index]);
-            mover.next = temp;
-            mover = temp;
-        }
-        
-        return head;
-    }
-    
-    static Node detectCycleStart(Node head){
-        Node temp = head;
-        Node startPoint = null;
-        
-        Set<Node> hs = new HashSet<>();
-        
-        while(temp != null){
-            if(hs.contains(temp)){
-                startPoint = temp;
-                break;
-            }else{
-                hs.add(temp);
+    // ============================== Convert Array into Linked List ==========================
+
+        static Node convert(int[] nums){
+            int length = nums.length;
+
+            Node head = new Node(nums[0]);
+
+            Node mover = head;
+
+            for(int index = 1 ; index < length ; index++){
+                Node temp = new Node(nums[index]);
+                mover.next = temp;
+                mover = temp;
             }
-            temp = temp.next;
+
+            return head;
         }
-        return startPoint;
-    }
+    
+    // ================================ Brute Force Approach ===================================
+
+        static Node detectCycleStart(Node head){
+            Node temp = head;
+            Node startPoint = null;
+
+            Set<Node> hs = new HashSet<>();
+
+            while(temp != null){
+                if(hs.contains(temp)){
+                    startPoint = temp;                              // T.C= O(N), S.C = O(N)
+                    break;
+                }else{
+                    hs.add(temp);
+                }
+                temp = temp.next;
+            }
+            return startPoint;
+        }
     
     public static void main(String[] args) {
         int[] nums = {1,2,3,4,5};
