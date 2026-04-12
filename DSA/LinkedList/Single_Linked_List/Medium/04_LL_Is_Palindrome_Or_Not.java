@@ -78,6 +78,46 @@ class Node{
 
             return true;
         }
+
+    // ================================ Optimal Approach ==========================================
+    
+        private static Node reverse(Node head){
+            Node temp = head;
+            
+            Node prev = null;
+            Node front = null;
+            
+            while(temp != null){
+                front = temp.next;
+                temp.next = prev;
+                prev = temp;
+                temp = front;
+            }
+            return prev;
+        }
+        
+        public static boolean isPalindrome_1(Node head){
+            Node slow = head;
+            Node fast = head;
+            
+            while(fast.next != null && fast.next.next != null){
+                slow = slow.next;    
+                fast = fast.next.next;    
+            }
+            
+             Node newHead = reverse(slow.next);
+             Node first = head;                                     // T.C = O(4N), S.C = O(1)
+             
+            while(newHead != null){
+                if(newHead.data != first.data){
+                    return false;
+                }
+                newHead = newHead.next;
+                first = first.next;
+            }
+            reverse(newHead);
+            return true;
+        }
     
     public static void main(String[] args) {
         int[] nums = {1,2,2,1};
@@ -86,5 +126,10 @@ class Node{
         
         boolean result = isPalindrome(head);
         System.out.println(result);
+                
+        Node head_1 = convert(nums);
+        
+        boolean result_1 = isPalindrome_1(head_1);
+        System.out.println(result_1);
     }
 }
