@@ -106,10 +106,11 @@ class Node{
             }
             
              Node newHead = reverse(slow.next);
-             Node first = head;                                     // T.C = O(4N), S.C = O(1)
+             Node first = head;                                  // T.C = O(N/2) + O(N/2)+ O(N/2)+ O(N/2) = O(N), S.C = O(1)
              
             while(newHead != null){
                 if(newHead.data != first.data){
+                    reverse(newHead);
                     return false;
                 }
                 newHead = newHead.next;
