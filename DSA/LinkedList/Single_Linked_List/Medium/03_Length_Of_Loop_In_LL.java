@@ -41,7 +41,7 @@ class Node{
             List<Node> al = new ArrayList<>();
 
             while(temp != null){
-                if(hs.containsKey(temp)){                       // T.C = O(N) + O(N * K), S.C = O(2N)
+                if(hs.containsKey(temp)){                       // T.C = O(N) + O(N * K) = O(N^2), S.C = O(2N)
                     if(!(al.contains(temp))){
                         al.add(temp);
                     }else{
