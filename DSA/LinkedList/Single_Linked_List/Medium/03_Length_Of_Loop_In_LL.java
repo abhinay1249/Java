@@ -106,10 +106,10 @@ class Node{
                         length++;
                         fast = fast.next;
                     }
-                    break;
+                    return length;
                 }
             }
-            return length;
+            return 0;
         }
 
 
@@ -175,14 +175,14 @@ class Node{
             
             while(temp_2.next != null){
                 if(count_2==3){
-                    thirdNode_2 = temp_2;
+                    thirdNode_2 = temp_2;f
                 }
                 temp_2 = temp_2.next;
                 count_2++;
             }
-            
+
             temp_2.next = thirdNode_2;
-            
+
             int res_2 = length_2(head_2);
             System.out.print(res_2);
     }
