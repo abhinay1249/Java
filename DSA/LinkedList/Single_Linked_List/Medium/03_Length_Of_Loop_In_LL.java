@@ -89,6 +89,29 @@ class Node{
             return length;
         }
 
+    // ================================ Optimal Approach ==========================================
+
+        static int length_2(Node head){
+            Node slow = head;
+            Node fast = head;
+
+            int length = 1;
+
+            while(fast != null && fast.next != null){
+                slow = slow.next;
+                fast = fast.next.next;
+
+                if(slow == fast){                                   // T.C = O(N), S.C = O(1)
+                    while(fast.next != slow){
+                        length++;
+                        fast = fast.next;
+                    }
+                    break;
+                }
+            }
+            return length;
+        }
+
 
     
     public static void main(String[] args) {
@@ -96,43 +119,71 @@ class Node{
         
         Node head = convert(nums);
         
-        Node temp = head;
-        Node thirdNode = null;
-        int count = 1;
-        
-        while(temp.next != null){
-            if(count==3){
-                thirdNode = temp;
-            }
-            temp = temp.next;
-            count++;
-        }
-        
-        temp.next = thirdNode;
-        
-        int res = lengthOfCycle(head);
 
-        System.out.print(res);
-        
-        System.out.println();
+        // ==== Brute Force Approach ====
 
-        Node head_1 = convert(nums);
-        
-        Node temp_1 = head_1;
-        Node thirdNode_1 = null;
-        int count_1 = 1;
-        
-        while(temp_1.next != null){
-            if(count_1==3){
-                thirdNode_1 = temp_1;
+            Node temp = head;
+            Node thirdNode = null;
+            int count = 1;
+
+            while(temp.next != null){
+                if(count==3){
+                    thirdNode = temp;
+                }
+                temp = temp.next;
+                count++;
             }
-            temp_1 = temp_1.next;
-            count_1++;
-        }
+
+            temp.next = thirdNode;
+
+            int res = lengthOfCycle(head);
+
+            System.out.print(res);
         
-        temp_1.next = thirdNode_1;
-        
-        int res_1 = length_1(head_1);
-        System.out.print(res_1);
+            System.out.println();
+
+        // ==== Better Approach ====
+
+            Node head_1 = convert(nums);
+            
+            Node temp_1 = head_1;
+            Node thirdNode_1 = null;
+            int count_1 = 1;
+            
+            while(temp_1.next != null){
+                if(count_1==3){
+                    thirdNode_1 = temp_1;
+                }
+                temp_1 = temp_1.next;
+                count_1++;
+            }
+
+            temp_1.next = thirdNode_1;
+
+            int res_1 = length_1(head_1);
+            System.out.print(res_1);
+
+            System.out.println();
+
+        // ==== Optimal Approach ====
+
+            Node head_2 = convert(nums);
+            
+            Node temp_2 = head_2;
+            Node thirdNode_2 = null;
+            int count_2 = 1;
+            
+            while(temp_2.next != null){
+                if(count_2==3){
+                    thirdNode_2 = temp_2;
+                }
+                temp_2 = temp_2.next;
+                count_2++;
+            }
+            
+            temp_2.next = thirdNode_2;
+            
+            int res_2 = length_2(head_2);
+            System.out.print(res_2);
     }
 }
