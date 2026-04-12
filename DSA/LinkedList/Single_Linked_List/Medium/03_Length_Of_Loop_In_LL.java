@@ -175,7 +175,7 @@ class Node{
             
             while(temp_2.next != null){
                 if(count_2==3){
-                    thirdNode_2 = temp_2;f
+                    thirdNode_2 = temp_2;
                 }
                 temp_2 = temp_2.next;
                 count_2++;
