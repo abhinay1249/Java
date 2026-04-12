@@ -4,3 +4,13 @@
 // Return true if it forms a palindrome, otherwise, return false.
 
 // A palindrome is a sequence that reads the same forward and backwards.
+
+// Example 1:
+// Input: 3 -> 7 -> 5 -> 7 -> 3
+// Output: true
+// Explanation: 37573 is a palindrome.
+
+// Example 2:
+// Input: 1 -> 1 -> 2 -> 1
+// Output: false
+// Explanation: 1121 is not a palindrome.
