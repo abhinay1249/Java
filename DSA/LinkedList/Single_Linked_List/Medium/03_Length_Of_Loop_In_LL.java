@@ -1,3 +1,17 @@
+// Problem Statement: Given the head of a linked list, determine the length of a loop present in the linked list. 
+// If there's no loop present, return 0.
+
+// Examples:
+
+// Input:  1 → 2 → 3 → 4 → 5 → 6
+    //               ↑         ↓
+    //               ← ← ← ← ← ←
+
+// Output: 3
+// Explanation: A cycle exists in the linked list starting at node 3 -> 4 -> 5 and then back to 3. 
+// There are 3 nodes present in this cycle.
+
+
 import java.util.*;
 
 class Node{
