@@ -37,23 +37,44 @@ class Node{
         static int lengthOfCycle(Node head){
             Node temp = head;
 
-            Map<Node,Integer> hs = new HashMap<>();
+            Map<Node,Integer> hm = new HashMap<>();
             List<Node> al = new ArrayList<>();
 
             while(temp != null){
-                if(hs.containsKey(temp)){                       // T.C = O(N) + O(N * K) = O(N^2), S.C = O(2N)
+                if(hm.containsKey(temp)){                       // T.C = O(N) + O(N * K) = O(N^2), S.C = O(2N)
                     if(!(al.contains(temp))){
                         al.add(temp);
                     }else{
                         break;   
                     }
                 }else{
-                    hs.put(temp,1);
+                    hm.put(temp,1);
                 }
                 temp = temp.next;
             }
             return al.size();
         }
+
+    // ================================ Better Approach ==========================================
+
+        static int length_1(Node head){
+            Node temp = head;
+            int timer = 1, length = 0;
+            Map<Node,Integer> hm = new HashMap<>();
+
+            while(temp != null){
+                if(hm.containsKey(temp)){                        // T.C = O(N), S.C = O(N)
+                    length = timer - hm.get(temp);
+                    break;
+                }else{
+                    hm.put(temp,timer);
+                }
+                temp = temp.next;
+                timer++;
+            }
+            return length;
+        }
+
 
     
     public static void main(String[] args) {
@@ -80,5 +101,24 @@ class Node{
         System.out.print(res);
         
         System.out.println();
+
+        Node head_1 = convert(nums);
+        
+        Node temp_1 = head_1;
+        Node thirdNode_1 = null;
+        int count_1 = 1;
+        
+        while(temp_1.next != null){
+            if(count_1==3){
+                thirdNode_1 = temp_1;
+            }
+            temp_1 = temp_1.next;
+            count_1++;
+        }
+        
+        temp_1.next = thirdNode_1;
+        
+        int res_1 = length_1(head_1);
+        System.out.print(res_1);
     }
 }
