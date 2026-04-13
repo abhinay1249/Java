@@ -110,7 +110,7 @@ class Node{
 
             while(even != null && even.next != null){
                 odd.next = odd.next.next;
-                even.next = even.next.next;
+                even.next = even.next.next;                         // T.C = O(N/2) * 2 = O(N), S.C = O(1)
 
                 odd = odd.next;
                 even = even.next;
@@ -127,5 +127,12 @@ class Node{
         
         Node result = segregateNodes(head);
         print(result);
+
+        System.out.println();
+
+        Node head_1 = convert(nums);
+        
+        Node result_1 = segregateNodes_1(head_1);
+        print(result_1);
     }
 }
