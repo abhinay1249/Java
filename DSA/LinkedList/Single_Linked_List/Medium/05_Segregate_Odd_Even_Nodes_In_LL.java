@@ -103,6 +103,11 @@ class Node{
     // ================================ Optimal Approach =====================================
 
         public static Node segregateNodes_1(Node head){
+
+            if(head == null || head.next == null){
+                return head;
+            }
+
             Node odd = head;
             Node even = head.next;
 
