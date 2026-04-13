@@ -82,6 +82,30 @@ class Node{
             temp.next = temp.next.next;
             return head;
         }
+
+    // ================================ Optimal Approach =====================================
+
+        public static Node removeNthNodeFromEnd_1(Node head, int n){
+            Node fast = head;
+            Node slow = head;
+
+            for(int index = 0 ; index < n ; index++){
+                fast = fast.next;
+            }
+
+            if(fast == null){
+                return head.next;                               // T.C = O(Length), S.C = O(1)
+            }
+
+            while(fast.next != null){
+                slow = slow.next;
+                fast = fast.next;
+            }
+
+            slow.next = slow.next.next;
+
+            return head;
+        }
     
     
     public static void main(String[] args) {
