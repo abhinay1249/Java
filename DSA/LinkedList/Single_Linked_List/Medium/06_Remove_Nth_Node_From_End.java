@@ -116,5 +116,12 @@ class Node{
         
         Node result = removeNthNodeFromEnd(head,n);
         print(result);
+
+        System.out.println();
+        
+        Node head_1 = convert(nums);
+        
+        Node result_1 = removeNthNodeFromEnd_1(head_1,n);
+        print(result_1);
     }
 }
