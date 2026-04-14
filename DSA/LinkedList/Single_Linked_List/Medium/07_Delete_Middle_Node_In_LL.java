@@ -49,8 +49,8 @@ class Node{
 
         public static Node removeMiddleNode(Node head){
 
-            if(head.next == null){
-                return head.next;
+            if(head == null || head.next == null){
+                return null;
             }
 
             Node temp = head;
@@ -82,8 +82,8 @@ class Node{
 
         public static Node removeMiddleNode_1(Node head){
 
-            if(head.next == null){
-                return head.next;
+            if(head == null || head.next == null){
+                return null;
             }
 
             Node slow = head;
