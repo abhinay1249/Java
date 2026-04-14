@@ -77,6 +77,28 @@ class Node{
             }
             return head;
         }
+
+    // ================================ Optimal Approach =====================================
+
+        public static Node removeMiddleNode_1(Node head){
+
+            if(head.next == null){
+                return head.next;
+            }
+
+            Node slow = head;
+            Node fast = head;
+            Node prev = null;
+
+            while(fast != null && fast.next != null){               // T.C = O(N), S.C = O(1)
+                prev = slow;
+                slow = slow.next;
+                fast = fast.next.next;
+            }
+            prev.next = slow.next;
+
+            return head;
+        }
     
     public static void main(String[] args) {
         int[] nums = {1,2,3,4,5,6};
@@ -86,5 +108,13 @@ class Node{
         Node result = removeMiddleNode(head);
         
         print(result);
+
+        System.out.println();
+        
+        Node head_1 = convert(nums);
+        
+        Node result_1 = removeMiddleNode_1(head_1);
+        
+        print(result_1);
     }
 }
