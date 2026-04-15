@@ -86,6 +86,12 @@ class Node{
             return head;
         }
 
+    // ============================== Optimal Approach ======================================
+        
+        public static Node sortList_1(Node head) {
+            return head;
+        }
+
    public static void main(String[] args) {
         int[] nums = {1,2,3,4,5,6};
         
@@ -94,5 +100,15 @@ class Node{
         Node result = sortList(head);
         
         print(result);
+
+        System.out.println();
+
+        Node head_1 = convert(nums);
+        
+        Node result_1 = sortList_1(head_1);
+        
+        print(result_1);
+
+
     }
 }
