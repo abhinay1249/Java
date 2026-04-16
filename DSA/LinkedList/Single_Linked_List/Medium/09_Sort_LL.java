@@ -110,7 +110,7 @@ class Node{
                     temp = list1;
                     list1 = list1.next;
                 }else{
-                    temp.next = list2;
+                    temp.next = list2;                              // T.C = O(LOG N * (N +N/2)) , S.C = O(1)
                     temp = list2;
                     list2 = list2.next;
                 }
