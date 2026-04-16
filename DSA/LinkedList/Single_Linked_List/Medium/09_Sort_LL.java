@@ -70,7 +70,7 @@ class Node{
 
             while(temp != null){
                 al.add(temp.data);
-                temp = temp.next;                               // T.C = O(N) + O(N LOG N) + O(N) , S.C = O(N)
+                temp = temp.next;                                   // T.C = O(N) + O(N LOG N) + O(N) , S.C = O(N)
             }
 
             Collections.sort(al);
