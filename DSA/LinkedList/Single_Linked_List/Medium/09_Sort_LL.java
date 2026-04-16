@@ -1,4 +1,5 @@
-// Problem Statement: Given a linked list, sort its nodes based on the data value in them. Return the head of the sorted linked list.
+// Problem Statement: Given a linked list, sort its nodes based on the data value in them. 
+// Return the head of the sorted linked list.
 
 // Examples
 
