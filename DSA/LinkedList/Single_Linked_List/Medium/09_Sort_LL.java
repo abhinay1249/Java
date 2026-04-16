@@ -46,7 +46,7 @@ class Node{
             return head;
         }
 
-    // ============================== Print the Linked List =================================
+    // ============================== Print the Linked List ================================
 
         public static void print(Node head){
             Node temp = head;
@@ -57,7 +57,7 @@ class Node{
             }
         }
 
-    // ============================== Brute Force Approach =====================================
+    // ============================== Brute Force Approach ==================================
 
         public static Node sortList(Node head) {
 
