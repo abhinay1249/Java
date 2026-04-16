@@ -86,7 +86,7 @@ class Node{
             return head;
         }
 
-    // ============================== Optimal Approach ======================================
+    // ============================== Optimal Approach ===================================
         
         public static Node sortList_1(Node head) {
             if(head == null || head.next == null){
