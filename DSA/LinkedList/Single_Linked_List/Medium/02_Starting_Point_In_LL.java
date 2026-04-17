@@ -7,7 +7,9 @@
 // Output: 3
 // Explanation: This linked list contains a loop of size 3 starting at node with value 3.
 
-
+// Input: LL: 1 -> 2 -> 3 -> 4 -> 9 -> 9
+// Output:NULL
+// Explanation: This linked list does not contain a loop hence has no starting point
 
 import java.util.*;
 
