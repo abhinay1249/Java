@@ -74,11 +74,53 @@ class Node{
             return head;
         }
 
+    // ============================== Better Approach ================================== 
+
+        public static Node sort012_1(Node head){
+            Node temp = head;
+            int count0 = 0, count1 = 0;
+            int count2 = 0;
+
+            while(temp != null){
+                if(temp.data == 0){
+                    count0++;
+                }else if(temp.data == 1){
+                    count1++;
+                }else{
+                    count2++;
+                }
+                temp = temp.next;                           // T.C = O(N) + O(N) = O(2N), S.C = O(1)
+            }
+
+            temp = head;
+
+            while(temp != null){
+                if(count0 != 0){
+                    temp.data = 0;
+                    count0--;
+                }else if(count1 != 1){
+                    temp.data = 1;
+                    count1--;
+                }else{
+                    temp.data = 2;
+                    count2--;
+                }
+                temp = temp.next;
+            }
+            return head;
+        }
+
     public static void main(String[] args) {
         int[] nums = {0,2,1,2,1,2,0,0,1,1,1,0,0,0,2,2,0};
         
         Node head = convert(nums);
         Node result = sort012(head);
         print(result);
+
+        System.out.println();
+                
+        Node head_1 = convert(nums);
+        Node result_1 = sort012_1(head_1);
+        print(result_1);
     }
 }
