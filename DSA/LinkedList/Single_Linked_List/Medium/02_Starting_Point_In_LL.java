@@ -1,6 +1,14 @@
 // Problem Statement: Given the head of a linked list that may contain a cycle, return the starting point of that cycle. 
 // If there is no cycle in the linked list return null.
 
+// Examples
+
+// Input: LL: 1  2  3  4  5
+// Output: 3
+// Explanation: This linked list contains a loop of size 3 starting at node with value 3.
+
+
+
 import java.util.*;
 
 class Node{
