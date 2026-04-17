@@ -54,6 +54,11 @@ class Node{
     // ============================== Brute Force Approach ==================================
 
         public static Node sort012(Node head){
+
+            if(head == null || head.next == null){
+                return head;
+            }
+
             Node temp = head;
             List<Integer> al = new ArrayList<>();
 
@@ -77,6 +82,10 @@ class Node{
     // ============================== Better Approach ================================== 
 
         public static Node sort012_1(Node head){
+            
+            if(head == null || head.next == null){
+                return head;
+            }
             Node temp = head;
             int count0 = 0, count1 = 0;
             int count2 = 0;
@@ -110,6 +119,52 @@ class Node{
             return head;
         }
 
+    // ============================== Optimal Approach ================================== 
+
+        public static Node sort012_2(Node head){
+                
+            if(head == null || head.next == null){
+                return head;
+            }
+
+            Node temp = head;
+
+            Node zeroHead = new Node(-1);
+            Node oneHead = new Node(-1);
+            Node twoHead = new Node(-1);
+
+            Node temp0 = zeroHead;
+            Node temp1 = oneHead;
+            Node temp2 = twoHead;
+
+            while(temp != null){
+                if(temp.data == 0){
+                    temp0.next = temp;
+                    temp0 = temp0.next;                                 // T.C = O(N), S.C = O(1)
+                }else if(temp.data == 1){
+                    temp1.next = temp;
+                    temp1 = temp1.next;
+                }else if(temp.data == 2){
+                    temp2.next = temp;
+                    temp2 = temp2.next;
+                }
+                temp = temp.next;
+            }
+            if(oneHead.next != null){
+                temp0.next = oneHead.next;   
+            }else{
+                temp0.next = twoHead.next;
+            }
+            if(twoHead.next != null){
+                temp1.next = twoHead.next;   
+            }
+
+            temp2.next = null;
+
+            return zeroHead.next;
+        }
+    
+
     public static void main(String[] args) {
         int[] nums = {0,2,1,2,1,2,0,0,1,1,1,0,0,0,2,2,0};
         
@@ -122,5 +177,11 @@ class Node{
         Node head_1 = convert(nums);
         Node result_1 = sort012_1(head_1);
         print(result_1);
+
+        System.out.println();
+        
+        Node head_2 = convert(nums);
+        Node result_2 = sort012_2(head_2);
+        print(result_2);
     }
 }
