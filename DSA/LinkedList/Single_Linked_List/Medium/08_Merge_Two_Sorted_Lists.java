@@ -15,3 +15,100 @@
 // Input: list1 = [], list2 = [0]
 // Output: [0]
 
+import java.util.*;
+
+class Node{
+    int data;
+    Node next;
+
+    Node(int data, Node next){
+        this.data = data;
+        this.next = next;
+    }
+
+    Node(int data){
+        this.data = data;
+        this.next = null;
+    }
+
+    // ============================== Convert Array into Linked List =======================
+
+        public static Node convert(int[] nums){
+            int length = nums.length;
+
+            Node head = new Node(nums[0]);
+            Node mover = head;
+
+            for(int index = 1 ; index < length ; index++){
+                Node temp = new Node(nums[index]);
+                mover.next = temp;
+                mover = temp;
+            }
+            return head;
+        }
+
+    // ============================== Print the Linked List ================================
+    
+        public static void print(Node head){
+            Node temp = head;
+
+            while(temp != null){
+                System.out.print(temp.data+" ");
+                temp = temp.next;
+            }
+        }
+
+    // ============================== Brute Force Approach ==================================
+        
+        private static Node convertintoLL(List<Integer> al){
+            int length = al.size();
+            
+            Node head = new Node(al.get(0));
+            Node mover = head;
+            
+            for(int index = 1; index < length ; index++){
+                Node temp = new Node(al.get(index));
+                mover.next = temp;
+                mover = temp;
+            }
+            return head;
+        }
+
+        public static Node mergeTwoLists(Node list1, Node list2) {
+            if(list1 == null && list2 == null){
+                return null;
+            }
+
+            Node temp1 = list1;
+            Node temp2 = list2;
+            List<Integer> al = new ArrayList<>();
+
+            while(temp1 != null){
+                al.add(temp1.data);
+                temp1=temp1.next;                       // T.C = O(N) + O(M) + O(N LOG N) + O(N), S.C = O(N) + O(N)
+            }
+
+            while(temp2 != null){
+                al.add(temp2.data);
+                temp2=temp2.next;
+            }
+
+            Collections.sort(al);
+
+            Node head = convertintoLL(al);
+
+            return head;
+        }
+
+    public static void main(String[] args) {
+        int[] nums1 = {1,2,4};
+        int[] nums2 = {1,3,4};
+
+        Node head1 = convert(nums1);
+        Node head2 = convert(nums2);
+
+        Node mergedHead = mergeTwoLists(head1, head2);
+
+        print(mergedHead);
+    }
+}   
