@@ -87,8 +87,7 @@ class Node{
                 return head;
             }
             Node temp = head;
-            int count0 = 0, count1 = 0;
-            int count2 = 0;
+            int count0 = 0, count1 = 0, count2 = 0;
 
             while(temp != null){
                 if(temp.data == 0){
