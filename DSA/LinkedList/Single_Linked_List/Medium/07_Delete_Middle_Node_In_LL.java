@@ -1,7 +1,15 @@
 // Problem Statement: Given the head of a linked list of integers, delete the middle node of the linked list and return the modified head. 
 // However, if the linked list has an even number of nodes, delete the second middle node.
 
+// Examples:-
 
+// Input: 1->2->3->4->5 
+// Output: 1->2->4->5
+// Explanation: Node with value 3 is at the middle node and deleted.
+
+// Input: 1->2->3->4
+// Output: 1->2->4
+// Explanation: The linked list has an even number of nodes hence we delete the second middle node which is 3.
 
 class Node{
     
