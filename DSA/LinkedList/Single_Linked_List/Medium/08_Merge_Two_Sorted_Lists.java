@@ -100,6 +100,37 @@ class Node{
             return head;
         }
 
+    // ============================== Optimal Approach ==================================
+
+        public static Node mergeTwoLists_1(Node list1, Node list2) {
+            
+            Node dummyNode = new Node(-1);
+
+            Node temp = dummyNode;
+
+            Node temp1 = list1;
+            Node temp2 = list2;
+
+            while(temp1 != null && temp2 != null){
+                if(temp1.data < temp2.data){
+                    temp.next = temp1;
+                    temp = temp.next;
+                    temp1 = temp1.next;
+                }else{
+                    temp.next = temp2;
+                    temp = temp.next;                           // T.C = O(N) + O(M), S.C = O(1)
+                    temp2 = temp2.next; 
+                }
+            }
+
+            if(temp1 != null){
+                temp.next = temp1;
+            }else if(temp2 != null){
+                temp.next = temp2;
+            }
+            
+            return dummyNode.next;
+        }
     public static void main(String[] args) {
         int[] nums1 = {1,2,4};
         int[] nums2 = {1,3,4};
@@ -110,5 +141,13 @@ class Node{
         Node mergedHead = mergeTwoLists(head1, head2);
 
         print(mergedHead);
+
+        System.out.println();
+
+        Node head3 = convert(nums1);
+        Node head4 = convert(nums2);
+
+        Node mergedHead_1 = mergeTwoLists_1(head3, head4);
+        print(mergedHead_1);
     }
 }   
