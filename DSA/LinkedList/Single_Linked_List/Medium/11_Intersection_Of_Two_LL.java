@@ -138,6 +138,35 @@ class Node{
 
     // ================================ Optimal Approach =====================================
         
+        public Node getIntersectionNode(Node headA, Node headB) {
+
+            if(headA == null || headB == null){
+                return null;
+            }
+
+            Node temp1 = headA;
+            Node temp2 = headB;
+
+            if(temp1 == temp2) return temp1;
+
+            while(temp1 != temp2){
+                temp1 = temp1.next;
+                temp2 = temp2.next;
+
+                if(temp1 == temp2){
+                    return temp1;                                       // T.C = O(N + M), S.C = O(1)
+                }
+
+                if(temp1 == null){
+                    temp1 = headB;
+                }
+
+                if(temp2 == null){
+                    temp2 = headA;
+                }
+            }
+            return temp1;
+        }
 
     public static void main(String[] args) {
         int[] nums1 = {1,9,1,2,4};
@@ -157,5 +186,13 @@ class Node{
 
         Node result_1 = intersectionNode_1(head3, head4);
         System.out.print(result_1);
+
+        System.out.println();
+
+        Node head5 = convert(nums1);
+        Node head6 = convert(nums2);
+
+        Node result_2 = intersectionNode_1(head5, head6);
+        System.out.print(result_2);
     }
 }
