@@ -15,3 +15,106 @@
 // Explanation: 999 + 1 = 1000
 
 
+class Node{
+    
+    int data;
+    Node next;
+    
+    Node(int data, Node next){
+        this.data = data;
+        this.next = next;
+    }
+    
+    Node(int data){
+        this.data = data;
+        this.next = null;
+    }
+    
+    // =========================== Convert Array into Linked List ===============================
+
+        public static Node convert(int[] nums){
+            int length = nums.length;
+            Node head = new Node(nums[0]);
+            Node mover = head;
+            for(int index = 1 ; index < length ; index++){
+                Node temp = new Node(nums[index]);
+                mover.next = temp;
+                mover = temp;
+            }
+            return head;
+        }
+
+    // ============================== Print the Linked List ================================
+
+        public static void print(Node head){
+            Node temp = head;
+
+            while(temp != null){
+                System.out.print(temp.data+" ");
+                temp = temp.next;
+            }
+        }
+
+    // ============================== Iterative Approach ==================================
+
+        private static Node reverse(Node head){
+            Node temp = head;
+
+            Node prev = null;
+
+            Node front = null;
+
+            while(temp != null){
+                front = temp.next;
+                temp.next = prev;
+                prev = temp;
+                temp = front;
+            }
+
+            return prev;
+        }
+
+
+        public static Node add(Node head){
+
+            head = reverse(head);
+
+            Node temp = head;
+
+            int carry = 1;
+
+            while(temp != null){
+                temp.data = temp.data + carry;
+
+                if(temp.data == 10){
+                    temp.data = 0;
+                    carry = 1;
+                }else{
+                    carry=0;
+                    break;
+                }
+                temp = temp.next;
+            }
+
+            if(carry == 1){
+                Node newHead = new Node(1);
+                newHead.next = head;
+                return newHead;
+            }
+            head = reverse(head);
+
+            return head;
+        }
+
+
+    public static void main(String[] args) {
+        int[] nums1 = {9,9,9};
+        
+        Node head = convert(nums1);
+        
+        Node result = add(head);
+        
+        print(result);
+        
+    }
+}
