@@ -73,7 +73,7 @@ class Node{
 
             while(temp != null){
                 if(hm.containsKey(temp)){
-                    intersectionPoint = temp;
+                    intersectionPoint = temp;                       // T.C = O(N + M), S.C = O(N) 
                     break;
                 }
                 temp = temp.next;
