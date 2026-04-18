@@ -84,6 +84,56 @@ class Node{
             }
             return null;
         }
+
+    // ================================ Better Approach =====================================
+
+        private static int lengthOfLL(Node head){
+            Node temp = head;
+            int length = 0;
+
+            while(temp != null){
+                length++;
+                temp = temp.next;
+            }
+            return length;
+        }
+
+        public static Node intersectionNode_1(Node headA, Node headB) {
+            Node temp1 = headA;    
+            Node temp2 = headB;
+
+            int length1 = lengthOfLL(temp1);
+            int length2 = lengthOfLL(temp2);
+
+            int difference = length2 - length1;
+
+            if(difference != 0){
+                if(length1 < length2){
+                    while(difference != 0){
+                        difference--;
+                        temp2 = temp2.next;
+                    } 
+                }else{
+                    while(difference != 0){
+                        difference--;
+                        temp1 = temp1.next;                     // T.C = O(N) + O(M) + O(M-N) + O(N) = O(N + 2M), S.C = O(1)
+                    }  
+                }
+            }
+
+            Node intersectionPoint = null;
+
+            while(temp1 != null && temp2 != null){
+                if(temp1 == temp2){
+                    intersectionPoint = temp1;
+                    break;
+                }
+                temp1 = temp1.next;
+                temp2 = temp2.next;
+            }
+
+            return intersectionPoint;
+        }
     public static void main(String[] args) {
         int[] nums1 = {1,9,1,2,4};
         int[] nums2 = {3,2,4};
