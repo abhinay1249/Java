@@ -23,6 +23,7 @@
 // Output: Null
 // Explanation: Here, both lists do not intersect and thus no intersection node is present.
 
+
 import java.util.*;
 
 class Node{
@@ -134,6 +135,10 @@ class Node{
 
             return intersectionPoint;
         }
+
+    // ================================ Optimal Approach =====================================
+        
+
     public static void main(String[] args) {
         int[] nums1 = {1,9,1,2,4};
         int[] nums2 = {3,2,4};
@@ -144,5 +149,13 @@ class Node{
         Node result = intersectionNode(head1, head2);
         
         System.out.print(result);
+
+        System.out.println();
+
+        Node head3 = convert(nums1);
+        Node head4 = convert(nums2);
+
+        Node result_1 = intersectionNode_1(head3, head4);
+        System.out.print(result_1);
     }
 }
