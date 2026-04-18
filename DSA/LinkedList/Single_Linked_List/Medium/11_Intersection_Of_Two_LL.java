@@ -136,7 +136,7 @@ class Node{
             return intersectionPoint;
         }
 
-    // ================================ Optimal Approach =====================================
+    // ================================ Optimal Approach ==========================================
         
         public Node getIntersectionNode(Node headA, Node headB) {
 
