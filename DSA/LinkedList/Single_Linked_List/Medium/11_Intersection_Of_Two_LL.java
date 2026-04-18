@@ -138,7 +138,7 @@ class Node{
 
     // ================================ Optimal Approach ==========================================
         
-        public Node getIntersectionNode(Node headA, Node headB) {
+        public static Node intersectionNode_2(Node headA, Node headB) {
 
             if(headA == null || headB == null){
                 return null;
@@ -192,7 +192,7 @@ class Node{
         Node head5 = convert(nums1);
         Node head6 = convert(nums2);
 
-        Node result_2 = intersectionNode_1(head5, head6);
+        Node result_2 = intersectionNode_2(head5, head6);
         System.out.print(result_2);
     }
 }
