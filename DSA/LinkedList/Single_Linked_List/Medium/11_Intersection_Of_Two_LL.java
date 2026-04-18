@@ -117,9 +117,9 @@ class Node{
                     while(difference != 0){
                         difference--;
                         temp1 = temp1.next;                     // T.C = O(N) + O(M) + O(M-N) + O(N) = O(N + 2M), S.C = O(1)
-                    }  
-                }
-            }
+                    }                                           //                  (OR)
+                }                                               // T.C = O(N) + O(M) + O(N-M) + O(M) = O(2N + M), S.C = O(1)
+            }                               
 
             Node intersectionPoint = null;
 
