@@ -90,7 +90,7 @@ class Node{
                     temp.data = 0;
                     carry = 1;
                 }else{
-                    carry=0;
+                    carry=0;                                        // T.C = O(N) + O(N) + O(N) = O(3N), S.C = O(1)
                     break;
                 }
                 temp = temp.next;
