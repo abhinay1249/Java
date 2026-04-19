@@ -46,7 +46,7 @@ class Node{
             return head;
         }
         
-    // ================================ Brute Force Approach ===================================
+    // ====================== Brute Force Approach ====================================
 
         static int lengthOfCycle(Node head){
             Node temp = head;
@@ -69,7 +69,7 @@ class Node{
             return al.size();
         }
 
-    // ================================ Better Approach ==========================================
+    // =================== Better Approach =========================================
 
         static int length_1(Node head){
             Node temp = head;
@@ -89,7 +89,7 @@ class Node{
             return length;
         }
 
-    // ================================ Optimal Approach ==========================================
+    // ========================= Optimal Approach ==================================
 
         static int length_2(Node head){
             Node slow = head;
