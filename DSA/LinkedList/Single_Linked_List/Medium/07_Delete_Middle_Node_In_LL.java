@@ -26,7 +26,7 @@ class Node{
         this.next = null;
     }
     
-    // ============================== Convert Array into Linked List ==========================
+    // =========================== Convert Array into Linked List ==========================
 
         public static Node convert(int[] nums){
             int length = nums.length;
@@ -42,7 +42,7 @@ class Node{
             return head;
         }
 
-    // ============================== Print the Linked List ====================================
+    // ============================== Print the Linked List ===============================
 
         public static void print(Node head){
             Node temp = head;
@@ -53,7 +53,7 @@ class Node{
             }
         }
 
-    // ================================ Brute Force Approach =====================================
+    // ========================== Brute Force Approach =====================================
 
         public static Node removeMiddleNode(Node head){
 
