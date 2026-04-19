@@ -28,7 +28,7 @@ class Node{
         this.next = null;
     }
 
-    // ================================ Convert Array into Linked List =====================================
+    // ===================== Convert Array into Linked List ===================================
 
         static Node convert(int[] nums){
             int length = nums.length;
@@ -46,7 +46,7 @@ class Node{
             return head;
         }
 
-    // ================================ Brute Force Approach =====================================
+    // ================================ Brute Force Approach ===================================
 
         static boolean detectLoop(Node head){
             Node temp = head;
