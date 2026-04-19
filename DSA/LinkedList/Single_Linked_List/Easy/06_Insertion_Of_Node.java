@@ -12,7 +12,7 @@ class Node{
         this.pointer = null;
     }
     
-    // ================================ Convert Array into Linked List =====================================
+    // ============================ Convert Array into Linked List ===========================
 
         static Node convert(int[] nums){
             int length = nums.length;
@@ -30,14 +30,14 @@ class Node{
             return head;
         }
 
-    // ================================ Insertion At Head =====================================
+    // ============================= Insertion At Head =========================================
     
         static Node insertAtHead(Node head, int val){
             Node temp = new Node(val,head);
             return temp;
         }
     
-    // ================================ Insertion At Tail =====================================
+    // ============================ Insertion At Tail ==========================================
 
         static Node insertAtTail(Node head, int val){
             if(head == null){
