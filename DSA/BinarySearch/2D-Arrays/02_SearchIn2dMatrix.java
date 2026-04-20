@@ -5,7 +5,7 @@
 
 class Main {
 
-    // =========================== Brute Force Approach ==============================
+    // =========================== Brute Force Approach ========================
 
         static boolean searchIn2DMatrix(int[][] matrix, int target){
 
