@@ -15,22 +15,23 @@ class Node{
         this.prevptr = null;
     }
     
-    static Node convert(int[] nums){
-        
-        int length = nums.length;
-        
-        Node head = new Node(nums[0]);
-        
-        Node prev = head;
-        
-        for(int i = 1 ; i < length ; i++){
-            Node temp = new Node(nums[i],null,prev);
-            prev.nextptr = temp;
-            prev = temp;
+    // ============================== Convert Array into Linked List ==========================
+        static Node convert(int[] nums){
+            
+            int length = nums.length;
+            
+            Node head = new Node(nums[0]);
+            
+            Node prev = head;
+            
+            for(int i = 1 ; i < length ; i++){
+                Node temp = new Node(nums[i],null,prev);
+                prev.nextptr = temp;
+                prev = temp;
+            }
+            
+            return head;
         }
-        
-        return head;
-    }
     
     public static void main(String[] args){
         int[] nums = {1,2,3,4,5,6,7,8};
