@@ -9,3 +9,5 @@
 // Example 2:
 // Input: l1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9]
 // Output: Result: [8,9,9,9,0,0,0,1]
+// Explanation: Since the digits are stored in reverse order, 
+// reverse the numbers first to get the original number and then add them as → 9999999 + 9999 = 8999001. 
