@@ -29,26 +29,28 @@ class Node{
         this.prevptr = null;
     }
     
+    // ============================== Convert Array into Linked List ==========================
+        private static Node convert(int[] nums){
+            int length = nums.length;
+            Node head = new Node(nums[0],null,null);
+            Node prev = head;
+            for(int i = 1 ; i < length ; i++){
+                Node temp = new Node(nums[i],null,prev);
+                prev.nextptr = temp;
+                prev = temp;
+            }
+            return head;
+        }
 
-    private static Node convert(int[] nums){
-        int length = nums.length;
-        Node head = new Node(nums[0],null,null);
-        Node prev = head;
-        for(int i = 1 ; i < length ; i++){
-            Node temp = new Node(nums[i],null,prev);
-            prev.nextptr = temp;
-            prev = temp;
-        }
-        return head;
-    }
+    // ============================== Print the Linked List ===============================
     
-    private static void print(Node head){
-        Node dll = head;
-        while(dll != null){
-            System.out.print(dll.data + " ");
-            dll = dll.nextptr;
+        private static void print(Node head){
+            Node dll = head;
+            while(dll != null){
+                System.out.print(dll.data + " ");
+                dll = dll.nextptr;
+            }
         }
-    }
 
     // =========================== Brute Force Approach ==============================
 
