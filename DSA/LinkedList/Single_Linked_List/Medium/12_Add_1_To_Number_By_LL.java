@@ -106,7 +106,34 @@ class Node{
             return head;
         }
 
+    // ============================== Recursive Approach ==================================
 
+        private static int recursiveAdd(Node head){
+            Node temp = head;
+
+            if(temp == null){
+                return 1;
+            }
+            int carry = recursiveAdd(temp.next);
+            temp.data = temp.data + carry;
+
+            if(temp.data < 10){
+                return 0;
+            }
+            temp.data = 0;
+            return 1;
+        }
+
+        public static Node add_1(Node head){
+            int carry = recursiveAdd(head);
+
+            if(carry == 1){
+                Node newHead = new Node(1);
+                newHead.next = head;
+                return newHead;
+            }
+            return head;
+        }
     public static void main(String[] args) {
         int[] nums1 = {9,9,9};
         
@@ -115,6 +142,14 @@ class Node{
         Node result = add(head);
         
         print(result);
+
+        System.out.println();
+
+        Node head_1 = convert(nums1);
+        
+        Node result_1 = add_1(head_1);
+        
+        print(result_1);
         
     }
 }
