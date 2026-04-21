@@ -75,7 +75,7 @@ class Node{
         }
 
 
-        public static Node add(Node head){
+        public static Node addOne(Node head){
 
             head = reverse(head);
 
@@ -124,7 +124,7 @@ class Node{
             return 1;
         }
 
-        public static Node add_1(Node head){
+        public static Node addOne_1(Node head){
             int carry = recursiveAdd(head);
 
             if(carry == 1){
@@ -139,7 +139,7 @@ class Node{
         
         Node head = convert(nums1);
         
-        Node result = add(head);
+        Node result = addOne(head);
         
         print(result);
 
@@ -147,7 +147,7 @@ class Node{
 
         Node head_1 = convert(nums1);
         
-        Node result_1 = add_1(head_1);
+        Node result_1 = addOne_1(head_1);
         
         print(result_1);
         
