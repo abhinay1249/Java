@@ -71,8 +71,8 @@ class Node{
                     sum += temp1.data;
                 }
 
-                if(temp2 != null){
-                    sum += temp2.data;
+                if(temp2 != null){                                  // T.C = O(max(l1,l2))
+                    sum += temp2.data;              // S.C = O(max(l1,l2)) because we are creating a new linked list to store the result.
                 }
 
                 Node newNode = new Node(sum % 10);
