@@ -42,57 +42,60 @@ class Node{
             return head;
         }
     
+    // ============================== Print the Linked List ================================
 
-    private static void print(Node head){
-        Node temp = head;
-        while(temp != null){
-            System.out.print(temp.data + " ");
-            temp = temp.next;
+        private static void print(Node head){
+            Node temp = head;
+            while(temp != null){
+                System.out.print(temp.data + " ");
+                temp = temp.next;
+            }
         }
-    }
+
+    // ============================== Only Approach =======================================
     
-    public static Node addTwoLL(Node head1, Node head2){
-        
-        Node temp1 = head1;
-        Node temp2 = head2;
-        
-        Node dummyNode = new Node(-1);
-        Node curr = dummyNode;
-        
-        int carry = 0;
-        
-        while(temp1 != null || temp2 != null){
-            int sum = carry;
-            
-            if(temp1 != null){
-                sum += temp1.data;
+        public static Node addTwoLL(Node head1, Node head2){
+
+            Node temp1 = head1;
+            Node temp2 = head2;
+
+            Node dummyNode = new Node(-1);
+            Node curr = dummyNode;
+
+            int carry = 0;
+
+            while(temp1 != null || temp2 != null){
+                int sum = carry;
+
+                if(temp1 != null){
+                    sum += temp1.data;
+                }
+
+                if(temp2 != null){
+                    sum += temp2.data;
+                }
+
+                Node newNode = new Node(sum % 10);
+                carry = sum / 10;
+
+                curr.next = newNode;
+                curr = curr.next;
+
+                if(temp1 != null){
+                    temp1 = temp1.next;
+                }
+
+                if(temp2 != null){
+                    temp2 = temp2.next;
+                }
             }
-            
-            if(temp2 != null){
-                sum += temp2.data;
+
+            if(carry == 1){
+                Node newHead = new Node(1);
+                curr.next = newHead;
             }
-            
-            Node newNode = new Node(sum % 10);
-            carry = sum / 10;
-            
-            curr.next = newNode;
-            curr = curr.next;
-            
-            if(temp1 != null){
-                temp1 = temp1.next;
-            }
-            
-            if(temp2 != null){
-                temp2 = temp2.next;
-            }
-        }
-        
-        if(carry == 1){
-            Node newHead = new Node(1);
-            curr.next = newHead;
-        }
-        return dummyNode.next;
-   }
+            return dummyNode.next;
+    }    
     
     public static void main(String[] args) {
         int[] nums1 = {9,9,9,9,9};
