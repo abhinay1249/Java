@@ -117,7 +117,7 @@ class Node{
             int carry = recursiveAdd(temp.next);
             temp.data = temp.data + carry;
 
-            if(temp.data < 10){
+            if(temp.data < 10){                                     // T.C = O(N), S.C = O(N) due to recursive stack space
                 return 0;
             }
             temp.data = 0;
@@ -153,3 +153,11 @@ class Node{
         
     }
 }
+
+// Approach 1: Iterative Approach:
+    // Pros: No space
+    //Cons: Tampering of data and consumes more time.
+
+// Approach 2: Recursive Approach:
+    // Pros: No tampering of data and addition is done in place and is faster in time.
+    // Cons: Extra space due to recursive stack space.
