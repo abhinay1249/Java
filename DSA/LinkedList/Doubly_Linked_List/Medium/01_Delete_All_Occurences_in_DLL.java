@@ -22,7 +22,7 @@ class Node{
     }
     
     // =========================== Convert Array into Linked List ===============================
-    
+
         private static Node convert(int[] nums){
             int length = nums.length;
 
@@ -38,6 +38,8 @@ class Node{
             return head;
         }
 
+    // ============================== Print the Linked List ================================
+
         private static void print(Node head){
             Node temp = head;
 
@@ -46,6 +48,8 @@ class Node{
                 temp = temp.next;
             }
         }
+
+    // ============================== Only Approach =======================================
 
         public static Node deleteAllOccurences(Node head, int key){
             Node temp = head;
