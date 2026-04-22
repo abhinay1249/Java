@@ -59,7 +59,7 @@ class Node{
             while(temp != null){
                 if(temp.data == key){
                     if(temp == head){
-                        head = head.next;
+                        head = head.next;                                   // T.C = O(N), S.C = O(1)
                     }
                     prevNode = temp.prev;
                     nextNode = temp.next;
