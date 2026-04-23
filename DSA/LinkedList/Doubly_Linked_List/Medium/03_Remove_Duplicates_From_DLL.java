@@ -3,3 +3,12 @@
 
 // Return the head of the modified linked list.
 
+// Examples
+
+// Input: head -> 1 <-> 1 <-> 3 <-> 3 <-> 4 <-> 5
+// Output: head -> 1 <-> 3 <-> 4 <-> 5
+// Explanation: Duplicate occurences of 1 and 3 are deleted
+
+// Input: head -> 1 <-> 1 <-> 1 <-> 1 <-> 1 <-> 2
+// Output: head -> 1 <-> 2
+// Explanation: All duplicate occurences of 1 is deleted
