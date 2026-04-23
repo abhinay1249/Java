@@ -70,6 +70,37 @@ class Node{
             return pairs;
         }
 
+    // ============================== Optimal Approach ================================
+
+        public static List<List<Integer>> pairs_1(Node head, int sum){
+            Node start = head;
+            Node end = head;
+
+            while(end.next != null){
+                end = end.next;
+            }
+
+            List<List<Integer>> pairs = new ArrayList<>();
+
+            while(start.data < end.data){
+                int sumOfNodes = start.data + end.data;
+
+                if(sumOfNodes == sum){
+                    List<Integer> elements = new ArrayList<>();  
+                    elements.add(start.data);                               //T.C = O(2N), S.C = O(1)
+                    elements.add(end.data);
+                    pairs.add(elements);
+
+                    start = start.next;
+                    end = end.prev;
+                }else if(sumOfNodes < sum){
+                    start = start.next;
+                }else{
+                    end = end.prev;
+                }
+            }
+            return pairs;
+        }
 
     public static void main(String[] args) {
         
@@ -77,11 +108,24 @@ class Node{
         
         int sum = 5;
         
+        System.out.println("Brute Force Approach");
+        
         Node head = convert(nums);
         
         List<List<Integer>> result = pairs(head,sum);
         
         result.forEach(inner -> {
+           inner.forEach(num -> System.out.print(num + " "));
+           System.out.println();
+        });
+        
+        System.out.println("Optimal Approach");
+        
+        Node head_1 = convert(nums);
+        
+        List<List<Integer>> result_1 = pairs(head_1,sum);
+        
+        result_1.forEach(inner -> {
            inner.forEach(num -> System.out.print(num + " "));
            System.out.println();
         });
