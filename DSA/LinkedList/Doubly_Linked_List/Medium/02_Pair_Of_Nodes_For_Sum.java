@@ -27,46 +27,50 @@ class Node{
         this.prev = null;
     }
     
-    private static Node convert(int[] nums){
-        int length = nums.length;
-        
-        Node head = new Node(nums[0]);
-        Node prevNode = head;
-        
-        for(int index = 1 ; index < length ; index++){
-            Node temp = new Node(nums[index],null,prevNode);
-            prevNode.next = temp;
-            prevNode = temp;
-        }
-        return head;
-    }
+    // =========================== Convert Array into Linked List ===============================
 
-    public static List<List<Integer>> pairs(Node head, int sum){
-        Node temp1 = head;
-        Node temp2 = head.next;
-        
-        List<List<Integer>> pairs = new ArrayList<>();
-        
-        while(temp1 != null){
-            temp2 = temp1.next;
-            while(temp2 != null && temp1.data+temp2.data <= sum){
-                int sumOfNodes = temp1.data + temp2.data;
-                
-                if(sumOfNodes == sum){
-                    List<Integer> elements = new ArrayList<>();
-                    elements.add(temp1.data);
-                    elements.add(temp2.data);
-                    
-                    pairs.add(elements);
-                }
-                temp2 = temp2.next;
+        private static Node convert(int[] nums){
+            int length = nums.length;
+
+            Node head = new Node(nums[0]);
+            Node prevNode = head;
+
+            for(int index = 1 ; index < length ; index++){
+                Node temp = new Node(nums[index],null,prevNode);
+                prevNode.next = temp;
+                prevNode = temp;
             }
-            temp1 = temp1.next;
+            return head;
         }
-        return pairs;
-    }
-    
-    
+
+    // ============================== Brute Force Approach ================================
+
+        public static List<List<Integer>> pairs(Node head, int sum){
+            Node temp1 = head;
+            Node temp2 = head.next;
+
+            List<List<Integer>> pairs = new ArrayList<>();
+
+            while(temp1 != null){
+                temp2 = temp1.next;
+                while(temp2 != null && temp1.data+temp2.data <= sum){
+                    int sumOfNodes = temp1.data + temp2.data;
+
+                    if(sumOfNodes == sum){
+                        List<Integer> elements = new ArrayList<>();         // T.C = O(N^2), S.C = O(1)
+                        elements.add(temp1.data);
+                        elements.add(temp2.data);
+
+                        pairs.add(elements);
+                    }
+                    temp2 = temp2.next;
+                }
+                temp1 = temp1.next;
+            }
+            return pairs;
+        }
+
+
     public static void main(String[] args) {
         
         int[] nums = {1,2,3,4,9};
