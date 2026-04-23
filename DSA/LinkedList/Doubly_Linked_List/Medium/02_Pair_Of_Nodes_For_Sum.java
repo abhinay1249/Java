@@ -27,7 +27,7 @@ class Node{
         this.prev = null;
     }
     
-    // =========================== Convert Array into Linked List ===============================
+    // =========================== Convert Array into Linked List =========================
 
         private static Node convert(int[] nums){
             int length = nums.length;
@@ -70,7 +70,7 @@ class Node{
             return pairs;
         }
 
-    // ============================== Optimal Approach ================================
+    // ============================== Optimal Approach =====================================
 
         public static List<List<Integer>> pairs_1(Node head, int sum){
             Node start = head;
@@ -87,7 +87,7 @@ class Node{
 
                 if(sumOfNodes == sum){
                     List<Integer> elements = new ArrayList<>();  
-                    elements.add(start.data);                               //T.C = O(2N), S.C = O(1)
+                    elements.add(start.data);                                   //T.C = O(2N), S.C = O(1)
                     elements.add(end.data);
                     pairs.add(elements);
 
