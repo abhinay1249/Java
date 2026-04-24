@@ -87,7 +87,7 @@ class Node{
 
                 if(sumOfNodes == sum){
                     List<Integer> elements = new ArrayList<>();  
-                    elements.add(start.data);                                   //T.C = O(2N), S.C = O(1)
+                    elements.add(start.data);                                       //T.C = O(2N), S.C = O(1)
                     elements.add(end.data);
                     pairs.add(elements);
 
