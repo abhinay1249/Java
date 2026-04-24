@@ -73,10 +73,10 @@ class Node{
                 while(nextNode != null && nextNode.data == temp.data){
                     nextNode = nextNode.next;
                 }
-                temp.next = nextNode;
+                temp.next = nextNode;                       
                 if(nextNode!=null){
                     nextNode.prev = temp;
-                }
+                }                                               // T.C = O(N), S.C = O(1)
 
                 temp = nextNode;
             }
