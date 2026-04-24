@@ -31,7 +31,7 @@ class Node{
         this.prev = null;
     }
     
-    // =========================== Convert Array into Linked List =========================
+    // =========================== Convert Array into Linked List ========================
 
         private static Node convert(int[] nums){
             int length = nums.length;
@@ -46,7 +46,7 @@ class Node{
             return head;
         }
     
-    // ============================== Print the Linked List ================================
+    // ============================== Print the Linked List ===============================
 
         private static void print(Node head){
             Node temp = head;
