@@ -28,7 +28,7 @@ class Node{
         this.prev = null;
     }
     
-    // =========================== Convert Array into Linked List ===============================
+    // =========================== Convert Array into Linked List ==========================
 
         private static Node convert(int[] nums){
             int length = nums.length;
