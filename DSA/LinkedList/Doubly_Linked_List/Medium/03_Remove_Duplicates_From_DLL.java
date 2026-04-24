@@ -60,15 +60,15 @@ class Node{
     // ============================== Only Approach =======================================
 
         public static Node removeDuplicates(Node head){
-            
+
             if(head == null || head.next == null){
                 return head;
             }
-            
+
             Node temp = head;
             Node nextNode = temp;
-            
-            while(temp != null){
+
+            while(temp != null && temp.next != null){
                 nextNode = temp.next;
                 while(nextNode != null && nextNode.data == temp.data){
                     nextNode = nextNode.next;
@@ -77,7 +77,7 @@ class Node{
                 if(nextNode!=null){
                     nextNode.prev = temp;
                 }
-                
+
                 temp = nextNode;
             }
             return head;
