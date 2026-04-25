@@ -83,6 +83,43 @@ class Node{
 
             return newHead;
         }
+
+    // ==================== Optimal Approach ================================
+
+        private static Node mergeLL(Node list1, Node list2){
+            Node dummyNode = new Node(-1);
+            Node temp = dummyNode;
+                
+            while(list1 != null && list2 != null){
+                if(list1.data < list2.data){
+                    temp.child = list1;
+                    temp = list1;
+                    list1 = list1.child;
+                }else{
+                    temp.child = list2;
+                    temp = list2;
+                    list2 = list2.child;
+                }
+                temp.next = null;
+            }
+            if(list1 != null){
+                temp.child = list1;
+            }
+            if(list2 != null){
+                temp.child = list2;
+            }
+            return dummyNode.child;
+        }
+
+
+        public static Node flattenLL_1(Node head){
+            if(head == null || head.next == null){
+                return head;
+            }
+
+            Node mergedHead = flattenLL_1(head.next);
+            return mergeLL(head,mergedHead);
+        }
     
     public static void main(String[] args) {
     
@@ -113,6 +150,33 @@ class Node{
         while (temp != null) {
             System.out.print(temp.data + " ");
             temp = temp.child;
+        }
+
+        System.out.println();
+        
+        Node h1 = new Node(1);
+        h1.child = new Node(4);
+        h1.child.child = new Node(7);
+    
+        Node h2 = new Node(2);
+        h2.child = new Node(5);
+    
+        Node h3 = new Node(3);
+        h3.child = new Node(6);
+        h3.child.child = new Node(8);
+    
+        h1.next = h2;
+        h2.next = h3;
+        
+        Node head_1 = h1;
+    
+        Node result_1 = flattenLL_1(head_1);
+    
+        Node temp_1 = result_1;
+        
+        while (temp_1 != null) {
+            System.out.print(temp_1.data + " ");
+            temp_1 = temp_1.child;
         }
     }
 }
