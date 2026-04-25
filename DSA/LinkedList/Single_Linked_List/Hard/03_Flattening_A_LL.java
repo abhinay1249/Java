@@ -47,7 +47,7 @@ class Node{
             }
         }
 
-    // ==================== Convert ArrayList into Linked List ==================
+    // ==================== Brute Force Approach ================================
 
         private static Node convertFromAL(List<Integer> al){
             int length = al.size();
@@ -62,8 +62,6 @@ class Node{
             }
             return head;
         }
-
-    // =============================== Brute Force Approach ========================================
 
         public static Node flattenLL(Node head){
             Node temp1 = head;
