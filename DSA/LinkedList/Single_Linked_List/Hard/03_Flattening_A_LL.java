@@ -98,7 +98,7 @@ class Node{
                 }else{
                     temp.child = list2;
                     temp = list2;
-                    list2 = list2.child;
+                    list2 = list2.child;            // T.C = O(2*M[Merge])*N = O(2MN), S.C = O(N), Not external space but internal stack space due to recursion.
                 }
                 temp.next = null;
             }
