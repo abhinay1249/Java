@@ -74,7 +74,7 @@ class Node{
                 temp2 = temp1;
                 while(temp2 != null){
                     al.add(temp2.data);
-                    temp2 = temp2.child;                    // T.C = O(N*M), S.C = O(N*M) 
+                    temp2 = temp2.child;                    // T.C = O(2(N * M)) + O(X LOG X), S.C = O(N*M) -> X = N * M 
                 }                           // where N is the number of head nodes and M is the maximum number of child nodes in any chain.
                 temp1 = temp1.next;
             }
