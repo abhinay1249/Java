@@ -97,8 +97,9 @@ class Node{
                 return head;
             }
             Node reverseHead = reverseLL(head);
+
             Node temp = reverseHead;
-            Node newHead = null;                                    // T.C = O(3N), S.C = O(1)
+            Node newHead = null;                                    // T.C = O(5N), S.C = O(1)
             Node nextNode = null;
 
             int count = 1;
