@@ -118,6 +118,42 @@ class Node{
 
             return newHead;
         }
+
+    // =============================== Optimal Approach ========================================
+
+        public static Node rotateLL_1(Node head, int k){
+                
+            Node tail = head;
+                
+            int length = 1;
+                
+            while(tail.next != null){
+                length++;
+                tail = tail.next;
+            }
+
+            k %= length;
+
+            if(k == 0){
+                return head;
+            }                                           // T.C = O(2N), S.C = O(1)
+
+            tail.next = head;
+
+            Node temp = head;
+            int counter = 0;
+
+            while(temp != null){
+                counter++;
+                if(counter == length - k){
+                    head = temp.next;
+                    temp.next = null;
+                    break;
+                }
+                temp = temp.next;
+            }
+            return head;
+        }
     public static void main(String[] args) {
         int[] nums = {10,20};
         int k = 1;
@@ -125,5 +161,11 @@ class Node{
         Node head = convert(nums);
         Node result = rotateLL(head,k);
         print(result);
+
+        System.out.println();
+
+        Node head_1 = convert(nums);
+        Node result_1 = rotateLL_1(head_1,k);
+        print(result_1);
     }
 }
