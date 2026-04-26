@@ -79,7 +79,7 @@ class Node{
 
     // ==================== Optimal Approach ================================
 
-        private Node insertCopyNodes(Node head){
+        private static Node insertCopyNodes(Node head){
             Node temp = head;
 
             while(temp != null){
@@ -90,7 +90,7 @@ class Node{
             }
             return temp; 
         }
-        private Node connectRandomPtrs(Node head){
+        private static Node connectRandomPtrs(Node head){
             Node temp = head;
 
             while(temp != null){
@@ -105,7 +105,7 @@ class Node{
             return temp;
         }
 
-        private Node connectNextPtrs(Node head){
+        private static Node connectNextPtrs(Node head){
             Node temp = head;
             Node dummyNode = new Node(-1);
             Node temp1 = dummyNode;
@@ -118,7 +118,8 @@ class Node{
             }
             return dummyNode.next;
         }
-        public Node copyRandomList_1(Node head) {
+
+        public static Node copyRandomList_1(Node head) {
             if(head == null){
                 return null;
             }
@@ -143,5 +144,11 @@ class Node{
 
         Node copyHead = copyRandomList(head);
         print(copyHead);
+
+        System.out.println();
+
+        Node copyHead_1 = copyRandomList_1(head);
+        print(copyHead_1);
+
     }
 }
