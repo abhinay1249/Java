@@ -152,7 +152,7 @@ class Node{
 
     // ==================== Optimal Approach ================================
 
-        public Node mergeKLists_2(Node[] lists) {
+        public static Node mergeKLists_2(Node[] lists) {
 
             Queue<Node> pq = new PriorityQueue<>((a,b)-> a.data - b.data);
 
@@ -197,5 +197,15 @@ class Node{
 
         Node head_1 = mergeKLists_1(lists_1);
         print(head_1);
+
+        System.out.println();
+
+        Node[] lists_2 = new Node[3];
+        lists_1[0] = convertLL(Arrays.asList(1,4,5));
+        lists_1[1] = convertLL(Arrays.asList(1,3,4));
+        lists_1[2] = convertLL(Arrays.asList(2,6)); 
+
+        Node head_2 = mergeKLists_2(lists_2);
+        print(head_2);
     }
 }
