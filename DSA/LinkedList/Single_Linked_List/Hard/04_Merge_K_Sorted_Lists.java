@@ -53,6 +53,54 @@ class Node{
 
     // ==================== Brute Force Approach ================================
 
+        private static Node mergeTwoLists(Node list1, Node list2){
+            Node temp1 = list1;
+            Node temp2 = list2;
+
+            Node dummyNode = new Node(-1);
+            Node temp = dummyNode;
+
+            while(temp1 != null && temp2 != null){
+                if(temp1.data < temp2.data){
+                    temp.next = temp1;
+                    temp = temp.next;
+                    temp1 = temp1.next;
+                }else{
+                    temp.next = temp2;
+                    temp = temp.next;                   // T.C = O(N * ((K * K+1)/2)) near to O(N^3), S.C = O(1)
+                    temp2 = temp2.next;
+                }
+            }
+
+            if(temp1 != null){
+                temp.next = temp1;
+            }
+
+            if(temp2 != null){
+                temp.next = temp2;
+            }
+
+            return dummyNode.next;
+        }
+
+
+        public static Node mergeKLists(Node[] lists) {
+
+            if(lists.length == 0){
+                return null;
+            }
+
+            Node head = lists[0];
+
+            for(int index = 1 ; index < lists.length ; index++){
+                head = mergeTwoLists(head,lists[index]);
+            }
+
+            return head;
+        }
+
+    // ==================== Better Approach ================================
+
         private static Node convertLL(List<Integer> al){
             int length = al.size();
 
@@ -72,7 +120,7 @@ class Node{
             return head;
         }
 
-        public static Node mergeKLists(Node[] lists) {
+        public static Node mergeKLists_1(Node[] lists) {
             int length = lists.length;
 
             Node head = null;
@@ -110,5 +158,15 @@ class Node{
 
         Node head = mergeKLists(lists);
         print(head);
+
+        System.out.println();
+
+        Node[] lists_1 = new Node[3];
+        lists_1[0] = convertLL(Arrays.asList(1,4,5));
+        lists_1[1] = convertLL(Arrays.asList(1,3,4));
+        lists_1[2] = convertLL(Arrays.asList(2,6)); 
+
+        Node head_1 = mergeKLists_1(lists_1);
+        print(head_1);
     }
 }
