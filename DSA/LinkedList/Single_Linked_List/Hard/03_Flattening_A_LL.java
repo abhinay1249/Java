@@ -146,11 +146,7 @@ class Node{
         Node result = flattenLL(head);
     
         // Print result
-        Node temp = result;
-        while (temp != null) {
-            System.out.print(temp.data + " ");
-            temp = temp.child;
-        }
+        print(result);
 
         System.out.println();
         
@@ -174,9 +170,6 @@ class Node{
     
         Node temp_1 = result_1;
         
-        while (temp_1 != null) {
-            System.out.print(temp_1.data + " ");
-            temp_1 = temp_1.child;
-        }
+        print(temp_1);
     }
 }
