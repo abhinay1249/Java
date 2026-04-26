@@ -201,9 +201,9 @@ class Node{
         System.out.println();
 
         Node[] lists_2 = new Node[3];
-        lists_1[0] = convertLL(Arrays.asList(1,4,5));
-        lists_1[1] = convertLL(Arrays.asList(1,3,4));
-        lists_1[2] = convertLL(Arrays.asList(2,6)); 
+        lists_2[0] = convertLL(Arrays.asList(1,4,5));
+        lists_2[1] = convertLL(Arrays.asList(1,3,4));
+        lists_2[2] = convertLL(Arrays.asList(2,6)); 
 
         Node head_2 = mergeKLists_2(lists_2);
         print(head_2);
