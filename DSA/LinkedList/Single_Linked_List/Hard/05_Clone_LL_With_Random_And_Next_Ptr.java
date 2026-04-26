@@ -77,6 +77,57 @@ class Node{
             return hm.get(head);        
         }
 
+    // ==================== Optimal Approach ================================
+
+        private Node insertCopyNodes(Node head){
+            Node temp = head;
+
+            while(temp != null){
+                Node copyNode = new Node(temp.data);
+                copyNode.next = temp.next;
+                temp.next = copyNode;
+                temp = temp.next.next;
+            }
+            return temp; 
+        }
+        private Node connectRandomPtrs(Node head){
+            Node temp = head;
+
+            while(temp != null){
+                Node copyNode = temp.next;
+                if(temp.random != null){
+                    copyNode.random = temp.random.next;         // T.C = O(3N), S.C = O(N)
+                }else{
+                    copyNode.random = null;
+                }
+                temp = temp.next.next;
+            }
+            return temp;
+        }
+
+        private Node connectNextPtrs(Node head){
+            Node temp = head;
+            Node dummyNode = new Node(-1);
+            Node temp1 = dummyNode;
+
+            while(temp != null){
+                temp1.next = temp.next;
+                temp1 = temp.next;
+                temp.next = temp.next.next;
+                temp = temp.next;
+            }
+            return dummyNode.next;
+        }
+        public Node copyRandomList_1(Node head) {
+            if(head == null){
+                return null;
+            }
+
+            insertCopyNodes(head);
+            connectRandomPtrs(head);
+            return connectNextPtrs(head);
+        }
+
     public static void main(String[] args) {
         Node head = new Node(1);
         head.next = new Node(2);
