@@ -150,6 +150,35 @@ class Node{
             return head;
         }
 
+    // ==================== Optimal Approach ================================
+
+        public Node mergeKLists_2(Node[] lists) {
+
+            Queue<Node> pq = new PriorityQueue<>((a,b)-> a.data - b.data);
+
+            for(Node node : lists){
+                if(node != null){
+                    pq.offer(node);
+                }
+            }
+
+            Node dummyNode = new Node(-1);
+            Node temp = dummyNode;
+
+            while(!pq.isEmpty()){                           // T.C = O(K LOG K) + O(K * N * 2 LOG K), S.C = O(K)
+                Node curr = pq.poll();          // where K is the number of linked lists and N is the maximum number of nodes in any linked list.
+
+                temp.next = curr;
+                temp = temp.next;
+
+                if(curr.next != null){
+                    pq.offer(curr.next);
+                }
+            }
+
+            return dummyNode.next;
+        }
+
     public static void main(String[] args) {
         Node[] lists = new Node[3]; 
         lists[0] = convertLL(Arrays.asList(1,4,5));
