@@ -61,7 +61,7 @@ class Node{
             Map<Node,Node> hm = new HashMap<>();
 
             while(temp != null){
-                Node newNode = new Node(temp.data);                
+                Node newNode = new Node(temp.data);                // T.C = O(N) + O(N), S.C = O(N) + O(N)
                 hm.put(temp,newNode);
                 temp = temp.next;
             }
