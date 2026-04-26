@@ -63,7 +63,7 @@
 
             public void visit(String url) {
                 Node newNode = new Node(url);
-                current.next =  newNode;
+                current.next =  newNode;                    // T.C = O(2 * Steps), S.C = O(1)
                 newNode.back = current;
                 current = newNode;
             }
