@@ -51,56 +51,57 @@ class Node{
             }
         }
 
-        // ==================== Brute Force Approach ================================
+    // ==================== Brute Force Approach ================================
     
-            private static Node convertLL(List<Integer> al){
-                int length = al.size();
-    
-                Node head = new Node(al.get(0));
-    
-                if(length == 1){
-                    return head;
-                }
-    
-                Node mover = head;
-    
-                for(int index = 1 ; index < length ; index++){
-                    Node temp = new Node(al.get(index));
-                    mover.next = temp;
-                    mover = temp;
-                }
+        private static Node convertLL(List<Integer> al){
+            int length = al.size();
+
+            Node head = new Node(al.get(0));
+
+            if(length == 1){
                 return head;
             }
-    
-            public static Node mergeKLists_1(Node[] lists) {
-                int length = lists.length;
-    
-                Node head = null;
-    
-                if(length == 0){
-                    return head;
-                }
-    
-                List<Integer> al = new ArrayList<>();
-    
-                for(int index = 0 ; index < length ; index++){
-    
-                    Node temp = lists[index];                      // T.C = O(M * N) + O(X LOG X) + X, S.C = O(2X) 
-                                                            
-                    while(temp != null){                // M is the number of linked lists and N is the maximum number of nodes in any linked list, X = M * N
-                        al.add(temp.data);
-                        temp = temp.next;
-                    }
-                }
-    
-                if(al.size() == 0) return head;
-    
-                Collections.sort(al);
-    
-                head = convertLL(al);
-    
+
+            Node mover = head;
+
+            for(int index = 1 ; index < length ; index++){
+                Node temp = new Node(al.get(index));
+                mover.next = temp;
+                mover = temp;
+            }
+            return head;
+        }
+
+        public static Node mergeKLists_1(Node[] lists) {
+            int length = lists.length;
+
+            Node head = null;
+
+            if(length == 0){
                 return head;
             }
+
+            List<Integer> al = new ArrayList<>();
+
+            for(int index = 0 ; index < length ; index++){
+
+                Node temp = lists[index];                      // T.C = O(M * N) + O(X LOG X) + X, S.C = O(2X) 
+                                                        
+                while(temp != null){                // M is the number of linked lists and N is the maximum number of nodes in any linked list, X = M * N
+                    al.add(temp.data);
+                    temp = temp.next;
+                }
+            }
+
+            if(al.size() == 0) return head;
+
+            Collections.sort(al);
+
+            head = convertLL(al);
+
+            return head;
+        }
+
     // ==================== Better Approach ================================
 
         private static Node mergeTwoLists(Node list1, Node list2){
