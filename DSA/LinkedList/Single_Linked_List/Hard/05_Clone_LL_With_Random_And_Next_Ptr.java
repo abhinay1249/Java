@@ -20,6 +20,7 @@
 // 'true' represents that the nodes and references were created new.
 // [[5, -1], [3, -1], [2, -1], [1, -1]] will be incorrect, although it has the same values.
 
+
 import java.util.*;
 
 class Node{
@@ -39,7 +40,7 @@ class Node{
         this.random = null;
     }
 
-    // ============================ Print Linked List ===========================
+    // ============================ Print Linked List ========================
 
         private static void print(Node head){
             Node temp = head;
@@ -50,7 +51,7 @@ class Node{
             }
         }
 
-    // ==================== Brute Force Approach ================================
+    // ==================== Brute Force Approach ==============================
 
         public static Node copyRandomList(Node head) {
             if(head == null){
@@ -77,7 +78,7 @@ class Node{
             return hm.get(head);        
         }
 
-    // ==================== Optimal Approach ================================
+    // ==================== Optimal Approach ====================================
 
         private static Node insertCopyNodes(Node head){
             Node temp = head;
