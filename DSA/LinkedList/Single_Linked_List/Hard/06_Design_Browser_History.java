@@ -34,26 +34,24 @@
 // browserHistory.back(2);                   // You are in "linkedin.com", move back two steps to "facebook.com" then to "google.com". return "google.com"
 // browserHistory.back(7);                   // You are in "google.com", you can move back only one step to "leetcode.com". return "leetcode.com"
 
+class Node{
+    String data;
+    Node next;
+    Node back;
 
+    Node(String data, Node next, Node back){
+        this.data = data;
+        this.next = next;
+        this.back = back;
+    }
+    
+    Node(String data){
+        this.data = data;
+        this.next = null;
+        this.back = null;
+    }
+}
     // === ========================= Only Approach ===========================
-
-        class Node{
-            String data;
-            Node next;
-            Node back;
-
-            Node(String data, Node next, Node back){
-                this.data = data;
-                this.next = next;
-                this.back = back;
-            }
-
-            Node(String data){
-                this.data = data;
-                this.next = null;
-                this.back = null;
-            }
-        }
 
         class BrowserHistory {
             Node current = null;
