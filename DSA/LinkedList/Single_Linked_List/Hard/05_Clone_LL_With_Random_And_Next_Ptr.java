@@ -40,7 +40,7 @@ class Node{
         this.random = null;
     }
 
-    // ============================ Print Linked List ========================
+    // ============================ Print Linked List ======================
 
         private static void print(Node head){
             Node temp = head;
