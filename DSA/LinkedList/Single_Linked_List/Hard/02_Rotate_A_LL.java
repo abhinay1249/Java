@@ -29,7 +29,7 @@ class Node{
         this.next = null;
     }
 
-    // ============================ Convert Array into Linked List ===========================
+    // ============================ Convert Array into Linked List =========================
     
         private static Node convert(int[] nums){
             int length = nums.length;
@@ -45,7 +45,7 @@ class Node{
             return head;
         }
 
-    // =============================== Print Linked List ========================================
+    // =============================== Print Linked List ====================================
 
         private static void print(Node head){
             Node temp = head;
@@ -56,7 +56,7 @@ class Node{
             }
         }
 
-    // =============================== Brute Force Approach ========================================
+    // =============================== Brute Force Approach =================================
 
         private static Node reverseLL(Node head){
             Node temp = head;
