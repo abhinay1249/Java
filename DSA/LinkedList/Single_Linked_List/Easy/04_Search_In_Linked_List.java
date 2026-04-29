@@ -13,23 +13,24 @@ class Node{
         this.pointer = null;
     }
     
+    // ============================ Convert Array into Linked List =========================
     
-    static Node convertArrayToLL(int[] nums){
-
-        int length = nums.length;
-
-        Node head = new Node(nums[0]);
-
-        Node mover = head;
-
-        for(int index = 1 ; index < length ; index++){
-            Node temp = new Node(nums[index]);
-            mover.pointer = temp;
-            mover = temp;
+        static Node convertArrayToLL(int[] nums){
+        
+            int length = nums.length;
+        
+            Node head = new Node(nums[0]);
+        
+            Node mover = head;
+        
+            for(int index = 1 ; index < length ; index++){
+                Node temp = new Node(nums[index]);
+                mover.pointer = temp;
+                mover = temp;
+            }
+        
+            return head;
         }
-
-        return head;
-    }
 
     static boolean isPresent(int[] nums, int value){
         
