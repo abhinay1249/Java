@@ -77,7 +77,7 @@ class Main {
             return  sb.reverse().toString();
         }
 
-        static String reverseWordsInString_1(String s){
+        static String reverseWordsInString_2(String s){
             int length = s.length();
             StringBuilder word = new StringBuilder();
             StringBuilder reverseWords = new StringBuilder();
@@ -105,5 +105,10 @@ class Main {
     public static void main(String[] args) {
        String s = "Hi I am Abhinay";
        String result = reverseWordsInString(s);
+       String result_1 = reverseWordsInString_1(s);
+       String result_2 = reverseWordsInString_2(s);
+       System.out.println(result);
+       System.out.println(result_1);
+       System.out.println(result_2);
     }
 }
