@@ -35,7 +35,7 @@ class Main {
             return result;
         }
 
-    // =========================== Optimal Approach ==============================
+    // =========================== Optimal Approach ===================================
 
         static int removeOuterParantheses_1(String s){
             
