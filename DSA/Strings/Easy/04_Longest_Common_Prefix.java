@@ -1,11 +1,26 @@
 // Problem Statement: Write a function to find the longest common prefix string amongst an array of strings. 
 // If there is no common prefix, return an empty string "".
 
+// Example 1
+
+// Input: str = ["flower", "flow", "flight"]
+// Output: "fl"
+// Explanation: All strings in the array begin with the common prefix "fl".
+
+// Example 2
+
+// Input: str = ["apple", "banana", "grape", "mango"]
+// Output: ""
+// Explanation: None of the strings share a common starting sequence, so the result is an empty string.
+
+
+import java.util.*;
+
 class Main {
 
     // ======================= Brute-Force Approach ===============================
 
-        static String longestCommonPrefix(String[] s){
+        public static String longestCommonPrefix(String[] s){
 
             int elementLength = s[0].length();
             
@@ -31,7 +46,7 @@ class Main {
 
     // ======================= Optimal Approach ===============================
 
-        static String longestCommonPrefix_1(String[] s){
+        public static String longestCommonPrefix_1(String[] s){
 
             int elementLength = s[0].length();
             if(elementLength == 0){
