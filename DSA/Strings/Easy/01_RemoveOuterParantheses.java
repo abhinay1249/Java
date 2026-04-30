@@ -9,11 +9,32 @@
 // Given a valid parentheses string s, your task is to remove the outermost parentheses from every primitive component of s and return the resulting string.
 
 
+// Example 1:
+
+// Input:
+//  s = "((()))"
+// Output:
+//  "(())"
+// Explanation:
+//  The input string is a single primitive: "((()))".  
+// Removing the outermost layer yields: "(())".
+
+// Example 2:
+
+// Input:
+//  s = "()(()())(())"
+// Output:
+//  "(()())()"
+// Explanation:
+//  Primitive decomposition: "()" + "(()())" + "(())"  
+// After removing outermost parentheses: "" + "()()" + "()"
+// Final result: "(()())()".
+
 class Main {
 
     // =========================== Brute Force Approach ==============================
 
-        static String removeOuterParantheses(String s){
+        public static String removeOuterParantheses(String s){
 
             String result = "";
             int counter = 0;
@@ -37,7 +58,7 @@ class Main {
 
     // =========================== Optimal Approach ===================================
 
-        static int removeOuterParantheses_1(String s){
+        static String removeOuterParantheses_1(String s){
             
             StringBuilder result = new StringBuilder();
             int counter = 0;
@@ -58,7 +79,7 @@ class Main {
                     }
                 }
             }
-            return result;
+            return result.toString();
         }
 
     public static void main(String[] args) {
