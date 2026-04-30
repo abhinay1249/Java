@@ -1,5 +1,17 @@
 // Problem Statement: Given two strings, check if two strings are anagrams of each other or not.
 
+// Example 1:
+
+// Input: CAT, ACT
+// Output: true
+// Explanation: Since the count of every letter of both strings are equal.
+
+// Example 2:
+
+// Input: RULES, LESRT 
+// Output: false
+// Explanation: Since the count of U and T  is not equal in both strings.
+            
 import java.util.*;
 
 class Main{
@@ -7,15 +19,15 @@ class Main{
     // ======================= Brute-Force Approach ===============================
 
         static boolean validateStringsAsAnagram(String s1, String s2){
-            int sLength = s.length();
-            int tLength = t.length();
+            int sLength = s1.length();
+            int tLength = s2.length();
 
             if(sLength != tLength){
                 return false;
             }
 
-            char[] char_1 = s.toCharArray();
-            char[] char_2 = t.toCharArray();
+            char[] char_1 = s1.toCharArray();
+            char[] char_2 = s2.toCharArray();
 
             Arrays.sort(char_1);
             Arrays.sort(char_2);                                // T.C = O(2 N LOG N) + O(N) , S.C = O(2N)
@@ -37,8 +49,8 @@ class Main{
     // ======================= Optimal Approach ===============================
 
         static boolean validateStringsAsAnagram_1(String s1, String s2){
-            int sLength = s.length();
-            int tLength = t.length();
+            int sLength = s1.length();
+            int tLength = s2.length();
 
             if(sLength != tLength){
                 return false;
@@ -46,20 +58,20 @@ class Main{
 
             int[] charCount = new int[26];
 
-            s=s.toLowerCase();
-            t=t.toLowerCase();
+            s1=s1.toLowerCase();
+            s2=s2.toLowerCase();
 
-            s= s.replace(" ","");                                       // T.C = O(N), S.C = O(1)
-            t= t.replace(" ","");
+            s1= s1.replace(" ","");                                       // T.C = O(N), S.C = O(1)
+            s2= s2.replace(" ","");
 
             for(int index = 0 ; index < sLength ; index++){
-                char ch = s.charAt(index);
+                char ch = s1.charAt(index);
                 int idx = ch - 'a';
                 charCount[idx]++;
             }
 
             for(int index = 0 ; index < tLength ; index++){
-                char ch = t.charAt(index);
+                char ch = s2.charAt(index);
                 int idx = ch - 'a';
                 charCount[idx]--;
             }
@@ -75,7 +87,7 @@ class Main{
     public static void main(String[] args){
         String s = "caac";
         String t = "ccaa";
-        boolean result = twoStringsAnagram_1(s,t);
+        boolean result = validateStringsAsAnagram_1(s,t);
         System.out.println(result);
     }
 }
