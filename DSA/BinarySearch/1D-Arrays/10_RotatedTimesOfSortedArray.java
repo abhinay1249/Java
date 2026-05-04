@@ -2,6 +2,15 @@
 // Now the array is rotated between 1 to N times which is unknown. 
 // Find how many times the array has been rotated.
 
+// Examples
+
+// Input : arr = [4,5,6,7,0,1,2,3]
+// Result: 4
+// Explanation: The original array should be [0,1,2,3,4,5,6,7]. So, we can notice that the array has been rotated 4 times.
+
+// Input : arr = [3,4,5,1,2]
+// Output : 3
+// Explanation: The original array should be [1,2,3,4,5]. So, we can notice that the array has been rotated 3 times.
 
 class Main {
     
@@ -28,7 +37,7 @@ class Main {
 
     // ======================= Better Approach =======================================
 
-        static int rotatedTimes(int[] nums){
+        static int rotatedTimes_1(int[] nums){
 
             int length = nums.length;
             int minValue = Integer.MAX_VALUE;
