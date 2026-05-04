@@ -1,6 +1,16 @@
 //  Problem Statement: Given a sorted array of N integers, 
 // Write a program to find the index of the first and last occurrence of the target key. If the target is not found then return [-1,-1].
 
+// Example 1:
+// Input : N = 7, target = 13, array[] = {3, 4, 13, 13, 13, 20, 40}  
+// Output : 4  
+// Explanation: The target value 13 appears for the first time at index number 2 in the array.  
+
+// Example 2:
+// Input: N = 7, target = 60, array[] = {3, 4, 13, 13, 13, 20, 40}  
+// Output: -1  
+// Explanation: Target value 60 is not present in the array, so the output is -1.
+
 class Main {
 
     // ======================= Brute Force Approach =======================================
@@ -29,7 +39,7 @@ class Main {
 
     // ======================= Better Approach =======================================
     
-        static int[] firstAnsLastOccurence(int[] nums, int target){
+        static int[] firstAnsLastOccurence_1(int[] nums, int target){
 
             int length = nums.length;
             int lastOccurence = -1;
@@ -144,7 +154,7 @@ class Main {
             return last;
         }
 
-        static int[] firstAnsLastOccurence_3(int[] nums, int target){
+        static int[] firstAndLastOccurence_3(int[] nums, int target){
 
             int length = nums.length;
             int first = firstOccurence(nums,target);
