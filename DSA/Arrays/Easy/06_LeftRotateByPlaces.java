@@ -17,32 +17,32 @@ class Main {
     
     // ============================ Brute Force Approach ============================================
 
-    static int[] leftRotateByPlaces(int[] arr,int k){
-        int n = arr.length;
-        k%=n;
+        static int[] leftRotateByPlaces(int[] arr,int k){
+            int n = arr.length;
+            k%=n;
+            
+            if(n==0 || n==1) return arr;
         
-        if(n==0 || n==1) return;
-
-        int[] temp = new int[n];
+            int[] temp = new int[n];
+            
+            for(int i = 0; i < k;i++){
+                temp[i]=arr[i];
+            }
+            
+            for(int i = k;i<n;i++){
+                arr[i-k]=arr[i];
+            }
+            
+            for(int i = n-k ; i<temp.length;i++){
+                arr[i]=temp[i-(n-k)];
+            }
+            
+            for(int i = 0; i<n;i++){
+                System.out.print(arr[i]+" ");
+            }
         
-        for(int i = 0; i < k;i++){
-            temp[i]=arr[i];
+            return arr;
         }
-        
-        for(int i = k;i<n;i++){
-            arr[i-k]=arr[i];
-        }
-        
-        for(int i = n-k ; i<temp.length;i++){
-            arr[i]=temp[i-(n-k)];
-        }
-        
-        for(int i = 0; i<n;i++){
-            System.out.print(arr[i]+" ");
-        }
-
-        return arr;
-    }
 
     // =================================== Optimal Approach =========================================
 
