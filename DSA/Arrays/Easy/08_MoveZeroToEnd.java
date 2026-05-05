@@ -15,45 +15,45 @@ class Main {
 
     // ======================= Brute Force Approach =======================================
 
-    static void moveZerosToEnd(int[] arr){
-        int[] temp = new int[arr.length];
-        int index = 0;
-        for(int i = 0; i < arr.length;i++){
-            if(arr[i]!=0){
-                temp[index]=arr[i];
-                index++;
+        static void moveZerosToEnd(int[] arr){
+            int[] temp = new int[arr.length];
+            int index = 0;
+            for(int i = 0; i < arr.length;i++){
+                if(arr[i]!=0){
+                    temp[index]=arr[i];                        // T.C = O(2N), S.C = O(K[Non-zero numbers])
+                    index++;
+                }
+            }
+            for(int i = 0 ; i < temp.length;i++){
+                arr[i]=temp[i];
+            }
+            for(int i = temp.length;i<arr.length;i++){
+                arr[i]=0;
             }
         }
-        for(int i = 0 ; i < temp.length;i++){
-            arr[i]=temp[i];
-        }
-        for(int i = temp.length;i<arr.length;i++){
-            arr[i]=0;
-        }
-    }
 
     // ======================= Optimal Approach =======================================
     
-    static void moveZerosToEnd_1(int[] arr){
+        static void moveZerosToEnd_1(int[] arr){
 
-        int j = -1;
+            int j = -1;
 
-        for(int i = 0; i < arr.length;i++){
-            if(arr[i]==0){
-                j=i;
-                break;
+            for(int i = 0; i < arr.length;i++){
+                if(arr[i]==0){
+                    j=i;
+                    break;
+                }
+            }
+
+            if(j==-1) return;
+
+            for(int i = j+1;i<arr.length;i++){
+                if(arr[i]!=0){
+                    swap(i,j,arr);
+                    j++;
+                }
             }
         }
-        
-        if(j==-1) return;
-        
-        for(int i = j+1;i<arr.length;i++){
-            if(arr[i]!=0){
-                swap(i,j,arr);
-                j++;
-            }
-        }
-    }
     
     static void swap(int left,int right, int[] arr){
         int temp = arr[left];
