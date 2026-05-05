@@ -44,7 +44,7 @@ class Main {
             int n = arr.length;
 
             for(int i = 1;i<n;i++){
-                arr[i-1]=arr[i];
+                arr[i-1]=arr[i];                            // T.C = O(N), S.C = O(1)
             }
             arr[n-1]=temp;
 
