@@ -23,39 +23,62 @@ class Main {
     
     // ======================= Brute Force Approach =======================================
 
-    static int removeDuplicates(int[]arr){
-        
-        List<Integer> al = new ArrayList<>();
-        int n = arr.length;
-        int index = 0;
-        for(int i = 0 ; i < n ; i++){
-            if(!(al.contains(arr[i]))){                             // T.C = O(N) , S.C = O(N)
-                al.add(arr[i]);
-                arr[index]=arr[i];
-                index++;
+        static int removeDuplicates(int[]arr){
+
+            List<Integer> al = new ArrayList<>();
+            int n = arr.length;
+            int index = 0;
+            for(int i = 0 ; i < n ; i++){
+                if(!(al.contains(arr[i]))){                             // T.C = O(N^2) , S.C = O(Unique Elements)
+                    al.add(arr[i]);
+                    arr[index]=arr[i];
+                    index++;
+                }
             }
+            return index;
         }
-        return index;
-    }
+
+    // ======================= Better Approach =======================================
+
+        public static int[] duplicates(int[] nums){
+            int length = nums.length;
+
+            if(length == 1 || length == 0){
+                return nums;
+            }
+
+            Set<Integer> hs = new HashSet<>();
+            int index = 0;                                            // T.C = O(N), S.C = O(Unique Elements)
+
+            for(int i = 0 ; i < length ;i++){
+                if(!hs.contains(nums[i])){
+                    hs.add(nums[i]);
+                    nums[index] = nums[i];
+                    index++;
+                }
+            }
+
+            return nums;
+        }
     
     
     // ======================= Optimal Approach =======================================
 
-    static int removeDuplicates_1(int[]arr){
-        
-        int n = arr.length;
-        int i = 0;
-        
-        for(int j = 1; j < n ; j++){
-                                                                                
-            if(arr[j]!=arr[i]){
-                arr[i+1]=arr[j];                                    // T.C = O(N) , S.C = O(1)
-                i++;
+        static int removeDuplicates_1(int[]arr){
+
+            int n = arr.length;
+            int i = 0;
+
+            for(int j = 1; j < n ; j++){
+
+                if(arr[j]!=arr[i]){
+                    arr[i+1]=arr[j];                                    // T.C = O(N) , S.C = O(1)
+                    i++;
+                }
             }
+            return i+1;
         }
-        return i+1;
-    }
-    
+
     public static void main(String[] args) {
         int[] arr={1,1,1,2,2,3,3,4};
         int[] nums={1,1,1,2,2,3,3,4};
