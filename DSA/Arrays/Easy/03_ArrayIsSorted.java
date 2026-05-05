@@ -16,27 +16,27 @@
 
 class Main {
 
-    // ======================= Brute-Force Approach =======================================
+    // ======================= Brute-Force Approach ==================================
 
-    static boolean isSorted(int[] arr){
-        int n = arr.length;
-        for(int i = 0; i < n ; i++){
-            for(int j = i+1;j<n;j++){
-                if(!(arr[i]<=arr[j])) return false;
+        static boolean isSorted(int[] arr){
+            int n = arr.length; 
+            for(int i = 0; i < n ; i++){                            
+                for(int j = i+1;j<n;j++){                               // T.C = O(N^2), S.C  O(1)
+                    if(!(arr[i]<=arr[j])) return false;
+                }
             }
+            return true;
         }
-        return true;
-    }
 
     // ======================= Optimal Approach =======================================
 
-    static boolean isSorted_1(int[] arr){
-        int n = arr.length;
-        for(int i = 1; i < n ; i++){
-            if(!(arr[i]>=arr[i-1])) return false;
+        static boolean isSorted_1(int[] arr){
+            int n = arr.length;
+            for(int i = 1; i < n ; i++){
+                if(!(arr[i]>=arr[i-1])) return false;               // T.C = O(N), S.C  O(1)
+            }
+            return true;
         }
-        return true;
-    }
     public static void main(String[] args) {
         int[] arr = {1,7,2,3,4,5};
         boolean result = isSorted(arr);
