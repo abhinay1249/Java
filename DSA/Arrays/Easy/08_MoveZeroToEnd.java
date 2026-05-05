@@ -42,7 +42,7 @@ class Main {
                 if(arr[i]==0){
                     j=i;
                     break;
-                }
+                }                                               // T.C = O(N), S.C = O(1)
             }
 
             if(j==-1) return;
