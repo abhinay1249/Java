@@ -17,87 +17,87 @@ class Main {
     
     // ======================= Brute Force Approach  =======================================
 
-    static int missingNumber(int[] arr){
-        int length = arr.length;
-        int missingNumber = -1;
-        for(int i = 0 ; i <= length ; i++){
-            int flag = 0;
-            for(int j = 0; j < length ; j++){
-                if(arr[j] == i){
-                    flag=1;
-                    break;
+        static int missingNumber(int[] arr){
+            int length = arr.length;
+            int missingNumber = -1;
+            for(int i = 0 ; i <= length ; i++){
+                int flag = 0;
+                for(int j = 0; j < length ; j++){
+                    if(arr[j] == i){
+                        flag=1;
+                        break;
+                    }
+                }
+                if(flag==0){
+                    missingNumber = i;
                 }
             }
-            if(flag==0){
-                missingNumber = i;
-            }
+            return missingNumber;
         }
-        return missingNumber;
-    }
 
     // ======================= Better Approach Using MAP =======================================
 
-    static int missingNumber_1(int[] arr){
-        
-        int missing = -1;
-        Map<Integer,Integer> freqCount = new HashMap<>();
-        int length = arr.length;
-        
-        for(int i = 0; i <= length;i++){
-            freqCount.put(i,freqCount.getOrDefault(i,0)+1);    
-        }
-        for(int i = 0; i < length;i++){
-            freqCount.put(arr[i],freqCount.getOrDefault(arr[i],0)+1);
-        }
-        
-        for(Map.Entry<Integer,Integer> value : freqCount.entrySet()){
-            if(value.getValue()==1){
-                missing = value.getKey();
-                break;
+        static int missingNumber_1(int[] arr){
+
+            int missing = -1;
+            Map<Integer,Integer> freqCount = new HashMap<>();
+            int length = arr.length;
+
+            for(int i = 0; i <= length;i++){
+                freqCount.put(i,freqCount.getOrDefault(i,0)+1);    
             }
+            for(int i = 0; i < length;i++){
+                freqCount.put(arr[i],freqCount.getOrDefault(arr[i],0)+1);
+            }
+
+            for(Map.Entry<Integer,Integer> value : freqCount.entrySet()){
+                if(value.getValue()==1){
+                    missing = value.getKey();
+                    break;
+                }
+            }
+            return missing;
         }
-        return missing;
-    }
 
     // ======================= Optimal Approach Using MATH =======================================
     
-    static int missingNumber_2(int[] arr){
-        int length = arr.length;
-        
-        int sumOfNumbers = length*(length+1)/2;
-        
-        int arraySum = 0;
-        
-        for(int i = 0 ; i < length ; i++){
-            arraySum+=arr[i];
+        static int missingNumber_2(int[] arr){
+            int length = arr.length;
+
+            int sumOfNumbers = length*(length+1)/2;
+
+            int arraySum = 0;
+
+            for(int i = 0 ; i < length ; i++){
+                arraySum+=arr[i];
+            }
+
+            int missingNumber = sumOfNumbers - arraySum;
+
+            return missingNumber;
         }
-        
-        int missingNumber = sumOfNumbers - arraySum;
-        
-        return missingNumber;
-    }
     
     // ======================= Best Optimal Approach Using XOR =======================================
 
-    static int missingNumber_3(int[] arr){
-        int xor1 = 0;
-        int xor2 = 0;
-        int length = arr.length;
-        
-        // for(int i = 1 ; i <= length ;i++){
-        //     xor1^=i;
-        // }
-        
-        for(int i = 0 ; i < length ;i++){
-            xor2^=arr[i];
-            xor1^=(i+1);
+        static int missingNumber_3(int[] arr){
+            int xor1 = 0;
+            int xor2 = 0;
+            int length = arr.length;
+            
+            // for(int i = 1 ; i <= length ;i++){
+            //     xor1^=i;
+            // }
+            
+            for(int i = 0 ; i < length ;i++){
+                xor2^=arr[i];
+                xor1^=(i+1);
+            }
+            xor1^=length+1;
+            
+            int missingNumber = xor1^xor2;
+            
+            return missingNumber; 
         }
-        xor1^=length+1;
-        
-        int missingNumber = xor1^xor2;
-        
-        return missingNumber; 
-    }
     
 
     public static void main(String[] args) {
