@@ -57,75 +57,75 @@ class Main {
     
     // ======================= Brute Force Approach USING SET =======================================
     
-    static List<Integer> unionOfSortedArrays_1(int[] arr_1,int[] arr_2){
-        
-        Set<Integer> freq = new HashSet<>();
-        
-        for(int i = 0; i < arr_1.length;i++){
-            freq.add(arr_1[i]);
+        static List<Integer> unionOfSortedArrays_1(int[] arr_1,int[] arr_2){
+
+            Set<Integer> freq = new HashSet<>();
+
+            for(int i = 0; i < arr_1.length;i++){
+                freq.add(arr_1[i]);
+            }
+            for(int i = 0 ; i < arr_2.length;i++){           
+                freq.add(arr_2[i]);
+            }
+
+            List<Integer> unionOfArrays = new ArrayList<>();
+
+            freq.forEach((i) -> unionOfArrays.add(i));
+
+            for(int i : unionOfArrays){             // T.C = O(N) + O(M) + O(X) + O(X LOG X) where X = No of Unique Elements, S.C = O(X)
+                System.out.print(i+" ");
+            }
+            return unionOfArrays;
+            // return new ArrayList<>(freq);
         }
-        for(int i = 0 ; i < arr_2.length;i++){
-            freq.add(arr_2[i]);
-        }
-        
-        List<Integer> unionOfArrays = new ArrayList<>();
-        
-        freq.forEach((i) -> unionOfArrays.add(i));
-        
-        for(int i : unionOfArrays){
-            System.out.print(i+" ");
-        }
-        return unionOfArrays;
-        // return new ArrayList<>(freq);
-    }
 
     // ======================= Optimal Approach =======================================
     
-    static List<Integer> unionOfSortedArrays_2(int[] arr_1,int[] arr_2){
-        
-        int n = arr_1.length;
-        int m = arr_2.length;
-        List<Integer> union = new ArrayList<>();;
-        int i=0, j=0;
-        
-        while(i<n && j<m){
-            if(arr_1[i] < arr_2[j]){
+        static List<Integer> unionOfSortedArrays_2(int[] arr_1,int[] arr_2){
+
+            int n = arr_1.length;
+            int m = arr_2.length;
+            List<Integer> union = new ArrayList<>();;
+            int i=0, j=0;
+
+            while(i<n && j<m){
+                if(arr_1[i] < arr_2[j]){
+                    if(union.size()==0 || union.get(union.size()-1)!=arr_1[i]){
+                        union.add(arr_1[i]);
+                    }
+                    i++;
+                }else if(arr_1[i]>arr_2[j]){
+                    if(union.size()==0 || union.get(union.size()-1)!=arr_2[j]){
+                        union.add(arr_2[j]);
+                    }
+                    j++;
+                }else{
+                    if(union.size()==0 || union.get(union.size()-1)!=arr_1[i]){
+                        union.add(arr_1[i]);
+                    }
+                    i++;
+                    j++;                                    // T.C = O(N + M), S.C = O(1)
+                }
+            }
+
+            while(i<n){
                 if(union.size()==0 || union.get(union.size()-1)!=arr_1[i]){
                     union.add(arr_1[i]);
                 }
                 i++;
-            }else if(arr_1[i]>arr_2[j]){
+            }
+
+            while(j<m){
                 if(union.size()==0 || union.get(union.size()-1)!=arr_2[j]){
                     union.add(arr_2[j]);
                 }
                 j++;
-            }else{
-                if(union.size()==0 || union.get(union.size()-1)!=arr_1[i]){
-                    union.add(arr_1[i]);
-                }
-                i++;
-                j++;
             }
-        }
-        
-        while(i<n){
-            if(union.size()==0 || union.get(union.size()-1)!=arr_1[i]){
-                union.add(arr_1[i]);
+            for(int k :union){
+                System.out.print(k+" ");
             }
-            i++;
+            return union;
         }
-        
-        while(j<m){
-            if(union.size()==0 || union.get(union.size()-1)!=arr_2[j]){
-                union.add(arr_2[j]);
-            }
-            j++;
-        }
-        for(int k :union){
-            System.out.print(k+" ");
-        }
-        return union;
-    }
     public static void main(String[] args) {    
         int[] arr_1 = {1,2,3,4,5,7};
         int[] arr_2 = {2,3,4,6,6};
