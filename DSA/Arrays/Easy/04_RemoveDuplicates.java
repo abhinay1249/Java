@@ -23,7 +23,7 @@ class Main {
     
     // ======================= Brute Force Approach =======================================
 
-        static int removeDuplicates(int[]arr){
+        public static int removeDuplicates(int[]arr){
 
             List<Integer> al = new ArrayList<>();
             int n = arr.length;
@@ -40,7 +40,7 @@ class Main {
 
     // ======================= Better Approach =======================================
 
-        public static int[] duplicates(int[] nums){
+        public static int[] removeDuplicates_1(int[] nums){
             int length = nums.length;
 
             if(length == 1 || length == 0){
@@ -64,7 +64,7 @@ class Main {
     
     // ======================= Optimal Approach =======================================
 
-        static int removeDuplicates_1(int[]arr){
+        static int removeDuplicates_2(int[]arr){
 
             int n = arr.length;
             int i = 0;
@@ -83,11 +83,12 @@ class Main {
         int[] arr={1,1,1,2,2,3,3,4};
         int[] nums={1,1,1,2,2,3,3,4};
         int result = removeDuplicates(arr);
-        int result1 = removeDuplicates_1(nums);
+        int[] result1 = removeDuplicates_1(arr);
+        int result2 = removeDuplicates_2(nums);
         System.out.println("Unique: "+result);
         System.out.println("Unique: "+result1);
         
-        for(int i = 0; i <result;i++){
+        for(int i = 0; i < result1.length;i++){
             System.out.print(arr[i]+" ");
         }
     }
