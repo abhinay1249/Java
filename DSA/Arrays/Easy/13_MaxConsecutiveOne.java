@@ -23,7 +23,7 @@ class Main {
             int count = 0;
 
             for(int i = 0; i < nums.length ; i++){
-                for(int j = i ; j < nums.length ; j++){
+                for(int j = i ; j < nums.length ; j++){                // T.C = O(N^3), S.C = O(1)
 
                     boolean allOnes = true;
 
@@ -50,11 +50,11 @@ class Main {
             int maxConsecutive = Integer.MIN_VALUE;
 
             for(int i = 0 ; i < nums.length ; i++){
-                for(int j = i ; j < nums.length; j++){
+                for(int j = i ; j < nums.length; j++){          // T.C = O(N^2), S.C = O(1)
                     if(nums[j]==1){
                         maxConsecutive = Math.max(maxConsecutive,j-i+1);
                     }else{
-                        break;
+                        break;                                          
                     }
                 }
             }
@@ -67,10 +67,10 @@ class Main {
             int arrayLength = nums.length;
             int count = 0;
             int maxConsecutive = Integer.MIN_VALUE;
-            
+
             for(int i = 0 ; i < arrayLength ; i++){
                 if(nums[i]==1){
-                    count++;
+                    count++;                                    // T.C = O(N), S.C = O(1)
                 }else{
                     count = 0;
                 }
