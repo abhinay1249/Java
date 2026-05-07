@@ -45,39 +45,39 @@ class Main {
 
     // ======================= Better Approach =======================================
 
-    static int maxConsecutiveOne_1(int[] nums){
+        static int maxConsecutiveOne_1(int[] nums){
 
-        int maxConsecutive = Integer.MIN_VALUE;
+            int maxConsecutive = Integer.MIN_VALUE;
 
-        for(int i = 0 ; i < nums.length ; i++){
-            for(int j = i ; j < nums.length; j++){
-                if(nums[j]==1){
-                    maxConsecutive = Math.max(maxConsecutive,j-i+1);
-                }else{
-                    break;
+            for(int i = 0 ; i < nums.length ; i++){
+                for(int j = i ; j < nums.length; j++){
+                    if(nums[j]==1){
+                        maxConsecutive = Math.max(maxConsecutive,j-i+1);
+                    }else{
+                        break;
+                    }
                 }
             }
+            return maxConsecutive;
         }
-        return maxConsecutive;
-    }
 
     // ======================= Optimal Approach =======================================
 
-    static int maxConsecutiveOne_2(int[] nums){
-        int arrayLength = nums.length;
-        int count = 0;
-        int maxConsecutive = Integer.MIN_VALUE;
-        
-        for(int i = 0 ; i < arrayLength ; i++){
-            if(nums[i]==1){
-                count++;
-            }else{
-                count = 0;
+        static int maxConsecutiveOne_2(int[] nums){
+            int arrayLength = nums.length;
+            int count = 0;
+            int maxConsecutive = Integer.MIN_VALUE;
+            
+            for(int i = 0 ; i < arrayLength ; i++){
+                if(nums[i]==1){
+                    count++;
+                }else{
+                    count = 0;
+                }
+                maxConsecutive = Math.max(count,maxConsecutive);
             }
-            maxConsecutive = Math.max(count,maxConsecutive);
+            return maxConsecutive;
         }
-        return maxConsecutive;
-    }
 
     public static void main(String[] args) {
         int[] nums = {1, 1, 0, 1, 1, 1};
