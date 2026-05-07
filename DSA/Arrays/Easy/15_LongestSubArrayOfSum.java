@@ -64,7 +64,7 @@ class Main {
 		    return maxSubArrayLength;
     	}
 
-	// ======================= Better Approach 	USING PREFIX SUM =======================================
+	// ======================= Better Approach USING PREFIX SUM =======================================
 
 		static int longestSubArray_2(int[] nums, int k){
 		
