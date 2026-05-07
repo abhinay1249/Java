@@ -16,7 +16,7 @@ class Main {
 		    		int sumOfElements = 0;
 				
 		    		for(int k = i ; k <= j; k++){
-		    			sumOfElements += nums[k];
+		    			sumOfElements += nums[k];								// T.C = O(N^3) , S.C = O(1)
 		    		}
 		    		if(sumOfElements == value){
 		    			maxSubArrayLength = Math.max(maxSubArrayLength, j-i+1);
@@ -29,7 +29,7 @@ class Main {
 		    return maxSubArrayLength;
     	}
 
-	// ======================= Better Approach ============================
+	// ======================= Better Approach =======================================
 
     	static int longestSubArray_1(int[] nums, int value){
 
@@ -37,7 +37,7 @@ class Main {
 		
 		    for(int i = 0; i < nums.length ; i++){
 				int sumOfElements = 0;
-		    	for(int j = i ; j < nums.length ; j++){
+		    	for(int j = i ; j < nums.length ; j++){						// T.C = O(N^2) , S.C = O(1)
 		    		sumOfElements += nums[j];
 		    		if(sumOfElements == value){
 		    			maxSubArrayLength = Math.max(maxSubArrayLength, j-i+1);
@@ -62,7 +62,7 @@ class Main {
 		    	prefixSum+=nums[i];
 			
 		    	if(prefixSum == k){
-		    		maxSubArrayLength = Math.max(maxSubArrayLength, i+1);	
+		    		maxSubArrayLength = Math.max(maxSubArrayLength, i+1);				// T.C = O(N), S.C = O(N)
 		    	}
 
 		    	else if(prefixSumMap.containsKey(prefixSum - k)){
