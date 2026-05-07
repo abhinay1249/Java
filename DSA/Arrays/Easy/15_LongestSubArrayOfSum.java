@@ -93,7 +93,7 @@ class Main {
 		static int longestSubArray_3(int[] nums, int k){
 
 			int maxLength = 0;
-			int sum = nums[0];
+			int sum = 0;
 			int i = 0, j = 0;
 
 			while(j<nums.length){
