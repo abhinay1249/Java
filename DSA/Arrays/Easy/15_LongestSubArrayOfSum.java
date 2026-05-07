@@ -8,97 +8,97 @@ class Main {
     
 	// ======================= Brute Force Approach =======================================
 
-    static int longestSubArray(int[] nums, int value){
+    	static int longestSubArray(int[] nums, int value){
 
-	    int maxSubArrayLength = 0;
-	    
-	    for(int i = 0; i < nums.length ; i++){
-	    	for(int j = i ; j < nums.length ; j++){
-	    		int sumOfElements = 0;
-	    		
-	    		for(int k = i ; k <= j; k++){							// T.C = O(N^3) , S.C = O(1)
-	    			sumOfElements += nums[k];
-	    		}
-	    		if(sumOfElements == value){
-	    			maxSubArrayLength = Math.max(maxSubArrayLength, j-i+1);
-	    		}
-	    	}
-	    }
-	    if(maxSubArrayLength == 0){
-	    	return 0;
-	    }
-	    return maxSubArrayLength;
-    }
+		    int maxSubArrayLength = 0;
+		
+		    for(int i = 0; i < nums.length ; i++){
+		    	for(int j = i ; j < nums.length ; j++){
+		    		int sumOfElements = 0;
+				
+		    		for(int k = i ; k <= j; k++){							// T.C = O(N^3) , S.C = O(1)
+		    			sumOfElements += nums[k];
+		    		}
+		    		if(sumOfElements == value){
+		    			maxSubArrayLength = Math.max(maxSubArrayLength, j-i+1);
+		    		}
+		    	}
+		    }
+		    if(maxSubArrayLength == 0){
+		    	return 0;
+		    }
+		    return maxSubArrayLength;
+    	}
 
 	// ======================= Better Brute Force Approach ============================
 
-    static int longestSubArray_1(int[] nums, int value){
+    	static int longestSubArray_1(int[] nums, int value){
 
-	    int maxSubArrayLength = 0;
-	    
-	    for(int i = 0; i < nums.length ; i++){
-			int sumOfElements = 0;	
-	    	for(int j = i ; j < nums.length ; j++){								// T.C = O(N^2) , S.C = O(1)
-	    		sumOfElements += nums[j];
-	    		if(sumOfElements == value){
-	    			maxSubArrayLength = Math.max(maxSubArrayLength, j-i+1);
-	    		}
-	    	}
-	    }
-	    if(maxSubArrayLength == 0){
-	    	return 0;
-	    }
-	    return maxSubArrayLength;
-    }
+		    int maxSubArrayLength = 0;
+		
+		    for(int i = 0; i < nums.length ; i++){
+				int sumOfElements = 0;	
+		    	for(int j = i ; j < nums.length ; j++){								// T.C = O(N^2) , S.C = O(1)
+		    		sumOfElements += nums[j];
+		    		if(sumOfElements == value){
+		    			maxSubArrayLength = Math.max(maxSubArrayLength, j-i+1);
+		    		}
+		    	}
+		    }
+		    if(maxSubArrayLength == 0){
+		    	return 0;
+		    }
+		    return maxSubArrayLength;
+    	}
 
 	// ======================= Better Approach 	USING PREFIX SUM =======================================
 
-	static int longestSubArray_2(int[] nums, int k){
-	
-	    int prefixSum = 0;
-	    int maxSubArrayLength = 0;
+		static int longestSubArray_2(int[] nums, int k){
+		
+		    int prefixSum = 0;
+		    int maxSubArrayLength = 0;
 
-	    Map<Integer, Integer> indexing = new HashMap<>();
+		    Map<Integer, Integer> indexing = new HashMap<>();
 
-	    for(int i = 0 ; i < nums.length ; i++){									// T.C = O(N) + O(N LOG M) , S.C = O(N)
-																				
-		    prefixSum+=nums[i];
+		    for(int i = 0 ; i < nums.length ; i++){									// T.C = O(N) + O(N LOG M) , S.C = O(N)
 
-		    if(prefixSum == k){
-			    maxSubArrayLength = i+1;
-		    }else if(indexing.containsKey(prefixSum-k)){
-			    maxSubArrayLength = Math.max(maxSubArrayLength, i - indexing.get(prefixSum-k));
+			    prefixSum+=nums[i];
+
+			    if(prefixSum == k){
+				    maxSubArrayLength = i+1;
+			    }else if(indexing.containsKey(prefixSum-k)){
+				    maxSubArrayLength = Math.max(maxSubArrayLength, i - indexing.get(prefixSum-k));
+			    }
+
+			    indexing.putIfAbsent(prefixSum, i);
 		    }
-			
-		    indexing.putIfAbsent(prefixSum, i);
-	    }
-	    return maxSubArrayLength;
-    }
+		    return maxSubArrayLength;
+    	}
 
 	// ======================== Optimal Approach =======================================
 
-	static int longestSubArray_3(int[] nums, int k){
-
-		int maxLength = 0;
-		int sum = nums[0];
-		int i = 0, j = 0;
-
-		while(j<nums.length){
-			sum+=nums[j];
-
-			while(i <= j && sum>k){
-				sum-=nums[i];
-				i++;
-			}
-
-			if(sum==k){
-				maxLength = Math.max(maxLength, j-i+1);				// T.C = O(N), S.C = O(1) 
-			}
+		static int longestSubArray_3(int[] nums, int k){
+		
+			int maxLength = 0;
+			int sum = nums[0];
+			int i = 0, j = 0;
+		
+			while(j<nums.length){
+				sum+=nums[j];
 			
-			j++;
+				while(i <= j && sum>k){
+					sum-=nums[i];
+					i++;
+				}
+			
+				if(sum==k){
+					maxLength = Math.max(maxLength, j-i+1);				// T.C = O(N), S.C = O(1) 
+				}
+				
+				j++;
+			}
+			return maxLength;
 		}
-		return maxLength;
-	}
     
     public static void main(String[] args) {
         int[] nums = {10,5,8,3,7,1,9};
