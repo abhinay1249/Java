@@ -1,84 +1,96 @@
 // Problem Statement: Given a non-empty array of integers arr, every element appears twice except for one. Find that single one.
 
+// Example 1:
+// Input Format: arr[] = {2,2,1}
+// Result: 1
+// Explanation: In this array, only the element 1 appear once and so it is the answer.
+
+
+// Example 2:
+// Input Format: arr[] = {4,1,2,1,2}
+// Result: 4
+// Explanation: In this array, only element 4 appear once and the other elements appear twice. So, 4 is the answer.
+
+
 import java.util.*;
 
 class Main {
     
     // ======================= Brute Force Approach =======================================
 
-    static int appearsOnce(int[] nums){
+        static int appearsOnce(int[] nums){
 
-        int appearOnce = 0;
-        for(int i = 0 ; i < nums.length; i++){
-            int count = 0;
-            for(int j = 0; j < nums.length ; j++){                          //T.C = O(N^2), S.C = O(1)
-                if(nums[i]==nums[j]){
-                    count++;
+            int appearOnce = 0;
+            for(int i = 0 ; i < nums.length; i++){
+                int count = 0;
+                for(int j = 0; j < nums.length ; j++){                          //T.C = O(N^2), S.C = O(1)
+                    if(nums[i]==nums[j]){
+                        count++;
+                    }
+                }
+                if(count == 1){
+                    appearOnce = nums[i];
                 }
             }
-            if(count == 1){
-                appearOnce = nums[i];
-            }
+            return appearOnce;
         }
-        return appearOnce;
-    }
 
     // ======================= Brute Force Approach Using Array =======================================
 
-    static int appearsOnce_1(int[] nums){
-            
-        int appearOnce = 0;
-        int[] temp = new int[nums.length];
-        
-        for(int i = 0 ; i < nums.length ; i++){
-            for(int j = i+1 ; j < nums.length ; j++){
-                if(nums[i] == nums[j]){
-                    temp[i] = 1;                                                // T.C = O(N^2) + O(N) , S.C = O(N)
-                    temp[j] = 1;
-                    break;
+        static int appearsOnce_1(int[] nums){
+
+            int appearOnce = 0;
+            int[] temp = new int[nums.length];
+
+            for(int i = 0 ; i < nums.length ; i++){
+                for(int j = i+1 ; j < nums.length ; j++){
+                    if(nums[i] == nums[j]){
+                        temp[i] = 1;                                                // T.C = O(N^2) + O(N) , S.C = O(N)
+                        temp[j] = 1;
+                        break;
+                    }
                 }
             }
+
+            for(int i=0;i<temp.length;i++){
+                if(temp[i]==0){
+                    appearOnce = nums[i];
+                } 
+            }
+            return appearOnce;
         }
-        
-        for(int i=0;i<temp.length;i++){
-            if(temp[i]==0){
-                appearOnce = nums[i];
-            } 
-        }
-        return appearOnce;
-    }
     
     // ======================= Better Approach Using MAP =======================================
 
-    static int appearsOnce_2(int[] nums){
+        static int appearsOnce_2(int[] nums){
 
-        int arrayLength = nums.length;
-        int appearOnce = 0;
-        Map<Integer,Integer> freqCount = new HashMap<>();
-    
-        for(int i = 0; i < arrayLength ; i++){
-            freqCount.put(nums[i],freqCount.getOrDefault(nums[i],0)+1);             // T.C = O(N log M)+O(N) , S.C = O(N)
-        }
-    
-        for(Map.Entry<Integer,Integer> value : freqCount.entrySet()){
-            if(value.getValue() == 1){
-                 appearOnce = value.getKey();
+            int arrayLength = nums.length;
+            int appearOnce = 0;
+            Map<Integer,Integer> freqCount = new HashMap<>();                   // T.C = O(N log M)+O(N) , S.C = O(N)
+        
+            for(int i = 0; i < arrayLength ; i++){
+                freqCount.put(nums[i],freqCount.getOrDefault(nums[i],0)+1);             
             }
+        
+            for(Map.Entry<Integer,Integer> value : freqCount.entrySet()){
+                if(value.getValue() == 1){
+                     appearOnce = value.getKey();
+                }
+            }
+            return appearOnce;
         }
-        return appearOnce;
-    }
 
     // ======================= Optimal Approach  =======================================
     
-    static int appearsOnce_3(int[] nums){
-        
-        int appearOnce = 0;
-        
-        for(int i = 0; i < nums.length ; i++){                          // T.C = O(N) , S.C = O(1)
-            appearOnce^=nums[i];
-        }
-        return appearOnce;
-    }   
+        static int appearsOnce_3(int[] nums){
+            
+            int appearOnce = 0;
+            
+            for(int i = 0; i < nums.length ; i++){                          // T.C = O(N) , S.C = O(1)
+                appearOnce^=nums[i];
+            }
+            return appearOnce;
+        }   
     
     public static void main(String[] args) {
         int[] nums = {1,1,2,2,3};
