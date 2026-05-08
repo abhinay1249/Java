@@ -55,7 +55,7 @@ class Main {
 		    return indices;
     	}
 
-	// ======================= Better Approach Variant - 1 =======================================
+	// ======================= Better Approach - Variant - 1 =======================================
     
     	static Boolean twoSum_2(int[] nums, int target){
 		
@@ -71,9 +71,8 @@ class Main {
 		    return false;
     	}
 
-	// ======================= Optimal Approach Variant -2 =======================================
+	// ======================= Optimal Approach - Variant - 2 =======================================
     
-
     	static int[] twoSum_3(int[] nums, int target){
 		
 		    Map<Integer, Integer> twoSumMap = new TreeMap<>();
@@ -88,7 +87,7 @@ class Main {
 		    return new int[]{-1,-1};
     	}
 	
-	// ======================= Optimal Approach Variant- 1 =======================================
+	// ======================= Optimal Approach - Variant- 1 =======================================
     
 
     	static Boolean twoSum_4(int[] nums, int target){
