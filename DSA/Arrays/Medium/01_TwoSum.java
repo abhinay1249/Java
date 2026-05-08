@@ -112,19 +112,26 @@ class Main {
     public static void main(String[] args) {
         int[] nums = {2,6,5,8,11};
         int target = 14;
+
         boolean result = twoSum(nums,target);
         System.out.println(result);
+		
 		List<Integer> result_1 = new ArrayList<>(twoSum_1(nums,target));
-        for(int i : result_1){
+        
+		for(int i : result_1){
             System.out.println(i);
         }
-        boolean result_2 = twoSum_2(nums,target);
+        
+		boolean result_2 = twoSum_2(nums,target);
         System.out.println(result_2);
-        int[] result_3 = twoSum_3(nums,target);
-        for(int i=0;i<result_3.length;i++){
+        
+		int[] result_3 = twoSum_3(nums,target);
+        
+		for(int i=0;i<result_3.length;i++){
             System.out.println(result_3[i]);
         }
-        boolean result_4 = twoSum_4(nums,target);
+        
+		boolean result_4 = twoSum_4(nums,target);
         System.out.println(result_4);
     }
 }
