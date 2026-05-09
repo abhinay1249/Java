@@ -48,7 +48,7 @@ class Main {
 	
 	    Map<Integer,Integer> freqCount = new TreeMap<>();
 	
-	    for(int i = 0; i < nums.length; i++){												// T.C = O(N log M) + O(N) S.C = O(1)
+	    for(int i = 0; i < nums.length; i++){												// T.C = O(M + N) S.C = O(M)
 		    freqCount.put(nums[i],freqCount.getOrDefault(nums[i],0)+1);
 	    }
 	
