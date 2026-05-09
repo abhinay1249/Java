@@ -112,7 +112,6 @@ class Main {
 	        for(int i = n-1 ; i > index ; i--){
             
 	    	    if(nums[i]>nums[index]){
-                
 	    		    swap(i, index, nums);
 	    		    break;		
 	    	    }
