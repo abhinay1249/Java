@@ -73,12 +73,11 @@ class Main {
                 
 	    		    if(nums[i][j] == 0){
 	    			    mapRows[i] = 1;
-	    			    mapCols[j] = 1;
+	    			    mapCols[j] = 1;                     // T.C = O(N * M) + O(N * M),  S.C = O(N + M)
 	    		    }
 	    	    }
 	        }
     
-
 	        for(int i = 0 ; i < n ; i++){
 	    	    for(int j = 0 ; j < m ; j++){
                 
@@ -111,7 +110,7 @@ class Main {
             }
 
             for(int i = 1 ; i < n ; i++){
-                for(int j = 1 ; j < m ; j++){
+                for(int j = 1 ; j < m ; j++){                   // T.C = O(N * M) + O(N * M),  S.C = O(1)
                     if(nums[i][j]!=0){
                         if(nums[0][j]==0 || nums[i][0]==0){
                             nums[i][j] = 0;
@@ -134,10 +133,12 @@ class Main {
     public static void main(String[] args) {
         int[][] matrix={{0,1,2,0},{3,4,5,2},{1,3,1,5}};
         int[][] matrix_1={{0,1,2,0},{3,4,5,2},{1,3,1,5}};
-        int[][] matrix_2={{0,1,2,0},{3,4,5,2},{1,3,1,5}};
+        int[][] matrix_2={{1,1,1,1},{1,0,1,1},{1,1,0,1},{0,1,1,1}};
+
         int[][] res = setMatrixZeros(matrix);
         int[][] res_1 = setMatrixZeros_1(matrix_1);
         int[][] res_2 = setMatrixZeros_2(matrix_2);
+        
         for(int i = 0 ; i < res_2.length ; i++){
             for(int j = 0 ; j < res_2[0].length ; j++){
                 System.out.print(res_2[i][j]+" ");
