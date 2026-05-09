@@ -38,7 +38,7 @@ class Main {
 
     // ======================= Optimal Approach =======================================
 
-        static void reverse(int left, int right, int row, int[][]rotated){
+        private static void reverse(int left, int right, int row, int[][]rotated){
         
 	        while(left<right){
 	    	    int temp = rotated[row][left];
@@ -49,13 +49,13 @@ class Main {
         	}
         }
 
-        static void swap(int left, int right, int[][] nums){
+        private static void swap(int left, int right, int[][] nums){
             int temp = nums[left][right];                                   // T.C = O(N/2 * N/2) + O(N * N/2), S.C = O(1)
             nums[left][right] = nums[right][left];
             nums[right][left] = temp;
         }
 
-        static int[][] rotateMatrix_1(int[][] nums){
+        public static int[][] rotateMatrix_1(int[][] nums){
         
 	        int n = nums.length;
 
