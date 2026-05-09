@@ -38,7 +38,7 @@ class Main {
         	int m = nums[0].length;
 
         	for(int i = 0 ; i < n ; i++){
-        		for(int j = 0 ; j < m ; j++){
+        		for(int j = 0 ; j < m ; j++){               // T.C = O(N * M * (N+M)) + O(N * M),  S.C = O(1)
                 
         			if(nums[i][j] == 0){
                     
