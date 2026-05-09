@@ -1,3 +1,7 @@
+// Problem Statement: Given an array of integers, find all the leaders in the array. 
+// An element is a leader if it is greater than all the elements to its right side. 
+// The rightmost element is always a leader.
+
 // Example 1:
 // Input: arr = [4, 7, 1, 0]  
 // Output: 7 1 0  
