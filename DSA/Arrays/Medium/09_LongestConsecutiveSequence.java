@@ -59,7 +59,7 @@ class Main {
                 if(nums[i] == nums[i-1]){                         // T.C = O(N LOG N) + O(N), S.C = O(1)
                     continue;
                 }
-                else if(nums[i] - nums[i-1] == 1){                       // T.C = O(N LOG N) + O(N), S.C = O(1)
+                else if(nums[i] - nums[i-1] == 1){                      
                     count++;
                 }else{
                     count = 1;
