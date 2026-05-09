@@ -34,7 +34,7 @@ class Main {
             for(int i : nums) current.add(i);
         
             for(int i = 0 ; i < ans.size() ; i++){
-                if(ans.get(i).equals(current)){                 // T.C = O(N! * N), S.C = O(N!)  
+                if(ans.get(i).equals(current)){                 // T.C = O(N! * N) + O(N! * N), S.C = O(N! * N) + O(N)  
                     if(i == ans.size()-1){
                         return ans.get(0);
                     }
