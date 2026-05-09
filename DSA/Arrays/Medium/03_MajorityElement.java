@@ -21,78 +21,78 @@ class Main {
 
 	// ======================= Brute Force Approach =======================================
 	
-    static int majorityElement(int[] nums){
-	    
-	    int element = -1;
-	    int lengthOfArray = nums.length;
-	    int maxCount = 0;
-
-	    for(int i = 0 ; i < nums.length;i++){
-	        int count = 0;												// T.C = O(N^2) S.C = O(1)
-		    for(int j = 0 ; j < nums.length ; j++){
-			    if(nums[i]==nums[j]){
-				    count++;
+    	static int majorityElement(int[] nums){
+		
+		    int element = -1;
+		    int lengthOfArray = nums.length;
+		    int maxCount = 0;
+		
+		    for(int i = 0 ; i < nums.length;i++){
+		        int count = 0;												// T.C = O(N^2) S.C = O(1)
+			    for(int j = 0 ; j < nums.length ; j++){
+				    if(nums[i]==nums[j]){
+					    count++;
+				    }
 			    }
+			  if(count > (lengthOfArray/2)){
+			    element = nums[i];
+			    break;
+			  }
 		    }
-		  if(count > (lengthOfArray/2)){
-		    element = nums[i];
-		    break;
-		  }
-	    }
-	    return element;
-    }
+		    return element;
+    	}
     
 	// ======================= Better Approach =======================================
 
-    static int majorityElement_1(int[] nums){
-	
-	    Map<Integer,Integer> freqCount = new HashMap<>();
-	
-	    for(int i = 0; i < nums.length; i++){												// T.C = O(M + N) S.C = O(M)
-		    freqCount.put(nums[i],freqCount.getOrDefault(nums[i],0)+1);
-	    }
-	
-	    int majorityElement = 0;
-	
-	    for(Map.Entry<Integer,Integer> value : freqCount.entrySet()){
-		    if(value.getValue() > nums.length/2){
-			    majorityElement = value.getKey();
+    	static int majorityElement_1(int[] nums){
+		
+		    Map<Integer,Integer> freqCount = new HashMap<>();
+		
+		    for(int i = 0; i < nums.length; i++){												// T.C = O(M + N) S.C = O(M)
+			    freqCount.put(nums[i],freqCount.getOrDefault(nums[i],0)+1);
 		    }
+		
+		    int majorityElement = 0;
+		
+		    for(Map.Entry<Integer,Integer> value : freqCount.entrySet()){
+			    if(value.getValue() > nums.length/2){
+				    majorityElement = value.getKey();
+			    }
+    		}
+		    return majorityElement;
     	}
-	    return majorityElement;
-    }
 
 	// ======================= Optimal Approach [MOORE'S VOTING ALGORITHM] =======================================
 
-	static int majorityElement_2(int[] nums){
-	    int element = nums[0];
-	    int count = 0;
-		int counter = 0;
+		static int majorityElement_2(int[] nums){
+		    int element = nums[0];
+		    int count = 0;
+			int counter = 0;
 
-	    for(int i = 0 ; i < nums.length ; i++){
-		    if(element == nums[i]){
-			    count++;
-		    }else if(element != nums[i]){
-			    count--;
-		    }															// T.C = O(N) + O(N) S.C = O(1)
+		    for(int i = 0 ; i < nums.length ; i++){
+			    if(element == nums[i]){
+				    count++;
+			    }else if(element != nums[i]){
+				    count--;
+			    }															// T.C = O(N) + O(N) S.C = O(1)
 
-		    if(count == 0){
-				count=1;
-			    element = nums[i];
-		    }   
-	    }
-	
-	    for(int i : nums){
-		    if(element == i){
-			    counter++;
+			    if(count == 0){
+					count=1;
+				    element = nums[i];
+			    }   
 		    }
-		    if(counter>nums.length/2){
-		        return i;
-	        }
-	    }
+		
+		    for(int i : nums){
+			    if(element == i){
+				    counter++;
+			    }
+			    if(counter>nums.length/2){
+			        return i;
+		        }
+		    }
 
-	    return -1;
-    }
+		    return -1;
+    	}
     
     public static void main(String[] args) {
         int[] nums = {1, 1, 1, 2, 1, 2};
