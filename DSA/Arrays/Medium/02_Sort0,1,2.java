@@ -21,7 +21,7 @@ class Main {
         static int[] sortZeroOneTwo(int[] nums){
             Arrays.sort(nums);
 
-            for(int i = 0 ; i <nums.length;i++){
+            for(int i = 0 ; i <nums.length;i++){            // T.C = O(N LOG N), S.C = O(1)
                 System.out.print(nums[i]+" ");
             }
             return nums;
@@ -29,63 +29,63 @@ class Main {
 
     // ======================= Better Approach  ============================================
 
-    static int[] sortZeroOneTwo_1(int[] nums){
-        int countOfZero = 0;
-        int countOfOne = 0;
-        int countOfTwo = 0;
-        
-        for(int i : nums){
-            if(i==0) countOfZero++;
-            else if(i==1) countOfOne++;
-            else countOfTwo++;
+        static int[] sortZeroOneTwo_1(int[] nums){
+            int countOfZero = 0;
+            int countOfOne = 0;
+            int countOfTwo = 0;
+
+            for(int i : nums){
+                if(i==0) countOfZero++;
+                else if(i==1) countOfOne++;
+                else countOfTwo++;
+            }
+
+            for(int i = 0 ; i < countOfZero ; i++){
+                nums[i] = 0;
+            }
+            for(int i = countOfZero ; i < countOfZero+countOfOne ; i++){
+                nums[i] = 1;
+            }
+            for(int i = countOfZero+countOfOne ; i < nums.length ; i++){
+                nums[i] = 2;
+            }
+            for(int i = 0 ; i <nums.length;i++){
+                System.out.print(nums[i]+" ");
+            }
+           return nums; 
         }
-        
-        for(int i = 0 ; i < countOfZero ; i++){
-            nums[i] = 0;
-        }
-        for(int i = countOfZero ; i < countOfZero+countOfOne ; i++){
-            nums[i] = 1;
-        }
-        for(int i = countOfZero+countOfOne ; i < nums.length ; i++){
-            nums[i] = 2;
-        }
-        for(int i = 0 ; i <nums.length;i++){
-            System.out.print(nums[i]+" ");
-        }
-       return nums; 
-    }
 
     // ======================= Optimal Approach [DUTCH NATIONAL FLAG ALGORITHM] =======================================
     
-    static void swap(int num1, int num2, int[] nums){
-	    int temp = nums[num1];
-	    nums[num1] = nums[num2];
-	    nums[num2] = temp;
-    }
-
-    static int[] sortZeroOneTwo_2(int[] nums){
-	
-	    int low = 0;
-	    int high = nums.length - 1;
-	    int mid = 0;
-    
-	    while(mid<=high){
-	    	if(nums[mid]==0){
-	    		swap(low,mid,nums);
-	    		low++;
-	    		mid++;
-	    	}else if(nums[mid]==1){
-	    		mid++;
-	    	}else{
-	    		swap(mid,high,nums);
-	    		high--;
-	    	}
-	    }
-        for(int i = 0 ; i <nums.length;i++){
-            System.out.print(nums[i]+" ");
+        static void swap(int num1, int num2, int[] nums){
+        int temp = nums[num1];
+	        nums[num1] = nums[num2];
+	        nums[num2] = temp;
         }
-	    return nums;
-    }   
+
+        static int[] sortZeroOneTwo_2(int[] nums){
+        
+	        int low = 0;
+	        int high = nums.length - 1;
+	        int mid = 0;
+        
+	        while(mid<=high){
+	        	if(nums[mid]==0){
+	        		swap(low,mid,nums);
+	        		low++;
+	        		mid++;
+	        	}else if(nums[mid]==1){
+	        		mid++;
+	        	}else{
+	        		swap(mid,high,nums);
+	        		high--;
+	        	}
+	        }
+            for(int i = 0 ; i <nums.length;i++){
+                System.out.print(nums[i]+" ");
+            }
+	        return nums;
+        }   
     
     public static void main(String[] args) {
         int[] nums = {2,1,2,1,2,0,0,0,1};
