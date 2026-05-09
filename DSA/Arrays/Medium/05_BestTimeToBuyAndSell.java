@@ -21,7 +21,7 @@ class Main{
             int maxProfit = 0;
 
             for(int i = 0 ; i < nums.length ; i++){
-                for(int j = i+1 ; j < nums.length ; j++){
+                for(int j = i+1 ; j < nums.length ; j++){                       // T.C = O(N^2), S.C = O(1)
                     if(nums[j]>nums[i]){
                         maxProfit = Math.max(maxProfit,nums[j]-nums[i]);
                     }
@@ -38,7 +38,7 @@ class Main{
             int minCost = nums[0];
             int cost = 0;
 
-            for(int i = 1; i < nums.length ; i++){
+            for(int i = 1; i < nums.length ; i++){                      // T.C = O(N), S.C = O(1)
 
                 cost = nums[i] - minCost;
                 maxProfit = Math.max(maxProfit, cost);
@@ -55,7 +55,7 @@ class Main{
             int minPrice = Integer.MAX_VALUE;
             int maxProfit = 0;
 
-            for(int i = 0 ; i < nums.length ; i++){
+            for(int i = 0 ; i < nums.length ; i++){                     // T.C = O(N), S.C = O(1)
 
                 if(nums[i]<minPrice){
                     minPrice=nums[i];
