@@ -79,6 +79,7 @@ class Main {
         }
 
     // ======================= FOLLOW UP Question =======================================
+        // If the length is not equal for the number of positive and negative elements  
 
         static int[] rearrangeElements_2(int[] nums){
 
