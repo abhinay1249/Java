@@ -17,7 +17,7 @@ class Main{
 
     // ======================= Brute Force Approach =======================================
 
-        static int buyAndSell(int[] nums){
+        public static int buyAndSell(int[] nums){
             int maxProfit = 0;
 
             for(int i = 0 ; i < nums.length ; i++){
@@ -33,7 +33,7 @@ class Main{
 
     // ======================= Optimal Approach - 1 =======================================
     
-        static int buyAndSell_1(int[] nums){
+        public static int buyAndSell_1(int[] nums){
             int maxProfit = 0;
             int minCost = nums[0];
             int cost = 0;
@@ -50,7 +50,7 @@ class Main{
 
     // ======================= Optimal Approach - 2 =======================================
 
-        static int buyAndSell_2(int[] nums){
+        public static int buyAndSell_2(int[] nums){
 
             int minPrice = Integer.MAX_VALUE;
             int maxProfit = 0;
@@ -69,11 +69,14 @@ class Main{
 
     public static void main(String[] args){
         int[] prices = {7,1,5,3,6,4};
+
         int result = buyAndSell(prices);
-        int result_1 = buyAndSell_1(prices);
-        int result_2 = buyAndSell_2(prices);
         System.out.println(result);
+
+        int result_1 = buyAndSell_1(prices);
         System.out.println(result_1);
+        
+        int result_2 = buyAndSell_2(prices);
         System.out.println(result_2);
     }
 }
