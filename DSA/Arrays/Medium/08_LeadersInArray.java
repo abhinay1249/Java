@@ -21,7 +21,7 @@ class Main{
     
     // ======================= Brute Force Approach =======================================
 
-        static List<Integer> leaders(int[] nums){
+        public static List<Integer> leaders(int[] nums){
         
 	       int n = nums.length;
 	       int idx = 0;
@@ -30,7 +30,7 @@ class Main{
     
 	       if(n == 0) return ans;
     
-	       for(int i = 0 ; i < n-1 ; i++){
+	       for(int i = 0 ; i < n-1 ; i++){                          // T.C = O(N ^2), S.C = O(1)
 	            boolean flag = true;
 	       	    for(int j = i+1 ; j < n ; j++){
                 
@@ -49,7 +49,7 @@ class Main{
 
     // ======================= Optimal Approach =======================================
 
-        static List<Integer> leaders_1(int[] nums){
+        public static List<Integer> leaders_1(int[] nums){
             List<Integer> ans = new ArrayList<>();
             int maxNum = Integer.MIN_VALUE;
             int n = nums.length;
