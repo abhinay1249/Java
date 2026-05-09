@@ -29,7 +29,7 @@ class Main {
 	        int[][] transpose = new int[n][n];
 
 	        for(int i = 0 ; i < n ; i++){
-	    	    for(int j = 0 ; j < n ; j++){
+	    	    for(int j = 0 ; j < n ; j++){						// T.C = O(N * M), S.C = O(N * M)
 	    		    transpose[j][n-1-i] = nums[i][j];
 	    	    }
 	        }
