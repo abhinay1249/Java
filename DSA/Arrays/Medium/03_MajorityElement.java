@@ -46,7 +46,7 @@ class Main {
 
     static int majorityElement_1(int[] nums){
 	
-	    Map<Integer,Integer> freqCount = new TreeMap<>();
+	    Map<Integer,Integer> freqCount = new HashMap<>();
 	
 	    for(int i = 0; i < nums.length; i++){												// T.C = O(M + N) S.C = O(M)
 		    freqCount.put(nums[i],freqCount.getOrDefault(nums[i],0)+1);
