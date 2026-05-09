@@ -62,7 +62,7 @@ class Main {
                 else if(nums[i] - nums[i-1] == 1){                       // T.C = O(N LOG N) + O(N), S.C = O(1)
                     count++;
                 }else{
-                    count=1;
+                    count = 1;
                 }
 
                 maxConsecutive = Math.max(maxConsecutive,count);
