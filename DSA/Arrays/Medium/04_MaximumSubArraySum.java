@@ -107,11 +107,14 @@ class Main {
 		    	    sum = 0;
 	        	}
 	        }
+
             System.out.print("[ ");
-            for(int i = ansStart ; i <= ansEnd ; i++){
+            
+			for(int i = ansStart ; i <= ansEnd ; i++){
                 System.out.print(nums[i]+" ");
             }
-            System.out.print("]");
+            
+			System.out.print("]");
             System.out.println();
         }
 
