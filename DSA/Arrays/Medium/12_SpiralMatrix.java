@@ -16,7 +16,7 @@ class Main {
 
     // ======================= Only Approach =======================================
 
-        static List<Integer> spiralMatrix(int[][] nums){
+        public static List<Integer> spiralMatrix(int[][] nums){
         
 	        int n = nums.length;
 	        int m = nums[0].length;
