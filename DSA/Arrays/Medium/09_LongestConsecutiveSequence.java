@@ -62,7 +62,7 @@ class Main {
                     lastSmaller = nums[i];
                 }else if(nums[i]!=lastSmaller){
                     count=1;
-                    lastSmaller = num   s[i];
+                    lastSmaller = nums[i];
                 }
                 maxConsecutive = Math.max(maxConsecutive,count);
             }
@@ -75,7 +75,7 @@ class Main {
         
             Set<Integer> hs = new HashSet<>();
 
-            int maxConsecutive = Integer.MIN_VALUE;
+            int maxConsecutive = 0;
             
             for(int i = 0 ; i < nums.length ; i++){
                 hs.add(nums[i]);
