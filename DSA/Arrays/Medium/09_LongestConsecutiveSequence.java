@@ -50,20 +50,21 @@ class Main {
         static int longestConsecutive_1(int[] nums){
         
         	int n = nums.length;
-        	int maxConsecutive = Integer.MIN_VALUE;
+        	int maxConsecutive = 0;
             int count = 0;
-            int lastSmaller = Integer.MIN_VALUE;
             Arrays.sort(nums);
 
-            for(int i = 0 ; i < n ; i++){
+            for(int i = 1; i < n ; i++){
 
-                if(nums[i]-1 == lastSmaller){                       // T.C = O(N LOG N) + O(N), S.C = O(1)
-                    count++;
-                    lastSmaller = nums[i];
-                }else if(nums[i]!=lastSmaller){
-                    count=1;
-                    lastSmaller = nums[i];
+                if(nums[i] == nums[i-1]){                         // T.C = O(N LOG N) + O(N), S.C = O(1)
+                    continue;
                 }
+                else if(nums[i] - nums[i-1] == 1){                       // T.C = O(N LOG N) + O(N), S.C = O(1)
+                    count++;
+                }else{
+                    count=1;
+                }
+
                 maxConsecutive = Math.max(maxConsecutive,count);
             }
         	return maxConsecutive;
