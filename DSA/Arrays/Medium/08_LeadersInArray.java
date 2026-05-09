@@ -50,6 +50,7 @@ class Main{
     // ======================= Optimal Approach =======================================
 
         public static List<Integer> leaders_1(int[] nums){
+            
             List<Integer> ans = new ArrayList<>();
             int maxNum = Integer.MIN_VALUE;
             int n = nums.length;
