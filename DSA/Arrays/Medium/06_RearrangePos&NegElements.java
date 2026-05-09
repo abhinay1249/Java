@@ -18,6 +18,7 @@
 // Explanation: 
 // Positive elements = 1,2,3
 // Negative elements = -3,-1,-2
+
 // To maintain relative ordering, 1 must occur before 2, and 2 must occur before 3.
 // Also, -3 should come before -1, and -1 should come before -2.
             
@@ -36,7 +37,7 @@ class Main {
 	        int[] neg = new int[nums.length/2];
 
 
-	        for(int i = 0 ;  i < nums.length ; i++){
+	        for(int i = 0 ;  i < nums.length ; i++){            // T.C = O(N) + O(N/2), S.C = O(N/2)+O(N/2)
             
 	    	    if(nums[i]<0){
 	    		    neg[idx] = nums[i];
@@ -52,6 +53,7 @@ class Main {
 	    	    nums[i*2] = pos[i];
 	    	    nums[i*2+1] = neg[i];
 	        }
+
 	        return nums;
         }
 
@@ -63,7 +65,7 @@ class Main {
 
             int posIdx = 0, negIdx = 1;
 
-            for(int i = 0 ; i < nums.length ; i++){
+            for(int i = 0 ; i < nums.length ; i++){                          // T.C = O(N), S.C = O(1)
 
                 if(nums[i]<0){
                     arrangedArray[negIdx]=nums[i];
