@@ -60,7 +60,7 @@ class Main {
 	        int count = 0;
 	        int n = nums.length;
 	        int sum = 0;
-            Map<Integer,Integer> prefixCount = new TreeMap<>();
+            Map<Integer,Integer> prefixCount = new HashMap<>();
 
             prefixCount.put(0,1);
 
