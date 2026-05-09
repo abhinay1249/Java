@@ -36,7 +36,7 @@ class Main {
 
             for(int i : nums){
                 if(i==0) countOfZero++;
-                else if(i==1) countOfOne++;
+                else if(i==1) countOfOne++;                         // T.C = O(4N), S.C = O(1)
                 else countOfTwo++;
             }
 
@@ -71,7 +71,7 @@ class Main {
         
 	        while(mid<=high){
 	        	if(nums[mid]==0){
-	        		swap(low,mid,nums);
+	        		swap(low,mid,nums);                                 // T.C = O(N), S.C = O(1)
 	        		low++;
 	        		mid++;
 	        	}else if(nums[mid]==1){
