@@ -54,7 +54,7 @@ class Main{
             int maxNum = Integer.MIN_VALUE;
             int n = nums.length;
 
-            for(int i = n - 1 ; i >= 0 ; i--){
+            for(int i = n - 1 ; i >= 0 ; i--){                      // T.C = O(2N), S.C = O(1)
                 if(nums[i]>maxNum){
                     ans.add(nums[i]);
                     maxNum = Math.max(maxNum,nums[i]);
