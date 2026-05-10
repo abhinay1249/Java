@@ -44,7 +44,7 @@ class Main {
     // ==================================== Better Approach ===========================================
 
         static List<Integer> majorityElement_1(int[] nums){
-	        Map<Integer, Integer> freqCount = new TreeMap<>();
+	        Map<Integer, Integer> freqCount = new HashMap<>();
 	        List<Integer> result = new ArrayList<>();
 	        int min = nums.length/3+1;
 
@@ -52,7 +52,7 @@ class Main {
 	            freqCount.put(nums[index] , freqCount.getOrDefault(nums[index], 0)+1);
     
 	            if(freqCount.get(nums[index]) == min){
-	                result.add(nums[index]);                                                //T.C = O(N log N), S.C = O(N)
+	                result.add(nums[index]);                                                //T.C = O(N), S.C = O(N)
 	            }
 	            if (result.size() == 2) break;
             }
@@ -111,7 +111,7 @@ class Main {
         }
 
     public static void main(String[] args) {
-        int[] nums = {1, 2, 1, 1, 3, 2};
+        int[] nums = {2, 1, 1, 3, 1, 4, 5, 6};
         int[] nums_1 = {0,0,0};
         List<Integer> result = majorityElement(nums);
         List<Integer> result_1 = majorityElement_1(nums);
