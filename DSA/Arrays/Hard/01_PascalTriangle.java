@@ -176,13 +176,16 @@ class Main {
         }
 
     public static void main(String[] args) {
+        
         int n = 7;
         int row = 6;
         int col = 3;
         int result = pascalValue(row, col);
         int result_1 = pascalValue_1(row, col);
+
         System.out.println(result);
         System.out.println(result_1);
+
         nthRowValues(n);
         nthRowValues_1(n);
         pascalTriangle(n);
