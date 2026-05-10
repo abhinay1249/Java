@@ -80,7 +80,7 @@ class Main {
                 }else if(count2 == 0 && nums[index]!=element1){
 	    		    count2 = 1;
 	    		    element2 = nums[index];
-                }else if(element1 == nums[index]){                                  //T.C = O(N), S.C = O(1)
+                }else if(element1 == nums[index]){                                  //T.C = O(N)+ O(N), S.C = O(1)
                 	count1++;
                 }else if(element2 == nums[index]){
                 	count2++;
