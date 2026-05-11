@@ -60,7 +60,7 @@ class Main {
     
             if(length == 0) return -1;
 	        for(int index = 0 ; index < length ; index++){
-	            prefixSum+=nums[index];                             // T.C = O(N * Log N), S.C = O(N)
+	            prefixSum+=nums[index];                             // T.C = O(N), S.C = O(N)
 	            sum = prefixSum - target;
 	            if(sum == 0){
 		            maxLength = Math.max(maxLength,index+1); 
