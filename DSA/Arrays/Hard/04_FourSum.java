@@ -21,14 +21,14 @@ class Main {
 
     // ==================================== Brute Force Approach ===========================================
     
-        static List<List<Integer>> fourSum(int[] nums, int target){
+        public static List<List<Integer>> fourSum(int[] nums, int target){
             int n = nums.length;
             Set<List<Integer>> elementList = new HashSet<>();
 
             for(int i = 0 ; i < n-3 ; i++){
                 for(int j = i+1 ; j < n-2 ; j++){
                     for(int k = j+1 ;  k < n -1 ; k++){
-                        for(int l = k+1 ; l < n ; l++){                                 // T.C = O(N^4*Log(M)), S.C = 2 * O(no of quadra)
+                        for(int l = k+1 ; l < n ; l++){                                 // T.C = O(N^4 * Log(M)), S.C = 2 * O(no of quadra)
                             if(nums[i]+nums[j]+nums[k]+nums[l] == target){
                                 List<Integer> elements = Arrays.asList(nums[i],nums[j],nums[k],nums[l]);
                                 Collections.sort(elements);
@@ -43,7 +43,7 @@ class Main {
     
     // ==================================== Better Approach ===========================================
     
-        static List<List<Integer>> fourSum_1(int[] nums, int target){
+        public static List<List<Integer>> fourSum_1(int[] nums, int target){
 	        int length = nums.length;
 	        Set<List<Integer>> quadra = new HashSet<>();
 	        Set<Long> elementCheck = new HashSet<>();
@@ -69,7 +69,7 @@ class Main {
 
     // ==================================== Optimal Approach ===========================================
 
-        static List<List<Integer>> fourSum_2(int[] nums, int target){
+        public static List<List<Integer>> fourSum_2(int[] nums, int target){
         
 	        int length = nums.length;
 
