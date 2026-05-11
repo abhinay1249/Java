@@ -23,6 +23,7 @@
 // - {6, -2, 2, -8, 1, 7, 4, -10}
 // The length of the longest subarray with sum zero is 8.
 
+import java.util.*;
 
 class Main {
     
@@ -51,7 +52,7 @@ class Main {
 
         static int longestSubArrayOfSumZero_1(int[] nums){
 	        int length = nums.length;
-	        Map<Integer,Integer> prefixCount = new TreeMap<>();
+	        Map<Integer,Integer> prefixCount = new HashMap<>();
 	        int sum = 0;
 	        int prefixSum = 0;
 	        int target = 0;
