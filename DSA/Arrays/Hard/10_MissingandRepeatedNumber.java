@@ -22,8 +22,7 @@ class Main {
 
     // ==================================== Brute Force Approach ===========================================
 
-
-        static int[] missingAndRepeated(int[] nums){
+        public static int[] missingAndRepeated(int[] nums){
 	        int length = nums.length;
 	        int[] numbers = new int[2];
 	        int missingNumber = -1;
@@ -52,7 +51,7 @@ class Main {
     // =============================== Better Approach - 1 Using HashMap =====================================
 
 
-        static int[] missingAndRepeated_1(int[] nums){
+        public static int[] missingAndRepeated_1(int[] nums){
 	        int length = nums.length;
 	        Map<Integer, Integer> freqCount = new HashMap<>();
 	        int[] numbers = new int[2];
@@ -84,7 +83,7 @@ class Main {
 
     // ==================================== Better Approach - 2 Using HashArray ===========================================
 
-        static int[] missingAndRepeated_2(int[] nums){
+        public static int[] missingAndRepeated_2(int[] nums){
 
 	        int length = nums.length;
 	        int[] hashArray = new int[length+1];
@@ -112,7 +111,7 @@ class Main {
 
     // ==================================== Optimal Approach - 1 Using Math ===========================================
 
-        static int[] missingAndRepeated_2(int[] nums){
+        public static int[] missingAndRepeated_3(int[] nums){
         
             long length = nums.length;
 
@@ -145,7 +144,7 @@ class Main {
     
     // ==================================== Optimal Approach - 2 Using XOR (BIT MANIPULATION) ===========================================
 
-        static int[] missingAndRepeated_3(int[] nums){
+        public static int[] missingAndRepeated_4(int[] nums){
             int length = nums.length;
             int[] numbers = new int[2];
             int xor = 0;
