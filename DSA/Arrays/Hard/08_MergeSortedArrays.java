@@ -8,7 +8,7 @@ class Main{
 
     // ==================================== Brute Force Approach ===========================================
 
-        static int[] mergeTwoSortedArray(int[] nums1, int[] nums2, int m , int n){
+        public static int[] mergeTwoSortedArray(int[] nums1, int[] nums2, int m , int n){
         
             for(int idx = 0 ; idx < n ; idx++){
                 nums1[m+idx] = nums2[idx];
@@ -22,7 +22,7 @@ class Main{
     
     // ==================================== Optimal Approach ===========================================
 
-        static int[] mergeTwoSortedArray_1(int[] nums1,int[] nums2, int m,int n) {
+        public static int[] mergeTwoSortedArray_1(int[] nums1,int[] nums2, int m,int n) {
 
             if(n==0){
                 return nums1;
