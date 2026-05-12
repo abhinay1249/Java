@@ -17,7 +17,7 @@ class Main {
 
     // ==================================== Brute Force Approach ======================================
 
-        static int subArraysOfXor(int[] nums, int target){
+        public static int subArraysOfXor(int[] nums, int target){
 
 	        int length = nums.length;
 	        int count = 0;
@@ -38,7 +38,7 @@ class Main {
 
     // ==================================== Better Approach ===========================================
 
-        static int subArraysOfXor_1(int[] nums,int target){
+        public static int subArraysOfXor_1(int[] nums,int target){
             int length = nums.length;
             int count = 0;
 
@@ -57,7 +57,7 @@ class Main {
 
     // ==================================== Optimal Approach ===========================================
 
-        static int subArraysOfXor_2(int[] nums, int target){
+        public static int subArraysOfXor_2(int[] nums, int target){
             int length = nums.length;
             if(length == 0) return 0;
 
