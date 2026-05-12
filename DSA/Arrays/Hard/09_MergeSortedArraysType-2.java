@@ -28,7 +28,7 @@ class Main {
 
     // ==================================== Brute Force Approach ===========================================
 
-        static int[] mergeTwoSortedArray(int[] nums1, int[] nums2, int m , int n){
+        public static int[] mergeTwoSortedArray(int[] nums1, int[] nums2, int m , int n){
         
 	        int left = 0 ;
 	        int right = 0;
@@ -67,7 +67,7 @@ class Main {
     
     // ==================================== Optimal Approach ===========================================
 
-        static void swap(int left, int right, int[]nums1, int[] nums2){
+        private static void swap(int left, int right, int[]nums1, int[] nums2){
 
             int temp = nums1[left];
             nums1[left] = nums2[right];
@@ -75,7 +75,7 @@ class Main {
 
         }
 
-        static int[] mergeTwoSortedArray_1(int[] nums1, int[] nums2, int m , int n){
+        public static int[] mergeTwoSortedArray_1(int[] nums1, int[] nums2, int m , int n){
         
 	        int left = m-1 ;
 	        int right = 0;
@@ -98,13 +98,13 @@ class Main {
 
     // ==================================== Optimal Approach USING GAP METHOD (SHELL SORT)===========================================
 
-        static void swapIfGreater(int[]nums1,int[]nums2,int idx1,int idx2){
+        private static void swapIfGreater(int[]nums1,int[]nums2,int idx1,int idx2){
             if(nums1[idx1]>nums2[idx2]){
                 swap(idx1,idx2,nums1,nums2);
             }
         }
 
-        static int[] mergeTwoSortedArray_2(int[] nums1, int[] nums2, int m , int n){
+        public static int[] mergeTwoSortedArray_2(int[] nums1, int[] nums2, int m , int n){
         
 	        int length = (m+n);
 	        int gap = (length/2) + (length%2);
