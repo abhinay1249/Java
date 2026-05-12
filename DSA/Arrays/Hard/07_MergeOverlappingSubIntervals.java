@@ -19,7 +19,7 @@ class Main{
 
     // ==================================== Brute Force Approach ===========================================
 
-        static  List<List<Integer>> mergeOverlapIntervals(int[][]nums){
+        public static  List<List<Integer>> mergeOverlapIntervals(int[][]nums){
         
             int length = nums.length;
             List<List<Integer>> mergeInterval = new ArrayList<>();
@@ -56,7 +56,7 @@ class Main{
     
     // ==================================== Optimal Approach ===========================================
 
-        static List<List<Integer>> mergeOverlapIntervals_1(int[][]nums){
+        public static List<List<Integer>> mergeOverlapIntervals_1(int[][]nums){
 
             int length = nums.length;
             List<List<Integer>> mergeInterval = new ArrayList<>();
