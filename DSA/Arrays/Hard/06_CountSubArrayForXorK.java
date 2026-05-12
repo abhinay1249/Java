@@ -12,6 +12,7 @@
 // Explanation: The subarrays having XOR of their elements as 5 are [5] and [5, 6, 7, 8, 9]
 
 
+import java.util.*;
 
 class Main {
 
