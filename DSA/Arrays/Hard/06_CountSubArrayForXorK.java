@@ -67,7 +67,7 @@ class Main {
 
             Map<Integer,Integer> freqCount = new HashMap<>();
 
-            freqCount.put(0,1);                                                 // T.C = O(N * N Log N), S.C = O(N)
+            freqCount.put(0,1);                                                 // T.C = O(N), S.C = O(N)
 
             for(int idx = 0 ; idx < length ; idx++){
                 xor ^= nums[idx];
