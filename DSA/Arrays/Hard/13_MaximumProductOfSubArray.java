@@ -15,7 +15,7 @@ class Main {
     
     // ==================================== Brute Force Approach ===========================================
 
-        static int maxProduct(int[] nums){
+        public static int maxProduct(int[] nums){
 
             int length = nums.length;
             int maxProduct = 0;
@@ -83,7 +83,7 @@ class Main {
 
     // =============================== Optimal Approach =====================================
 
-        static int maxProduct_2(int[] nums) {
+        public static int maxProduct_2(int[] nums) {
             int length = nums.length;
             int maxProduct = 0;
 
