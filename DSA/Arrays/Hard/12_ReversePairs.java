@@ -18,7 +18,7 @@ import java.util.*;
 
 class Main {
 
-        // ==================================== Brute Force Approach ===========================================
+    // ==================================== Brute Force Approach ===========================================
 
         static int reversePairs(int[] nums){
         
