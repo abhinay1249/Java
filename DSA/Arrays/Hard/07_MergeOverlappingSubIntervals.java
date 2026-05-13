@@ -42,6 +42,7 @@ class Main{
                         continue;
                     }
                 }
+                
                 for(int idx_2 = idx_1+1 ; idx_2 < length ; idx_2++){
                     if(end>=nums[idx_2][0]){
                         end = Math.max(end, nums[idx_2][1]);
