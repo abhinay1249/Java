@@ -27,7 +27,7 @@ class Main {
 
     // ==================================== Brute Force Approach ===========================================
 
-        static int countInversions(int[] nums){
+        public static int countInversions(int[] nums){
         
             int length = nums.length;
 	        int count = 0;
@@ -47,7 +47,7 @@ class Main {
         
     // ==================================== Optimal Approach ===========================================
 
-        static int merge(int[] nums, int low, int mid, int high){
+        public static int merge(int[] nums, int low, int mid, int high){
 	        List<Integer> temp = new ArrayList<>();
 	        int count = 0;
 	        int left = low;
@@ -81,7 +81,7 @@ class Main {
             return count;
         }
 
-        static int mergeSort(int[] nums, int low, int high){
+        public static int mergeSort(int[] nums, int low, int high){
 
 	        int mid = low + ((high - low)/2);
 	        int count = 0;
