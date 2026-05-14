@@ -23,6 +23,7 @@ class Main {
     // ==================================== Brute Force Approach ===========================================
 
         public static int[] missingAndRepeated(int[] nums){
+            
 	        int length = nums.length;
 	        int[] numbers = new int[2];
 	        int missingNumber = -1;
