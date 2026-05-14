@@ -51,7 +51,7 @@ class Main {
 
     // =============================== Better Approach =====================================
 
-        static int maxProduct_1(int[] nums){
+        public static int maxProduct_1(int[] nums){
 
             int length = nums.length;
             int maxProduct = 0;
