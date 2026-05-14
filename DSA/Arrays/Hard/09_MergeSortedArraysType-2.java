@@ -1,5 +1,5 @@
 // Problem Statement: Given two sorted integer arrays nums1 and nums2 of sizes m and n respectively,
-// rearrange the elements such that them in-place such that
+// rearrange the elements such that they are in-place that
 // the combined sequence of both arrays is sorted, after rearrangement:
 
 
