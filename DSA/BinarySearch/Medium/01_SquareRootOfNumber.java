@@ -6,7 +6,7 @@ class Main {
     
     // =========================== Brute Force Approach ==============================
 
-        static int sqrtOfNumber(int value){
+        public static int sqrtOfNumber(int value){
 
             if(value == 0) return 0;
             int result = -1;
@@ -27,7 +27,7 @@ class Main {
 
     // ===================== Optimal Approach ==========================================
 
-        static int sqrtOfNumber(int value){
+        public static int sqrtOfNumber_1(int value){
 
             if(value == 0) return 0;
 
