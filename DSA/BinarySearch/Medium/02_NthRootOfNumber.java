@@ -2,16 +2,26 @@
 // The nth root of a number M is defined as a number X when raised to the power N equals M. 
 // If the 'nth root is not an integer, return -1.
 
+// Examples
+
+// Input: N = 3, M = 27
+// Output: 3
+// Explanation: The cube root of 27 is equal to 3.
+
+// Input : N = 4, M = 69
+// Output: -1
+// Explanation : The 4th root of 69 does not exist. So, the answer is -1.
+
 class Main {
 
     // =========================== Brute Force Approach ==============================
 
-        static int powOfNumber(int number, int root){
+        private static int powOfNumber(int number, int root){
             int result = (int) Math.pow(number,root);
             return result;
         }
 
-        static int nthRootOfNumber(int n, int m){
+        public static int nthRootOfNumber(int n, int m){
 
             int number = -1;
 
@@ -29,7 +39,7 @@ class Main {
     
     // =========================== Optimal Approach ==============================
 
-        static int powOfNumber_1(int mid, int n, int m){
+        public static int powOfNumber_1(int mid, int n, int m){
             // return 1, if it is equal
             // return 0, if the number is less than m
             // return 2, if the number is greater than m
