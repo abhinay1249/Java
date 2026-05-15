@@ -4,6 +4,14 @@
 
 // Note: As there can be many peak values, 1 is given as output if the returned index is a peak number, otherwise 0.
 
+// Example 1: Input: mat = [[5, 10, 8], [4, 25, 7], [3, 9, 6]]
+// Output: [1, 1]
+// Explanation: The value at index [1, 1] is 25, which is a peak because all its neighbors (10, 7, 4, 9) are smaller.
+
+// Example 2: Input: mat = [[1, 2, 3], [6, 5, 4], [7, 8, 9]]
+// Output: [2, 2]
+// Explanation: The value at index [2, 2] is 9, which is a peak as it is greater than its neighbors (8, 4).
+
 
 import java.util.*;
 
@@ -11,7 +19,7 @@ class Main {
 
     // =========================== Brute Force Approach ==============================
 
-        static int[] searchElement(int[][] matrix, int target){
+        public static int[] searchElement(int[][] matrix, int target){
 
             for(int row = 0 ; row < matrix.length; row++){
                 for(int col = 0 ; col < matrix[0].length ; col++){
@@ -23,7 +31,7 @@ class Main {
             return new int[]{-1,-1};
         }
 
-        static int[] peakElement2(int[][] matrix){
+        public static int[] peakElement2(int[][] matrix){
 
             int largestElement = Arrays.stream(matrix).flatMapToInt(Arrays::stream).max().getAsInt();
             int[] indices = searchElement(matrix,largestElement);
@@ -33,7 +41,7 @@ class Main {
     
     // =========================== Optimal Approach ==============================
 
-        static int largestElementIndex(int[][] matrix, int rowLength, int col){
+        public static int largestElementIndex(int[][] matrix, int rowLength, int col){
 
             int maxValue = -1;
             int index = -1;
@@ -47,7 +55,7 @@ class Main {
             return index;
         }
 
-        static int[] peakElement2_1(int[][] matrix){
+        public static int[] peakElement2_1(int[][] matrix){
             int rowLength = matrix.length;
             int colLength = matrix[0].length;
 
