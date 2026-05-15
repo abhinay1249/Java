@@ -9,7 +9,7 @@ class Main {
 
     // =========================== Brute Force Approach ==============================
 
-        public static int medianOf2dMatrix_1(int[][] matrix){
+        public static int medianOfRowSortedWise(int[][] matrix){
 
             int rowLength = matrix.length;
             int colLength = matrix[0].length;
@@ -91,7 +91,7 @@ class Main {
 
     public static void main(String[] args) {
         int[][] matrix = {{1,5,7,9,11},{2,3,4,5,10},{9,10,12,14,16}};
-        int result = medianOf2dMatrix(matrix);
+        int result = medianOfRowSortedWise_1(matrix);
         System.out.println(result);
     }
 }
