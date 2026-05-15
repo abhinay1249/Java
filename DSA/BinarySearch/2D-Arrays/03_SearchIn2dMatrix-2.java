@@ -3,12 +3,32 @@
 // But, the first element of a row is not necessarily greater than the last element of the previous row (if it exists). 
 // You are given an integer ‘target’, and your task is to find if it exists in the given 'mat' or not.
 
+// Example 1:
+// Matrix=
+// 1   4   7   11
+// 2   5   8   12
+// 3   6   9   16
+// 10 13  14  17
+
+// Target: 9
+// Output: Found at (2,2) (0-indexed)
+
+
+// Example 2:
+// Matrix=
+// 5   10  15
+// 6   12  18
+// 8   16  20
+
+// Target: 7
+// Output: Not Found
+
 
 class Main {
 
     // =========================== Brute Force Approach ==============================
 
-        static int[] searchIn2DMatrix2(int[][] matrix, int target){
+        public static int[] searchIn2DMatrix2(int[][] matrix, int target){
 
 
             for(int rows = 0 ; rows < matrix.length ; rows++){
@@ -24,7 +44,7 @@ class Main {
 
     // =========================== Better Approach ==============================
 
-        static int binarySearch(int[] mat, int target){
+        public static int binarySearch(int[] mat, int target){
             int length = mat.length;
 
             int low = 0, high = length -1;
@@ -43,7 +63,7 @@ class Main {
             return -1;
         }
 
-        static int[] searchIn2DMatrix2_1(int[][] matrix, int target){
+        public static int[] searchIn2DMatrix2_1(int[][] matrix, int target){
 
             int cols = matrix[0].length;
 
@@ -59,7 +79,7 @@ class Main {
 
     // =========================== Optimal Approach ==============================
 
-        static boolean searchIn2DMatrix2_2(int[][] matrix, int target){
+        public static int[] searchIn2DMatrix2_2(int[][] matrix, int target){
         
             int noOfRows = matrix.length;
             int noOfCols = matrix[0].length;
