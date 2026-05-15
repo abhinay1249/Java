@@ -9,7 +9,7 @@ class Main {
 
     // =========================== Brute Force Approach ==============================
 
-        static int medianOf2dMatrix_1(int[][] matrix){
+        public static int medianOf2dMatrix_1(int[][] matrix){
 
             int rowLength = matrix.length;
             int colLength = matrix[0].length;
@@ -30,7 +30,7 @@ class Main {
 
     // =========================== Optimal Approach ==============================
 
-        static int upperBound(int[] rows, int target){
+        public static int upperBound(int[] rows, int target){
 
             int length = rows.length;
             int ans = length;
@@ -50,7 +50,7 @@ class Main {
             return ans;
         }
 
-        static int smallerElementsRequired(int[][] matrix,int target){
+        public static int smallerElementsRequired(int[][] matrix,int target){
 
             int count = 0;
             int rowLength = matrix.length;
@@ -61,7 +61,7 @@ class Main {
             return count;
         }
 
-        static int medianOfRowSortedWise_1(int[][]matrix){
+        public static int medianOfRowSortedWise_1(int[][]matrix){
             int low = Integer.MAX_VALUE;
             int high = Integer.MIN_VALUE;
 
