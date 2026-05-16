@@ -20,7 +20,7 @@ class Main {
 
     // ==================================== Brute Force Approach ===========================================
 
-        static int reversePairs(int[] nums){
+        public static int reversePairs(int[] nums){
         
             int length = nums.length;
             int count = 0;
@@ -40,7 +40,7 @@ class Main {
 
     // ==================================== Optimal Approach ===========================================
 
-        static void merge(int[] nums, int low, int mid, int high){
+        private static void merge(int[] nums, int low, int mid, int high){
 
 	        List<Integer> temp = new ArrayList<>();
 	        int left = low;
@@ -72,7 +72,7 @@ class Main {
             }
         }
 
-        static int countPairs(int[] nums, int low, int mid, int high){
+        private static int countPairs(int[] nums, int low, int mid, int high){
 
             int left = low;
             int right = mid+1;
@@ -88,7 +88,7 @@ class Main {
 	       return count;
         }
 
-        static int mergeSort(int[] nums, int low, int high){
+        private static int mergeSort(int[] nums, int low, int high){
 	           int mid = low + ((high - low)/2);
 	           int count = 0;
     
@@ -103,7 +103,7 @@ class Main {
     
         }
 
-        static int reversePair(int[]nums){
+        public static int reversePair(int[]nums){
 	           int length = nums.length;
 	           return mergeSort(nums,0,length-1);
         }
