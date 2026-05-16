@@ -89,7 +89,7 @@ class Main {
         }
 
         private static int mergeSort(int[] nums, int low, int high){
-            
+
 	        int mid = low + ((high - low)/2);
 	        int count = 0;
 
@@ -103,8 +103,9 @@ class Main {
         }
 
         public static int reversePair(int[]nums){
-	           int length = nums.length;
-	           return mergeSort(nums,0,length-1);
+	        int length = nums.length;
+	        
+            return mergeSort(nums,0,length-1);
         }
 
     public static void main(String[] args) {
