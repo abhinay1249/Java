@@ -89,18 +89,17 @@ class Main {
         }
 
         private static int mergeSort(int[] nums, int low, int high){
-	           int mid = low + ((high - low)/2);
-	           int count = 0;
-    
-	           if(low >= high) return count;
+            
+	        int mid = low + ((high - low)/2);
+	        int count = 0;
 
-	           count+=mergeSort(nums,low,mid);
-	           count+=mergeSort(nums,mid+1,high);
-	           count+=countPairs(nums,low,mid,high);
-	           merge(nums,low,mid,high);
+	        if(low >= high) return count;
+	        count+=mergeSort(nums,low,mid);
+	        count+=mergeSort(nums,mid+1,high);
+	        count+=countPairs(nums,low,mid,high);
+	        merge(nums,low,mid,high);
     
 	       return count;
-    
         }
 
         public static int reversePair(int[]nums){
