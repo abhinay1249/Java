@@ -26,8 +26,8 @@ class Main {
             int count = 0;
             if(nums.length < 2) return count;
 
-            for(int idx1 = 0 ; idx1 < nums.length ; idx1++){                    // T.C = O(N^2) S.C = O(1)
-                for(int idx2 = idx1+1 ; idx2 < nums.length ; idx2++){
+            for(int idx1 = 0 ; idx1 < length ; idx1++){                    // T.C = O(N^2) S.C = O(1)
+                for(int idx2 = idx1+1 ; idx2 < length ; idx2++){
                     long value1 = nums[idx1];
                     long value2 = (2 * (long)nums[idx2]);
                     if(value1 > value2){
