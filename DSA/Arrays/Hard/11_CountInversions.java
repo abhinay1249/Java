@@ -47,7 +47,7 @@ class Main {
         
     // ==================================== Optimal Approach ===========================================
 
-        public static int merge(int[] nums, int low, int mid, int high){
+        private static int merge(int[] nums, int low, int mid, int high){
 	        List<Integer> temp = new ArrayList<>();
 	        int count = 0;
 	        int left = low;
@@ -81,7 +81,7 @@ class Main {
             return count;
         }
 
-        public static int mergeSort(int[] nums, int low, int high){
+        private static int mergeSort(int[] nums, int low, int high){
 
 	        int mid = low + ((high - low)/2);
 	        int count = 0;
@@ -95,7 +95,7 @@ class Main {
             return count;
         }
 
-        static int countInversions_1(int[]nums){
+        public static int countInversions_1(int[]nums){
 	        int length = nums.length;
 	        return mergeSort(nums,0,length-1);
         }
