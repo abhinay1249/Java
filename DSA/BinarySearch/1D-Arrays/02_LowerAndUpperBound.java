@@ -15,7 +15,7 @@ class Main {
     
     // ============================ Lower Bound [Smallest Index] ==================================
 
-        static int lowerBound(int[] nums, int target){
+        public static int lowerBound(int[] nums, int target){
 
             int length = nums.length;
             int low = 0, high = length - 1;
@@ -36,7 +36,7 @@ class Main {
 
     // =============================== Upper Bound [Smallest Index] ===================================
 
-        static int upperBound(int[] nums, int target){
+        public static int upperBound(int[] nums, int target){
         
             int length = nums.length;
             int low = 0, high = length - 1;
