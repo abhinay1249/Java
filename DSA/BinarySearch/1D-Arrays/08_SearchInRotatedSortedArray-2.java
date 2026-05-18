@@ -18,7 +18,7 @@ class Main {
 
     // ======================= Brute Force Approach =======================================
 
-        static int rotatedSortedArray(int[] nums, int target){
+        public static boolean rotatedSortedArray(int[] nums, int target){
 
             int length = nums.length;
             boolean result = false;
@@ -34,7 +34,7 @@ class Main {
 
     // ======================= Optimal Approach ============================================
 
-        static int rotatedSortedArray_1(int[] nums, int target){
+        public static boolean rotatedSortedArray_1(int[] nums, int target){
 
             int length = nums.length;
             boolean result = false;
@@ -76,7 +76,7 @@ class Main {
 
         int[] nums = {7, 8, 1, 2, 3, 3, 3, 4, 5, 6};
         int target = 3;
-        int result = rotatedSortedArray(nums,target);
+        boolean result = rotatedSortedArray_1(nums,target);
         System.out.println(result);
     }
 }
