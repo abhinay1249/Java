@@ -5,7 +5,7 @@
 
 class Main{
 
-    static int binarySearch(int[] nums, int target) {
+    public static int binarySearch(int[] nums, int target) {
         int length = nums.length;
 
         int low = 0;
