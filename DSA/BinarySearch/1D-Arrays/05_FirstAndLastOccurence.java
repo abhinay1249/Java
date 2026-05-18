@@ -15,7 +15,7 @@ class Main {
 
     // ======================= Brute Force Approach =======================================
     
-        static int[] firstAnsLastOccurence(int[] nums, int target){
+        public static int[] firstAnsLastOccurence(int[] nums, int target){
 
             int length = nums.length;
             int lastOccurence = -1;
@@ -39,7 +39,7 @@ class Main {
 
     // ======================= Better Approach =======================================
     
-        static int[] firstAnsLastOccurence_1(int[] nums, int target){
+        public static int[] firstAnsLastOccurence_1(int[] nums, int target){
 
             int length = nums.length;
             int lastOccurence = -1;
@@ -58,7 +58,7 @@ class Main {
 
     // ======================= Optimal Approach Using Lower and Upper Bounds =======================================
 
-        static int lowerBound(int[] nums, int target){
+        public static int lowerBound(int[] nums, int target){
                 
             int length = nums.length;
             int low = 0, high = length - 1;
@@ -78,7 +78,7 @@ class Main {
             return firstOccurence;
         }
 
-        static int upperBound(int[] nums, int target){
+        public static int upperBound(int[] nums, int target){
 
             int length = nums.length;
             int low = 0, high = length - 1;
@@ -98,7 +98,7 @@ class Main {
             return lastOccurence;
         }
 
-        static int[] firstAnsLastOccurence_2(int[] nums, int target){
+        public static int[] firstAnsLastOccurence_2(int[] nums, int target){
 
             int length = nums.length;
             int first = lowerBound(nums,target);
@@ -110,7 +110,7 @@ class Main {
 
     // ======================= Optimal Approach using Binary Search =======================================
 
-        static int firstOccurence(int[] nums, int target){
+        public static int firstOccurence(int[] nums, int target){
             
             int length = nums.length;
             int low = 0, high = length - 1;
@@ -132,7 +132,7 @@ class Main {
             return first;
         }
 
-        static int lastOccurence(int[] nums, int target){
+        public static int lastOccurence(int[] nums, int target){
 
             int length = nums.length;
             int low = 0, high = length - 1;
@@ -154,7 +154,7 @@ class Main {
             return last;
         }
 
-        static int[] firstAndLastOccurence_3(int[] nums, int target){
+        public static int[] firstAndLastOccurence_3(int[] nums, int target){
 
             int length = nums.length;
             int first = firstOccurence(nums,target);
