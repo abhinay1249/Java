@@ -17,7 +17,7 @@ class Main {
     
     // ================================= Floor Approach ================================================
 
-        static int floor(int[] nums, int target){
+        public static int floor(int[] nums, int target){
 
             int length = nums.length;
             int low = 0, high = length - 1;
@@ -38,7 +38,7 @@ class Main {
 
     // =================================== Ceil Approach =======================================
 
-        static int ceil(int[] nums, int target){
+        public static int ceil(int[] nums, int target){
 
             int length = nums.length;
             int low = 0, high = length - 1;
