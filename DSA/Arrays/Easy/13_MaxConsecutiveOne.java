@@ -17,7 +17,7 @@ class Main {
 
     // ======================= Brute Force Approach =======================================
         
-        static int maxConsecutiveOne(int[] nums){
+        public static int maxConsecutiveOne(int[] nums){
 
             int maxConsecutive = Integer.MIN_VALUE;
             int count = 0;
@@ -45,7 +45,7 @@ class Main {
 
     // ======================= Better Approach =======================================
 
-        static int maxConsecutiveOne_1(int[] nums){
+        public static int maxConsecutiveOne_1(int[] nums){
 
             int maxConsecutive = Integer.MIN_VALUE;
 
@@ -63,7 +63,7 @@ class Main {
 
     // ======================= Optimal Approach =======================================
 
-        static int maxConsecutiveOne_2(int[] nums){
+        public static int maxConsecutiveOne_2(int[] nums){
             int arrayLength = nums.length;
             int count = 0;
             int maxConsecutive = Integer.MIN_VALUE;
