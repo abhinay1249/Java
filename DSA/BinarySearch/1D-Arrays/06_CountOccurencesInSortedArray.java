@@ -15,7 +15,7 @@ class Main {
     
     // ======================= Brute Force Approach ================================
         
-        static int first(int[] nums, int target){
+        public static int first(int[] nums, int target){
 
             int length = nums.length;
             int low = 0, high = length - 1;
@@ -39,7 +39,7 @@ class Main {
     
     // ======================= Better Approach =======================================
 
-        static int last(int[] nums, int target){
+        public static int last(int[] nums, int target){
 
             int length = nums.length;
             int low = 0, high = length - 1;
@@ -61,7 +61,7 @@ class Main {
             return last;
         }
 
-        static int firstAnsLastOccurence_3(int[] nums, int target){
+        public static int firstAnsLastOccurence_3(int[] nums, int target){
 
             int length = nums.length;
             int first = first(nums,target);
