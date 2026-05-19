@@ -17,7 +17,7 @@ class Main {
 
     // =========================== Brute Force Approach ============================== 
 
-        static int noOfStudents(int[]pages,int maxPages,int students){
+        public static int noOfStudents(int[]pages,int maxPages,int students){
 
             int length = pages.length;
             int studentsCount = 1;
@@ -35,7 +35,7 @@ class Main {
             return studentsCount;
         }
 
-        static int allocateBooks(int[] pages, int students){
+        public static int allocateBooks(int[] pages, int students){
 
             int length = pages.length;
 
@@ -58,7 +58,7 @@ class Main {
 
     // =========================== Optimal Approach ============================== 
 
-        static int noOfStudents_1(int[]pages,int maxPages,int students){
+        public static int noOfStudents_1(int[]pages,int maxPages,int students){
         
             int length = pages.length;
             int studentsCount = 1;
@@ -76,7 +76,7 @@ class Main {
             return studentsCount;
         }
 
-        static int allocateBooks_1(int[] pages, int students){
+        public static int allocateBooks_1(int[] pages, int students){
 
             int length = pages.length;
 
@@ -105,5 +105,7 @@ class Main {
         int students = 2;
         int result = allocateBooks(pages,students);
         System.out.println(result);
+        int result1 = allocateBooks_1(pages,students);
+        System.out.println(result1);
     }
 }
