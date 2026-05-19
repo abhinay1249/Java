@@ -9,7 +9,7 @@ class Main {
     
     // =========================== Brute Force Approach ============================== 
 
-        static int subArraySum(int[] nums,int largestSum ,int subArrays){
+        public static int subArraySum(int[] nums,int largestSum ,int subArrays){
 
             int length = nums.length;
             int sum = 0;
@@ -26,7 +26,7 @@ class Main {
             return countOfSubArrays;
         }
 
-        static int minimumLargestSum(int[] nums, int noOfSubArrays){
+        public static int minimumLargestSum(int[] nums, int noOfSubArrays){
 
             int length = nums.length;
             if(length < noOfSubArrays) return -1;
@@ -47,7 +47,7 @@ class Main {
 
     // =========================== Optimal Approach ============================== 
 
-        static int subArraySum_1(int[] nums,int largestSum ,int subArrays){
+        public static int subArraySum_1(int[] nums,int largestSum ,int subArrays){
 
             int length = nums.length;
             int sum = 0;
@@ -64,7 +64,7 @@ class Main {
             return countOfSubArrays;
         }
 
-        static int minimumLargestSum_1(int[] nums, int noOfSubArrays){
+        public static int minimumLargestSum_1(int[] nums, int noOfSubArrays){
 
             int length = nums.length;
             if(length < noOfSubArrays) return -1;
