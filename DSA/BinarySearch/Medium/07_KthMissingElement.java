@@ -6,7 +6,7 @@ class Main {
     
     // =========================== Brute Force Approach ==============================
 
-        static int kthMissingElement(int[] nums, int k){
+        public static int kthMissingElement(int[] nums, int k){
             int missingElement = -1;
             int length = nums.length;
 
@@ -26,7 +26,7 @@ class Main {
 
     // =========================== Optimal Approach ==============================
 
-        static int kthMissingElement_1(int[] nums, int k){
+        public static int kthMissingElement_1(int[] nums, int k){
             int length = nums.length;
 
             int low = 0, high = length - 1;
@@ -49,5 +49,7 @@ class Main {
         int k = 9;
         int result = kthMissingElement(nums,k);
         System.out.println(result);
+        int result1 = kthMissingElement_1(nums,k);
+        System.out.println(result1);
     }
 }
