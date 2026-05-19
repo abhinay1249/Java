@@ -36,7 +36,7 @@ class Main {
             return daysRequired;
         }
 
-        static int minimumCapacity(int[] weights, int days){
+        public static int minimumCapacity(int[] weights, int days){
 
             int start = Arrays.stream(weights).max().getAsInt(); 
             int end = summationOfWeights(weights);
@@ -68,7 +68,7 @@ class Main {
             return daysRequired;
         }
     
-        static int minimumCapacity_1(int[] weights, int days){
+        public static int minimumCapacity_1(int[] weights, int days){
             
             int low = Arrays.stream(weights).max().getAsInt(); 
             int high = Arrays.stream(weights).sum();
@@ -91,5 +91,7 @@ class Main {
         int days = 3;
         int result = minimumCapacity(weights,days);
         System.out.println(result);
+        int result1 = minimumCapacity_1(weights,days);
+        System.out.println(result1);
     }
 }
