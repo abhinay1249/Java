@@ -1,4 +1,5 @@
-// Problem Statement: You are given a sorted array arr of distinct values and a target value x. You need to search for the index of the target value in the array.
+// Problem Statement: You are given a sorted array arr of distinct values and a target value x. 
+// You need to search for the index of the target value in the array.
 
 // Example 1:
 // Input Format: arr[] = {1,2,4,7}, x = 6
@@ -12,10 +13,27 @@
 
 
 class Main {
+
+    // =============================== Brute Force Approach =================================================
+
+        public static int insertPosition(int[] nums, int target){
+
+            int length = nums.length;
+            int low = 0, high = length - 1;
+            int ans = length;
+
+            for(int i = 0; i < length; i++){                                    // T.C = O(N) S.C = O(1)
+                if(nums[i] >= target){
+                    ans = i;
+                    break;
+                }
+            }
+            return ans;
+        }
     
     // =============================== Optimal Approach =================================================
 
-        public static int insertPosition(int[] nums, int target){
+        public static int insertPosition_1(int[] nums, int target){
 
             int length = nums.length;
             int low = 0, high = length - 1;
@@ -34,12 +52,10 @@ class Main {
             return ans;
         }
 
-
-
     public static void main(String[] args) {
         int[] nums = {1,3,4,5,7,9,10,13,15};
         int target = 10;
-        int result = insertPosition(nums,target);
+        int result = insertPosition_1(nums,target);
         System.out.println(result);
     }
 }
