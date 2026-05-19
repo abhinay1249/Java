@@ -13,7 +13,7 @@
 
 class Main {
     
-    // ============================ Lower Bound [Smallest Index] ==================================
+    // ============================ Lower Bound ==================================
 
         public static int lowerBound(int[] nums, int target){
 
@@ -34,7 +34,7 @@ class Main {
             return ans;
         }
 
-    // =============================== Upper Bound [Smallest Index] ===================================
+    // =============================== Upper Bound ===================================
 
         public static int upperBound(int[] nums, int target){
         
