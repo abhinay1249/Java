@@ -9,7 +9,7 @@ class Main {
     
     // =========================== Brute Force Approach ============================== 
 
-        static int noOfPainters(int[] boards, int boardUnits, int painters){
+        public static int noOfPainters(int[] boards, int boardUnits, int painters){
 
             int length = boards.length;
             int sumOfUnits = 0;
@@ -27,7 +27,7 @@ class Main {
             return paintersCount;
         }
 
-        static int minimumTime(int[] boards, int painters){
+        public static int minimumTime(int[] boards, int painters){
 
             int length = boards.length;
 
@@ -49,7 +49,7 @@ class Main {
 
     // =========================== Optimal Approach ============================== 
 
-        static int noOfPainters_1(int[] boards, int boardUnits, int painters){
+        public static int noOfPainters_1(int[] boards, int boardUnits, int painters){
 
             int length = boards.length;
             int sumOfUnits = 0;
@@ -67,7 +67,7 @@ class Main {
             return paintersCount;
         }
 
-        static int minimumTime_1(int[] boards, int painters){
+        public static int minimumTime_1(int[] boards, int painters){
 
             int length = boards.length;
 
