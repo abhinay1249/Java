@@ -16,7 +16,7 @@ class Main {
     
     // ======================= Brute Force Approach ===================================
     
-        static int rotatedTimes(int[] nums){
+        public static int rotatedTimes(int[] nums){
 
             int length = nums.length;
             int minValue = Integer.MAX_VALUE;
@@ -37,7 +37,7 @@ class Main {
 
     // ======================= Better Approach =======================================
 
-        static int rotatedTimes_1(int[] nums){
+        public static int rotatedTimes_1(int[] nums){
 
             int length = nums.length;
             int minValue = Integer.MAX_VALUE;
@@ -55,7 +55,7 @@ class Main {
 
     // ======================= Optimal Approach =======================================
 
-        static int rotatedTimes_2(int[] nums){
+        public static int rotatedTimes_2(int[] nums){
         
             int length = nums.length;
             int minValue = Integer.MAX_VALUE;
