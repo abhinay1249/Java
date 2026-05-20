@@ -111,7 +111,7 @@ class Main {
 
     // ======================= Optimal Approach using Binary Search =======================================
 
-        public static int firstOccurence(int[] nums, int target){
+        private static int firstOccurence(int[] nums, int target){
             
             int length = nums.length;
             int low = 0, high = length - 1;
@@ -133,7 +133,7 @@ class Main {
             return first;
         }
 
-        public static int lastOccurence(int[] nums, int target){
+        private static int lastOccurence(int[] nums, int target){
 
             int length = nums.length;
             int low = 0, high = length - 1;
