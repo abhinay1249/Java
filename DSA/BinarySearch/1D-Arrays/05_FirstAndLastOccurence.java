@@ -21,19 +21,20 @@ class Main {
             int lastOccurence = -1;
             int firstOccurence = -1;
 
-            for(int index = 0 ; index < length ; index++){                  // T.C = O(2N) S.C = O(1)
-                if(nums[index] == target){
+            for(int index = 0 ; index < length ; index++){                  // T.C = O(N) S.C = O(1)
+                if(nums[index] == target && firstOccurence == -1){
                     firstOccurence = index;
+                }
+
+                if(nums[length-index-1] == target && lastOccurence == -1){
+                    lastOccurence = length - index - 1;
+                }
+
+                if(firstOccurence != -1 && lastOccurence != -1){
                     break;
                 }
             }
 
-            for(int index = length-1 ; index >= 0 ; index--){
-                if(nums[index] == target){
-                    lastOccurence = index;
-                    break;
-                }
-            }
             return new int[]{firstOccurence,lastOccurence};
         }
 
