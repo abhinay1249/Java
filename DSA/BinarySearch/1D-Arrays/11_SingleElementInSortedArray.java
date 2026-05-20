@@ -7,7 +7,7 @@ class Main {
     
     // ======================= Brute Force Approach ===========================
 
-        static int singleElement(int[] nums){
+        public static int singleElement(int[] nums){
             int length = nums.length;
 
             if(length == 1) return nums[0];
@@ -31,7 +31,7 @@ class Main {
     
     // ======================= Better Approach =================================
 
-        static int singleElement_1(int[] nums){
+        public static int singleElement_1(int[] nums){
             int length = nums.length;
             int singleElement = 0;
 
@@ -45,7 +45,7 @@ class Main {
     
     // ======================= Optimal Approach =================================
 
-        static int singleElement_2(int[] nums){
+        public static int singleElement_2(int[] nums){
         
             int length = nums.length;
 
