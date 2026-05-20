@@ -15,7 +15,7 @@ class Main {
 
     // ======================= Brute Force Approach =======================================
 
-        static int minimumInSortedArray(int[] nums){
+        public static int minimumInSortedArray(int[] nums){
 
             int length = nums.length;
             int minValue = Integer.MAX_VALUE;                       // T.C = O(N), S.C = O(1)
@@ -29,7 +29,7 @@ class Main {
     
     // ======================= Optimal Approach ============================================
 
-        static int minimumInSortedArray_1(int[] nums){
+        public static int minimumInSortedArray_1(int[] nums){
 
             int length = nums.length;
             int minValue = Integer.MAX_VALUE;
