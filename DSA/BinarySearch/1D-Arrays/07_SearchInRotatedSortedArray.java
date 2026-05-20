@@ -15,7 +15,7 @@
 
 class Main {
 
-    // ======================= Brute Force Approach =======================================
+    // ======================= Brute Force Approach ==================================
 
         public static int rotatedSortedArray(int[] nums, int target){
 
