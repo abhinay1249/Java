@@ -15,7 +15,22 @@ class Main {
     
     // ======================= Brute Force Approach ================================
         
-        public static int first(int[] nums, int target){
+        public static int firstAnsLastOccurence(int[] nums, int target){
+
+            int length = nums.length;
+            int count = 0;
+
+            for(int i=0; i<length; i++){                            // T.C. = O(N), S.C. = O(1)
+                if(nums[i] == target){
+                    count++;
+                }
+            }
+            return count;
+        }
+    
+    // ======================= Better Approach =======================================
+
+        private static int first(int[] nums, int target){
 
             int length = nums.length;
             int low = 0, high = length - 1;
@@ -36,10 +51,8 @@ class Main {
             }
             return first;
         }
-    
-    // ======================= Better Approach =======================================
 
-        public static int last(int[] nums, int target){
+        private static int last(int[] nums, int target){
 
             int length = nums.length;
             int low = 0, high = length - 1;
@@ -61,12 +74,12 @@ class Main {
             return last;
         }
 
-        public static int firstAnsLastOccurence_3(int[] nums, int target){
+        public static int firstAnsLastOccurence_1(int[] nums, int target){
 
             int length = nums.length;
             int first = first(nums,target);
 
-            if(first == -1){
+            if(first == -1){                                    // T.C. = 2 * O(logN), S.C. = O(1)
                 return 0;
             }
             int last = last(nums,target);
@@ -77,7 +90,7 @@ class Main {
     public static void main(String[] args) {
         int[] nums = {3,4,13,13,13,20,40};
         int target = 13;
-        int result = firstAnsLastOccurence_3(nums,target);
+        int result = firstAnsLastOccurence_1(nums,target);
         
         System.out.println(result);
         
