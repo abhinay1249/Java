@@ -1,6 +1,6 @@
 
                                        
-class C        // access modifier termed  default
+class C     // access modifier termed  default
 {
     public int abc()
     {
