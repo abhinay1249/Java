@@ -24,7 +24,7 @@ class Main{
 
     // ======================= Brute-Force Approach ===============================
 
-        static boolean rotateString(String s, String goal){
+        public static boolean rotateString(String s, String goal){
 
             if(s.length() != goal.length()){
                 return false;
@@ -48,7 +48,7 @@ class Main{
     
     // ======================= Brute-Force Approach (Reduced Code) ===============================
 
-        static boolean rotateString_1(String s, String goal){
+        public static boolean rotateString_1(String s, String goal){
 
             if(s.length() != goal.length()){
                 return false;
@@ -65,7 +65,7 @@ class Main{
 
     // ======================= Optimal Approach - KMP ALgorithm ===============================
         
-        static boolean rotateString_2(String s, String goal){
+        public static boolean rotateString_2(String s, String goal){
 
             int length = s.length();
             int goalLength = goal.length();
