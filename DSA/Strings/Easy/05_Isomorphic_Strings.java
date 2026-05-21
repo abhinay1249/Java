@@ -84,7 +84,7 @@ class Main{
         
     // ======================= Optimal Approach ===============================
 
-        static boolean isIsomorphic_2(String s, String t) {
+        public static boolean isIsomorphic_2(String s, String t) {
 
             int[] mapS = new int[256];
             int[] mapT = new int[256];
