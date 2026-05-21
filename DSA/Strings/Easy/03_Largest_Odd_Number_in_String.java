@@ -52,7 +52,7 @@ class Main {
 
     // ======================= Optimal Approach ===============================
 
-        static String largestOddNumberInString_1(String s){
+        public static String largestOddNumberInString_1(String s){
             
             int index = -1;
             int pointer = s.length()-1;
