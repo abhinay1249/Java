@@ -56,7 +56,7 @@ class Main {
 
     // ======================= Better Approach ===============================
 
-        static String reverseWordsInString_1(String s){
+        public static String reverseWordsInString_1(String s){
 
             int length = s.length();
 
