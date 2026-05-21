@@ -6,18 +6,22 @@ abstract class Sum{
    abstract void sum();
 }
 class Child extends Sum{
+    
     private int c = a+b;
     
     int getNum(){
         return c;
     }
+    
     void setNum(int n){
         c = n+a;
     }
+
     @Override
     void sum(){
         System.out.println("Abstraction + Encapsulation");
     }
+
 }
 class Main {
     public static void main(String[] args) {
