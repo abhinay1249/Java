@@ -58,7 +58,7 @@ class Main {
 
     // =========================== Optimal Approach ===================================
 
-        static String removeOuterParantheses_1(String s){
+        public static String removeOuterParantheses_1(String s){
             
             StringBuilder result = new StringBuilder();
             int counter = 0;
