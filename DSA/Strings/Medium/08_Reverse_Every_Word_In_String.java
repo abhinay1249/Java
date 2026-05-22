@@ -23,7 +23,7 @@ class Main {
 
     // ======================= Brute-Force Approach ===============================
 
-        static String reverseWordsInString(String s){
+        public static String reverseWordsInString(String s){
             
             int length = s.length();
 
@@ -56,7 +56,7 @@ class Main {
     
     // ======================== Optimal Approach ===============================
 
-        static String reverseWordsInString_1(String s){
+        public static String reverseWordsInString_1(String s){
         
             String str = reverse(s);
 
