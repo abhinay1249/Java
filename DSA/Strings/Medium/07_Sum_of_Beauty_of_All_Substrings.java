@@ -35,7 +35,7 @@ class Main {
 
     // ======================= Brute-Force Approach ===============================
 
-        static int sumOfAllSubstrings(String s){
+        public static int sumOfAllSubstrings(String s){
             int length = s.length();
 
             if(length == 0){
@@ -68,7 +68,7 @@ class Main {
 
     // ======================== Optimal Approach ===============================
    
-        static int sumOfAllSubstrings_1(String s) {
+        public static int sumOfAllSubstrings_1(String s) {
 
             int length = s.length();
 
