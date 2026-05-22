@@ -26,7 +26,7 @@ class Main {
     
     // ======================= Optimal Approach ===============================
 
-        static int atmost(String s, int k){
+        public static int atmost(String s, int k){
 
             int length = s.length();
 
@@ -59,7 +59,7 @@ class Main {
             return atmostPossible;
         }
 
-        static int countNumberOfStrings(String s, int k){
+        public static int countNumberOfStrings(String s, int k){
             return atmost(s,k) - atmost(s,k-1);
         }
 
