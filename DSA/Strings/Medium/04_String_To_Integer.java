@@ -35,11 +35,11 @@ class Main {
     
     // ======================= Optimal Approach ===============================
 
-        static boolean isDigit(char ch){
+        private static boolean isDigit(char ch){
             return ch >= '0' && ch <= '9';    
         }
 
-        static int stringToInteger(String s){
+        public static int stringToInteger(String s){
             int length = s.length();
 
             if(length == 0){
