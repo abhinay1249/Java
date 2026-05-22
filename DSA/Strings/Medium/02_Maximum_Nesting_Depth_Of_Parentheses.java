@@ -22,7 +22,7 @@ class Main {
 
     // ======================= Optimal Approach ===============================
     
-        static int maxNestingDepth(String s){
+        public static int maxNestingDepth(String s){
             int length = s.length();
 
             int count = 0;
