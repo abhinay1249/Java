@@ -34,7 +34,7 @@ class Main{
 
     // ======================= Brute-Force Approach ===============================
 
-        static String sortCharactersByFrequency(String s){
+        public static String sortCharactersByFrequency(String s){
 
             Map<Character,Integer> charCount = new HashMap<>();
 
@@ -64,7 +64,7 @@ class Main{
 
     // ======================= Optimal Approach [BUCKET SORT ALGORITHM ] ===============================
 
-        static String sortCharactersByFrequency_1(String s){
+        public static String sortCharactersByFrequency_1(String s){
 
             int length = s.length();
 
