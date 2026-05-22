@@ -26,7 +26,7 @@ class Main {
 
     // ======================= Brute-Force Approach ===============================
     
-        static String longestPalindromeSubstring(String s){
+        public static String longestPalindromeSubstring(String s){
 
             int length = s.length();
 
@@ -76,7 +76,7 @@ class Main {
     
     // ======================== Optimal Approach ===============================
 
-        static String longestPalindromeSubstring_1(String s){
+        public static String longestPalindromeSubstring_1(String s){
 
             int length = s.length();
         
