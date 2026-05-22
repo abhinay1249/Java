@@ -29,7 +29,7 @@ class Main {
     
     // ======================= Optimal Approach ===============================
 
-        static int romanToInteger(String s){
+        public static int romanToInteger(String s){
 
             int length = s.length();
 
