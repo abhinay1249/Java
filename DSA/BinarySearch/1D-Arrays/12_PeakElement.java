@@ -17,7 +17,7 @@ class Main {
 
     // ======================= Brute Force Approach ===========================
 
-        static int peakElement(int[] nums){
+        public static int peakElement(int[] nums){
 
             int length= nums.length;
 
@@ -39,7 +39,7 @@ class Main {
     
     // ======================= Optimal Force Approach ===========================
 
-        static int peakElement_1(int[] nums){
+        public static int peakElement_1(int[] nums){
 
             int length= nums.length;
 
