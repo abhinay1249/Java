@@ -6,7 +6,7 @@ class Main {
 
             int length= nums.length;
 
-            if(length == 1) return 0;
+            if(length == 1) return -1;
 
             int peakElementIdx = -1;                                             // T.C = O(N), S.C = O(1)
 
