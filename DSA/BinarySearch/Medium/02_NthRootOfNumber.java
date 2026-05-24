@@ -25,7 +25,7 @@ class Main {
 
             int number = -1;
 
-            for(int index = 1 ; index < m ; index++){           // T.C = O(LOG N) + O(N), S.C = O(1)
+            for(int index = 1 ; index < m ; index++){           // T.C = O(M), S.C = O(1)
                 int product = powOfNumber(index,n);
                 if(product == m){
                     number = index;
