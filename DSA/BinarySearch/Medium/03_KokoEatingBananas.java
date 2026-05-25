@@ -32,11 +32,13 @@ class Main {
             int maxBananas = Arrays.stream(piles).max().getAsInt();             
 
             for(int index = 1 ; index <= maxBananas ; index++){
-                 long result = calculateMinBananas(piles, index);
+                
+                long result = calculateMinBananas(piles, index);
 
-                 if(result <= hours){
+                if(result <= hours){
                     return index;
-                 }
+                }
+                
             }
             return maxBananas;
         }
