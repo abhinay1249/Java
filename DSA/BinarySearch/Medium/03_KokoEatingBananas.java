@@ -13,7 +13,7 @@ class Main {
     
     // =========================== Brute Force Approach ==============================
 
-        static long calculateMinBananas(int[] piles, int minBananas){
+        private static long calculateMinBananas(int[] piles, int minBananas){
             int length = piles.length;
             int bananasPerHour = 0;
             long minSpeed = 0;
@@ -25,7 +25,7 @@ class Main {
             return minSpeed;                                                        // T.C = O(max(piles)* N), S.C = O(1)
         }
 
-        static int kokoEatingBananas(int[] piles, int hours){
+        public static int kokoEatingBananas(int[] piles, int hours){
 
             int length = piles.length;
 
@@ -38,14 +38,14 @@ class Main {
                 if(result <= hours){
                     return index;
                 }
-                
+
             }
             return maxBananas;
         }
 
     // =========================== Optimal Approach ==============================
 
-        static long calculateMinBananas_1(int[] piles, int minBananas){
+        private static long calculateMinBananas_1(int[] piles, int minBananas){
             int length = piles.length;
             int bananasPerHour = 0;
             long minSpeed = 0;
@@ -57,7 +57,7 @@ class Main {
             return minSpeed;                                                    // T.C = O(log2(max[piles])) * O(N), S.C = O(1)
         }
     
-        static int kokoEatingBananas_1(int[] piles, int hours){
+        public static int kokoEatingBananas_1(int[] piles, int hours){
 
             int maxBananas = Arrays.stream(piles).max().getAsInt();
             int low = 1 , high = maxBananas;
