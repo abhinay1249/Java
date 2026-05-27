@@ -9,7 +9,7 @@ class Main {
 
     // =========================== Brute Force Approach ==============================
     
-        static boolean minimumDivisor(int[] nums,int divisor,int limit){
+        private static boolean minimumDivisor(int[] nums,int divisor,int limit){
 
             int sum = 0;
             int div = 0;
@@ -30,7 +30,7 @@ class Main {
             return flag;
         }
 
-        static int smallestDivisor(int[] nums, int limit){
+        public static int smallestDivisor(int[] nums, int limit){
 
             int maxNumber = Arrays.stream(nums).max().getAsInt();
 
@@ -44,7 +44,7 @@ class Main {
     
     // =========================== Optimal Approach ==============================
 
-        static boolean minimumDivisor_1(int[] nums,int divisor,int limit){
+        private static boolean minimumDivisor_1(int[] nums, int divisor, int limit){
         
             int sum = 0;
             int div = 0;
@@ -65,18 +65,18 @@ class Main {
             return flag;
         }
     
-        static int smallestDivisor_1(int[] nums, int limit){
+        public static int smallestDivisor_1(int[] nums, int limit){
 
             int length = nums.length;
 
-            if(threshold < length) return -1;
+            if(limit < length) return -1;
 
             int low = 1;
             int high = Arrays.stream(nums).max().getAsInt();
 
             while(low <= high){
                 int mid = low + ((high - low)/2);
-                if(minimumDivisor(nums,mid,limit) == true){
+                if(minimumDivisor_1(nums,mid,limit) == true){
                     high = mid - 1;
                 }else{
                     low = mid + 1;
