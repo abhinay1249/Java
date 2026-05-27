@@ -10,7 +10,7 @@ class Main {
     
     // =========================== Brute Force Approach ==============================
 
-        static boolean possibleDay(int[] days, int day, int m , int k){
+        private static boolean possibleDay(int[] days, int day, int m , int k){
 
             int length = days.length;
             int countOfRoses = 0;
@@ -30,13 +30,13 @@ class Main {
             return false;
         }
 
-        static int minimumNumberOfDays(int[] days,int m, int k){        // T.C = O((Max-Min)+1) * O(N) , S.C = O(1)
+        public static int minimumNumberOfDays(int[] days,int m, int k){        
 
             int length = days.length;
             int minRosesRequired = m*k;
 
             if(length < minRosesRequired){
-                return -1;
+                return -1;                                          // T.C = O((Max-Min)+1) * O(N) , S.C = O(1)
             }
 
             int minimumDay = Arrays.stream(days).min().getAsInt();
@@ -52,7 +52,7 @@ class Main {
     
     // =========================== Optimal Approach ==============================
 
-        static boolean possibleDay_1(int[] days, int day, int m , int k){
+        private static boolean possibleDay_1(int[] days, int day, int m , int k){
         
             int length = days.length;
             int countOfRoses = 0;
@@ -72,7 +72,7 @@ class Main {
             return false;
         }
     
-        static int minimumNumberOfDays_1(int[] days,int m, int k){
+        public static int minimumNumberOfDays_1(int[] days,int m, int k){
 
             int length = days.length;
             long minRosesRequired = (long) m*k;
@@ -87,7 +87,7 @@ class Main {
 
             while(low <= high){
                 int mid = low + ((high-low)/2);
-                if(possibleDay(days,mid,m,k) == true){
+                if(possibleDay_1(days,mid,m,k) == true){
                     result = mid;
                     high = mid - 1;
                 }else{
