@@ -29,7 +29,7 @@ class Main {
             return false;
         }
 
-        static int maxPossibleOfMinDistance(int[] stalls, int cows){
+        public static int maxPossibleOfMinDistance(int[] stalls, int cows){
             int length = stalls.length;
 
             if(cows <= 1) return -1;
@@ -94,7 +94,7 @@ class Main {
             while(low <= high){
                 int mid = (low  + (high-low)/2);
 
-                if(possibleCows(stalls,mid,cows)==true){
+                if(possibleCows_1(stalls,mid,cows)==true){
                     low = mid + 1;
                 }else{
                     high = mid - 1;
