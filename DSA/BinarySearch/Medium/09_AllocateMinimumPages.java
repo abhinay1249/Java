@@ -17,7 +17,7 @@ class Main {
 
     // =========================== Brute Force Approach ============================== 
 
-        public static int noOfStudents(int[]pages,int maxPages,int students){
+        private static int noOfStudents(int[]pages,int maxPages,int students){
 
             int length = pages.length;
             int studentsCount = 1;
@@ -58,7 +58,7 @@ class Main {
 
     // =========================== Optimal Approach ============================== 
 
-        public static int noOfStudents_1(int[]pages,int maxPages,int students){
+        private static int noOfStudents_1(int[]pages,int maxPages,int students){
         
             int length = pages.length;
             int studentsCount = 1;
