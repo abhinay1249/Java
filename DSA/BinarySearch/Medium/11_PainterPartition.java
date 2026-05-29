@@ -9,7 +9,7 @@ class Main {
     
     // =========================== Brute Force Approach ============================== 
 
-        public static int noOfPainters(int[] boards, int boardUnits, int painters){
+        private static int noOfPainters(int[] boards, int boardUnits, int painters){
 
             int length = boards.length;
             int sumOfUnits = 0;
@@ -49,7 +49,7 @@ class Main {
 
     // =========================== Optimal Approach ============================== 
 
-        public static int noOfPainters_1(int[] boards, int boardUnits, int painters){
+        private static int noOfPainters_1(int[] boards, int boardUnits, int painters){
 
             int length = boards.length;
             int sumOfUnits = 0;
