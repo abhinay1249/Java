@@ -20,7 +20,7 @@ class Main {
 
     // =========================== Brute Force Approach ============================== 
 
-        static double minimumGasStationsDistance(int[] distance,int gasStations){
+        public static double minimumGasStationsDistance(int[] distance,int gasStations){
             int length = distance.length;
             int[] howMany = new int[length-1];
 
@@ -52,7 +52,7 @@ class Main {
 
     // =========================== Better Approach ============================== 
 
-        static double minimumGasStationsDistance_1(int[] nums,int k){
+        public static double minimumGasStationsDistance_1(int[] nums,int k){
             int length = nums.length;
             int[] howMany = new int[length-1];
 
@@ -76,7 +76,7 @@ class Main {
     
     // =========================== Optimal Approach ============================== 
 
-        static int gasStationsRequired(double distance, int[] nums){
+        private static int gasStationsRequired(double distance, int[] nums){
             int count = 0;
             int length = nums.length;
 
@@ -90,7 +90,7 @@ class Main {
             return count;
         }
 
-        static double minimiseTheMaximumDistance_2(int[] nums, int k){
+        public static double minimiseTheMaximumDistance_2(int[] nums, int k){
 
             int length = nums.length;
             int maxDifference = -1;
@@ -119,7 +119,7 @@ class Main {
     public static void main(String[] args) {
         int[] nums = {1,2,3,4,5};
         int k = 4;
-        double result = minimumGasStationsDistance(nums,k);
+        double result = minimiseTheMaximumDistance_2(nums,k);
         System.out.println(result);
     }
 }
