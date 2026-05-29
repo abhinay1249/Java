@@ -79,7 +79,7 @@ class Main {
             while(low <= high){                                                                     
 
                 int mid = low + ((high-low)/2);
-                int paintersCount = noOfPainters(boards,mid,painters);
+                int paintersCount = noOfPainters_1(boards,mid,painters);
 
                 if(paintersCount <= painters){
                     high = mid - 1;
