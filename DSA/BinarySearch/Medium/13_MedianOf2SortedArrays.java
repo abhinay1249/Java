@@ -9,7 +9,7 @@ class Main {
 
     // =========================== Brute Force Approach ============================== 
 
-        static double medianOfSortedArrays(int[] nums1, int[] nums2) {
+        public static double medianOfSortedArrays(int[] nums1, int[] nums2) {
 
             int nums1Length = nums1.length;
             int nums2Length = nums2.length;
@@ -52,7 +52,7 @@ class Main {
 
     // =========================== Better Approach ============================== 
 
-        static double medianOfSortedArrays_1(int[] nums1, int[] nums2) {
+        public static double medianOfSortedArrays_1(int[] nums1, int[] nums2) {
         
             int length_1 = nums1.length;
             int length_2 = nums2.length;
@@ -83,7 +83,7 @@ class Main {
 
     // =========================== Optimal Approach ==============================     
 
-        static double medianOfSortedArrays_2(int[] nums1, int[] nums2){
+        public static double medianOfSortedArrays_2(int[] nums1, int[] nums2){
             int length1 = nums1.length;
             int length2 = nums2.length;
 
@@ -128,7 +128,7 @@ class Main {
     public static void main(String[] args) {
         int[] nums1 = {2,4,6};
         int[] nums2 = {1,3,5};
-        double result = medianOfSortedArrays(nums1,nums2);
+        double result = medianOfSortedArrays_2(nums1,nums2);
         System.out.println(result);
     }
 }
