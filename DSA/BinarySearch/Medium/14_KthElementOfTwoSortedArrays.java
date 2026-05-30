@@ -1,12 +1,14 @@
 // Problem Statement: Given two sorted arrays a and b of size m and n respectively. Find the kth element of the final sorted array.
 
+
+
 import java.util.*;
 
 class Main {
 
     // =========================== Brute Force Approach ============================== 
 
-        static int kthElement(int[] nums1, int[] nums2, int k){
+        public static int kthElement(int[] nums1, int[] nums2, int k){
             int length1 = nums1.length;
             int length2 = nums2.length;
 
@@ -38,7 +40,7 @@ class Main {
 
     // =========================== Optimal Approach ==============================   
 
-        static int kthElement_1(int[] nums1, int[] nums2, int k){
+        public static int kthElement_1(int[] nums1, int[] nums2, int k){
         
             int length_1 = nums1.length;
             int length_2 = nums2.length;
