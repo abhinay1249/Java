@@ -42,7 +42,7 @@ class Main {
             int length = distance.length;
             int[] howMany = new int[length-1];
 
-            for(int gasStation = 0 ; gasStation <= length-1 ; gasStation++){
+            for(int gasStation = 1 ; gasStation <= gasStations ; gasStation++){
                 double maxSection = -1;
                 int maxIndex = -1;
 
