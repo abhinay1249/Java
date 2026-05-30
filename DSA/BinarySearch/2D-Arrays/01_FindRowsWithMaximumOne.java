@@ -17,7 +17,7 @@
 // 0 0
 // 0 0
 // Result: -1
-// Explanation:  The matrix does not contain any 1. So, -1 is the answer.
+// Explanation: The matrix does not contain any 1. So, -1 is the answer.
 
 class Main {
 
