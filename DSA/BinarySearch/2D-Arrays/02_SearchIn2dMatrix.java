@@ -34,7 +34,7 @@ class Main {
 
     // =========================== Better Approach ==============================
 
-        public static boolean binarySearch(int[] mat, int target){
+        private static boolean binarySearch(int[] mat, int target){
             int length = mat.length;
 
             int low = 0, high = length -1;
