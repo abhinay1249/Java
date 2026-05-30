@@ -10,7 +10,6 @@
 //  As the length of the merged list is even, the median is the average of the two middle elements.
 //   Here two medians are 3 and 4. So the median will be the average of 3 and 4, which is 3.5.
 
-
 // Example 2
 
 // Input: arr1 = [2, 4, 6], arr2 = [1, 3]
