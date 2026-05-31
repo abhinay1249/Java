@@ -72,7 +72,7 @@ class Main {
             int length_2 = nums2.length;
             int totalLength = (length_1+length_2);
 
-            int left = 0, left_1 = 0;
+            int left = 0, right = 0;
 
             int prev = 0, curr = 0;
             int count = 0;                              // T.C = O(M + N) , S.C = O(1)
@@ -81,10 +81,10 @@ class Main {
 
                 prev = curr;                                
 
-                if(left < length_1 && (left_1 >= length_2 || nums1[left] <= nums2[left_1])){
+                if(left < length_1 && (right >= length_2 || nums1[left] <= nums2[right])){
                     curr = nums1[left++];
                 }else{
-                    curr = nums2[left_1++];
+                    curr = nums2[right++];
                 }
                 count++;
             }
