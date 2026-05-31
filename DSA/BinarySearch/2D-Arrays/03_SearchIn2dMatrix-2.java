@@ -89,7 +89,7 @@ class Main {
             while(row < noOfRows && col >=0){
 
                 if(matrix[row][col]==target){
-                    return new int[]{row,col};                  // T.C = O(Log(Rows * Cols)) , S.C = O(1)
+                    return new int[]{row,col};                  // T.C = O(Rows + Cols) , S.C = O(1)
                 }else if(matrix[row][col]<target){
                     row++;
                 }else{
