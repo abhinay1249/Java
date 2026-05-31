@@ -74,24 +74,44 @@ class Main {
 
             int left = 0, right = 0;
 
+            int idx2 = totalLength/2;                                       // T.C = O(M + N) , S.C = O(1)
+            int idx1 = idx2 - 1; 
+
             int prev = 0, curr = 0;
-            int count = 0;                              // T.C = O(M + N) , S.C = O(1)
+            int count = 0;                              
 
-            while(count <= totalLength/2){
-
-                prev = curr;                                
-
-                if(left < length_1 && (right >= length_2 || nums1[left] <= nums2[right])){
-                    curr = nums1[left++];
+            while(left < length_1 && right < length_2){
+                if(nums1[left] <= nums2[right]){
+                    if(count == idx1)   prev = nums1[left];
+                    if(count == idx2)   curr = nums1[left];
+                    count++;
+                    left++;
                 }else{
-                    curr = nums2[right++];
+                    if(count == idx1)   prev = nums2[right];
+                    if(count == idx2)   curr = nums2[right];
+                    count++;
+                    right++;
                 }
+            }
+
+            while(left < length_1){
+                if(count == idx1)   prev = nums1[left];
+                if(count == idx2)   curr = nums1[left];
                 count++;
+                left++;
+            }
+
+            while(right < length_2){
+                if(count == idx1)   prev = nums2[right];
+                if(count == idx2)   curr = nums2[right];
+                count++;
+                right++;
             }
 
             if(totalLength%2 == 0){
                 return (double) ((double)(prev+curr)/2);
             }
+            
             return (double) curr;
         }
 
