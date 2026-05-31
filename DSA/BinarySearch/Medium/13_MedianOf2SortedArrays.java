@@ -109,9 +109,9 @@ class Main {
             }
 
             if(totalLength%2 == 0){
-                return (double) ((double)(prev+curr)/2);
+                return (double) (prev+curr)/2;
             }
-            
+
             return (double) curr;
         }
 
