@@ -87,10 +87,11 @@ class Main {
         }
 
     public static void main(String[] args) {
-            int[] nums1 = {100, 112, 256, 349, 770};
+        
+        int[] nums1 = {100, 112, 256, 349, 770};
         int[] nums2 = {72, 86, 113, 119, 265, 445, 892};
         int k = 7;
-        int result = kthElement(nums1,nums2,k);
+        int result = kthElement_1(nums1,nums2,k);
         System.out.println(result);
     }
 }
