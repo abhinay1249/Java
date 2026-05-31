@@ -59,9 +59,9 @@ class Main {
 
             if(length%2==0){
                 return (double)(sortedArray.get(mid) + sortedArray.get(mid+1))/2;
-            }else{
-                return (double) sortedArray.get(mid);
             }
+            
+            return (double) sortedArray.get(mid);
         }
 
     // =========================== Better Approach ============================== 
