@@ -2,4 +2,16 @@
 
 Maven is a build Tool.
 
+#### How does the Java Code Gets Converted and applied into a Web Application?
+
+Here it is,
+
 <img width="633" height="245" alt="image" src="https://github.com/user-attachments/assets/cfa3e2ea-a9b7-4294-a525-8c8ed622a466" />
+
+1. Initially, A User will write the respective Java code with some logic and save it in a .java file. 
+2. When the respective file has been compiled it produces a .class file.
+3. The code will be run for unit testcases.
+4. And Once the test cases are passed then it can be stored as a package and then can be presented either as a jar file or war file.
+5. If its the development is related to standalone application then, it can be packed into a jar file or if it is web application that need to be deployed on server (such as TomCat) then it need to packed into a war file.
+
+
