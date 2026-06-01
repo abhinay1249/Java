@@ -46,7 +46,7 @@ class Main {
                 if(ch == '('){
                     if(!stack.isEmpty()){
                         result+=ch;
-                    }                                                // T.C = O(N^2), S.C = O(X), where X is count of '('
+                    }                                                // T.C = O(N^2), S.C = O(X)  where X is count of '('
                     stack.push(ch);
                 }else if(ch == ')'){
                     stack.pop();
