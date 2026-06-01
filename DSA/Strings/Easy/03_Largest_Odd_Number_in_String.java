@@ -43,10 +43,6 @@ class Main {
             for(int index = 0 ; index <= idx ; index++){
                 char ch = s.charAt(index);
 
-                if(index == 0 && ch == '0'){
-                    continue;
-                }
-
                 word.append(ch);
             }
             return word.toString().replaceFirst("^0+","");
