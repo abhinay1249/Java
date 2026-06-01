@@ -45,12 +45,32 @@ class Main {
 
                 word.append(ch);
             }
+            
             return word.toString().replaceFirst("^0+","");
         }
 
-    // ======================= Optimal Approach ===============================
+    // ======================= Optimal Approach - 1===============================
 
         public static String largestOddNumberInString_1(String s){
+            
+            int index = -1;
+            int pointer = s.length()-1;
+            while(pointer >= 0){
+                char ch = s.charAt(pointer);
+                int num = ch - '0';
+                if(num % 2 == 0){
+                    pointer--;                                      // T.C = O(N), S.C = O(1)
+                }else{
+                    index = pointer;
+                    break;
+                }
+            }    
+            return s.substring(0,index+1).replaceFirst("^0+","");
+        }
+
+    // ======================= Optimal Approach  - 2===============================
+
+        public static String largestOddNumberInString_2(String s){
             
             int index = -1;
             int pointer = s.length()-1;
