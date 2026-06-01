@@ -39,21 +39,19 @@ class Main {
         public static String removeOuterParantheses(String s){
 
             String result = "";
-            int counter = 0;
             Stack<Character> stack = new Stack<>();
 
             for(char ch : s.toCharArray()){
 
                 if(ch == '('){
-                    if(counter > 0){
-                        result+='(';                                // T.C = O(N^2), S.C = O(X), where X is count of '('
-
-                    }
-                    counter++;
+                    if(!stack.isEmpty()){
+                        result+=ch;
+                    }                                                // T.C = O(N^2), S.C = O(X), where X is count of '('
+                    stack.push(ch);
                 }else if(ch == ')'){
-                    counter--;
-                    if(counter > 0){
-                        result+=')';
+                    stack.pop();
+                    if(!stack.isEmpty()){
+                        result+=ch;
                     }
                 }
             }
