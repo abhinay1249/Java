@@ -14,4 +14,9 @@ Here it is,
 4. And Once the test cases are passed then it can be stored as a package and then can be presented either as a jar file or war file.
 5. If its the development is related to standalone application then, it can be packed into a jar file or if it is web application that need to be deployed on server (such as TomCat) then it need to packed into a war file.
 
+#### Usage Of Maven
+
+--> From the above steps, In Order to automate the process from the complie to package it can be done by a build tool.
+--> Automate the code into a package for building it a build tool is required. That is exactly where "MAVEN" is used. 
+
 
