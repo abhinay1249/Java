@@ -20,3 +20,8 @@ Here it is,
 • Automate the code into a package for building it a, build tool is required. That is exactly where "MAVEN" is used. 
 • You can manually, do the complie and pack it but automation makes things easier and efficient.
 • It manages dependencies and automates the build process of Java Projects including tasks such as compiling code, packaging, testing and deployment.
+
+### Maven Can Do
+
+• It will create a standard project folder structure.
+• It will download and manage dependencies/libraries automatically.
