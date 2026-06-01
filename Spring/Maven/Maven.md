@@ -25,3 +25,4 @@ Here it is,
 
 • It will create a standard project folder structure.
 • It will download and manage dependencies/libraries automatically.
+• Execute unit test cases using testing frameworks like JUnit.
