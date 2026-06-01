@@ -48,7 +48,7 @@ class Main {
         return word.toString().replaceFirst("^0+", "");
     }
 
-    // ======================= Optimal Approach - 1===============================
+    // ======================= Optimal Approach - 1 ===============================
 
     public static String largestOddNumberInString_1(String s) {
 
@@ -67,7 +67,7 @@ class Main {
         return s.substring(0, index + 1).replaceFirst("^0+", "");
     }
 
-    // ======================= Optimal Approach - 2===============================
+    // ======================= Optimal Approach - 2 ===============================
 
         public static String largestOddNumberInString_2(String num) {
 
