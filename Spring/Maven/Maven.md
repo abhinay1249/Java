@@ -16,7 +16,7 @@ Here it is,
 
 ### Usage Of Maven
 
---> From the above steps, In Order to automate the process from the complie to package it can be done by a build tool.
---> Automate the code into a package for building it a build tool is required. That is exactly where "MAVEN" is used. 
+○ From the above steps, In Order to automate the process from the complie to package it can be done by a build tool.
+○ Automate the code into a package for building it a build tool is required. That is exactly where "MAVEN" is used. 
 
 
