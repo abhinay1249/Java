@@ -30,11 +30,39 @@
 // After removing outermost parentheses: "" + "()()" + "()"
 // Final result: "(()())()".
 
+import java.util.*;
+
 class Main {
 
     // =========================== Brute Force Approach ==============================
 
         public static String removeOuterParantheses(String s){
+
+            String result = "";
+            int counter = 0;
+            Stack<Character> stack = new Stack<>();
+
+            for(char ch : s.toCharArray()){
+
+                if(ch == '('){
+                    if(counter > 0){
+                        result+='(';                                // T.C = O(N^2), S.C = O(X), where X is count of '('
+
+                    }
+                    counter++;
+                }else if(ch == ')'){
+                    counter--;
+                    if(counter > 0){
+                        result+=')';
+                    }
+                }
+            }
+            return result;
+        }
+
+    // =========================== Better Approach ==============================
+
+        public static String removeOuterParantheses_1(String s){
 
             String result = "";
             int counter = 0;
@@ -58,7 +86,7 @@ class Main {
 
     // =========================== Optimal Approach ===================================
 
-        public static String removeOuterParantheses_1(String s){
+        public static String removeOuterParantheses_2(String s){
             
             StringBuilder result = new StringBuilder();
             int counter = 0;
