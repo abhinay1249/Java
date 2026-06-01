@@ -1,6 +1,6 @@
 class Main {
     
-    static void swapUsingTemp(int a, int b){
+    public static void swapUsingTemp(int a, int b){
         int temp = a;
         a = b;
         b = temp;
@@ -9,7 +9,7 @@ class Main {
         System.out.println(b);
     }
     
-    static void swapWithoutTemp(int a, int b){
+    public static void swapWithoutTemp(int a, int b){
         
         a = a ^ b;
         b = b ^ a;
@@ -21,6 +21,6 @@ class Main {
     public static void main(String[] args) {
         int a = 10;
         int b = 5;
-        swapUsingXOR(a,b);
+        swapWithoutTemp(a,b);
     }
 }
