@@ -29,7 +29,7 @@ Here it is,
 
 ### Create a Simple Maven Project
 
-mvn archetype:generate : generate -DgroupId=com.abhinay -DartifactId=maven-first-app -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
+mvn archetype:generate -DgroupId=com.abhinay -DartifactId=maven-first-app -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
 
 --> The above command creates a simple java project.
 --> "mvn" - maven
