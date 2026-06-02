@@ -61,14 +61,11 @@ class Main{
             Map<Character,Integer> charCount = new HashMap<>();                                     
             Map<Character,Integer> charCount2 = new HashMap<>();
 
-            for(int index = 0 ; index < sLength ; index++){                               // T.C = O(N) + O(N) + O(N) , S.C = O(2N)
+            for(int index = 0 ; index < sLength ; index++){                               // T.C = O(N + K) , S.C = O(2K)
                 char ch = s1.charAt(index);
+                char sh = s2.charAt(index);
                 charCount.put(ch,charCount.getOrDefault(ch,0)+1);
-            }
-
-            for(int index = 0 ; index < tLength ; index++){
-                char ch = s2.charAt(index);
-                charCount2.put(ch,charCount2.getOrDefault(ch,0)+1);
+                charCount2.put(sh,charCount2.getOrDefault(sh,0)+1);
             }
 
             return charCount.equals(charCount2);
