@@ -43,8 +43,8 @@ mvn archetype:generate -DgroupId=com.abhinay -DartifactId=maven-first-app -Darch
 
 --> Execute this in Command Prompt of that folder.
 
-### After the Command is executed
+### After the Command is Executed
 
---> pom.xml is created
---> src folder is created in which it contains two folders as main and Test
+--> A pom.xml is created.
+--> A src folder is created in which it contains two folders as main and Test
 
