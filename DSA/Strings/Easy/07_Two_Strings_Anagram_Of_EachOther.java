@@ -19,6 +19,7 @@ class Main{
     // ======================= Brute-Force Approach ===============================
 
         public static boolean validateStringsAsAnagram(String s1, String s2){
+
             int sLength = s1.length();
             int tLength = s2.length();
 
@@ -49,6 +50,7 @@ class Main{
     // ======================= Optimal Approach ===============================
 
         public static boolean validateStringsAsAnagram_1(String s1, String s2){
+            
             int sLength = s1.length();
             int tLength = s2.length();
 
