@@ -29,6 +29,10 @@ class Main{
             int firstLength = s.length();
             int secondLength = t.length();
 
+            if(firstLength != secondLength){
+                return false;
+            }
+
             for(int index = 0 ; index < firstLength ; index++){
                 for(int character = index+1 ; character < secondLength ; character++){
                     char firstCharacter_s = s.charAt(index);
