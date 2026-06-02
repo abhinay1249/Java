@@ -31,7 +31,7 @@ class Main{
             char[] char_2 = s2.toCharArray();
 
             Arrays.sort(char_1);
-            Arrays.sort(char_2);                                // T.C = O(2 N LOG N) + O(N) , S.C = O(2N)
+            Arrays.sort(char_2);                                // T.C = O(2 N LOG N) + O(N) , S.C = O(N) + O(N)
 
             int index_1 = 0, index_2 = 0;
 
@@ -47,7 +47,7 @@ class Main{
             return true;                      
         }
 
-    // ======================= Better Approach ===============================
+    // ======================= Better Approach ==========================================
 
         public static boolean validateStringsAsAnagram_1(String s1, String s2){
 
