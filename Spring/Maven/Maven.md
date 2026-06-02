@@ -26,3 +26,17 @@ Here it is,
 • It will create a standard project folder structure.
 • It will download and manage dependencies/libraries automatically.
 • Execute unit test cases using testing frameworks like JUnit.
+
+### Create a Simple Maven Project
+
+mvn archetype:generate : generate -DgroupId=com.abhinay -DartifactId=maven-first-app -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
+
+--> The above command creates a simple java project.
+--> "mvn" - maven
+--> "archetype:generate" - generate one project
+--> "-DgroupId=com.abhinay" - package name
+--> "-DartifactId=maven-first-app" - when the project is done then it will be in jar/war file the file name will be this.
+--> "-DarchetypeArtifactId=maven-archetype-quickstart" - It is stating to generate a simple standalone project in jar file.
+--> "-DarchetypeVersion=1.4" - A normal version
+--> "-DinteractiveMode=false" - At the time of creating project, dont ask any kind of parameters.
+--> "-D" - It is a parameter that will pass to maven to create a java project.  
