@@ -49,7 +49,7 @@ class Main{
 
     // ======================= Better Approach ===============================
 
-        public static boolean validateStringsAsAnagram_2(String s1, String s2){
+        public static boolean validateStringsAsAnagram_1(String s1, String s2){
 
             int sLength = s1.length();
             int tLength = s2.length();
@@ -77,7 +77,7 @@ class Main{
 
     // ======================= Optimal Approach ===============================
 
-        public static boolean validateStringsAsAnagram_1(String s1, String s2){
+        public static boolean validateStringsAsAnagram_2(String s1, String s2){
 
             int sLength = s1.length();
             int tLength = s2.length();
@@ -117,7 +117,7 @@ class Main{
     public static void main(String[] args){
         String s = "caac";
         String t = "ccaa";
-        boolean result = validateStringsAsAnagram_1(s,t);
+        boolean result = validateStringsAsAnagram_2(s,t);
         System.out.println(result);
     }
 }
