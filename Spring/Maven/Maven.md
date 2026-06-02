@@ -40,3 +40,10 @@ mvn archetype:generate -DgroupId=com.abhinay -DartifactId=maven-first-app -Darch
 --> "-DarchetypeVersion=1.4" - A normal version
 --> "-DinteractiveMode=false" - At the time of creating project, dont ask any kind of parameters.
 --> "-D" - It is a parameter that will pass to maven to create a java project.  
+
+--> Execute this in cmd.
+
+### After the Command is executed
+
+
+
