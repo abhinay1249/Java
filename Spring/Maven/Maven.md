@@ -45,5 +45,6 @@ mvn archetype:generate -DgroupId=com.abhinay -DartifactId=maven-first-app -Darch
 
 ### After the Command is executed
 
-
+--> pom.xml is created
+--> src folder is created in which it contains two folders as main and Test
 
