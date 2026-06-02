@@ -47,10 +47,38 @@ class Main{
             return true;                      
         }
 
+    // ======================= Better Approach ===============================
+
+        public static boolean validateStringsAsAnagram_2(String s1, String s2){
+
+            int sLength = s1.length();
+            int tLength = s2.length();
+
+            if(sLength != tLength){
+                return false;
+            }
+
+            Map<Character,Integer> charCount = new HashMap<>();                                     
+            Map<Character,Integer> charCount2 = new HashMap<>();
+
+            for(int index = 0 ; index < sLength ; index++){                               // T.C = O(N) + O(N) + O(N) , S.C = O(2N)
+                char ch = s1.charAt(index);
+                charCount.put(ch,charCount.getOrDefault(ch,0)+1);
+            }
+
+            for(int index = 0 ; index < tLength ; index++){
+                char ch = s2.charAt(index);
+                charCount2.put(ch,charCount2.getOrDefault(ch,0)+1);
+            }
+
+            return charCount.equals(charCount2);
+        }
+
+
     // ======================= Optimal Approach ===============================
 
         public static boolean validateStringsAsAnagram_1(String s1, String s2){
-            
+
             int sLength = s1.length();
             int tLength = s2.length();
 
