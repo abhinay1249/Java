@@ -31,20 +31,20 @@ Here it is,
 
 mvn archetype:generate -DgroupId=com.abhinay -DartifactId=maven-first-app -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
 
---> The above command creates a simple java project.
---> "mvn" - maven
---> "archetype:generate" - generate one project
---> "-DgroupId=com.abhinay" - package name
---> "-DartifactId=maven-first-app" - when the project is done then it will be in jar/war file the file name will be this.
---> "-DarchetypeArtifactId=maven-archetype-quickstart" - It is stating to generate a simple standalone project in jar file.
---> "-DarchetypeVersion=1.4" - A normal version
---> "-DinteractiveMode=false" - At the time of creating project, dont ask any kind of parameters.
---> "-D" - It is a parameter that will pass to maven to create a java project.  
+• The above command creates a simple java project.
+• "mvn" - maven
+• "archetype:generate" - generate one project
+• "-DgroupId=com.abhinay" - package name
+• "-DartifactId=maven-first-app" - when the project is done then it will be in jar/war file the file name will be this.
+• "-DarchetypeArtifactId=maven-archetype-quickstart" - It is stating to generate a simple standalone project in jar file.
+• "-DarchetypeVersion=1.4" - A normal version
+• "-DinteractiveMode=false" - At the time of creating project, dont ask any kind of parameters.
+• "-D" - It is a parameter that will pass to maven to create a java project.  
 
---> Execute this in Command Prompt of that folder.
+• Execute this in Command Prompt of that folder.
 
 ### After the Command is Executed
 
---> A pom.xml is created.
---> A src folder is created in which it contains two folders as main and Test
+• A pom.xml is created.
+• A src folder is created in which it contains two folders as main and Test
 
