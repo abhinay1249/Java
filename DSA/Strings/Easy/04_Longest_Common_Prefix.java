@@ -30,7 +30,7 @@ class Main {
 
             int length = s.length;
 
-            StringBuilder prefix = new StringBuilder();                             // T.C = O(N * M) , S.C = O(Characters)=O(M)
+            StringBuilder prefix = new StringBuilder();                             // T.C = O(M * N-1) , S.C = O(Characters)=O(M)
 
             for(int character = 0 ; character < elementLength ; character++){
                 char ch = s[0].charAt(character);
