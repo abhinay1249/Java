@@ -92,7 +92,7 @@ class Main{
             // return word.toString();
         }
 
-    // ======================= Optimal Approach [BUCKET SORT ALGORITHM ] ===============================
+    // ======================= Optimal Approach [BUCKET SORT ALGORITHM] ===============================
 
         public static String sortCharactersByFrequency_1(String s){
 
