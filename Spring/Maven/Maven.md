@@ -66,7 +66,7 @@ Note: GroupId follows a reverse domain name convention, typically representing a
 3. ARTIFACTID - Represents the name of the project/module.
 
 Examples:-
-amazon-app, nike-app
+amazon-app, nike-app, ua-app
 
 4. VERSION - Specifies the version of the project.
 
