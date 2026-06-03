@@ -106,8 +106,8 @@ class Main{
 
             List<Character>[] buckets = new ArrayList[length+1];
 
-            for(int index = 0 ; index <= length ; index++){
-                buckets[index] = new ArrayList<>();                             // T.C = O(N), S.C = O(N)
+            for(int index = 0 ; index <= length ; index++){                     // T.C = O(N)+O(N)+O(K)+O(K) ~ k < N = O(2N) ~ O(N),
+                buckets[index] = new ArrayList<>();                            // S.C = O(K)+O(N)+O(N) ~ k < N =  O(2N) ~ O(N)
             }
 
             for(Map.Entry<Character,Integer> chars : charCount.entrySet()){
