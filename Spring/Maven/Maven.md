@@ -62,3 +62,10 @@ Examples:-
 com.tcs,com.google
 
 Note: GroupId follows a reverse domain name convention, typically representing a company or organization.
+
+3. ArtifactId - Represents the name of the project/module.
+
+Examples:-
+amazon-app, nike-app
+
+4. Version - Specifies the version of the project.
