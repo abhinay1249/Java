@@ -27,7 +27,6 @@
 
 
 
-
 import java.util.*;
 
 class Main{
@@ -57,9 +56,39 @@ class Main{
                     word.append(letters.getKey());
                 }
             }
-
             return word.toString();
+        }
 
+    // ====================== Better ============================================
+
+        public static List<Character> sortCharactersByFrequency_2(String s){
+
+            Map<Character,Integer> charCount = new HashMap<>();
+
+            int length = s.length();
+
+            for(int index = 0 ; index < length ; index++){
+                char ch = s.charAt(index);
+                charCount.put(ch,charCount.getOrDefault(ch,0)+1);            // T.C = O(N)+O(N)+O(N), S.C = O(N)+O(N)+O(N) 
+            }
+            
+            Queue<Map.Entry<Character,Integer>> pq = new PriorityQueue<>((a,b) -> b.getValue() - a.getValue());
+
+            pq.addAll(charCount.entrySet());
+
+            List<Character> result = new ArrayList<>();
+
+            // StringBuilder word = new StringBuilder();
+
+            while(!pq.isEmpty()){
+                Map.Entry<Character,Integer> chars = pq.poll();
+                // for(int count = 0 ; count < chars.getValue() ; count++){
+                    // word.append(chars.getKey());
+                // }
+                result.add(chars.getKey());
+            }
+            return result;
+            // return word.toString();
         }
 
     // ======================= Optimal Approach [BUCKET SORT ALGORITHM ] ===============================
