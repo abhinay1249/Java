@@ -56,5 +56,9 @@ Examples:-
 maven-archetype-quickstart -> Java Standalone Application.
 maven-archetype-webapp -> Java Web Application.
 
+2. GroupId - It represents the organization or company name.
 
+Examples:-
+com.tcs,com.google
 
+Note: GroupId follows a reverse domain name convention, typically representing a company or organization.
