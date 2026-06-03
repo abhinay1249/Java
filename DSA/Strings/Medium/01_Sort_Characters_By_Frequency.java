@@ -59,7 +59,7 @@ class Main{
             return word.toString();
         }
 
-    // ====================== Better ============================================
+    // ====================== Better Approach [PRIORITY QUEUE] =============================
 
         public static List<Character> sortCharactersByFrequency_2(String s){
 
@@ -82,6 +82,7 @@ class Main{
 
             while(!pq.isEmpty()){
                 Map.Entry<Character,Integer> chars = pq.poll();
+
                 // for(int count = 0 ; count < chars.getValue() ; count++){
                     // word.append(chars.getKey());
                 // }
