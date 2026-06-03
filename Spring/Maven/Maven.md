@@ -50,22 +50,35 @@ mvn archetype:generate -DgroupId=com.abhinay -DartifactId=maven-first-app -Darch
 
 ### Maven Terminologies
 
-1. Archetype - It is a template that defines the structure of a Maven Project.
+1. ARCHETYPE - It is a template that defines the structure of a Maven Project.
 
 Examples:-
 maven-archetype-quickstart -> Java Standalone Application.
 maven-archetype-webapp -> Java Web Application.
 
-2. GroupId - It represents the organization or company name.
+2. GROUPID - It represents the organization or company name.
 
 Examples:-
 com.tcs,com.google
 
 Note: GroupId follows a reverse domain name convention, typically representing a company or organization.
 
-3. ArtifactId - Represents the name of the project/module.
+3. ARTIFACTID - Represents the name of the project/module.
 
 Examples:-
 amazon-app, nike-app
 
-4. Version - Specifies the version of the project.
+4. VERSION - Specifies the version of the project.
+
+Examples:-
+0.0.1-SNAPSHOT, 1.0-RELEASE
+
+SNAPSHOT - Under Development
+RELEASE - Final version, delivered to client.
+
+5. PACKAGING TYPE - Defines the packaging format of the project.
+
+Examples: -
+jar, war
+
+Note: The default packaging is jar if not specified.
