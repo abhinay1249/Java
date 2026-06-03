@@ -104,7 +104,7 @@ class Main{
                 charCount.put(ch,charCount.getOrDefault(ch,0)+1);  
             }
 
-            // List<Character>[] buckets = new ArrayList[length+1];
+            List<Character>[] buckets = new ArrayList[length+1];
 
             for(int index = 0 ; index <= length ; index++){
                 buckets[index] = new ArrayList<>();                             // T.C = O(N), S.C = O(N)
