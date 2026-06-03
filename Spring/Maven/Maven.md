@@ -48,3 +48,13 @@ mvn archetype:generate -DgroupId=com.abhinay -DartifactId=maven-first-app -Darch
 • A pom.xml is created.
 • A src folder is created in which it contains two folders as main and Test
 
+### Maven Terminologies
+
+1. Archetype - It is a template that defines the structure of a Maven Project.
+
+Examples:-
+maven-archetype-quickstart -> Java Standalone Application.
+maven-archetype-webapp -> Java Web Application.
+
+
+
