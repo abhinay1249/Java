@@ -91,7 +91,7 @@ spring, hibernate, junit, kafka, redis
 7. MAVEN GOALS - Used to perform specific steps in the Maven build lifecycle.
 
 Examples:-
-clean,compile,test,package,deploy
+clean, compile, test, package, deploy
 
 8. MAVEN REPOSITORIES - Storage Locations for Maven Dependencies(artiacts/libaries).
 
