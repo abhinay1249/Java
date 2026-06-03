@@ -96,4 +96,4 @@ clean,compile,test,package,deploy
 8. MAVEN REPOSITORIES - Storage Locations for Maven Dependencies(artiacts/libaries).
 
 Examples:-
-
+Central Repository, Remote Repository, Local Repository
