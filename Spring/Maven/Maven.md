@@ -78,7 +78,18 @@ RELEASE - Final version, delivered to client.
 
 5. PACKAGING TYPE - Defines the packaging format of the project.
 
-Examples: -
+Examples:-
 jar, war
 
 Note: The default packaging is jar if not specified.
+
+6. MAVEN DEPENDENCIES - Libraries or external Modules required for project development.
+
+Examples:-
+spring, hibernate, junit, kafka, redis
+
+7. MAVEN GOALS
+Used to perform specific steps in the Maven build lifecycle.
+
+Examples:-
+clean,compile,test,package,deploy
