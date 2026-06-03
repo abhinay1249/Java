@@ -59,7 +59,7 @@ class Main{
             return word.toString();
         }
 
-    // ====================== Better Approach [PRIORITY QUEUE] =============================
+    // ====================== Better Approach (PRIORITY QUEUE) =============================
 
         public static List<Character> sortCharactersByFrequency_2(String s){
 
