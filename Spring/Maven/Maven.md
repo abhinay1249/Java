@@ -97,3 +97,7 @@ clean, compile, test, package, deploy
 
 Examples:-
 Central Repository, Remote Repository, Local Repository
+
+### MAVEN GOALS
+
+It is a unit of task that are used to perform various stages of the project build lifecycle.
