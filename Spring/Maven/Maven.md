@@ -106,3 +106,4 @@ It is a unit of task that are used to perform various stages of the project buil
 • In order to delete the target folder, run the command - mvn clean 
 • In order to compile and test the test cases, run the command - mvn test
 • In order to package the app, run the command - "mvn package". This command shall compile, test and convert it into jar/war file.
+• In order to delete the target and then recompile and re-test and package it, run this command - mvn clean package.
