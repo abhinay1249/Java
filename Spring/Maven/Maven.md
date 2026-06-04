@@ -104,3 +104,4 @@ It is a unit of task that are used to perform various stages of the project buil
 
 In order to compile, run the command - mvn compile 
 In order to delete the target folder, run the command - mvn clean 
+In order to compile and test the test cases, run the command - mvn test
