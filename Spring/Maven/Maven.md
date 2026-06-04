@@ -101,3 +101,6 @@ Central Repository, Remote Repository, Local Repository
 ### MAVEN GOALS
 
 It is a unit of task that are used to perform various stages of the project build lifecycle.
+
+In order to compile, run the command - mvn compile 
+In order to delete the target folder, run the command - mvn clean 
