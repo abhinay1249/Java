@@ -10,12 +10,8 @@
 // Example 2
 
 // Input: s = "cbbd"
-
 // Output: "bb"
-
-// Explanation:
-
-// The longest palindrome is "bb" of length 2.
+// Explanation: The longest palindrome is "bb" of length 2.
 
 
 class Main {
