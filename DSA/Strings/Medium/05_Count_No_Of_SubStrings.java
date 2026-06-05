@@ -3,8 +3,7 @@
 
 // Example 1:
 
-// Input:
-//  s = "pqpqs", k = 2  
+// Input: s = "pqpqs", k = 2  
 // Output:
 //  7  
 // Explanation:
@@ -13,6 +12,7 @@
 // Total = 7.
 
 // Example 2:
+
 // Input:
 //  s = "abcbaa", k = 3  
 // Output:
