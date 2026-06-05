@@ -2,6 +2,7 @@
 // Return the number of substrings that contain exactly k distinct characters.
 
 // Example 1:
+
 // Input:
 //  s = "pqpqs", k = 2  
 // Output:
