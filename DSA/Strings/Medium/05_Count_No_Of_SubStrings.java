@@ -9,14 +9,9 @@
 
 // Example 2:
 
-// Input:
-//  s = "abcbaa", k = 3  
-// Output:
-//  5  
-// Explanation:
-//   All substrings with exactly 3 distinct characters:  
-// "abc", "abcb", "abcba", "bcba", "cbaa"  
-// Total = 5.
+// Input: s = "abcbaa", k = 3  
+// Output: 5  
+// Explanation: All substrings with exactly 3 distinct characters: "abc", "abcb", "abcba", "bcba", "cbaa". Total = 5.
 
 
 class Main {
