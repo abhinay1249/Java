@@ -54,7 +54,7 @@ class Main {
                     }
                     left++;
                 }
-                atmostPossible = atmostPossible + (index - left +1);
+                atmostPossible += (index - left +1);
             }
             return atmostPossible;
         }
