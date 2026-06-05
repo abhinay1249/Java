@@ -4,12 +4,8 @@
 // Example 1:
 
 // Input: s = "pqpqs", k = 2  
-// Output:
-//  7  
-// Explanation:
-//   All substrings with exactly 2 distinct characters:  
-// "pq", "pqp", "pqpq", "qp", "qpq", "pqs", "qs"  
-// Total = 7.
+// Output: 7  
+// Explanation: All substrings with exactly 2 distinct characters:"pq", "pqp", "pqpq", "qp", "qpq", "pqs", "qs". Total = 7.
 
 // Example 2:
 
