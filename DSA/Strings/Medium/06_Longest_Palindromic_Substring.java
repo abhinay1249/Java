@@ -4,12 +4,8 @@
 // Example 1
 
 // Input: s = "babad"
-
 // Output: "bab"
-
-// Explanation:
-
-// Both "bab" and "aba" are valid palindromic substrings of length 3. Return either.
+// Explanation: Both "bab" and "aba" are valid palindromic substrings of length 3. Return either.
 
 // Example 2
 
