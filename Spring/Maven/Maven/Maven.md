@@ -201,3 +201,5 @@ Remote Repository:- These are the repositories that are used to utilize within t
 
     "mvn help:effective-pom -Doutput=effective-pom.xml"
 
+• It is suggested not to change any kind of dependencies in the effective pom file.
+
