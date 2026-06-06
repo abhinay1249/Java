@@ -56,8 +56,8 @@ class Main {
         }
 
     public static void main(String[] args) {
-        String s = "pqpqs";
-        int k = 2;
+        String s = "abcbaa";
+        int k = 3;
         int result = countNumberOfStrings(s,k);
         System.out.println(result);
     }
