@@ -137,4 +137,11 @@ Examples: spring-core, junit, hibernate, etc
 
 <img width="479" height="145" alt="image" src="https://github.com/user-attachments/assets/5132e218-4c16-4ca3-bf0d-c14c2d723d7a" />
 
+• You wish to install a new jar file into your project.
+• It is not present in your local repository then it will  download it from the central repository.
+• Once the download is completed from the central repository, then it will be saved into your local repository.
 
+How To Check?
+
+• Get the dependency from the central repo and run the command "mvn package", it will show logs such as downloading from central repo with the dependency library that was provided.
+• Then again re-run the process through this command stating, "mvn clean package". 
