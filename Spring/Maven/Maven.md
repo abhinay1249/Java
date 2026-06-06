@@ -134,3 +134,5 @@ Examples: spring-core, junit, hibernate, etc
     • Central Repository (Official Online Repository)
     • Local Repository (On your Machine)
     • Remote Repository (Company or Third-Party Server)
+
+<img width="479" height="145" alt="image" src="https://github.com/user-attachments/assets/5132e218-4c16-4ca3-bf0d-c14c2d723d7a" />
