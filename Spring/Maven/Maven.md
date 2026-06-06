@@ -124,3 +124,5 @@ Examples: spring-core, junit, hibernate, etc
     <artifactId>spring-core</artifactId>
     <version>6.1.7</version>
 </dependency>
+
+• Any kind of new dependencies extracted from the mvn repository need to be added into the <dependencies> tag in the pom.xml file
