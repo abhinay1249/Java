@@ -167,7 +167,11 @@ Remote Repository:- These are the repositories that are used to utilize within t
 
 • It stands for Project Object Model. It is a xml file.
 • It is a kind of configuration file where is used in order to communicate with maven.
- 
-
+• Plugins are used to hold the java versions that need to be used in the project. They are built in this format,
+<build>
+    <plugins>
+        // Plugins you wish to include
+    </plugins>
+</build>
 
 
