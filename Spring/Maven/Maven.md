@@ -125,4 +125,12 @@ Examples: spring-core, junit, hibernate, etc
     <version>6.1.7</version>
 </dependency>
 
-• Any kind of new dependencies extracted from the mvn repository need to be added into the <dependencies> tag in the pom.xml file
+• Any kind of new dependencies extracted from the mvn repository need to be added into the <dependencies> tag in the pom.xml file.
+
+### MAVEN REPOSITORIES
+
+• A place where the dependencies, jar files and the library files are kept for your project.
+
+    • Central Repository (Official Online Repository)
+    • Local Repository (On your Machine)
+    • Remote Repository (Company or Third-Party Server)
