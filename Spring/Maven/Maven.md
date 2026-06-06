@@ -108,3 +108,19 @@ It is a unit of task that are used to perform various stages of the project buil
 • In order to package the app, run the command - "mvn package". This command shall compile, test and convert it into jar/war file.
 • In order to delete the target and then recompile and re-test and package it, run this command - mvn clean package.
 • The final .jar/.war file will be stored in the target directory itself.
+
+### Maven Dependencies
+
+Maven Dependencies are the external libraries or modules that your project needs in order to complie and run properly.
+
+Examples: spring-core, junit, hibernate, etc
+
+You can search and find for maven dependencies at: https://www.mvnrepository.com.
+
+In the pom.xml file you can find the code such as,
+
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-core</artifactId>
+    <version>6.1.7</version>
+</dependency>
