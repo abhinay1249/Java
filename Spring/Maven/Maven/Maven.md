@@ -194,4 +194,10 @@ Remote Repository:- These are the repositories that are used to utilize within t
     </plugins>
 </build>
 
+### Effective POM
+
+• It is a parent pom.xml file that holds all the dependencies, plugins for creating a project. 
+• The command used for creating the effective-pom file is,
+
+    "mvn help:effective-pom -Doutput=effective-pom.xml"
 
