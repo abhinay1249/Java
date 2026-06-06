@@ -163,4 +163,11 @@ How To Check?
 
 Remote Repository:- These are the repositories that are used to utilize within the company itself more relatable to private repositories.
 
+### POM 
+
+• It stands for Project Object Model. It is a xml file.
+• It is a kind of configuration file where is used in order to communicate with maven.
+ 
+
+
 
