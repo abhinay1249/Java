@@ -145,3 +145,5 @@ How To Check?
 
 • Get the dependency from the central repo and run the command "mvn package", it will show logs such as downloading from central repo with the dependency library that was provided.
 • Then again re-run the process through this command stating, "mvn clean package". 
+
+Remote Repository:- These are the repositories that are used to utilize within the company itself more relatable to private repositories. 
