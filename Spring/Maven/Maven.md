@@ -135,6 +135,21 @@ Examples: spring-core, junit, hibernate, etc
     • Local Repository (On your Machine)
     • Remote Repository (Company or Third-Party Server)
 
+1. Central Repository :- This is the Maven's official public repository hosted online at https://repo.maven.apache.org/maven2
+    • It contains millions of open source libraries.
+    • If something is not in your local repo, Maven looks here next.
+
+2. Local Repository :- This is the .m2/repository folder in your computer. It is a hidden folder.
+    • It is where Maven stores downloaded dependencies so it doesnt re-download them every time.
+    • If a dependency is already here, Maven uses it directly.
+
+3. Remote Repository :- These are the additional repositories defined in the pom.xml or settings.xml
+
+    • Often used by companies or private teams to host internal jars.
+    • Maven checks these before or after central, depending on the config.
+
+ 
+
 <img width="479" height="145" alt="image" src="https://github.com/user-attachments/assets/5132e218-4c16-4ca3-bf0d-c14c2d723d7a" />
 
 • You wish to install a new jar file into your project.
@@ -146,4 +161,6 @@ How To Check?
 • Get the dependency from the central repo and run the command "mvn package", it will show logs such as downloading from central repo with the dependency library that was provided.
 • Then again re-run the process through this command stating, "mvn clean package". 
 
-Remote Repository:- These are the repositories that are used to utilize within the company itself more relatable to private repositories. 
+Remote Repository:- These are the repositories that are used to utilize within the company itself more relatable to private repositories.
+
+
