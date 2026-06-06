@@ -111,13 +111,13 @@ It is a unit of task that are used to perform various stages of the project buil
 
 ### Maven Dependencies
 
-Maven Dependencies are the external libraries or modules that your project needs in order to complie and run properly.
+• Maven Dependencies are the external libraries or modules that your project needs in order to complie and run properly.
 
 Examples: spring-core, junit, hibernate, etc
 
-You can search and find for maven dependencies at: https://www.mvnrepository.com.
+• You can search and find for maven dependencies at: https://www.mvnrepository.com.
 
-In the pom.xml file you can find the code such as,
+• In the pom.xml file you can find the code such as,
 
 <dependency>
     <groupId>org.springframework</groupId>
