@@ -7,10 +7,9 @@
 
 
 // Example 1:
-// Input:
-//  s = "xyx"
-// Output:
-//  1
+
+// Input: s = "xyx"
+// Output: 1
 // Explanation:
 //  The substrings with non-zero beauty are:
 // "xyx" → frequencies: x:2, y:1 → beauty = 2 - 1 = 1
