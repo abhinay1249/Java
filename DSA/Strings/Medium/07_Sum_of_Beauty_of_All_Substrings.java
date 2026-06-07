@@ -44,7 +44,7 @@ class Main {
 
             Map<Character,Integer> freqCount = new HashMap<>();
 
-            int totalSum = 0;                                                           //T.C = O(N^3), S.C = O(1)
+            int totalSum = 0;                                                           //T.C = O(N^3), S.C = O(N)
 
             for(int index = 0 ; index < length ; index++){
                 for(int index_1 = index ; index_1 < length ; index_1++){
