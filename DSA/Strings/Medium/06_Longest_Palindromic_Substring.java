@@ -133,8 +133,9 @@ class Main {
                 }
 
             }
-
-            return newString.substring(longestCenter - longestLength, longestCenter + longestLength).replace("#","");
+            int start = (longestCenter - longestLength) / 2;
+            return s.substring(start, start + longestLength);
+            // return newString.substring(longestCenter - longestLength, longestCenter + longestLength).replace("#","");
             
         }
 
