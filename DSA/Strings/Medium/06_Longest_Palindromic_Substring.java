@@ -127,7 +127,6 @@ class Main {
                     longestLength = p[index];
                 }
 
-
                 if(index + p[index] > rightBoundary){
                     center = index;
                     rightBoundary = index + p[index];
