@@ -16,9 +16,44 @@
 
 class Main {
 
-    // ======================= Brute-Force Approach ===============================
+    // ======================= Brute-Force Approach [Optional]===============================
+
+        private static boolean isPalindrome(String s, int left, int right){
+
+            while(left < right){
+                if(s.charAt(left) != s.charAt(right)){
+                    return false;
+                }
+                left++;
+                right--;
+            }
+            return true;
+        }
     
         public static String longestPalindromeSubstring(String s){
+
+            int length = s.length();
+
+            if(length == 1){                                                    // T.C = O(N^2) * O(N/2), S.C = O(1)
+                return s;
+            }
+
+            String resultString = "";
+
+            for(int index = 1 ; index < length ; index++){
+                for(int j = index ; j < length ; j++){
+                    String substring = s.substring(index-1,j+1);
+                    if(isPalindrome(s,index,j) && substring.length() > resultString.length()){
+                        resultString = s.substring(index,j+1);
+                    }
+                }
+            }
+            return resultString;
+        }
+
+    // ======================= Brute-Force Approach [Optional]===============================
+    
+        public static String longestPalindromeSubstring_1(String s){
 
             int length = s.length();
 
@@ -68,7 +103,7 @@ class Main {
     
     // ======================== Optimal Approach ===============================
 
-        public static String longestPalindromeSubstring_1(String s){
+        public static String longestPalindromeSubstring_2(String s){
 
             int length = s.length();
         
