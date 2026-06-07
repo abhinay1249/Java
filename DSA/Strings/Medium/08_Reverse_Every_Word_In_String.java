@@ -56,6 +56,16 @@ class Main {
     
     // ======================== Optimal Approach ===============================
 
+        private static String reverse(String s){
+
+            StringBuilder str = new StringBuilder();
+
+            for(int character = s.length() - 1 ; character >= 0 ; character--){
+                str.append(s.charAt(character));
+            }
+            return str.toString();
+        }
+
         public static String reverseWordsInString_1(String s){
         
             String str = reverse(s);
