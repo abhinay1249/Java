@@ -21,8 +21,7 @@
 
 // Input: s = "aabcbaa"
 // Output: 17
-// Explanation:
-//  Various substrings such as "aabc", "bcba", etc., have non-zero beauty values. Summing all gives 17.
+// Explanation: Various substrings such as "aabc", "bcba", etc., have non-zero beauty values. Summing all gives 17.
 
 
 
