@@ -16,7 +16,7 @@
 
 class Main {
 
-    // ======================= Brute-Force Approach [Optional]===============================
+    // ======================= Brute-Force Approach ===============================
 
         private static boolean isPalindrome(String s, int left, int right){
 
@@ -51,54 +51,37 @@ class Main {
             return resultString;
         }
 
-    // ======================= Brute-Force Approach [Optional]===============================
+    // ======================= Better Approach ===============================
+
+        private static int expand(String s, int left, int right){
+
+            while(left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)){
+                left--;
+                right++;
+            }
+            return right - left - 1;
+        }
     
         public static String longestPalindromeSubstring_1(String s){
-
             int length = s.length();
 
-            if(length == 1){
+            if(length == 1){                                                    // T.C = O(N^2), S.C = O(1)
                 return s;
             }
 
-            String lps = "";
+            int start = 0, end = 0;
 
-            for(int index = 1 ; index < length ; index++){
-                int low = index;
-                int high = index;
+            for(int index = 0 ; index < length ; index++){
+                int odd = expand(s,index,index);
+                int even = expand(s,index,index+1);
+                int maxLength = Math.max(odd,even);
 
-                while(low >= 0 && high < length && s.charAt(low) == s.charAt(high)){
-                    low--;
-                    high++;
-
-                    // if(low == -1 || high == length){                        
-                    //     break;
-                    // }
-                }
-
-                String palindrome = s.substring(low+1,high);            // T.C = O(N^2), S.C = O(1)
-                if(palindrome.length() > lps.length()){
-                    lps = palindrome;
-                }
-
-                low = index - 1;
-                high = index;
-
-                while(low >= 0 && high < length && s.charAt(low) == s.charAt(high)){
-                    low--;
-                    high++;
-
-                    // if(low == -1 || high == length){
-                    //     break;
-                    // } 
-                }
-
-                palindrome = s.substring(low+1,high);
-                if(palindrome.length() > lps.length()){
-                    lps = palindrome;
+                if(maxLength > end - start + 1){
+                    start = index - (maxLength - 1) / 2;
+                    end = index + maxLength / 2;
                 }
             }
-            return lps;
+            return s.substring(start,end+1);
         }
     
     // ======================== Optimal Approach ===============================
