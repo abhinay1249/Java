@@ -176,6 +176,7 @@ Remote Repository:- These are the repositories that are used to utilize within t
         </plugin>
     </plugins>
 </build>
+
 • By using properties we can store it over there and use them in the plugins section.
 
 <properties>
@@ -202,4 +203,12 @@ Remote Repository:- These are the repositories that are used to utilize within t
     "mvn help:effective-pom -Doutput=effective-pom.xml"
 
 • It is suggested not to change any kind of dependencies in the effective pom file.
+
+### Maven Build LifeCycle
+
+1. default: Main lifecycle for building your application(Mostly Used)
+2. clean: Cleaning the target/directory.
+3. Site: For generating the documentation.
+
+
 
