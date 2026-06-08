@@ -220,6 +220,6 @@ Remote Repository:- These are the repositories that are used to utilize within t
 • Verify is used for integration testing such as once the package is ready and few plugins are added for testing, verify is used over there.
 • Install is used to save you application into local repository.
 • Deploy is used to deploy it into your Remote Repository.
-
+ 
 
 
