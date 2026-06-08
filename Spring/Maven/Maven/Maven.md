@@ -213,5 +213,13 @@ Remote Repository:- These are the repositories that are used to utilize within t
 <img width="659" height="188" alt="image" src="https://github.com/user-attachments/assets/0ec89e2a-1a80-4f89-9e54-07c18cd7df55" />
 
 
+• Validate is used to verify the all the attributes and the dependencies in the code.
+• Compile is used to compile the entire application code.
+• Test phase will test your code aganist all the test cases.
+• Package is used to pack the entire application into a jar/war file.
+• Verify is used for integration testing such as once the package is ready and few plugins are added for testing, verify is used over there.
+• Install is used to save you application into local repository.
+• Deploy is used to deploy it into your Remote Repository.
+
 
 
