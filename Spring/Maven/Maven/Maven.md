@@ -221,5 +221,5 @@ Remote Repository:- These are the repositories that are used to utilize within t
 • Install is used to save you application into local repository.
 • Deploy is used to deploy it into your Remote Repository.
  
-
+Key Note: - Junit is a library which is used to write the java test cases.
 
