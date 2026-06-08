@@ -222,4 +222,5 @@ Remote Repository:- These are the repositories that are used to utilize within t
 • Deploy is used to deploy it into your Remote Repository.
  
 Key Note: - Junit is a library which is used to write the java test cases.
+• In Junit.juniper.api.test, there exists a method known as assertEquals which is used to verify the expected and the obtained result in the unit test cases. 
 
