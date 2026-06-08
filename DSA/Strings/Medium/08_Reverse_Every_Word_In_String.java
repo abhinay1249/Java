@@ -87,7 +87,7 @@ class Main {
                 }
             }
 
-            return reverseWord.substring(1);
+            return reverseWord.toString().substring(1);
         }
         
     public static void main(String[] args) {
