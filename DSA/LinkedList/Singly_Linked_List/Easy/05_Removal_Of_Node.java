@@ -34,7 +34,7 @@ class Node{
     // ================================ Removal Of Head Node ==============================================
 
         public static Node deleteHead(Node head){
-            
+
             if(head == null) return null;
 
             head = head.pointer;
@@ -62,7 +62,7 @@ class Node{
 
     // ================================ Removal Of Node at Kth Position ==============================================
 
-        static Node removeAtPosition(Node head, int target){
+        public static Node removeAtPosition(Node head, int target){
 
             if(head == null){
                 return head;
