@@ -94,7 +94,7 @@ class Node{
 
     // ================================ Removal Of Value Node ==============================================
         
-        static Node removeOfValue(Node head, int target){
+        public static Node removeOfValue(Node head, int target){
 
             if(head == null){
                 return head;
