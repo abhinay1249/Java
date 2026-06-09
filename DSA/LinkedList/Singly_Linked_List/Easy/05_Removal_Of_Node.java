@@ -13,7 +13,7 @@ class Node{
 
     // ================================ Convert Array into Linked List =====================================
 
-        private static Node convertArrayToLinkedList(int[] nums){
+        public static Node convertArrayToLinkedList(int[] nums){
 
             int length = nums.length;
 
@@ -137,7 +137,7 @@ class Main{
         Node head_4 = Node.convertArrayToLinkedList(nums);
 
         System.out.print("LinkedList --> ");
-        
+
         while(head_1!=null){
             System.out.print(head_1.data+" ");
             head_1 = head_1.pointer;
