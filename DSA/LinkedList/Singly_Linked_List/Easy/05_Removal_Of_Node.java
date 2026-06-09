@@ -13,7 +13,7 @@ class Node{
 
     // ================================ Convert Array into Linked List =====================================
 
-        static Node convertArrayToLinkedList(int[] nums){
+        private static Node convertArrayToLinkedList(int[] nums){
 
             int length = nums.length;
 
@@ -33,7 +33,8 @@ class Node{
 
     // ================================ Removal Of Head Node ==============================================
 
-        static Node deleteHead(Node head){
+        public static Node deleteHead(Node head){
+            
             if(head == null) return null;
 
             head = head.pointer;
