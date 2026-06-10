@@ -62,7 +62,8 @@ class Node{
     
     // ================================ Insertion At KthPos =====================================
 
-        static Node insertAtKthPos(Node head, int element, int k){
+        public static Node insertAtKthPos(Node head, int element, int k){
+
             if(head == null){
                 if(k == 1){
                     return new Node(element,null);
@@ -94,7 +95,7 @@ class Node{
     
     // ================================ Insertion At Before Value =====================================
 
-        static Node insertAtBeforeValue(Node head, int element, int value){
+        public static Node insertAtBeforeValue(Node head, int element, int value){
             if(head == null){
                 return head;
             }
