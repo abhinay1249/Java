@@ -34,14 +34,19 @@ class Node{
     // ============================= Insertion At Head =========================================
     
         public static Node insertAtHead(Node head, int val){
-            
+
+            if(head == null){
+                return new Node(val,null);
+            }
+
             Node temp = new Node(val,head);
             return temp;
         }
     
     // ============================ Insertion At Tail ==========================================
 
-        static Node insertAtTail(Node head, int val){
+        public static Node insertAtTail(Node head, int val){
+
             if(head == null){
                 return new Node(val,null);    
             }
