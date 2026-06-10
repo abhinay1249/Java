@@ -38,7 +38,7 @@ class Node{
             return head;
         }
 
-    // ============================ Length Of Linked List =========================
+    // ============================ Length Of Linked List ============================
 
         public static int lengthOfLL(int[] nums){
 
