@@ -32,22 +32,24 @@ class Node{
             return head;
         }
 
-    static int lengthOfLL(int[] nums){
+    // ============================ Length Of Linked List =========================
 
-        Node head = Node.convertArrayToLL(nums);
+        public static int lengthOfLL(int[] nums){
 
-        Node temp = head;
-        
-        int count = 0;
+            Node head = Node.convertArrayToLL(nums);
 
-        while(temp != null){
-            temp=temp.pointer;
-            count++;
+            Node temp = head;
+
+            int count = 0;
+
+            while(temp != null){
+                temp=temp.pointer;
+                count++;
+            }
+
+            return count;
+
         }
-
-        return count;
-
-    }
 }
 
 class Main{
