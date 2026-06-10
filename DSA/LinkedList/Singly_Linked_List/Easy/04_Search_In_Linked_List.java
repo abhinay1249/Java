@@ -15,7 +15,7 @@ class Node{
     
     // ============================ Convert Array into Linked List =========================
     
-        static Node convertArrayToLL(int[] nums){
+        public static Node convertArrayToLL(int[] nums){
         
             int length = nums.length;
         
@@ -32,23 +32,25 @@ class Node{
             return head;
         }
 
-    static boolean isPresent(int[] nums, int value){
-        
-        Node head = Node.convertArrayToLL(nums);
+    // ============================ Search In Linked List =========================
 
-        Node temp = head;
-        
-        boolean isPresent = false;
+        public static boolean isPresent(int[] nums, int value){
 
-        while(temp != null){
-            if(temp.data == value){
-                return true;
+            Node head = Node.convertArrayToLL(nums);
+
+            Node temp = head;
+
+            boolean isPresent = false;
+
+            while(temp != null){
+                if(temp.data == value){
+                    return true;
+                }
+                temp=temp.pointer;
             }
-            temp=temp.pointer;
-        }
 
-        return isPresent;
-    }
+            return isPresent;
+        }
 
 }
 
