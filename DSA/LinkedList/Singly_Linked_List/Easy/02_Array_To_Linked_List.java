@@ -15,22 +15,22 @@ class Node{
     
     // ============================ Convert Array into Linked List =========================
     
-    public static Node convertArrayToLL(int[] nums){
-
-        int length = nums.length;
-
-        Node head = new Node(nums[0]);
-
-        Node mover = head;
-
-        for(int index = 1 ; index < length ; index++){
-            Node temp = new Node(nums[index]);
-            mover.pointer = temp;
-            mover = temp;
+        public static Node convertArrayToLL(int[] nums){
+        
+            int length = nums.length;
+        
+            Node head = new Node(nums[0]);
+        
+            Node mover = head;
+        
+            for(int index = 1 ; index < length ; index++){
+                Node temp = new Node(nums[index]);
+                mover.pointer = temp;
+                mover = temp;
+            }
+        
+            return head;
         }
-
-        return head;
-    }
 
 }
 
