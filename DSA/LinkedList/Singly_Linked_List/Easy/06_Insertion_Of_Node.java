@@ -15,6 +15,7 @@ class Node{
     // ============================ Convert Array into Linked List ===========================
 
         public static Node convert(int[] nums){
+
             int length = nums.length;
 
             Node head = new Node(nums[0]);
@@ -32,7 +33,8 @@ class Node{
 
     // ============================= Insertion At Head =========================================
     
-        static Node insertAtHead(Node head, int val){
+        public static Node insertAtHead(Node head, int val){
+            
             Node temp = new Node(val,head);
             return temp;
         }
