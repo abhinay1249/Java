@@ -14,7 +14,7 @@ class Node{
     
     // ============================ Convert Array into Linked List ===========================
 
-        static Node convert(int[] nums){
+        public static Node convert(int[] nums){
             int length = nums.length;
 
             Node head = new Node(nums[0]);
