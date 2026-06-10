@@ -1,3 +1,9 @@
+// Problem Statement: Given the head of a linked list, print the length of the linked list.
+
+// Example:-
+// Input: 12 -> 43 -> 134 -> 141 -> 431 -> 0
+// Output: 6
+
 class Node{
 
     int data;
