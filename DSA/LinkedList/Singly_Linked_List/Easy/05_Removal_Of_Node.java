@@ -7,6 +7,7 @@
 
 
 class Node{
+    
     int data;
     Node pointer;
 
