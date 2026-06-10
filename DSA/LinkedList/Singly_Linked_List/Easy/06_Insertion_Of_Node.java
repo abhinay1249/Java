@@ -96,6 +96,7 @@ class Node{
     // ================================ Insertion At Before Value =====================================
 
         public static Node insertAtBeforeValue(Node head, int element, int value){
+
             if(head == null){
                 return head;
             }
@@ -106,16 +107,16 @@ class Node{
             }
             Node temp = head;
             Node prev = null;
-            Node newNode = new Node(element);
+            
 
             while(temp != null){
                 if(temp.data == value){
+                    Node newNode = new Node(element);
                     newNode.pointer = prev.pointer;
                     prev.pointer = newNode;
                     break;
-                }else{
-                    prev = temp;
                 }
+                prev = temp;
                 temp = temp.pointer;
             }
             return head;
