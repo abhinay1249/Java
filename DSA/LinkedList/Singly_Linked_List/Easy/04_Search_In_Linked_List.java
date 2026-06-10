@@ -1,3 +1,11 @@
+// Problem Statement: Given the head of a linked list and an integer value, find out whether the integer is present in the linked list or not. 
+// Return true if it is present, or else return false.
+
+// Example:-
+// Input: 12 -> 43 -> 134 -> 141 -> 431 -> 0, value = 134
+// Output: true
+
+
 class Node{
 
     int data;
