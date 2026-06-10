@@ -189,7 +189,7 @@ class Main{
 
         Node value = Node.removeAtPosition(head_4,262);
  
-        System.out.print("Removal At Position --> ");
+        System.out.print("Removal At Value --> ");
 
         while(value != null){
             System.out.print(value.data+" ");
