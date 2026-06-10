@@ -84,7 +84,8 @@ class Node{
                 count++;
 
                 if(count == target){
-                    prev.pointer = prev.pointer.pointer;
+                    prev.pointer = temp.pointer;
+                    break;
                 }
                 prev = temp;
                 temp = temp.pointer;
