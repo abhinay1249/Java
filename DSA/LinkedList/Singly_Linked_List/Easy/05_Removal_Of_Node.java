@@ -44,7 +44,7 @@ class Node{
 
     // ================================ Removal Of Tail Node ==============================================
 
-        static Node deleteTail(Node head){
+        public static Node deleteTail(Node head){
             if(head == null || head.pointer == null){
                 return null;
             }
