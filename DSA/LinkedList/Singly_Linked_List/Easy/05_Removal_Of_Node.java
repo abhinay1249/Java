@@ -1,3 +1,11 @@
+// Problem Statement: Given a Linked List, delete node types and print the updated list.
+
+// Example:-
+// Input: 12 -> 45 -> 356 -> 553 -> 262 -> 90, k = 3
+// Output: 12 -> 45 -> 553 -> 262 -> 90
+// Explanation: The node at position 3 is 356, which is removed from the list.
+
+
 class Node{
     int data;
     Node pointer;
