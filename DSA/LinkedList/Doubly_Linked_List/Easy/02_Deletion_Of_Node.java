@@ -1,3 +1,13 @@
+// Problem Statement: Deletion Of Node In Doubly Linked List
+
+// Example:-
+// Input: [1,2,3,4,5,6,7,8]
+// Output: 
+// Deletion Of Head Node --> 2 <-> 3 <-> 4 <-> 5 <-> 6 <-> 7 <-> 8
+// Deletion Of Tail Node --> 1 <-> 2 <-> 3 <-> 4 <-> 5 <-> 6 <-> 7
+// Deletion At Kth Node --> 1 <-> 2 <-> 4 <-> 5 <-> 6 <-> 7 <-> 8
+// Deletion Of Value Node --> 1 <-> 2 <-> 3 <-> 4 <-> 5 <-> 7 <-> 8
+
 // Deletion Of Nodes 
 // --> Head, Tail, KthPos, Value 
 
