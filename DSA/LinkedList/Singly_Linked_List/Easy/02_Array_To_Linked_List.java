@@ -1,3 +1,11 @@
+// Problem Statement: Given an array, convert it into a singly linked list.
+
+// Example:-
+// Input: [1,2,3,4,5,6,7,8]
+// Output: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
+// Explanation: The first element of the array becomes the head of the linked list
+// and each subsequent element is added as a new node to the end of the list.
+
 class Node{
 
     int data;
