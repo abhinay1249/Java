@@ -1,5 +1,13 @@
-// Insertion Of Nodes 
-// --> Head, Tail, KthPos, Value 
+// Problem Statement: Insertion Of Node In Doubly Linked List
+
+// Example:-
+
+// Input: [1,2,3,4,5,6,7,8]     
+// Output:
+// Insertion Of Node Before Head --> 10 <-> 1 <-> 2 <-> 3 <-> 4 <-> 5 <-> 6 <-> 7 <-> 8
+// Insertion Of Node Before Tail --> 1 <-> 2 <-> 3 <-> 4 <-> 5 <-> 6 <-> 7 <-> 100 <-> 8
+// Insertion At Kth Node --> 1 <-> 2 <-> 49 <-> 3 <-> 4 <-> 5 <-> 6 <-> 7 <-> 8
+// Insertion Of Value Node --> 99 <-> 1 <-> 2 <-> 3 <-> 4 <-> 5 <-> 6 <-> 7 <-> 8
 
 class Node{
     int data;
