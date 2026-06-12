@@ -35,7 +35,9 @@ class Node{
             
             for(int i = 1 ; i < length ; i++){
                 Node temp = new Node(nums[i],null,prev);
+                // Node temp = new Node(nums[i]);
                 prev.nextptr = temp;
+                // temp.prevptr = prev;
                 prev = temp;
             }
             
