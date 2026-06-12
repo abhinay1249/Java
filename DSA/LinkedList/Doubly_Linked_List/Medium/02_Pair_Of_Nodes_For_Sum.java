@@ -47,6 +47,7 @@ class Node{
     // ============================== Brute Force Approach ================================
 
         public static List<List<Integer>> pairs(Node head, int sum){
+            
             Node temp1 = head;
             Node temp2 = head.next;
 
