@@ -8,7 +8,8 @@
 // Input: head = [1,2,3,4,5], sum = 10
 // Output: []
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 class Node{
     int data;
@@ -73,6 +74,7 @@ class Node{
     // ============================== Optimal Approach =====================================
 
         public static List<List<Integer>> pairs_1(Node head, int sum){
+            
             Node start = head;
             Node end = head;
 
