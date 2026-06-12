@@ -15,6 +15,7 @@
 
 
 class Node{
+
     int data;
     Node next;
     Node prev;
@@ -34,6 +35,7 @@ class Node{
     // =========================== Convert Array into Linked List ========================
 
         private static Node convert(int[] nums){
+
             int length = nums.length;
             Node head = new Node(nums[0]);
             Node prevNode = head;
@@ -49,6 +51,7 @@ class Node{
     // ============================== Print the Linked List ===============================
 
         private static void print(Node head){
+            
             Node temp = head;
 
             while(temp != null){
