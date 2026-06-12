@@ -71,8 +71,10 @@ class Node{
     // ================================ Insertion Of Node Before Tail ==============================================
         
         private static Node insertionAtBeforeTail(Node head, int val){
+
             Node temp = head;
             Node newNode = new Node(val,null,null);
+            
             while(temp != null){
                 if(temp.nextptr == null){
                     Node prev = temp.prevptr;
@@ -135,6 +137,7 @@ class Node{
             return head;
         }
     public static void main(String[] args){
+        
         int[] nums = {1,2,3,4,5,6,7,8};
         // int[] nums = {1};
         
