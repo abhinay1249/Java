@@ -46,6 +46,7 @@ class Node{
     // ============================== Print the Linked List ===============================
     
         private static void print(Node head){
+            
             Node dll = head;
             while(dll != null){
                 System.out.print(dll.data + " ");
@@ -56,6 +57,7 @@ class Node{
     // =========================== Brute Force Approach ==============================
 
         private static Node reverseADLL(Node head){
+
             Node temp = head;
             
             Stack<Integer> st = new Stack<>();
@@ -78,6 +80,7 @@ class Node{
     // =========================== Optimal Approach ==============================
 
         private static Node reverseADLL_1(Node head){
+
             Node current = head;
 
             Node last = null;
