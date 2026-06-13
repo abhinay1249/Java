@@ -7,8 +7,10 @@
 // Explanation: There are two pairs of nodes whose sum is 5, (1,4) and (2,3).
     
 // Example 2:
+
 // Input: head = [1,2,3,4,5], sum = 10
 // Output: []
+// Explanation: There are no pairs of nodes whose sum is 10.
 
 import java.util.ArrayList;
 import java.util.List;
