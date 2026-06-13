@@ -92,6 +92,7 @@ class Node{
             List<List<Integer>> pairs = new ArrayList<>();
 
             while(start.data < end.data){
+                
                 int sumOfNodes = start.data + end.data;
 
                 if(sumOfNodes == sum){
