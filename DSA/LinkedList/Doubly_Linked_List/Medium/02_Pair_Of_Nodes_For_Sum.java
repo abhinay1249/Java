@@ -12,6 +12,7 @@
 // Output: []
 // Explanation: There are no pairs of nodes whose sum is 10.
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,6 +36,7 @@ class Node{
     // =========================== Convert Array into Linked List =========================
 
         private static Node convert(int[] nums){
+            
             int length = nums.length;
 
             Node head = new Node(nums[0]);
