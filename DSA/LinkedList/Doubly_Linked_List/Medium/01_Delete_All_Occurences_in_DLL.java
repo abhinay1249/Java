@@ -4,12 +4,16 @@
 // Example 1:
 
 // Input: head = [10,4,10,10,6,10], key = 10
-// Output: [4,6]   
+// Output: [4,6]  
+// Explanation: All the occurrences of 10 are deleted from the linked list. 
+// Hence the modified linked list is 4 <-> 6. 
 
 // Example 2:
 
 // Input: head = [1,2,3,4,5], key = 6      
 // Output: [1,2,3,4,5]
+// Explanation: 6 is not present in the linked list.
+// Hence the modified linked list is 1 <-> 2 <-> 3 <->
 
 
 class Node{
