@@ -47,6 +47,7 @@ class Node{
     // =============================== Print Linked List ========================================
 
         private static void print(Node head){
+
             Node temp = head;
 
             while(temp != null){
@@ -58,6 +59,7 @@ class Node{
     // =============================== Only Approach ========================================
 
         private static Node findKthNode(Node head, int k){
+
             Node temp = head;
             int count = 1;
 
@@ -69,6 +71,7 @@ class Node{
         }
 
         private static Node reverseLL(Node head){
+
             Node temp = head;
             Node prevNode = null;
             Node front = null;
@@ -84,6 +87,7 @@ class Node{
         }
 
         public static Node reverseKthGroup(Node head, int k){
+
             if(head == null || head.next == null){
                 return head;
             }
@@ -117,6 +121,7 @@ class Node{
             }
             return head;
         }
+
     public static void main(String[] args) {
         int[] nums = {1,2,3,4,5,6,7,8,9,10};
         int k = 3;
