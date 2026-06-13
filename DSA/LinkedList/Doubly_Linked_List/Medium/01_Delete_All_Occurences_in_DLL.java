@@ -2,10 +2,12 @@
 //  delete all the occurrences of key from the linked list and return the head of the modified linked list.
 
 // Example 1:
+
 // Input: head = [10,4,10,10,6,10], key = 10
 // Output: [4,6]   
 
 // Example 2:
+
 // Input: head = [1,2,3,4,5], key = 6      
 // Output: [1,2,3,4,5]
 
