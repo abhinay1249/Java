@@ -4,7 +4,7 @@
 
 // NOTE: Elements in the union should be in ascending order.
 
-// Examples
+// Example 1:
 
 // Input:n = 5,m = 5 arr1[] = {1,2,3,4,5}  arr2[] = {2,3,4,4,5}
 // Output: {1,2,3,4,5}
@@ -12,6 +12,8 @@
 // Distnict Elements in arr1 are : 1
 // Distnict Elemennts in arr2 are : No distinct elements.
 // Union of arr1 and arr2 is {1,2,3,4,5}
+
+// Example 2:
 
 // Input:n = 10,m = 7,arr1[] = {1,2,3,4,5,6,7,8,9,10}arr2[] = {2,3,4,4,5,11,12}
 // Output: {1,2,3,4,5,6,7,8,9,10,11,12}
@@ -22,13 +24,19 @@
 
 
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 class Main {
 
     // ======================= Brute Force Approach USING MAP =======================================
 
-        static int[] unionOfSortedArrays(int[] arr_1,int[] arr_2){
+        public static int[] unionOfSortedArrays(int[] arr_1,int[] arr_2){
 
             Map<Integer,Integer> freq = new HashMap<>();
 
@@ -57,7 +65,7 @@ class Main {
     
     // ======================= Brute Force Approach USING SET =======================================
     
-        static List<Integer> unionOfSortedArrays_1(int[] arr_1,int[] arr_2){
+        public static List<Integer> unionOfSortedArrays_1(int[] arr_1,int[] arr_2){
 
             Set<Integer> freq = new HashSet<>();
 
@@ -81,16 +89,16 @@ class Main {
 
     // ======================= Optimal Approach =======================================
     
-        static List<Integer> unionOfSortedArrays_2(int[] arr_1,int[] arr_2){
+        public static List<Integer> unionOfSortedArrays_2(int[] arr_1,int[] arr_2){
 
             int n = arr_1.length;
             int m = arr_2.length;
-            List<Integer> union = new ArrayList<>();;
+            List<Integer> union = new ArrayList<>();
             int i=0, j=0;
 
             while(i<n && j<m){
                 if(arr_1[i] < arr_2[j]){
-                    if(union.size()==0 || union.get(union.size()-1)!=arr_1[i]){
+                    if(union.isEmpty() || union.get(union.size()-1)!=arr_1[i]){
                         union.add(arr_1[i]);
                     }
                     i++;
@@ -129,6 +137,7 @@ class Main {
     public static void main(String[] args) {    
         int[] arr_1 = {1,2,3,4,5,7};
         int[] arr_2 = {2,3,4,6,6};
+        
         unionOfSortedArrays(arr_1,arr_2);
         unionOfSortedArrays_1(arr_1,arr_2);
         unionOfSortedArrays_2(arr_1,arr_2);
