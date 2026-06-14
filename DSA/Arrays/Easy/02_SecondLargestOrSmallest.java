@@ -91,14 +91,14 @@ class Main {
     // ======================= Optimal Approach =======================================
     
         public static int secondLargestElement(int[] arr){
-            
+
             int n = arr.length;
-            
+
             if(n==0 || n==1) return -1;
-            
+
             int largest = arr[0];
             int slargest = Integer.MIN_VALUE;
-            
+
             for(int i = 1;i<n;i++){
                 if(arr[i]>largest){
                     slargest = largest;
@@ -109,16 +109,16 @@ class Main {
             }
             return slargest;
         }
-        
+
         public static int secondSmallestElement(int[] arr){
-            
+
             int n = arr.length;
-            
+
             if(n==0 || n==1) return -1;
-            
+
             int smallest = arr[0];
             int ssmallest = Integer.MAX_VALUE;
-            
+
             for(int i = 1;i<n;i++){
                 if(arr[i]<smallest){
                     ssmallest = smallest;
@@ -133,11 +133,13 @@ class Main {
     
     public static void main(String[] args) {
         int [] arr = {2,5,1,32,10};
+
         int result = slargest(arr);
         int result1 = ssmallest(arr);
         int result2 = secondLargest(arr);
         int result3 = secondLargestElement(arr);
         int result4 = secondSmallestElement(arr);
+        
         System.out.println("SLargest: "+result);
         System.out.println("SSmallest: "+result1);
         System.out.println("Second Largest: "+result2);
