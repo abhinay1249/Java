@@ -7,12 +7,13 @@
 // Explanation: 5 is the largest element in the array.
 
 // Example 2:
+
 // Input : arr[] = {8, 10, 5, 7, 9}  
 // Output : 10  
 // Explanation : 10 is the largest element in the array.
 
 
-import java.util.*;
+import java.util.Arrays;
 
 class Main {
 
