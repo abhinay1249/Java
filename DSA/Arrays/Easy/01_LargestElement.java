@@ -19,7 +19,7 @@ class Main {
 
 // ======================= Brute Force Approach =======================================
 
-    static int largest(int[] arr){
+    public static int largest(int[] arr){
 
         Arrays.sort(arr);
 
@@ -29,7 +29,7 @@ class Main {
 // ======================= Optimal Approach =======================================
 
 
-    static int largest_1(int[] arr){
+    public static int largest_1(int[] arr){
         
         int n = arr.length;
         int largest = arr[0];
