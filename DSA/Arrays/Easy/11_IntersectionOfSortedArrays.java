@@ -74,7 +74,7 @@ class Main {
     public static void main(String[] args) {
         int[] arr_1={1,2,3,4,5};
         int[] arr_2={2,3,5};
-        
+
         intersectionOfSortedArrays(arr_1,arr_2);
         intersectionOfSortedArrays_1(arr_1,arr_2);
     }
