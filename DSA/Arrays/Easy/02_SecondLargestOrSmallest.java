@@ -20,73 +20,73 @@
 // Therefore, there is no second smallest or second largest element present.
 
 
-import java.util.*;
+import java.util.Arrays;
 
 class Main {
     
     // ======================= Brute-Force Approach =======================================
     
-    static int slargest(int[] arr){
-        
-        int n = arr.length;
-        
-        if(n==0 || n==1) return -1;
-        
-        Arrays.sort(arr);
-        int slargest = 0;
-        int largest = arr[n-1];
-        
-        for(int i = n-2;i>=0;i--){
-            if(arr[i]<largest){
-                slargest = arr[i];
-                break;
+        public static int slargest(int[] arr){
+            
+            int n = arr.length;
+            
+            if(n==0 || n==1) return -1;
+            
+            Arrays.sort(arr);
+            int slargest = 0;
+            int largest = arr[n-1];
+            
+            for(int i = n-2;i>=0;i--){
+                if(arr[i]<largest){
+                    slargest = arr[i];
+                    break;
+                }
             }
+            return slargest;
         }
-        return slargest;
-    }
-    
-    static int ssmallest(int[] arr){
-        int n = arr.length;
         
-        if(n==0 || n==1) return -1;
-        
-        Arrays.sort(arr);
-        int ssmallest = 0;
-        int smallest = arr[0];
-        
-        for(int i = 1;i<n;i++){
-            if(arr[i]>smallest){
-                ssmallest = arr[i];
-                break;
+        public static int ssmallest(int[] arr){
+            int n = arr.length;
+            
+            if(n==0 || n==1) return -1;
+            
+            Arrays.sort(arr);
+            int ssmallest = 0;
+            int smallest = arr[0];
+            
+            for(int i = 1;i<n;i++){
+                if(arr[i]>smallest){
+                    ssmallest = arr[i];
+                    break;
+                }
             }
+            return ssmallest;
         }
-        return ssmallest;
-    }
     
     // ======================= Better Approach =======================================
     
-    static int secondLargest(int[] arr){
-        
-        int n = arr.length;
-        
-        if(n==0 || n==1) return -1;
-        
-        int largest = arr[0];
-        
-        for(int i = 1;i<n;i++){
-            if(arr[i]>largest){
-                largest = arr[i];
+        public static int secondLargest(int[] arr){
+            
+            int n = arr.length;
+            
+            if(n==0 || n==1) return -1;
+            
+            int largest = arr[0];
+            
+            for(int i = 1;i<n;i++){
+                if(arr[i]>largest){
+                    largest = arr[i];
+                }
             }
-        }
-        int slargest = Integer.MIN_VALUE;
-        
-        for(int i = 0; i <n;i++){
-            if(arr[i]<largest){
-                slargest = Math.max(slargest,arr[i]);
+            int slargest = Integer.MIN_VALUE;
+            
+            for(int i = 0; i <n;i++){
+                if(arr[i]<largest){
+                    slargest = Math.max(slargest,arr[i]);
+                }
             }
+            return slargest;
         }
-        return slargest;
-    }
     
     // ======================= Optimal Approach =======================================
     
