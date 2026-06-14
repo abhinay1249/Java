@@ -43,6 +43,7 @@ class Main {
 
     public static void main(String[] args) {
         int[] arr = {1,7,2,3,4,5};
+        
         boolean result = isSorted(arr);
         boolean result1 = isSorted_1(arr);
         
