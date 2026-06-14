@@ -16,7 +16,10 @@
 // Explanation: Total number of unique elements are 4, i.e[1,2,3,4] and Therefore return 4 after assigning [1,2,3,4] in the beginning of the array.
 
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 class Main {
     
@@ -64,7 +67,7 @@ class Main {
     
     // ======================= Optimal Approach =======================================
 
-        static int removeDuplicates_2(int[]arr){
+        public static int removeDuplicates_2(int[]arr){
 
             int n = arr.length;
             int i = 0;
@@ -82,11 +85,13 @@ class Main {
     public static void main(String[] args) {
         int[] arr={1,1,1,2,2,3,3,4};
         int[] nums={1,1,1,2,2,3,3,4};
+
         int result = removeDuplicates(arr);
         int[] result1 = removeDuplicates_1(arr);
         int result2 = removeDuplicates_2(nums);
+        
         System.out.println("Unique: "+result);
-        System.out.println("Unique: "+result1);
+        System.out.println("Unique: "+result2);
         
         for(int i = 0; i < result1.length;i++){
             System.out.print(arr[i]+" ");
