@@ -4,12 +4,14 @@
 
 
 // Example 1:
+
 // Input : nums = [1, 2, 3, 4, 5]  
 // Output : [2, 3, 4, 5, 1]  
 // Explanation : Initially, nums = [1, 2, 3, 4, 5]  
 // Rotating once to the left results in nums = [2, 3, 4, 5, 1].
 
 // Example 2:
+
 // Input : nums = [-1, 0, 3, 6]  
 // Output : [0, 3, 6, -1]  
 // Explanation : Initially, nums = [-1, 0, 3, 6]  
@@ -19,7 +21,7 @@ class Main {
     
     // ======================= Brute Force Approach =======================================
 
-        static int[] leftRotateByOne(int[]arr){
+        public static int[] leftRotateByOne(int[]arr){
             int targetElement = arr[0];
             int n = arr.length;
             int[] temp = new int[n];
@@ -39,7 +41,7 @@ class Main {
     
     // ======================= Optimal Approach =======================================
     
-        static int[] leftRotateByOne_1(int[]arr){
+        public static int[] leftRotateByOne_1(int[]arr){
             int temp = arr[0];
             int n = arr.length;
 
@@ -56,6 +58,7 @@ class Main {
     
     public static void main(String[] args) {
         int[] arr = {1,2,3,4,5};
+        
         int[] result = leftRotateByOne(arr);
         int[] result_1 = leftRotateByOne_1(arr);
     }
