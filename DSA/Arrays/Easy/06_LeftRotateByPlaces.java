@@ -1,11 +1,14 @@
 // Problem Statement: Given an array of integers, rotating array of elements by k elements left.
 
-// Examples
+// Example 1:
 
 // Input : nums = [1, 2, 3, 4, 5, 6, 7], k = 2, right
 // Output : [6, 7, 1, 2, 3, 4, 5]
 // Explanation : rotate 1 step to the right: [7, 1, 2, 3, 4, 5, 6]
 // rotate 2 steps to the right: [6, 7, 1, 2, 3, 4, 5] 
+
+
+// Example 2:
 
 // Input : nums = [1, 2, 3, 4, 5, 6], k=2, left
 // Output : [3, 4, 5, 6, 1, 2]
@@ -17,7 +20,8 @@ class Main {
     
     // ============================ Brute Force Approach ============================================
 
-        static int[] leftRotateByPlaces(int[] arr,int k){
+        public static int[] leftRotateByPlaces(int[] arr,int k){
+
             int n = arr.length;
             k%=n;
             
@@ -46,7 +50,7 @@ class Main {
 
     // =================================== Optimal Approach =========================================
 
-        static void reverse(int start,int end,int[]arr){
+        private static void reverse(int start,int end,int[]arr){
             while(start<end){
                 int temp = arr[start];
                 arr[start]=arr[end];
@@ -56,7 +60,7 @@ class Main {
             }
         }
 
-        static void leftRotateByPlaces_1(int[]arr, int k){
+        public static void leftRotateByPlaces_1(int[]arr, int k){
             int a = 0;
             int n = arr.length;
             k%=n;
@@ -76,6 +80,7 @@ class Main {
         int[] arr = {1,2,3,4,5,6,7};
         int[] arr_1 = {1,2,3,4,5,6,7};
         int k =33;
+        
         leftRotateByPlaces(arr,k);
         leftRotateByPlaces_1(arr_1,k);
     }
