@@ -1,6 +1,5 @@
 // Problem Statement: Given the head of a doubly linked list with its values "Sorted" in non-decreasing order. 
 // Remove all duplicate occurrences of any value in the list so that only distinct values are present in the list.
-
 // Return the head of the modified linked list.
 
 // Example 1:
@@ -36,7 +35,7 @@ class Node{
     
     // =========================== Convert Array into Linked List ========================
 
-        private static Node convert(int[] nums){
+        public  static Node convert(int[] nums){
 
             int length = nums.length;
             Node head = new Node(nums[0]);
@@ -52,7 +51,7 @@ class Node{
     
     // ============================== Print the Linked List ===============================
 
-        private static void print(Node head){
+        public static void print(Node head){
 
             Node temp = head;
 
