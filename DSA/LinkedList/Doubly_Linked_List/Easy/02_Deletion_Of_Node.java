@@ -147,12 +147,14 @@ class Node{
             
             while(temp != null){
                 if(temp.data == elementNode){
+                    
                     if(temp.prevptr == null){
                         return deletionAtHead(head);
                     }
                     if(temp.nextptr == null){
                         return deletionAtTail(head);
                     }
+
                     Node prev = temp.prevptr;
                     Node front = temp.nextptr;
             
