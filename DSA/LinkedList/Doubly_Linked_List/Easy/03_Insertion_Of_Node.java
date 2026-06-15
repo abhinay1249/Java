@@ -28,7 +28,7 @@ class Node{
     
     // ================================ Convert Array into Doubly Linked List =====================================
 
-        private static Node convert(int[] nums){
+        public  static Node convert(int[] nums){
 
             int length = nums.length;
 
@@ -47,7 +47,7 @@ class Node{
 
     // ================================ Print Doubly Linked List ==============================================
     
-        private static void print(Node head){
+        public static void print(Node head){
 
             Node dll = head;
 
@@ -59,7 +59,7 @@ class Node{
 
     // ================================ Insertion Of Node Before Head ==============================================
 
-        private static Node insertionAtBeforeHead(Node head, int val){
+        public static Node insertionAtBeforeHead(Node head, int val){
             
             Node newHead = new Node(val,head,null);
             
@@ -70,7 +70,7 @@ class Node{
 
     // ================================ Insertion Of Node Before Tail ==============================================
         
-        private static Node insertionAtBeforeTail(Node head, int val){
+        public static Node insertionAtBeforeTail(Node head, int val){
 
             Node temp = head;
             Node newNode = new Node(val,null,null);
@@ -90,7 +90,7 @@ class Node{
 
     // ================================ Insertion Of Node At Kth Position ==========================================
         
-        private static Node insertionAtKthPos(Node head, int val, int pos){
+        public static Node insertionAtKthPos(Node head, int val, int pos){
 
             if(pos == 1){
                 return insertionAtBeforeHead(head,val);
@@ -116,7 +116,7 @@ class Node{
 
     // ================================ Insertion Of Node At Value ========================================== 
 
-        private static Node insertionAtValue(Node head, int val,int element){
+        public static Node insertionAtValue(Node head, int val,int element){
         
             if(val == head.data){
                 return insertionAtBeforeHead(head,element);
