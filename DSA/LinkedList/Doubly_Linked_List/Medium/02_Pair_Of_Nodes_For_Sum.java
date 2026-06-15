@@ -35,7 +35,7 @@ class Node{
     
     // =========================== Convert Array into Linked List =========================
 
-        private static Node convert(int[] nums){
+        public  static Node convert(int[] nums){
             
             int length = nums.length;
 
