@@ -151,8 +151,8 @@ class Node{
                         return deletionAtHead(head);
                     }
                     if(temp.nextptr == null){
-                    return deletionAtTail(head);
-                }
+                        return deletionAtTail(head);
+                    }
                     Node prev = temp.prevptr;
                     Node front = temp.nextptr;
             
