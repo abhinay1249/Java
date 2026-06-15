@@ -30,7 +30,7 @@ class Node{
     
     // ================================ Convert Array into Doubly Linked List =====================================
 
-        private static Node convert(int[] nums){
+        public static Node convert(int[] nums){
 
             int length = nums.length;
 
@@ -49,7 +49,7 @@ class Node{
 
     // ================================ Print Doubly Linked List ==============================================
     
-        private static void print(Node head){
+        public static void print(Node head){
 
             Node dll = head;
 
@@ -61,7 +61,7 @@ class Node{
 
     // ================================ Removal Of Head Node ==============================================
 
-        private static Node deletionAtHead(Node head){
+        public static Node deletionAtHead(Node head){
 
             if(head == null) return head;
 
@@ -80,7 +80,7 @@ class Node{
     
     // ================================ Removal Of Tail Node ==============================================
     
-        private static Node deletionAtTail(Node head){
+        public static Node deletionAtTail(Node head){
 
             if(head == null) return head;
 
@@ -103,7 +103,7 @@ class Node{
     
     // ================================ Removal Of Kth Position Node ==============================================
 
-        private static Node deletionAtKthPos(Node head, int k){
+        public static Node deletionAtKthPos(Node head, int k){
 
             Node temp = head;
 
@@ -139,7 +139,7 @@ class Node{
     
     // ================================ Removal Of Value Node ==============================================
 
-        private static Node deletionOfValue(Node head, int elementNode){
+        public static Node deletionOfValue(Node head, int elementNode){
             
             if(head == null) return null;
             
