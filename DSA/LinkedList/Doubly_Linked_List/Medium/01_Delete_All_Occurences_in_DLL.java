@@ -36,7 +36,8 @@ class Node{
     
     // =========================== Convert Array into Linked List ==========================
 
-        private static Node convert(int[] nums){
+        public  static Node convert(int[] nums){
+            
             int length = nums.length;
 
             Node head = new Node(nums[0]);
@@ -53,7 +54,8 @@ class Node{
 
     // ============================== Print the Linked List ================================
 
-        private static void print(Node head){
+        public static void print(Node head){
+            
             Node temp = head;
 
             while(temp != null){
@@ -65,6 +67,7 @@ class Node{
     // ============================== Only Approach =======================================
 
         public static Node deleteAllOccurences(Node head, int key){
+            
             Node temp = head;
             Node prevNode = null;
             Node nextNode = null;
@@ -87,6 +90,7 @@ class Node{
             }
             return head;
         }
+        
     public static void main(String[] args) {
         
         int[] nums = {10,4,10,10,6,10};
