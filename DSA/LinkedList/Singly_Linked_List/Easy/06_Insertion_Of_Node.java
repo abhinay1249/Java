@@ -1,3 +1,18 @@
+// Problem Statement: Given a Linked List, insert node types and print the updated list.
+
+// Example 1:-
+
+// Input: 1 -> 2 -> 3 -> 4 -> 5, element = 100, k = 4
+// Output: 1 -> 2 -> 3 -> 100 -> 4 -> 5
+// Explanation: The node with value 100 is inserted at position 4 in the linked list.
+
+// Example 2:-
+
+// Input: 1 -> 2 -> 3 -> 4 -> 5, element = 100, value = 4
+// Output: 1 -> 2 -> 3 -> 100 -> 4 -> 5
+// Explanation: The node with value 100 is inserted before the node with value 4 in the linked list.
+
+
 class Node{
     int data;
     Node pointer;
