@@ -1,8 +1,17 @@
 // Problem Statement: Given the head of a linked list, print the length of the linked list.
 
-// Example:-
+// Example 1:-
+
 // Input: 12 -> 43 -> 134 -> 141 -> 431 -> 0
 // Output: 6
+// Explanation: The linked list contains 6 nodes, so the output is 6.
+
+// Example 2:-
+
+// Input: 1 -> 2 -> 3 -> 4 -> 5
+// Output: 5
+// Explanation: The linked list contains 5 nodes, so the output is 5.
+
 
 class Node{
 
