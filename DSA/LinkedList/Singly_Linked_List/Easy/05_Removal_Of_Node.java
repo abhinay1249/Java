@@ -1,9 +1,16 @@
 // Problem Statement: Given a Linked List, delete node types and print the updated list.
 
-// Example:-
+// Example 1:-
+
 // Input: 12 -> 45 -> 356 -> 553 -> 262 -> 90, k = 3
 // Output: 12 -> 45 -> 553 -> 262 -> 90
 // Explanation: The node at position 3 is 356, which is removed from the list.
+
+// Example 2:-
+
+// Input: 12 -> 45 -> 356 -> 553 -> 262 -> 90, value = 262
+// Output: 12 -> 45 -> 356 -> 553 -> 90
+// Explanation: The node with value 262 is removed from the list.
 
 
 class Node{
