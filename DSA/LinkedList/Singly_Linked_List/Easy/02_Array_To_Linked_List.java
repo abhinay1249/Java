@@ -1,10 +1,18 @@
 // Problem Statement: Given an array, convert it into a singly linked list.
 
-// Example:-
+// Example 1:-
+
 // Input: [1,2,3,4,5,6,7,8]
 // Output: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
 // Explanation: The first element of the array becomes the head of the linked list
 // and each subsequent element is added as a new node to the end of the list.
+
+// Example 2:-
+
+// Input: [12,43,134,141,431,0]
+// Output: 12 -> 43 -> 134 -> 141 -> 431 -> 0
+// Explanation: The first element of the array becomes the head of the linked list.
+
 
 class Node{
 
