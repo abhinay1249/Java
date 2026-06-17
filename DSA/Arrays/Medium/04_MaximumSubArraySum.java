@@ -26,7 +26,7 @@ class Main {
 
     // ======================= Brute Force Approach =======================================
 
-        static int maxSubArraySum(int[] nums){
+        public static int maxSubArraySum(int[] nums){
         
 	        int maxSum = Integer.MIN_VALUE;
     
@@ -45,7 +45,7 @@ class Main {
 
 	// ======================= Better Approach =======================================
 
-        static int maxSubArraySum_1(int[] nums){
+        public static int maxSubArraySum_1(int[] nums){
         
 	        int maxSum = Integer.MIN_VALUE;
     
@@ -61,7 +61,7 @@ class Main {
 
     // ======================= Optimal Approach [KADANE'S ALGORITHM] =======================
 
-        static int maxSubArraySum_2(int[] nums){
+        public static int maxSubArraySum_2(int[] nums){
 	        int sum = 0;
     	    int maxSum = Integer.MIN_VALUE;
 
@@ -82,7 +82,7 @@ class Main {
 
     // ======================= FOLLOW UP Question to Print the SubArray =======================
 
-        static void maxSubArraySum_3(int[] nums){
+        public static void maxSubArraySum_3(int[] nums){
 	        int sum = 0;
     	    int maxSum = Integer.MIN_VALUE;
             int start = 0, ansStart = -1, ansEnd = -1;
@@ -120,12 +120,17 @@ class Main {
 
         int[] nums = {2, 3, 5, -2, 7, -4};
         int[] nums_1 = {-2,1};
+
         int result = maxSubArraySum(nums);
-        int result_1 = maxSubArraySum_1(nums);
-        int result_2 = maxSubArraySum_2(nums_1);
-        maxSubArraySum_3(nums);
-        System.out.println(result);
-        System.out.println(result_1);
+		System.out.println(result);
+        
+		int result_1 = maxSubArraySum_1(nums);
+		System.out.println(result_1);
+        
+		int result_2 = maxSubArraySum_2(nums_1);
         System.out.println(result_2);
+        
+		maxSubArraySum_3(nums);
+        
     }
 }
