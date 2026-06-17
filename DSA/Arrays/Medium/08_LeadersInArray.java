@@ -3,19 +3,23 @@
 // The rightmost element is always a leader.
 
 // Example 1:
+
 // Input: arr = [4, 7, 1, 0]  
 // Output: 7 1 0  
 // Explanation: The rightmost element (0) is always a leader.  
 // 7 and 1 are greater than the elements to their right, making them leaders as well.
 
 // Example 2:
+
 // Input : arr = [10, 22, 12, 3, 0, 6]  
 // Output: 22 12 6  
 // Explanation: 6 is a leader because there are no elements after it.  
 // 12 is greater than all the elements to its right (3, 0, 6), and 22 is greater than 12, 3, 0, 6, making them leaders as well.
 
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 class Main{
     
@@ -68,8 +72,10 @@ class Main{
         
     public static void main(String[] args) {
         int[] nums = {10, 22, 12, 3, 0, 6};
+
         List<Integer> res = leaders(nums);
         List<Integer> res_1 = leaders_1(nums);
+        
         for(int i : res_1){
             System.out.print(i+" ");
         }
