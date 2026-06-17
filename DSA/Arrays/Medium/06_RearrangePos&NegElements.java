@@ -125,17 +125,21 @@ class Main {
     public static void main(String[] args) {
         int[] nums = {1,2,3,-4,-5,-6};
         int[] nums_1 = {1,2,3,-4,-5,-6,1,2};
+
         int[] res = rearrangeElements(nums);
         int[] res_1 = rearrangeElements_1(nums);
         int[] res_2 = rearrangeElements_2(nums_1);
+        
         for(int i = 0 ; i < res.length ; i++){
             System.out.print(res[i]+" ");
         }
         System.out.println();
+        
         for(int i = 0 ; i < res_1.length ; i++){
             System.out.print(res_1[i]+" ");
         }
         System.out.println();
+        
         for(int i = 0 ; i < res_2.length ; i++){
             System.out.print(res_2[i]+" ");
         }
