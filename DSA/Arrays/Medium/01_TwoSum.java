@@ -5,11 +5,13 @@
 // 2nd variant: Return indices of the two numbers such that their sum is equal to the target. Otherwise, we will return {-1, -1}.
 
  
-// Examples
+// Example 1:
 
 // Input: N = 5, arr[] = {2,6,5,8,11}, target = 14
 // Output : YES
 // Explanation: arr[1] + arr[3] = 14. So, the answer is “YES” for first variant for second variant output will be : [1,3].
+
+// Example 2:
 
 // Input: N = 5, arr[] = {2,6,5,8,11}, target = 15
 // Output : NO.
@@ -93,7 +95,7 @@ class Main {
 	// ======================= Optimal Approach - Variant- 1 =======================================
     
     	public static Boolean twoSum_4(int[] nums, int target){
-			
+
 		    Arrays.sort(nums);
 		    int left = 0, right = nums.length-1;
 	
