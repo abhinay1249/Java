@@ -15,16 +15,18 @@
 // Output : NO.
 // Explanation: There exist no such two numbers whose sum is equal to the target.
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 
 
 class Main {
 
 	// ======================= Brute Force Approach - Variant - 1 =======================================
     
-    	static boolean twoSum(int[] nums, int target){
-	
-	    	int sumOfNumbers = 0;
+    	public static boolean twoSum(int[] nums, int target){
 	
 	    	for(int i = 0 ; i < nums.length ; i++){
 	    		for(int j = i+1 ; j < nums.length ; j++){
@@ -38,7 +40,8 @@ class Main {
 
 	// ======================= Brute Force Approach - Variant - 2 =======================================
     
-		static List<Integer> twoSum_1(int[] nums, int target){
+		public static List<Integer> twoSum_1(int[] nums, int target){
+			
 		    List<Integer> indices = new ArrayList<>();
 
 		    for(int i = 0 ; i < nums.length ; i++){
@@ -57,7 +60,7 @@ class Main {
 
 	// ======================= Better Approach - Variant - 1 =======================================
     
-    	static Boolean twoSum_2(int[] nums, int target){
+    	public static Boolean twoSum_2(int[] nums, int target){
 		
 		    Map<Integer, Integer> twoSumMap = new TreeMap<>();
 
