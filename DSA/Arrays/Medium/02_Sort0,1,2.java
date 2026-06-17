@@ -73,6 +73,7 @@ class Main {
 	        int mid = 0;
         
 	        while(mid<=high){
+                
 	        	if(nums[mid]==0){
 	        		swap(low,mid,nums);                                 // T.C = O(N), S.C = O(1)
 	        		low++;
