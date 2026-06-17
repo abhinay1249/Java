@@ -94,7 +94,7 @@ class Main {
 	        nums[right] = temp;
         }
 
-        static int[] nextPermutation(int[] nums){
+        public static int[] nextPermutation(int[] nums){
         
 	        int n = nums.length;
 	        int index = -1;
@@ -128,6 +128,7 @@ class Main {
     public static void main(String[] args) {
         int[] nums = {2,1,5,4,3,0,0};
         int[] res = nextPermutation(nums);
+        
         for(int i : res){
             System.out.print(i+" ");  
         }
