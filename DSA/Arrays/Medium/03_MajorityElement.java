@@ -15,13 +15,14 @@
 // Explanation: The number 1 appears 4 times in the 6-sized array, making it the most frequent element.
 
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 class Main {
 
 	// ======================= Brute Force Approach =======================================
 	
-    	static int majorityElement(int[] nums){
+    	public static int majorityElement(int[] nums){
 		
 		    int element = -1;
 		    int lengthOfArray = nums.length;
@@ -44,7 +45,7 @@ class Main {
     
 	// ======================= Better Approach =======================================
 
-    	static int majorityElement_1(int[] nums){
+    	public static int majorityElement_1(int[] nums){
 		
 		    Map<Integer,Integer> freqCount = new HashMap<>();
 		
