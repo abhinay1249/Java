@@ -125,14 +125,15 @@ class Node{
 
             while(temp != null){
                 if(temp.data == val){
-                    Node prev = temp.prevptr;
-                    Node newNode = new Node(element,temp,prev);
-                    prev.nextptr = newNode;
-                    temp.prevptr = newNode;
                     break;
                 }
                 temp = temp.nextptr;
             }
+
+            Node prev = temp.prevptr;
+            Node newNode = new Node(element,temp,prev);
+            prev.nextptr = newNode;
+            temp.prevptr = newNode;
 
             return head;
         }
