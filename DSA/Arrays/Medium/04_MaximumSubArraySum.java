@@ -62,6 +62,7 @@ class Main {
     // ======================= Optimal Approach [KADANE'S ALGORITHM] =======================
 
         public static int maxSubArraySum_2(int[] nums){
+
 	        int sum = 0;
     	    int maxSum = Integer.MIN_VALUE;
 
@@ -83,6 +84,7 @@ class Main {
     // ======================= FOLLOW UP Question to Print the SubArray =======================
 
         public static void maxSubArraySum_3(int[] nums){
+			
 	        int sum = 0;
     	    int maxSum = Integer.MIN_VALUE;
             int start = 0, ansStart = -1, ansEnd = -1;
