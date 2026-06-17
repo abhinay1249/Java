@@ -76,7 +76,7 @@ class Main {
 
 	// ======================= Optimal Approach - Variant - 2 =======================================
     
-    	static int[] twoSum_3(int[] nums, int target){
+    	public static int[] twoSum_3(int[] nums, int target){
 		
 		    Map<Integer, Integer> twoSumMap = new TreeMap<>();
 
@@ -92,8 +92,8 @@ class Main {
 	
 	// ======================= Optimal Approach - Variant- 1 =======================================
     
-
-    	static Boolean twoSum_4(int[] nums, int target){
+    	public static Boolean twoSum_4(int[] nums, int target){
+			
 		    Arrays.sort(nums);
 		    int left = 0, right = nums.length-1;
 	
