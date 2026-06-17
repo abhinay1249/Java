@@ -23,13 +23,14 @@
 // Also, -3 should come before -1, and -1 should come before -2.
             
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 class Main {
     
     // ======================= Brute Force Approach =======================================
 
-        static int[] rearrangeElements(int[] nums){
+        public static int[] rearrangeElements(int[] nums){
 
 	        int idx = 0, idx1 = 0;
 
@@ -59,7 +60,7 @@ class Main {
 
     // ======================= Optimal Approach =======================================
 
-        static int[] rearrangeElements_1(int[] nums){
+        public static int[] rearrangeElements_1(int[] nums){
 
             int[] arrangedArray = new int[nums.length];
 
@@ -81,7 +82,7 @@ class Main {
     // ======================= FOLLOW UP Question =======================================
         // If the length is not equal for the number of positive and negative elements  
 
-        static int[] rearrangeElements_2(int[] nums){
+        public static int[] rearrangeElements_2(int[] nums){
 
             List<Integer> pos = new ArrayList<>();
             List<Integer> neg = new ArrayList<>();
