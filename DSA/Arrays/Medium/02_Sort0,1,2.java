@@ -92,10 +92,13 @@ class Main {
     
     public static void main(String[] args) {
         int[] nums = {2,1,2,1,2,0,0,0,1};
+
         sortZeroOneTwo(nums);
         System.out.println();
+        
         sortZeroOneTwo_1(nums);
         System.out.println();
+        
         sortZeroOneTwo_2(nums);
     }
 }
