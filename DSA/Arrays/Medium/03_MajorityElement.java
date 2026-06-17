@@ -65,7 +65,8 @@ class Main {
 
 	// ======================= Optimal Approach [MOORE'S VOTING ALGORITHM] =======================================
 
-		static int majorityElement_2(int[] nums){
+		public static int majorityElement_2(int[] nums){
+
 		    int element = nums[0];
 		    int count = 0;
 			int counter = 0;
@@ -99,11 +100,14 @@ class Main {
         int[] nums = {1, 1, 1, 2, 1, 2};
         int[] nums_1 = {7, 0, 0, 1, 7, 7, 2, 7, 7};
         int[] nums_2 = {3,2,3};
+
         int result = majorityElement(nums);
+		System.out.println(result);
+
         int result_1 = majorityElement_1(nums_1);
-        int result_2 = majorityElement_2(nums_2);
-        System.out.println(result);
-        System.out.println(result_1);
+		System.out.println(result_1);
+        
+		int result_2 = majorityElement_2(nums_2);
         System.out.println(result_2);
     }
 }
