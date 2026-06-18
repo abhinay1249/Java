@@ -113,8 +113,12 @@ class Main {
 
     public static void main(String[] args) {
         int[] nums = {-1,0,1,2,-1,-4};
+
         List<List<Integer>> res = threeSum(nums);
-        for(List<Integer> ans :  res){
+        List<List<Integer>> res_1 = threeSum_1(nums);
+        List<List<Integer>> res_2 = threeSum_2(nums);
+        
+        for(List<Integer> ans :  res_2){
             System.out.println(ans);
         }
         
