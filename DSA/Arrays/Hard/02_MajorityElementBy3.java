@@ -117,9 +117,11 @@ class Main {
     public static void main(String[] args) {
         int[] nums = {2, 1, 1, 3, 1, 4, 5, 6};
         int[] nums_1 = {0,0,0};
+
         List<Integer> result = majorityElement(nums);
         List<Integer> result_1 = majorityElement_1(nums);
         List<Integer> result_2 = majorityElement_2(nums_1);
+        
         for(int i : result){
             System.out.println(i);
     
