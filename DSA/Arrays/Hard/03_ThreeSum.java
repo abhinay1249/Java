@@ -16,13 +16,18 @@
 // Explanation : Out of all possible unique triplets possible, [-1,0,1] and [-1,1,0] satisfy the condition of summing up to zero with i!=j!=k
 
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 class Main {
     
     // ==================================== Brute Force Approach ===========================================
 
-        static List<List<Integer>> threeSum(int[] nums){
+        public static List<List<Integer>> threeSum(int[] nums){
         
             int length =  nums.length;
 
@@ -44,7 +49,7 @@ class Main {
 
     // ==================================== Better Approach ===========================================
 
-        static List<List<Integer>> threeSum_1(int[] nums){
+        public static List<List<Integer>> threeSum_1(int[] nums){
 	        int length = nums.length;
 	        Set<List<Integer>> unqTriplets = new HashSet<>();
 	        Set<Integer> elements = new HashSet<>();
@@ -68,7 +73,7 @@ class Main {
 
     // ==================================== Optimal Approach ===========================================
 
-        static List<List<Integer>> threeSum_2(int[] nums){
+        public static List<List<Integer>> threeSum_2(int[] nums){
         
         	List<List<Integer>> triplets = new ArrayList<>();
 	        int length = nums.length;	
