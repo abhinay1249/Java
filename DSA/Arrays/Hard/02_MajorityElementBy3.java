@@ -46,7 +46,8 @@ class Main {
 
     // ==================================== Better Approach ===========================================
 
-        static List<Integer> majorityElement_1(int[] nums){
+        public static List<Integer> majorityElement_1(int[] nums){
+
 	        Map<Integer, Integer> freqCount = new HashMap<>();
 	        List<Integer> result = new ArrayList<>();
 	        int min = nums.length/3+1;
@@ -70,7 +71,7 @@ class Main {
 
     // ==================================== Optimal Approach <MOORE'S VOTING ALGO MODIFIED> ===========================================
 
-        static List<Integer> majorityElement_2(int[] nums){
+        public static List<Integer> majorityElement_2(int[] nums){
 
 	        int length = nums.length;
         	List<Integer> elements = new ArrayList<>();
