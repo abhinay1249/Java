@@ -71,7 +71,7 @@ class Main {
 
     // ==================================== Brute Force Approach ========================================
 
-        static int permute(int nthrow, int col){
+        private static int permute(int nthrow, int col){
             int value = 1;
 
             for(int row = 0; row < col ; row++){
@@ -81,7 +81,7 @@ class Main {
             return value;
         }
 
-        static void nthRowValues(int nthRow){
+        public static void nthRowValues(int nthRow){
             
             List<Integer> values = new ArrayList<>();
 
