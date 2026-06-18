@@ -2,7 +2,7 @@
 // In Pascal’s triangle, each number is the sum of the two numbers directly 
 
 
-// Examples
+// Example 1:
 
 // Input: N = 5, r = 5, c = 3 
 // Output: Element at position (r, c): 6
@@ -14,6 +14,8 @@
 // 1 3 3 1 
 // 1 4 6 4 1  
 // Explanation: Pascal triangle for first 5 rows is shown above.
+
+// Example 2:
 
 // Input: N = 1, r = 1, c = 1
 // Output: Element at position (r, c): 1
