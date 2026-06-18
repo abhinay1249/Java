@@ -16,13 +16,16 @@
 // Explanation: Here, n / 3 = 7 / 3 = 2.  
 // Therefore, the elements appearing 3 or more times are: [1, 2].
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 class Main {
 
     // ==================================== Brute Force Approach ===========================================
 
-        static List<Integer> majorityElement(int[] nums){
+        public static List<Integer> majorityElement(int[] nums){
         
 	        int length = nums.length;
 	        List<Integer> result = new ArrayList<>();
