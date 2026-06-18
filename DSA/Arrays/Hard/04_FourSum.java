@@ -92,9 +92,11 @@ class Main {
 	    		    continue;
                 }                                                                               // T.C = O(N LOG N) + O(N^3), S.C = O(no of quadraplets) -->(no extra space)
 	    	    for(int idx_2 = idx_1+1 ; idx_2 < length ; idx_2++){
-	    		    if(idx_2>idx_1+1 && nums[idx_2] == nums[idx_2-1]){
+	    		    
+                    if(idx_2>idx_1+1 && nums[idx_2] == nums[idx_2-1]){
 	    			    continue;
                     }
+
                     int left = idx_2+1;
                     int right = length -1;
 
