@@ -98,7 +98,7 @@ class Main {
 
     // ==================================== Optimal Approach ===========================================
 
-        static void nthRowValues_1(int nthRow){
+        public static void nthRowValues_1(int nthRow){
 
 	        List<Integer> values = new ArrayList<>();
 	        int value = 1;
@@ -120,7 +120,7 @@ class Main {
 
     // ==================================== Brute-Force Approach ===========================================
 
-        static int permutation(int row, int col){
+        private static int permutation(int row, int col){
             int value = 1;
             for(int valueidx = 0 ; valueidx < col ; valueidx++){
                 value *= row-valueidx;
@@ -129,7 +129,7 @@ class Main {
             return value;
         }
 
-        static void pascalTriangle(int nthRows){
+        public static void pascalTriangle(int nthRows){
         
             List<List<Integer>> pascalTriangle = new ArrayList<>();
         
@@ -150,7 +150,7 @@ class Main {
     // ==================================== Optimal Approach ===========================================
 
 
-        static List<Integer> nthRowsValues(int nthRow){
+        private static List<Integer> nthRowsValues(int nthRow){
 	
 	        List<Integer> values = new ArrayList<>();
 	        int value = 1;
@@ -165,7 +165,7 @@ class Main {
         }
 
 
-        static void pascalTriangle_1(int size){
+        public static void pascalTriangle_1(int size){
         
         	List<List<Integer>> pascalTriangle = new ArrayList<>();
 
