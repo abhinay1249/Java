@@ -15,7 +15,12 @@
 // Explanation: The sum of all the quadruplets is equal to the target i.e. 9.
 
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 class Main {
 
@@ -44,6 +49,7 @@ class Main {
     // ==================================== Better Approach ===========================================
     
         public static List<List<Integer>> fourSum_1(int[] nums, int target){
+            
 	        int length = nums.length;
 	        Set<List<Integer>> quadra = new HashSet<>();
 	        Set<Long> elementCheck = new HashSet<>();
@@ -122,7 +128,9 @@ class Main {
     public static void main(String[] args) {
         int[] nums = {4,3,3,4,4,2,1,2,1,1};
         int target = 9;
+
         List<List<Integer>> res = fourSum(nums,target);
+        
         for(List<Integer> num: res){
             System.out.println(num);
         }
