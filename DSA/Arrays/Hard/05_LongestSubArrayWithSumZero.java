@@ -23,13 +23,14 @@
 // - {6, -2, 2, -8, 1, 7, 4, -10}
 // The length of the longest subarray with sum zero is 8.
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 class Main {
     
     // ==================================== Brute Force Approach ===========================================
 
-        static int longestSubArrayOfSumZero(int[] nums){
+        public static int longestSubArrayOfSumZero(int[] nums){
 	        int length = nums.length;
 	        if(length == 0) return -1;
 	        int maxLength = Integer.MIN_VALUE;
@@ -50,7 +51,7 @@ class Main {
 
     // ==================================== Optimal Approach ===========================================
 
-        static int longestSubArrayOfSumZero_1(int[] nums){
+        public static int longestSubArrayOfSumZero_1(int[] nums){
 	        int length = nums.length;
 	        Map<Integer,Integer> prefixCount = new HashMap<>();
 	        int sum = 0;
@@ -76,8 +77,10 @@ class Main {
 
     public static void main(String[] args) {
         int[] nums = {1,2,-3,0,0,0,0,4,-4};
+
         int result = longestSubArrayOfSumZero(nums);
         int result_1 = longestSubArrayOfSumZero_1(nums);
+        
         System.out.println(result);
         System.out.println(result_1);
     }
