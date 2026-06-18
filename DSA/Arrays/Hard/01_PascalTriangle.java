@@ -25,7 +25,8 @@
 // Explanation: N = 1 is the base case fof a pascal's triangle.
 
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 class Main {
 
@@ -33,7 +34,7 @@ class Main {
 
     // ==================================== Brute Force Approach =====================================
 
-        static int pascalValue(int row, int col){
+        public static int pascalValue(int row, int col){
 
             int num = 1, denom = 1, sub = 1, result = 1;
 
@@ -55,7 +56,7 @@ class Main {
 
     // ==================================== Optimal Approach =========================================
         
-        static int pascalValue_1(int row, int col){
+        public static int pascalValue_1(int row, int col){
 
             int result = 1;
 
