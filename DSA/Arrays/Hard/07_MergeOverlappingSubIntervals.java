@@ -21,7 +21,7 @@ import java.util.List;
 
 class Main{
 
-    // ==================================== Brute Force Approach ===========================================
+    // =================================== Brute Force Approach ===========================================
 
         public static List<List<Integer>> mergeOverlapIntervals(int[][]nums){
         
