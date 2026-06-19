@@ -13,16 +13,19 @@
 
 // The total set of elements across both arrays must remain the same.
 
-// Example:
+// Example 1:
+
 // Input:
 // nums1  = {1, 3, 5, 7}
 // nums2 = {0, 2, 6, 8, 9}
 
-// Output:
-// nums1  = {0, 1, 2, 3}
-// nums2 = {5, 6, 7, 8, 9}
+// Output: nums1  = {0, 1, 2, 3}, nums2 = {5, 6, 7, 8, 9}
 
-import java.util.*;
+// Explanation: After rearrangement, the first array contains the first 4 smallest elements in sorted order 
+// and the second array contains the remaining 5 elements in sorted order.
+
+
+import java.util.Arrays;
 
 class Main {
 
