@@ -53,7 +53,7 @@ class Main {
     // ==================================== Optimal Approach ===========================================
 
         public static int longestSubArrayOfSumZero_1(int[] nums){
-            
+
 	        int length = nums.length;
 	        Map<Integer,Integer> prefixCount = new HashMap<>();
 	        int sum = 0;
