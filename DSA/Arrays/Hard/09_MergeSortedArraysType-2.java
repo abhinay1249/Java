@@ -137,10 +137,13 @@ class Main {
     public static void main(String[] args) {
         int[] nums1 = {1,3,5,7};
         int[] nums2 = {0,2,6,8,9};
+
         int m = nums1.length;
         int n = nums2.length;
-        int[] result = mergeTwoSortedArray_1(nums1,nums2,m,n);
-        for(int values: result){
+        
+		int[] result = mergeTwoSortedArray_1(nums1,nums2,m,n);
+        
+		for(int values: result){
             System.out.print(values+" ");
         }
         
