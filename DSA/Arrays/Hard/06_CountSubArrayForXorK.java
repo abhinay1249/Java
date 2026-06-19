@@ -43,6 +43,7 @@ class Main {
     // ==================================== Better Approach ===========================================
 
         public static int subArraysOfXor_1(int[] nums,int target){
+
             int length = nums.length;
             int count = 0;
 
@@ -62,6 +63,7 @@ class Main {
     // ==================================== Optimal Approach ===========================================
 
         public static int subArraysOfXor_2(int[] nums, int target){
+
             int length = nums.length;
             if(length == 0) return 0;
 
@@ -88,7 +90,9 @@ class Main {
     public static void main(String[] args) {
         int[] nums = {4,2,2,6,4};
         int target = 6;
+
         int res = subArraysOfXor_1(nums,target);
+        
         System.out.println(res);
     }
 }
