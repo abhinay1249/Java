@@ -31,6 +31,7 @@ class Main {
     // ==================================== Brute Force Approach ===========================================
 
         public static int longestSubArrayOfSumZero(int[] nums){
+
 	        int length = nums.length;
 	        if(length == 0) return -1;
 	        int maxLength = Integer.MIN_VALUE;
@@ -52,6 +53,7 @@ class Main {
     // ==================================== Optimal Approach ===========================================
 
         public static int longestSubArrayOfSumZero_1(int[] nums){
+            
 	        int length = nums.length;
 	        Map<Integer,Integer> prefixCount = new HashMap<>();
 	        int sum = 0;
