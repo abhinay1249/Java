@@ -103,7 +103,9 @@ class Main {
 
     public static void main(String[] args) {
         int[] nums = {5,3,2,1,4};
+
         int result = countInversions_1(nums);
+        
         System.out.println(result);
     }
 }
