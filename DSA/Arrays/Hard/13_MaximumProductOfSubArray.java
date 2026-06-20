@@ -86,7 +86,7 @@ class Main {
     // =============================== Optimal Approach =====================================
 
         public static int maxProduct_2(int[] nums) {
-            
+
             int length = nums.length;
             int maxProduct = 0;
 
@@ -119,7 +119,9 @@ class Main {
 
     public static void main(String[] args) {
         int[] nums = {2,3,-2,4};
+
         int result = maxProduct_1(nums);
+        
         System.out.println(result);
     }
 }
