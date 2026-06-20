@@ -89,7 +89,7 @@ class Main {
 	       return count;
         }
 
-        public static int mergeSort(int[] nums, int low, int high){
+        private static int mergeSort(int[] nums, int low, int high){
 
 	        int mid = low + ((high - low)/2);
 	        int count = 0;
