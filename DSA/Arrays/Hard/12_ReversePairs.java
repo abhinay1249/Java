@@ -111,7 +111,9 @@ class Main {
 
     public static void main(String[] args) {
         int[] nums = {6,13,21,25,1,2,3,4,5,9};
+
         int result = reversePairs(nums);
+        
         System.out.println(result);
     }
 }
