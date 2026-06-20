@@ -1,10 +1,12 @@
 // Problem Statement: Given an array that contains both negative and positive integers, find the maximum product subarray.
 
-// Examples
+// Example 1:
 
 // Input: Nums = [1,2,3,4,5,0]
 // Output: 120
 // Explanation: In the given array, 1×2×3×4×5 gives maximum product value.
+
+// Example 2:
 
 // Input: Nums = [1,2,-3,0,-4,-5]
 // Output: 20
@@ -84,6 +86,7 @@ class Main {
     // =============================== Optimal Approach =====================================
 
         public static int maxProduct_2(int[] nums) {
+            
             int length = nums.length;
             int maxProduct = 0;
 
