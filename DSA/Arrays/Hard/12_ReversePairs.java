@@ -14,7 +14,8 @@
 // Explaination : There is only 1 pair  ( 3 , 1 ) that satisfy the condition arr[i] > 2*arr[j]
 
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 class Main {
 
@@ -88,7 +89,7 @@ class Main {
 	       return count;
         }
 
-        private static int mergeSort(int[] nums, int low, int high){
+        public static int mergeSort(int[] nums, int low, int high){
 
 	        int mid = low + ((high - low)/2);
 	        int count = 0;
