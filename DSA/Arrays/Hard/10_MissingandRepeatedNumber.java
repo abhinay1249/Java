@@ -16,7 +16,8 @@
 // Output : [7, 4]  
 // Explanation : 7 appears twice in the array, and 4 is missing from the array. So the output is [7, 4].
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 class Main {
 
@@ -53,6 +54,7 @@ class Main {
 
 
         public static int[] missingAndRepeated_1(int[] nums){
+
 	        int length = nums.length;
 	        Map<Integer, Integer> freqCount = new HashMap<>();
 	        int[] numbers = new int[2];
@@ -149,6 +151,7 @@ class Main {
             int length = nums.length;
             int[] numbers = new int[2];
             int xor = 0;
+
             int missingNumber = -1;
             int repeatedNumber = -1;
 
@@ -191,6 +194,7 @@ class Main {
             }
             numbers[0] = one;
             numbers[1] = zero;
+            
             return numbers;
         }
     
