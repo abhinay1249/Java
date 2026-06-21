@@ -49,7 +49,7 @@ class Node{
 
     // ================================ Brute Force Approach ===================================
 
-        static boolean detectLoop(Node head){
+        public static boolean detectLoop(Node head){
             Node temp = head;
             boolean flag = false;
 
