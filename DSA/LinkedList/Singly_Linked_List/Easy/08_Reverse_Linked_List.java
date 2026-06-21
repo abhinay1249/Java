@@ -61,7 +61,8 @@ class Node{
 
     // ================================ Brute Force Approach [Iterative] ========================================
 
-        private static Node reverseLL(Node head) {
+        public static Node reverseLL(Node head) {
+            
             if(head == null || head.nextptr == null){
                 return head;
             }
