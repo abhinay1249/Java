@@ -44,7 +44,7 @@ class Node{
     
     // ================================ Brute Force Approach =======================================
 
-        private static Node middleElement(Node head){
+        public static Node middleElement(Node head){
 
             if(head == null || head.nextptr == null){
                 return head;
