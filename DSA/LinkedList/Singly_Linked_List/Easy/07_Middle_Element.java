@@ -75,7 +75,7 @@ class Node{
     
     // ================================ Optimal Approach =======================================
 
-        private static Node middleElement_1(Node head){
+        public static Node middleElement_1(Node head){
 
             if(head == null || head.nextptr == null){
                 return head;
