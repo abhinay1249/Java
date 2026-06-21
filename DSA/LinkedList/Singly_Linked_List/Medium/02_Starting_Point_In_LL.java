@@ -1,17 +1,20 @@
 // Problem Statement: Given the head of a linked list that may contain a cycle, return the starting point of that cycle. 
 // If there is no cycle in the linked list return null.
 
-// Examples
+// Example 1:
 
 // Input: LL: 1  2  3  4  5
 // Output: 3
 // Explanation: This linked list contains a loop of size 3 starting at node with value 3.
 
+// Example 2:
+
 // Input: LL: 1 -> 2 -> 3 -> 4 -> 9 -> 9
 // Output:NULL
 // Explanation: This linked list does not contain a loop hence has no starting point
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.Set;
 
 class Node{
     int data;
