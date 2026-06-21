@@ -17,7 +17,7 @@
 // the new head will point to the tail of the old linked list.
 
 
-import java.util.*;
+import java.util.Stack;
 
 class Node{
     int data;
@@ -67,7 +67,7 @@ class Node{
             }
 
             Node temp = head;
-            Stack<Integer> st = new Stack<Integer>();
+            Stack<Integer> st = new Stack<>();
 
             while(temp != null){
                 st.add(temp.data);
@@ -126,3 +126,8 @@ class Node{
 
     }
 }
+
+
+
+
+
