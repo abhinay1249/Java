@@ -32,7 +32,7 @@ class Node{
     
     // ============================== Convert Array into Linked List ==========================
 
-        static Node convert(int[] nums){
+        private static Node convert(int[] nums){
             int length = nums.length;
 
             Node head = new Node(nums[0]);
@@ -52,7 +52,7 @@ class Node{
     
     // ================================ Brute Force Approach ===================================
 
-        static Node detectCycleStart(Node head){
+        public static Node detectCycleStart(Node head){
             Node temp = head;
             Node startPoint = null;
 
