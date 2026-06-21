@@ -56,7 +56,7 @@ class Node{
 
     // ================================ Recursive Approach ========================================
 
-        private static Node reverseLL(Node head) {
+        public static Node reverseLL(Node head) {
             if(head == null || head.nextptr == null){
                 return head;
             }
