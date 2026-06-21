@@ -91,7 +91,8 @@ class Node{
 
     // ================================ Optimal Approach [Iterative] ========================================
 
-        private static Node reverseLL_1(Node head){
+        public static Node reverseLL_1(Node head){
+
             Node temp = head;
             
             Node prev = null;
