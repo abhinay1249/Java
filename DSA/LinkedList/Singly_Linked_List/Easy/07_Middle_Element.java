@@ -52,45 +52,25 @@ class Node{
 
             Node current = head;
 
+            int length = 0;
+
+            while(current != null){
+                length++;
+                current = current.nextptr;
+            }
+
+            int middleIndex = length/2;
+            current = head;
             int counter = 0;
 
             while(current != null){
                 counter++;
+                if(counter == middleIndex){
+                    break;
+                }
                 current = current.nextptr;
             }
-
-            current = head;
-            Node prev = null;
-            Node result = null; 
-
-            if(counter%2 == 1){
-                int target =(int) Math.ceil(counter/2.0);
-                int pointer = 0;
-
-                while(current != null){
-                    pointer++;                                              // T.C = O(N + N/2), S.C = O(1)
-                    if(pointer == target){
-                        result = prev.nextptr;
-                        break;
-                    }
-                    prev = current;
-                    current = current.nextptr;
-                }
-
-            }else{
-                int target = counter/2;
-                int pointer = 0;
-
-                while(current.nextptr != null){
-                    pointer++;
-                    if(pointer == target){
-                        result = current.nextptr;
-                        break;
-                    }
-                    current = current.nextptr;
-                }
-            }
-            return result;
+            return current;
         }
     
     // ================================ Optimal Approach =======================================
