@@ -51,7 +51,7 @@ class Node{
         
     // ====================== Brute Force Approach ====================================
 
-        static int lengthOfCycle(Node head){
+        public static int lengthOfCycle(Node head){
             Node temp = head;
 
             Map<Node,Integer> hm = new HashMap<>();
@@ -74,7 +74,7 @@ class Node{
 
     // =================== Better Approach =========================================
 
-        static int length_1(Node head){
+        public static int length_1(Node head){
             Node temp = head;
             int timer = 1, length = 0;
             Map<Node,Integer> hm = new HashMap<>();
@@ -94,7 +94,7 @@ class Node{
 
     // ========================= Optimal Approach ==================================
 
-        static int length_2(Node head){
+        public static int length_2(Node head){
             Node slow = head;
             Node fast = head;
 
