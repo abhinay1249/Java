@@ -69,7 +69,7 @@ class Node{
 
     // ================================ Optimal Approach =====================================
 
-        static boolean detectLoop_1(Node head){
+        public static boolean detectLoop_1(Node head){
 
             boolean flag = false;
             Node slow = head;
