@@ -72,7 +72,7 @@ class Node{
 
     // ================================ Optimal Approach ===================================
 
-        static Node detectCycleStart_1(Node head){
+        public static Node detectCycleStart_1(Node head){
 
             if(head == null){
                 return head;
