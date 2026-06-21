@@ -62,7 +62,7 @@ class Node{
     // ================================ Brute Force Approach [Iterative] ========================================
 
         public static Node reverseLL(Node head) {
-            
+
             if(head == null || head.nextptr == null){
                 return head;
             }
@@ -75,15 +75,18 @@ class Node{
                 temp = temp.nextptr;
             }                                                               // T.C = O(2N), S.C = O(N) 
 
-            temp = head;
+            Node newHead = new Node(st.peek());
+            st.pop();
+            temp = newHead;
 
-            while(temp != null){
-                temp.data = st.peek();
+            while(!st.isEmpty()){
+                Node curr = new Node(st.peek());
                 st.pop();
-                temp = temp.nextptr;
+                temp.nextptr = curr;
+                temp = curr;
             }
 
-            return head;
+            return newHead;
         }
 
     // ================================ Optimal Approach [Iterative] ========================================
