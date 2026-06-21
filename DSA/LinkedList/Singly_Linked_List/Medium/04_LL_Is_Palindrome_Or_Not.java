@@ -87,10 +87,9 @@ class Node{
             Node temp = head;
             
             Node prev = null;
-            Node front = null;
             
             while(temp != null){
-                front = temp.next;
+                Node front = temp.next;
                 temp.next = prev;
                 prev = temp;
                 temp = front;
