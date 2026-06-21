@@ -56,7 +56,7 @@ class Node{
 
             while(current != null){
                 length++;
-                current = current.nextptr;
+                current = current.nextptr;                              // T.C = O(N + N/2), S.C = O(1)
             }
 
             int middleIndex = length/2;
