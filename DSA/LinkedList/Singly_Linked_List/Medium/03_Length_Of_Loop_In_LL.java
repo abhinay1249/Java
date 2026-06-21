@@ -12,7 +12,10 @@
 // There are 3 nodes present in this cycle.
 
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 class Node{
     int data;
@@ -30,7 +33,7 @@ class Node{
     
     // ============================== Convert Array into Linked List ==========================
 
-        static Node convert(int[] nums){
+        private static Node convert(int[] nums){
             int length = nums.length;
 
             Node head = new Node(nums[0]);
