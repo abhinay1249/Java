@@ -58,6 +58,7 @@ class Node{
     // ========================= Brute Force Approach =====================================
 
         public static Node removeNthNodeFromEnd(Node head, int n){
+
             Node temp = head;
             int count = 0;
 
@@ -82,6 +83,7 @@ class Node{
                 temp = temp.next;
             }
             temp.next = temp.next.next;
+            
             return head;
         }
 
