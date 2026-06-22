@@ -3,18 +3,26 @@
 // The list should be made by splicing together the nodes of the first two lists. Return the head of the merged linked list.
 
 // Example 1:
+
 // Input: list1 = [1,2,4], list2 = [1,3,4]
 // Output: [1,1,2,3,4,4]
+// Explanation: The merged list in sorted order is 1->1->2->3->4->4.
 
 // Example 2:
+
 // Input: list1 = [], list2 = []
 // Output: []
+// Explanation: Both list1 and list2 are empty, therefore the merged list is also empty.
 
 // Example 3:
+
 // Input: list1 = [], list2 = [0]
 // Output: [0]
+// Explanation: list1 is empty, therefore the merged list is [0].
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 class Node{
     int data;
