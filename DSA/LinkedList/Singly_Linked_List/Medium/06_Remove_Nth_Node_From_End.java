@@ -1,11 +1,13 @@
 // Problem Statement: Given a linked list and an integer N, 
 // the task is to delete the Nth node from the end of the linked list and print the updated linked list.
 
-// Examples
+// Example 1:
 
 // Input:  5->1->2, N=2
 // Output: 5->2
 // Explanation: The 2nd node from the end of the linked list is 1. Therefore, we get this result after removing 1 from the linked list.
+
+// Example 2:
 
 // Input:  1->2->3->4->5, N=3
 // Output: 1->2->4->5
