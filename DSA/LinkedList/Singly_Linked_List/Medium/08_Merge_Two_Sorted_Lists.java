@@ -68,6 +68,7 @@ class Node{
     // ============================== Brute Force Approach ==================================
         
         private static Node convertintoLL(List<Integer> al){
+            
             int length = al.size();
             
             Node head = new Node(al.get(0));
