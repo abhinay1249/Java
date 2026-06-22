@@ -90,6 +90,7 @@ class Node{
     // ================================ Optimal Approach =====================================
 
         public static Node removeNthNodeFromEnd_1(Node head, int n){
+            
             Node fast = head;
             Node slow = head;
 
