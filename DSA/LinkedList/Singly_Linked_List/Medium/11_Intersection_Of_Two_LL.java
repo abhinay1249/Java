@@ -24,7 +24,8 @@
 // Explanation: Here, both lists do not intersect and thus no intersection node is present.
 
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 class Node{
     
@@ -89,6 +90,7 @@ class Node{
     // ================================ Better Approach =====================================
 
         private static int lengthOfLL(Node head){
+            
             Node temp = head;
             int length = 0;
 
