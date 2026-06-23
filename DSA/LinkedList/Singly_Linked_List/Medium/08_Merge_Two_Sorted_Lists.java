@@ -93,7 +93,7 @@ class Node{
 
             while(temp1 != null){
                 al.add(temp1.data);
-                temp1=temp1.next;                       // T.C = O(N) + O(M) + O(N LOG N) + O(N), S.C = O(N) + O(N)
+                temp1=temp1.next;                       // T.C = O(N) + O(M) + O((N+M) LOG (N+M)) + O(N+M), S.C = O(N + M)
             }
 
             while(temp2 != null){
