@@ -8,7 +8,9 @@
 // Input: 2 -> 1 -> 2 -> 0 -> 0 -> 1 -> NULL
 // Output: 0 -> 0 -> 1 -> 1 -> 2 -> 2 -> NULL
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 class Node{
     int data;
@@ -137,6 +139,7 @@ class Node{
             Node temp2 = twoHead;
 
             while(temp != null){
+                
                 if(temp.data == 0){
                     temp0.next = temp;
                     temp0 = temp0.next;                                 // T.C = O(N), S.C = O(1)
@@ -148,6 +151,7 @@ class Node{
                     temp2 = temp2.next;
                 }
                 temp = temp.next;
+                
             }
             if(oneHead.next != null){
                 temp0.next = oneHead.next;   
