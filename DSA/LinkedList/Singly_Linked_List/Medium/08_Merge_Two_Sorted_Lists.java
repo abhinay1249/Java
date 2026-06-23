@@ -83,6 +83,7 @@ class Node{
         }
 
         public static Node mergeTwoLists(Node list1, Node list2) {
+            
             if(list1 == null && list2 == null){
                 return null;
             }
