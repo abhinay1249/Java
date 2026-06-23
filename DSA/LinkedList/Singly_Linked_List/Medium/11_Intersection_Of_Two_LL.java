@@ -45,6 +45,7 @@ class Node{
     // =========================== Convert Array into Linked List ===============================
 
         public static Node convert(int[] nums){
+            
             int length = nums.length;
 
             Node head = new Node(nums[0]);
@@ -102,7 +103,7 @@ class Node{
         }
 
         public static Node intersectionNode_1(Node headA, Node headB) {
-            
+
             Node temp1 = headA;    
             Node temp2 = headB;
 
