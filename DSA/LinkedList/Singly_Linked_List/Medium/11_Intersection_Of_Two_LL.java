@@ -102,6 +102,7 @@ class Node{
         }
 
         public static Node intersectionNode_1(Node headA, Node headB) {
+            
             Node temp1 = headA;    
             Node temp2 = headB;
 
