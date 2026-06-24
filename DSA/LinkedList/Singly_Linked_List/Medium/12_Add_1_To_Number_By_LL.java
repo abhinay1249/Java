@@ -114,6 +114,7 @@ class Node{
     // ============================== Recursive Approach ==================================
 
         private static int recursiveAdd(Node head){
+
             Node temp = head;
 
             if(temp == null){
@@ -130,6 +131,7 @@ class Node{
         }
 
         public static Node addOne_1(Node head){
+
             int carry = recursiveAdd(head);
 
             if(carry == 1){
@@ -139,6 +141,7 @@ class Node{
             }
             return head;
         }
+        
     public static void main(String[] args) {
         int[] nums1 = {9,9,9};
         
