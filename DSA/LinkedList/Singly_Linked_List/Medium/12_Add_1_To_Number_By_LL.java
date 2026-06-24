@@ -4,11 +4,13 @@
 
 // The number will contain no leading zeroes except when the value represented is zero itself.
 
-// Examples
+// Example 1:
 
 // Input: 4->5->6
 // Output: 4->5->7
 // Explanation: 456 + 1 = 457
+
+// Example 2:
 
 // Input: 9->9->9
 // Output: 1->0->0->0
