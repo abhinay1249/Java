@@ -2,6 +2,7 @@
 // If the two linked lists have no intersection at all, return null.
 
 // Example 1:
+
 // Input: List 1 = [1,3,1,2,4], List 2 = [3,2,4]
 
 // List A: 1 → 3 → 1
@@ -14,6 +15,7 @@
 // Explanation: Here, both lists intersecting nodes start from node 2.
 
 // Example 2:
+
 // Input: List1 = [1,2,7], List 2 = [2,8,1]
 
 // List A: 1 → 2 → 7
