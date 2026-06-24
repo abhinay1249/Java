@@ -49,8 +49,8 @@ class Node{
 
     // ============================== Print the Linked List ================================
 
-        public static void print(Node head){
-            
+        private static void print(Node head){
+
             Node temp = head;
 
             while(temp != null){
@@ -62,6 +62,7 @@ class Node{
     // ============================== Iterative Approach ==================================
 
         private static Node reverse(Node head){
+
             Node temp = head;
 
             Node prev = null;
