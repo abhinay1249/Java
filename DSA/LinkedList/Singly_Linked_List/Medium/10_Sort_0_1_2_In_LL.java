@@ -33,7 +33,8 @@ class Node{
     
     // ============================== Convert Array into Linked List =======================
 
-        public static Node convert(int[] nums){
+        private static Node convert(int[] nums){
+            
             int length = nums.length;
 
             Node head = new Node(nums[0]);
@@ -49,7 +50,8 @@ class Node{
 
     // ============================== Print the Linked List ================================
 
-        public static void print(Node head){
+        private static void print(Node head){
+            
             Node temp = head;
 
             while(temp != null){
