@@ -11,6 +11,7 @@
 
 // Input: 2 -> 1 -> 2 -> 0 -> 0 -> 1 -> NULL
 // Output: 0 -> 0 -> 1 -> 1 -> 2 -> 2 -> NULL
+// Explanation: The linked list is sorted in ascending order by rearranging the links.
 
 import java.util.ArrayList;
 import java.util.Collections;
