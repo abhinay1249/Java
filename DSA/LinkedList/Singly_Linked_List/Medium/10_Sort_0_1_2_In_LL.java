@@ -159,12 +159,13 @@ class Node{
                 }
                 temp = temp.next; 
             }
-            
+
             if(oneHead.next != null){
                 temp0.next = oneHead.next;   
             }else{
                 temp0.next = twoHead.next;
             }
+            
             if(twoHead.next != null){
                 temp1.next = twoHead.next;   
             }
