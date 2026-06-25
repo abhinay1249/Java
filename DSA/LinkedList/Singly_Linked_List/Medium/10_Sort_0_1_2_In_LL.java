@@ -157,9 +157,9 @@ class Node{
                     temp2.next = temp;
                     temp2 = temp2.next;
                 }
-                temp = temp.next;
-                
+                temp = temp.next; 
             }
+            
             if(oneHead.next != null){
                 temp0.next = oneHead.next;   
             }else{
