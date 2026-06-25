@@ -2,11 +2,13 @@
 // If the number of nodes is not a multiple of k, then the remaining nodes at the end should be kept as is and not reversed.
 // Do not change the values of the nodes, only change the links between nodes.
 
-// Examples
+// Example 1:
 
 // Input : 1 -> 2 -> 3 -> 4 -> 5, k = 2
 // Output :2 -> 1 -> 4 -> 3 -> 5
 // Explanation :The groups 1 -> 2 and 3 -> 4 were reversed as 2 -> 1 and 4 -> 3.
+
+// Example 2:
 
 // Input : 1 -> 2 -> 3 -> 4 -> 5, k = 3
 // Output : 3 -> 2 -> 1 -> 4 -> 5
