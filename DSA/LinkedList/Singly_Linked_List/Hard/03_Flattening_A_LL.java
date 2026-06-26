@@ -6,7 +6,7 @@
 // Each of these child linked lists is in sorted order and connected by a 'child' pointer. 
 // Your task is to flatten this linked list such that all nodes appear in a single layer or level in a 'sorted order'.
 
-// Example:- 
+// Example 1:- 
 
 //Input :
 // 1 → 2 → 3
@@ -14,10 +14,14 @@
 // 4   5   6
 // |       |
 // 7       8
-//Ouput : 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8
+
+//Output : 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8
+// Explanation : The flattened linked list is 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8, which is in sorted order.
 
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 class Node{
     int data;
