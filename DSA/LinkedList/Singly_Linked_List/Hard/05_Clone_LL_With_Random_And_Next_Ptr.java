@@ -13,6 +13,7 @@
 // 'true' represents that the nodes and references were created new.
 
 // Example 2: 
+
 // Input: [[5, -1], [3, -1], [2, 1], [1, 1]]
 // Output: 5 3 2 1, true
 // Explanation: All the nodes in the new list have same corresponding values as original nodes.
@@ -21,7 +22,8 @@
 // [[5, -1], [3, -1], [2, -1], [1, -1]] will be incorrect, although it has the same values.
 
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 class Node{
     int data;
