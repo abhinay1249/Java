@@ -15,7 +15,7 @@
 // reverse the numbers first to get the original number and then add them as → 9999999 + 9999 = 8999001. 
 
 class Node{
-    
+
     int data;
     Node next;
     
@@ -48,11 +48,13 @@ class Node{
     // ============================== Print the Linked List ================================
 
         private static void print(Node head){
+            
             Node temp = head;
             while(temp != null){
                 System.out.print(temp.data + " ");
                 temp = temp.next;
             }
+            
         }
 
     // ============================== Only Approach =======================================
