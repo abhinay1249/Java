@@ -114,6 +114,7 @@ class Node{
     // ==================== Better Approach ================================
 
         private static Node mergeTwoLists(Node list1, Node list2){
+            
             Node temp1 = list1;
             Node temp2 = list2;
 
