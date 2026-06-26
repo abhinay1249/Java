@@ -15,6 +15,7 @@
 // reverse the numbers first to get the original number and then add them as → 9999999 + 9999 = 8999001. 
 
 class Node{
+    
     int data;
     Node next;
     
