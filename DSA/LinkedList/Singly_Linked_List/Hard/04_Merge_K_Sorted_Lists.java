@@ -25,7 +25,12 @@
 // Output: []
 
 
- import java.util.*;
+ import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.PriorityQueue;
+import java.util.Queue;
 
 class Node{
 
@@ -56,6 +61,7 @@ class Node{
     // ==================== Brute Force Approach ================================
     
         private static Node convertLL(List<Integer> al){
+            
             int length = al.size();
 
             Node head = new Node(al.get(0));
@@ -75,6 +81,7 @@ class Node{
         }
 
         public static Node mergeKLists_1(Node[] lists) {
+
             int length = lists.length;
 
             Node head = null;
@@ -95,7 +102,7 @@ class Node{
                 }
             }
 
-            if(al.size() == 0) return head;
+            if(al.isEmpty()) return head;
 
             Collections.sort(al);
 
