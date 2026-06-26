@@ -58,6 +58,7 @@ class Node{
     // ==================== Brute Force Approach ============================
 
         public static Node copyRandomList(Node head) {
+
             if(head == null){
                 return head;
             }
@@ -85,6 +86,7 @@ class Node{
     // ==================== Optimal Approach ====================================
 
         private static Node insertCopyNodes(Node head){
+
             Node temp = head;
 
             while(temp != null){
@@ -95,7 +97,9 @@ class Node{
             }
             return temp; 
         }
+
         private static Node connectRandomPtrs(Node head){
+        
             Node temp = head;
 
             while(temp != null){
