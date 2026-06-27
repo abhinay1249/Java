@@ -9,7 +9,7 @@
 //                    ↘
 //                      2 → 4
 //                    ↗
-// List B:     3 → →
+// List B: 3 → → → →
 
 // Output: 2
 // Explanation: Here, both lists intersecting nodes start from node 2.
