@@ -1,4 +1,4 @@
-//  Problem Statement: Given a sorted array of N integers, 
+// Problem Statement: Given a sorted array of N integers, 
 // Write a program to find the index of the first and last occurrence of the target key. If the target is not found then return [-1,-1].
 
 // Example 1:
