@@ -75,7 +75,6 @@ class Node{
                 prev = temp;
                 temp = front;
             }
-
             return prev;
         }
 
