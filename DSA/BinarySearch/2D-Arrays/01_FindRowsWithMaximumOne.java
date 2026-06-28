@@ -3,6 +3,7 @@
 // Note: If two rows have the same number of ones, consider the one with a smaller index. If there's no row with at least single 1, return -1
 
 // Example 1:
+
 // Input Format: n = 3, m = 3, 
 // mat[] = 
 // 1 1 1
@@ -12,6 +13,7 @@
 // Explanation: The row with the maximum number of ones is 0 (0 - indexed).
 
 // Example 2:
+
 // Input Format: n = 2, m = 2 , 
 // mat[] = 
 // 0 0
@@ -78,8 +80,10 @@ class Main {
 
     public static void main(String[] args) {
         int[][] mat = {{0,0,1,1,1},{0,0,0,0,0},{0,1,1,1,1},{0,0,0,0,0},{0,1,1,1,1}};
+        
         int rows = 5;
         int cols = 5;
+
         int result = rowWithMaximumOne(mat,rows,cols);
         System.out.println(result);
     }
