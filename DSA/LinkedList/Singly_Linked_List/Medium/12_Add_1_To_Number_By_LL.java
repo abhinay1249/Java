@@ -100,12 +100,13 @@ class Node{
                 temp = temp.next;
             }
 
+            head = reverse(head);
+            
             if(carry == 1){
                 Node newHead = new Node(1);
                 newHead.next = head;
                 return newHead;
             }
-            head = reverse(head);
 
             return head;
         }
