@@ -1,23 +1,21 @@
 class A
 {
     int a=10;
-    public void show()
-    {
+
+    public void show(){
         System.out.println("in show");
     }
-    static class B   // or class B
-    {
-         public void activate()
-         {
+
+    static class B{   // or class B
+        public void activate(){
             System.out.println("activated");
-         }  
+        }  
     }
 }
 
 class Inner_class
 {
-    public static void main(String[] args) 
-    {
+    public static void main(String[] args) {
         A obj=new A();
         obj.show();
 
