@@ -4,6 +4,7 @@
 // You are given an integer ‘target’, and your task is to find if it exists in the given 'mat' or not.
 
 // Example 1:
+
 // Matrix=
 // 1   4   7   11
 // 2   5   8   12
@@ -15,6 +16,7 @@
 
 
 // Example 2:
+
 // Matrix=
 // 5   10  15
 // 6   12  18
