@@ -2,11 +2,13 @@
 // The elements of each row are sorted in non-decreasing order. Moreover, the first element of a row is greater than the last element of the previous row (if it exists). 
 // You are given an integer ‘target’, and your task is to find if it exists in the given 'mat' or not.
 
-// Examples
+// Example 1:
 
 // Input :mat = [ [1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12] ], target = 8
 // Output :True.
 // Explanation :The target = 8 exists in the 'mat' at index (1, 3).
+
+// Example 2:
 
 // Input :mat = [ [1, 2, 4], [6, 7, 8], [9, 10, 34] ], target = 78
 // Output :false.
