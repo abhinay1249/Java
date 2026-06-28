@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 class Node{
-    
+
     int data;
     Node next;
     Node prev;
@@ -56,7 +56,7 @@ class Node{
         public static List<List<Integer>> pairs(Node head, int sum){
             
             Node temp1 = head;
-            Node temp2 = head.next;
+            Node temp2 = null;
 
             List<List<Integer>> pairs = new ArrayList<>();
 
