@@ -1,11 +1,13 @@
 // Problem Statement: Given an integer array arr of size N, sorted in ascending order (with distinct values), the array is rotated at any index which is unknown.
 // Find the minimum element in the array.
 
-// Examples
+// Example 1:
 
 // Input: arr = [4,5,6,7,0,1,2,3]
 // Output: 0
 // Explanation: The minimum element in the array is 0.
+
+// Example 2:
 
 // Input : arr = [3,4,5,1,2]
 // Output: 1
