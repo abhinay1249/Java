@@ -101,7 +101,7 @@ class Node{
             }
 
             head = reverse(head);
-            
+
             if(carry == 1){
                 Node newHead = new Node(1);
                 newHead.next = head;
@@ -120,6 +120,7 @@ class Node{
             if(temp == null){
                 return 1;
             }
+            
             int carry = recursiveAdd(temp.next);
             temp.data = temp.data + carry;
 
