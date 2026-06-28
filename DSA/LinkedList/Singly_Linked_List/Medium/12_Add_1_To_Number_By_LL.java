@@ -120,7 +120,7 @@ class Node{
             if(temp == null){
                 return 1;
             }
-            
+
             int carry = recursiveAdd(temp.next);
             temp.data = temp.data + carry;
 
@@ -165,7 +165,7 @@ class Node{
 
 // Approach 1: Iterative Approach:
     // Pros: No space
-    //Cons: Tampering of data and consumes more time.
+    // Cons: Tampering of data and consumes more time.
 
 // Approach 2: Recursive Approach:
     // Pros: No tampering of data and addition is done in place and is faster in time.
