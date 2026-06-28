@@ -101,3 +101,37 @@ class Node{
         print(result);
     }
 }
+
+class A{
+    public static Node deleteALLOccureneces(Node head, int target){
+        if(head == null){
+            return head;
+        }
+
+        Node temp = head;
+
+        while(temp.next != null){
+            if(temp.data == target){
+                if(temp == head){
+                    head = head.next;
+                }
+
+                if(temp.data == target){
+                    Node prev = temp.prev;
+                    Node front = temp.next;
+                    prev.next = front;
+                    front.prev = prev;
+                }
+            }
+            temp = temp.next;
+        }
+
+        if(temp.data == target){
+            Node prev = temp.prev;
+            prev.next = temp.next;
+            temp.prev = null;
+        }
+
+        return head;
+    }
+}
