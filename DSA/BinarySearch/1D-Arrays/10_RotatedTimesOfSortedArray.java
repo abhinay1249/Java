@@ -2,11 +2,13 @@
 // Now the array is rotated between 1 to N times which is unknown. 
 // Find how many times the array has been rotated.
 
-// Examples
+// Example 1:
 
 // Input : arr = [4,5,6,7,0,1,2,3]
 // Result: 4
 // Explanation: The original array should be [0,1,2,3,4,5,6,7]. So, we can notice that the array has been rotated 4 times.
+
+// Example 2:
 
 // Input : arr = [3,4,5,1,2]
 // Output : 3
@@ -90,6 +92,7 @@ class Main {
                     high = mid - 1;
                 }
             }
+            
             return rotatedTimes;
         }
 
