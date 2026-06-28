@@ -99,8 +99,9 @@ class Node{
                 Node newHead = new Node(1);
                 curr.next = newHead;
             }
+            
             return dummyNode.next;
-    }    
+        }    
     
     public static void main(String[] args) {
         int[] nums1 = {9,9,9,9,9};
