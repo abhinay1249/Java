@@ -39,14 +39,14 @@ class Main {
 
             while(low <= high){
 
-                int mid = low + ((high - low)/2);                       // T.C = O(Log N), S.C = O(1)
+                int mid = low + ((high - low)/2);                       
 
                 // Handles Duplicates
                 
                 if(nums[low] == nums[mid] && nums[mid] == nums[high]){
                     low++;
                     high--;
-                    continue;   
+                    continue;                                               // T.C = O(Log N), S.C = O(1)
                 }
 
                 // Optional-->[For more optimized time complexity]
