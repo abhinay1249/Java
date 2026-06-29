@@ -82,7 +82,7 @@ class Node{
         }
 
         public static Node flattenLL(Node head){
-            
+
             Node temp1 = head;
             List<Integer> al = new ArrayList<>();
             Node temp2 = head;
@@ -106,6 +106,7 @@ class Node{
     // ==================== Optimal Approach ================================
 
         private static Node mergeLL(Node list1, Node list2){
+
             Node dummyNode = new Node(-1);
             Node temp = dummyNode;
                 
@@ -132,12 +133,14 @@ class Node{
 
 
         public static Node flattenLL_1(Node head){
+
             if(head == null || head.next == null){
                 return head;
             }
 
             Node mergedHead = flattenLL_1(head.next);
             return mergeLL(head,mergedHead);
+            
         }
     
     public static void main(String[] args) {
