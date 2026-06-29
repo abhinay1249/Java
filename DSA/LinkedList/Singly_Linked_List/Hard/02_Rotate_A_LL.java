@@ -53,7 +53,7 @@ class Node{
     // =============================== Print Linked List ====================================
 
         private static void print(Node head){
-            
+
             Node temp = head;
 
             while(temp != null){
@@ -65,6 +65,7 @@ class Node{
     // =============================== Brute Force Approach =================================
 
         private static Node reverseLL(Node head){
+
             Node temp = head;
             Node prevNode = null;
             Node front = null;
@@ -80,6 +81,7 @@ class Node{
         }
 
         private static int findLength(Node head){
+
             Node temp = head;
             int count = 0;
 
@@ -91,6 +93,7 @@ class Node{
         }
 
         public static Node rotateLL(Node head, int k){
+            
             if(head == null || head.next == null){
                 return head;
             }
