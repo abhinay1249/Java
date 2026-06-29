@@ -35,6 +35,7 @@ import java.util.Collections;
 import java.util.List;
 
 class Node{
+
     int data;
     Node next;
     Node child;
@@ -54,6 +55,7 @@ class Node{
     // ============================ Print Linked List ===========================
 
         private static void print(Node head){
+            
             Node temp = head;
 
             while(temp != null){
