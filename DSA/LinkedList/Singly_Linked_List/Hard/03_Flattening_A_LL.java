@@ -15,7 +15,7 @@
 // |       |
 // 7       8
 
-//Output : 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8
+// Output : 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8
 // Explanation : The flattened linked list is 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8, which is in sorted order.
 
 // Example 2:-
@@ -25,7 +25,7 @@
 // |    |    |
 // 40   50   60
 
-//Output : 10 → 20 → 30 → 40 → 50 → 60
+// Output : 10 → 20 → 30 → 40 → 50 → 60
 // Explanation : The flattened linked list is 10 → 20 → 30 → 40 → 50 → 60, which is in sorted order.
 
 
