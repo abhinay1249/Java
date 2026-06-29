@@ -107,7 +107,7 @@ class Node{
                     if(prevNode != null){
                        prevNode.next = temp;                         // T.C = O(2N), S.C = O(1) 
                     }                                               // O(2n) = findKthNode + reverseLL = 2k 
-                    break;                                          // Number of groups = N/k, Total = O(2k) * N/k = O(2N)
+                    break;                                         // Number of groups = N/k, Total = O(2k) * N/k = O(2N)
                 }
 
                 Node nextNode = kthNode.next;
