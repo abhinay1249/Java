@@ -93,7 +93,7 @@ class Node{
         }
 
         public static Node rotateLL(Node head, int k){
-            
+
             if(head == null || head.next == null){
                 return head;
             }
@@ -162,8 +162,10 @@ class Node{
                 }
                 temp = temp.next;
             }
+        
             return head;
         }
+
     public static void main(String[] args) {
         int[] nums = {10,20};
         int k = 1;
