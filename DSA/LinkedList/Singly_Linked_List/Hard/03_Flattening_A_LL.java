@@ -55,7 +55,7 @@ class Node{
     // ============================ Print Linked List ===========================
 
         private static void print(Node head){
-            
+
             Node temp = head;
 
             while(temp != null){
@@ -67,6 +67,7 @@ class Node{
     // ==================== Brute Force Approach ================================
 
         private static Node convertFromAL(List<Integer> al){
+
             int length = al.size();
 
             Node head = new Node(al.get(0));
@@ -81,6 +82,7 @@ class Node{
         }
 
         public static Node flattenLL(Node head){
+            
             Node temp1 = head;
             List<Integer> al = new ArrayList<>();
             Node temp2 = head;
