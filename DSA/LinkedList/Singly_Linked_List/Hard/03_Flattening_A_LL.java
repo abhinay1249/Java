@@ -124,8 +124,7 @@ class Node{
             }
             if(list1 != null){
                 temp.child = list1;
-            }
-            if(list2 != null){
+            }else if(list2 != null){
                 temp.child = list2;
             }
             return dummyNode.child;
