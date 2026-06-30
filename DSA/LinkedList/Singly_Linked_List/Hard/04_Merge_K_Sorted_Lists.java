@@ -94,7 +94,7 @@ class Node{
 
             for(int index = 0 ; index < length ; index++){
 
-                Node temp = lists[index];                      // T.C = O(M * N) + O(X LOG X) + X, S.C = O(2X) 
+                Node temp = lists[index];                      // T.C = O(M * N) + O(X LOG X) + O(X), S.C = O(2X) 
                                                         
                 while(temp != null){                // M is the number of linked lists and N is the maximum number of nodes in any linked list, X = M * N
                     al.add(temp.data);
