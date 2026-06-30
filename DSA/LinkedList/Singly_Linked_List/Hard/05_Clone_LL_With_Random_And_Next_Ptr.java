@@ -8,7 +8,6 @@
 
 // Input: [[1, -1], [2, 0], [3, 4], [4, 1], [5, 2]]
 // Output: 1 2 3 4 5, true
-
 // Explanation: All the nodes in the new list have same corresponding values as original nodes.
 // All the random pointers point to their corresponding nodes in the new list.
 // 'true' represents that the nodes and references were created new.
@@ -17,7 +16,6 @@
 
 // Input: [[5, -1], [3, -1], [2, 1], [1, 1]]
 // Output: 5 3 2 1, true
-
 // Explanation: All the nodes in the new list have same corresponding values as original nodes.
 // All the random pointers point to their corresponding nodes in the new list.
 // 'true' represents that the nodes and references were created new.
