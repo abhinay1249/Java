@@ -64,7 +64,7 @@ class Node{
             Map<Node,Node> hm = new HashMap<>();
 
             while(temp != null){
-                Node newNode = new Node(temp.data);                // T.C = O(N) + O(N), S.C = O(N) + O(N)
+                Node newNode = new Node(temp.data);                // T.C = O(N) + O(N) = O(2N), S.C = O(N) + O(N)
                 hm.put(temp,newNode);
                 temp = temp.next;
             }
@@ -77,7 +77,7 @@ class Node{
                 copyNode.random = hm.get(temp.random);
                 temp = temp.next;
             }
-            
+
             return hm.get(head);        
         }
 
