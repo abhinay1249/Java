@@ -2,8 +2,18 @@
 // Given a row-wise sorted matrix of size M*N, where M is no. of rows and N is no. of columns, find the median in the given matrix.
 // Note: M*N is odd.
 
+// Example 1:
 
-import java.util.*;
+// Input: matrix = [[1,3,5],[2,6,9],[3,6,9]]
+// Output: 5
+// Explanation: The sorted form of the matrix is [1,2,3,3,5,6,6,9,9]. So the median is 5.
+
+
+
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 class Main {
 
