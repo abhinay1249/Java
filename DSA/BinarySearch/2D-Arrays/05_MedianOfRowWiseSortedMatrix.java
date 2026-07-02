@@ -40,7 +40,7 @@ class Main {
 
     // =========================== Optimal Approach ==============================
 
-        public static int upperBound(int[] rows, int target){
+        private static int upperBound(int[] rows, int target){
 
             int length = rows.length;
             int ans = length;
@@ -60,7 +60,7 @@ class Main {
             return ans;
         }
 
-        public static int smallerElementsRequired(int[][] matrix,int target){
+        private static int smallerElementsRequired(int[][] matrix,int target){
 
             int count = 0;
             int rowLength = matrix.length;
