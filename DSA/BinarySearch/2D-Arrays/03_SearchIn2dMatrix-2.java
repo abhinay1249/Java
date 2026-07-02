@@ -5,7 +5,7 @@
 
 // Example 1:
 
-// Matrix=
+// Matrix =
 // 1   4   7   11
 // 2   5   8   12
 // 3   6   9   16
@@ -13,11 +13,12 @@
 
 // Target: 9
 // Output: Found at (2,2) (0-indexed)
+// Explanation: The target = 9 exists in the 'mat' at index (2, 2).
 
 
 // Example 2:
 
-// Matrix=
+// Matrix =
 // 5   10  15
 // 6   12  18
 // 8   16  20
