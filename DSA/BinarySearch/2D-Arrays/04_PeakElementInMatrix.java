@@ -47,7 +47,7 @@ class Main {
     
     // =========================== Optimal Approach ==============================
 
-        public static int largestElementIndex(int[][] matrix, int rowLength, int col){
+        private static int largestElementIndex(int[][] matrix, int rowLength, int col){
 
             int maxValue = -1;
             int index = -1;
@@ -62,6 +62,7 @@ class Main {
         }
 
         public static int[] peakElement2_1(int[][] matrix){
+
             int rowLength = matrix.length;
             int colLength = matrix[0].length;
 
@@ -89,8 +90,10 @@ class Main {
     public static void main(String[] args) {
         int[][] matrix = {{4,2,5,1,4,5},{2,9,3,2,3,2},{1,7,6,0,1,3},{3,6,2,3,7,2}};
         int[] result = peakElement2_1(matrix);
+
         for(int indices : result){
             System.out.print(indices+" ");   
         }
+        
     }
 }
