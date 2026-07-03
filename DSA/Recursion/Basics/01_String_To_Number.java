@@ -32,16 +32,13 @@ class Main{
 
     private static int computeResult(String s, int index, int result, int sign){
         
-        if(index < s.length() || s.charAt(index) >= '0' && s.charAt(index) <= '9'){
-            
+        if(index >= s.length() || !(s.charAt(index) >= '0' && s.charAt(index) <= '9')){
             return sign * result;
         }
-        
-        int number = 0;
     
         int digit = s.charAt(index) - '0';
         
-        if(number == (Integer.MAX_VALUE/10)){
+        if(result == (Integer.MAX_VALUE/10)){
             if(sign == 1){
                 if(digit >= 7){
                     return Integer.MAX_VALUE;
@@ -53,7 +50,7 @@ class Main{
             }
         }
             
-        if(number > (Integer.MAX_VALUE/10)){
+        if(result > (Integer.MAX_VALUE/10)){
             if(sign == 1){
                 return Integer.MAX_VALUE;
             }else if(sign == -1){
@@ -63,30 +60,47 @@ class Main{
         
         result *= 10;
         result += digit;
-        computeResult(s,index++,result, sign);
-        return 0;
+
+        return computeResult(s, index+1, result, sign);
     }
 
     public static int myAtoi(String s){
         int length = s.length();
-
         int sign = 1;
 
-        for(int index = 0 ; index < length ; index++){
-            if(s.charAt(index) == '-'){
-                sign = -1;
-            }else if(s.charAt(index) == '+'){
-                sign = 1;
-            }else if(s.charAt(index) >= '0' && s.charAt(index) <= '9'){
-                int result = 0; 
+        int idx = 0;
+
+        while(idx < length && s.charAt(idx) == ' '){
+            idx++;
+        }
+
+        if(idx == length){
+            return 0;
+        }
+
+        if(s.charAt(idx) == '-'){
+            sign =-1;
+            idx++;
+        }else if(s.charAt(idx) == '+'){
+            sign = 1;
+            idx++;
+        }
+
+        for(int index = idx; index < length ; index++){
+
+            if(s.charAt(index) >= '0' && s.charAt(index) <= '9'){
+                int result = 0;
                 return computeResult(s, index, result, sign);
+            }else{
+                break;
             }
+
         }
         return 0;
     }
 
     public static void main(String[] args){
-        String s = " `-12345";
+        String s = "  -12345";
         System.out.println(myAtoi(s)); 
     }
 }
