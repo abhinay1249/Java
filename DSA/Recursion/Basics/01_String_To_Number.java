@@ -30,74 +30,76 @@
 
 class Main{
 
-    private static int computeResult(String s, int index, int result, int sign){
+    // ============================== Recursive Approach ==============================
+
+        private static int computeResult(String s, int index, int result, int sign){
+
+            if(index >= s.length() || !(s.charAt(index) >= '0' && s.charAt(index) <= '9')){
+                return sign * result;
+            }
         
-        if(index >= s.length() || !(s.charAt(index) >= '0' && s.charAt(index) <= '9')){
-            return sign * result;
-        }
-    
-        int digit = s.charAt(index) - '0';
-        
-        if(result == (Integer.MAX_VALUE/10)){
-            if(sign == 1){
-                if(digit >= 7){
-                    return Integer.MAX_VALUE;
+            int digit = s.charAt(index) - '0';
+
+            if(result == (Integer.MAX_VALUE/10)){
+                if(sign == 1){
+                    if(digit >= 7){
+                        return Integer.MAX_VALUE;
+                    }
+                }else if(sign == -1){
+                    if(digit >= 8){
+                        return Integer.MIN_VALUE;
+                    }
                 }
-            }else if(sign == -1){
-                if(digit >= 8){
+            }
+
+            if(result > (Integer.MAX_VALUE/10)){
+                if(sign == 1){
+                    return Integer.MAX_VALUE;
+                }else if(sign == -1){
                     return Integer.MIN_VALUE;
                 }
             }
+
+            result *= 10;
+            result += digit;
+
+            return computeResult(s, index+1, result, sign);
         }
-            
-        if(result > (Integer.MAX_VALUE/10)){
-            if(sign == 1){
-                return Integer.MAX_VALUE;
-            }else if(sign == -1){
-                return Integer.MIN_VALUE;
+
+        public static int myAtoi(String s){
+            int length = s.length();
+            int sign = 1;
+
+            int idx = 0;
+
+            while(idx < length && s.charAt(idx) == ' '){
+                idx++;
             }
-        }
-        
-        result *= 10;
-        result += digit;
 
-        return computeResult(s, index+1, result, sign);
-    }
+            if(idx == length){
+                return 0;
+            }
 
-    public static int myAtoi(String s){
-        int length = s.length();
-        int sign = 1;
+            if(s.charAt(idx) == '-'){
+                sign =-1;
+                idx++;
+            }else if(s.charAt(idx) == '+'){
+                sign = 1;
+                idx++;
+            }
 
-        int idx = 0;
+            for(int index = idx; index < length ; index++){
 
-        while(idx < length && s.charAt(idx) == ' '){
-            idx++;
-        }
+                if(s.charAt(index) >= '0' && s.charAt(index) <= '9'){
+                    int result = 0;
+                    return computeResult(s, index, result, sign);
+                }else{
+                    break;
+                }
 
-        if(idx == length){
+            }
             return 0;
         }
-
-        if(s.charAt(idx) == '-'){
-            sign =-1;
-            idx++;
-        }else if(s.charAt(idx) == '+'){
-            sign = 1;
-            idx++;
-        }
-
-        for(int index = idx; index < length ; index++){
-
-            if(s.charAt(index) >= '0' && s.charAt(index) <= '9'){
-                int result = 0;
-                return computeResult(s, index, result, sign);
-            }else{
-                break;
-            }
-
-        }
-        return 0;
-    }
 
     public static void main(String[] args){
         String s = "  -12345";
