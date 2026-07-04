@@ -1,10 +1,17 @@
 // Problem Statement: Given an array, convert it into a doubly linked list.
 
-// Example:-
+// Example 1:-
 
 // Input: [1,2,3,4,5,6,7,8]
 // Output: 1 <-> 2 <-> 3 <-> 4 <-> 5 <-> 6 <-> 7 <-> 8
-// Explanation: The first element of the array becomes the head of the linked list
+// Explanation: The first element of the array becomes the head of the linked list.
+
+// Example 2:-
+
+// Input: [10,20,30,40,50]
+// Output: 10 <-> 20 <-> 30 <-> 40 <-> 50
+// Explanation: The elements of the array are converted into nodes of the doubly linked list.
+
 
 class Node{
     int data;

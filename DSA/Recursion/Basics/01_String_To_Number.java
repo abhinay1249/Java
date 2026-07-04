@@ -55,7 +55,7 @@ class Main{
             if(result > (Integer.MAX_VALUE/10)){
                 if(sign == 1){
                     return Integer.MAX_VALUE;
-                }else if(sign == -1){
+                }else if(sign == -1){                               // T.C = O(N), S.C = O(N) due to recursive stack space.
                     return Integer.MIN_VALUE;
                 }
             }
