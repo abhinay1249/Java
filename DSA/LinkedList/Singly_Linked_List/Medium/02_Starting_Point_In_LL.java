@@ -3,7 +3,7 @@
 
 // Example 1:
 
-// Input: LL: 1  2  3  4  5
+// Input: LL: 1 -> 2 -> 3 -> 4 -> 5
 // Output: 3
 // Explanation: This linked list contains a loop of size 3 starting at node with value 3.
 
