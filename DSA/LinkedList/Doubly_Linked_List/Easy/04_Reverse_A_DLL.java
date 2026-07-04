@@ -4,9 +4,7 @@
 // Examples
 
 // Input : DLL - 1 <-> 2 <-> 3 <-> 4
-
 // Output : DLL - 4 <-> 3 <-> 2 <-> 1
-
 // Explanation : The doubly linked list is reversed and its last node is returned at the new head pointer.
 
 
