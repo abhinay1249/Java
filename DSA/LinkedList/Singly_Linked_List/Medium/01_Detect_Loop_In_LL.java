@@ -1,11 +1,13 @@
 // Problem Statement: Given a Linked List, determine whether the linked list contains a cycle or not.
 
-// Examples
+// Example 1:
 
 // Input: LL: 1 2 3 4 5
 // Output: True
 // Explanation: The last node with the value of 5 has its 'next' pointer pointing back to a previous node with the value of 3. 
 // This has resulted in a loop, hence we return true.
+
+// Example 2:
 
 // Input: LL: 1 2 3 4 9 9
 // Output: False
