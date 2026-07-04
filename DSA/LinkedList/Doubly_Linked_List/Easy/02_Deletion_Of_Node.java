@@ -1,6 +1,7 @@
 // Problem Statement: Deletion Of Node In Doubly Linked List
 
-// Example:-
+// Example 1:-
+
 // Input: [1,2,3,4,5,6,7,8]
 // Output: 
 // Deletion Of Head Node --> 2 <-> 3 <-> 4 <-> 5 <-> 6 <-> 7 <-> 8
