@@ -1,7 +1,7 @@
 // Problem Statement: Given the head of a linked list, determine the length of a loop present in the linked list. 
 // If there's no loop present, return 0.
 
-// Examples:
+// Example 1:
 
 // Input:  1 → 2 → 3 → 4 → 5 → 6
     //               ↑         ↓
@@ -11,6 +11,11 @@
 // Explanation: A cycle exists in the linked list starting at node 3 -> 4 -> 5 and then back to 3. 
 // There are 3 nodes present in this cycle.
 
+// Example 2:
+
+// Input:  1 → 2 → 3 → 4 → 5 → 6
+// Output: 0
+// Explanation: In this example, the linked list does not contain a loop hence returns 0.
 
 import java.util.ArrayList;
 import java.util.HashMap;
