@@ -30,7 +30,7 @@ class Node{
     
     // ================================ Convert Array into Doubly Linked List =====================================
 
-        public  static Node convert(int[] nums){
+        public static Node convert(int[] nums){
 
             int length = nums.length;
 
