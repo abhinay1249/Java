@@ -12,7 +12,7 @@
 
 // Example 2:
 
-// Input: 1 → 3 →5 → Null
+// Input: 1 → 3 → 5 → Null
 // Output: 1 → 3 → 5 → Null
 // Explanation: As there are no Even Nodes in LinkedList, The Modified LinkedList is same as Original LinkedList.
 
