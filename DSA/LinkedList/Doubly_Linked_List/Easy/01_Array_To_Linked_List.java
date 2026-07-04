@@ -14,6 +14,7 @@
 
 
 class Node{
+    
     int data;
     Node nextptr;
     Node prevptr;
