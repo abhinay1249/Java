@@ -14,31 +14,32 @@
 
 
 class Main{
+
+    // ============================== Brute Force Approach =============================================
     
-    public static double pow(double x, int n) {
-        if (n == 0) {
-            return 1.0;
+        public static double pow(double x, int n) {
+            if (n == 0) {
+                return 1.0;
+            }
+
+            long range = n;
+
+            if (n < 0) {
+                range = -1 * range;
+            }
+
+            double result = 1;
+
+            for(int index = 0 ; index < range; index++) {
+                result *= x;
+            }
+
+            if(n < 0) {
+                result = 1 / result;
+            }
+
+            return result;
         }
-
-        long range = n;
-
-        if (n < 0) {
-            range = -1 * range;
-        }
-
-        double result = 1;
-
-        for(int index = 0 ; index < range; index++) {
-            result *= x;
-        }
-        
-        if(n < 0) {
-            result = 1 / result;
-        }
-
-        return result;
-
-    }
     
     public static void main(String[] args) {
         double x = 2.0000;
