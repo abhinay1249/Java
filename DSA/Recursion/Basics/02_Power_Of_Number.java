@@ -15,7 +15,7 @@
 
 class Main{
 
-    // ============================== Brute Force Approach =============================================
+    // ============================== Brute Force Approach ========================================
     
         public static double pow(double x, int n) {
             if (n == 0) {
@@ -41,7 +41,7 @@ class Main{
             return result;
         }
 
-    // ============================== Optimal Approach =============================================
+    // ============================== Optimal Approach ============================================
     
         public static double pow_1(double x, int n) {
             if (n == 0) {
@@ -74,7 +74,7 @@ class Main{
             return ans;
         }
 
-    // ============================== Recursive Approach =============================================
+    // ============================== Recursive Approach ============================================
 
         
     public static void main(String[] args) {
