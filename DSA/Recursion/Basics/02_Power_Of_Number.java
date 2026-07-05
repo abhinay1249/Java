@@ -59,7 +59,7 @@ class Main{
 
             while(range > 0) {
                 if(range % 2 == 1) {
-                    ans *= number;
+                    ans *= number;                                   // T.C = O(log N), S.C = O(1)
                     range--;
                 } else {
                     number *= number;
