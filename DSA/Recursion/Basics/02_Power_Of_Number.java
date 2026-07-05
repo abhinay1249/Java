@@ -74,7 +74,7 @@ class Main{
             return ans;
         }
 
-    // ============================== Recursive Code =============================================
+    // ============================== Recursive Approach =============================================
 
         
     public static void main(String[] args) {
