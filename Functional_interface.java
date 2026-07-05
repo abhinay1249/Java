@@ -13,16 +13,17 @@ interface Car  //All methods in an interface are implicitly public
     }
 }
 
-public class Functional_interface
-{
-    public static void main(String[] args)
-    {
-        Car obj= new Car(){
+public class Functional_interface{
 
+    public static void main(String[] args){
+
+        Car obj= new Car(){
+            
             public void drive()
             {
                 System.out.println("Audi is being drove");
             }
+
         }; 
         
         Car.speed();
