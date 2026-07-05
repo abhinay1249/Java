@@ -40,10 +40,42 @@ class Main{
 
             return result;
         }
+
+    // ============================== Optimal Approach =============================================
     
+        public static double pow_1(double x, int n) {
+            if (n == 0) {
+                return 1.0;
+            }
+            
+            double ans = 1;
+            long range = n;
+            double number = x;
+
+            if (n < 0) {
+                range = -1 * range;
+            }
+
+
+            while(range > 0) {
+                if(range % 2 == 1) {
+                    ans *= number;
+                    range--;
+                } else {
+                    number *= number;
+                    range /= 2;
+                }
+            }
+
+            if(n < 0) {
+                ans = 1 / ans;
+            }
+
+            return ans;
+        }
     public static void main(String[] args) {
         double x = 2.0000;
         int n = 10;
-        System.out.println(pow(x, n));
+        System.out.println(pow_1(x, n));
     }
 }
