@@ -28,7 +28,7 @@ class Main{
                 range = -1 * range;
             }
 
-            double result = 1;
+            double result = 1;                                          // T.C = O(N), S.C = O(1)
 
             for(int index = 0 ; index < range; index++) {
                 result *= x;
