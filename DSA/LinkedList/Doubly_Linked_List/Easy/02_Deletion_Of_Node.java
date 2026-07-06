@@ -135,6 +135,7 @@ class Node{
                 temp.nextptr = null;
                 temp.prevptr = null;
             }
+            
             return head;
         }
     
