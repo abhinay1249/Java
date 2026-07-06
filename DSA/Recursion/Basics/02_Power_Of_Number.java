@@ -76,6 +76,10 @@ class Main{
 
     // ============================== Recursive Approach ============================================
 
+        public static double pow_2(double x, int b){
+            
+        }
+
         
     public static void main(String[] args) {
         double x = 2.0000;
