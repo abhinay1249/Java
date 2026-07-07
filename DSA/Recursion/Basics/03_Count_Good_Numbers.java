@@ -17,3 +17,10 @@
 // Input: n = 2
 // Output: 20
 // Explanation: Index 0: 5 options (even digits).Index 1: 4 options (prime digits). Total: 5 * 4 = 20
+
+
+class Main{
+    public static void main(String[] args) {
+        
+    }
+}
