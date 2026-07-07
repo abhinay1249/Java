@@ -84,7 +84,7 @@ class Main{
             if(pow%2 != 0){
                 ans *= x;
                 pow -= 1;
-            }else{
+            }else{  
                 x *= x;
                 pow/=2;
             }
@@ -98,7 +98,7 @@ class Main{
             int pow = n;
 
             if(pow<0){
-                x = 1/x;
+                x = 1/x;                                        // T.C = O(N), S.C = O(N), due to recursive stack space
                 pow = -pow;
             }
 
