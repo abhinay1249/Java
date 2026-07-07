@@ -76,8 +76,19 @@ class Main{
 
     // ============================== Recursive Approach ============================================
 
-        public static double pow_2(double x, int b){
+        
 
+        public static double pow_2(double x, int n){
+            double ans = 1;
+
+            int pow = n;
+
+            if(pow<0){
+                x = 1/x;
+                pow = -pow;
+            }
+
+            return power(x,pow,ans);
         }
 
         
