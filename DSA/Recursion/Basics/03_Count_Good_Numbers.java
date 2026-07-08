@@ -31,7 +31,7 @@ class Main{
 
             for(int i = 0 ; i < n ; i++){
                 if(i % 2 == 0){
-                    ans *= 5;
+                    ans *= 5;                                   // T.C = O(N), S.C = O(1), TLE occurs due to N ranges around (1,10^15)
                 }else{
                     ans *= 4;
                 }
@@ -53,7 +53,7 @@ class Main{
                 pow-=1;
             }else{
                 number = (number * number) % modulus;
-                pow /=2;
+                pow /=2;                                                 // T.C = O(log N), s.c = O(N), due to recursive stack space
             }
 
             return power(number, pow, ans, modulus);
