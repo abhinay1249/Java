@@ -39,12 +39,24 @@ class Main{
             }
             return (int) ans;
         }
+
+    // ============================== Optimal Approach ========================================
+
+        public static int countGoodNumbers_1(long n){
+            
+            int modulus = 1_000_000_007;
+
+            long result = (power(5,((n+1)/2),1,modulus) * power(4,(n/2),1,modulus)) % modulus;
+
+
+            return (int) result;
+        }
     
     public static void main(String[] args) {
 
         long n = 2147483647;
 
-        int result = countGoodNumbers(n);
+        int result = countGoodNumbers_1(n);
 
         System.out.println(result);
     }
