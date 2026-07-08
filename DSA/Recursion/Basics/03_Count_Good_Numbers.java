@@ -21,25 +21,25 @@
 
 class Main{
     
-    public static int countGoodNumbers(long n){
+        public static int countGoodNumbers(long n){
+            
+            int modulus = 1_000_000_007;
         
-        int modulus = 1_000_000_007;
-
-        long ans = 1;
-
-        for(int i = 0 ; i < n ; i++){
-            if(i % 2 == 0){
-                ans *= 5;
-            }else{
-                ans *= 4;
+            long ans = 1;
+        
+            for(int i = 0 ; i < n ; i++){
+                if(i % 2 == 0){
+                    ans *= 5;
+                }else{
+                    ans *= 4;
+                }
+                ans %= modulus;
             }
-            ans %= modulus;
+            return (int) ans;
         }
-        return (int) ans;
-    }
     
     public static void main(String[] args) {
-        
+
         long n = 2147483647;
 
         int result = countGoodNumbers(n);
