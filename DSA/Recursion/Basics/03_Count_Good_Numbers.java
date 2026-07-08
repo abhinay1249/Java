@@ -35,10 +35,15 @@ class Main{
             }
             ans %= modulus;
         }
-
+        return (int) ans;
     }
     
     public static void main(String[] args) {
         
+        long n = 2147483647;
+
+        int result = countGoodNumbers(n);
+
+        System.out.println(result);
     }
 }
