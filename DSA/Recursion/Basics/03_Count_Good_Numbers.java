@@ -43,6 +43,7 @@ class Main{
     // ============================== Optimal Approach ========================================
 
         private static long power(long number, long pow, long ans, int modulus){
+
             if(pow == 0){
                 return ans;
             }
@@ -57,8 +58,6 @@ class Main{
 
             return power(number, pow, ans, modulus);
         }
-
-        
 
         public static int countGoodNumbers_1(long n){
             
