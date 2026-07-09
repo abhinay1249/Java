@@ -14,3 +14,28 @@
 // Input: stack = [1]
 // Output: [1]
 // Explanation: A single-element stack is already sorted.
+
+import java.util.*;
+
+class Main{
+    
+    public static Stack<Integer> sortStack(Stack<Integer> stack){
+
+    }
+    public static void main(String[] args) {
+
+        Stack<Integer> st = new Stack<>();
+
+        st.push(4);
+        st.push(1);
+        st.push(3);
+        st.push(2);
+        st.push(5);
+
+        Stack<Integer> stack = sortStack(st);
+
+        while(st.isEmpty()){
+            System.out.print(stack.pop() + " ");
+        }
+    }
+}
