@@ -55,7 +55,7 @@ class Main{
 
         Stack<Integer> stack = sortStack(st);
 
-        while(st.isEmpty()){
+        while(!stack.isEmpty()){
             System.out.print(stack.pop() + " ");
         }
     }
