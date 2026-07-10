@@ -28,6 +28,8 @@ class Main{
         stack.push(7);
         stack.push(15);
         stack.push(12);
+
+        
     }
 } 
 
