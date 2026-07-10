@@ -3,3 +3,15 @@
 // You are not allowed to use any loop constructs or additional data structures like arrays or queues.
 
 
+// Example 1:
+
+// Input: stack = [4, 1, 3, 2]  
+// Output: [2, 3, 1, 4]
+// Explanation: The numbers present in the stack need to be reversed and has to be present within the stack itself.
+
+// Example 2:
+
+// Input: stack = [10, 20, -5, 7, 15]  
+// Output: [15, 7, -5, 20, 10]
+// Explanation: The numbers present in the stack need to be reversed and has to be present within the stack itself.
+
