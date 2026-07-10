@@ -27,7 +27,7 @@ class Main{
         }
 
         int top = st.pop();
-        insertIntoStack(element, st);
+        insertIntoStack(element, st);                                       // T.C = O(N), S.C = O(N) due to recursive stack space
         st.push(top);
 
     }
