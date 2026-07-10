@@ -15,3 +15,19 @@
 // Output: [15, 7, -5, 20, 10]
 // Explanation: The numbers present in the stack need to be reversed and has to be present within the stack itself.
 
+import java.util.Stack;
+
+class Main{
+    
+    public static void main(String[] args) {
+        Stack<Integer> stack = new Stack<>();
+        
+        stack.push(10);
+        stack.push(20);
+        stack.push(-5);
+        stack.push(7);
+        stack.push(15);
+        stack.push(12);
+    }
+} 
+
