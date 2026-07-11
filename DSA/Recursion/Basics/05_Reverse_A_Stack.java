@@ -19,30 +19,32 @@ import java.util.Stack;
 
 class Main{
 
-    private static void insertAtBottom(Stack<Integer> st, int number){
+    // ========================= Brute Force Approach =======================================
 
-        if(st.isEmpty()){
-            st.push(number);
-            return;
+        private static void insertAtBottom(Stack<Integer> st, int number){
+
+            if(st.isEmpty()){
+                st.push(number);
+                return;
+            }
+
+            int top = st.pop();
+            insertAtBottom(st, number);
+            st.push(top);
+
         }
 
-        int top = st.pop();
-        insertAtBottom(st, number);
-        st.push(top);
+        public static Stack<Integer> reverseStack(Stack<Integer> st){
 
-    }
+            if(st.isEmpty()){
+                return st;
+            }
 
-    public static Stack<Integer> reverseStack(Stack<Integer> st){
-        
-        if(st.isEmpty()){
+            int top = st.pop();
+            reverseStack(st);
+            insertAtBottom(st, top);
             return st;
         }
-
-        int top = st.pop();
-        reverseStack(st);
-        insertAtBottom(st, top);
-        return st;
-    }
     
     public static void main(String[] args) {
         Stack<Integer> stack = new Stack<>();
