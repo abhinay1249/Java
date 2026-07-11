@@ -40,7 +40,7 @@ class Main{
                 return st;
             }
 
-            int top = st.pop();
+            int top = st.pop();                                             // T.C = O(N), S.C = O(N)
             reverseStack(st);
             insertAtBottom(st, top);
             return st;
