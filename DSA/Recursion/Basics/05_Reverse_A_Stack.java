@@ -40,7 +40,7 @@ class Main{
                 return st;
             }
 
-            int top = st.pop();                                             // T.C = O(N), S.C = O(N)
+            int top = st.pop();                                             // T.C = O(N), S.C = O(N), due to recursive stack space
             reverseStack(st);
             insertAtBottom(st, top);
             return st;
