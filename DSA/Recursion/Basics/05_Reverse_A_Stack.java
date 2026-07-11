@@ -54,12 +54,11 @@ class Main{
         stack.push(2);
         stack.push(1);
 
+        System.out.println(stack);
+
         Stack<Integer> st = reverseStack(stack);
 
-        while(!st.isEmpty()){
-            System.out.print(st.pop() + " ");
-        }
-
+        System.out.print(st + " ");
     }
 } 
 

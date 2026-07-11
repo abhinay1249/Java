@@ -53,10 +53,10 @@ class Main{
         st.push(2);
         st.push(5);
 
+        System.out.println(st);
+
         Stack<Integer> stack = sortStack(st);
 
-        while(!stack.isEmpty()){
-            System.out.print(stack.pop() + " ");
-        }
+        System.out.print(stack);
     }
 }
