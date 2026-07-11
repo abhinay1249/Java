@@ -18,6 +18,10 @@
 import java.util.Stack;
 
 class Main{
+
+    public static Stack<Integer> reverseStack(Stack<Integer> st){
+        
+    }
     
     public static void main(String[] args) {
         Stack<Integer> stack = new Stack<>();
@@ -29,7 +33,12 @@ class Main{
         stack.push(15);
         stack.push(12);
 
-        
+        Stack<Integer> st = reverseStack(stack);
+
+        while(!st.isEmpty()){
+            System.out.print(st.pop() + " ");
+        }
+
     }
 } 
 
