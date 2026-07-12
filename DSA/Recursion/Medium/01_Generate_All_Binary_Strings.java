@@ -38,6 +38,7 @@ class Main{
     }
 
     public static List<String> validStrings(int n){
+
         String s = "";
         List<String> validStrings = new ArrayList<>();
         int lastDigit = 0;
@@ -46,8 +47,22 @@ class Main{
 
     } 
 
-
     public static void main(String[] args) {
-        
+        int n = 4;
+
+        List<String> strings = validStrings(n);
+
+        System.out.print("[");
+
+        for(int index = 0 ; index < strings.size() ; index++){
+            if(index == strings.size()-1){
+                System.out.print(strings.get(index));
+            }else{
+                System.out.print(strings.get(index) + ", ");
+            }
+            
+        }
+
+        System.out.print("]");
     }
 }
