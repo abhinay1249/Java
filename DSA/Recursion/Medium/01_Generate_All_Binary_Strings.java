@@ -40,7 +40,7 @@ class Main{
     public static List<String> validStrings(int n){
 
         String s = "";
-        List<String> validStrings = new ArrayList<>();
+        List<String> validStrings = new ArrayList<>();                      // T.C = O(2^N), S.C = O(N), due to recursive stack space
         int lastDigit = 0;
         
         return recursiveStrings(s,validStrings,lastDigit,n);
@@ -48,6 +48,7 @@ class Main{
     } 
 
     public static void main(String[] args) {
+
         int n = 4;
 
         List<String> strings = validStrings(n);
