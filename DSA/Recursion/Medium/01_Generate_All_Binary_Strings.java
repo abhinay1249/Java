@@ -20,32 +20,33 @@ import java.util.List;
 
 class Main{
 
+    // =================================== Recursive Approach ==========================================
 
-    private static List<String> recursiveStrings(String s, List<String> validStrings, int lastDigit, int n){
-        
-        if(s.length() == n){
-            validStrings.add(s);
-            return validStrings;
+        private static List<String> recursiveStrings(String s, List<String> validStrings, int lastDigit, int n){
+
+            if(s.length() == n){
+                validStrings.add(s);
+                return validStrings;
+            }
+
+            recursiveStrings(s+'0', validStrings, 0, n);
+            if(lastDigit == 0){
+                recursiveStrings(s+'1', validStrings, 1, n);
+            }
+
+            return validStrings; 
+
         }
 
-        recursiveStrings(s+'0', validStrings, 0, n);
-        if(lastDigit == 0){
-            recursiveStrings(s+'1', validStrings, 1, n);
-        }
-        
-        return validStrings; 
+        public static List<String> validStrings(int n){
 
-    }
+            String s = "";
+            List<String> validStrings = new ArrayList<>();                   // T.C = O(2^N), S.C = O(N), due to recursive stack space
+            int lastDigit = 0;
 
-    public static List<String> validStrings(int n){
+            return recursiveStrings(s,validStrings,lastDigit,n);
 
-        String s = "";
-        List<String> validStrings = new ArrayList<>();                      // T.C = O(2^N), S.C = O(N), due to recursive stack space
-        int lastDigit = 0;
-        
-        return recursiveStrings(s,validStrings,lastDigit,n);
-
-    } 
+        } 
 
     public static void main(String[] args) {
 

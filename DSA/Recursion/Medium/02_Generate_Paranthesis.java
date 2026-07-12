@@ -11,3 +11,7 @@
 // Input: n = 1
 // Output: ["()"]
 // Explanation : Need to generate a list of parantheses of that n size and inserted into the list.
+
+class Main{
+    
+}
