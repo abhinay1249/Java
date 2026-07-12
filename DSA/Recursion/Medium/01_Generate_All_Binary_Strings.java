@@ -14,3 +14,40 @@
 // Input: n = 2  
 // Output: ["00", "01", "10"]  
 // Explanation: All binary strings of length 2 that do not contain consecutive 1s.
+
+import java.util.ArrayList;
+import java.util.List;
+
+class Main{
+
+
+    private static List<String> recursiveStrings(String s, List<String> validStrings, int lastDigit, int n){
+        
+        if(s.length() == n){
+            validStrings.add(s);
+            return validStrings;
+        }
+
+        recursiveStrings(s+'0', validStrings, 0, n);
+        if(lastDigit == 0){
+            recursiveStrings(s+'1', validStrings, 1, n);
+        }
+        
+        return validStrings; 
+
+    }
+
+    public static List<String> validStrings(int n){
+        String s = "";
+        List<String> validStrings = new ArrayList<>();
+        int lastDigit = 0;
+        
+        return recursiveStrings(s,validStrings,lastDigit,n);
+
+    } 
+
+
+    public static void main(String[] args) {
+        
+    }
+}
