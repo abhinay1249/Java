@@ -53,6 +53,8 @@ class Main{
 
     // =================================== Optimal Approach ====================================
 
+        public static List<String> generateParanthesis_1(String s, List<String> paranthesis, int n)
+
     public static void main(String[] args) {
 
         int n = 3;
