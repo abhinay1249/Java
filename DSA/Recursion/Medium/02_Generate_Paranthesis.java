@@ -35,29 +35,28 @@ class Main{
         return counter == 0;
     }
 
-    public static List<String> generateParanthesis(String s, List<String> paranthesis, int n){
+    public static void generateParanthesis(String s, List<String> paranthesis, int n){
 
-        if(s.length() == n){
+        if(s.length() == 2 * n){
             if(validStrings(s)){
                 paranthesis.add(s);
             }
-            return paranthesis;
+            return;
         }
 
         generateParanthesis(s+'(', paranthesis, n);
         generateParanthesis(s+')', paranthesis, n);
 
-        return paranthesis;
     }
 
     public static void main(String[] args) {
 
         int n = 3;
         List<String> paranthesis = new ArrayList<>();
-        List<String> result = generateParanthesis("", paranthesis, n);
+        generateParanthesis("", paranthesis, n);
 
-        for(int index = 0 ; index < result.size() ; index++){
-            System.out.print(result.get(index)+" ");
+        for(int index = 0 ; index < paranthesis.size() ; index++){
+            System.out.print(paranthesis.get(index)+" ");
         }
 
     }
