@@ -51,6 +51,8 @@ class Main{
 
         }
 
+    // =================================== Optimal Approach ====================================
+
     public static void main(String[] args) {
 
         int n = 3;
