@@ -17,37 +17,39 @@ import java.util.List;
 
 class Main{
 
-    private static boolean validStrings(String s){
-        int counter = 0;
+    // ============================== Brute Force [Recursive] Approach ====================================
 
-        for(char ch : s.toCharArray()){
-            if(ch == '('){
-                counter++;
-            }else{
-                counter--;
+        private static boolean validStrings(String s){
+            int counter = 0;
+
+            for(char ch : s.toCharArray()){
+                if(ch == '('){
+                    counter++;
+                }else{
+                    counter--;
+                }
+
+                if(counter < 0){
+                    return false;
+                }
             }
 
-            if(counter < 0){
-                return false;
-            }
+            return counter == 0;
         }
 
-        return counter == 0;
-    }
+        public static void generateParanthesis(String s, List<String> paranthesis, int n){
 
-    public static void generateParanthesis(String s, List<String> paranthesis, int n){
-
-        if(s.length() == 2 * n){
-            if(validStrings(s)){
-                paranthesis.add(s);
+            if(s.length() == 2 * n){
+                if(validStrings(s)){
+                    paranthesis.add(s);
+                }
+                return;
             }
-            return;
+
+            generateParanthesis(s+'(', paranthesis, n);
+            generateParanthesis(s+')', paranthesis, n);
+
         }
-
-        generateParanthesis(s+'(', paranthesis, n);
-        generateParanthesis(s+')', paranthesis, n);
-
-    }
 
     public static void main(String[] args) {
 
