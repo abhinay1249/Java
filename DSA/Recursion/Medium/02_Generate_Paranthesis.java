@@ -30,7 +30,7 @@ class Main{
                 }
 
                 if(counter < 0){
-                    return false;
+                    return false;                                   // T.C = O(), S.C = O()
                 }
             }
 
