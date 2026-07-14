@@ -12,8 +12,7 @@
 // Output: ["()"]
 // Explanation : Need to generate a list of parantheses of that n size and inserted into the list.
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 class Main{
 
@@ -54,6 +53,23 @@ class Main{
     // =================================== Optimal Approach ====================================
 
         public static List<String> generateParanthesis_1(String s, List<String> paranthesis, int n){
+
+            Queue<String> ds = new LinkedList<>();
+
+            ds.add(s);
+
+            while(!ds.isEmpty()){
+                String curr = ds.remove();
+
+                if(curr.length() == 2 * n){
+                    if(validStrings(curr)){
+                        paranthesis.add(curr);
+                    }
+                    continue;
+                }
+            }
+
+
 
         }
 
