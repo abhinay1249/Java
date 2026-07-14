@@ -19,6 +19,8 @@ import java.util.Stack;
 
 class Main{
 
+    // ============================ Recursive Approach =====================================
+
         private static void insertIntoStack(int element, Stack<Integer> st){
 
             if(st.isEmpty() || st.peek() <= element){
