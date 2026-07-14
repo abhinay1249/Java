@@ -104,11 +104,12 @@ class Main{
 
             return power(x,pow,ans);
         }
-
         
     public static void main(String[] args) {
+
         double x = 2.0000;
         int n = 10;
         System.out.println(pow_2(x, n));
+
     }
 }
