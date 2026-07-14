@@ -41,7 +41,7 @@ class Main{
             return result;
         }
 
-    // ============================== Optimal Approach ============================================
+    // ================================== Optimal Approach ============================================
     
         public static double pow_1(double x, int n) {
             if (n == 0) {
