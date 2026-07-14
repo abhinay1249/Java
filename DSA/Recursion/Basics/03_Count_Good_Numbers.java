@@ -31,7 +31,7 @@ class Main{
 
             for(int i = 0 ; i < n ; i++){
                 if(i % 2 == 0){
-                    ans *= 5;                                   // T.C = O(N), S.C = O(1), TLE occurs due to N ranges around (1,10^15)
+                    ans *= 5;                                  // T.C = O(N), S.C = O(1), TLE occurs due to N ranges around (1,10^15)
                 }else{
                     ans *= 4;
                 }
@@ -76,5 +76,6 @@ class Main{
         int result = countGoodNumbers_1(n);
 
         System.out.println(result);
+        
     }
 }
