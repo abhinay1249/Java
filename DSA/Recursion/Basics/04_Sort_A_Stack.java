@@ -19,30 +19,30 @@ import java.util.Stack;
 
 class Main{
 
-    private static void insertIntoStack(int element, Stack<Integer> st){
-        
-        if(st.isEmpty() || st.peek() <= element){
-            st.push(element);
-            return;
+        private static void insertIntoStack(int element, Stack<Integer> st){
+
+            if(st.isEmpty() || st.peek() <= element){
+                st.push(element);
+                return;
+            }
+
+            int top = st.pop();
+            insertIntoStack(element, st);                                   // T.C = O(N), S.C = O(N) due to recursive stack space
+            st.push(top);
+
         }
 
-        int top = st.pop();
-        insertIntoStack(element, st);                                       // T.C = O(N), S.C = O(N) due to recursive stack space
-        st.push(top);
+        public static Stack<Integer> sortStack(Stack<Integer> stack){
 
-    }
-    
-    public static Stack<Integer> sortStack(Stack<Integer> stack){
-        
-         if(stack.isEmpty() || stack.size() == 1){
+             if(stack.isEmpty() || stack.size() == 1){
+                return stack;
+            }
+
+            int top = stack.pop();
+            sortStack(stack);
+            insertIntoStack(top,stack);
             return stack;
         }
-
-        int top = stack.pop();
-        sortStack(stack);
-        insertIntoStack(top,stack);
-        return stack;
-    }
     public static void main(String[] args) {
 
         Stack<Integer> st = new Stack<>();
