@@ -40,13 +40,14 @@ class Main{
                 return st;
             }
 
-            int top = st.pop();                                             // T.C = O(N), S.C = O(N), due to recursive stack space
+            int top = st.pop();                                        // T.C = O(N), S.C = O(N), due to recursive stack space
             reverseStack(st);
             insertAtBottom(st, top);
             return st;
         }
     
     public static void main(String[] args) {
+
         Stack<Integer> stack = new Stack<>();
         
         stack.push(6);
@@ -61,6 +62,7 @@ class Main{
         Stack<Integer> st = reverseStack(stack);
 
         System.out.print(st + " ");
+        
     }
 } 
 
