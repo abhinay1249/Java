@@ -14,6 +14,9 @@
 
 class Main{
     
+    public static int powerSet(String str){
+        
+    }
     public static void main(String[] args) {
         
     }
