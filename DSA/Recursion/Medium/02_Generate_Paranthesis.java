@@ -66,7 +66,7 @@ class Main{
 
                 if(curr.length() == 2 * n){
                     if(validStrings(curr)){
-                        paranthesis.add(curr);
+                        paranthesis.add(curr);                          // T.C = O(2^2N * N), S.C = O(N * 2^2N)
                     }
                     continue;
                 }
