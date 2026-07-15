@@ -11,3 +11,10 @@
 // Input: str = "aa"
 // Output: [a, a, aa] 
 // Explanation: Given string has 3 subsequences.
+
+class Main{
+    
+    public static void main(String[] args) {
+        
+    }
+}
