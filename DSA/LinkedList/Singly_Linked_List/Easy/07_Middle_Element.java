@@ -15,6 +15,7 @@
 
 
 class Node{
+
     int data;
     Node nextptr;
     
@@ -31,6 +32,7 @@ class Node{
     // ================================ Convert Array into Linked List ===========================
 
         private static Node convert(int[] nums){
+
             int length = nums.length;
             Node head = new Node(nums[0]);
             Node mover = head;
@@ -40,6 +42,7 @@ class Node{
                 mover= temp;
             }
             return head;
+
         }
     
     // ================================ Brute Force Approach =======================================
@@ -70,7 +73,9 @@ class Node{
                 }
                 current = current.nextptr;
             }
+
             return current;
+
         }
     
     // ================================ Optimal Approach =======================================
@@ -93,6 +98,7 @@ class Node{
         }
     
     public static void main(String[] args) {
+
         int[] nums = {1,2,3,4,5};
         int[] nums_1 = {1,2,3,4,5,6};
         
@@ -123,5 +129,6 @@ class Node{
         System.out.print("Result --> ");
         Node result_3 = middleElement_1(head_4);
         System.out.print(result_3.data);
+        
     }
 }
