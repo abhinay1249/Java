@@ -20,6 +20,7 @@
 import java.util.Stack;
 
 class Node{
+
     int data;
     Node nextptr;
     
@@ -36,6 +37,7 @@ class Node{
     // ================================ Convert Array into Linked List ===========================
 
         private static Node convert(int[] nums){
+
             int length = nums.length;
             Node head = new Node(nums[0]);
             Node mover = head;
@@ -45,6 +47,7 @@ class Node{
                 mover= temp;
             }
             return head;
+        
         }
 
     // ================================ Print Singly Linked List ==============================================
@@ -57,6 +60,7 @@ class Node{
                 System.out.print(dll.data + " ");
                 dll = dll.nextptr;
             }
+        
         }
 
     // ================================ Brute Force Approach [Iterative] ========================================
@@ -87,6 +91,7 @@ class Node{
             }
 
             return newHead;
+        
         }
 
     // ================================ Optimal Approach [Iterative] ========================================
@@ -110,6 +115,7 @@ class Node{
         }
 
     public static void main(String[] args) {
+        
         int[] nums = {1,2,3,4,5};
 
 
@@ -127,7 +133,6 @@ class Node{
         print(result_1);
         
         System.out.println();
-
 
     }
 }
