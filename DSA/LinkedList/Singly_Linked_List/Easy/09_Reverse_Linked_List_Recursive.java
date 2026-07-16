@@ -15,6 +15,7 @@
 
 
 class Node{
+
     int data;
     Node nextptr;
     
@@ -31,6 +32,7 @@ class Node{
     // ================================ Convert Array into Linked List ===========================
 
         private static Node convert(int[] nums){
+
             int length = nums.length;
             Node head = new Node(nums[0]);
             Node mover = head;
@@ -40,6 +42,7 @@ class Node{
                 mover= temp;
             }
             return head;
+        
         }
 
     // ================================ Print Singly Linked List =================================
@@ -52,11 +55,13 @@ class Node{
                 System.out.print(dll.data + " ");
                 dll = dll.nextptr;
             }
+        
         }
 
     // ================================ Recursive Approach ========================================
 
         public static Node reverseLL(Node head) {
+        
             if(head == null || head.nextptr == null){
                 return head;
             }
@@ -67,9 +72,11 @@ class Node{
             head.nextptr = null;
 
             return newHead;
+        
         }
 
     public static void main(String[] args) {
+        
         int[] nums = {1,2,3,4,5};
 
         Node head = convert(nums);
