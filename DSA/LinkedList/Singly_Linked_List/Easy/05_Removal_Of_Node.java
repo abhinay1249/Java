@@ -61,6 +61,7 @@ class Node{
     // ================================ Removal Of Tail Node ==============================================
 
         public static Node deleteTail(Node head){
+
             if(head == null || head.pointer == null){
                 return null;
             }
@@ -145,6 +146,7 @@ class Node{
 class Main{
 
     public static void main(String[] args) {
+        
         int[] nums = {12,45,356,553,262,90};
 
         Node head_0 = Node.convertArrayToLinkedList(nums);
