@@ -14,6 +14,7 @@
 
 
 class Node{
+
     int data;
     Node pointer;
     
@@ -55,6 +56,7 @@ class Node{
             }
 
             Node temp = new Node(val,head);
+            
             return temp;
         }
     
@@ -72,6 +74,7 @@ class Node{
                 temp = temp.pointer;
             }
             temp.pointer = new Node(val,null);
+            
             return head;
         }
     
@@ -105,6 +108,7 @@ class Node{
                 }
                 temp = temp.pointer;
             }
+            
             return head;
         }
     
@@ -134,9 +138,11 @@ class Node{
                 prev = temp;
                 temp = temp.pointer;
             }
+           
             return head;
         }   
     public static void main(String[] args) {
+        
         int[] nums = {1,2,3,4,5,6};
         // int[] nums_1 = {1,1,1,1,1,1};
         Node head_1 = convert(nums);
