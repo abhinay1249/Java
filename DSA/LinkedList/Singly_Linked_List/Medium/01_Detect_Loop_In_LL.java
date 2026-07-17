@@ -18,6 +18,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 class Node{
+
     int data;
     Node next;
     
@@ -34,6 +35,7 @@ class Node{
     // ===================== Convert Array into Linked List ===================================
 
         public static Node convert(int[] nums){
+
             int length = nums.length;
 
             Node head = new Node(nums[0]);
@@ -47,6 +49,7 @@ class Node{
             }
 
             return head;
+            
         }
 
     // ================================ Brute Force Approach ===================================
