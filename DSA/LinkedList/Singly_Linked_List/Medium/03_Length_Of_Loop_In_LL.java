@@ -109,6 +109,7 @@ class Node{
     // ========================= Optimal Approach ==================================
 
         public static int length_2(Node head){
+
             Node slow = head;
             Node fast = head;
 
@@ -126,7 +127,9 @@ class Node{
                     return length;
                 }
             }
+            
             return 0;
+            
         }
 
 
