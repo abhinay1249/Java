@@ -17,6 +17,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 class Node{
+
     int data;
     Node next;
     
@@ -33,6 +34,7 @@ class Node{
     // ============================== Convert Array into Linked List ==========================
 
         private static Node convert(int[] nums){
+
             int length = nums.length;
 
             Node head = new Node(nums[0]);
@@ -46,6 +48,7 @@ class Node{
             }
 
             return head;
+
         }
 
         
@@ -53,6 +56,7 @@ class Node{
     // ================================ Brute Force Approach ===================================
 
         public static Node detectCycleStart(Node head){
+
             Node temp = head;
             Node startPoint = null;
 
@@ -67,7 +71,9 @@ class Node{
                 }
                 temp = temp.next;
             }
+            
             return startPoint;
+
         }
 
     // ================================ Optimal Approach ===================================
