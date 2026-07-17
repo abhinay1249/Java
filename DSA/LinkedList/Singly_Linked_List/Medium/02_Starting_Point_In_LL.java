@@ -105,9 +105,11 @@ class Node{
             }
 
             return startPoint;
+
         }
     
     public static void main(String[] args) {
+
         int[] nums = {1,2,3,4,5};
         
         Node head = convert(nums);
@@ -149,5 +151,6 @@ class Node{
         
         Node res_1 = detectCycleStart_1(head_1);
         System.out.print(res_1.data);
+        
     }
 }
