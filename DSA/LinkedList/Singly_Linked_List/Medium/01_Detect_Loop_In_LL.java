@@ -95,6 +95,7 @@ class Node{
         }
     
     public static void main(String[] args) {
+
         int[] nums = {1,2,3,4,5};
         
         Node head = convert(nums);
@@ -136,5 +137,6 @@ class Node{
         
         boolean res_1 = detectLoop_1(head_1);
         System.out.println(res_1);
+        
     }
 }
