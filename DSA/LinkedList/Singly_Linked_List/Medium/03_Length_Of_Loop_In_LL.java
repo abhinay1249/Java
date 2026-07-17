@@ -23,6 +23,7 @@ import java.util.List;
 import java.util.Map;
 
 class Node{
+
     int data;
     Node next;
     
@@ -39,6 +40,7 @@ class Node{
     // ============================== Convert Array into Linked List ==========================
 
         private static Node convert(int[] nums){
+
             int length = nums.length;
 
             Node head = new Node(nums[0]);
@@ -52,11 +54,13 @@ class Node{
             }
 
             return head;
+
         }
         
     // ====================== Brute Force Approach ====================================
 
         public static int lengthOfCycle(Node head){
+
             Node temp = head;
 
             Map<Node,Integer> hm = new HashMap<>();
@@ -74,7 +78,9 @@ class Node{
                 }
                 temp = temp.next;
             }
+            
             return al.size();
+
         }
 
     // =================== Better Approach =========================================
