@@ -78,7 +78,7 @@ class Node{
                 }
                 temp = temp.next;
             }
-            
+
             return al.size();
 
         }
@@ -86,6 +86,7 @@ class Node{
     // =================== Better Approach =========================================
 
         public static int length_1(Node head){
+
             Node temp = head;
             int timer = 1, length = 0;
             Map<Node,Integer> hm = new HashMap<>();
@@ -100,7 +101,9 @@ class Node{
                 temp = temp.next;
                 timer++;
             }
+            
             return length;
+
         }
 
     // ========================= Optimal Approach ==================================
