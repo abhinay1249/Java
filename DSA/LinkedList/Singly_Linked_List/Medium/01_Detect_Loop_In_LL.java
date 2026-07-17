@@ -49,12 +49,13 @@ class Node{
             }
 
             return head;
-            
+
         }
 
     // ================================ Brute Force Approach ===================================
 
         public static boolean detectLoop(Node head){
+
             Node temp = head;
             boolean flag = false;
 
@@ -69,7 +70,9 @@ class Node{
                 }
                 temp = temp.next;
             }
+            
             return flag;
+
         }
 
     // ================================ Optimal Approach =====================================
