@@ -129,16 +129,15 @@ class Node{
             }
             
             return 0;
-            
+
         }
 
-
-    
+  
     public static void main(String[] args) {
+
         int[] nums = {1,2,3,4,5};
         
         Node head = convert(nums);
-        
 
         // ==== Brute Force Approach ====
 
@@ -205,5 +204,6 @@ class Node{
 
             int res_2 = length_2(head_2);
             System.out.print(res_2);
+            
     }
 }
