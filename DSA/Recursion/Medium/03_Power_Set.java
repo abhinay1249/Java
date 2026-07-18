@@ -12,13 +12,21 @@
 // Output: [a, a, aa] 
 // Explanation: Given string has 3 subsequences.
 
+import java.util.*;
+
 class Main{
     
     public static List<Integer> powerSet(String str){
         
+        int index = 0;
+
+
+
     }
     public static void main(String[] args) {
+        
         String s = "abc";
         powerSet(s);
+        
     }
 }
