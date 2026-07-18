@@ -22,6 +22,8 @@ class Main{
             
         
         }
+
+    // ================================= Optimal [Bit Manipulation] Approach ===========================================
     public static void main(String[] args) {
         
         String s = "abc";
