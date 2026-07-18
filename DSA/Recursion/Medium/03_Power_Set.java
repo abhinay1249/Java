@@ -17,9 +17,33 @@ import java.util.*;
 class Main{
 
     // ==================================== Brute Force [Recursive] Approach ===========================================
-    
-        public static List<Integer> powerSet(String str){
+
+        private static List<String> recursiveStrings(int index, List<String> al, String str){
+
+            int length = str.length();
+            String words = "";
+
             
+            if(index == length){
+                al.add(words);
+                return al;
+            }
+
+            words += str.charAt(index);
+            recursiveStrings(index+1,al,str);
+            words = words.substring(0,words.length()-1);
+            recursiveStrings(index+1,al,str);
+
+            return al;
+
+        }
+    
+        public static List<String> powerSet(String str){
+            
+            int index = 0;
+            List<String> al = new ArrayList<>();
+            
+            return recursiveStrings(index,al,str);
         
         }
 
