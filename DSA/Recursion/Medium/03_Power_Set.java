@@ -12,17 +12,16 @@
 // Output: [a, a, aa] 
 // Explanation: Given string has 3 subsequences.
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 class Main{
 
     // ==================================== Brute Force [Recursive] Approach ===========================================
 
-        private static List<String> recursiveStrings(int index, List<String> al, String str){
+        private static List<String> recursiveStrings(String words, int index, List<String> al, String str){
 
             int length = str.length();
-            String words = "";
-
             
             if(index == length){
                 al.add(words);
@@ -30,9 +29,9 @@ class Main{
             }
 
             words += str.charAt(index);
-            recursiveStrings(index+1,al,str);
+            recursiveStrings(words,index+1,al,str);
             words = words.substring(0,words.length()-1);
-            recursiveStrings(index+1,al,str);
+            recursiveStrings(words,index+1,al,str);
 
             return al;
 
@@ -42,26 +41,30 @@ class Main{
             
             int index = 0;
             List<String> al = new ArrayList<>();
+            String words = "";
             
-            return recursiveStrings(index,al,str);
+            return recursiveStrings(words,index,al,str);
         
         }
 
     // ================================= Optimal [Bit Manipulation] Approach ===========================================
 
 
-        public static List<Integer> powerSet_1(String str){
+        // public static List<Integer> powerSet_1(String str){
 
         
-        }
+        // }
 
 
 
     public static void main(String[] args) {
         
         String s = "abc";
-        powerSet(s);
-        powerSet_1(s);
+        List<String> ds = powerSet(s);
+        for(int i = 0 ; i < ds.size(); i++){
+            System.out.print(ds.get(i)+ " ");
+        }
+        // powerSet_1(s);
 
     }
 }
