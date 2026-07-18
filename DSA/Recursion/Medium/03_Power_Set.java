@@ -30,7 +30,7 @@ class Main{
 
             words += str.charAt(index);
             recursiveStrings(words,index+1,al,str);
-            words = words.substring(0,words.length()-1);
+            words = words.substring(0,words.length()-1);            // T.C = O(2^N * N), S.C = O(N)
             recursiveStrings(words,index+1,al,str);
 
             return al;
