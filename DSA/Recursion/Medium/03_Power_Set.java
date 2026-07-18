@@ -15,18 +15,17 @@
 import java.util.*;
 
 class Main{
+
+    // ==================================== Recursive Approach ===================================
     
-    public static List<Integer> powerSet(String str){
+        public static List<Integer> powerSet(String str){
+            
         
-        int index = 0;
-
-
-
-    }
+        }
     public static void main(String[] args) {
         
         String s = "abc";
         powerSet(s);
-        
+
     }
 }
