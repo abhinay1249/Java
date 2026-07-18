@@ -28,6 +28,7 @@ class Main{
         
         String s = "abc";
         powerSet(s);
+        powerSet_1(s);
 
     }
 }
