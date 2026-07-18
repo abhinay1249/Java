@@ -24,6 +24,15 @@ class Main{
         }
 
     // ================================= Optimal [Bit Manipulation] Approach ===========================================
+
+
+        public static List<Integer> powerSet_1(String str){
+
+        
+        }
+
+
+
     public static void main(String[] args) {
         
         String s = "abc";
