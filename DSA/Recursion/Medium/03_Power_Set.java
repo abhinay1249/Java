@@ -16,7 +16,7 @@ import java.util.*;
 
 class Main{
 
-    // ==================================== Brute Force [Recursive] Approach ===================================
+    // ==================================== Brute Force [Recursive] Approach ===========================================
     
         public static List<Integer> powerSet(String str){
             
