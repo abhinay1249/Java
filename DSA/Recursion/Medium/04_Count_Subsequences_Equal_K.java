@@ -33,7 +33,7 @@ class Main{
             }
         }
 
-        return sum < k ? false : true;
+        return sum == k;
     }
     
     
