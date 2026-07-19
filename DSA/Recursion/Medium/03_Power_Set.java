@@ -50,10 +50,27 @@ class Main{
     // ================================= Optimal [Bit Manipulation] Approach ===========================================
 
 
-        // public static List<Integer> powerSet_1(String str){
+        public static List<String> powerSet_1(String str){
 
-        
-        // }
+            int length = str.length();
+            List<String> subsequences = new ArrayList<>();
+
+            int total = 1<<length;
+
+            for(int number = 0 ; number < total ; number++){
+                StringBuilder st = new StringBuilder();
+
+                for(int index = 0 ; index < length ; index++){
+                    if((number & (1<<index)) != 0){
+                        st.append(str.charAt(index));
+                    }
+                }
+                subsequences.add(st.toString());
+            }
+
+            return subsequences;
+
+        }
 
 
 
@@ -61,10 +78,19 @@ class Main{
         
         String s = "abc";
         List<String> ds = powerSet(s);
+        
         for(int i = 0 ; i < ds.size(); i++){
             System.out.print(ds.get(i)+ " ");
         }
-        // powerSet_1(s);
+
+        System.out.println();
+        
+        List<String> ds_1 = powerSet_1(s);
+
+        for(int i = 0 ; i < ds.size(); i++){
+            System.out.print(ds_1.get(i)+ " ");
+        }
+        
 
     }
 }
