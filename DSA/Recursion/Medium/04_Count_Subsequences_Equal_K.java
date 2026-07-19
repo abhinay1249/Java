@@ -17,58 +17,48 @@ import java.util.ArrayList;
 import java.util.List;
 
 class Main{
-
-
-    private static boolean sumEqualsK(List<Integer> list, int k){
-        
-        int length = list.size();
-
-        int sum = 0;
-
-        for(int index = 0 ; index < length ; index++){
-            sum+=list.get(index);
-
-            if(sum > k){
-                return false;
-            }
-        }
-
-        return sum == k;
-    }
     
-    
-    private static int recursiveSubsequences(int index, int[] nums, List<Integer> subsequences, int k, int count){
+    private static int recursiveSubsequences(int index,int sum, int k,int[]nums){
 
         if(index == nums.length){
-            boolean valid = sumEqualsK(subsequences,k);
-            if(valid){
-                count++;
+            if(sum == k){
+                return 1;
             }
-            return count;
+            return 0;
         }
 
-        subsequences.add(nums[index]);
-        recursiveSubsequences(index+1, nums, subsequences, k, count);
-        subsequences.remove(nums[index]);
-        recursiveSubsequences(index+1, nums, subsequences, k, count);
+        sum += nums[index];
+        int includeCount = recursiveSubsequences(index+1,sum,k,nums);
+        sum -= nums[index];
+        int excludeCount = recursiveSubsequences(index+1,sum,k,nums);
 
-        return count;
-
+        return includeCount+excludeCount;
+        
     }
     
     public static int countSubsequences(int[] nums, int k){
 
-        List<Integer> subsequences = new ArrayList<>();
+        if(nums.length == 1){
+            if(nums[0] == k){
+                return 1;
+            }else{
+                return 0;
+            }
+        }
 
-        int result = recursiveSubsequences(0, nums, subsequences, k, 0);
+        int index = 0;
+        int sum = 0;
+        List<Integer> subsequences = new ArrayList<>();
+        
+        int result = recursiveSubsequences(index,sum,k,nums);
 
         return result;
     }
 
     public static void main(String[] args) {
 
-        int[] nums = {4,9,2,5,1};
-        int k = 10;
+        int[] nums = {4, 2, 10, 5, 1, 3};
+        int k = 5 ;
         int result = countSubsequences(nums, k);
 
         System.out.println(result);
