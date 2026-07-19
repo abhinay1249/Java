@@ -49,7 +49,6 @@ class Main{
 
     // ================================= Optimal [Bit Manipulation] Approach ===========================================
 
-
         public static List<String> powerSet_1(String str){
 
             int length = str.length();
@@ -60,7 +59,7 @@ class Main{
             for(int number = 0 ; number < total ; number++){
                 StringBuilder st = new StringBuilder();
 
-                for(int index = 0 ; index < length ; index++){
+                for(int index = 0 ; index < length ; index++){                      // T.C = O(2^N * N), S.C = O(1)
                     if((number & (1<<index)) != 0){
                         st.append(str.charAt(index));
                     }
@@ -71,7 +70,6 @@ class Main{
             return subsequences;
 
         }
-
 
 
     public static void main(String[] args) {
@@ -90,7 +88,5 @@ class Main{
         for(int i = 0 ; i < ds.size(); i++){
             System.out.print(ds_1.get(i)+ " ");
         }
-        
-
     }
 }
