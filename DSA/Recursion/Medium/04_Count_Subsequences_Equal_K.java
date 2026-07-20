@@ -15,7 +15,7 @@
 
 class Main{
     
-    private static int recursiveSubsequences(int index,int sum, int k,int[]nums){
+    private static int recursiveSubsequences(int index, int sum, int k, int[] nums){
 
         if(index == nums.length){
             if(sum == k){
@@ -38,7 +38,7 @@ class Main{
         int index = 0;
         int sum = 0;
         
-        int result = recursiveSubsequences(index,sum,k,nums);
+        int result = recursiveSubsequences(index, sum, k, nums);
 
         return result;
     }
