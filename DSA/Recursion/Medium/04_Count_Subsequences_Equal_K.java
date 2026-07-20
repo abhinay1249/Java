@@ -38,14 +38,6 @@ class Main{
     
     public static int countSubsequences(int[] nums, int k){
 
-        if(nums.length == 1){
-            if(nums[0] == k){
-                return 1;
-            }else{
-                return 0;
-            }
-        }
-
         int index = 0;
         int sum = 0;
         List<Integer> subsequences = new ArrayList<>();
