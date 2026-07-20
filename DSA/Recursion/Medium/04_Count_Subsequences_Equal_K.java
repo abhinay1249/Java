@@ -14,34 +14,36 @@
 // Explanation : The possible subsets with sum k are [4, 1] , [2, 3] , [5].
 
 class Main{
-    
-    private static int recursiveSubsequences(int index, int sum, int k, int[] nums){
 
-        if(index == nums.length){
-            if(sum == k){
-                return 1;
+    // ===================================== Recursive Approach ============================================
+
+        private static int recursiveSubsequences(int index, int sum, int k, int[] nums){
+
+            if(index == nums.length){
+                if(sum == k){
+                    return 1;
+                }
+                return 0;
             }
-            return 0;
+
+            sum += nums[index];
+            int includeCount = recursiveSubsequences(index+1,sum,k,nums);
+            sum -= nums[index];
+            int excludeCount = recursiveSubsequences(index+1,sum,k,nums);
+
+            return includeCount+excludeCount;
+
         }
 
-        sum += nums[index];
-        int includeCount = recursiveSubsequences(index+1,sum,k,nums);
-        sum -= nums[index];
-        int excludeCount = recursiveSubsequences(index+1,sum,k,nums);
+        public static int countSubsequences(int[] nums, int k){
 
-        return includeCount+excludeCount;
-        
-    }
-    
-    public static int countSubsequences(int[] nums, int k){
+            int index = 0;
+            int sum = 0;
 
-        int index = 0;
-        int sum = 0;
-        
-        int result = recursiveSubsequences(index, sum, k, nums);
+            int result = recursiveSubsequences(index, sum, k, nums);
 
-        return result;
-    }
+            return result;
+        }
 
     public static void main(String[] args) {
 
