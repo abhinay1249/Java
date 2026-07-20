@@ -27,7 +27,7 @@ class Main{
             }
 
             sum += nums[index];
-            int includeCount = recursiveSubsequences(index+1,sum,k,nums);
+            int includeCount = recursiveSubsequences(index+1,sum,k,nums);       // T.C = O(), S.C = O(N) due to recursive stack space.
             sum -= nums[index];
             int excludeCount = recursiveSubsequences(index+1,sum,k,nums);
 
