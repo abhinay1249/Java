@@ -13,9 +13,6 @@
 // Output : 3
 // Explanation : The possible subsets with sum k are [4, 1] , [2, 3] , [5].
 
-import java.util.ArrayList;
-import java.util.List;
-
 class Main{
     
     private static int recursiveSubsequences(int index,int sum, int k,int[]nums){
@@ -40,7 +37,6 @@ class Main{
 
         int index = 0;
         int sum = 0;
-        List<Integer> subsequences = new ArrayList<>();
         
         int result = recursiveSubsequences(index,sum,k,nums);
 
