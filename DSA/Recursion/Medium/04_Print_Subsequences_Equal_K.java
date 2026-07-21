@@ -13,13 +13,32 @@
 // Output : [ [4, 1] , [2, 3] , [5] ]
 // Explanation : The possible subsets with sum k are [4, 1] , [2, 3] , [5].
 
+import java.util.*;
 
 class Main{
+
+    public static void subsequenceEqualK(int index, List<Integer> al, int sum, int k, int[] nums){
+
+        if(index == nums.length){
+            if(sum == k){
+                System.out.println(al);
+                return;
+            }
+            return;
+        }
+
+        al.add(nums[index]);
+        subsequenceEqualK(index+1, al, sum += nums[index], k, nums);
+        al.remove(al.size()-1);
+        subsequenceEqualK(index+1, al, sum -= nums[index], k, nums);    
+
+    }
     public static void main(String[] args) {
         
         int[] nums = {1,2,1};
         int k = 2;
 
+        subsequenceEqualK();
 
     }
 }
