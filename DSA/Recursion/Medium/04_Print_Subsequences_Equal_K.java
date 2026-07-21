@@ -18,28 +18,30 @@ import java.util.List;
 
 class Main{
 
-    public static void subsequenceEqualK(int index, List<Integer> al, int sum, int k, int[] nums){
+    // =============================== Recursive Approach ==============================================
 
-        if(index == nums.length){
-            if(sum == k){
-                System.out.println(al);
+        public static void subsequenceEqualK(int index, List<Integer> al, int sum, int k, int[] nums){
+
+            if(index == nums.length){
+                if(sum == k){
+                    System.out.println(al);
+                    return;
+                }
                 return;
             }
-            return;
+
+            al.add(nums[index]);
+            subsequenceEqualK(index+1, al, sum += nums[index], k, nums);
+            al.remove(al.size()-1);
+            subsequenceEqualK(index+1, al, sum -= nums[index], k, nums);    
+
         }
-
-        al.add(nums[index]);
-        subsequenceEqualK(index+1, al, sum += nums[index], k, nums);
-        al.remove(al.size()-1);
-        subsequenceEqualK(index+1, al, sum -= nums[index], k, nums);    
-
-    }
     public static void main(String[] args) {
         
         int[] nums = {1,2,1};
         int k = 2;
         List<Integer> al = new ArrayList<>();
         subsequenceEqualK(0, al, 0, k, nums);
-        
+
     }
 }
