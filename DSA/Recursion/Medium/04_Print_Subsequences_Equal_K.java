@@ -37,8 +37,8 @@ class Main{
         
         int[] nums = {1,2,1};
         int k = 2;
-
-        subsequenceEqualK();
+        List<Integer>
+        subsequenceEqualK(0,);
 
     }
 }
