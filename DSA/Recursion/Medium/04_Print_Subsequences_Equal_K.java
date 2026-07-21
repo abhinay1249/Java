@@ -13,7 +13,8 @@
 // Output : [ [4, 1] , [2, 3] , [5] ]
 // Explanation : The possible subsets with sum k are [4, 1] , [2, 3] , [5].
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 class Main{
 
@@ -37,8 +38,8 @@ class Main{
         
         int[] nums = {1,2,1};
         int k = 2;
-        List<Integer>
-        subsequenceEqualK(0,);
-
+        List<Integer> al = new ArrayList<>();
+        subsequenceEqualK(0, al, 0, k, nums);
+        
     }
 }
