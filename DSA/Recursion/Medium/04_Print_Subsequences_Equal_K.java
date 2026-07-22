@@ -55,6 +55,10 @@ class Main{
             
             if(subsequenceEqualK(index+1, al, sum, k, nums) == true) return true;
 
+            al.remove(nums[index]);
+            sum -= nums[index];
+
+            if(subsequenceEqualK(index+1, al, sum, k, nums) == true) return true;
 
             return false;
         }
