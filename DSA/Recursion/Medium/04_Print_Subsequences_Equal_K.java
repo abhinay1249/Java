@@ -20,7 +20,7 @@ class Main{
 
     // =============================== Recursive Approach ==============================================
 
-        public static void subsequenceEqualK(int index, List<Integer> al, int sum, int k, int[] nums){
+        public static void subsequencesEqualK(int index, List<Integer> al, int sum, int k, int[] nums){
 
             if(index == nums.length){
                 if(sum == k){
@@ -31,17 +31,40 @@ class Main{
             }
 
             al.add(nums[index]);
-            subsequenceEqualK(index+1, al, sum += nums[index], k, nums);
+            subsequencesEqualK(index+1, al, sum += nums[index], k, nums);
             al.remove(al.size()-1);
-            subsequenceEqualK(index+1, al, sum -= nums[index], k, nums);    
+            subsequencesEqualK(index+1, al, sum -= nums[index], k, nums);    
 
         }
+
+    // =============================== FOLLOW UP To Print One Subsequence ==============================================
+
+        public static boolean subsequenceEqualK(int index, List<Integer> al, int sum, int k, int[] nums){
+            
+            if(index == nums.length){
+                
+                if(sum == k){
+                    System.out.println(al);
+                    return true;
+                }
+                return false;
+            }
+
+            al.add(nums[index]);
+            sum += nums[index];
+            
+            if(subsequenceEqualK(index+1, al, sum, k, nums) == true) return true;
+
+
+            return false;
+        }
+
     public static void main(String[] args) {
         
         int[] nums = {4, 2, 10, 5, 1, 3};
         int k = 5;
         List<Integer> al = new ArrayList<>();
-        subsequenceEqualK(0, al, 0, k, nums);
+        subsequencesEqualK(0, al, 0, k, nums);
 
     }
 }
