@@ -37,7 +37,7 @@ class Main{
 
         }
 
-    // =============================== FOLLOW UP To Print One Subsequence ==============================================
+    // =============================== FOLLOW UP To Print Only One Subsequence ==============================================
 
         public static boolean subsequenceEqualK(int index, List<Integer> al, int sum, int k, int[] nums){
             
