@@ -38,8 +38,8 @@ class Main{
         }
     public static void main(String[] args) {
         
-        int[] nums = {1,2,1};
-        int k = 2;
+        int[] nums = {4, 2, 10, 5, 1, 3};
+        int k = 5;
         List<Integer> al = new ArrayList<>();
         subsequenceEqualK(0, al, 0, k, nums);
 
