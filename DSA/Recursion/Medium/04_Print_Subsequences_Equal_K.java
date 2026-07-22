@@ -50,12 +50,12 @@ class Main{
                 return false;
             }
 
-            al.add(nums[index]);
+            al.add(nums[index]);                                                    // T.C = O(2^N)
             sum += nums[index];
             
             if(subsequenceEqualK(index+1, al, sum, k, nums) == true) return true;
 
-            al.remove(nums[index]);
+            al.remove(al.size()-1);
             sum -= nums[index];
 
             if(subsequenceEqualK(index+1, al, sum, k, nums) == true) return true;
