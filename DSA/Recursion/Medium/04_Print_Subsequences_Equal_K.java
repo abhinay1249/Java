@@ -69,6 +69,7 @@ class Main{
         int k = 5;
         List<Integer> al = new ArrayList<>();
         subsequencesEqualK(0, al, 0, k, nums);
+        subsequenceEqualK(0, al, 0, k, nums);
 
     }
 }
