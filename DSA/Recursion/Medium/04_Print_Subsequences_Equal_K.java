@@ -27,7 +27,7 @@ class Main{
                     System.out.println(al);
                     return;
                 }
-                return;                                                   // T.C = O(2^N), S.C = O(N) due to recursive stack space
+                return;                                                 // T.C = O(2^N), S.C = O(N) due to recursive stack space
             }
 
             al.add(nums[index]);
