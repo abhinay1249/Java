@@ -15,6 +15,24 @@
 
 
 class Main{
+
+    public static boolean checkSubsequence(int index, int sum, int k, int[] nums){
+        
+        if(index == nums.length){
+            if(sum == k){
+                return true;
+            }
+            return false;
+        }
+
+        sum += nums[index];
+        if(checkSubsequence(index+1, sum, k, nums) == true) return true;
+
+        sum -= nums[index];
+
+        return checkSubsequence(index+1, sum, k, nums);
+        
+    }
     
     public static void main(String[] args) {
         
