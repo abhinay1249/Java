@@ -25,7 +25,7 @@ class Main{
                     return true;
                 }
                 return false;           
-            }                                                                   // T.C = O(2^N), S.C = O(N), due to recursive stack space.
+            }                                                               // T.C = O(2^N), S.C = O(N), due to recursive stack space.
 
             sum += nums[index]; 
 
