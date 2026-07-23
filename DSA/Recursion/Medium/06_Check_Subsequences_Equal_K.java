@@ -12,3 +12,17 @@
 // Input : nums = [4, 3, 9, 2] , k = 10
 // Output : No
 // Explanation : No subsequence can sum up to 10.
+
+
+class Main{
+    
+    public static void main(String[] args) {
+        
+        int[] nums = {1,2,1};
+        int k = 2;
+        
+        boolean result = checkSubsequence(0,0,k,nums);
+
+        System.out.println(result);
+    }
+}
