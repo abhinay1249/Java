@@ -27,11 +27,11 @@ class Main{
             }
 
             sum += nums[index];
-            int count = recursiveSubsequences(index+1,sum,k,nums);       
+            int left = recursiveSubsequences(index+1,sum,k,nums);       
             sum -= nums[index];
-            count += recursiveSubsequences(index+1,sum,k,nums);
+            int right = recursiveSubsequences(index+1,sum,k,nums);
 
-            return count;
+            return left + right;
 
         }
 
