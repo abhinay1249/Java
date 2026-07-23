@@ -31,13 +31,13 @@ class Main{
         sum -= nums[index];
 
         return checkSubsequence(index+1, sum, k, nums);
-        
+
     }
     
     public static void main(String[] args) {
         
-        int[] nums = {1,2,1};
-        int k = 2;
+        int[] nums = {4, 3, 9, 2};
+        int k = 10;
         
         boolean result = checkSubsequence(0,0,k,nums);
 
