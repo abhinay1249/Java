@@ -21,3 +21,10 @@
 // Input: array = [2], target = 1
 // Output: []
 // Explaination: No combination is possible.
+
+
+class Main{
+    public static void main(String[] args) {
+        
+    }
+}
