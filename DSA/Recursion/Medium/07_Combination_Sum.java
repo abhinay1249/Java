@@ -34,7 +34,7 @@ class Main{
         int[] nums = {2, 3, 6, 7};
         int target = 7;
 
-        combinationSum(nums, target)
+        combinationSum(nums, target);
 
     }
 }
