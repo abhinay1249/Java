@@ -25,6 +25,7 @@
 
 class Main{
     public static void main(String[] args) {
-        
+        int[] nums = {2, 3, 6, 7};
+        int target = 7;
     }
 }
