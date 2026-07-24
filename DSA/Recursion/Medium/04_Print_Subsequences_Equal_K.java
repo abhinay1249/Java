@@ -50,7 +50,7 @@ class Main{
                 return false;
             }
 
-            al.add(nums[index]);                                               // T.C = O(2^N), S.C = O(N), due to recursive stack space
+            al.add(nums[index]);                                             // T.C = O(2^N), S.C = O(N), due to recursive stack space
             sum += nums[index];
             
             if(subsequenceEqualK(index+1, al, sum, k, nums) == true) return true;
