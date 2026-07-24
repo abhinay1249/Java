@@ -26,13 +26,15 @@
 class Main{
 
     public static List<List<Integer>> combinationSum(int[] nums, int target){
-        
+
     }
 
     public static void main(String[] args) {
 
         int[] nums = {2, 3, 6, 7};
         int target = 7;
+
+        combinationSum(nums, target)
 
     }
 }
