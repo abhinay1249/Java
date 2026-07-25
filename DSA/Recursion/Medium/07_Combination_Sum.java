@@ -26,6 +26,27 @@ import java.util.*;
 
 class Main{
 
+
+    public static void recursiveCombinationSum(int index, List<Integer> ds, int target, int[] nums){
+    
+        if(index == nums.length){
+            if(target == 0){
+                System.out.println(ds);
+            }
+            return;
+        }
+
+        if(target >= nums[index]){
+            int remainingTarget = target - nums[index];
+            ds.add(nums[index]);
+            combinationSum(index,ds,remainingTarget,nums);
+        }
+
+        ds.remove(ds.size()-1);
+        combinationSum(index+1,ds,target,nums);
+    
+    }
+
     public static List<List<Integer>> combinationSum(int[] nums, int target){
 
     }
@@ -39,3 +60,5 @@ class Main{
 
     }
 }
+
+
