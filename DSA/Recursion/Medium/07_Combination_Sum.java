@@ -27,37 +27,39 @@ import java.util.*;
 class Main{
 
 
-    private static List<List<Integer>> recursiveCombinationSum(int index, List<List<Integer>> al, int target, int[] nums, List<Integer> ds){
-    
-        if(index == nums.length){
-            if(target == 0){
-                al.add(new ArrayList<>(ds));
-            }
-            return al;
-        }
+    // ====================================== Recursive Approach ======================================
 
-        if(target >= nums[index]){
-            ds.add(nums[index]);
-            recursiveCombinationSum(index,al,target - nums[index],nums, ds);
-            ds.remove(ds.size()-1);
-        }
+        private static List<List<Integer>> recursiveCombinationSum(int index, List<List<Integer>> al, int target, int[] nums, List<Integer> ds){
         
-        recursiveCombinationSum(index+1, al, target, nums, ds);
+            if(index == nums.length){
+                if(target == 0){
+                    al.add(new ArrayList<>(ds));
+                }
+                return al;
+            }
 
-        return al;
-    
-    }
+            if(target >= nums[index]){
+                ds.add(nums[index]);
+                recursiveCombinationSum(index,al,target - nums[index],nums, ds);
+                ds.remove(ds.size()-1);
+            }
 
-    public static List<List<Integer>> combinationSum(int[] nums, int target){
+            recursiveCombinationSum(index+1, al, target, nums, ds);
 
-        int index = 0;
-        List<List<Integer>> al = new ArrayList<>();
-        List<Integer> ds = new ArrayList<>(); 
+            return al;
+        
+        }
+
+        public static List<List<Integer>> combinationSum(int[] nums, int target){
+
+            int index = 0;
+            List<List<Integer>> al = new ArrayList<>();
+            List<Integer> ds = new ArrayList<>(); 
 
 
-        return recursiveCombinationSum(index, al, target, nums, ds);
+            return recursiveCombinationSum(index, al, target, nums, ds);
 
-    }
+        }
 
     public static void main(String[] args) {
 
