@@ -27,27 +27,35 @@ import java.util.*;
 class Main{
 
 
-    public static void recursiveCombinationSum(int index, List<Integer> ds, int target, int[] nums){
+    public static List<List<Integer>> recursiveCombinationSum(int index, List<List<Integer>> al, int target, int[] nums, List<Integer> ds){
     
         if(index == nums.length){
             if(target == 0){
-                System.out.println(ds);
+                al.add(new ArrayList<>(ds));
             }
-            return;
+            return al;
         }
 
         if(target >= nums[index]){
-            int remainingTarget = target - nums[index];
             ds.add(nums[index]);
-            combinationSum(index,ds,remainingTarget,nums);
+            recursiveCombinationSum(index,al,target - nums[index],nums, ds);
+            ds.remove(ds.size()-1);
         }
+        
+        recursiveCombinationSum(index+1, al, target, nums, ds);
 
-        ds.remove(ds.size()-1);
-        combinationSum(index+1,ds,target,nums);
+        return al;
     
     }
 
     public static List<List<Integer>> combinationSum(int[] nums, int target){
+
+        int index = 0;
+        List<List<Integer>> al = new ArrayList<>();
+        List<Integer> ds = new ArrayList<>(); 
+
+
+        return recursiveCombinationSum(index, al, target, nums, ds);
 
     }
 
