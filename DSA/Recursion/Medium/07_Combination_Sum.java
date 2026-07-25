@@ -64,7 +64,9 @@ class Main{
         int[] nums = {2, 3, 6, 7};
         int target = 7;
 
-        combinationSum(nums, target);
+        List<List<Integer>> ds = combinationSum(nums, target);
+
+        System.out.print(ds);
 
     }
 }
