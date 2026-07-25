@@ -43,7 +43,7 @@ class Main{
                 ds.remove(ds.size()-1);
             }
 
-            recursiveCombinationSum(index+1, al, target, nums, ds);             // T.C = O(2^T * K), S.C = O(K * X)
+            recursiveCombinationSum(index+1, al, target, nums, ds);             // T.C = O(2^T * K), S.C = O(K * X) , where k is the average length of list to insert.
 
             return al;                                                  
         
