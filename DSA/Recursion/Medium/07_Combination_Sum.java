@@ -27,7 +27,7 @@ import java.util.*;
 class Main{
 
 
-    public static List<List<Integer>> recursiveCombinationSum(int index, List<List<Integer>> al, int target, int[] nums, List<Integer> ds){
+    private static List<List<Integer>> recursiveCombinationSum(int index, List<List<Integer>> al, int target, int[] nums, List<Integer> ds){
     
         if(index == nums.length){
             if(target == 0){
