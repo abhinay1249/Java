@@ -85,7 +85,7 @@ class Main{
 
         }
 
-        
+
         public static List<List<Integer>> combinationSum2_1(int[] nums, int target){
 
             int index = 0;
@@ -103,19 +103,46 @@ class Main{
 
     // ================================== Optimal Approach ========================================
 
-        // public static List<List<Integer>> combinationSum2_2(int[] nums, int target){
 
-        //     int index = 0;
-        //     Set<List<Integer>> hs = new HashSet<>();
-        //     List<Integer> ds = new ArrayList<>();
+        private static void recursiveCombinationSum2_2(int index, List<List<Integer>> al, int target, int[] nums, List<Integer> ds){
 
-        //     recursiveCombinationSum2_2(index, hs, target, nums, ds);
+            if(target == 0){
+                al.add(new ArrayList<>(ds));
+                return;
+            }
 
-        //     List<List<Integer>> al = new ArrayList<>(hs);
+            for(int i = index ; i < nums.length ; i++){
 
-        //     return al;
+                if(i > index && nums[i] == nums[i-1]){
+                    continue;
+                }
 
-        // }
+                if(target < nums[i]){
+                    break;
+                }
+
+                ds.add(nums[i]);
+                recursiveCombinationSum2_2(i+1, al, target - nums[i], nums, ds);
+                ds.remove(ds.size()-1);
+
+            }
+        }
+
+        public static List<List<Integer>> combinationSum2_2(int[] nums, int target){
+
+            int index = 0;
+            List<List<Integer>> hs = new ArrayList<>();
+            List<Integer> ds = new ArrayList<>();
+
+            Arrays.sort(nums);
+
+            recursiveCombinationSum2_2(index, hs, target, nums, ds);
+
+            List<List<Integer>> al = new ArrayList<>(hs);
+
+            return al;
+
+        }
 
 
     public static void main(String[] args){
@@ -126,10 +153,12 @@ class Main{
 
         List<List<Integer>> al = combinationSum2(nums,target);
         List<List<Integer>> al_1 = combinationSum2_1(nums,target);
+        List<List<Integer>> al_2 = combinationSum2_2(nums,target);
 
 
         System.out.println(al);
         System.out.println(al_1);
+        System.out.println(al_2);
 
     }
 }
