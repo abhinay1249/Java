@@ -36,7 +36,7 @@ class Main{
             ds.remove(ds.size()-1);
             recursiveSubsets(index+1, hs, nums, ds);
 
-            return hs;
+            return hs;                                                        // T.C = O(2^N * N LOG N), S.C = O(N * 2^N)
 
         }
 
