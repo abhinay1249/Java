@@ -37,9 +37,9 @@ class Main{
             }
 
             ds.add(nums[index]);
-            recursiveCombinationSum2(index+1, hs, target, sum += nums[index], nums, ds);
+            recursiveCombinationSum2(index+1, hs, target, sum + nums[index], nums, ds);
             ds.remove(ds.size()-1);
-            recursiveCombinationSum2(index+1, hs, target, sum -= nums[index], nums, ds);
+            recursiveCombinationSum2(index+1, hs, target, sum - nums[index], nums, ds);
 
             return hs;
 
