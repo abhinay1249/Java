@@ -32,7 +32,7 @@ class Main{
 
             for(int i = index ; i < nums.length ; i++){
                 sum += nums[i];
-                recursiveSubsets(i+1, nums, al, sum);                       
+                recursiveSubsets(i+1, nums, al, sum);                       // T.C = O(2^N) + O(2^N LOG 2^N), S.C = O(2^N)
                 sum -= nums[i];
             }
 
