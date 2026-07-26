@@ -115,11 +115,11 @@ class Main{
             for(int i = index ; i < nums.length ; i++){
 
                 if(i > index && nums[i] == nums[i-1]){
-                    continue;
+                    continue;                                              // T.C = O(N LOG N) + O(2^N * K), S.C = O(K * X) 
                 }
 
                 if(target < nums[i]){
-                    break;
+                    break;                          
                 }
 
                 ds.add(nums[i]);
@@ -132,14 +132,12 @@ class Main{
         public static List<List<Integer>> combinationSum2_2(int[] nums, int target){
 
             int index = 0;
-            List<List<Integer>> hs = new ArrayList<>();
+            List<List<Integer>>al = new ArrayList<>();
             List<Integer> ds = new ArrayList<>();
 
             Arrays.sort(nums);
 
-            recursiveCombinationSum2_2(index, hs, target, nums, ds);
-
-            List<List<Integer>> al = new ArrayList<>(hs);
+            recursiveCombinationSum2_2(index, al, target, nums, ds);
 
             return al;
 
