@@ -19,7 +19,7 @@ import java.util.*;
 class Main{
 
 
-    // =================================== Brute Force Approach - 1========================================
+    // =================================== Brute Force Approach - 1 ========================================
 
         private static Set<List<Integer>> recursiveCombinationSum2(int index, Set<List<Integer>> hs, int target, int sum, int[] nums, List<Integer> ds){
 
@@ -64,7 +64,6 @@ class Main{
 
         private static Set<List<Integer>> recursiveCombinationSum2_1(int index, Set<List<Integer>> hs, int target, int[] nums, List<Integer> ds){
 
-
             if(index == nums.length){
                 if(target == 0){
                     List<Integer> temp = new ArrayList<>(ds);
@@ -101,9 +100,28 @@ class Main{
         }
 
 
+    // ================================== Optimal Approach ========================================
+
+        // public static List<List<Integer>> combinationSum2_2(int[] nums, int target){
+
+        //     int index = 0;
+        //     Set<List<Integer>> hs = new HashSet<>();
+        //     List<Integer> ds = new ArrayList<>();
+
+        //     recursiveCombinationSum2_2(index, hs, target, nums, ds);
+
+        //     List<List<Integer>> al = new ArrayList<>(hs);
+
+        //     return al;
+
+        // }
+
+
     public static void main(String[] args){
         int[] nums = {10,1,2,7,6,1,5};
         int target = 8;
+
+        Arrays.sort(nums);
 
         List<List<Integer>> al = combinationSum2(nums,target);
         List<List<Integer>> al_1 = combinationSum2_1(nums,target);
