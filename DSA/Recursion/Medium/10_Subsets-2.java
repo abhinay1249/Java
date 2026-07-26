@@ -1,5 +1,9 @@
- 
- 
+// Problem Statement: Given an integer array nums, which can have duplicate entries, provide the power set. 
+// Duplicate subsets cannot exist in the solution set. Return the answer in any sequence.  
+
+
+
+
 
 import java.util.*;
 
@@ -39,7 +43,7 @@ class Main{
     }
 
     public static void main(String[] args){
-        
+
         int[] nums = {1,2,2};
 
         subsetsWithDup(nums);
