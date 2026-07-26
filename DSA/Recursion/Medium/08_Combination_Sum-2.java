@@ -37,9 +37,9 @@ class Main{
             }
 
             ds.add(nums[index]);
-            recursiveCombinationSum2(index+1, hs, target, sum + nums[index], nums, ds);
+            recursiveCombinationSum2(index+1, hs, target, sum += nums[index], nums, ds);
             ds.remove(ds.size()-1);
-            recursiveCombinationSum2(index+1, hs, target, sum - nums[index], nums, ds);
+            recursiveCombinationSum2(index+1, hs, target, sum -= nums[index], nums, ds);
 
             return hs;
 
@@ -149,15 +149,12 @@ class Main{
         int[] nums = {10,1,2,7,6,1,5};
         int target = 8;
 
-        Arrays.sort(nums);
-
         List<List<Integer>> al = combinationSum2(nums,target);
         List<List<Integer>> al_1 = combinationSum2_1(nums,target);
         List<List<Integer>> al_2 = combinationSum2_2(nums,target);
-
-
+        
         System.out.println(al);
-        System.out.println(al_1);
+        System.out.println(al_1);       
         System.out.println(al_2);
 
     }
