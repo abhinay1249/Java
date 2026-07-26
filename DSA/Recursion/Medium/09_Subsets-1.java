@@ -20,7 +20,7 @@ import java.util.*;
 
 class Main{
 
-    // ============================================== Recursive Approach - 1 ========================================
+    // ================================== Recursive Approach - 1 ========================================
 
         private static List<Integer> recursiveSubsets(int index, int[] nums, List<Integer> al, int sum){
 
@@ -47,9 +47,40 @@ class Main{
 
             recursiveSubsets(index, nums, al, 0);
 
+            Collections.sort(al);
+
             return al;
 
-        } 
+        }
+        
+    // ================================== Recursive Approach - 2 ========================================
+
+        private static List<Integer> recursiveSubsets_1(int index, List<Integer> al, int[] nums, int sum){
+
+            if(index == nums.length){
+                al.add(sum);
+                return al;
+            }
+
+            recursiveSubsets_1(index+1, al, nums, sum + nums[index]);
+            recursiveSubsets_1(index+1, al, nums, sum);
+
+            return al;
+
+        }
+
+        public static List<Integer> subsets_1(int[] nums, List<Integer> al){
+
+            int sum = 0;
+            int index = 0;
+
+            recursiveSubsets_1(index, al, nums, sum);                   // T.C = O(2^N) + O(2^N LOG 2^N), S.C = O(2^N)
+
+            Collections.sort(al);
+
+            return al;
+        }
+
 
     public static void main(String[] args){
 
@@ -59,9 +90,13 @@ class Main{
 
         subsets(nums,al);
 
-        Collections.sort(al);
-
         System.out.println(al);
+
+        List<Integer> al_1 = new ArrayList<>();
+
+        subsets_1(nums,al_1);
+
+        System.out.println(al_1);
 
     }
 }
