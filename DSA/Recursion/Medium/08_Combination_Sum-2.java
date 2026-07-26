@@ -13,3 +13,16 @@
 // Input: candidates = [2,5,2,1,2], target = 5
 // Output: [[1,2,2],[5]]
 // Explanation: These are the unique combinations whose sum is equal to target.
+
+class Main{
+
+
+    public static List<List<Integer>> combinationSum2(int index, List<List<Integer>> al, int target, int sum, int[] nums, List<Integer> ds){
+        
+    }
+
+
+    public static void main(String[] args){
+        
+    }
+}
