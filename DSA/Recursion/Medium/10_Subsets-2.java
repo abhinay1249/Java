@@ -15,7 +15,6 @@
 // Explanation: Only two unique subsets are available.
 
 
-
 import java.util.*;
 
 class Main{
@@ -40,7 +39,6 @@ class Main{
 
         }
 
-
         public static void subsetsWithDup(int[] nums) {
 
             int index = 0;
@@ -51,6 +49,29 @@ class Main{
             recursiveSubsets(index, hs, nums, ds);
 
             List<List<Integer>> al = new ArrayList<>(hs);
+
+            System.out.println(al);        
+        }
+
+    // =================================== Optimal Approach =======================================
+
+
+        private static List<List<Integer>> recursiveSubsets(int index, List<List<Integer>> al, int[] nums, List<Integer> ds){
+
+
+
+            return al;
+
+        }
+    
+        public static void subsetsWithDup_1(int[] nums) {
+
+            int index = 0;
+            List<List<Integer>> al = new ArrayList<>();
+
+            List<Integer> ds = new ArrayList<>();
+
+            recursiveSubsets(index, hs, nums, ds);
 
             System.out.println(al);        
         }
