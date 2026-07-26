@@ -16,12 +16,52 @@
 // In this case the generated subsets are [ [], [1], [2], [2,1], [3], [3,1], [3,2].
 // [3,2,1],so the sums we get will be  0,1,2,3,3,4,5,6
 
+import java.util.*;
 
 class Main{
 
+    // ============================================== Recursive Approach - 1 ========================================
 
+        private static List<Integer> recursiveSubsets(int index, int[] nums, List<Integer> al, int sum){
+
+            al.add(sum);
+
+            if(index == nums.length){
+                return al;
+            }
+
+            for(int i = index ; i < nums.length ; i++){
+                sum += nums[i];
+                recursiveSubsets(i+1, nums, al, sum);                       
+                sum -= nums[i];
+            }
+
+            return al;
+
+        }
+
+        public static List<Integer> subsets(int[] nums, List<Integer> al){
+
+            int sum = 0;
+            int index = 0;
+
+            recursiveSubsets(index, nums, al, 0);
+
+            return al;
+
+        } 
 
     public static void main(String[] args){
-        
+
+        int[] nums = {5, 2, 1};
+
+        List<Integer> al = new ArrayList<>();
+
+        subsets(nums,al);
+
+        Collections.sort(al);
+
+        System.out.println(al);
+
     }
 }
