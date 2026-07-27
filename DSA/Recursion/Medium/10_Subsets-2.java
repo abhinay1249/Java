@@ -15,7 +15,12 @@
 // Explanation: Only two unique subsets are available.
 
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 class Main{
 
@@ -56,9 +61,21 @@ class Main{
     // =================================== Optimal Approach =======================================
 
 
-        private static List<List<Integer>> recursiveSubsets(int index, List<List<Integer>> al, int[] nums, List<Integer> ds){
+        private static List<List<Integer>> recursiveSubsets_1(int index, List<List<Integer>> al, int[] nums, List<Integer> ds){
 
+            al.add(new ArrayList<>(ds));
 
+            for(int i = index ; i < nums.length ; i++){
+                
+                if(i != index && nums[i] == nums[i-1]){
+                    continue;
+                }
+
+                ds.add(nums[i]);
+                recursiveSubsets_1(i+1, al, nums, ds);              
+                ds.remove(ds.size()-1);
+
+            }
 
             return al;
 
@@ -67,20 +84,25 @@ class Main{
         public static void subsetsWithDup_1(int[] nums) {
 
             int index = 0;
+
             List<List<Integer>> al = new ArrayList<>();
 
             List<Integer> ds = new ArrayList<>();
 
-            recursiveSubsets(index, hs, nums, ds);
+            Arrays.sort(nums);
+
+            recursiveSubsets_1(index, al, nums, ds);
 
             System.out.println(al);        
         }
 
     public static void main(String[] args){
 
-        int[] nums = {1,2,2};
+        int[] nums = {1,2,2,3,2,3};
 
         subsetsWithDup(nums);
+
+        subsetsWithDup_1(nums);
 
     }
 }
