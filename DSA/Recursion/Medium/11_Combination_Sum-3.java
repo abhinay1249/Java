@@ -18,11 +18,13 @@
 // Output: [[1, 2, 6],[1, 3, 5],[2, 3, 4]]
 // Explanation: 1 + 2 + 6 = 9, 1 + 3 + 5 = 9, 2 + 3 + 4 = 9. There are no other valid combinations.
 
+
+
 class Main{
 
     public static List<List<Integer>> combinationSum3(int k, int n){
         
-        List<List<Integer>> al = new Ar()
+        List<List<Integer>> al = new ArrayList<>();
 
         return al;
     }
