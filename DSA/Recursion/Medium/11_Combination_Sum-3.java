@@ -17,3 +17,16 @@
 // Input: k = 3, n = 9
 // Output: [[1, 2, 6],[1, 3, 5],[2, 3, 4]]
 // Explanation: 1 + 2 + 6 = 9, 1 + 3 + 5 = 9, 2 + 3 + 4 = 9. There are no other valid combinations.
+
+class Main{
+
+    public static List<List<Integer>> combinationSum3(int k, int n){
+
+    }
+    public static void main(String[] args) {
+        int  k = 3;
+        int n = 9;
+
+        combinationSum3(k, n);
+    }
+}
