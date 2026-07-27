@@ -72,7 +72,7 @@ class Main{
                 }
 
                 ds.add(nums[i]);
-                recursiveSubsets_1(i+1, al, nums, ds);              
+                recursiveSubsets_1(i+1, al, nums, ds);              // T.C = O(2^N * N) + O(N LOG N), S.C = O(2^N * K) + O(N)
                 ds.remove(ds.size()-1);
 
             }
