@@ -21,7 +21,10 @@
 class Main{
 
     public static List<List<Integer>> combinationSum3(int k, int n){
+        
+        List<List<Integer>> al = new Ar()
 
+        return al;
     }
     public static void main(String[] args) {
         int  k = 3;
