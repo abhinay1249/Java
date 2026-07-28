@@ -36,7 +36,7 @@ class Main{
 
             if(counter == k){
                 if(sum == n){
-                    al.add(new ArrayList<>(ds));
+                    al.add(new ArrayList<>(ds));                             // T.C = O(2^N), S.C = O(N) + O(Y * X), where Y = no of answers and X is average length of combination
                     return al;
                 }else{
                     return al;
