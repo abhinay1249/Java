@@ -24,43 +24,45 @@ import java.util.List;
 
 class Main{
 
-    private static List<List<Integer>> recursiveCombination3(int index, List<List<Integer>> al, int sum, int counter, int k, int n, List<Integer> ds){
+    // ============================== Recursive Approach =========================================
 
-        if(n < sum || index > 10){
-            return al;
-        }
+        private static List<List<Integer>> recursiveCombination3(int index, List<List<Integer>> al, int sum, int counter, int k, int n, List<Integer> ds){
 
-        if(ds.size() > k) return al;
-
-        if(counter == k){
-            if(sum == n){
-                al.add(new ArrayList<>(ds));
-                return al;
-            }else{
+            if(n < sum || index > 10){
                 return al;
             }
+
+            if(ds.size() > k) return al;
+
+            if(counter == k){
+                if(sum == n){
+                    al.add(new ArrayList<>(ds));
+                    return al;
+                }else{
+                    return al;
+                }
+            }
+
+            ds.add(index);
+            recursiveCombination3(index+1, al, sum + index, counter+1, k, n, ds);
+            ds.remove(ds.size()-1);
+            recursiveCombination3(index+1, al, sum, counter, k, n, ds);
+
+            return al;
+
         }
 
-        ds.add(index);
-        recursiveCombination3(index+1, al, sum + index, counter+1, k, n, ds);
-        ds.remove(ds.size()-1);
-        recursiveCombination3(index+1, al, sum, counter, k, n, ds);
+        public static List<List<Integer>> combinationSum3(List<List<Integer>> al, int k, int n) {
 
-        return al;
+            int index = 1;
 
-    }
+            int sum = 0, counter = 0;
 
-    public static List<List<Integer>> combinationSum3(List<List<Integer>> al, int k, int n) {
+            recursiveCombination3(index, al, sum, counter, k, n, new ArrayList<>());
 
-        int index = 1;
-        
-        int sum = 0, counter = 0;
+            return al;
 
-        recursiveCombination3(index, al, sum, counter, k, n, new ArrayList<>());
-
-        return al;
-        
-    }
+        }
     public static void main(String[] args) {
         
         int  k = 3;
@@ -71,6 +73,6 @@ class Main{
         combinationSum3(al,k, n);
 
         System.out.println(al);
-        
+
     }
 }
