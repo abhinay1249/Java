@@ -24,7 +24,7 @@ import java.util.List;
 
 class Main{
 
-    private List<List<Integer>> recursiveCombination3(int index, List<List<Integer>> al, int sum, int counter, int k, int n, List<Integer> ds){
+    private static List<List<Integer>> recursiveCombination3(int index, List<List<Integer>> al, int sum, int counter, int k, int n, List<Integer> ds){
 
         if(n < sum || index > 9){
             return al;
