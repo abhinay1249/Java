@@ -24,6 +24,32 @@ import java.util.List;
 
 class Main{
 
+    private List<List<Integer>> recursiveCombination3(int index, List<List<Integer>> al, int sum, int counter, int k, int n, List<Integer> ds){
+
+        if(n < sum || index > 9){
+            return al;
+        }
+
+        if(ds.size() > k) return al;
+
+        if(counter == k){
+            if(sum == n){
+                al.add(new ArrayList<>(ds));
+                return al;
+            }else{
+                return al;
+            }
+        }
+
+        ds.add(index);
+        recursiveCombination3(index+1, al, sum + index, counter+1, k, n, ds);
+        ds.remove(ds.size()-1);
+        recursiveCombination3(index+1, al, sum, counter, k, n, ds);
+
+        return al;
+
+    }
+
     public static List<List<Integer>> combinationSum3(int k, int n) {
 
         int index = 1;
