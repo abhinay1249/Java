@@ -24,11 +24,16 @@ import java.util.List;
 
 class Main{
 
-    public static List<List<Integer>> combinationSum3(int k, int n){
-        
+    public List<List<Integer>> combinationSum3(int k, int n) {
+
+        int index = 1;
         List<List<Integer>> al = new ArrayList<>();
+        int sum = 0, counter = 0;
+
+        recursiveCombination3(index, al, sum, counter, k, n, new ArrayList<>());
 
         return al;
+        
     }
     public static void main(String[] args) {
         
