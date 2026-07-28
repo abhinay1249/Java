@@ -26,7 +26,7 @@ class Main{
 
     private static List<List<Integer>> recursiveCombination3(int index, List<List<Integer>> al, int sum, int counter, int k, int n, List<Integer> ds){
 
-        if(n < sum || index > 9){
+        if(n < sum || index > 10){
             return al;
         }
 
@@ -50,10 +50,10 @@ class Main{
 
     }
 
-    public static List<List<Integer>> combinationSum3(int k, int n) {
+    public static List<List<Integer>> combinationSum3(List<List<Integer>> al, int k, int n) {
 
         int index = 1;
-        List<List<Integer>> al = new ArrayList<>();
+        
         int sum = 0, counter = 0;
 
         recursiveCombination3(index, al, sum, counter, k, n, new ArrayList<>());
@@ -66,6 +66,11 @@ class Main{
         int  k = 3;
         int n = 9;
 
-        combinationSum3(k, n);
+        List<List<Integer>> al = new ArrayList<>();
+        
+        combinationSum3(al,k, n);
+
+        System.out.println(al);
+        
     }
 }
