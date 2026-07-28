@@ -19,6 +19,8 @@
 // Explanation: 1 + 2 + 6 = 9, 1 + 3 + 5 = 9, 2 + 3 + 4 = 9. There are no other valid combinations.
 
 
+import java.util.ArrayList;
+import java.util.List;
 
 class Main{
 
@@ -29,6 +31,7 @@ class Main{
         return al;
     }
     public static void main(String[] args) {
+        
         int  k = 3;
         int n = 9;
 
