@@ -24,7 +24,7 @@ import java.util.List;
 
 class Main{
 
-    public List<List<Integer>> combinationSum3(int k, int n) {
+    public static List<List<Integer>> combinationSum3(int k, int n) {
 
         int index = 1;
         List<List<Integer>> al = new ArrayList<>();
