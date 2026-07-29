@@ -17,8 +17,8 @@
 
 class Main{
 
-    public static List<String> letter(){
-        
+    public static List<String> letterCombinations(){
+
     }
     public static void main(String[] args) {
         
