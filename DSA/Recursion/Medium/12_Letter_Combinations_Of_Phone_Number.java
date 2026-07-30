@@ -18,7 +18,7 @@ import java.util.*;
 
 class Main{
 
-    public static List<String> letterCombinations(){
+    public static List<String> letterCombinations(String s, List<Integer> al){
 
     }
     public static void main(String[] args) {
@@ -26,6 +26,8 @@ class Main{
         String s = "34";
 
         List<String> al = new ArrayList<>();
+
+        letterCombinations(s,al);
 
 
     }
