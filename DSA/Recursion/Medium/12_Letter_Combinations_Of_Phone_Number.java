@@ -14,12 +14,15 @@
 // Output: [ "d", "e", "f" ]
 // Explanation: The 3 is mapped with "def".
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 class Main{
 
-    public static List<String> letterCombinations(String s, List<Integer> al){
+    public static List<String> letterCombinations(String s, List<String> al){
 
+
+        return al;
     }
     public static void main(String[] args) {
         
