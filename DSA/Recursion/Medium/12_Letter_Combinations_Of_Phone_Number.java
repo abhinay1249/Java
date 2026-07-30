@@ -25,6 +25,8 @@ class Main{
         
         String s = "34";
 
+        List<String> al = new ArrayList<>();
+
 
     }
 }
