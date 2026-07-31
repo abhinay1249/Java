@@ -46,15 +46,14 @@ class Main{
 
             phoneNumbers.put('2',"abc");
             phoneNumbers.put('3',"def");
-            phoneNumbers.put('4',"ghi");                        // T.C = O(2^N * N), S.C = O(2^N * N)
+            phoneNumbers.put('4',"ghi");                        // T.C = O(4^N * N), S.C = O(4^N * N)
             phoneNumbers.put('5',"jkl");                
             phoneNumbers.put('6',"mno");
             phoneNumbers.put('7',"pqrs");
             phoneNumbers.put('8',"tuv");
-            phoneNumbers.put('8',"wxyz");
+            phoneNumbers.put('9',"wxyz");
 
             recursiveLetterCombinations(0, digits, al, phoneNumbers, new StringBuilder(""));
-
             return al;
 
         }
