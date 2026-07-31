@@ -21,13 +21,24 @@ import java.util.Map;
 
 class Main{
 
-    private static List<String> recursiveLetterCombinations(int index, String s, List<String> al, HashMap<Character,String> phoneNumbers){
+    private static void recursiveLetterCombinations(int index, String digits, List<String> al, Map<Character,String> phoneNumbers, StringBuilder temp){
+    
+        if(index == digits.length()){
+            al.add(temp.toString());
+            return;
+        }
 
+        String str = phoneNumbers.get(digits.charAt(index));
 
-        return al;
+        for(int characterIndex = 0 ; characterIndex < str.length() ; characterIndex++){
+            temp.append(str.charAt(characterIndex));
+            recursiveLetterCombinations(index+1, digits, al, phoneNumbers, temp);
+            temp.deleteCharAt(temp.length() - 1);
+        }
+    
     }
 
-    public static List<String> letterCombinations(String s, List<String> al){
+    public static List<String> letterCombinations(String digits, List<String> al){
 
         Map<Character, String> phoneNumbers = new HashMap<>();
         
@@ -40,9 +51,10 @@ class Main{
         phoneNumbers.put('8',"tuv");
         phoneNumbers.put('8',"wxyz");
 
-        recursiveLetterCombinations(0, s, al, phoneNumbers);
+        recursiveLetterCombinations(0, digits, al, phoneNumbers, new StringBuilder(""));
 
         return al;
+        
     }
     public static void main(String[] args) {
         
@@ -52,6 +64,7 @@ class Main{
 
         letterCombinations(s,al);
 
+        System.out.println(al);
 
     }
 }
