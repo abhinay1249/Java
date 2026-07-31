@@ -37,7 +37,7 @@ class Main{
         phoneNumbers.put('5',"jkl");
         phoneNumbers.put('6',"mno");
         phoneNumbers.put('7',"pqrs");
-        phoneNumbers.put('8',"abc");
+        phoneNumbers.put('8',"tuv");
         phoneNumbers.put('8',"abc");
 
 
