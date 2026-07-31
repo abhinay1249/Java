@@ -42,6 +42,8 @@ class Main{
 
         public static List<String> letterCombinations(String digits, List<String> al){
 
+            if(digits.length() == 0) return al;
+
             Map<Character, String> phoneNumbers = new HashMap<>();
 
             phoneNumbers.put('2',"abc");
