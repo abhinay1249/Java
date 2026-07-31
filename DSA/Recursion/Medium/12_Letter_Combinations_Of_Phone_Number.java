@@ -27,6 +27,10 @@ class Main{
 
     public static List<String> letterCombinations(String s, List<String> al){
 
+        Map<Character, String> phoneNumbers = new HashMap<>();
+
+        
+
 
         return al;
     }
