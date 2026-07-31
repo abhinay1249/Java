@@ -32,8 +32,8 @@ class Main{
         Map<Character, String> phoneNumbers = new HashMap<>();
         
         phoneNumbers.put('2',"abc");
-        phoneNumbers.put('3',"abc");
-        phoneNumbers.put('4',"abc");
+        phoneNumbers.put('3',"def");
+        phoneNumbers.put('4',"ghi");
         phoneNumbers.put('5',"abc");
         phoneNumbers.put('6',"abc");
         phoneNumbers.put('7',"abc");
