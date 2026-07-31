@@ -40,7 +40,7 @@ class Main{
         phoneNumbers.put('8',"tuv");
         phoneNumbers.put('8',"wxyz");
 
-
+        recursiveLetterCombinations(s, al, phoneNumbers);
 
         return al;
     }
