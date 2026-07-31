@@ -21,7 +21,7 @@ import java.util.Map;
 
 class Main{
 
-    private static List<String> recursiveLetterCombinations(String s, List<String> al){
+    private static List<String> recursiveLetterCombinations(String s, List<String> al, HashMap<Character,String> phoneNumbers){
 
 
         return al;
