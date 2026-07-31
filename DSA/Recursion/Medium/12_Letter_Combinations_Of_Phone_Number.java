@@ -21,41 +21,43 @@ import java.util.Map;
 
 class Main{
 
-    private static void recursiveLetterCombinations(int index, String digits, List<String> al, Map<Character,String> phoneNumbers, StringBuilder temp){
-    
-        if(index == digits.length()){
-            al.add(temp.toString());
-            return;
+    // ================================ Recursive Approach ===============================
+
+        private static void recursiveLetterCombinations(int index, String digits, List<String> al, Map<Character,String> phoneNumbers, StringBuilder temp){
+        
+            if(index == digits.length()){
+                al.add(temp.toString());
+                return;
+            }
+
+            String str = phoneNumbers.get(digits.charAt(index));
+
+            for(int characterIndex = 0 ; characterIndex < str.length() ; characterIndex++){
+                temp.append(str.charAt(characterIndex));
+                recursiveLetterCombinations(index+1, digits, al, phoneNumbers, temp);
+                temp.deleteCharAt(temp.length() - 1);
+            }
+        
         }
 
-        String str = phoneNumbers.get(digits.charAt(index));
+        public static List<String> letterCombinations(String digits, List<String> al){
 
-        for(int characterIndex = 0 ; characterIndex < str.length() ; characterIndex++){
-            temp.append(str.charAt(characterIndex));
-            recursiveLetterCombinations(index+1, digits, al, phoneNumbers, temp);
-            temp.deleteCharAt(temp.length() - 1);
+            Map<Character, String> phoneNumbers = new HashMap<>();
+
+            phoneNumbers.put('2',"abc");
+            phoneNumbers.put('3',"def");
+            phoneNumbers.put('4',"ghi");
+            phoneNumbers.put('5',"jkl");
+            phoneNumbers.put('6',"mno");
+            phoneNumbers.put('7',"pqrs");
+            phoneNumbers.put('8',"tuv");
+            phoneNumbers.put('8',"wxyz");
+
+            recursiveLetterCombinations(0, digits, al, phoneNumbers, new StringBuilder(""));
+
+            return al;
+
         }
-    
-    }
-
-    public static List<String> letterCombinations(String digits, List<String> al){
-
-        Map<Character, String> phoneNumbers = new HashMap<>();
-        
-        phoneNumbers.put('2',"abc");
-        phoneNumbers.put('3',"def");
-        phoneNumbers.put('4',"ghi");
-        phoneNumbers.put('5',"jkl");
-        phoneNumbers.put('6',"mno");
-        phoneNumbers.put('7',"pqrs");
-        phoneNumbers.put('8',"tuv");
-        phoneNumbers.put('8',"wxyz");
-
-        recursiveLetterCombinations(0, digits, al, phoneNumbers, new StringBuilder(""));
-
-        return al;
-        
-    }
     public static void main(String[] args) {
         
         String s = "34";
