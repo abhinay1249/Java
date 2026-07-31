@@ -34,9 +34,9 @@ class Main{
         phoneNumbers.put('2',"abc");
         phoneNumbers.put('3',"def");
         phoneNumbers.put('4',"ghi");
-        phoneNumbers.put('5',"abc");
-        phoneNumbers.put('6',"abc");
-        phoneNumbers.put('7',"abc");
+        phoneNumbers.put('5',"jkl");
+        phoneNumbers.put('6',"mno");
+        phoneNumbers.put('7',"pqrs");
         phoneNumbers.put('8',"abc");
         phoneNumbers.put('8',"abc");
 
