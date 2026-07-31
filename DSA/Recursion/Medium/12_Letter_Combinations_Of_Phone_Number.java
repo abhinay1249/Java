@@ -30,7 +30,15 @@ class Main{
     public static List<String> letterCombinations(String s, List<String> al){
 
         Map<Character, String> phoneNumbers = new HashMap<>();
-
+        
+        phoneNumbers.put('2',"abc");
+        phoneNumbers.put('3',"abc");
+        phoneNumbers.put('4',"abc");
+        phoneNumbers.put('5',"abc");
+        phoneNumbers.put('6',"abc");
+        phoneNumbers.put('7',"abc");
+        phoneNumbers.put('8',"abc");
+        phoneNumbers.put('8',"abc");
 
 
 
