@@ -54,9 +54,9 @@ class Main{
 
             int index = 0;
 
-            recursivePartition(s, index, al, new ArrayList<>());
+            recursivePartition(s, index, al, new ArrayList<>());            // T.C = O(2^N * N^2), S.C = O(N * 2^N) 
 
-            return al;
+            return al;  
 
         }
     public static void main(String[] args) {
