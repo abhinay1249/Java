@@ -19,44 +19,46 @@ import java.util.List;
 
 class Main{
 
-    private static boolean isPalindrome(String str, int left, int right){
+    // ================================== Recursive Approach ============================================
 
-        while(left <= right){
-            if(str.charAt(left) != str.charAt(right)) return false;
-            left++;
-            right--;
+        private static boolean isPalindrome(String str, int left, int right){
+
+            while(left <= right){
+                if(str.charAt(left) != str.charAt(right)) return false;
+                left++;
+                right--;
+            }
+
+            return true;
+
         }
 
-        return true;
+        private static void recursivePartition(String s, int index, List<List<String>>al, List<String> ds){
 
-    }
+            if(index == s.length()){
+                al.add(new ArrayList<>(ds));
+                return;
+            }
 
-    private static void recursivePartition(String s, int index, List<List<String>>al, List<String> ds){
-        
-        if(index == s.length()){
-            al.add(new ArrayList<>(ds));
-            return;
-        }
-
-        for(int characterIdx = index ; characterIdx < s.length() ; characterIdx++){
-            if(isPalindrome(s, index, characterIdx)){
-                ds.add(s.substring(index, characterIdx+1));
-                recursivePartition(s, characterIdx+1, al, ds);
-                ds.remove(ds.size()-1);
+            for(int characterIdx = index ; characterIdx < s.length() ; characterIdx++){
+                if(isPalindrome(s, index, characterIdx)){
+                    ds.add(s.substring(index, characterIdx+1));
+                    recursivePartition(s, characterIdx+1, al, ds);
+                    ds.remove(ds.size()-1);
+                }
             }
         }
-    }
 
 
-    public static List<List<String>> partition(String s, List<List<String>> al) {
+        public static List<List<String>> partition(String s, List<List<String>> al) {
 
-        int index = 0;
+            int index = 0;
 
-        recursivePartition(s, index, al, new ArrayList<>());
+            recursivePartition(s, index, al, new ArrayList<>());
 
-        return al;
-        
-    }
+            return al;
+
+        }
     public static void main(String[] args) {
 
         String s = "aabaa";
