@@ -15,10 +15,19 @@
 // Explanation:  There is no such word in the given matrix.
 
 class Main{
+
+    public static boolean wordSearch(char[][] board, String word){
+
+
+
+    }
     
     
     public static void main(String[] args) {
         
+        char[][] board = {{}};
+
+        String word = "ABCCED";
     }
-    
+
 }
