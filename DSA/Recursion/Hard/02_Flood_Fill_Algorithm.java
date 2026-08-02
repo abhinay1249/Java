@@ -17,7 +17,7 @@
 
 class Main{
 
-    // =========================== Recursive Approach -1 ====================================
+    // =========================== Recursive Approach - 1 ====================================
 
         private static void recursiveFloodFill(int rowIdx, int colIdx, int[][] image, int oldColor, int newColor, int rowLength, int colLength){
 
@@ -50,12 +50,14 @@ class Main{
 
         private static void recursiveFloodFill_1(int rowIdx, int colIdx, int[][] image, int oldColor, int newColor, int[] rowOperations, int[] colOperations){
 
+            image[rowIdx][colIdx] = newColor;
+
             int rowLength = image.length;
             int colLength = image[0].length;
 
             for(int counter = 0 ; counter < 4; counter++){
-                int nRow = rowIdx + rowOperations[i]; 
-                int nCol = colIdx + colOperations[i];
+                int nRow = rowIdx + rowOperations[counter]; 
+                int nCol = colIdx + colOperations[counter];
                 
                 if(nRow >= 0 && nRow < rowLength && nCol >= 0 && nCol < colLength && image[nRow][nCol] == oldColor && image[nRow][nCol] != newColor){
                     recursiveFloodFill_1(nRow, nCol, image, oldColor, newColor, rowOperations, colOperations);
@@ -95,6 +97,5 @@ class Main{
             }
         }
 
-        
     }
 }
