@@ -18,7 +18,7 @@ class Main{
 
     public static boolean wordSearch(char[][] board, String word){
 
-
+        return recursiveWordSearch();
 
     }
     
@@ -32,7 +32,7 @@ class Main{
         boolean result = wordSearch(board, word);
 
         System.out.println(result);
-        
+
     }
 
 }
