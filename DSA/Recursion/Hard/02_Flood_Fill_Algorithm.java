@@ -48,7 +48,7 @@ class Main{
             return image;
         }
 
-    // ================================== Recursive Approach - 2 ======================================
+    // =============================== Recursive Approach - 2 ======================================
 
         private static void recursiveFloodFill_1(int rowIdx, int colIdx, int[][] image, int oldColor, int newColor, int[] rowOperations, int[] colOperations){
 
