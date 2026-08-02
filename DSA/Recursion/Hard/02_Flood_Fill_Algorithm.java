@@ -4,10 +4,29 @@
 
 // To perform a flood fill:
 
-// Begin with the starting pixel and change its color to color.
-// Perform the same process for each pixel that is directly adjacent 
-// (pixels that share a side with the original pixel, either horizontally or vertically) and shares the same color as the starting pixel.
-// Keep repeating this process by checking neighboring pixels of the updated pixels 
-// and modifying their color if it matches the original color of the starting pixel.
-// The process stops when there are no more adjacent pixels of the original color to update.
+// ** Begin with the starting pixel and change its color to color.
+// ** Perform the same process for each pixel that is directly adjacent 
+//      (pixels that share a side with the original pixel, either horizontally or vertically) and 
+//      shares the same color as the starting pixel.
+// ** Keep repeating this process by checking neighboring pixels of the updated pixels 
+//       and modifying their color if it matches the original color of the starting pixel.
+// ** The process stops when there are no more adjacent pixels of the original color to update.
+
 // Return the modified image after performing the flood fill.
+
+class Main{
+
+    public static int[][] floodFill(int[][] image, int sr, int sc, int newColor){
+
+        int oldColor = image[sr][sc];
+
+        recursiveFloodFill(sr, sc, image, oldColor, newColor);
+
+        return image;
+
+    }
+
+    public static void main(String[] args) {
+        
+    }
+}
