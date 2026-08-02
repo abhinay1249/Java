@@ -39,7 +39,7 @@ class Main{
             int oldColor = image[sr][sc];
 
             int rowLength = image.length;
-            int colLength = image[0].length;
+            int colLength = image[0].length;                            // T.C = O(M * N), S.C = O(M * N)
 
             recursiveFloodFill(sr, sc, image, oldColor, newColor, rowLength, colLength);
 
