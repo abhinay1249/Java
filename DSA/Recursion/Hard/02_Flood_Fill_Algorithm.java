@@ -70,7 +70,7 @@ class Main{
             
             int oldColor = image[sr][sc];
             int[] rowOperations = {0,1,0,-1};
-            int[] colOperations = {1,0,-1,0};
+            int[] colOperations = {1,0,-1,0};                               // T.C = O(4(N * M)), S.C = O(N * M) + O(N * M)
 
             recursiveFloodFill_1(sr, sc, image, oldColor, newColor, rowOperations, colOperations);
 
