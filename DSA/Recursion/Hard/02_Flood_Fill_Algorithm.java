@@ -38,6 +38,8 @@ class Main{
 
             int oldColor = image[sr][sc];
 
+            if(oldColor == newColor) return image;
+
             int rowLength = image.length;
             int colLength = image[0].length;                            // T.C = O(M * N), S.C = O(M * N)
 
