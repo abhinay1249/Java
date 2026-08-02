@@ -52,6 +52,15 @@ class Main{
 
             int rowLength = image.length;
             int colLength = image[0].length;
+
+            for(int counter = 0 ; counter < 4; counter++){
+                int nRow = rowIdx + rowOperations[i]; 
+                int nCol = colIdx + colOperations[i];
+                
+                if(nRow >= 0 && nRow < rowLength && nCol >= 0 && nCol < colLength && image[nRow][nCol] == oldColor && image[nRow][nCol] != newColor){
+                    recursiveFloodFill_1(nRow, nCol, image, oldColor, newColor, rowOperations, colOperations);
+                }
+            }
         
         }
 
@@ -78,7 +87,7 @@ class Main{
 
         int newColor = 4;
 
-        floodFill(image_1, sr, sc, newColor);
+        floodFill_1(image_1, sr, sc, newColor);
 
         for(int index_1 = 0; index_1 < image_1.length ; index_1++){
             for(int index_2 = 0 ; index_2 < image[0].length ; index_2++){
