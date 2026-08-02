@@ -14,16 +14,17 @@
 
 // Return the modified image after performing the flood fill.
 
+
 class Main{
 
     private static void recursiveFloodFill(int rowIdx, int colIdx, int[][] image, int oldColor, int newColor, int rowLength, int colLength){
 
-        if(rowIdx < 0 || colIdx < 0 || rowIdx < rowLength || colIdx < colLength || image[rowIdx][colIdx] != oldColor){
+        if(rowIdx < 0 || colIdx < 0 || rowIdx == rowLength || colIdx == colLength || image[rowIdx][colIdx] != oldColor){
             return;
         }
 
         image[rowIdx][colIdx] = newColor;
-        
+
         recursiveFloodFill(rowIdx+1, colIdx, image, oldColor, newColor, rowLength, colLength);
         recursiveFloodFill(rowIdx-1, colIdx, image, oldColor, newColor, rowLength, colLength);
         recursiveFloodFill(rowIdx, colIdx+1, image, oldColor, newColor, rowLength, colLength);
@@ -41,10 +42,27 @@ class Main{
         recursiveFloodFill(sr, sc, image, oldColor, newColor, rowLength, colLength);
 
         return image;
-
     }
 
     public static void main(String[] args) {
+
+        int[][] image = {{1,0,1},{0,1,0},{1,1,1}};
+
+        int[][] image_1 = image.clone();
+
+        int sr = 2;
+        int sc = 0;
+
+        int newColor = 4;
+
+        floodFill(image_1, sr, sc, newColor);
+
+        for(int index_1 = 0; index_1 < image_1.length ; index_1++){
+            for(int index_2 = 0 ; index_2 < image[0].length ; index_2++){
+                System.out.println(image[index_1][index_2]);
+            }
+        }
+
         
     }
 }
