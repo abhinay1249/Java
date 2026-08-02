@@ -17,6 +17,8 @@
 
 class Main{
 
+    // ======================================== Recursive Approach -1 ====================================
+
     private static void recursiveFloodFill(int rowIdx, int colIdx, int[][] image, int oldColor, int newColor, int rowLength, int colLength){
 
         if(rowIdx < 0 || colIdx < 0 || rowIdx == rowLength || colIdx == colLength || image[rowIdx][colIdx] != oldColor){
