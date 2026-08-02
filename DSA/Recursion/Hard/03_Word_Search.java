@@ -4,7 +4,7 @@
 
 // Example 1:
 
-// Input: [["A", "B", "C", "E"], ["S", "F", "C", "S"]["A", "D", "E", "E"]] word = "ABCCED"
+// Input : [["A", "B", "C", "E"], ["S", "F", "C", "S"]["A", "D", "E", "E"]] word = "ABCCED"
 // Output: true
 // Explanation: We can easily find the given word in the matrix.
 
