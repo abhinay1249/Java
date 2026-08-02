@@ -16,6 +16,13 @@
 
 class Main{
 
+    private static int[][] recursiveFloodFill(int rowIdx, int colIdx, int[][] image, int oldColor, int newColor, int rowLength, int colLength){
+
+        if(rowIdx < 0 || colIdx < 0 || rowIdx < rowLength || colIdx < colLength || image[rowIdx][colIdx] != oldColor){
+            return;
+        }
+    }
+
     public static int[][] floodFill(int[][] image, int sr, int sc, int newColor){
 
         int oldColor = image[sr][sc];
