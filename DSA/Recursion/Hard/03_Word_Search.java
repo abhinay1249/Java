@@ -25,9 +25,13 @@ class Main{
     
     public static void main(String[] args) {
         
-        char[][] board = {{}};
+        char[][] board = {{'A','B','C','E'},{'S','F','C','S'},{'A','D','E','E'}};
 
         String word = "ABCCED";
+
+        boolean result = wordSearch(board, word);
+
+        System.out.println(result);
     }
 
 }
