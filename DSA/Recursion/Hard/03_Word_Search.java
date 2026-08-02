@@ -32,6 +32,7 @@ class Main{
         boolean result = wordSearch(board, word);
 
         System.out.println(result);
+        
     }
 
 }
