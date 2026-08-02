@@ -16,18 +16,29 @@
 
 class Main{
 
-    private static int[][] recursiveFloodFill(int rowIdx, int colIdx, int[][] image, int oldColor, int newColor, int rowLength, int colLength){
+    private static void recursiveFloodFill(int rowIdx, int colIdx, int[][] image, int oldColor, int newColor, int rowLength, int colLength){
 
         if(rowIdx < 0 || colIdx < 0 || rowIdx < rowLength || colIdx < colLength || image[rowIdx][colIdx] != oldColor){
             return;
         }
+
+        image[rowIdx][colIdx] = newColor;
+        
+        recursiveFloodFill(rowIdx+1, colIdx, image, oldColor, newColor, rowLength, colLength);
+        recursiveFloodFill(rowIdx-1, colIdx, image, oldColor, newColor, rowLength, colLength);
+        recursiveFloodFill(rowIdx, colIdx+1, image, oldColor, newColor, rowLength, colLength);
+        recursiveFloodFill(rowIdx, colIdx-1, image, oldColor, newColor, rowLength, colLength);
+
     }
 
     public static int[][] floodFill(int[][] image, int sr, int sc, int newColor){
 
         int oldColor = image[sr][sc];
 
-        recursiveFloodFill(sr, sc, image, oldColor, newColor);
+        int rowLength = image.length;
+        int colLength = image[0].length;
+
+        recursiveFloodFill(sr, sc, image, oldColor, newColor, rowLength, colLength);
 
         return image;
 
