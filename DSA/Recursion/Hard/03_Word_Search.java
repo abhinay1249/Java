@@ -16,9 +16,9 @@
 
 class Main{
 
-    private static boolean recursiveWordSearch(){
-        
-    }
+        private static boolean recursiveWordSearch(){
+            
+        }
 
     public static boolean wordSearch(char[][] board, String word){
 
