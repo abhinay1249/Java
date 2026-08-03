@@ -10,7 +10,7 @@
 
 // Example 2:
 
-// Input : [["A", "B", "C", "E"],["S", "F", "C", "S"],["A", "D", "E", "E"]] word = "ABCB"
+// Input : [["A", "B", "C", "E"], ["S", "F", "C", "S"], ["A", "D", "E", "E"]] word = "ABCB"
 // Output: false
 // Explanation: There is no such word in the given matrix.
 
@@ -22,7 +22,7 @@ class Main{
 
         }
 
-        
+
         public static boolean wordSearch(char[][] board, String word){
 
 
