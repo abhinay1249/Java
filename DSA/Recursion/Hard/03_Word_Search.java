@@ -17,15 +17,15 @@
 class Main{
 
         private static boolean recursiveWordSearch(){
-            
+
         }
 
-    public static boolean wordSearch(char[][] board, String word){
-
-
-        return recursiveWordSearch();
-
-    }
+        public static boolean wordSearch(char[][] board, String word){
+        
+        
+            return recursiveWordSearch();
+        
+        }
     
     
     public static void main(String[] args) {
