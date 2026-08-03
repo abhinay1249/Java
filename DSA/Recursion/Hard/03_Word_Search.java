@@ -22,6 +22,7 @@ class Main{
 
         }
 
+        
         public static boolean wordSearch(char[][] board, String word){
 
 
