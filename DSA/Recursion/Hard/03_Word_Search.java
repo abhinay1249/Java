@@ -18,7 +18,7 @@ class Main{
 
     // ============================= Recursive Approach =========================================
 
-        private static boolean recursiveWordSearch(int rowIdx, int ){
+        private static boolean recursiveWordSearch(int rowIdx, int colIdx){
 
         }
 
@@ -35,6 +35,7 @@ class Main{
                     }
                 }
             }
+            
             return false;
 
         }
