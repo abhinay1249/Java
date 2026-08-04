@@ -30,7 +30,9 @@ class Main{
 
             for(int row = 0 ; row < rowLength ; row++){
                 for(int col = 0 ; col < colLength ; col++){
-                    
+                    if () {
+                        return true;
+                    }
                 }
             }
             
