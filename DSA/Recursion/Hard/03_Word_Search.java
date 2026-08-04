@@ -28,7 +28,9 @@ class Main{
             int rowLength = board.length;
             int colLength = board[0].length;
 
-            
+            for(int row = 0 ; row < rowLength ; row++){
+                
+            }
             
 
         }
