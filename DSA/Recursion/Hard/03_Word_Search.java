@@ -25,8 +25,9 @@ class Main{
 
         public static boolean wordSearch(char[][] board, String word){
 
-
-            return recursiveWordSearch();
+            int rowLength = board.length;
+            int colLength = board[0].length;
+            
 
         }
     
