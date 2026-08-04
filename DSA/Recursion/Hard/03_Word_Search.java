@@ -18,8 +18,28 @@ class Main{
 
     // ============================= Recursive Approach =========================================
 
-        private static boolean recursiveWordSearch(int rowIdx, int colIdx, char[][] board, ){
+        private static boolean recursiveWordSearch(int rowIdx, int colIdx, char[][] board, int rowLength, int colLength, String word, int strIdx){
 
+            if(strIdx == word.length()) return true;
+            if(rowIdx < 0 || colIdx < 0 || rowIdx == rowLength || colIdx == colLength || board[rowIdx][colIdx] != word.charAt(strIdx)) return false;
+
+            if(word.charAt(strIdx) == board[rowIdx][colIdx]){
+                strIdx+=1;
+            }
+
+            char ch = board[rowIdx][colIdx];
+
+            board[rowIdx][colIdx] = '#';
+
+
+            boolean operation_1 = recursiveWordSearch(rowIdx+1, colIdx, board, rowLength, colLength, word, strIdx);
+            boolean operation_2 = recursiveWordSearch(rowIdx-1, colIdx, board, rowLength, colLength, word, strIdx);
+            boolean operation_3 = recursiveWordSearch(rowIdx, colIdx+1, board, rowLength, colLength, word, strIdx);
+            boolean operation_4 = recursiveWordSearch(rowIdx, colIdx-1, board, rowLength, colLength, word, strIdx);
+
+            board[rowIdx][colIdx] = ch;
+
+            return operation_1 || operation_2 || operation_3 || operation_4;
 
         }
 
@@ -31,8 +51,10 @@ class Main{
 
             for(int row = 0 ; row < rowLength ; row++){
                 for(int col = 0 ; col < colLength ; col++){
-                    if () {
-                        return true;
+                    if(board[row][col] == word.charAt(0)){
+                        if(recursiveWordSearch(row, col, board, rowLength, colLength, word, 0)){
+                            return true;
+                        }
                     }
                 }
             }
