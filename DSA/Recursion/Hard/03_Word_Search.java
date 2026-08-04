@@ -27,6 +27,8 @@ class Main{
 
             int rowLength = board.length;
             int colLength = board[0].length;
+
+            
             
 
         }
