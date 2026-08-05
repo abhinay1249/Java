@@ -20,6 +20,7 @@ class Main{
     
     public static List<List<String> nQueens(){
 
+        
     }
     
     public static void main(String[] args) {
