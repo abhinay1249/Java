@@ -52,7 +52,7 @@ class Main{
             int rowLength = board.length;
             int colLength = board[0].length;
 
-            for(int row = 0 ; row < rowLength ; row++){
+            for(int row = 0 ; row < rowLength ; row++){                 // T.C = O(RowLength * ColLength * 4^k)
                 for(int col = 0 ; col < colLength ; col++){
                     if(board[row][col] == word.charAt(0)){
                         if(recursiveWordSearch(row, col, board, rowLength, colLength, word, 0)){
