@@ -36,7 +36,6 @@ class Main{
 
             board[rowIdx][colIdx] = '#';
 
-
             boolean operation_1 = recursiveWordSearch(rowIdx+1, colIdx, board, rowLength, colLength, word, strIdx);
             boolean operation_2 = recursiveWordSearch(rowIdx-1, colIdx, board, rowLength, colLength, word, strIdx);
             boolean operation_3 = recursiveWordSearch(rowIdx, colIdx+1, board, rowLength, colLength, word, strIdx);
@@ -78,5 +77,4 @@ class Main{
         System.out.println(result);
 
     }
-
 }
