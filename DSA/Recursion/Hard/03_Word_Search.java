@@ -21,7 +21,10 @@ class Main{
         private static boolean recursiveWordSearch(int rowIdx, int colIdx, char[][] board, int rowLength, int colLength, String word, int strIdx){
 
             if(strIdx == word.length()) return true;
-            if(rowIdx < 0 || colIdx < 0 || rowIdx == rowLength || colIdx == colLength || board[rowIdx][colIdx] != word.charAt(strIdx)) return false;
+            
+            if(rowIdx < 0 || colIdx < 0 || rowIdx == rowLength || colIdx == colLength || board[rowIdx][colIdx] != word.charAt(strIdx)){
+                return false;
+            } 
 
             if(word.charAt(strIdx) == board[rowIdx][colIdx]){
                 strIdx+=1;
