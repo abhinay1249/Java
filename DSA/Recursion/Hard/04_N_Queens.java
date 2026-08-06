@@ -14,13 +14,16 @@
 // Output: [["Q"]]
 // Explanation: There is only one way to place 1 queen on 1x1 chessboard.
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 class Main{
     
     public static void nQueens(int N){
 
-        List<List<String>> al = new Arraylist<>();
+        List<List<String>> al = new ArrayList<>();
+
+        System.out.println(al);
         
     }
     
