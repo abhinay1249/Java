@@ -10,9 +10,9 @@
 
 // Example 2:
 
-// Input : N = 1
+// Input: N = 1
 // Output: [["Q"]]
-// Explanation : There is only one way to place 1 queen on 1x1 chessboard.
+// Explanation: There is only one way to place 1 queen on 1x1 chessboard.
 
 import java.util.*;
 
