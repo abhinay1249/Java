@@ -18,7 +18,7 @@ class Main{
     
     public static void nQueens(int N){
 
-        List<List<
+        List<List<String>> al = new Arraylist<>();
         
     }
     
