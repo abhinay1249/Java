@@ -14,6 +14,8 @@
 // Output: [["Q"]]
 // Explanation: There is only one way to place 1 queen on 1x1 chessboard.
 
+import java.util.*;
+
 class Main{
     
     public static void nQueens(int N){
