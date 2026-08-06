@@ -18,7 +18,7 @@ import java.util.*;
 
 class Main{
     
-    public static List<List<String> nQueens(){
+    public static List<List<String> nQueens(int N){
 
         
     }
@@ -27,7 +27,7 @@ class Main{
         
         int N = 4;
 
-        nQueens();
+        nQueens(N);
 
     }
 }
