@@ -18,6 +18,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 class Main{
+
+    private static List<List<String>> recrusiveNQueens(){
+        
+    }
     
     public static void nQueens(int N){
 
