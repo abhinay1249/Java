@@ -12,7 +12,7 @@
 
 // Input: N = 1
 // Output: [["Q"]]
-// Explanation: There is only one way to place 1 queen on 1x1 chessboard.
+// Explanation: There is only one way to place 1 queen on 1 x 1 chessboard.
 
 import java.util.ArrayList;
 import java.util.List;
