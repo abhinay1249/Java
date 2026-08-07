@@ -5,7 +5,7 @@
 // Example 1:
 
 // Input: N = 4
-// Output: [[".Q..","...Q","Q...","..Q."],["..Q.","Q...","...Q",".Q.."]]
+// Output: [[".Q..","...Q","Q...","..Q."], ["..Q.","Q...","...Q",".Q.."]]
 // Explanation: There exist two distinct solutions to the 4-queens puzzle as shown below
 
 // Example 2:
