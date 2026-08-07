@@ -19,8 +19,10 @@ import java.util.List;
 
 class Main{
 
-    private static List<List<String>> recrusiveNQueens(){
-        
+    private static List<List<String>> recrusiveNQueens(List<List<String>> al){
+
+        return al;
+
     }
     
     public static void nQueens(int N){
