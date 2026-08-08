@@ -46,7 +46,7 @@ class Main{
             recursiveFloodFill(sr, sc, image, oldColor, newColor, rowLength, colLength);
 
             return image;
-            
+
         }
 
     // =============================== Recursive Approach - 2 ======================================
@@ -99,6 +99,5 @@ class Main{
                 System.out.println(image[index_1][index_2]);
             }
         }
-
     }
 }
