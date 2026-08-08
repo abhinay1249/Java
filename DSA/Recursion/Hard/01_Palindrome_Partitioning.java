@@ -49,7 +49,6 @@ class Main{
             }
         }
 
-
         public static List<List<String>> partition(String s, List<List<String>> al) {
 
             int index = 0;
