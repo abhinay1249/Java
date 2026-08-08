@@ -29,6 +29,8 @@ class Main {
 
         List<List<String>> al = new ArrayList<>();
 
+        recursiveNQueens(al);
+
         System.out.println(al);
         
     }
