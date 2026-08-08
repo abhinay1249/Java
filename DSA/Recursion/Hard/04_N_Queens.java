@@ -19,7 +19,7 @@ import java.util.List;
 
 class Main {
 
-    private static List<List<String>> recrusiveNQueens(List<List<String>> al){
+    private static List<List<String>> recursiveNQueens(List<List<String>> al){
 
         return al;
 
@@ -28,7 +28,6 @@ class Main {
     public static void nQueens(int N){
 
         List<List<String>> al = new ArrayList<>();
-
 
         System.out.println(al);
         
