@@ -94,7 +94,7 @@ class Main{
 
         floodFill_1(image_1, sr, sc, newColor);
 
-        for(int index_1 = 0; index_1 < image_1.length ; index_1++){
+        for(int index_1 = 0 ; index_1 < image_1.length ; index_1++){
             for(int index_2 = 0 ; index_2 < image[0].length ; index_2++){
                 System.out.println(image[index_1][index_2]);
             }
