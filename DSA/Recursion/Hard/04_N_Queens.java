@@ -17,7 +17,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-class Main{
+class Main {
 
     private static List<List<String>> recrusiveNQueens(List<List<String>> al){
 
@@ -30,7 +30,6 @@ class Main{
         List<List<String>> al = new ArrayList<>();
 
 
-        
         System.out.println(al);
         
     }
