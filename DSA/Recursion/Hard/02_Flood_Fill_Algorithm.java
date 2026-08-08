@@ -46,6 +46,7 @@ class Main{
             recursiveFloodFill(sr, sc, image, oldColor, newColor, rowLength, colLength);
 
             return image;
+            
         }
 
     // =============================== Recursive Approach - 2 ======================================
