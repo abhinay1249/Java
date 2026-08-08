@@ -67,5 +67,6 @@ class Main{
         partition(s, al);
 
         System.out.println(al);
+        
     }
 }
