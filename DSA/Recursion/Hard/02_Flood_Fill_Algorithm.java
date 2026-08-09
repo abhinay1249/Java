@@ -66,7 +66,6 @@ class Main{
                     recursiveFloodFill_1(nRow, nCol, image, oldColor, newColor, rowOperations, colOperations);
                 }
             }
-        
         }
 
         public static int[][] floodFill_1(int[][] image, int sr, int sc, int newColor){
