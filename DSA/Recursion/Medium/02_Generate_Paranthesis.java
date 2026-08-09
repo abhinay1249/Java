@@ -88,6 +88,5 @@ class Main{
         for(int index = 0 ; index < paranthesis.size() ; index++){
             System.out.print(paranthesis.get(index)+" ");
         }
-
     }
 }
