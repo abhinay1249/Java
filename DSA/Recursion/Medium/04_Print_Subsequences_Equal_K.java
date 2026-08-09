@@ -58,9 +58,7 @@ class Main{
             al.remove(al.size()-1);
             sum -= nums[index];
 
-            if(subsequenceEqualK(index+1, al, sum, k, nums) == true) return true;
-
-            return false;
+            return subsequenceEqualK(index+1, al, sum, k, nums) == true ? true : false;
         }
 
     public static void main(String[] args) {
