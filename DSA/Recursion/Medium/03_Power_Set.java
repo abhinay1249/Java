@@ -4,13 +4,13 @@
 
 // Input: str = "abc"
 // Output: [a, ab, abc, ac, b, bc, c]
-// Explanation: Given string has 7 subsequences.
+// Explanation : Given string has 7 subsequences.
 
 // Example 2:
 
 // Input: str = "aa"
 // Output: [a, a, aa] 
-// Explanation: Given string has 3 subsequences.
+// Explanation : Given string has 3 subsequences.
 
 import java.util.ArrayList;
 import java.util.List;
