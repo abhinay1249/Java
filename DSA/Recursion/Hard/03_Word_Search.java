@@ -5,14 +5,14 @@
 // Example 1:
 
 // Input : [["A", "B", "C", "E"], ["S", "F", "C", "S"], ["A", "D", "E", "E"]] word = "ABCCED"
-// Output: true
+// Output : true
 // Explanation: We can easily find the given word in the matrix.
 
 // Example 2:
 
 // Input : [["A", "B", "C", "E"], ["S", "F", "C", "S"], ["A", "D", "E", "E"]] word = "ABCB"
-// Output: false
-// Explanation: There is no such word in the given matrix.
+// Output : false
+// Explanation : There is no such word in the given matrix.
 
 class Main{
 
