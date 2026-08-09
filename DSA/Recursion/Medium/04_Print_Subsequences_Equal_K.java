@@ -59,6 +59,7 @@ class Main{
             sum -= nums[index];
 
             return subsequenceEqualK(index+1, al, sum, k, nums) == true ? true : false;
+            
         }
 
     public static void main(String[] args) {
