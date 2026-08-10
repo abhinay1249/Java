@@ -21,10 +21,7 @@ class Main{
         public static boolean checkSubsequence(int index, int sum, int k, int[] nums){
 
             if(index == nums.length){
-                if(sum == k){
-                    return true;
-                }
-                return false;           
+                return sum == k;        
             }                                                               // T.C = O(2^N), S.C = O(N), due to recursive stack space.
 
             sum += nums[index]; 
