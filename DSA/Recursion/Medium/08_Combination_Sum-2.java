@@ -23,7 +23,6 @@ import java.util.Set;
 
 class Main{
 
-
     // =================================== Brute Force Approach - 1 ========================================
 
         private static Set<List<Integer>> recursiveCombinationSum2(int index, Set<List<Integer>> hs, int target, int sum, int[] nums, List<Integer> ds){
@@ -65,7 +64,6 @@ class Main{
 
         }
 
-
     // =========================================== Brute Force Approach - 2 ==============================================
 
         private static Set<List<Integer>> recursiveCombinationSum2_1(int index, Set<List<Integer>> hs, int target, int[] nums, List<Integer> ds){
@@ -91,7 +89,6 @@ class Main{
 
         }
 
-
         public static List<List<Integer>> combinationSum2_1(int[] nums, int target){
 
             int index = 0;
@@ -105,7 +102,6 @@ class Main{
             return al;
 
         }
-
 
     // ================================== Optimal Approach ========================================
 
