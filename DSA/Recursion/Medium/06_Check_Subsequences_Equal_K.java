@@ -14,7 +14,7 @@
 // Explanation : No subsequence can sum up to 10.
 
 
-class Main{
+class Main {
 
     // ===================================== Recursive Approach ==========================================
 
