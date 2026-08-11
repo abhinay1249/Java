@@ -4,15 +4,15 @@
 
 // Example 1:
 
-// Input: N = 4
-// Output: [[".Q..","...Q","Q...","..Q."], ["..Q.","Q...","...Q",".Q.."]]
-// Explanation: There exist two distinct solutions to the 4-queens puzzle as shown below
+// Input : N = 4
+// Output : [[".Q..","...Q","Q...","..Q."], ["..Q.","Q...","...Q",".Q.."]]
+// Explanation : There exist two distinct solutions to the 4-queens puzzle as shown below
 
 // Example 2:
 
-// Input: N = 1
-// Output: [["Q"]]
-// Explanation: There is only one way to place 1 queen on 1 x 1 chessboard.
+// Input : N = 1
+// Output : [["Q"]]
+// Explanation : There is only one way to place 1 queen on 1 x 1 chessboard.
 
 import java.util.ArrayList;
 import java.util.List;
