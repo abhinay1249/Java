@@ -39,11 +39,16 @@ class Main {
 
     // ============================== Optimal Approach ========================================
 
+        private static List<List<String>> recursiveNQueens_1(List<List<String>> al){
+
+            return al;
+        }
+
         public static void nQueens_1(int N){
 
             List<List<String>> al = new ArrayList<>();
 
-            recursiveNQueens(al);
+            recursiveNQueens_1(al);
 
             System.out.println(al);
         }
