@@ -19,6 +19,8 @@ import java.util.List;
 
 class Main {
 
+    // ========================== Brute Force Approach =======================================
+
     private static List<List<String>> recursiveNQueens(List<List<String>> al){
 
         return al;
