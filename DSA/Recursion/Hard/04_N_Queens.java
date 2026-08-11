@@ -21,11 +21,11 @@ class Main {
 
     // ========================== Brute Force Approach =======================================
 
-    private static List<List<String>> recursiveNQueens(List<List<String>> al){
-
-        return al;
-
-    }
+        private static List<List<String>> recursiveNQueens(List<List<String>> al){
+        
+            return al;
+        
+        }
     
     public static void nQueens(int N){
 
