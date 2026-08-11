@@ -19,7 +19,7 @@ import java.util.List;
 
 class Main {
 
-    // ========================== Brute Force Approach =======================================
+    // ========================== Brute Force Approach ======================================
 
         private static List<List<String>> recursiveNQueens(List<List<String>> al){
 
@@ -28,14 +28,16 @@ class Main {
         }
     
         public static void nQueens(int N){
-        
+
             List<List<String>> al = new ArrayList<>();
-        
+
             recursiveNQueens(al);
-        
+
             System.out.println(al);
-            
+
         }
+
+    // ============================== Optimal Approach ========================================
     
     public static void main(String[] args) {
         
