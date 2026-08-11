@@ -38,6 +38,15 @@ class Main {
         }
 
     // ============================== Optimal Approach ========================================
+
+        public static void nQueens_1(int N){
+
+            List<List<String>> al = new ArrayList<>();
+
+            recursiveNQueens(al);
+
+            System.out.println(al);
+        }
     
     public static void main(String[] args) {
         
