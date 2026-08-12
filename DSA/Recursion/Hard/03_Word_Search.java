@@ -14,7 +14,7 @@
 // Output : false
 // Explanation : There is no such word in the given matrix.
 
-class Main{
+class Main {
 
     // ============================= Recursive Approach =========================================
 
