@@ -8,7 +8,7 @@
 // Output : true
 // Explanation : We can easily find the given word in the matrix.
 
-// Example 2: 
+// Example 2 : 
 
 // Input : [["A", "B", "C", "E"], ["S", "F", "C", "S"], ["A", "D", "E", "E"]] word = "ABCB"
 // Output : false
@@ -45,6 +45,7 @@ class Main{
 
             return operation_1 || operation_2 || operation_3 || operation_4;
 
+            
         }
 
         public static boolean wordSearch(char[][] board, String word){
