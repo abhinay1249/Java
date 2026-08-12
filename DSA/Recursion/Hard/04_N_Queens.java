@@ -2,7 +2,7 @@
 // Given an integer n, return all distinct solutions to the n -queens puzzle. 
 // Each solution contains a distinct boards configuration of the queen's placement, where ‘Q’ and ‘.’ indicate queen and empty space respectively.
 
-// Example 1:
+// Example 1 :
 
 // Input : N = 4
 // Output : [[".Q..","...Q","Q...","..Q."], ["..Q.","Q...","...Q",".Q.."]]
