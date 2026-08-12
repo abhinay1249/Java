@@ -45,7 +45,6 @@ class Main{
 
             return operation_1 || operation_2 || operation_3 || operation_4;
 
-            
         }
 
         public static boolean wordSearch(char[][] board, String word){
