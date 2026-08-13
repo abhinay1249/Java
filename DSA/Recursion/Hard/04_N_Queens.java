@@ -21,6 +21,10 @@ class Main {
 
     // ========================== Brute Force Approach ======================================
 
+        private static boolean isPossible(int row, int col){
+            
+        }
+
         private static List<List<String>> recursiveNQueens(List<List<String>> al, char[][] board){
 
 
