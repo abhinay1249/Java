@@ -21,7 +21,7 @@ class Main {
 
     // ========================== Brute Force Approach ======================================
 
-        private static List<List<String>> recursiveNQueens(List<List<String>> al){
+        private static List<List<String>> recursiveNQueens(List<List<String>> al, char[][] board){
 
 
             return al;
@@ -34,7 +34,7 @@ class Main {
 
             char[][] board = new char[N][N];
 
-            recursiveNQueens(al);
+            recursiveNQueens(al, board);
 
             System.out.println(al);
 
