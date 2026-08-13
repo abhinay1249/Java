@@ -23,6 +23,7 @@ class Main {
 
         private static List<List<String>> recursiveNQueens(List<List<String>> al){
 
+
             return al;
 
         }
@@ -30,6 +31,8 @@ class Main {
         public static void nQueens(int N){
 
             List<List<String>> al = new ArrayList<>();
+
+            char[][] board = new int[n][n];
 
             recursiveNQueens(al);
 
