@@ -32,7 +32,7 @@ class Main {
 
             List<List<String>> al = new ArrayList<>();
 
-            char[][] board = new int[n][n];
+            char[][] board = new char[n][n];
 
             recursiveNQueens(al);
 
