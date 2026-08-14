@@ -30,9 +30,8 @@ class Main {
                 List<String> temp = new ArrayList<>();
 
                 al.add(temp);
+                return;
             }
-
-            return al;
 
         }
     
