@@ -28,6 +28,8 @@ class Main {
 
             if(col == N){
                 List<String> temp = new ArrayList<>();
+
+                al.add(temp);
             }
 
             return al;
