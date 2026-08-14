@@ -24,7 +24,7 @@ class Main {
             
         }
 
-        private static List<List<String>> recursiveNQueens(List<List<String>> al, char[][] board){
+        private static List<List<String>> recursiveNQueens(int col, List<List<String>> al, char[][] board, int N){
 
 
             return al;
@@ -41,7 +41,7 @@ class Main {
                 Arrays.fill(board[index],'.');
             }
 
-            recursiveNQueens(al, board);
+            recursiveNQueens(0, al, board, N);
 
             System.out.println(al);
 
