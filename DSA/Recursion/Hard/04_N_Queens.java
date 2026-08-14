@@ -27,7 +27,7 @@ class Main {
         private static List<List<String>> recursiveNQueens(int col, List<List<String>> al, char[][] board, int N){
 
             if(col == N){
-                
+                List<String> temp = new ArrayList<>();
             }
 
             return al;
