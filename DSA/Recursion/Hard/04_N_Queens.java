@@ -14,8 +14,7 @@
 // Output : [["Q"]]
 // Explanation : There is only one way to place 1 queen on 1 x 1 chessboard.
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 class Main {
 
