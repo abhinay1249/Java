@@ -19,3 +19,7 @@
 // Input: n = 2 , grid = [[1, 0] , [1, 0]]
 // Output: []
 // Explanation: There is no path that rat can choose to travel from (0,0) to (1,1).
+
+class Main{
+    
+}
