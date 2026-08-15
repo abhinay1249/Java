@@ -5,3 +5,5 @@
 // The value 0 in grid denotes that the cell is blocked and rat cannot use that cell for travelling, 
 // whereas value 1 represents that rat can travel through the cell. 
 // If the cell (0, 0) has 0 value, then mouse cannot move to any other cell.
+
+// Example 1 :
