@@ -20,14 +20,14 @@ class Main {
 
     // ========================== Brute Force Approach ======================================
 
-        private static boolean isPossible(int row, int col){
+        private static boolean isPossible(int row, int col, char[][] board){
             
         }
 
         private static void recursiveNQueens(int col, List<List<String>> al, char[][] board, int N){
 
             if(col == N){
-                
+
                 List<String> temp = new ArrayList<>();
 
                 al.add(temp);
