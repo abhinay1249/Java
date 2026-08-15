@@ -15,3 +15,7 @@
 // The second path is (0,0) => (1,0) => (1,1) => (2,1) => (3,1) => (3,2) => (3,3).
 
 // Example 2 :
+
+// Input: n = 2 , grid = [[1, 0] , [1, 0]]
+// Output: []
+// Explanation: There is no path that rat can choose to travel from (0,0) to (1,1).
