@@ -13,3 +13,5 @@
 // Explanation: The rat has two different path to reach (3, 3).
 // The first path is (0, 0) => (1, 0) => (2, 0) => (2, 1) => (3, 1) => (3, 2) => (3, 3).
 // The second path is (0,0) => (1,0) => (1,1) => (2,1) => (3,1) => (3,2) => (3,3).
+
+// Example 2 :
