@@ -34,6 +34,7 @@ class Main {
             }
 
             row = dupRow;
+            col = dupCol;
 
 
 
