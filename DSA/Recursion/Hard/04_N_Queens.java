@@ -24,6 +24,12 @@ class Main {
 
             int dupRow = row;
             int dupCol = col;
+
+            while(row >= 0 && col >= 0){
+                if(board[row][col] == "Q") return false;
+                row--;
+                col--;
+            }
             
 
             return true;
