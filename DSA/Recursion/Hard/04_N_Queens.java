@@ -23,6 +23,7 @@ class Main {
         private static boolean isPossible(int row, int col, char[][] board, int N){
 
             int dupRow = row;
+            int dupCol = col;
             
 
             return true;
