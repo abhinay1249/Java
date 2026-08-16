@@ -26,10 +26,16 @@ class Main {
             int dupCol = col;
 
             while(row >= 0 && col >= 0){
-                if(board[row][col] == "Q") return false;
+                if(board[row][col] == 'Q'){
+                    return false;
+                } 
                 row--;
                 col--;
             }
+
+
+
+
             
 
             return true;
