@@ -20,7 +20,9 @@ class Main {
 
     // ========================== Brute Force Approach ======================================
 
-        private static boolean isPossible(int row, int col, char[][] board){
+        private static boolean isPossible(int row, int col, char[][] board, int N){
+
+            
             
 
             return true;
