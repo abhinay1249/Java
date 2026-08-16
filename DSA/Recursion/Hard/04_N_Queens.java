@@ -22,6 +22,8 @@ class Main {
 
         private static boolean isPossible(int row, int col, char[][] board){
             
+
+            return true;
         }
 
         private static void recursiveNQueens(int col, List<List<String>> al, char[][] board, int N){
@@ -29,7 +31,9 @@ class Main {
             if(col == N){
 
                 List<String> temp = new ArrayList<>();
+                for(int index = 0; index < N ; index++){
 
+                }
                 al.add(temp);
                 return;
             }
