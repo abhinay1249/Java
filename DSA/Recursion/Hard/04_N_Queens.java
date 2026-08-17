@@ -52,7 +52,9 @@ class Main {
                 row++;
                 col--;
             }
+
             return true;
+            
         }
 
         private static void recursiveNQueens(int col, List<List<String>> al, char[][] board, int N){
