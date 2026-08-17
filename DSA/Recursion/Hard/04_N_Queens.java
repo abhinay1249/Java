@@ -54,7 +54,7 @@ class Main {
             }
 
             return true;
-            
+
         }
 
         private static void recursiveNQueens(int col, List<List<String>> al, char[][] board, int N){
@@ -67,6 +67,14 @@ class Main {
                 }
                 al.add(temp);
                 return;
+            }
+
+            for(int index = 0 ; index < N ; index++){
+                if(isPossible(board , N)){
+                    board[row][col] = 'Q';
+                    recursiveNQueens(col+1, al, board, N);
+                    board[row][col] = '';
+                }
             }
 
         }
