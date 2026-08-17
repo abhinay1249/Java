@@ -52,10 +52,6 @@ class Main {
                 row++;
                 col--;
             }
-
-
-            
-
             return true;
         }
 
