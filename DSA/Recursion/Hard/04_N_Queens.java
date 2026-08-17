@@ -45,7 +45,13 @@ class Main {
                 col--;
             }
 
-            
+            while(row < N && col >= 0){
+                if(board[row][col] == 'Q'){
+                    return false;
+                }
+                row++;
+                col--;
+            }
 
 
             
