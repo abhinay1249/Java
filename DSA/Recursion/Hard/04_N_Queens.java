@@ -14,7 +14,9 @@
 // Output : [["Q"]]
 // Explanation : There is only one way to place 1 queen on 1 x 1 chessboard.
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 class Main {
 
@@ -36,9 +38,14 @@ class Main {
             row = dupRow;
             col = dupCol;
 
-            while(){
-                
+            while(col >= 0){
+                if(board[row][col] == 'Q'){
+                    return false;
+                }
+                col--;
             }
+
+            
 
 
             
