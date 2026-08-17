@@ -70,7 +70,7 @@ class Main {
             }
 
             for(int index = 0 ; index < N ; index++){
-                if(isPossible(board , N)){
+                if(isPossible(row, col, board , N)){
                     board[row][col] = 'Q';
                     recursiveNQueens(col+1, al, board, N);
                     board[row][col] = '';
