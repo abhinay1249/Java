@@ -76,7 +76,6 @@ class Main {
                     board[row][col] = '';
                 }
             }
-
         }
     
         public static void nQueens(int N){
