@@ -63,7 +63,7 @@ class Main {
 
                 List<String> temp = new ArrayList<>();
                 for(int index = 0; index < N ; index++){
-
+                    temp.add();
                 }
                 al.add(temp);
                 return;
