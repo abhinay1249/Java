@@ -6,3 +6,9 @@
 // Input : s = "takeuforward" , wordDict = ["take" , "forward" , "you", "u"]
 // Output : true
 // Explanation : Return true because "takeuforward" can be segmented as "take" , "u" , "forward".
+
+// Example 2
+
+// Input : s = "applepineapple" , wordDict = ["apple"]
+// Output : false
+// Explanation : Return false because "applepineapple" can be segmented as "apple" , "pine" , "apple" but here we do not have "pine" word in dictionary.
