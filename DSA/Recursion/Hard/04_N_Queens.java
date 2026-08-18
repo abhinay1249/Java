@@ -98,7 +98,7 @@ class Main {
 
         private static List<List<String>> recursiveNQueens_1(List<List<String>> al){
 
-            
+            return al;
         }
 
         public static void nQueens_1(int N){
