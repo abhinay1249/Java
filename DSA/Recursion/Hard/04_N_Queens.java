@@ -118,6 +118,5 @@ class Main {
         
         nQueens_1(N);
 
-
     }
 }
