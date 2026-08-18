@@ -110,6 +110,7 @@ class Main {
             System.out.println(al);
         }
     
+        
     public static void main(String[] args) {
         
         int N = 4;
