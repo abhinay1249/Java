@@ -11,4 +11,5 @@
 
 // Input : s = "applepineapple" , wordDict = ["apple"]
 // Output : false
-// Explanation : Return false because "applepineapple" can be segmented as "apple" , "pine" , "apple" but here we do not have "pine" word in dictionary.
+// Explanation : Return false because "applepineapple" can be segmented as "apple" , "pine" , "apple" 
+// but here we do not have "pine" word in dictionary.
