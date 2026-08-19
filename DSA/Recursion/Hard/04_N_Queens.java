@@ -63,7 +63,7 @@ class Main {
                 List<String> temp = new ArrayList<>();
                 
                 for(int index = 0; index < N ; index++){
-                    temp.add();
+                    temp.add(new String board[index]);
                 }
                 al.add(temp);
                 return;
