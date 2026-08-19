@@ -60,7 +60,6 @@ class Main {
         private static void recursiveNQueens(int col, List<List<String>> al, char[][] board, int N){
 
             if(col == N){
-
                 List<String> temp = new ArrayList<>();
                 for(int index = 0; index < N ; index++){
                     temp.add();
