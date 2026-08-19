@@ -65,7 +65,6 @@ class Main {
                 for(int index = 0; index < N ; index++){
                     temp.add();
                 }
-                
                 al.add(temp);
                 return;
             }
