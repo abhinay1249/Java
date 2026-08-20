@@ -15,6 +15,10 @@
 // but here we do not have "pine" word in dictionary.
 
 class Main {
+
+    public static boolean wordBreak(String s, String[] wordBreak){
+        
+    }
     public static void main(String[] args) {
         
         String s = "takeuforward";
