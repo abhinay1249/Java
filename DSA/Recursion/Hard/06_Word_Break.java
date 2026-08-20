@@ -3,13 +3,13 @@
 
 // Example 1
 
-// Input : s = "takeuforward" , wordDict = ["take" , "forward" , "you", "u"]
+// Input : s = "takeuforward", wordDict = ["take" , "forward" , "you", "u"]
 // Output : true
 // Explanation : Return true because "takeuforward" can be segmented as "take" , "u" , "forward".
 
 // Example 2
 
-// Input : s = "applepineapple" , wordDict = ["apple"]
+// Input : s = "applepineapple", wordDict = ["apple"]
 // Output : false
 // Explanation : Return false because "applepineapple" can be segmented as "apple" , "pine" , "apple" 
 // but here we do not have "pine" word in dictionary.
@@ -17,7 +17,7 @@
 class Main {
 
     public static boolean wordBreak(String s, String[] wordBreak){
-        
+
     }
     public static void main(String[] args) {
         
