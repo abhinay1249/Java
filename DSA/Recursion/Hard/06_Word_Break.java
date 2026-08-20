@@ -15,5 +15,7 @@
 // but here we do not have "pine" word in dictionary.
 
 class Main {
-    
+    public static void main(String[] args) {
+        
+    }
 }
