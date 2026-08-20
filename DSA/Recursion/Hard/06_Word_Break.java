@@ -20,5 +20,7 @@ class Main {
         String s = "takeuforward";
 
         String[] wordDict = {"take", "forward", "u", "you"};
+
+        boolean result = wordBreak(s, wordDict);
     }
 }
