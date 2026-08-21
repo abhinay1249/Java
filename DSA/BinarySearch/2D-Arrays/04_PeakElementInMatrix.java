@@ -14,9 +14,9 @@
 
 // Example 2: 
 
-// Input: mat = [[1, 2, 3], [6, 5, 4], [7, 8, 9]]
+// Input: mat = [ [1, 2, 3], [6, 5, 4], [7, 8, 9] ]
 // Output: [2, 2]
-// Explanation: The value at index [2, 2] is 9, which is a peak as it is greater than its neighbors (8, 4).
+// Explanation: The value at index [2, 2] is 9, which is a peak as it is greater than its neighbors [8, 4].
 
 
 import java.util.Arrays;
