@@ -42,12 +42,15 @@ class Main {
                     }
                 }
             }
+
             return new int[]{-1,-1};
+
         }
 
     // =========================== Better Approach ==============================
 
         public static int binarySearch(int[] mat, int target){
+
             int length = mat.length;
 
             int low = 0, high = length -1;
@@ -63,7 +66,9 @@ class Main {
                     high = mid - 1;
                 }
             }
+
             return -1;
+
         }
 
         public static int[] searchIn2DMatrix2_1(int[][] matrix, int target){
@@ -77,7 +82,9 @@ class Main {
                     return new int[]{rows,elementIndex};
                 }
             }
+
             return new int[]{-1,-1};
+
         }
 
     // =========================== Optimal Approach ==============================
@@ -99,14 +106,22 @@ class Main {
                     col--;
                 }
             }
+
             return new int[]{-1,-1};
+
         }
     
     public static void main(String[] args) {
+
         int[][] matrix = {{1,2,3,4},{5,6,7,8},{9,10,11,12}};
+        
         int target = 8;
+        
         int[] result = searchIn2DMatrix2_1(matrix,target);
-        for(int index : result)
-        System.out.print(index+" ");
+        
+        for(int index : result){
+            System.out.print(index+" ");
+        }
+        
     }
 }
