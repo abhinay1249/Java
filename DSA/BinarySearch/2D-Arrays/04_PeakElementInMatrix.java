@@ -84,11 +84,15 @@ class Main {
                     high = mid - 1;
                 }
             }
+
             return new int[]{-1,-1};
+            
         }
 
     public static void main(String[] args) {
+
         int[][] matrix = {{4,2,5,1,4,5},{2,9,3,2,3,2},{1,7,6,0,1,3},{3,6,2,3,7,2}};
+        
         int[] result = peakElement2_1(matrix);
 
         for(int indices : result){
