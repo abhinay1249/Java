@@ -8,9 +8,9 @@
 
 // Example 1: 
 
-// Input: mat = [[5, 10, 8], [4, 25, 7], [3, 9, 6]]
+// Input: mat = [ [5, 10, 8], [4, 25, 7], [3, 9, 6] ]
 // Output: [1, 1]
-// Explanation: The value at index [1, 1] is 25, which is a peak because all its neighbors (10, 7, 4, 9) are smaller.
+// Explanation: The value at index [1, 1] is 25, which is a peak because all its neighbors [10, 7, 4, 9] are smaller.
 
 // Example 2: 
 
@@ -86,7 +86,7 @@ class Main {
             }
 
             return new int[]{-1,-1};
-            
+
         }
 
     public static void main(String[] args) {
