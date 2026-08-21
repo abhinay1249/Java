@@ -1,5 +1,4 @@
-// Problem Statement:
-// Given a row-wise sorted matrix of size M*N, where M is no. of rows and N is no. of columns, find the median in the given matrix.
+// Problem Statement: Given a row-wise sorted matrix of size M*N, where M is no. of rows and N is no. of columns, find the median in the given matrix.
 // Note: M*N is odd.
 
 // Example 1:
