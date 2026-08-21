@@ -75,6 +75,7 @@ class Main {
         }
 
         public static int medianOfRowSortedWise_1(int[][]matrix){
+            
             int low = Integer.MAX_VALUE;
             int high = Integer.MIN_VALUE;
 
@@ -99,7 +100,9 @@ class Main {
                     high = mid - 1;
                 }
             }
+
             return low;
+
         }
 
     public static void main(String[] args) {
