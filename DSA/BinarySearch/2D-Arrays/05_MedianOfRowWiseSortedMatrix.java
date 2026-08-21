@@ -4,7 +4,7 @@
 
 // Example 1:
 
-// Input: matrix = [[1,3,5],[2,6,9],[3,6,9]]
+// Input: matrix = [[1, 3, 5], [2, 6, 9], [3, 6, 9]]
 // Output: 5
 // Explanation: The sorted form of the matrix is [1,2,3,3,5,6,6,9,9]. So the median is 5.
 
