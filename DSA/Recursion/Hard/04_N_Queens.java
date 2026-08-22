@@ -45,7 +45,7 @@ class Main {
                 col--;
             }
 
-            row = dupRow;
+            row = dupRow;                                           // T.C = O() , S.C = O()
             col = dupCol;
 
             while(row < N && col >= 0){
