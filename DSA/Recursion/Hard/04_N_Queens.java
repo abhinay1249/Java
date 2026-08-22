@@ -45,6 +45,9 @@ class Main {
                 col--;
             }
 
+            row = dupRow;
+            col = dupCol;
+
             while(row < N && col >= 0){
                 if(board[row][col] == 'Q'){
                     return false;
@@ -65,7 +68,9 @@ class Main {
                 for(int index = 0; index < N ; index++){
                     temp.add(new String (board[index]));
                 }
+                
                 al.add(temp);
+
                 return;
             }
 
@@ -98,19 +103,19 @@ class Main {
 
     // ============================== Optimal Approach ========================================
 
-        // private static List<List<String>> recursiveNQueens_1(List<List<String>> al){
+        private static List<List<String>> recursiveNQueens_1(List<List<String>> al){
 
-        //     return al;
-        // }
+            return al;
+        }
 
-        // public static void nQueens_1(int N){
+        public static void nQueens_1(int N){
 
-        //     List<List<String>> al = new ArrayList<>();
+            List<List<String>> al = new ArrayList<>();
 
-        //     recursiveNQueens_1(al);
+            recursiveNQueens_1(al);
 
-        //     System.out.println(al);
-        // }
+            System.out.println(al);
+        }
     
     public static void main(String[] args) {
         
@@ -118,7 +123,7 @@ class Main {
 
         nQueens(N);
         
-        // nQueens_1(N);
+        nQueens_1(N);
 
     }
 }
