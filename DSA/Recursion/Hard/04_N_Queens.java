@@ -114,7 +114,9 @@ class Main {
 
             char[][] board = new char[N][N];
 
-            for(int index = 0 ; index < N ; index++)
+            for(int index = 0 ; index < N ; index++){
+                Arrays.fill(board[index],'.');
+            }
 
             recursiveNQueens_1(al);
 
