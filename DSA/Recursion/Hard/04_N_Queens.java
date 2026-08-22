@@ -118,7 +118,7 @@ class Main {
                 Arrays.fill(board[index],'.');
             }
 
-            recursiveNQueens_1(al);
+            recursiveNQueens_1(0, al, board, N);
 
             System.out.println(al);
         }
