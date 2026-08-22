@@ -103,7 +103,7 @@ class Main {
 
     // ============================== Optimal Approach ========================================
 
-        private static List<List<String>> recursiveNQueens_1(List<List<String>> al){
+        private static List<List<String>> recursiveNQueens_1(int col, List<List<String>> al, char[][] board, int N){
 
             return al;
         }
