@@ -112,6 +112,8 @@ class Main {
 
             List<List<String>> al = new ArrayList<>();
 
+            char[][] board = new Char[N][N];
+
             recursiveNQueens_1(al);
 
             System.out.println(al);
