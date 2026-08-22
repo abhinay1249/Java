@@ -112,7 +112,9 @@ class Main {
 
             List<List<String>> al = new ArrayList<>();
 
-            char[][] board = new Char[N][N];
+            char[][] board = new char[N][N];
+
+            for(int index = 0 ; index < N ; index++)
 
             recursiveNQueens_1(al);
 
