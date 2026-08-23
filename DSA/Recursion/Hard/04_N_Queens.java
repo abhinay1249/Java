@@ -45,7 +45,7 @@ class Main {
                 col--;
             }
 
-            row = dupRow;                                           // T.C = O() , S.C = O(N^2) + O(N)
+            row = dupRow;                                           // T.C = O(N^2 + N^2 * N! + S * N^2) + O(3N) , S.C = O(N^2) + O(N)
             col = dupCol;
 
             while(row < N && col >= 0){
