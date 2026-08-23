@@ -70,7 +70,6 @@ class Main {
                 }
                 
                 al.add(temp);
-
                 return;
             }
 
@@ -81,7 +80,6 @@ class Main {
                     recursiveNQueens(col+1, al, board, N);
                     board[row][col] = '.';
                 }
-                
             }
         }
     
