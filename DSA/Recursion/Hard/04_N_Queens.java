@@ -45,7 +45,7 @@ class Main {
                 col--;
             }
 
-            row = dupRow;                                           // T.C = O() , S.C = O()
+            row = dupRow;                                           // T.C = O() , S.C = O(N^2) + O(N)
             col = dupCol;
 
             while(row < N && col >= 0){
@@ -110,7 +110,7 @@ class Main {
                 List<String> temp = new ArrayList<>();
 
                 for(int index = 0 ; index < N  ; index++){
-                    temp.add(new String(board[index]));                 // T.C = O(N^2 + N * N! + S* N!) +  , S.C = O(N^2) + O(2N)
+                    temp.add(new String(board[index]));                 // T.C = O(N^2 + N * N! + S* N^2) +  , S.C = O(N^2) + O(2N)
                 }
 
                 al.add(temp);
