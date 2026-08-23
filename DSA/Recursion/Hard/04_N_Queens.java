@@ -103,8 +103,7 @@ class Main {
 
     // ============================== Optimal Approach ========================================
 
-        private static void recursiveNQueens_1(int col, List<List<String>> al, char[][] board, int N, List<Integer> leftRow, 
-        List<Integer> upperDiagonal, List<Integer> lowerDiagonal){
+        private static void recursiveNQueens_1(int col, List<List<String>> al, char[][] board, int N, int[] leftRow, int[] upperDiagonal, int[] lowerDiagonal){
 
             
             if(col == N){
@@ -120,11 +119,25 @@ class Main {
             }
 
 
-            
+            for(int row = 0 ; row < N ; row++){
+                if(leftRow[row] == 0 && lowerDiagonal[row + col] == 0 && upperDiagonal[(N - 1)+(col - row)] == 0){
 
+                    board[row][col] = 'Q';
 
+                    leftRow[row] = 1;
+                    lowerDiagonal[row+col] =  1;
+                    upperDiagonal[(N - 1)+(col - row)] = 1;
+                    
+                    recursiveNQueens_1(col+1, al, board, N, leftRow, upperDiagonal, lowerDiagonal);
+                    
+                    board[row][col]='.';
+                    
+                    leftRow[row] = 0;
+                    lowerDiagonal[row+col] =  0;
+                    upperDiagonal[(N - 1)+(col - row)] = 0;
 
-
+                }
+            }
         }
 
         public static void nQueens_1(int N){
@@ -137,9 +150,9 @@ class Main {
                 Arrays.fill(board[index],'.');
             }
 
-            List<Integer> leftRow = new ArrayList<>(N);
-            List<Integer> upperDiagonal = new ArrayList<>((2*N)-1);
-            List<Integer> lowerDiagonal = new ArrayList<>((2*N)-1);
+            int[] leftRow = new int[N];
+            int[] upperDiagonal = new int[(2*N)-1];
+            int[] lowerDiagonal = new int[(2*N)-1];
 
 
             recursiveNQueens_1(0, al, board, N, leftRow, upperDiagonal, lowerDiagonal);
@@ -151,7 +164,7 @@ class Main {
         
         int N = 4;
 
-        nQueens(N);
+        // nQueens(N);
         
         nQueens_1(N);
 
