@@ -110,7 +110,7 @@ class Main {
                 List<String> temp = new ArrayList<>();
 
                 for(int index = 0 ; index < N  ; index++){
-                    temp.add(new String(board[index]));                         // T.C = O() , S.C = O()
+                    temp.add(new String(board[index]));                 // T.C = O(N^2 + N * N! + S* N!) +  , S.C = O(N^2) + O(2N)
                 }
 
                 al.add(temp);
