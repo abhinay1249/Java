@@ -164,7 +164,7 @@ class Main {
         
         int N = 4;
 
-        // nQueens(N);
+        nQueens(N);
         
         nQueens_1(N);
 
