@@ -103,9 +103,28 @@ class Main {
 
     // ============================== Optimal Approach ========================================
 
-        private static List<List<String>> recursiveNQueens_1(int col, List<List<String>> al, char[][] board, int N){
+        private static void recursiveNQueens_1(int col, List<List<String>> al, char[][] board, int N, List<Integer> leftRow, 
+        List<Integer> upperDiagonal, List<Integer> lowerDiagonal){
 
-            return al;
+            
+            if(col == N){
+                List<String> temp = new ArrayList<>();
+
+                for(int index = 0 ; index < N  ; index++){
+                    temp.add(new String(board[index]));
+                }
+
+                al.add(temp);
+
+                return;
+            }
+
+
+            
+
+
+
+
         }
 
         public static void nQueens_1(int N){
@@ -118,7 +137,12 @@ class Main {
                 Arrays.fill(board[index],'.');
             }
 
-            recursiveNQueens_1(0, al, board, N);
+            List<Integer> leftRow = new ArrayList<>(N);
+            List<Integer> upperDiagonal = new ArrayList<>((2*N)-1);
+            List<Integer> lowerDiagonal = new ArrayList<>((2*N)-1);
+
+
+            recursiveNQueens_1(0, al, board, N, leftRow, upperDiagonal, lowerDiagonal);
 
             System.out.println(al);
         }
