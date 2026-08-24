@@ -1,3 +1,6 @@
+
+import java.util.ArrayList;
+
 // Problem Statement: Given a grid of dimensions n x n. 
 // A rat is placed at coordinates (0, 0) and wants to reach at coordinates (n-1, n-1). 
 // Find all possible paths that rat can take to travel from (0, 0) to (n-1, n-1). 
@@ -22,7 +25,19 @@
 
 class Main{
 
-    public static void ratInMaze(int n, int[][] grid){
+    private static void recursionPaths(){
+
+    }
+
+    public static List<String> ratInMaze(int n, int[][] grid){
+
+        List<String> al = new ArrayList<>();
+
+        if(grid[0][0] == 0 && grid[n-1][n-1]){
+            return new ArrayList<>();
+        }
+
+
 
     }
 
