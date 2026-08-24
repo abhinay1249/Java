@@ -33,7 +33,7 @@ class Main{
 
         List<String> al = new ArrayList<>();
 
-        if(grid[0][0] == 0 && grid[n-1][n-1]){
+        if(grid[0][0] == 0 || grid[n-1][n-1] == 0){
             return new ArrayList<>();
         }
 
