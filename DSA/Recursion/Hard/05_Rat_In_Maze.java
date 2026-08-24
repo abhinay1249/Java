@@ -27,7 +27,7 @@ import java.util.*;
 
 class Main{
 
-    private static void recursionPaths(){
+    private static void recursionPaths(List<String> al, int[][] ){
 
     }
 
