@@ -23,6 +23,9 @@ import java.util.ArrayList;
 // Output: []
 // Explanation: There is no path that rat can choose to travel from (0,0) to (1,1).
 
+import java.util.*;
+
+
 class Main{
 
     private static void recursionPaths(){
@@ -31,12 +34,11 @@ class Main{
 
     public static List<String> ratInMaze(int n, int[][] grid){
 
-        List<String> al = new ArrayList<>();
-
         if(grid[0][0] == 0 || grid[n-1][n-1] == 0){
             return new ArrayList<>();
         }
 
+        List<String> al = new ArrayList<>();
 
 
     }
