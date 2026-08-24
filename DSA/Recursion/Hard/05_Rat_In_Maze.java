@@ -20,11 +20,9 @@
 // Output: []
 // Explanation: There is no path that rat can choose to travel from (0,0) to (1,1).
 
-import java.util.*;
-
 class Main{
 
-    public static List<String> ratInMaze(){
+    public static void ratInMaze(int n, int[][] grid){
 
     }
 
@@ -33,7 +31,7 @@ class Main{
         int n = 4;
         int[][] grid = {{1,0,0,0}, {1,1,0,1}, {1,1,0,0}, {0,1,1,1}};
 
-        
+        ratInMaze(n, grid);
 
     }
 }
