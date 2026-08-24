@@ -25,7 +25,6 @@ import java.util.ArrayList;
 
 import java.util.*;
 
-
 class Main{
 
     private static void recursionPaths(){
@@ -40,6 +39,9 @@ class Main{
 
         List<String> al = new ArrayList<>();
 
+        recursionPaths(al, grid, n);
+
+        return al;
 
     }
 
