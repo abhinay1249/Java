@@ -3,7 +3,7 @@
 
 // Example 1
 
-// Input : s = "takeuforward", wordDict = ["take", "forward" , "you", "u"]
+// Input : s = "takeuforward", wordDict = ["take", "forward", "you", "u"]
 // Output : true
 // Explanation : Return true because "takeuforward" can be segmented as "take" , "u" , "forward".
 
