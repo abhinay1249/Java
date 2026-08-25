@@ -5,6 +5,8 @@
 // whereas value 1 represents that rat can travel through the cell. 
 // If the cell (0, 0) has 0 value, then mouse cannot move to any other cell.
 
+// Example 1:
+
 import java.util.ArrayList;
 import java.util.List;
 
