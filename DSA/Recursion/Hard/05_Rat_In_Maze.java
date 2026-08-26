@@ -26,7 +26,7 @@ class Main{
 
     // ===================================== Only Approach ===========================================
 
-        private static void recursionPaths(int row, List<String> al, int[][] grid, int n){
+        private static void recursionPaths(int row, int col, List<String> al, int[][] grid, int n){
 
             if(row == n || col == n){
 
