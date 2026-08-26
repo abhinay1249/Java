@@ -15,3 +15,9 @@
 // Output: 0  
 // Explanation: It is not possible to color the graph using 2 colors as it forms a triangle, which requires at least 3 colors.
 // Hence, the answer is 0 (not possible).
+
+class Main{
+    public static void main(String[] args) {
+        
+    }
+}
