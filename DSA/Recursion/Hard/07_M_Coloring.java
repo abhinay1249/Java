@@ -10,8 +10,8 @@
 
 // Example 2:
 
-Input: N = 3, M = 2, E = 3  
+// Input: N = 3, M = 2, E = 3  
 // Edges[] = { (0, 1), (1, 2), (0, 2) }  
 // Output: 0  
 // Explanation: It is not possible to color the graph using 2 colors as it forms a triangle, which requires at least 3 colors.
-//  Hence, the answer is 0 (not possible).
+// Hence, the answer is 0 (not possible).
