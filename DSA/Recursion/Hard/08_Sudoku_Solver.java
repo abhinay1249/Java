@@ -3,4 +3,5 @@
 // 1) In every row, the numbers 1 through 9 must appear exactly once.
 // 2) In every column, the numbers 1 through 9 must appear exactly once.
 // 3) In each of the grid's nine 3x3 sub-boxes, the numbers 1 through 9 must appear exactly once.
-// Empty cells are indicated by the '.' character. .
+// Empty cells are indicated by the '.' character.
+
