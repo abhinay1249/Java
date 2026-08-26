@@ -28,7 +28,9 @@ class Main{
 
         private static void recursionPaths(List<String> al, int[][] grid, int n){
 
-            if(row == n || col == n)
+            if(row == n || col == n){
+                
+            }
         }
 
         public static List<String> ratInMaze(int n, int[][] grid){
