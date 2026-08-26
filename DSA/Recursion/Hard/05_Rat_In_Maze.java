@@ -29,7 +29,7 @@ class Main{
         private static void recursionPaths(int row, int col, List<String> al, int[][] grid, int n){
 
             if(row == n || col == n){
-                al.add()
+                al.add();
             }
         }
 
