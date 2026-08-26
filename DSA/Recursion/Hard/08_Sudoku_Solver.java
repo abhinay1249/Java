@@ -5,3 +5,4 @@
 // 3) In each of the grid's nine 3x3 sub-boxes, the numbers 1 through 9 must appear exactly once.
 // Empty cells are indicated by the '.' character.
 
+// Example 1:
