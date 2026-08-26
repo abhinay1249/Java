@@ -31,6 +31,8 @@ class Main{
             if(row == n || col == n){
                 al.add();
             }
+
+            for()
         }
 
         public static List<String> ratInMaze(int n, int[][] grid){
