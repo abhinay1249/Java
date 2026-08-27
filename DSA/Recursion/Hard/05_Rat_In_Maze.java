@@ -26,7 +26,7 @@ class Main{
 
     // ===================================== Only Approach ===========================================
 
-        private static void recursionPaths(int row, int col, List<String> al, int[][] grid, int n, int rowIdx, StringBuilder sb){
+        private static void recursionPaths(List<String> al, int[][] grid, int n, StringBuilder sb){
 
 
         }
@@ -40,8 +40,6 @@ class Main{
             List<String> al = new ArrayList<>();
 
             StringBuilder sb = new StringBuilder();
-
-            int rowIdx = 0;
 
             recursionPaths(al, grid, n, sb);
 
