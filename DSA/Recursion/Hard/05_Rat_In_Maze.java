@@ -26,13 +26,16 @@ class Main{
 
     // ===================================== Only Approach ===========================================
 
-        private static void recursionPaths(int row, int col, List<String> al, int[][] grid, int n){
+        private static void recursionPaths(int row, int col, List<String> al, int[][] grid, int n, int rowIdx, StringBuilder sb){
 
             if(row == n || col == n){
-                al.add();
+                al.add(sb.toString());
             }
 
-            for()
+            for(int row = rowIdx ; row < n ; row++){
+
+            }
+
         }
 
         public static List<String> ratInMaze(int n, int[][] grid){
@@ -43,7 +46,9 @@ class Main{
 
             List<String> al = new ArrayList<>();
 
-            recursionPaths(al, grid, n);
+            StringBuilder sb = new StringBuilder();
+
+            recursionPaths(al, grid, n, sb);
 
             return al;
 
