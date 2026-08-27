@@ -28,7 +28,7 @@ class Main{
 
         private static void recursionPaths(int row, int col, List<String> al, int[][] grid, int n, int rowIdx, StringBuilder sb){
 
-            if(row == n && col == n){
+            if(row == n-1 && col == n-1){
                 al.add(sb.toString());
             }
 
