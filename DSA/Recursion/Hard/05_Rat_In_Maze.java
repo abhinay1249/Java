@@ -43,8 +43,6 @@ class Main{
 
             recursionPaths(al, grid, n, sb);
 
-            return al;
-
         }
 
     public static void main(String[] args){
