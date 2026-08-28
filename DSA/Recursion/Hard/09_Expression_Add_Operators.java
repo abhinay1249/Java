@@ -21,6 +21,7 @@
 
 class Main{
     public static void main(String[] args) {
-        String num = "123";        
+        String num = "123";
+        int target = 6;        
     }
 }
