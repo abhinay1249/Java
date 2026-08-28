@@ -5,3 +5,8 @@
 // Note that operands in the returned expressions should not contain leading zeros.
 
 // Note that a number can contain multiple digits.
+
+
+class Main{
+    
+}
