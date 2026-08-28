@@ -28,9 +28,7 @@ class Main{
 
         public static List<String> ratInMaze(int n, int[][] grid){
 
-            if(grid[0][0] == 0 || grid[n-1][n-1] == 0){
-                return new ArrayList<>();
-            }
+            
 
         }
 
