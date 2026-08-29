@@ -26,66 +26,67 @@ class Main{
 
     // ===================================== Only Approach ===========================================
 
-        private static List<String> recursiveRatInMaze(int row, int col, List<String> ans, int n, int[][] grid, StringBuilder sb, int[][] dup){
+        private static void recursiveRatInMaze(int row, int col, List<String> ans, int n, int[][] grid, StringBuilder sb, int[][] dup){
 
             if(row == n-1 && col == n-1){
                 ans.add(sb.toString());
-                return ans;
+                return;
             }
 
             // Down
 
-            if(row+1 < n && dup[row+1][col]==1 && grid[row+1][col]==1){
+            if(row+1 < n && dup[row+1][col]==0 && grid[row+1][col]==1){
                 sb.append("D");
                 dup[row][col] = 1;
                 recursiveRatInMaze(row+1, col, ans, n, grid, sb, dup);
                 dup[row][col] = 0;
+                sb.deleteCharAt(sb.length()-1);
             }
 
             // Left
 
-            if(col-1 >= 0 && dup[row][col-1]==1 && grid[row][col-1]==1){
+            if(col-1 >= 0 && dup[row][col-1]==0 && grid[row][col-1]==1){
                 sb.append("L");
                 dup[row][col] = 1;
                 recursiveRatInMaze(row, col-1, ans, n, grid, sb, dup);
                 dup[row][col] = 0;
+                sb.deleteCharAt(sb.length()-1);
             }
 
             // Right
 
-            if(col+1 <= n && dup[row][col+1]==1 && grid[row][col+1]==1){
+            if(col+1 < n && dup[row][col+1]==0 && grid[row][col+1]==1){
                 sb.append("R");
                 dup[row][col] = 1;
                 recursiveRatInMaze(row, col+1, ans, n, grid, sb, dup);
                 dup[row][col] = 0;
+                sb.deleteCharAt(sb.length()-1);
             }
 
             // Up
 
-            if(row-1 >= 0 && dup[row-1][col]==1 && grid[row-1][col]==1){
+            if(row-1 >= 0 && dup[row-1][col]==0 && grid[row-1][col]==1){
                 sb.append("U");
                 dup[row][col] = 1;
                 recursiveRatInMaze(row-1, col, ans, n, grid, sb, dup);
                 dup[row][col] = 0;
+                sb.deleteCharAt(sb.length()-1);
             }
-
-            return ans;
-
         }
 
-        public static void ratInMaze(int n, int[][] grid){
+        public static List<String> ratInMaze(int n, int[][] grid){
 
             List<String> ans = new ArrayList<>();
 
             int row = 0, col = 0;
 
-            int[][] dup = grid.clone();
+            int[][] dup = new int[n][n];
 
             StringBuilder sb = new StringBuilder();
 
             recursiveRatInMaze(row, col, ans, n, grid, sb, dup);
 
-            System.out.println(ans);
+            return ans;
 
         }
 
@@ -95,7 +96,7 @@ class Main{
         int[][] grid = {{1,0,0,0}, {1,1,0,1}, {1,1,0,0}, {0,1,1,1}};
 
         if(grid[0][0] == 1){
-            ratInMaze(n, grid);
+            System.out.print(ratInMaze(n, grid));
         }
     }
 }
