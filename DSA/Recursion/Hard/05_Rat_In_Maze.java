@@ -26,9 +26,19 @@ class Main{
 
     // ===================================== Only Approach ===========================================
 
-        public static List<String> ratInMaze(int n, int[][] grid){
+    
 
-            
+        public static void ratInMaze(int n, int[][] grid){
+
+            List<String> ans = new ArrayList<>();
+
+            int row = 0, col = 0;
+
+            int[][] dup = grid.clone();
+
+            recursiveRatInMaze(row, col, ans, n, grid, dup,);
+
+            System.out.println(ans);
 
         }
 
@@ -37,7 +47,8 @@ class Main{
         int n = 4;
         int[][] grid = {{1,0,0,0}, {1,1,0,1}, {1,1,0,0}, {0,1,1,1}};
 
-        ratInMaze(n, grid);
-
+        if(grid[0][0] == 1){
+            ratInMaze(n, grid);
+        }
     }
 }
