@@ -98,5 +98,6 @@ class Main{
         if(grid[0][0] == 1){
             System.out.print(ratInMaze(n, grid));
         }
+        
     }
 }
