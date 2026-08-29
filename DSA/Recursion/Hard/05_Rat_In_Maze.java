@@ -28,6 +28,11 @@ class Main{
 
         private static List<String> recursiveRatInMaze(int row, int col, List<String> ans, int n, int[][] grid, StringBuilder sb, int[][] dup){
 
+            if(row == n-1 && col == n-1){
+                ans.add(sb.toString());
+                return ans;
+            }
+
             // Down
 
             if(row+1 < n && dup[row+1][col]==1 && grid[row+1][col]==1){
@@ -39,7 +44,7 @@ class Main{
 
             // Left
 
-            if(col-1 >= 0 && dup[row+1][col]==1 && grid[row+1][col]==1){
+            if(col-1 >= 0 && dup[row][col-1]==1 && grid[row][col-1]==1){
                 sb.append("L");
                 dup[row][col] = 1;
                 recursiveRatInMaze(row, col-1, ans, n, grid, sb, dup);
@@ -48,7 +53,7 @@ class Main{
 
             // Right
 
-            if(col+1 <= n && dup[row+1][col]==1 && grid[row+1][col]==1){
+            if(col+1 <= n && dup[row][col+1]==1 && grid[row][col+1]==1){
                 sb.append("R");
                 dup[row][col] = 1;
                 recursiveRatInMaze(row, col+1, ans, n, grid, sb, dup);
@@ -57,7 +62,7 @@ class Main{
 
             // Up
 
-            if(){
+            if(row-1 >= 0 && dup[row-1][col]==1 && grid[row-1][col]==1){
                 sb.append("U");
                 dup[row][col] = 1;
                 recursiveRatInMaze(row-1, col, ans, n, grid, sb, dup);
@@ -67,8 +72,6 @@ class Main{
             return ans;
 
         }
-
-
 
         public static void ratInMaze(int n, int[][] grid){
 
