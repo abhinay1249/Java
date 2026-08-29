@@ -48,7 +48,7 @@ class Main{
             if(col-1 >= 0 && dup[row][col-1]==0 && grid[row][col-1]==1){
                 sb.append("L");
                 dup[row][col] = 1;
-                recursiveRatInMaze(row, col-1, ans, n, grid, sb, dup);              // T.C = O(4^(m*n)), S.C = O(3 m*n)
+                recursiveRatInMaze(row, col-1, ans, n, grid, sb, dup);              // T.C = O(4^(m*n)), S.C = O(3(m*n))
                 dup[row][col] = 0;
                 sb.deleteCharAt(sb.length()-1);
             }
