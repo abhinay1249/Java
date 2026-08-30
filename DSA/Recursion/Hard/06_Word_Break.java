@@ -14,21 +14,30 @@
 // Explanation : Return false because "applepineapple" can be segmented as "apple", "pine", "apple" 
 // but here we do not have "pine" word in dictionary.
 
+import java.util.*;
+
 class Main {
 
-    public static boolean wordBreak(String s, String[] wordBreak){
 
 
-
-    }
+        public static boolean wordBreak(String s, List<String> wordBreak){
+        
+            int index = 0;
+        
+            return recursiveWordBreak(index, s, wordBreak);
+        
+        
+        }
     public static void main(String[] args) {
         
         String s = "takeuforward";
 
-        String[] wordDict = {"take", "forward", "u", "you"};
+        List<String> wordDict = new ArrayList<>(Arrays.asList("take", "forward", "u", "you"));
 
         boolean result = wordBreak(s, wordDict);
 
-        System.out.println("result");
+        System.out.println(result);
     }
 }
+
+
