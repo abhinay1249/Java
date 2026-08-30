@@ -62,12 +62,12 @@ class Main {
                 maxLength = Math.max(maxLength, word.length());
             }
          
-            boolean[] dp = new boolean[s.length()+1];
+            boolean[] dp = new boolean[s.length()+1];                   // T.C = O(N^2) + O(N), S.C = O(N + D) + O(N)
             
             dp[0] = true;
 
             for(int index_1 = 1 ; index_1 <= s.length() ; index_1++){
-            
+
                 for(int index_2 = index_1 - 1 ; index_2 >= Math.max(0, index_1 - maxLength) ; index_2--){
                     if(dp[index_2] && hs.contains(s.substring(index_2,index_1))){
                         dp[index_1] = true;
@@ -75,11 +75,10 @@ class Main {
                     }
                 }
             }
-        
+
             return dp[s.length()];
 
         }
-
 
     public static void main(String[] args) {
         
