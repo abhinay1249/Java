@@ -16,6 +16,8 @@
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.List;
 
 class Main {
@@ -51,10 +53,23 @@ class Main {
     // ================================ Optimal Approach ==============================================
 
         public static boolean wordBreak_1(String s, List<String> wordDict){
+
+            Set<String> hs = new HashSet<>(wordDict);
+
+            int maxLength = 0;
+
+            for(String word : wordDict){
+                maxLength = Math.max(maxLength, word.length());
+            }
          
             boolean[] dp = new boolean[s.length()+1];
             
-            boolean[0] = true;
+            dp[0] = true;
+
+            for(int index = 0 ; index < s.length() ; index++){
+                char ch = s.charAt(index+1);
+
+            }
 
         }
 
