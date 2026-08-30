@@ -20,7 +20,6 @@ import java.util.List;
 
 class Main {
 
-
     // ================================ Brute Force Approach ==============================================
 
         private static boolean recursiveWordBreak(int index, String s, List<String> wordDict){
@@ -48,6 +47,13 @@ class Main {
             return recursiveWordBreak(index, s, wordDict);
 
         }
+
+    // ================================ Optimal Approach ==============================================
+
+        public static boolean wordBreak_1(String s, List<String> wordDict){
+            
+        }
+
     public static void main(String[] args) {
         
         String s = "takeuforward";
