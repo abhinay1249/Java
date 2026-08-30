@@ -34,10 +34,10 @@ class Main {
                     if(recursiveWordBreak(runningIndex+1, s, wordDict)){
                         return true;
                     }
-                }
+                }   
             }
 
-            return false;
+            return false;                                                       // T.C = O(2^N * N^2), S.C = O(N)
 
         }
 
@@ -46,7 +46,6 @@ class Main {
             int index = 0;
 
             return recursiveWordBreak(index, s, wordDict);
-
 
         }
     public static void main(String[] args) {
