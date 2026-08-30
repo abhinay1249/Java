@@ -19,14 +19,19 @@ import java.util.*;
 class Main {
 
 
+    // ================================ Brute Force Approach ==============================================
 
-        public static boolean wordBreak(String s, List<String> wordBreak){
-        
+        private static boolean recursiveWordBreak(int index, String s, List<String> wordDict){
+
+        }
+
+        public static boolean wordBreak(String s, List<String> wordDict){
+
             int index = 0;
-        
-            return recursiveWordBreak(index, s, wordBreak);
-        
-        
+
+            return recursiveWordBreak(index, s, wordDict);
+
+
         }
     public static void main(String[] args) {
         
