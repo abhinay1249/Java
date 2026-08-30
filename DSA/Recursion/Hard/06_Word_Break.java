@@ -14,7 +14,9 @@
 // Explanation : Return false because "applepineapple" can be segmented as "apple", "pine", "apple" 
 // but here we do not have "pine" word in dictionary.
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 class Main {
 
@@ -22,6 +24,20 @@ class Main {
     // ================================ Brute Force Approach ==============================================
 
         private static boolean recursiveWordBreak(int index, String s, List<String> wordDict){
+
+            if(index == s.length()){
+                return true;
+            }
+
+            for(int runningIndex = index ; runningIndex < s.length() ; runningIndex++){
+                if(wordDict.contains(s.substring(index, runningIndex+1))){
+                    if(recursiveWordBreak(runningIndex+1, s, wordDict)){
+                        return true;
+                    }
+                }
+            }
+
+            return false;
 
         }
 
