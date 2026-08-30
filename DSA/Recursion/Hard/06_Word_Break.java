@@ -22,7 +22,7 @@ import java.util.Set;
 
 class Main {
 
-    // ================================ Brute Force Approach ==============================================
+    // ================================ Brute Force Approach ==========================================
 
         private static boolean recursiveWordBreak(int index, String s, List<String> wordDict){
 
