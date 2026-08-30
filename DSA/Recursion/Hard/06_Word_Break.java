@@ -82,10 +82,12 @@ class Main {
 
         boolean result = wordBreak(s, wordDict);
 
+        System.out.println(result);
+
         boolean result_1 = wordBreak_1(s, wordDict);
 
-        System.out.println(result);
-        System.out.println(result);
+        System.out.println(result_1);
+        
     }
 }
 
