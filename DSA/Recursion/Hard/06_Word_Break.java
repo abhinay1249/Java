@@ -17,8 +17,8 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
-import java.util.Set;
 import java.util.List;
+import java.util.Set;
 
 class Main {
 
@@ -66,10 +66,17 @@ class Main {
             
             dp[0] = true;
 
-            for(int index = 0 ; index < s.length() ; index++){
-                char ch = s.charAt(index+1);
-
+            for(int index_1 = 1 ; index_1 <= s.length() ; index_1++){
+            
+                for(int index_2 = index_1 - 1 ; index_2 >= Math.max(0, index_1 - maxLength) ; index_2--){
+                    if(dp[index_2] && hs.contains(s.substring(index_2,index_1))){
+                        dp[index_1] = true;
+                        break;
+                    }
+                }
             }
+        
+            return dp[s.length()];
 
         }
 
@@ -87,7 +94,7 @@ class Main {
         boolean result_1 = wordBreak_1(s, wordDict);
 
         System.out.println(result_1);
-        
+
     }
 }
 
