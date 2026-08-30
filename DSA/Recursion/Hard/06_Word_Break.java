@@ -62,7 +62,7 @@ class Main {
                 maxLength = Math.max(maxLength, word.length());
             }
          
-            boolean[] dp = new boolean[s.length()+1];                   // T.C = O(N^2) + O(N), S.C = O(N + D) + O(N)
+            boolean[] dp = new boolean[s.length()+1];                          // T.C = O(N^2) + O(N), S.C = O(N + D) + O(N)
             
             dp[0] = true;
 
