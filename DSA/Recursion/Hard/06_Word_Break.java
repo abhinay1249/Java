@@ -51,8 +51,13 @@ class Main {
     // ================================ Optimal Approach ==============================================
 
         public static boolean wordBreak_1(String s, List<String> wordDict){
+         
+            boolean[] dp = new boolean[s.length()+1];
             
+            boolean[0] = true;
+
         }
+
 
     public static void main(String[] args) {
         
