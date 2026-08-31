@@ -51,7 +51,11 @@ class Main{
                 }
             }
 
-            return color[graph.size];
+            if(color[graph.size()-1] == 1){
+                return true;
+            }
+
+            return false;
         }
 
         public static boolean edgesColoring(int n, int m, int[][] edges){
@@ -90,7 +94,7 @@ class Main{
         
         int n = 4;
 
-        int m = 3;
+        int m = 2;
 
         int[][] edges = {{0,1}, {1,2},{2,3},{3,0},{0,2}};
         
