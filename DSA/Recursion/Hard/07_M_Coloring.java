@@ -16,7 +16,37 @@
 // Explanation: It is not possible to color the graph using 2 colors as it forms a triangle, which requires at least 3 colors.
 // Hence, the answer is 0 (not possible).
 
+import java.util.*;
+
 class Main{
+
+    public static boolean edgesColoring(int n, int m, int[][] edges){
+
+        List<List<Integer>> graph = new ArrayList<>();
+
+        for(int index = 0 ; index <= edges.length ; index++){
+            graph.add(new ArrayList<>());
+        }
+
+        graph.get(0).add(1);
+        graph.get(1).add(0);
+
+        graph.get(1).add(2);
+        graph.get(2).add(1);
+        
+        graph.get(2).add(3);
+        graph.get(3).add(2);
+
+        graph.get(3).add(0);
+        graph.get(0).add(3);
+
+        graph.get(0).add(2);
+        graph.get(2).add(0);
+
+
+        return coloring(n, m, graph);
+
+    }
     
     public static void main(String[] args) {
         
