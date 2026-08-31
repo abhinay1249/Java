@@ -25,8 +25,13 @@ class Main{
 
         private static boolean isPossible(int node, int col, List<List<Integer>> graph, int[] color){
 
-            
+            for(int neighbour : graph.get(node)){
+                if(color[neighbour] == col){
+                    return false;
+                }
+            }
 
+            return true;
 
         }
 
