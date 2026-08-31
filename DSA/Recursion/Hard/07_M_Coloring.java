@@ -16,7 +16,8 @@
 // Explanation: It is not possible to color the graph using 2 colors as it forms a triangle, which requires at least 3 colors.
 // Hence, the answer is 0 (not possible).
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 class Main{
 
@@ -24,9 +25,12 @@ class Main{
 
         private static boolean isPossible(int node, int col, List<List<Integer>> graph, int[] color){
 
+            
+
+
         }
 
-        public static boolean coloring(int node, int n, int m, int[] color){
+        public static boolean coloring(int node, int n, int m, List<List<Integer>> graph, int[] color){
 
             if(node == n){
                 return true;
@@ -35,7 +39,7 @@ class Main{
             for(int col = 1 ; col <= m ; col++){
                 if(isPossible(node, col, graph, color)){
                     color[node] = col;
-                    if(coloring(node+1, n, m, color)){
+                    if(coloring(node+1, n, m, graph, color)){
                         return true;
                     }                  
                     color[node] = 0;
@@ -49,11 +53,11 @@ class Main{
 
             List<List<Integer>> graph = new ArrayList<>();
 
-            int[] color = new int[n+1];
+            int[] color = new int[n];
 
             int node = 0;
 
-            for(int index = 0 ; index <= edges.length ; index++){
+            for(int index = 0 ; index < n ; index++){
                 graph.add(new ArrayList<>());
             }
 
@@ -73,7 +77,7 @@ class Main{
             graph.get(2).add(0);
 
 
-            return coloring(node, n, m, color);
+            return coloring(node, n, m, graph, color);
 
         }
     
