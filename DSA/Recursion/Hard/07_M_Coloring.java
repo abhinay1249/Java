@@ -51,7 +51,7 @@ class Main{
                 }
             }
 
-            return false;
+            return color[graph.size];
         }
 
         public static boolean edgesColoring(int n, int m, int[][] edges){
@@ -94,7 +94,9 @@ class Main{
 
         int[][] edges = {{0,1}, {1,2},{2,3},{3,0},{0,2}};
         
-        
+        boolean result = edgesColoring(n, m, edges);
+
+        System.out.println(result);
 
     }
 }
