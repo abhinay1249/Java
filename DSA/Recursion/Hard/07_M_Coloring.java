@@ -24,7 +24,6 @@ class Main{
 
         private static boolean coloring(int node, int n, int m, List<List<Integer> graph, int[] color){
 
-
             if(node == n){
                 return true;
             }
@@ -40,7 +39,7 @@ class Main{
             }
 
             return false;
-        } 
+        }
 
         public static boolean edgesColoring(int n, int m, int[][] edges){
 
