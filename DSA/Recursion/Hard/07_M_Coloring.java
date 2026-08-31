@@ -70,20 +70,28 @@ class Main{
                 graph.add(new ArrayList<>());
             }
 
-            graph.get(0).add(1);
-            graph.get(1).add(0);
+            for(int[] edge : edges){
+                int u = edge[0];
+                int v = edge[1];
 
-            graph.get(1).add(2);
-            graph.get(2).add(1);
+                graph.get(u).add(v);
+                graph.get(v).add(u);
+            }
 
-            graph.get(2).add(3);
-            graph.get(3).add(2);
+            // graph.get(0).add(1);
+            // graph.get(1).add(0);
 
-            graph.get(3).add(0);
-            graph.get(0).add(3);
+            // graph.get(1).add(2);
+            // graph.get(2).add(1);
 
-            graph.get(0).add(2);
-            graph.get(2).add(0);
+            // graph.get(2).add(3);
+            // graph.get(3).add(2);
+
+            // graph.get(3).add(0);
+            // graph.get(0).add(3);
+
+            // graph.get(0).add(2);
+            // graph.get(2).add(0);
 
 
             return coloring(node, n, m, graph, color);
