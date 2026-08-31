@@ -22,16 +22,20 @@ class Main{
 
     // ================================== Only Approach ===========================================
 
-        private static boolean coloring(int node, int n, int m, List<List<Integer> graph, int[] color){
+        private static boolean isPossible(int node, int col, List<List<Integer>> graph, int[] color){
+
+        }
+
+        public static boolean coloring(int node, int n, int m, int[] color){
 
             if(node == n){
                 return true;
             }
 
             for(int col = 1 ; col <= m ; col++){
-                if(isPossible()){
-                    color[node] = 1;
-                    if(coloring(node+1, n, m, graph, color)){
+                if(isPossible(node, col, graph, color)){
+                    color[node] = col;
+                    if(coloring(node+1, n, m, color)){
                         return true;
                     }                  
                     color[node] = 0;
@@ -69,7 +73,7 @@ class Main{
             graph.get(2).add(0);
 
 
-            return coloring(node, n, m, graph, color);
+            return coloring(node, n, m, color);
 
         }
     
