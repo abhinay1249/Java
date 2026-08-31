@@ -20,6 +20,8 @@ import java.util.*;
 
 class Main{
 
+    // ================================== Only Approach ===========================================
+
         private static boolean coloring(int node, int n, int m, List<List<Integer> graph, int[] color){
 
 
