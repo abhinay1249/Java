@@ -17,7 +17,16 @@
 // Hence, the answer is 0 (not possible).
 
 class Main{
+    
     public static void main(String[] args) {
         
+        int n = 4;
+
+        int m = 3;
+
+        int[][] edges = {{0,1}, {1,2},{2,3},{3,0},{0,2}};
+        
+        
+
     }
 }
