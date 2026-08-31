@@ -20,13 +20,28 @@ import java.util.*;
 
 class Main{
 
-        private static boolean coloring(int n, int m, List<List<Integer> graph){
-            
+        private static boolean coloring(int node, int n, int m, List<List<Integer> graph, int[] color){
+
+
+            if(node == n){
+                return true;
+            }
+
+            for(int col = 1 ; col <= m ; col++){
+                if(isPossible()){
+                    color[node] = 1;
+                }
+            }
+
+
+
         } 
 
         public static boolean edgesColoring(int n, int m, int[][] edges){
 
             List<List<Integer>> graph = new ArrayList<>();
+
+            int[] color = new int[n+1];
 
             for(int index = 0 ; index <= edges.length ; index++){
                 graph.add(new ArrayList<>());
@@ -48,7 +63,7 @@ class Main{
             graph.get(2).add(0);
 
 
-            return coloring(n, m, graph);
+            return coloring(n, m, graph, color);
 
         }
     
