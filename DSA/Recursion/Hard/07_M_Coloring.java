@@ -30,11 +30,14 @@ class Main{
             for(int col = 1 ; col <= m ; col++){
                 if(isPossible()){
                     color[node] = 1;
+                    if(coloring(node+1, n, m, graph, color)){
+                        return true;
+                    }                  
+                    color[node] = 0;
                 }
             }
 
-
-
+            return false;
         } 
 
         public static boolean edgesColoring(int n, int m, int[][] edges){
@@ -42,6 +45,8 @@ class Main{
             List<List<Integer>> graph = new ArrayList<>();
 
             int[] color = new int[n+1];
+
+            int node = 0;
 
             for(int index = 0 ; index <= edges.length ; index++){
                 graph.add(new ArrayList<>());
@@ -63,7 +68,7 @@ class Main{
             graph.get(2).add(0);
 
 
-            return coloring(n, m, graph, color);
+            return coloring(node, n, m, graph, color);
 
         }
     
