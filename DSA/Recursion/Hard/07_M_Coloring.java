@@ -44,7 +44,7 @@ class Main{
             for(int col = 1 ; col <= m ; col++){
                 if(isPossible(node, col, graph, color)){
                     color[node] = col;
-                    if(coloring(node+1, n, m, graph, color)){
+                    if(coloring(node+1, n, m, graph, color)){       // T.C = O(M^N), S.C = O(N) + O(N)
                         return true;
                     }                  
                     color[node] = 0;
