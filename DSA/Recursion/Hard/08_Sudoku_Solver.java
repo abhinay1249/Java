@@ -30,9 +30,13 @@ class Main{
                 if(board[row][col] == '.'){
                     for(char num = '1' ; num < '9' ; num++){
                         board[row][col] = num;
+
                         if(sudokuSolver(board)){
                             return true;
+                        }else{
+                            
                         }
+
                     }
                 }
 
