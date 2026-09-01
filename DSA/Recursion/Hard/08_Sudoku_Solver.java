@@ -25,7 +25,9 @@ class Main{
     private static boolean isPossible(int row, int col, char num, char[][] board){
 
         for(int index = 0 ; index < board.length ; index++){
-            if()
+            if(board[row][index] == num){
+                return false;
+            }
         }
 
     }
