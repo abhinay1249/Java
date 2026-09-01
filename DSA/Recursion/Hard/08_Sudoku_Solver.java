@@ -29,7 +29,7 @@ class Main{
                 return false;
             }
 
-            if(){
+            if(borad[]){
                 return false;
             }
         }
