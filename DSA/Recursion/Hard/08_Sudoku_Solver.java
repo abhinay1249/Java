@@ -34,7 +34,7 @@ class Main{
                         if(sudokuSolver(board)){
                             return true;
                         }else{
-                            
+                            board[row][col]='.';
                         }
 
                     }
