@@ -22,6 +22,10 @@
 
 class Main{
 
+    private static boolean isPossible(){
+        
+    }
+
     public static boolean sudokuSolver(char[][] board){
 
         for(int row = 0 ; row < board.length ; row++){
@@ -48,7 +52,7 @@ class Main{
 
             }
         }
-        
+
         return true;
 
     }
