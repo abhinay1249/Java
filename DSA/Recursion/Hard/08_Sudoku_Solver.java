@@ -22,8 +22,8 @@
 
 class Main{
 
-    private static boolean isPossible(){
-        
+    private static boolean isPossible(int row, int col, char num, char[][] board){
+
     }
 
     public static boolean sudokuSolver(char[][] board){
