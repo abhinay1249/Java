@@ -33,7 +33,7 @@ class Main{
                 return false;
             }
 
-            if(board[][] == num){
+            if(board[3 * (row/3) + i/3][] == num){
                 return false;
             }
         }
