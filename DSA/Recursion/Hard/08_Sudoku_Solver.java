@@ -28,6 +28,8 @@ class Main{
             if(board[row][index] == num){
                 return false;
             }
+
+            if()
         }
 
     }
