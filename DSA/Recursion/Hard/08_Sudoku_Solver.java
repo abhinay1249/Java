@@ -28,20 +28,28 @@ class Main{
             for(int col = 0 ; col < board[0].length ; col++){
 
                 if(board[row][col] == '.'){
-                    for(char num = '1' ; num < '9' ; num++){
-                        board[row][col] = num;
 
-                        if(sudokuSolver(board)){
-                            return true;
-                        }else{
-                            board[row][col]='.';
+                    for(char num = '1' ; num < '9' ; num++){
+
+                        if(isPossible(row, col, num, board)){
+                            board[row][col] = num;
+
+                            if(sudokuSolver(board)){
+                                return true;
+                            }else{
+                                board[row][col]='.';
+                            }
                         }
 
                     }
+
+                    return false;
                 }
 
             }
         }
+        
+        return true;
 
     }
     public static void main(String[] args) {
