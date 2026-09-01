@@ -29,7 +29,7 @@ class Main{
                 return false;
             }
 
-            if(borad[]){
+            if(board[index][col] == num){
                 return false;
             }
         }
