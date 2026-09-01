@@ -30,7 +30,7 @@ class Main{
             }
 
             if(){
-                
+                return false;
             }
         }
 
