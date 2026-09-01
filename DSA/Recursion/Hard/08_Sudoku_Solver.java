@@ -48,7 +48,7 @@ class Main{
 
                 if(board[row][col] == '.'){
 
-                    for(char num = '1' ; num < '9' ; num++){
+                    for(char num = '1' ; num <= '9' ; num++){
 
                         if(isPossible(row, col, num, board)){
                             board[row][col] = num;
@@ -83,8 +83,9 @@ class Main{
 
         for(char char_1 = '1' ; char_1 < board.length ; char_1++){
             for(char char_2 = '1' ; char_2 < board[0].length ; char_2++){
-                System.out.println(board[char_1][char_2]);
+                System.out.print(board[char_1][char_2] + " ");
             }
+            System.out.println();
         }
     }
 }
