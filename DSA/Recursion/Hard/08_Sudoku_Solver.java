@@ -38,6 +38,7 @@ class Main{
             }
         }
 
+        return true;`
     }
 
     public static boolean sudokuSolver(char[][] board){
