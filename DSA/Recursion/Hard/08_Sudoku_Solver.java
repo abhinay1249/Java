@@ -20,57 +20,60 @@
 
 // Explanation : The Input and Output boards are shown above.
 
+
 class Main{
 
-    private static boolean isPossible(int row, int col, char num, char[][] board){
+    // ================================ Only Approach ===========================================
 
-        for(int index = 0 ; index < board.length ; index++){
-            if(board[row][index] == num){
-                return false;
-            }
+        private static boolean isPossible(int row, int col, char num, char[][] board){
 
-            if(board[index][col] == num){
-                return false;
-            }
-
-            if(board[3 * (row/3) + index / 3][3 * (col/3) + index % 3] == num){
-                return false;
-            }
-        }
-
-        return true;
-    }
-
-    public static boolean sudokuSolver(char[][] board){
-
-        for(int row = 0 ; row < board.length ; row++){
-            for(int col = 0 ; col < board[0].length ; col++){
-
-                if(board[row][col] == '.'){
-
-                    for(char num = '1' ; num <= '9' ; num++){
-
-                        if(isPossible(row, col, num, board)){
-                            board[row][col] = num;
-
-                            if(sudokuSolver(board)){
-                                return true;
-                            }else{
-                                board[row][col]='.';
-                            }
-                        }
-
-                    }
-
+            for(int index = 0 ; index < board.length ; index++){
+                if(board[row][index] == num){
                     return false;
                 }
 
+                if(board[index][col] == num){
+                    return false;
+                }
+
+                if(board[3 * (row/3) + index / 3][3 * (col/3) + index % 3] == num){
+                    return false;
+                }
             }
+
+            return true;
         }
 
-        return true;
+        public static boolean sudokuSolver(char[][] board){
 
-    }
+            for(int row = 0 ; row < board.length ; row++){
+                for(int col = 0 ; col < board[0].length ; col++){
+
+                    if(board[row][col] == '.'){
+
+                        for(char num = '1' ; num <= '9' ; num++){
+
+                            if(isPossible(row, col, num, board)){
+                                board[row][col] = num;
+
+                                if(sudokuSolver(board)){
+                                    return true;
+                                }else{
+                                    board[row][col]='.';
+                                }
+                            }
+
+                        }
+
+                        return false;
+                    }
+
+                }
+            }
+
+            return true;
+
+        }
     public static void main(String[] args) {
 
         char[][] board = { {'5', '3', '.', '.', '7', '.', '.', '.', '.'}, {'6', '.', '.', '1', '9', '5', '.', '.', '.'},
