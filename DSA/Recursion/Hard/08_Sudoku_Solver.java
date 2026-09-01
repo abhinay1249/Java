@@ -32,6 +32,10 @@ class Main{
             if(board[index][col] == num){
                 return false;
             }
+
+            if(board[][] == num){
+                return false;
+            }
         }
 
     }
