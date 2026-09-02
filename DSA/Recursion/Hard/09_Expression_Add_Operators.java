@@ -23,9 +23,30 @@ import java.util.List;
 
 class Main{
 
+    private static void recursiveExpression(int index, List<String> al, String numStr, int target, String curr, long prev, long residual){
+
+        if(index == num.length()){
+            if(residual == target){
+                al.add(curr);
+            }
+            return;
+        }
+
+        String currStr = "";
+        long num = 0;
+
+        for(int index_1 = index ; index < numStr.length() ; index_1++){
+            
+        }
+
+
+    }
+
     public static List<String> addOperators(String num, int target){
 
         List<String> al = new ArrayList<>();
+
+
 
         return al;
 
