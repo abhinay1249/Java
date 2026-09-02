@@ -83,8 +83,8 @@ class Main{
 
         sudokuSolver(board);
 
-        for(char char_1 = '1' ; char_1 < board.length ; char_1++){
-            for(char char_2 = '1' ; char_2 < board[0].length ; char_2++){
+        for(int char_1 = 0 ; char_1 < board.length ; char_1++){
+            for(int char_2 = 0 ; char_2 < board[0].length ; char_2++){
                 System.out.print(board[char_1][char_2] + " ");
             }
             System.out.println();
