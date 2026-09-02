@@ -20,6 +20,11 @@
 
 
 class Main{
+
+    public static List<String> addOperators(String num, int target){
+        
+    }
+
     public static void main(String[] args) {
         String num = "123";
         int target = 6;        
