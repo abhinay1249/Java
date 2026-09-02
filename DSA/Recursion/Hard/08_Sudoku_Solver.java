@@ -20,7 +20,6 @@
 
 // Explanation : The Input and Output boards are shown above.
 
-
 class Main{
 
     // ================================ Only Approach ===========================================
@@ -53,7 +52,7 @@ class Main{
 
                         for(char num = '1' ; num <= '9' ; num++){
 
-                            if(isPossible(row, col, num, board)){
+                            if(isPossible(row, col, num, board)){               // T.C = O(9^(M *N)) * O(N) + S.C = O(N)
                                 board[row][col] = num;
 
                                 if(sudokuSolver(board)){
