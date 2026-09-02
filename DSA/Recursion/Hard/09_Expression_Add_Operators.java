@@ -18,15 +18,19 @@
 // Output: ["2*3+2","2+3*2"]
 // Explanation: Both "2*3+2" and "2+3*2" evaluate to 8.
 
+import java.util.*;
 
 class Main{
 
     public static List<String> addOperators(String num, int target){
-        
+
     }
 
     public static void main(String[] args) {
+
         String num = "123";
-        int target = 6;        
+        int target = 6;
+        
+        addOperators(num, target);
     }
 }
