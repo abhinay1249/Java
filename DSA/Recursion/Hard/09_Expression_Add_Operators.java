@@ -36,7 +36,14 @@ class Main{
         long num = 0;
 
         for(int index_1 = index ; index < numStr.length() ; index_1++){
-            if(index_1 > index && numStr.charAt(index_1) == '0') break;
+            
+            if(index_1 > index && numStr.charAt(index) == '0') break;
+            currStr += numStr.charAt(index_1);
+            num = num * 10 + numStr.charAt(index_1) - '0';
+
+
+            
+
         }
 
 
