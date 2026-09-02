@@ -23,7 +23,7 @@ import java.util.List;
 
 class Main{
 
-    // ========================================== Only Approach ===================================
+    // ================================== Only Approach ========================================
 
         private static List<String> recursiveExpression(int index, List<String> al, String numStr, int target, String currStr, long prev, long residual){
 
@@ -74,6 +74,6 @@ class Main{
         int target = 6;
         
         addOperators(num, target);
-        
+
     }
 }
