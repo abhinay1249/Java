@@ -23,19 +23,19 @@ import java.util.List;
 
 class Main{
 
-    private static void recursiveExpression(int index, List<String> al, String numStr, int target, String currStr, long prev, long residual){
+    private static List<String> recursiveExpression(int index, List<String> al, String numStr, int target, String currStr, long prev, long residual){
 
         if(index == numStr.length()){
             if(residual == target){
                 al.add(currStr);
             }
-            return;
+            return al;
         }
 
         String curr = "";
         long num = 0;
 
-        for(int index_1 = index ; index < numStr.length() ; index_1++){
+        for(int index_1 = index ; index_1 < numStr.length() ; index_1++){
             
             if(index_1 > index && numStr.charAt(index) == '0') break;
 
@@ -43,17 +43,18 @@ class Main{
             num = num * 10 + numStr.charAt(index_1) - '0';
 
             if(index == 0){
-                recursiveExpression(index+1, al, numStr, target, currStr + curr, index_1,index_1);
+                recursiveExpression(index_1+1, al, numStr, target, curr, num, num);
             }else{
-                recursiveExpression(index+1, al, numStr, target, currStr + "+" + curr, index_1,   index_1+num);
-                recursiveExpression(index+1, al, numStr, target, currStr + "-" + curr, -index_1,   index_1-num);
-                recursiveExpression(index+1, al, numStr, target, currStr + "*" + curr, index_1, (residual - prev) + (prev * num));
+                recursiveExpression(index_1+1, al, numStr, target, currStr + "+" + curr, num, residual+num);
+                recursiveExpression(index_1+1, al, numStr, target, currStr + "-" + curr, -num, residual-num);
+                recursiveExpression(index_1+1, al, numStr, target, currStr + "*" + curr, prev * num, (residual - prev) + (prev * num));
             }
 
         }
+        return al;
     }
 
-    public static List<String> addOperators(String num, int target){
+    public static void addOperators(String num, int target){
 
         List<String> al = new ArrayList<>();
 
@@ -61,7 +62,7 @@ class Main{
 
         recursiveExpression(index, al, num, target, num, index, index);
 
-        return al;
+        System.out.println(al);
 
     }
 
