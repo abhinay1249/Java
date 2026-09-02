@@ -23,48 +23,50 @@ import java.util.List;
 
 class Main{
 
-    private static List<String> recursiveExpression(int index, List<String> al, String numStr, int target, String currStr, long prev, long residual){
+    // ========================================== Only Approach ===================================
 
-        if(index == numStr.length()){
-            if(residual == target){
-                al.add(currStr);
+        private static List<String> recursiveExpression(int index, List<String> al, String numStr, int target, String currStr, long prev, long residual){
+
+            if(index == numStr.length()){
+                if(residual == target){
+                    al.add(currStr);
+                }
+                return al;
+            }
+
+            String curr = "";
+            long num = 0;
+
+            for(int index_1 = index ; index_1 < numStr.length() ; index_1++){
+
+                if(index_1 > index && numStr.charAt(index) == '0') break;
+
+                curr += numStr.charAt(index_1);
+                num = num * 10 + numStr.charAt(index_1) - '0';
+
+                if(index == 0){
+                    recursiveExpression(index_1+1, al, numStr, target, curr, num, num);
+                }else{
+                    recursiveExpression(index_1+1, al, numStr, target, currStr + "+" + curr, num, residual+num);
+                    recursiveExpression(index_1+1, al, numStr, target, currStr + "-" + curr, -num, residual-num);
+                    recursiveExpression(index_1+1, al, numStr, target, currStr + "*" + curr, prev * num, (residual - prev) + (prev * num));
+                }
+
             }
             return al;
         }
 
-        String curr = "";
-        long num = 0;
+        public static void addOperators(String num, int target){
 
-        for(int index_1 = index ; index_1 < numStr.length() ; index_1++){
-            
-            if(index_1 > index && numStr.charAt(index) == '0') break;
+            List<String> al = new ArrayList<>();
 
-            curr += numStr.charAt(index_1);
-            num = num * 10 + numStr.charAt(index_1) - '0';
+            int index = 0;                                                  // T.C = O(4^(N-1) * N), S.C = O(N)
 
-            if(index == 0){
-                recursiveExpression(index_1+1, al, numStr, target, curr, num, num);
-            }else{
-                recursiveExpression(index_1+1, al, numStr, target, currStr + "+" + curr, num, residual+num);
-                recursiveExpression(index_1+1, al, numStr, target, currStr + "-" + curr, -num, residual-num);
-                recursiveExpression(index_1+1, al, numStr, target, currStr + "*" + curr, prev * num, (residual - prev) + (prev * num));
-            }
+            recursiveExpression(index, al, num, target, num, index, index);
+
+            System.out.println(al);
 
         }
-        return al;
-    }
-
-    public static void addOperators(String num, int target){
-
-        List<String> al = new ArrayList<>();
-
-        int index = 0;
-
-        recursiveExpression(index, al, num, target, num, index, index);
-
-        System.out.println(al);
-
-    }
 
     public static void main(String[] args) {
 
