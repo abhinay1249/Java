@@ -23,37 +23,43 @@ import java.util.List;
 
 class Main{
 
-    private static void recursiveExpression(int index, List<String> al, String numStr, int target, String curr, long prev, long residual){
+    private static void recursiveExpression(int index, List<String> al, String numStr, int target, String currStr, long prev, long residual){
 
-        if(index == num.length()){
+        if(index == numStr.length()){
             if(residual == target){
-                al.add(curr);
+                al.add(currStr);
             }
             return;
         }
 
-        String currStr = "";
+        String curr = "";
         long num = 0;
 
         for(int index_1 = index ; index < numStr.length() ; index_1++){
             
             if(index_1 > index && numStr.charAt(index) == '0') break;
-            currStr += numStr.charAt(index_1);
+
+            curr += numStr.charAt(index_1);
             num = num * 10 + numStr.charAt(index_1) - '0';
 
-
-            
+            if(index == 0){
+                recursiveExpression(index+1, al, numStr, target, currStr + curr, index_1,index_1);
+            }else{
+                recursiveExpression(index+1, al, numStr, target, currStr + "+" + curr, index_1,   index_1+num);
+                recursiveExpression(index+1, al, numStr, target, currStr + "-" + curr, -index_1,   index_1-num);
+                recursiveExpression(index+1, al, numStr, target, currStr + "*" + curr, index_1, (residual - prev) + (prev * num));
+            }
 
         }
-
-
     }
 
     public static List<String> addOperators(String num, int target){
 
         List<String> al = new ArrayList<>();
 
+        int index = 0;
 
+        recursiveExpression(index, al, num, target, num, index, index);
 
         return al;
 
