@@ -2,14 +2,20 @@
 
 //Example :
 
-// Input : 13
+// Input : num = 13
 // Output : 1101
 // Explanation : The respective decimal number is divided by 2 to obtain the respective binary number`
 
 class Main{
 
-    public static void main(String[] args){
+    public static String convertIntoBinary(int num){
         
+    }
+
+    public static void main(String[] args){
+        int num = 13;
+
+
     }
     
 }
