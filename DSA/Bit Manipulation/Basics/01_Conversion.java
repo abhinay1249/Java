@@ -9,12 +9,19 @@
 class Main{
 
     public static String convertIntoBinary(int num){
+
+        StringBuilder sb = new StringBuilder();
+
         
+
     }
 
     public static void main(String[] args){
         int num = 13;
 
+        String result = convertIntoBinary(num);
+
+        System.out.println(result);
 
     }
     
