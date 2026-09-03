@@ -18,7 +18,7 @@ class Main{
             char endStr = '\0';
 
 
-            while(start <= end){
+            while(start < end){
                 char temp = sb.charAt(start);
                 endStr = sb.charAt(end);
                 startStr = temp;
