@@ -8,15 +8,43 @@
 
 class Main{
 
-    public static String convertIntoBinary(int num){
+    // ============================ Approach ===================================
 
-        StringBuilder sb = new StringBuilder();
+        private static String reverseString(String sb){
 
-        
+            int start = 0, end = sb.length()-1;
 
-    }
+            while(start <= end){
+                char temp = num.charAt(start);
+                char endStr = num.charAt(end);
+                char startStr = temp;
+                start++;
+                end--;
+            }
+
+            return 
+        }
+
+        public static String convertIntoBinary(int num){
+
+            StringBuilder sb = new StringBuilder();
+
+            int number = num;
+
+            while(number != 0){
+
+                if(number % 2 == 1) sb.append("1");
+                else sb.append("0");
+
+                number/=2;
+            }
+
+            return reverseString(sb.toString());
+
+        }
 
     public static void main(String[] args){
+        
         int num = 13;
 
         String result = convertIntoBinary(num);
