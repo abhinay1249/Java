@@ -22,7 +22,7 @@ class Main{
                 end--;
             }
 
-            return 
+            return sb;
         }
 
         public static String convertIntoBinary(int num){
