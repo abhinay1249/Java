@@ -6,6 +6,10 @@
 // Output : 1101
 // Explanation : The respective decimal number is divided by 2 to obtain the respective binary number`
 
-public class 01_Conversion {
+class Main{
+
+    public static void main(String[] args){
+        
+    }
     
 }
