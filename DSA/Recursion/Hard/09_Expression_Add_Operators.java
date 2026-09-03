@@ -60,7 +60,7 @@ class Main{
 
             List<String> al = new ArrayList<>();
 
-            int index = 0;                                                  // T.C = O(4^(N-1) * N), S.C = O(N)
+            int index = 0;                                                  // T.C = O(4^(N) * N), S.C = O(N)
 
             recursiveExpression(index, al, num, target, num, index, index);
 
