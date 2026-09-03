@@ -14,10 +14,14 @@ class Main{
 
             int start = 0, end = sb.length()-1;
 
+            char startStr = '\0';
+            char endStr = '\0';
+
+
             while(start <= end){
-                char temp = num.charAt(start);
-                char endStr = num.charAt(end);
-                char startStr = temp;
+                char temp = sb.charAt(start);
+                endStr = sb.charAt(end);
+                startStr = temp;
                 start++;
                 end--;
             }
