@@ -56,6 +56,16 @@ class Main{
 
     // ============================ Approach ===================================
 
+        private static int powerOfNumber(int power){
+            
+            if(power == 0){
+                return 1;
+            }
+
+            
+
+        }
+
         public static int convertIntoDecimal(String str){
 
             int number = 0;
