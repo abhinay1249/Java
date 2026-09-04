@@ -1,10 +1,17 @@
 // Problem Statement : Perform conversion of a decimal number into a binary number and vice versa.
 
-//Example :
+// Example 1:
 
 // Input : num = 13
 // Output : 1101
-// Explanation : The respective decimal number is divided by 2 to obtain the respective binary number`
+// Explanation : The respective decimal number is divided by 2 to obtain the respective binary number.
+
+// Example 2:
+
+// Input : Binary = 1101
+// Output : 13
+// Explanation : The respective binary number is sum up with the multiplied power of 2 to obtain the respective decimal number.
+
 
 class Main{
 
