@@ -10,23 +10,23 @@ class Main{
 
     // ============================ Approach ===================================
 
-        private static String reverseString(String sb){
+        private static String reverseString(String str){
+
+            StringBuilder sb = new StringBuilder(str);
 
             int start = 0, end = sb.length()-1;
 
-            char startStr = '\0';
-            char endStr = '\0';
-
-
-            while(start < end){
+            while(start <= end){
                 char temp = sb.charAt(start);
-                endStr = sb.charAt(end);
-                startStr = temp;
+
+                sb.setCharAt(start, sb.charAt(end));
+                sb.setCharAt(end, temp);
+
                 start++;
                 end--;
             }
 
-            return sb;
+            return sb.toString();
         }
 
         public static String convertIntoBinary(int num){
