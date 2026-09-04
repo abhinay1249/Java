@@ -54,13 +54,27 @@ class Main{
 
         }
 
+    // ============================ Approach ===================================
+
+        public static int convertIntoDecimal(String str){
+
+            
+
+        }
+
     public static void main(String[] args){
         
         int num = 13;
 
-        String result = convertIntoBinary(num);
+        String decimalNum = convertIntoBinary(num);
 
-        System.out.println(result);
+        System.out.println(decimalNum);
+
+        String binaryNum = "1011";
+
+        int decimalNumber = convertIntoDecimal(binaryNum);
+
+        System.out.println(decimalNumber);
 
     }
 }
