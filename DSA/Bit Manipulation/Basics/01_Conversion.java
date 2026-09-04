@@ -83,8 +83,7 @@ class Main{
 
                 int value = str.charAt(counter) - '0';
 
-                int powerValue = powerOfNumber(power);
-                power++;
+                int powerValue = powerOfNumber(power++);
 
                 number+= (value * powerValue);
 
@@ -102,7 +101,7 @@ class Main{
 
         System.out.println(decimalNum);
 
-        String binaryNum = "1011";
+        String binaryNum = "1101";
 
         int decimalNumber = convertIntoDecimal(binaryNum);
 
