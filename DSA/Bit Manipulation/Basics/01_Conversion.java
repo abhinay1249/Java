@@ -60,6 +60,22 @@ class Main{
 
             int number = 0;
 
+            int length = str.length();
+            int power = 0;
+
+            for(int counter = length - 1 ; counter >= 0 ; counter--){
+
+                int value = str.charAt(counter) - '0';
+
+                int powerValue = powerOfNumber(power);
+                power++;
+
+                number+= (value * powerValue);
+
+            }
+
+            return number;
+
         }
 
     public static void main(String[] args){
