@@ -58,7 +58,7 @@ class Main{
 
         public static int convertIntoDecimal(String str){
 
-            
+            int number = 0;
 
         }
 
