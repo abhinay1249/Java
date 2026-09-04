@@ -62,7 +62,13 @@ class Main{
                 return 1;
             }
 
-            
+            int value = 1;
+
+            for(int index = power ; index > 0 ; index--){
+                value *= 2;
+            }
+
+            return value;
 
         }
 
