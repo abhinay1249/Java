@@ -81,9 +81,10 @@ class Main {
 
     // ================================ Optimal Approach ====================================
 
-        public static boolean checkithBit(int number, int bitNumber){
+        public static boolean checkithBit_1(int number, int bitNumber){
 
-            
+            return ((number & (1 << bitNumber))!=0);                        
+
         }
 
 
@@ -94,6 +95,8 @@ class Main {
         int bitNumber = 2;
 
         System.out.println(checkithBit(number, bitNumber));
+
+        System.out.println(checkithBit_1(number, bitNumber));
 
     }
 }
