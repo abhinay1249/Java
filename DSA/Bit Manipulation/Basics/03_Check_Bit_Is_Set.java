@@ -83,7 +83,13 @@ class Main {
 
         public static boolean checkithBit_1(int number, int bitNumber){
 
-            return ((number & (1 << bitNumber))!=0);                         // T.C = O(1), S.C = O(1)
+            // Left Shift Operation
+
+            return ((number & (1 << bitNumber)) != 0);                         // T.C = O(1), S.C = O(1)
+
+            //  Right Shift Operation
+            
+            // return ((number >> bitNumber) & 1 == 0);
 
         }
 
