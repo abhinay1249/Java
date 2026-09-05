@@ -12,6 +12,7 @@
 // Output: a = -200, b = -100
 // Explanation : Swapped using Bit Manipulation
 
+
 class Main{
 
     public static void swapTwoNumbers(int num1, int num2){
@@ -21,10 +22,9 @@ class Main{
         num1 = num1 ^ num2;
 
         System.out.println(num1);
-        System.out.println(num2);
+        System.out.println(num2);                                         // T.C = O(1), S.C = O(1)
 
     }
-
 
     public static void main(String[] args) {
 
