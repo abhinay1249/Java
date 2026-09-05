@@ -1,9 +1,15 @@
-// Problem Statement : Given below there are few set of fundamental operations performed using Bit Manipulation.
+// Problem Statement : Given two integers a and b, swap them in-place using only 2 variables (without using a temporary variable).
 
 // Example 1:
 
 // Input : a = 6, b= 5
 // Output : a = 5, b = 6
+// Explanation : Swapped using Bit Manipulation
+
+// Example 2:
+
+// Input: a = -100, b = -200
+// Output: a = -200, b = -100
 // Explanation : Swapped using Bit Manipulation
 
 class Main{
