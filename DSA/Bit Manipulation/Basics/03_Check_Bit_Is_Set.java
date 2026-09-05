@@ -13,3 +13,79 @@
 // Output: true
 // Explanation: Binary representation of 10 is 1010. The 1-st bit from LSB is set (1).
 
+class Main {
+    
+    private static String reverseString(String str){
+
+        StringBuilder sb = new StringBuilder(str);
+
+        int start = 0, end = str.length()-1;
+
+        while(start < end){
+            char temp = sb.charAt(start);
+
+            sb.setCharAt(start, sb.charAt(end));
+            sb.setCharAt(end, temp);
+
+            start++;
+            end--;
+        }
+
+        return sb.toString();
+
+    }
+
+    private static String convertIntoBinary(int number){
+
+        StringBuilder sb = new StringBuilder();
+        
+        while(number != 0){
+
+            if(number % 2 == 1){
+                sb.append("1");
+            }else{
+                sb.append("0");
+            }
+
+            number/=2;
+
+        }
+
+        return reverseString(sb.toString());
+
+    }
+
+    public static boolean checkithBit(int number, int bitNumber){
+
+        String binaryNumber = convertIntoBinary(number);
+
+        int length = binaryNumber.length()-1;
+
+        for(int index = length ; index >= 0 ; index--){
+
+            if(length - index == bitNumber){
+                int value = binaryNumber.charAt(index) - '0';
+
+                if(value == 1){
+                    return true;
+                }else{
+                    break;
+                }
+            }
+        }
+
+        return false;
+    }
+
+
+    public static void main(String[] args) {
+        
+        int number = 13;
+
+        int bitNumber = 2;
+
+        System.out.println(checkithBit(number, bitNumber));
+
+    }
+}
+
