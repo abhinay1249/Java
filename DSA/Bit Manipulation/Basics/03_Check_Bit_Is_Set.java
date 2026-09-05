@@ -81,7 +81,10 @@ class Main {
 
     // ================================ Optimal Approach ====================================
 
-        
+        public static boolean checkithBit(int number, int bitNumber){
+
+            
+        }
 
 
     public static void main(String[] args) {
