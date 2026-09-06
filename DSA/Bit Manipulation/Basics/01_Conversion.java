@@ -13,9 +13,9 @@
 // Explanation : The respective binary number is sum up with the multiplied power of 2 to obtain the respective decimal number.
 
 
-class Main{
+class Main {
 
-    // ============================ Approach ===================================
+    // ============================ Approach [Decimal To Binary] ===================================
 
         private static String reverseString(String str){
 

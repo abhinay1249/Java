@@ -62,7 +62,7 @@ class Main {
 
             int length = binaryNumber.length()-1;
 
-            for(int index = length ; index >= 0 ; index--){
+            for(int index = length ; index >= 0 ; index--){                 // TC = O(5 log N), S.C = O(2 LOG N)
                 if((length - index) == bitNumber){
                     if(sb.charAt(index) == '0'){
                         sb.setCharAt(index, '1');
@@ -73,7 +73,16 @@ class Main {
             }
 
             return sb.toString();
+
         }
+
+    // ================================ Optimal Approach ====================================
+
+        public static String setithBit_1(int number, int bitNumber){
+
+            
+        }
+
 
     public static void main(String args[]){
 
