@@ -54,7 +54,7 @@ class Main {
 
         }
 
-    // ============================ Approach ===================================
+    // ============================ Brute Force Approach [Convert Binary into Decimal] ===================================
 
         private static int powerOfNumber(int power){
             
