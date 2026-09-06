@@ -93,6 +93,30 @@ class Main {
 
         }
 
+    // ============================ Optimal Approach [Convert Binary into Decimal] ===================================
+
+        public static int convertIntoDecimal_1(String binaryNumber){
+
+            int length = binaryNumber.length();
+
+            int number = 0;
+
+            int power = 1;
+
+            for(int index = length - 1 ; index >= 0 ; index--){
+
+                if(binaryNumber.charAt(index) == '1'){
+                    number+=power;
+                }
+
+                power *= 2;
+
+            }
+
+            return number;
+
+        }
+
     public static void main(String[] args){
         
         int num = 13;
@@ -106,6 +130,10 @@ class Main {
         int decimalNumber = convertIntoDecimal(binaryNum);
 
         System.out.println(decimalNumber);
+
+        int decimalNumber_1 = convertIntoDecimal_1(binaryNum);
+
+        System.out.println(decimalNumber_1);
 
     }
 }
