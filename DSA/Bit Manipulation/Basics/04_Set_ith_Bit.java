@@ -13,3 +13,16 @@
 // Explanation : Initially the ith bit will be 0 zero for 13, after making the ith bit to be set then it will be 15 in decimal.
 
 
+class Main {
+
+    public static String setIthBit(int number, int bitNumber){
+        
+    }
+    public static void main(String args[]){
+        
+        int number = 13;
+        int bitNumber = 1;
+
+        setIthBit(number, bitNumber);
+    }
+}
