@@ -15,64 +15,66 @@
 
 class Main {
 
-    private static String reverseString(String number){
-        
-        StringBuilder sb = new StringBuilder(number);
-        
-        int start = 0, end = number.length()-1;
+    // ================================ Brute Force Approach ====================================
 
-        while(start < end){
-            char temp = sb.charAt(start);
+        private static String reverseString(String number){
 
-            sb.setCharAt(start, sb.charAt(end));
-            sb.setCharAt(end, temp);
+            StringBuilder sb = new StringBuilder(number);
 
-            start++;
-            end--;
-        }
+            int start = 0, end = number.length()-1;
 
-        return sb.toString();
+            while(start < end){
+                char temp = sb.charAt(start);
 
-    }
+                sb.setCharAt(start, sb.charAt(end));
+                sb.setCharAt(end, temp);
 
-    private static String convertIntoBinary(int number){
-
-        StringBuilder sb = new StringBuilder();
-
-        while(number != 0){
-            if(number %2 == 1){
-                sb.append("1");
-            }else{
-                sb.append("0");
+                start++;
+                end--;
             }
-            number/=2;
+
+            return sb.toString();
+
         }
 
-        return reverseString(sb.toString());
+        private static String convertIntoBinary(int number){
 
-    }
+            StringBuilder sb = new StringBuilder();
 
-    public static String setIthBit(int number, int bitNumber){
+            while(number != 0){
+                if(number %2 == 1){
+                    sb.append("1");
+                }else{
+                    sb.append("0");
+                }
+                number/=2;
+            }
 
-        String binaryNumber = convertIntoBinary(number);
+            return reverseString(sb.toString());
 
-        StringBuilder binaryNumber = new StringBuilder(binaryNumber);
+        }
 
-        int length = binaryNumber.length()-1;
+        public static String setIthBit(int number, int bitNumber){
 
-        for(int index = length ; index >= 0 ; index--){
-            if(index == bitNumber){
-                if(sb.charAt(index) == '0'){
-                    sb.setCharAt(index, '1');
+            String binaryNumber = convertIntoBinary(number);
+
+            StringBuilder sb = new StringBuilder(binaryNumber);
+
+            int length = binaryNumber.length()-1;
+
+            for(int index = length ; index >= 0 ; index--){
+                if(index == bitNumber){
+                    if(sb.charAt(index) == '0'){
+                        sb.setCharAt(index, '1');
+                    }
                 }
             }
+
+            return sb.toString();
         }
 
-
-        
-    }
     public static void main(String args[]){
-        
+
         int number = 13;
         int bitNumber = 1;
 
