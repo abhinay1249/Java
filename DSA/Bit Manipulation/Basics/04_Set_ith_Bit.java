@@ -63,9 +63,11 @@ class Main {
             int length = binaryNumber.length()-1;
 
             for(int index = length ; index >= 0 ; index--){
-                if(index == bitNumber){
+                if((length - index) == bitNumber){
                     if(sb.charAt(index) == '0'){
                         sb.setCharAt(index, '1');
+                    }else{
+                        break;
                     }
                 }
             }
@@ -78,6 +80,13 @@ class Main {
         int number = 13;
         int bitNumber = 1;
 
-        setIthBit(number, bitNumber);
+        String num1 = convertIntoBinary(number);
+
+        System.out.println(num1);
+
+        String num2 = setIthBit(number, bitNumber);
+
+        System.out.println(num2);
+
     }
 }
