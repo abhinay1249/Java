@@ -8,8 +8,8 @@
 
 // Example 2:
 
-// Input: a = -100, b = -200
-// Output: a = -200, b = -100
+// Input : a = -100, b = -200
+// Output : a = -200, b = -100
 // Explanation : Swapped using Bit Manipulation
 
 
