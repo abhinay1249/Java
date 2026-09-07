@@ -14,16 +14,53 @@
 
 class Main {
 
-    
 
-    public static int toggleithBit(int number, int bitNumber){
+        private static String reverseString(String str){
 
-        int toggleNumber = number ^ (1 << i);
+            StringBuilder sb = new StringBuilder(str);
 
-        return toggleNumber;
+            int start = 0, end = str.length()-1;
 
+            while(start < end){
+                char temp = sb.charAt(start);
 
-    }
+                sb.setCharAt(start, sb.charAt(end));
+                sb.setCharAt(end, temp);
+
+                start++;
+                end--;
+            }
+
+            return sb.toString();
+
+        }
+
+        private static String convertIntoBinary(int number){
+
+            StringBuilder sb = new StringBuilder();
+
+            while(number != 0){
+
+                if(number % 2 == 1){
+                    sb.append("1");
+                }else{
+                    sb.append("0");
+                }
+                number/=2;
+
+            }
+
+            return reverseString(sb.toString());
+
+        }
+
+        public static int toggleithBit(int number, int bitNumber){
+
+            int toggleNumber = number ^ (1 << bitNumber);
+
+            return toggleNumber;
+
+        }
     public static void main(String[] args) {
         
         int number = 13;
