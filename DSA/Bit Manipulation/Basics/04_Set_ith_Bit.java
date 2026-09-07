@@ -80,7 +80,7 @@ class Main {
 
         public static int setithBit_1(int number, int bitNumber){
 
-            return number | (1 << bitNumber);
+            return number | (1 << bitNumber);                           // T.C = O(1), S.C = O(1)
             
         }
 
