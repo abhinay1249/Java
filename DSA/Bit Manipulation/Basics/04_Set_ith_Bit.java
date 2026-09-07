@@ -78,8 +78,9 @@ class Main {
 
     // ================================ Optimal Approach ====================================
 
-        public static String setithBit_1(int number, int bitNumber){
+        public static int setithBit_1(int number, int bitNumber){
 
+            return number | (1 << bitNumber);
             
         }
 
@@ -96,6 +97,10 @@ class Main {
         String num2 = setIthBit(number, bitNumber);
 
         System.out.println(num2);
+
+        int num3 = setithBit_1(number, bitNumber);
+
+        System.out.println(num3);
 
     }
 }
