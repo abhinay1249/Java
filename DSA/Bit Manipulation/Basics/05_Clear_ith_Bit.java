@@ -14,67 +14,68 @@
 
 class Main {
 
-    private static String reverseString(String str){
+    // ================================ Brute Force Approach =====================================
 
-        StringBuilder sb = new StringBuilder(str);
+        private static String reverseString(String str){
 
-        int start = 0, end = str.length()-1;
+            StringBuilder sb = new StringBuilder(str);
 
-        while(start < end){
-            char temp = sb.charAt(start);
+            int start = 0, end = str.length()-1;
 
-            sb.setCharAt(start, sb.charAt(end));
-            sb.setCharAt(end, temp);
+            while(start < end){
+                char temp = sb.charAt(start);
 
-            start++;
-            end--;
-        }
+                sb.setCharAt(start, sb.charAt(end));
+                sb.setCharAt(end, temp);
 
-        return sb.toString();
-    }
-    
-
-    private static String convertIntoBinary(int number){
-
-        StringBuilder sb = new StringBuilder();
-
-        while(number != 0){
-
-            if(number % 2 == 1){
-                sb.append("1");
-            }else{
-                sb.append("0");
+                start++;
+                end--;
             }
-            number/=2;
+
+            return sb.toString();
 
         }
 
-        return reverseString(sb.toString());
+        private static String convertIntoBinary(int number){
 
-    }
+            StringBuilder sb = new StringBuilder();
 
-    public static String clearithBit(int number, int bitNumber){
+            while(number != 0){
 
-        String binaryNumber = convertIntoBinary(number);
-
-        StringBuilder sb = new StringBuilder(binaryNumber);
-
-        int length = binaryNumber.length()-1;
-
-        for(int index = length ; index >= 0; index--){
-            if((length - index) == bitNumber){
-                if(sb.charAt(index) == '1'){
-                    sb.setCharAt(index, '0');
+                if(number % 2 == 1){
+                    sb.append("1");
                 }else{
-                    break;
+                    sb.append("0");
+                }
+                number/=2;
+
+            }
+
+            return reverseString(sb.toString());
+
+        }
+
+        public static String clearithBit(int number, int bitNumber){
+
+            String binaryNumber = convertIntoBinary(number);
+
+            StringBuilder sb = new StringBuilder(binaryNumber);
+
+            int length = binaryNumber.length()-1;
+
+            for(int index = length ; index >= 0; index--){
+                if((length - index) == bitNumber){
+                    if(sb.charAt(index) == '1'){                        // T.C = O(5 log N), S.C = o(2 Log N)
+                        sb.setCharAt(index, '0');
+                    }else{
+                        break;
+                    }
                 }
             }
+
+            return sb.toString();
+
         }
-
-        return sb.toString();
-
-    }
-    
     
     public static void main(String[] args) {
         
