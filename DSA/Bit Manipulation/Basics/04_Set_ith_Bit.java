@@ -78,10 +78,12 @@ class Main {
 
     // ================================ Optimal Approach ====================================
 
-        public static int setithBit_1(int number, int bitNumber){
+        public static String setithBit_1(int number, int bitNumber){
 
-            return number | (1 << bitNumber);                           // T.C = O(1), S.C = O(1)
+            int setNumber = number | (1 << bitNumber);                           // T.C = O(1), S.C = O(1)
             
+            return convertIntoBinary(setNumber);
+
         }
 
 
@@ -98,7 +100,7 @@ class Main {
 
         System.out.println(num2);
 
-        int num3 = setithBit_1(number, bitNumber);
+        String num3 = setithBit_1(number, bitNumber);
 
         System.out.println(num3);
 
