@@ -11,3 +11,7 @@
 // Input : N = 13, i = 2
 // Ouput : 1001
 // Explanation : Initially the ith bit will be one, after making the ith bit to toggle then it will be 0.
+
+class Main{
+    
+}
