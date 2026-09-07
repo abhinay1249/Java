@@ -43,7 +43,7 @@ class Main {
             while(number != 0){
 
                 if(number % 2 == 1){
-                    sb.append("1");
+                    sb.append("1");                                 
                 }else{
                     sb.append("0");
                 }
@@ -57,7 +57,7 @@ class Main {
 
         public static int toggleithBit(int number, int bitNumber){
 
-            int toggleNumber = number ^ (1 << bitNumber);
+            int toggleNumber = number ^ (1 << bitNumber);                         // T.C = O(1), S.C = O(1)
 
             return toggleNumber;
 
