@@ -65,7 +65,7 @@ class Main {
 
             for(int index = length ; index >= 0; index--){
                 if((length - index) == bitNumber){
-                    if(sb.charAt(index) == '1'){                        // T.C = O(5 log N), S.C = o(2 Log N)
+                    if(sb.charAt(index) == '1'){                        // T.C = O(5 log N), S.C = o(2 log N)
                         sb.setCharAt(index, '0');
                     }else{
                         break;
@@ -74,6 +74,16 @@ class Main {
             }
 
             return sb.toString();
+
+        }
+
+    // ======================================= Optimal Approach =====================================
+
+        public static String clearithBit_1(int number, int bitNumber){
+
+            int clearBit = number & ~(1 << bitNumber);
+
+            return convertIntoBinary(clearBit);                         // T.C = O(1), S.C = O(1)
 
         }
     
@@ -88,6 +98,11 @@ class Main {
 
         System.out.println(num1);
 
+        System.out.println(convertIntoBinary(number));
+
+        String num2 = clearithBit(number, bitNumber);
+
+        System.out.println(num2);
 
     }
 }
