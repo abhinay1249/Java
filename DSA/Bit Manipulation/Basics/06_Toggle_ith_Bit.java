@@ -13,5 +13,13 @@
 // Explanation : Initially the ith bit will be one, after making the ith bit to toggle then it will be 0.
 
 class Main{
-    
+    public static void main(String[] args) {
+        
+        int number = 13;
+        int bitNumber = 1;
+
+        toggleithBit(number, bitNumber);
+
+
+    }
 }
