@@ -13,7 +13,7 @@
 // Explanation : Swapped using Bit Manipulation
 
 
-class Main{
+class Main {
 
     public static void swapTwoNumbers(int num1, int num2){
 
