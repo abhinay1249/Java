@@ -12,7 +12,16 @@
 // Ouput : 1001
 // Explanation : Initially the ith bit will be one, after making the ith bit to toggle then it will be 0.
 
-class Main{
+class Main {
+
+    public static int toggleithBit(int number, int bitNumber){
+
+        int toggleNumber = number ^ (1 << i);
+
+        return toggleNumber;
+
+
+    }
     public static void main(String[] args) {
         
         int number = 13;
