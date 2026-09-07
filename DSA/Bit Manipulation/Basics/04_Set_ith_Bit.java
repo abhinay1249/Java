@@ -4,13 +4,13 @@
 
 // Input : N = 10, i = 0
 // Output : 1011
-// Explanation : Initially the 0th bit will be 0 zero for 10, after making the 0th bit to be set then it will be 11 in decimal.
+// Explanation : Initially the 0th bit will be 0 for 10, after making the 0th bit to be set then it will be 11 in decimal.
 
 // Example 2:
 
 // Input : N = 13, i = 1
 // Ouput : 1111
-// Explanation : Initially the ith bit will be 0 zero for 13, after making the ith bit to be set then it will be 15 in decimal.
+// Explanation : Initially the ith bit will be 0 for 13, after making the ith bit to be set then it will be 15 in decimal.
 
 
 class Main {
@@ -62,7 +62,7 @@ class Main {
 
             int length = binaryNumber.length()-1;
 
-            for(int index = length ; index >= 0 ; index--){                 // TC = O(5 log N), S.C = O(2 LOG N)
+            for(int index = length ; index >= 0 ; index--){                 // TC = O(5 log N), S.C = O(2 log N)
                 if((length - index) == bitNumber){
                     if(sb.charAt(index) == '0'){
                         sb.setCharAt(index, '1');
