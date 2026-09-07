@@ -14,6 +14,8 @@
 
 class Main {
 
+    
+
     public static int toggleithBit(int number, int bitNumber){
 
         int toggleNumber = number ^ (1 << i);
@@ -27,8 +29,13 @@ class Main {
         int number = 13;
         int bitNumber = 1;
 
-        toggleithBit(number, bitNumber);
+        System.out.println(convertIntoBinary(number));
 
+        int num = toggleithBit(number, bitNumber);
+
+        String num1 = convertIntoBinary(num);
+
+        System.out.println(num1);
 
     }
 }
