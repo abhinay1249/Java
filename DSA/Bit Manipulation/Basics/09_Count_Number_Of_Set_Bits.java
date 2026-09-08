@@ -15,62 +15,64 @@
 
 class Main {
 
-    private static String reverseString(String number){
+    // ====================================== Brute Force Approach ===================================
 
-        int start = 0, end = number.length()-1;
+        private static String reverseString(String number){
 
-        StringBuilder sb = new StringBuilder(number);
+            int start = 0, end = number.length()-1;
 
-        while(start < end){
-            char temp = sb.charAt(start);
+            StringBuilder sb = new StringBuilder(number);
 
-            sb.setCharAt(start, sb.charAt(end));
-            sb.setCharAt(end, temp);
+            while(start < end){
+                char temp = sb.charAt(start);
 
-            start++;
-            end--;
+                sb.setCharAt(start, sb.charAt(end));
+                sb.setCharAt(end, temp);
+
+                start++;
+                end--;
+            }
+
+            return sb.toString();
+
         }
 
-        return sb.toString();
+        private static String convertIntoBinary(int number){
 
-    }
+            StringBuilder sb = new StringBuilder();
 
-    private static String convertIntoBinary(int number){
+            while(number != 0){
+                if(number % 2 == 1){
+                    sb.append("1");
+                }else{
+                    sb.append("0");
+                }
 
-        StringBuilder sb = new StringBuilder();
+                number /= 2;
+
+            }
         
-        while(number != 0){
-            if(number % 2 == 1){
-                sb.append("1");
-            }else{
-                sb.append("0");
-            }
-
-            number /= 2;
+            return reverseString(sb.toString());
 
         }
-    
-        return reverseString(sb.toString());
 
-    }
+        public static int countNumberOfSetBits(int number){
 
-    public static int countNumberOfSetBits(int number){
+            String binaryNumber = convertIntoBinary(number);
 
-        String binaryNumber = convertIntoBinary(number);
+            int length = binaryNumber.length()-1;
 
-        int length = binaryNumber.length()-1;
+            int counter = 0;
 
-        int counter = 0;
-
-        for(int index = length ; index >= 0 ; index--){
-            if(binaryNumber.charAt(index) == '1'){
-                counter++;
+            for(int index = length ; index >= 0 ; index--){
+                if(binaryNumber.charAt(index) == '1'){
+                    counter++;
+                }
             }
+
+            return counter;
+
         }
-
-        return counter;
-
-    }
 
     public static void main(String[] args) {
 
