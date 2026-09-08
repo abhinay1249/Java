@@ -1,4 +1,10 @@
-// Problem Statement : Given the problem statement, Where the respective right most set bit is removed(changed to zero)
+// Problem Statement : Given the problem statement, Where the respective right most set bit is removed (changed to zero).
+
+// Example 1:
+
+// Input : 
+// Output :
+// Explanation : 
 
 class Main {
 
@@ -39,7 +45,7 @@ class Main {
 
             }
 
-            return reverseString(sb.toString());
+            return reverseString(sb.toString());                            // T.C = O(5 log N), .SC = O(2 log N)
 
         }
 
@@ -72,7 +78,6 @@ class Main {
         String result = removeTheLastSetBit(number);
 
         System.out.println(result);
-
 
     }
 }
