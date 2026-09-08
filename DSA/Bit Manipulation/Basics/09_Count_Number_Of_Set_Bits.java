@@ -60,7 +60,7 @@ class Main {
 
             String binaryNumber = convertIntoBinary(number);
 
-            int length = binaryNumber.length()-1;
+            int length = binaryNumber.length()-1;                           // T.C = O(5 log N), S.C = O(log N)
 
             int counter = 0;
 
