@@ -74,6 +74,12 @@ class Main {
 
         }
 
+    // ========================= Optimal Approach ============================
+
+        public static int countNumberOfSetBits_1(int number){
+
+        }
+
     public static void main(String[] args) {
 
         int number = 15;
@@ -81,6 +87,10 @@ class Main {
         int result = countNumberOfSetBits(number);
 
         System.out.println(result);
+
+        int result1 = countNumberOfSetBits_1(number);
+
+        System.out.println(result1);
 
     }
 }
