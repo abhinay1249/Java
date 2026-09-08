@@ -15,7 +15,7 @@
 
 class Main {
 
-    // ====================================== Brute Force Approach - 1 ===================================
+    // ===================== Brute Force Approach - 1 ===================================
 
         private static String reverseString(String number){
 
@@ -74,7 +74,7 @@ class Main {
 
         }
 
-    // ========================= Brute Force Approach - 2============================
+    // ========================= Brute Force Approach - 2 ============================
 
         public static int countNumberOfSetBits_1(int number){
 
@@ -90,6 +90,16 @@ class Main {
             if(number == 1) counter+=1;
 
             return counter;
+
+        }
+
+    // ======================== Optimal Approach ===================================
+
+        public static int countNumberOfSetBits_2(int number){
+
+            int counter = 0;
+
+            
 
         }
 
