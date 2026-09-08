@@ -48,7 +48,7 @@ class Main {
                 }else{
                     sb.append("0");
                 }
-                number/=2;
+                number/=2;                                                     // T.C = O(4 log N), S.C = O(log N)
 
             }
 
@@ -80,7 +80,7 @@ class Main {
 
         public static boolean checkNumber_1(int number){
 
-            return (number > 0) && ((number & number-1) == 0);
+            return (number > 0) && ((number & number-1) == 0);                  // T.C = O(1), S.C = O(1)
 
         }
 
