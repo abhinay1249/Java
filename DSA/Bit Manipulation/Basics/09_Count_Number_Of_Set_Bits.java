@@ -99,7 +99,12 @@ class Main {
 
             int counter = 0;
 
-            
+            while(number == 0){ 
+                number = (number & number - 1);                             // T.C = O(N) = O(31), S.C = O(1)
+                counter+=1;                                                // (where N is no of set bits in worst case it is 2^31)
+            }
+
+            return counter;
 
         }
 
