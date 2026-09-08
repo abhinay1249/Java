@@ -43,7 +43,7 @@ class Main {
             while(number != 0){
 
                 if(number % 2 == 1){
-                    sb.append("1");                                     
+                    sb.append("1");                                     // T.C = O(5 log N), S.C = O(2 log N)
                 }else{
                     sb.append("0");
                 }
