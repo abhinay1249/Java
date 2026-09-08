@@ -120,5 +120,9 @@ class Main {
 
         System.out.println(result1);
 
+        int result2 = countNumberOfSetBits_2(number);
+
+        System.out.println(result2);
+
     }
 }
