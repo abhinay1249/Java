@@ -2,9 +2,17 @@
 
 // Example 1:
 
-// Input : 
-// Output :
-// Explanation : 
+// Input : N = 13
+// Output : 1100
+// Explanation : The right most set bit is removed and is changed to zero.
+
+// Example 2:
+
+// Input : N = 40
+// Output : 100000
+// Explanation : The right most set bit is removed and is changed to zero.
+
+
 
 class Main {
 
