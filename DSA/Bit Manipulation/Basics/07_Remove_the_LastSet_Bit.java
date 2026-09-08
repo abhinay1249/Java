@@ -12,8 +12,6 @@
 // Output : 100000
 // Explanation : The right most set bit is removed and is changed to zero.
 
-
-
 class Main {
 
     // ============================== Brute Force Approach =======================================
