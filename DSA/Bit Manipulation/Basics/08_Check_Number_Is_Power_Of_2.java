@@ -76,6 +76,14 @@ class Main {
 
         }
 
+    // ========================= Optimal Approach ============================
+
+        public static boolean checkNumber_1(int number){
+
+            return (number > 0) && ((number & number-1) == 0);
+
+        }
+
     public static void main(String args[]){
 
         int number = 13;
@@ -83,6 +91,10 @@ class Main {
         boolean result = checkNumber(number);
 
         System.out.println(result);
+
+        boolean result1 = checkNumber_1(number);
+
+        System.out.println(result1);
 
     }
 }
