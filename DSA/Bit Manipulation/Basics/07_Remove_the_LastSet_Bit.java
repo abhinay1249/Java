@@ -74,14 +74,14 @@ class Main {
 
             int removeLastSet = number & (number-1);
 
-            return convertIntoBinary(removeLastSet);
+            return convertIntoBinary(removeLastSet);                    // T.C = O(1), S.C = O(1)
 
         }
 
 
     public static void main(String args[]){
 
-        int number = 8;
+        int number = 13;
 
         System.out.println(convertIntoBinary(number));
 
@@ -94,8 +94,6 @@ class Main {
         String result1 = removeTheLastSetBit_1(number);
 
         System.out.println(result1);
-
-
 
 
     }
