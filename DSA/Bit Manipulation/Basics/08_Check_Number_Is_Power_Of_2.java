@@ -70,9 +70,7 @@ class Main {
                 }
             }
 
-            if(counter == 1) return true;
-
-            return false;
+            return counter == 1;
 
         }
 
