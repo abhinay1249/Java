@@ -15,7 +15,7 @@
 
 class Main {
 
-    // ====================================== Brute Force Approach ===================================
+    // ====================================== Brute Force Approach - 1 ===================================
 
         private static String reverseString(String number){
 
@@ -74,9 +74,22 @@ class Main {
 
         }
 
-    // ========================= Optimal Approach ============================
+    // ========================= Brute Force Approach - 2============================
 
         public static int countNumberOfSetBits_1(int number){
+
+            int counter = 0;
+
+            while(number > 1){
+
+                counter += (number & 1);                // T.C = O(log N), S.C = O(1)
+
+                number = number >> 1;                   // (where N is no of set bits in worst case it is 2^31)
+            }
+
+            if(number == 1) counter+=1;
+
+            return counter;
 
         }
 
