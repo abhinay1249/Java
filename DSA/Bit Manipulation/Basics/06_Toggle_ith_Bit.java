@@ -14,7 +14,7 @@
 
 class Main {
 
-    // ======================================= Approach =======================================
+    // ======================================= Brute Force Approach =======================================
 
         private static String reverseString(String str){
 
@@ -43,7 +43,7 @@ class Main {
             while(number != 0){
 
                 if(number % 2 == 1){
-                    sb.append("1");                                 
+                    sb.append("1");                                     
                 }else{
                     sb.append("0");
                 }
@@ -55,7 +55,32 @@ class Main {
 
         }
 
-        public static int toggleithBit(int number, int bitNumber){
+        public static String toggleithBit(int number, int bitNumber){
+
+            String binaryNumber = convertIntoBinary(number);
+            
+            StringBuilder sb = new StringBuilder(binaryNumber);
+
+            int length = binaryNumber.length() - 1;
+
+            for(int index = length ; index >= 0 ; index--){
+                
+                if((length - index) == bitNumber){
+                    if(sb.charAt(index) == '0'){
+                        sb.setCharAt(index, '1');
+                    }else{
+                        sb.setCharAt(index, '0');
+                    }
+                }
+            }
+
+            return sb.toString();
+
+        }
+
+    // ======================================= Optimal Approach =======================================
+
+        public static int toggleithBit_1(int number, int bitNumber){
 
             int toggleNumber = number ^ (1 << bitNumber);                         // T.C = O(1), S.C = O(1)
 
@@ -69,11 +94,17 @@ class Main {
 
         System.out.println(convertIntoBinary(number));
 
-        int num = toggleithBit(number, bitNumber);
+        String num = toggleithBit(number, bitNumber);
 
-        String num1 = convertIntoBinary(num);
+        System.out.println(num);
 
-        System.out.println(num1);
+        System.out.println(convertIntoBinary(number));
+
+        int num1= toggleithBit_1(number, bitNumber);
+
+        String num2 = convertIntoBinary(num1);
+
+        System.out.println(num2);
 
     }
 }
