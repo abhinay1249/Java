@@ -68,6 +68,16 @@ class Main {
 
         }
 
+    // ================================== Optimal Approach ====================================
+
+        public static String removeTheLastSetBit_1(int number){
+
+            int removeLastSet = number & (number-1);
+
+            return convertIntoBinary(removeLastSet);
+
+        }
+
 
     public static void main(String args[]){
 
@@ -78,6 +88,15 @@ class Main {
         String result = removeTheLastSetBit(number);
 
         System.out.println(result);
+
+        System.out.println(convertIntoBinary(number));
+
+        String result1 = removeTheLastSetBit_1(number);
+
+        System.out.println(result1);
+
+
+
 
     }
 }
