@@ -81,9 +81,7 @@ class Main {
             int counter = 0;
 
             while(number > 1){
-
                 counter += (number & 1);                // T.C = O(log N), S.C = O(1)
-
                 number = number >> 1;                   // (where N is no of set bits in worst case it is 2^31)
             }
 
