@@ -23,7 +23,7 @@ class Main {
             num1 = num2;
             num2 = temp;
 
-            System.out.println(num1);
+            System.out.println(num1);                                   // T.C = O(1), S.C = O(1)
             System.out.println(num2);
 
         }
