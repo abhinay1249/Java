@@ -76,7 +76,7 @@ class Main {
 
         }
 
-    // ================================ Optimal Approach ====================================
+    // ============================ Optimal Approach ====================================
 
         public static String setithBit_1(int number, int bitNumber){
 
