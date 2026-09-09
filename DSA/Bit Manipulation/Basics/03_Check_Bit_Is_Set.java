@@ -77,6 +77,7 @@ class Main {
             }
 
             return false;
+
         }
 
     // ================================ Optimal Approach ====================================
@@ -92,7 +93,6 @@ class Main {
             // return ((number >> bitNumber) & 1 == 0);
 
         }
-
 
     public static void main(String[] args) {
         
