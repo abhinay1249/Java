@@ -65,7 +65,7 @@ class Main {
 
             for(int index = length ; index >= 0; index--){
                 if((length - index) == bitNumber){
-                    if(sb.charAt(index) == '1'){                        // T.C = O(5 log N), S.C = o(2 log N)
+                    if(sb.charAt(index) == '1'){                        // T.C = O(5 log N), S.C = O(2 log N)
                         sb.setCharAt(index, '0');
                     }else{
                         break;
