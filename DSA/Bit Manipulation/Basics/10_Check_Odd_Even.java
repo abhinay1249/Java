@@ -23,7 +23,7 @@ class Main {
 
             if(number % 2 == 0){
                 ans = "even";                                           // T.C = O(1), S.C = O(1)  
-            }else{                                                      // where this execution takes little more than below.
+            }else{                                                     // where this execution takes little more than below.
                 ans = "odd";
             }
 
