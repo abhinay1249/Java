@@ -15,7 +15,7 @@
 
 class Main {
 
-    // ===================== Brute Force Approach - 1 ===================================
+    // ========================= Brute Force Approach - 1 ===================================
 
         private static String reverseString(String number){
 
