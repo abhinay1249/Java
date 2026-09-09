@@ -15,7 +15,7 @@
 
 class Main {
 
-    // =================================== Optimal Approach ====================================
+    // =================================== Brute Force Approach ====================================
 
         public static void swapTwoNumbers(int num1, int num2){
 
@@ -27,7 +27,6 @@ class Main {
             System.out.println(num2);
 
         }
-
 
     // =================================== Optimal Approach ====================================
 
@@ -48,6 +47,7 @@ class Main {
         int num_2 = 10;
         
         swapTwoNumbers(num_1, num_2);
+        swapTwoNumbers_1(num_1, num_2);
 
     }
 }
