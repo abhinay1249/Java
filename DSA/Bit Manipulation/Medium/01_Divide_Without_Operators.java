@@ -17,14 +17,21 @@
 // Output: -2
 // Explanation: 7/-3 = -2.33, truncated to -2.
 
-
-
 class Main {
 
-
+    public static int divideWithoutOperators(int dividend, int divisor){
+        
+    }
 
 
     public static void main(String[] args) {
+
+        int dividened = 10;
+        int divisor = 3;
+
+        int result = divideWithoutOperators(dividened, divisor);
+
+        System.out.println(result);
         
     }
 }
