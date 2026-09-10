@@ -12,12 +12,10 @@
 // Explanation: 10/3 = 3.33, truncated to 3.
 
 // Example 2:
-// Input:
-//  Dividend = 7, Divisor = -3
-// Output:
-//  -2
-// Explanation:
-//  7/-3 = -2.33, truncated to -2.
+
+// Input: Dividend = 7, Divisor = -3
+// Output: -2
+// Explanation: 7/-3 = -2.33, truncated to -2.
 
 
 
