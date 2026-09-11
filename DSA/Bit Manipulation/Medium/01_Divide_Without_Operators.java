@@ -36,7 +36,9 @@ class Main {
         while(dividend >= divisor){
             int power = 0;
 
-            while(dividend >= d << (power+1))
+            while(dividend >= d << (power+1)){
+                power+=1;
+            }
 
         }
         
