@@ -30,15 +30,20 @@ class Main {
         long n = Math.abs((long) dividend);
         long d = Math.abs((long) divisor);
 
+        long ans = 0;
+
         if(dividend >= 0 && divisor < 0) sign = false;
         if(dividend <= 0 && divisor > 0) sign = false;
 
-        while(dividend >= divisor){
+        while(n >= d){
             int power = 0;
 
-            while(dividend >= d << (power+1)){
+            while(n >= (d << (power+1))){
                 power+=1;
             }
+
+            ans += (1L << power);
+            n-=(d << power);
 
         }
         
