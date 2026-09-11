@@ -22,7 +22,7 @@ class Main {
     public static int divideWithoutOperators(int dividend, int divisor){
         
         if(dividend == divisor){
-            
+            return 1;
         }
         
     }
