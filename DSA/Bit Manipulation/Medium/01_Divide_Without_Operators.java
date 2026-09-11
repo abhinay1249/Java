@@ -29,6 +29,12 @@ class Main {
 
         if(dividend >= 0 && divisor < 0) sign = false;
         if(dividend <= 0 && divisor > 0) sign = false;
+
+        while(dividend >= divisor){
+            int power = 0;
+
+            
+        }
         
     }
 
