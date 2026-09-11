@@ -24,6 +24,10 @@ class Main {
         if(dividend == divisor){
             return 1;
         }
+
+        boolean sign = true;
+
+        if(dividend >= 0 && divisor < 0) sign = false;
         
     }
 
