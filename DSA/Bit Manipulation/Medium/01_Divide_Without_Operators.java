@@ -27,13 +27,15 @@ class Main {
 
         boolean sign = true;
 
+        long n = Math.abs((long) dividend);
+        long d = Math.abs((long) divisor);
+
         if(dividend >= 0 && divisor < 0) sign = false;
         if(dividend <= 0 && divisor > 0) sign = false;
 
         while(dividend >= divisor){
             int power = 0;
 
-            
         }
         
     }
