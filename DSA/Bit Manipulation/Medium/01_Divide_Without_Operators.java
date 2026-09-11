@@ -28,6 +28,7 @@ class Main {
         boolean sign = true;
 
         if(dividend >= 0 && divisor < 0) sign = false;
+        if(dividend <= 0 && divisor > 0) sign = false;
         
     }
 
