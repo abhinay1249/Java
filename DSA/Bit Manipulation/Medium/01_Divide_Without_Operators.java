@@ -47,7 +47,7 @@ class Main {
 
         }
 
-        
+        if(ans >= (1L << 31) && isPositive == true) return Integer.MAX_VALUE;
 
 
         return sign ? (int) ans : (int) -ans;
