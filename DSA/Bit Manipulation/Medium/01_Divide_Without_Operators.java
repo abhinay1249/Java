@@ -25,15 +25,15 @@ class Main {
             return 1;
         }
 
-        boolean sign = true;
+        boolean isPositive = true;
 
         long n = Math.abs((long) dividend);
         long d = Math.abs((long) divisor);
 
         long ans = 0;
 
-        if(dividend >= 0 && divisor < 0) sign = false;
-        if(dividend <= 0 && divisor > 0) sign = false;
+        if(dividend >= 0 && divisor < 0) isPositive = false;
+        if(dividend <= 0 && divisor > 0) isPositive = false;
 
         while(n >= d){
             int power = 0;
@@ -46,6 +46,8 @@ class Main {
             n-=(d << power);
 
         }
+
+        
 
 
         return sign ? (int) ans : (int) -ans;
