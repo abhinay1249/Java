@@ -19,40 +19,42 @@
 
 class Main {
 
-    public static int divideWithoutOperators(int dividend, int divisor){
-        
-        if(dividend == divisor){
-            return 1;
-        }
+    // ================================== Optimal Approach =====================================
 
-        boolean isPositive = true;
+        public static int divideWithoutOperators(int dividend, int divisor){
 
-        long n = Math.abs((long) dividend);
-        long d = Math.abs((long) divisor);
-
-        long ans = 0;
-
-        if(dividend >= 0 && divisor < 0) isPositive = false;
-        if(dividend <= 0 && divisor > 0) isPositive = false;
-
-        while(n >= d){
-            int power = 0;
-
-            while(n >= (d << (power+1))){
-                power+=1;
+            if(dividend == divisor){
+                return 1;
             }
 
-            ans += (1L << power);
-            n-=(d << power);
+            boolean isPositive = true;
 
+            long n = Math.abs((long) dividend);
+            long d = Math.abs((long) divisor);
+
+            long ans = 0;
+
+            if(dividend >= 0 && divisor < 0) isPositive = false;
+            if(dividend <= 0 && divisor > 0) isPositive = false;
+
+            while(n >= d){
+                int power = 0;
+
+                while(n >= (d << (power+1))){
+                    power+=1;
+                }
+
+                ans += (1L << power);
+                n-=(d << power);
+
+            }
+
+            if(ans >= (1L << 31) && isPositive == true) return Integer.MAX_VALUE;
+            if(ans >= (1L << 31) && isPositive == false) return Integer.MIN_VALUE;
+
+
+            return isPositive ? (int) ans : (int) -ans;
         }
-
-        if(ans >= (1L << 31) && isPositive == true) return Integer.MAX_VALUE;
-        if(ans >= (1L << 31) && isPositive == false) return Integer.MIN_VALUE;
-
-
-        return isPositive ? (int) ans : (int) -ans;
-    }
 
     public static void main(String[] args) {
 
