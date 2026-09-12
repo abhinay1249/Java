@@ -46,7 +46,9 @@ class Main {
             n-=(d << power);
 
         }
-        
+
+
+        return sign ? (int) ans : (int) -ans;
     }
 
 
