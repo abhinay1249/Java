@@ -7,15 +7,15 @@
 
 // Example 1:
 
-// Input: Dividend = 10, Divisor = 3
-// Output: 3
-// Explanation: 10/3 = 3.33, truncated to 3.
+// Input : Dividend = 10, Divisor = 3
+// Output : 3
+// Explanation : 10/3 = 3.33, truncated to 3.
 
 // Example 2:
 
-// Input: Dividend = 7, Divisor = -3
-// Output: -2
-// Explanation: 7/-3 = -2.33, truncated to -2.
+// Input : Dividend = 7, Divisor = -3
+// Output : -2
+// Explanation : 7/-3 = -2.33, truncated to -2.
 
 class Main {
 
