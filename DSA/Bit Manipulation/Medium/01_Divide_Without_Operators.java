@@ -51,7 +51,6 @@ class Main {
         return sign ? (int) ans : (int) -ans;
     }
 
-
     public static void main(String[] args) {
 
         int dividened = 10;
