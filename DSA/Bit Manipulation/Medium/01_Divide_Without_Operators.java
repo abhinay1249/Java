@@ -67,7 +67,7 @@ class Main {
         int dividened = 10;
         int divisor = 3;
 
-        int result = divideWithoutOperators(dividened, divisor);
+        int result = divideWithoutOperators_1(dividened, divisor);
 
         System.out.println(result);
         
