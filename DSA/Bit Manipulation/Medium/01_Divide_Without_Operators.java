@@ -22,12 +22,12 @@ class Main {
     // ================================== Brute Force Approach =================================
 
         public static int divideWithoutOperators(int dividend, int divisor){
-            
+
         }
 
     // ================================== Optimal Approach =====================================
 
-        public static int divideWithoutOperators(int dividend, int divisor){
+        public static int divideWithoutOperators_1(int dividend, int divisor){
 
             if(dividend == divisor){
                 return 1;
