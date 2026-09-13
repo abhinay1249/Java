@@ -23,6 +23,8 @@ class Main {
 
         public static int divideWithoutOperators(int dividend, int divisor){
 
+            int result = 0;
+
         }
 
     // ================================== Optimal Approach =====================================
