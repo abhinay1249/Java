@@ -19,7 +19,7 @@
 
 class Main {
 
-    // ================================== Brute Force Approach =================================
+    // ================================ Brute Force Approach ==================================
 
         public static int divideWithoutOperators(int dividend, int divisor){
 
