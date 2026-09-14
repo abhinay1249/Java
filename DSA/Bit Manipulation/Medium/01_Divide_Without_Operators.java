@@ -50,7 +50,7 @@ class Main {
 
             boolean isPositive = true;
 
-            long n = Math.abs((long) dividend);                                     // T.C = O(log N), S.C = O(1)
+            long n = Math.abs((long) dividend);                                   // T.C = O(log N), S.C = O(1)
             long d = Math.abs((long) divisor);
 
             long ans = 0;
