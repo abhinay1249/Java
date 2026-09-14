@@ -23,9 +23,15 @@ class Main {
 
         public static int divideWithoutOperators(int dividend, int divisor){
 
-            int result = 0;
+            int sum = 0;
 
-            return result;
+            int counter = 0;
+
+            while(sum + divisor <= dividend){
+                counter+=1;
+            }
+
+            return counter;
 
         }
 
