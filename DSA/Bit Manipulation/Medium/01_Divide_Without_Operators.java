@@ -27,8 +27,9 @@ class Main {
 
             int counter = 0;
 
-            while(sum + divisor <= dividend){
+            while(sum + divisor <= dividend){                               // T.C = O(dividend), S.C = O(1)
                 counter+=1;
+                sum+=divisor;
             }
 
             return counter;
