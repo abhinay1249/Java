@@ -40,6 +40,10 @@ class Main {
 
         public static int divideWithoutOperators_1(int dividend, int divisor){
 
+            if(dividend == 0){
+                return 0;
+            }
+
             if(dividend == divisor){
                 return 1;
             }
@@ -51,8 +55,8 @@ class Main {
 
             long ans = 0;
 
-            if(dividend >= 0 && divisor < 0) isPositive = false;
-            if(dividend <= 0 && divisor > 0) isPositive = false;
+            if(dividend > 0 && divisor < 0) isPositive = false;
+            if(dividend < 0 && divisor > 0) isPositive = false;
 
             while(n >= d){
                 int power = 0;
