@@ -14,3 +14,12 @@
 // Output : 3
 // Explanation : The binary representation of 3 is "011".The binary representation of 4 is "100".
 // So if we flip all the three bits of 3 then we will reach our goal number.
+
+class Main {
+
+    public static void main(String[] args) {
+        
+        int start = 3;
+        int goal = 4;    
+    }
+}
