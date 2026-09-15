@@ -21,6 +21,8 @@ class Main {
 
         public static int minimumBitFlips(int start, int goal){
 
+            int result = 0;
+
         }
 
     public static void main(String[] args) {
