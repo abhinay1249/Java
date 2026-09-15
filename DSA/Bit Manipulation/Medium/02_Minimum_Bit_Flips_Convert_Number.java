@@ -29,5 +29,7 @@ class Main {
         int goal = 4;
         
         int result = minimumBitFlips(start, goal);
+
+        System.out.println(result);
     }
 }
