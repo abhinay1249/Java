@@ -17,6 +17,10 @@
 
 class Main {
 
+    public static int minimumBitFlips(int start, int goal){
+        
+    }
+
     public static void main(String[] args) {
         
         int start = 3;
