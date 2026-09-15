@@ -23,6 +23,8 @@ class Main {
 
             int result = 0;
 
+            return result;
+
         }
 
     public static void main(String[] args) {
