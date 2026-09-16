@@ -27,7 +27,7 @@ class Main {
 
             while(number >= 1){
                 
-                if((number & 1)==1){                                        // T.C = O(log N), S.C = O(1)
+                if((number & 1)==1){                                                  // T.C = O(log N), S.C = O(1)
                     minimumFlips+=1;
                 }
 
@@ -49,7 +49,7 @@ class Main {
 
             while(number != 0){
                 
-                number = (number & number - 1);                                                    // T.C = O(log N), S.C = O(1)
+                number = (number & number - 1);                                        // T.C = O(log N), S.C = O(1)
                 minimumFlips+=1;
 
             }
