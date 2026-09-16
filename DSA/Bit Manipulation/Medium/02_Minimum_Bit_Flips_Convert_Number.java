@@ -17,7 +17,7 @@
 
 class Main {
 
-    // =================================== Approach - 1============================================
+    // =================================== Approach - 1 ============================================
 
         public static int minimumBitFlips(int start, int goal){
 
@@ -27,14 +27,14 @@ class Main {
 
             while(number >= 1){
                 
-                if((number & 1)==1){
+                if((number & 1)==1){                                        // T.C = O(log N), S.C = O(1)
                     minimumFlips+=1;
                 }
 
                 number = number >> 1;
 
             }
-            
+
             return minimumFlips;
 
         }
