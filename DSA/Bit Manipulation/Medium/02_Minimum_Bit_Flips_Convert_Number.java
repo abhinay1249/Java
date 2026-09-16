@@ -67,6 +67,9 @@ class Main {
 
         System.out.println(result);
 
+        int result_1 = minimumBitFlips_1(start, goal);
+
+        System.out.println(result)_1;
         
     }
 }
