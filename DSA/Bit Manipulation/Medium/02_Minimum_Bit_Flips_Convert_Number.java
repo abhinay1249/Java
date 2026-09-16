@@ -17,15 +17,25 @@
 
 class Main {
 
-    // =================================== Approach ============================================
+    // =================================== Approach - 1============================================
 
         public static int minimumBitFlips(int start, int goal){
 
-            int result = 0;
+            int number = start ^ goal;
 
+            int minimumFlips = 0;
 
+            while(number >= 1){
+                
+                if((number & 1)==1){
+                    minimumFlips+=1;
+                }
 
-            return result;
+                number = number >> 1;
+
+            }
+            
+            return minimumFlips;
 
         }
 
