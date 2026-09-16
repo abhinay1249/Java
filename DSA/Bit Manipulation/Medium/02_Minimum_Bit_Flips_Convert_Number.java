@@ -1,4 +1,4 @@
-// Problem Statement: Given two integers start and goal. Flip the minimum number of bits of start integer to convert it into Integer.
+// Problem Statement: Given two integers start and goal. Flip the minimum number of bits of start integer to convert it into integer.
 // A bits flip in the number val is to choose any bit in binary representation of val and flipping it from either 0 to 1 or 1 to 0.
 
 // Example 1:
