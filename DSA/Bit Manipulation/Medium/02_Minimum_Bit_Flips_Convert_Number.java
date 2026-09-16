@@ -39,6 +39,25 @@ class Main {
 
         }
 
+    // =================================== Approach - 2 ============================================
+
+        public static int minimumBitFlips_1(int start, int goal){
+
+            int number = start ^ goal;
+
+            int minimumFlips = 0;
+
+            while(number != 0){
+                
+                number = (number & number - 1);                                                    // T.C = O(log N), S.C = O(1)
+                minimumFlips+=1;
+
+            }
+
+            return minimumFlips;
+
+        }
+
     public static void main(String[] args) {
         
         int start = 3;
@@ -47,5 +66,7 @@ class Main {
         int result = minimumBitFlips(start, goal);
 
         System.out.println(result);
+
+        
     }
 }
