@@ -19,6 +19,8 @@ class Main {
         int[] nums = {4,1,2,1,2};
 
         int result = singleNumber(nums);
+
+        System.out.println(result);
     }
 
 }
