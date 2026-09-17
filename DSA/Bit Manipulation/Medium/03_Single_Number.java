@@ -14,9 +14,11 @@
 
 class Main {
 
-    public static int singleNumber(int[] nums){
-        
-    }
+    // =================================== Brute Force Approach ================================
+
+        public static int singleNumber(int[] nums){
+
+        }
 
     public static void main(String[] args) {
 
