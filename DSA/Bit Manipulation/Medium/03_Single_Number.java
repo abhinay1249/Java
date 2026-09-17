@@ -13,5 +13,9 @@
 // Explanation: In this array, only element 4 appear once and the other elements appear twice. So, 4 is the answer.
 
 class Main {
-    
+
+    public static void main(String[] args) {
+        
+    }
+
 }
