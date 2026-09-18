@@ -20,6 +20,12 @@ class Main {
 
         }
 
+    // ================================== Optimal Approach ======================================
+
+        public static int singleNumber_1(int[] nums){
+
+        }
+
     public static void main(String[] args) {
 
         int[] nums = {4,1,2,1,2};
@@ -27,6 +33,8 @@ class Main {
         int result = singleNumber(nums);
 
         System.out.println(result);
+
+
     }
 
 }
