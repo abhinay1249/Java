@@ -34,7 +34,9 @@ class Main {
 
         System.out.println(result);
 
+        int result_1 = singleNumber_1(nums);
+
+        System.out.println(result_1);
 
     }
-
 }
