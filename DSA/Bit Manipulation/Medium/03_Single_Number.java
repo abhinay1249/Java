@@ -24,7 +24,7 @@ class Main {
 
         public static int singleNumber_1(int[] nums){
 
-
+            int appearsOnce = 0;
 
         }
 
