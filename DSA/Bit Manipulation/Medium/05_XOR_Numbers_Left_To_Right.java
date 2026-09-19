@@ -14,18 +14,26 @@
 
 class Main {
 
-    public static int xorNumbers(int left, int right){
+    // ================================= Brute Force Approach =================================
 
-        int xor = 0;
+        public static int xorNumbers(int left, int right){
 
-        for(int value = left ; value <= right ; value++){               // T.C = O((R-L)+1), S.C = O(1) 
-            xor ^= value;
+            int xor = 0;
+
+            for(int value = left ; value <= right ; value++){               // T.C = O((R-L)+1), S.C = O(1) 
+                xor ^= value;
+            }
+
+            return xor;
+
         }
 
-        return xor;
+    // ============================== Optimal Approach ===============================================
 
-    }
+        public static int xorNumbers_1(int left, int right){
 
+        }
+        
     public static void main(String[] args) {
         
         int left = 1;
@@ -34,6 +42,10 @@ class Main {
         int xorNumber = xorNumbers(left, right);
 
         System.out.println(xorNumber);
+
+        int xorNumber_1 = xorNumbers_1(left, right);
+
+        System.out.println(xorNumber_1);
 
     }
 
