@@ -31,7 +31,17 @@ class Main {
     // ============================== Optimal Approach ===============================================
 
         private static int xor(int number){
-            
+
+            if(number % 4 == 1){
+                return 1;
+            }else if(number % 4 == 2){
+                return number+1;
+            }else if(number % 4 == 3){
+                return 0;
+            }
+
+            return number;
+
         }
 
         public static int xorNumbers_1(int left, int right){
