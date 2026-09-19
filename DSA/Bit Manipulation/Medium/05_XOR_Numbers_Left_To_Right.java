@@ -18,7 +18,7 @@ class Main {
 
         int xor = 0;
 
-        for(int value = left ; value <= right ; value++){
+        for(int value = left ; value <= right ; value++){               // T.C = O((R-L)+1), S.C = O(1) 
             xor ^= value;
         }
 
@@ -28,8 +28,8 @@ class Main {
 
     public static void main(String[] args) {
         
-        int left = 3;
-        int right = 5;
+        int left = 1;
+        int right = 3;
 
         int xorNumber = xorNumbers(left, right);
 
