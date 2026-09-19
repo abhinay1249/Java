@@ -16,12 +16,36 @@
 // It contains all combinations of elements from the original array.
 // By iterating through all possible combinations of the elements in the input array we are able to get the power set of the array.
 
+import java.util.ArrayList;
+import java.util.List;
 
 class Main {
 
-    public static List<List<Integer>> powerSet(int[] nums){
+    // ============================== Approach Using Left Shift ====================================
 
-    }
+        public static List<List<Integer>> powerSet(int[] nums){
+
+            List<List<Integer>> subsets = new ArrayList<>();
+
+            int length = nums.length;
+
+            int numberOfSubsets = 1 << length;
+
+            for(int number = 0 ; number < numberOfSubsets ; number++){
+
+                List<Integer> numbers = new ArrayList<>();                         // T.C = O(2^N * N), S.C = O(2^N * N) 
+
+                for(int index = 0 ; index < length ; index++){
+                    if((number & (1 << index)) != 0){
+                        numbers.add(nums[index]);
+                    }
+                }
+                subsets.add(numbers);
+            }
+
+            return subsets;
+
+        }
 
     public static void main(String[] args){
 
