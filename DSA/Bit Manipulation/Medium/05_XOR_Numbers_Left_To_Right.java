@@ -64,5 +64,4 @@ class Main {
         System.out.println(xorNumber_1);
 
     }
-
 }
