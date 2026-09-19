@@ -55,7 +55,7 @@ class Main {
             int appearsOnce = 0;
 
             for(int index = 0 ; index < nums.length ; index++){
-                appearsOnce ^= nums[index];
+                appearsOnce ^= nums[index];                                     // T.C = O(N), S.C = O(1)
             }
 
             return appearsOnce;
