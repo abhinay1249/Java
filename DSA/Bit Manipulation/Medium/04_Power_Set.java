@@ -77,8 +77,13 @@ class Main {
 
         int[] nums = {1, 2, 3};
 
-        
+        List<List<Integer>> result = powerSet(nums);
 
+        System.out.println(result);
+
+        List<List<Integer>> result_1 = powerSet_1(nums);
+
+        System.out.println(result_1);
 
     }
 }
