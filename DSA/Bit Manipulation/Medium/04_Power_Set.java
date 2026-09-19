@@ -33,10 +33,36 @@ class Main {
 
             for(int number = 0 ; number < numberOfSubsets ; number++){
 
-                List<Integer> numbers = new ArrayList<>();                         // T.C = O(2^N * N), S.C = O(2^N * N) 
+                List<Integer> numbers = new ArrayList<>();                         // T.C = O(2^N * N), S.C = near to O(2^N * N) 
 
                 for(int index = 0 ; index < length ; index++){
                     if((number & (1 << index)) != 0){
+                        numbers.add(nums[index]);
+                    }
+                }
+                subsets.add(numbers);
+            }
+
+            return subsets;
+
+        }
+    
+    // ============================== Approach Using Right Shift ====================================
+
+        public static List<List<Integer>> powerSet_1(int[] nums){
+
+            List<List<Integer>> subsets = new ArrayList<>();
+
+            int length = nums.length;
+
+            int numberOfSubsets = 1 << length;
+
+            for(int number = 0 ; number < numberOfSubsets ; number++){
+
+                List<Integer> numbers = new ArrayList<>();                         // T.C = O(2^N * N), S.C = near to O(2^N * N) 
+
+                for(int index = 0 ; index < length ; index++){
+                    if(((number >> index) & 1) != 0){
                         numbers.add(nums[index]);
                     }
                 }
@@ -50,6 +76,8 @@ class Main {
     public static void main(String[] args){
 
         int[] nums = {1, 2, 3};
+
+        
 
 
     }
