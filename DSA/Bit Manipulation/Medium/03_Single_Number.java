@@ -19,7 +19,36 @@ class Main {
 
     // ================================= Brute Force Approach ==================================
 
-        public static int singleNumber(int[] nums){
+        public static int singleNumer(int[] nums){
+
+            int singleNumber = 0;
+
+            for(int index_1 = 0 ; index_1 < nums.length ; index_1++){
+
+                int number = nums[index_1];
+                int counter = 0;
+
+                for(int index_2 = 0 ; index_2 < nums.length ; index_2++){                  
+
+                    if(number == nums[index_2]){                                    // T.C = O(N ^ 2), S.C = O(1)
+                        counter++;
+                    }
+                }
+
+                if(counter == 1){
+                    singleNumber = nums[index_1];
+                    break;
+                }
+
+            }
+
+            return singleNumber;
+            
+        }
+
+    // ================================= Better Approach ==================================
+
+        public static int singleNumber_1(int[] nums){
 
             int singleNumber = 0;
 
@@ -50,7 +79,7 @@ class Main {
 
     // ================================== Optimal Approach ======================================
 
-        public static int singleNumber_1(int[] nums){
+        public static int singleNumber_2(int[] nums){
 
             int appearsOnce = 0;
 
@@ -73,6 +102,10 @@ class Main {
         int result_1 = singleNumber_1(nums);
 
         System.out.println(result_1);
+
+        int result_2 = singleNumber_2(nums);
+
+        System.out.println(result_2);
 
     }
 }
