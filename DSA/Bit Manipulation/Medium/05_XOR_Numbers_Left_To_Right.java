@@ -30,7 +30,13 @@ class Main {
 
     // ============================== Optimal Approach ===============================================
 
+        private static int xor(int number){
+            
+        }
+
         public static int xorNumbers_1(int left, int right){
+
+            return xor(left - 1) ^ xor(right);
 
         }
         
