@@ -12,21 +12,44 @@
 // Result : 4
 // Explanation : In this array, only element 4 appear once and the other elements appear twice. So, 4 is the answer.
 
+import java.util.*;
+
 class Main {
 
     // ================================= Brute Force Approach ==================================
 
         public static int singleNumber(int[] nums){
 
+            int singleNumber = 0;
+
+            Map<Integer, Integer> hm = new HashMap<>();
+
+            for(int index = 0 ; index < nums.length ; index++){
+                hm.put(nums[index], hm.getOrDefault(nums[index],0)+1);
+            }
+
+            for(Map.Entry<Integer, Integer> keys : hm.entrySet()){
+                if(keys.getValue() == 1){
+                    singleNumber = keys.getKey();
+                    break;
+                }
+            }
+
+            int counter = 0;
+
+            for(int index = 0 ; index < nums.length ; index++){
+                if(nums[index] == singleNumber){
+                    counter++;
+                }
+            }
+
+            return counter == 1 ? singleNumber : -1;
+
         }
 
     // ================================== Optimal Approach ======================================
 
-        public static int singleNumber_1(int[] nums){
 
-            int appearsOnce = 0;
-
-        }
 
     public static void main(String[] args) {
 
