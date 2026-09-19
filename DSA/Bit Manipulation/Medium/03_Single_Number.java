@@ -12,7 +12,8 @@
 // Result : 4
 // Explanation : In this array, only element 4 appear once and the other elements appear twice. So, 4 is the answer.
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 class Main {
 
@@ -49,7 +50,17 @@ class Main {
 
     // ================================== Optimal Approach ======================================
 
+        public static int singleNumber_1(int[] nums){
 
+            int appearsOnce = 0;
+
+            for(int index = 0 ; index < nums.length ; index++){
+                appearsOnce ^= nums[index];
+            }
+
+            return appearsOnce;
+
+        }
 
     public static void main(String[] args) {
 
