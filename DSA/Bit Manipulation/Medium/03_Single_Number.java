@@ -19,7 +19,7 @@ class Main {
 
     // ================================= Brute Force Approach ==================================
 
-        public static int singleNumer(int[] nums){
+        public static int singleNumber(int[] nums){
 
             int singleNumber = 0;
 
@@ -39,7 +39,6 @@ class Main {
                     singleNumber = nums[index_1];
                     break;
                 }
-
             }
 
             return singleNumber;
