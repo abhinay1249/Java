@@ -36,7 +36,7 @@ class Main {
                 return 1;
             }else if(number % 4 == 2){
                 return number+1;
-            }else if(number % 4 == 3){
+            }else if(number % 4 == 3){                                              // T.C = O(1), S.C = O(1)
                 return 0;
             }
 
