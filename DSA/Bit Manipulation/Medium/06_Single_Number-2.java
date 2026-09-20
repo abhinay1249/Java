@@ -42,9 +42,24 @@ class Main {
 
         }
 
-    // =================================== Optimal Approach ==========================================
+    // =================================== Optimal Approach =======================================
 
         public static int singleNumber_1(int[] nums){
+            int singleNumber = 0;
+
+            for(int bitNumber = 0 ; bitNumber < 32 ; bitNumber++){
+                int counter = 0;
+                for(int index = 0 ; index < nums.length ; index++){
+                    if((nums[index] & (1 << bitNumber)) != 0){
+                        counter+=1;                                                 // T.C = O(N), S.C = O(1)
+                    }
+                }
+                if(counter % 3 == 1){
+                    singleNumber = singleNumber | (1 << bitNumber);
+                }
+            }
+
+            return singleNumber;
 
         }
 
