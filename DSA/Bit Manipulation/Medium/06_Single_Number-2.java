@@ -14,6 +14,7 @@
 // Output: 99
 // Explanation : Return the number that appears once in the array.
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -42,7 +43,7 @@ class Main {
 
         }
 
-    // =================================== Optimal Approach =======================================
+    // ======================== Optimal Approach [Bit Manipulation] ===============================
 
         public static int singleNumber_1(int[] nums){
             int singleNumber = 0;
@@ -63,6 +64,27 @@ class Main {
 
         }
 
+    // =================================== Better Approach =======================================
+
+        public static int singleNumber_2(int[] nums){
+            
+            Arrays.sort(nums);
+
+            int singleNumber = 0;
+            boolean flag = false;                                                   // T.C = O(N LOG N) + O(N/3), S.C = O(1)
+
+            for(int index = 1 ; index < nums.length ; index+=3){
+                if(nums[index-1] != nums[index]){
+                    singleNumber = nums[index-1];
+                    flag = true;
+                    break;
+                }
+            }
+
+        return (flag == false) ? nums[nums.length-1] : singleNumber;
+
+        }
+
     public static void main(String[] args) {
 
         int[] nums = {2,2,3,2};
@@ -74,6 +96,10 @@ class Main {
         int result_1 = singleNumber_1(nums);
         
         System.out.println(result_1);
+
+        int result_2 = singleNumber_2(nums);
+        
+        System.out.println(result_2);
 
     }
 }
