@@ -22,6 +22,7 @@
 // Explanation:  [1, 0] is also a valid answer.
 
 class Main {
+    
     public static void main(String[] args) {
         
     }
