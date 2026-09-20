@@ -81,8 +81,14 @@ class Main {
                 }
             }
 
-        return (flag == false) ? nums[nums.length-1] : singleNumber;
+            return (flag == false) ? nums[nums.length-1] : singleNumber;
 
+        }
+
+    // ================================= Approach ===================================================
+        
+        public static int singleNumber_3(int[] nums){
+            
         }
 
     public static void main(String[] args) {
