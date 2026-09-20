@@ -13,6 +13,7 @@
 
 // Input: nums = [-1,0]
 // Output: [-1,0]
+// Explanation:  [-1, 0] is also a valid answer.
 
 // Example 3:
 
