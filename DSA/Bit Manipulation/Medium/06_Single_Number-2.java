@@ -43,7 +43,7 @@ class Main {
 
         }
 
-    // ======================== Optimal Approach [Bit Manipulation] ===============================
+    // ======================== Better Approach [Bit Manipulation] ===============================
 
         public static int singleNumber_1(int[] nums){
             int singleNumber = 0;
@@ -64,7 +64,7 @@ class Main {
 
         }
 
-    // =================================== Better Approach =======================================
+    // ======================== Better than Bit Manipulation Approach ==============================
 
         public static int singleNumber_2(int[] nums){
             
@@ -88,7 +88,7 @@ class Main {
     // ================================= Approach ===================================================
         
         public static int singleNumber_3(int[] nums){
-            
+
         }
 
     public static void main(String[] args) {
@@ -106,6 +106,10 @@ class Main {
         int result_2 = singleNumber_2(nums);
         
         System.out.println(result_2);
+
+        int result_3 = singleNumber_3(nums);
+        
+        System.out.println(result_3);
 
     }
 }
