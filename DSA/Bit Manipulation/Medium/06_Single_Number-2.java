@@ -94,6 +94,7 @@ class Main {
 
             for(int index = 0 ; index < nums.length ; index++){
                 ones = (ones ^ nums[index]) & (~twos);
+                twos = (twos ^ nums[index])
             }
 
 
