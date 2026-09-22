@@ -93,7 +93,7 @@ class Main {
             int twos = 0;
 
             for(int index = 0 ; index < nums.length ; index++){
-                ones = (ones ^ nums[index]) & (~twos);
+                ones = (ones ^ nums[index]) & (~twos);                          // T.C = O(), S.C = O()
                 twos = (twos ^ nums[index]) & (~ones);
             }
 
