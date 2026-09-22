@@ -64,7 +64,7 @@ class Main {
 
         }
 
-    // ======================== Better than Bit Manipulation Approach ==============================
+    // ======================== Better than Bit Manipulation Approach =============================
 
         public static int singleNumber_2(int[] nums){
             
@@ -85,7 +85,7 @@ class Main {
 
         }
 
-    // ================================= Optimal Approach ============================================
+    // ================================= Optimal Approach ==========================================
         
         public static int singleNumber_3(int[] nums){
 
