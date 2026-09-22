@@ -97,6 +97,7 @@ class Main {
                 twos = (twos ^ nums[index]) & (~ones);
             }
 
+            return ones;
 
         }
 
