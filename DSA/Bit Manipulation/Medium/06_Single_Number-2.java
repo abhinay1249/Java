@@ -89,6 +89,12 @@ class Main {
         
         public static int singleNumber_3(int[] nums){
 
+            int ones = 0;
+            int twos = 0;
+
+            for(int index = 0 ; index < nums.length ; index++)
+
+
         }
 
     public static void main(String[] args) {
