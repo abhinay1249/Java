@@ -92,7 +92,9 @@ class Main {
             int ones = 0;
             int twos = 0;
 
-            for(int index = 0 ; index < nums.length ; index++)
+            for(int index = 0 ; index < nums.length ; index++){
+                
+            }
 
 
         }
