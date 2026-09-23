@@ -28,6 +28,8 @@ class Main {
         public static int[] singleNumber(int[] nums){
 
         }
+
+    // ================================= Optimal Approach ======================================
     
     public static void main(String[] args) {
         
