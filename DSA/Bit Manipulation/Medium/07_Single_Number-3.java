@@ -22,6 +22,10 @@
 // Explanation:  [1, 0] is also a valid answer.
 
 class Main {
+
+    public static int[] singleNumber(int[] nums){
+        
+    }
     
     public static void main(String[] args) {
         
