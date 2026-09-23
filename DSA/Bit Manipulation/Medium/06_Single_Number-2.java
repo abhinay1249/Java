@@ -34,7 +34,7 @@ class Main {
 
             for(Map.Entry<Integer, Integer> keys : hm.entrySet()){
                 if(keys.getValue() == 1){
-                    singleNumber = keys.getKey();                               // T.C = O(M) + O(M), S.C = O(M), where M = N/3 + 1
+                    singleNumber = keys.getKey();                                // T.C = O(M) + O(M), S.C = O(M), where M = N/3 + 1
                     break;
                 }
             }
@@ -52,7 +52,7 @@ class Main {
                 int counter = 0;
                 for(int index = 0 ; index < nums.length ; index++){
                     if((nums[index] & (1 << bitNumber)) != 0){
-                        counter+=1;                                                 // T.C = O(N * 32), S.C = O(1)
+                        counter+=1;                                                // T.C = O(N * 32), S.C = O(1)
                     }
                 }
                 if(counter % 3 == 1){
