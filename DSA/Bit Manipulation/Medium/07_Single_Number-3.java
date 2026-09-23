@@ -23,13 +23,13 @@
 
 class Main {
 
-    // ================================== Brute Force Approach ==================================
+    // ================================ Brute Force Approach ==================================
 
         public static int[] singleNumber(int[] nums){
 
         }
 
-    // ================================= Optimal Approach ========================================
+    // ================================= Optimal Approach =====================================
 
         public static int[] singleNumber_1(int[] nums){
             
@@ -39,7 +39,7 @@ class Main {
 
         int[] nums = {1, 2, 1, 3, 2, 5};
 
-        
+
         
     }
 }
