@@ -10,8 +10,8 @@
 
 // Example 2:
 
-// Input: nums = [0,1,0,1,0,1,99]
-// Output: 99
+// Input : nums = [0,1,0,1,0,1,99]
+// Output : 99
 // Explanation : Return the number that appears once in the array.
 
 import java.util.Arrays;
