@@ -34,7 +34,7 @@ class Main {
 
             for(Map.Entry<Integer, Integer> keys : hm.entrySet()){
                 if(keys.getValue() == 1){
-                    singleNumber = keys.getKey();                                // T.C = O(M) + O(M), S.C = O(M), where M = N/3 + 1
+                    singleNumber = keys.getKey();                                 // T.C = O(M) + O(M), S.C = O(M), where M = N/3 + 1
                     break;
                 }
             }
