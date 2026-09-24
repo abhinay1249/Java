@@ -10,7 +10,7 @@
 // Example 2:
 
 // Input : n = 3
-// Output: false
+// Output : false
 // Explanation : 3 is not a power of two.
 
 class Main {
