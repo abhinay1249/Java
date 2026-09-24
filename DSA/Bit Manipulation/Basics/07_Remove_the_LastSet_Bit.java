@@ -100,6 +100,5 @@ class Main {
 
         System.out.println(result1);
 
-
     }
 }
