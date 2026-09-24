@@ -15,7 +15,7 @@
 
 class Main {
 
-    // =================================== Brute Force Approach ====================================
+    // ================================ Brute Force Approach ====================================
 
         public static void swapTwoNumbers(int num1, int num2){
 
@@ -28,7 +28,7 @@ class Main {
 
         }
 
-    // =================================== Optimal Approach ====================================
+    // =================================== Optimal Approach =====================================
 
         public static void swapTwoNumbers_1(int num1, int num2){
 
