@@ -73,7 +73,6 @@ class Main {
             if(ans >= (1L << 31) && isPositive == true) return Integer.MAX_VALUE;
             if(ans >= (1L << 31) && isPositive == false) return Integer.MIN_VALUE;
 
-
             return isPositive ? (int) ans : (int) -ans;
         }
 
