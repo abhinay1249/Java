@@ -20,7 +20,7 @@ class Main {
 
             int xor = 0;
 
-            for(int value = left ; value <= right ; value++){               // T.C = O((R-L)+1), S.C = O(1) 
+            for(int value = left ; value <= right ; value++){                     // T.C = O((R-L)+1), S.C = O(1) 
                 xor ^= value;
             }
 
