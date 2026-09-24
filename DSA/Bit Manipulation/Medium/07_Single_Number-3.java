@@ -56,6 +56,8 @@ class Main {
 
         int[] result_1 = singleNumber_1(nums);
 
+        System.out.println(result[0]);
+        System.out.println(result[1]);
         
     }
 }
