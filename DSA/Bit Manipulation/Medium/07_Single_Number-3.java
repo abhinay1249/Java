@@ -39,7 +39,7 @@ class Main {
 
     // ================================= Optimal Approach =====================================
 
-        public static  singleNumber_1(int[] nums){
+        public static  int[] singleNumber_1(int[] nums){
 
             int num1 = 0;
             int num2 = 0;
