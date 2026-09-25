@@ -47,6 +47,10 @@ class Main {
         int[] nums = {1, 2, 1, 3, 2, 5};
 
         List<Integer> al = singleNumber(nums);
+
+        List<Integer> al = singleNumber_1(nums);
+
+        
         
     }
 }
