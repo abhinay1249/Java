@@ -37,6 +37,8 @@ class Main {
     // ================================= Optimal Approach =====================================
 
         public static int[] singleNumber_1(int[] nums){
+
+            List<Integer> al = new ArrayList<>();
             
         }
     
