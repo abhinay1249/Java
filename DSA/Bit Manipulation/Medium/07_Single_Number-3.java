@@ -29,10 +29,10 @@ class Main {
 
         public static int[] singleNumber(int[] nums){
 
-            int ele1 = 0;
-            int ele2 = 0;
+            int num1 = 0;
+            int num2 = 0;
 
-            return new int[]{ele1, ele2};
+            return new int[]{num1, num2};
 
 
         }
@@ -41,8 +41,10 @@ class Main {
 
         public static  singleNumber_1(int[] nums){
 
-            int ele1 = 0;
-            int ele2 = 0;
+            int num1 = 0;
+            int num2 = 0;
+
+            return new int[]{num1, num2};
             
         }
     
