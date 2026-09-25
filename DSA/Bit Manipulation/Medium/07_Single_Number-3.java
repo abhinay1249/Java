@@ -27,6 +27,9 @@ class Main {
 
         public static int[] singleNumber(int[] nums){
 
+            List<Integer> al = new ArrayList<>();
+
+
         }
 
     // ================================= Optimal Approach =====================================
