@@ -36,9 +36,10 @@ class Main {
 
     // ================================= Optimal Approach =====================================
 
-        public static int[] singleNumber_1(int[] nums){
+        public static  singleNumber_1(int[] nums){
 
-            List<Integer> al = new ArrayList<>();
+            int ele1 = 0;
+            int ele2 = 0;
             
         }
     
@@ -46,11 +47,10 @@ class Main {
 
         int[] nums = {1, 2, 1, 3, 2, 5};
 
-        List<Integer> al = singleNumber(nums);
+        int[] result = singleNumber(nums);
 
-        List<Integer> al = singleNumber_1(nums);
+        int[] result_1 = singleNumber_1(nums);
 
-        
         
     }
 }
