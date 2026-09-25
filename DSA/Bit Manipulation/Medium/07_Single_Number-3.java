@@ -29,7 +29,10 @@ class Main {
 
         public static int[] singleNumber(int[] nums){
 
-            List<Integer> al = new ArrayList<>();
+            int ele1 = 0;
+            int ele2 = 0;
+
+            return new int[]{ele1, ele2};
 
 
         }
