@@ -95,8 +95,8 @@ class Main {
             int length = nums.length;
 
             for(int index = 0 ; index < length ; index++){
-                ones = (ones ^ nums[index]) & (~twos);                          // T.C = O(N), S.C = O(1)
-                twos = (twos ^ nums[index]) & (~ones);
+                ones = (ones ^ nums[index]) & (~twos);                          
+                twos = (twos ^ nums[index]) & (~ones);                              // T.C = O(N), S.C = O(1)
             }
 
             return ones;
