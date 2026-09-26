@@ -4,7 +4,7 @@
 
 // Example 1:
 
-// Input : nums = [2,2,3,2]
+// Input : nums = [2, 2, 3, 2]
 // Output : 3
 // Explanation : Return the number that appears once in the array.
 
