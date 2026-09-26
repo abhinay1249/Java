@@ -7,19 +7,19 @@
 
 // Input : nums = [1, 2, 1, 3, 2, 5]
 // Output : [3, 5]
-// Explanation :  [5, 3] is also a valid answer.
+// Explanation : [5, 3] is also a valid answer.
 
 // Example 2:
 
 // Input : nums = [-1, 0]
 // Output : [-1, 0]
-// Explanation :  [-1, 0] is also a valid answer.
+// Explanation : [-1, 0] is also a valid answer.
 
 // Example 3:
 
 // Input : nums = [0, 1]
 // Output : [1, 0]
-// Explanation :  [1, 0] is also a valid answer.
+// Explanation : [1, 0] is also a valid answer.
 
 class Main {
 
@@ -57,7 +57,7 @@ class Main {
         System.out.println(result[1]);
 
         System.out.println(result_1[0]);
-        System.out.println(result[1]);
+        System.out.println(result_1[1]);
         
     }
 }
