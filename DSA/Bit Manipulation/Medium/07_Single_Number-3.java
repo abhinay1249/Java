@@ -17,8 +17,8 @@
 
 // Example 3:
 
-// Input : nums = [0,1]
-// Output : [1,0]
+// Input : nums = [0, 1]
+// Output : [1, 0]
 // Explanation :  [1, 0] is also a valid answer.
 
 class Main {
