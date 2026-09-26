@@ -21,7 +21,7 @@
 // Output : [1,0]
 // Explanation :  [1, 0] is also a valid answer.
 
-import java.util.*;
+
 
 class Main {
 
