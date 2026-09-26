@@ -21,8 +21,6 @@
 // Output : [1,0]
 // Explanation :  [1, 0] is also a valid answer.
 
-
-
 class Main {
 
     // ================================ Brute Force Approach ==================================
