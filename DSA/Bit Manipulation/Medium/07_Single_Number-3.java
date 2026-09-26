@@ -55,6 +55,9 @@ class Main {
 
         System.out.println(result[0]);
         System.out.println(result[1]);
+
+        System.out.println(result_1[0]);
+        System.out.println(result[1]);
         
     }
 }
