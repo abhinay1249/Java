@@ -59,6 +59,8 @@ class Main {
     // ================================= Optimal Approach ======================================
 
         public static int[] singleNumber_1(int[] nums){
+
+            return new int[]{};
             
         }
     
