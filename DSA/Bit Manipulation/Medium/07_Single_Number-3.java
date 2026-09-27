@@ -45,14 +45,7 @@ class Main {
                     singleNumbers.add(keys.getKey());
                 }
 
-                if(singleNumbers.size()==2){
-                    break;
-                }
-            }
-                
-            Collections.sort(singleNumbers);
 
-            return new int[]{singleNumbers.get(0), singleNumbers.get(1)};
 
         }
 
