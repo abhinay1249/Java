@@ -19,7 +19,7 @@
 
 // Input : nums = [0, 1]
 // Output : [1, 0]
-// Explanation : [1, 0] is also a valid answer.
+// Explanation : [1, 0] is also a valid answer, but it should be in increasing order.
 
 import java.util.ArrayList;
 import java.util.Collections;
