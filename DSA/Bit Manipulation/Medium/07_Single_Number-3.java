@@ -13,7 +13,7 @@
 
 // Input : nums = [-1, 0]
 // Output : [-1, 0]
-// Explanation : [-1, 0] is also a valid answer.
+// Explanation : [-1, 0] is also a valid answer, but it should be in increasing order.
 
 // Example 3:
 
