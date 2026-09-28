@@ -45,7 +45,7 @@ class Main {
                     singleNumbers.add(keys.getKey());
                 }
 
-                if(singleNumbers.size()==2){
+                if(singleNumbers.size()==2){                                            // T.C = O(N) + O(M), S.C = (M)
                     break;
                 }
             }
