@@ -78,7 +78,9 @@ class Main {
             int bucket_1 = 0;
             int bucket_2 = 0;
 
-            
+            for(int number : nums){
+                
+            }
             
         }
     
