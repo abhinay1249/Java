@@ -21,7 +21,11 @@
 // Output : [1, 0]
 // Explanation : [1, 0] is also a valid answer.
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 class Main {
 
@@ -46,6 +50,9 @@ class Main {
                 }
             }
                 
+            Collections.sort(singleNumbers);
+
+            return new int[]{singleNumbers.get(0), singleNumbers.get(1)};
 
         }
 
