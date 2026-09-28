@@ -33,7 +33,13 @@ class Main {
 
         public static int[] singleNumber(int[] nums){
                     
- 
+            Map<Integer, Integer> freqCount = new HashMap<>();
+
+            for(int index : nums){
+                freqCount.put(index, freqCount.getOrDefault(index,0)+1);
+            }
+            List<Integer> singleNumbers = new ArrayList<>();
+
 
         }
 
