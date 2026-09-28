@@ -63,7 +63,7 @@ class Main {
             int xor = 0;
 
             for(int number : nums){
-                
+                xor ^= number;
             }
             
         }
