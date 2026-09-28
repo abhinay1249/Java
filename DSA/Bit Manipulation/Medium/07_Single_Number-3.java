@@ -21,6 +21,8 @@
 // Output : [1, 0]
 // Explanation : [1, 0] is also a valid answer.
 
+import java.util.*;
+
 class Main {
 
     // ================================ Brute Force Approach ==================================
@@ -32,8 +34,18 @@ class Main {
             for(int index : nums){
                 freqCount.put(index, freqCount.getOrDefault(index,0)+1);
             }
+            List<Integer> singleNumbers = new ArrayList<>();
 
-            return new int[]{num1, num2};
+            for(Map.Entry<Integer, Integer> keys : freqCount.entrySet()){
+                if(keys.getValue() == 1){
+                    singleNumbers.add(keys.getKey());
+                }
+
+                if(singleNumbers.size()==2){
+                    break;
+                }
+            }
+                
 
         }
 
