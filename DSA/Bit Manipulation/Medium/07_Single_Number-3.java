@@ -50,7 +50,9 @@ class Main {
                 }
             }
                 
+            Collections.sort(singleNumbers);
 
+            return new int[]{singleNumbers.get(0), singleNumbers.get(1)};
 
         }
 
