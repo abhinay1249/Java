@@ -65,6 +65,10 @@ class Main {
             for(int number : nums){
                 xor ^= number;
             }
+
+            for(int bit = 0 ; bit < 32 ; bit++){
+                
+            }
             
         }
     
