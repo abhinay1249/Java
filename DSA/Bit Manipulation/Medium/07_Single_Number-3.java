@@ -40,6 +40,17 @@ class Main {
             }
             List<Integer> singleNumbers = new ArrayList<>();
 
+            for(Map.Entry<Integer, Integer> keys : freqCount.entrySet()){
+                if(keys.getValue() == 1){
+                    singleNumbers.add(keys.getKey());
+                }
+
+                if(singleNumbers.size()==2){
+                    break;
+                }
+            }
+                
+
 
         }
 
