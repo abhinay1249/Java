@@ -68,12 +68,6 @@ class Main {
 
             int bitNumber = 0;
 
-            for(int bit = 0 ; bit < 32 ; bit++){
-                if(((xor) & (1<<bit)) != 0){
-                    bitNumber = bit;
-                    break;
-                } 
-            }
             
         }
     
