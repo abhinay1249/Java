@@ -73,10 +73,10 @@ class Main {
 
         int[] result = singleNumber(nums);
 
-        int[] result_1 = singleNumber_1(nums);
-
         System.out.println(result[0]);
         System.out.println(result[1]);
+
+        int[] result_1 = singleNumber_1(nums);
 
         System.out.println(result_1[0]);
         System.out.println(result_1[1]);
