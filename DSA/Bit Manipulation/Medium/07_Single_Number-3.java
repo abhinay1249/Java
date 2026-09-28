@@ -33,26 +33,7 @@ class Main {
 
         public static int[] singleNumber(int[] nums){
                     
-            Map<Integer, Integer> freqCount = new HashMap<>();
-
-            for(int index : nums){
-                freqCount.put(index, freqCount.getOrDefault(index,0)+1);
-            }
-            List<Integer> singleNumbers = new ArrayList<>();
-
-            for(Map.Entry<Integer, Integer> keys : freqCount.entrySet()){
-                if(keys.getValue() == 1){
-                    singleNumbers.add(keys.getKey());
-                }
-
-                if(singleNumbers.size()==2){
-                    break;
-                }
-            }
-                
-            Collections.sort(singleNumbers);
-
-            return new int[]{singleNumbers.get(0), singleNumbers.get(1)};
+ 
 
         }
 
