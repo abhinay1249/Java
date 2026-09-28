@@ -26,9 +26,12 @@ class Main {
     // ================================ Brute Force Approach ==================================
 
         public static int[] singleNumber(int[] nums){
+                    
+            Map<Integer, Integer> freqCount = new HashMap<>();
 
-            int num1 = 0;
-            int num2 = 0;
+            for(int index : nums){
+                freqCount.put(index, freqCount.getOrDefault(index,0)+1);
+            }
 
             return new int[]{num1, num2};
 
