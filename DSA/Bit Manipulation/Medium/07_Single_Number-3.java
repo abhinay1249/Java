@@ -59,11 +59,6 @@ class Main {
     // ================================= Optimal Approach ======================================
 
         public static  int[] singleNumber_1(int[] nums){
-
-            int num1 = 0;
-            int num2 = 0;
-
-            return new int[]{num1, num2};
             
         }
     
