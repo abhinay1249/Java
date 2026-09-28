@@ -7,7 +7,7 @@
 
 // Input : nums = [1, 2, 1, 3, 2, 5]
 // Output : [3, 5]
-// Explanation : [5, 3] is also a valid answer.
+// Explanation : [5, 3] is also a valid answer, but it should be in increasing order.
 
 // Example 2:
 
