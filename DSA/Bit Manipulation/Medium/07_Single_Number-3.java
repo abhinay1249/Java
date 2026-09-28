@@ -79,7 +79,9 @@ class Main {
             int bucket_2 = 0;
 
             for(int number : nums){
-                
+                if(((number)&(1<<bitNumber)) != 0){
+                    
+                }
             }
             
         }
