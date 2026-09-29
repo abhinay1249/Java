@@ -86,7 +86,7 @@ class Main {
                 }
             }
             
-            
+            return new int[]{bucket_1, bucket_2};
 
         }
     
