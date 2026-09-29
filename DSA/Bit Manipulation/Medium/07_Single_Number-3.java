@@ -66,7 +66,7 @@ class Main {
                 xor ^= number;
             }
 
-            int bitNumber = 0;
+            
 
             
         }
