@@ -78,7 +78,15 @@ class Main {
             int bucket_1 = 0;
             int bucket_2 = 0;
 
-
+            for(int number : nums){
+                if(((number)&(1<<bitNumber)) != 0){
+                    bucket_1 ^= number;
+                }else{
+                    bucket_2 ^= number;
+                }
+            }
+            
+            
 
         }
     
