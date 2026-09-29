@@ -60,7 +60,11 @@ class Main {
 
         public static int[] singleNumber_1(int[] nums){
 
-            return new int[]{, };
+            int xor = 0;
+
+            for(int number : nums){
+                
+            }
             
         }
     
