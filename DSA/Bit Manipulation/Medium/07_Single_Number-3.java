@@ -69,7 +69,7 @@ class Main {
             int bitNumber = 0;
 
             for(int bit = 0 ; bit < 32 ; bit++){
-                if(((xor) & (1<<bit)) != 0){                                    // T.C = O(N) + O(N), S.C = O() 
+                if(((xor) & (1<<bit)) != 0){                                    // T.C = O(N) + O(N), S.C = O(1) 
                     bitNumber = bit;
                     break;
                 } 
