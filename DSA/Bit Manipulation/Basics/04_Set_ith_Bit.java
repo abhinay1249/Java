@@ -62,7 +62,7 @@ class Main {
 
             int length = binaryNumber.length()-1;
 
-            for(int index = length ; index >= 0 ; index--){                 // TC = O(5 log N), S.C = O(2 log N)
+            for(int index = length ; index >= 0 ; index--){                     // TC = O(5 log N), S.C = O(2 log N)
                 if((length - index) == bitNumber){
                     if(sb.charAt(index) == '0'){
                         sb.setCharAt(index, '1');
