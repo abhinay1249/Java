@@ -1,4 +1,4 @@
-// Problem Statement: Given two integers n and i, Make sure that the respective ith Bit need to be toggle(change to other value).
+// Problem Statement : Given two integers n and i, Make sure that the respective ith Bit need to be toggle(change to other value).
 
 // Example 1:
 
