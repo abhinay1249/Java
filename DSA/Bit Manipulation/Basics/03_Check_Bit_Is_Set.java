@@ -41,10 +41,10 @@ class Main {
 
             StringBuilder sb = new StringBuilder();
 
-            while(number != 0){
+            while(number != 0){                                             // T.C = O(2 log N) + O(N), S.C = O(1)
 
                 if(number % 2 == 1){
-                    sb.append("1");                                     // T.C = O(2 log N) + O(N), S.C = O(1)
+                    sb.append("1");                                     
                 }else{
                     sb.append("0");
                 }
