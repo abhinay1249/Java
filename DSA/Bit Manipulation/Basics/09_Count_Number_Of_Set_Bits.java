@@ -1,4 +1,4 @@
-// Problem Statement: Given an integer n, return the number of set bits (1s) in its binary representation.
+// Problem Statement : Given an integer n, return the number of set bits (1s) in its binary representation.
 // Can you solve it in O(log n) time complexity?
 
 // Example 1:
