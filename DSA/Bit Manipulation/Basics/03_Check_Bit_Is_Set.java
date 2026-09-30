@@ -88,7 +88,7 @@ class Main {
 
             return ((number & (1 << bitNumber)) != 0);                         // T.C = O(1), S.C = O(1)
 
-            //  Right Shift Operation
+            // Right Shift Operation
             
             // return ((number >> bitNumber) & 1 == 0);
 
