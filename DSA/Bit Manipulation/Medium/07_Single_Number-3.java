@@ -82,10 +82,12 @@ class Main {
                 if(((number)&(1<<bitNumber)) != 0){
                     bucket_1 ^= number;
                 }else{
-
+                    bucket_2 ^= number;
                 }
             }
             
+            return new int[]{bucket_1, bucket_2};
+
         }
     
     public static void main(String[] args) {
