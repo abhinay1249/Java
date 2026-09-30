@@ -80,9 +80,9 @@ class Main {
 
             for(int number : nums){
                 if(((number)&(1<<bitNumber)) != 0){
-                    
+                    bucket_1 ^= number;
                 }else{
-                    
+
                 }
             }
             
