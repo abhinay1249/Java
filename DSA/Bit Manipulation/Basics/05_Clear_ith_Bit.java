@@ -1,4 +1,4 @@
-// Problem Statement: Given two integers n and i, Make sure that the respective ith Bit need to be clear(need to be zero).
+// Problem Statement : Given two integers n and i, Make sure that the respective ith Bit need to be clear(need to be zero).
 
 // Example 1:
 
