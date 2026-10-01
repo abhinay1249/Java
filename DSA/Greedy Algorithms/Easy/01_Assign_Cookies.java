@@ -19,4 +19,12 @@
 
 class Main {
     
+    public static void main(String[] args) {
+        
+        int[] students = {1, 2, 3};
+        int[] cookies = {1, 1};
+
+        assignCookies(students, cookies);
+
+    }
 }
