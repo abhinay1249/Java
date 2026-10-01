@@ -16,3 +16,7 @@
 // Output : 2
 // Explanation : You have 2 students and 3 cookies. The minimum size of cookies required for students are 1, 2.
 // You have 3 cookies and their sizes are big enough to assign cookies to all students. So your answer is 2.
+
+class Main {
+    
+}
