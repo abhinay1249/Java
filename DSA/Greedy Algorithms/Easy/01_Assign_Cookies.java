@@ -7,12 +7,12 @@
 
 // Input : student = [1, 2, 3] , cookie = [1, 1]
 // Output : 1
-// Explanation : You have 3 students and 2 cookies. The minimum size of cookies required for students are 1 , 2 ,3.
+// Explanation : You have 3 students and 2 cookies. The minimum size of cookies required for students are 1, 2, 3.
 // You have 2 cookies both of size 1, So you can assign the cookie only to student having minimum cookie size 1. So your answer is 1.
 
 // Example 2:
 
 // Input : student = [1, 2] , cookie = [1, 2, 3]
 // Output : 2
-// Explanation : You have 2 students and 3 cookies. The minimum size of cookies required for students are 1 , 2.
+// Explanation : You have 2 students and 3 cookies. The minimum size of cookies required for students are 1, 2.
 // You have 3 cookies and their sizes are big enough to assign cookies to all students. So your answer is 2.
