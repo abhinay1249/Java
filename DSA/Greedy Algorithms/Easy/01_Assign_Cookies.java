@@ -18,6 +18,8 @@
 // You have 3 cookies and their sizes are big enough to assign cookies to all students. So your answer is 2.
 
 class Main {
+
+    public static int assignCookies(int[] students)
     
     public static void main(String[] args) {
         
