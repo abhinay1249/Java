@@ -42,7 +42,7 @@ class Main {
     
     public static void main(String[] args) {
         
-        int[] students = {1, 2, 3};
+        int[] students = {1, 2};
         int[] cookies = {1, 1};
 
         int result = assignCookies(students, cookies);
