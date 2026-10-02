@@ -24,7 +24,17 @@ class Main {
         int studentsLength = students.length; 
         int cookiesLength = cookies.length;
         
-        
+        int student = 0;
+        int cookie = 0;
+
+        while(student < studentsLength && cookie < cookiesLength){
+            if(students[student] <= cookies[cookie]){
+                student+=1;
+            }
+            cookie+=1;
+        }
+
+        return student;
 
     }
     
@@ -33,7 +43,7 @@ class Main {
         int[] students = {1, 2, 3};
         int[] cookies = {1, 1};
 
-        assignCookies(students, cookies);
+        int result = assignCookies(students, cookies);
 
     }
 }
