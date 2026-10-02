@@ -1,33 +1,12 @@
 
-import java.time.temporal.WeekFields;
+import java.util.Arrays;
 
-// Problem Statement : You have n items; the i-th item has value val[i] and weight wt[i].
-// A knapsack can carry at most capacity units of weight. You may take any fraction of an item (i.e. split items).
-// Return the maximum total value that can be placed in the knapsack, rounded to exactly 6 decimal places.
-
-// Example 1:
-
-// Input: val = [60,100,120], wt = [10,20,30], capacity = 50
-// Output: 240.000000
-// Explanation: Take item 0 (w=10, v=60)
-// Take item 1 (w=20, v=100)
-// Take 2⁄3 of item 2 (w=20, v=80)
-// Total value = 60 + 100 + 80 = 240
-
-// Example 2:
-
-// Input: val = [60,100], wt = [10,20], capacity = 50
-// Output: 160.000000
-// Explanation: Both items fit entirely (total weight 30 ≤ 50).
-
-import java.util.*;
-
-class KnapSack{
+class Knapsack{
 
     int value;
     int weight;
 
-    KnapSack(int value, int weight) {
+    Knapsack(int value, int weight) {
         this.value = value;
         this.weight = weight;
     }
@@ -36,20 +15,21 @@ class KnapSack{
 
         double knapsackValue = 0.0;
 
-        Knapsack[] items = new KnapSack[values.length];
+        Knapsack[] items = new Knapsack[values.length];
 
         for(int index = 0 ; index < values.length ; index++){
-            items[index] = new KnapSack(values[index], weights[index]);
+            items[index] = new Knapsack(values[index], weights[index]);
         }
 
-        Arrays.sort(items, (a, b) -> Double.compare((double)b.value/b.weight,(double)a.value/a.weight));
+        Arrays.sort(items, (a, b) -> Double.compare((double) b.value / b.weight, (double) a.value / a.weight));
 
         for(Knapsack item : items){
             if(item.weight <= capacity){
                 capacity -= item.weight;
                 knapsackValue += item.value; 
             }else{
-
+                knapsackValue += ((double) item.value/item.weight * capacity);
+                break;
             }
         }
 
