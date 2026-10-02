@@ -17,18 +17,29 @@
 // Output: 160.000000
 // Explanation: Both items fit entirely (total weight 30 ≤ 50).
 
-class Main {
+class KnapSack{
 
-    public static float fractionalKnapsack(int[] values, int[] weights){
+    int value;
+    int weight;
+
+    KnapSack(int value, int weight) {
+        this.value = value;
+        this.weight = weight;
+    }
+
+    public static double fractionalKnapsack(int[] values, int[] weights, long capacity){
+
         
+
     }
 
     public static void main(String[] args) {
 
         int[] values = {60, 100, 120};
         int[] weights = {10, 20, 30};
+        long capacity = 50;
         
-        float result = fractionalKnapsack(values, weights);
+        double result = fractionalKnapsack(values, weights, capacity);
         
         System.out.println(result);
 
