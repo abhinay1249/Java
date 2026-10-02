@@ -29,9 +29,9 @@ class Main {
             int student = 0;
             int cookie = 0;
 
-            while(student < studentsLength && cookie < cookiesLength){
+            while(student < studentsLength && cookie < cookiesLength){              
                 if(students[student] <= cookies[cookie]){
-                    student+=1;
+                    student+=1;                                                    // T.C = O(N Log N) + O(M Log M) + O(M), S.C = O(1)
                 }
                 cookie+=1;
             }
