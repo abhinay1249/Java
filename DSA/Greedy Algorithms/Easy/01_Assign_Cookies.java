@@ -19,7 +19,9 @@
 
 class Main {
 
-    public static int assignCookies(int[] students)
+    public static int assignCookies(int[] students, int[] cookies){
+        
+    }
     
     public static void main(String[] args) {
         
