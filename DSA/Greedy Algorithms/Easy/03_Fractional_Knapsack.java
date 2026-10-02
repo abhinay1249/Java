@@ -40,6 +40,13 @@ class KnapSack{
             items[index] = new KnapSack(values[index], weights[index]);
         }
 
+        for(Knapsack item : items){
+            if(item.weight <= capacity){
+                capacity -= item.weight;
+                knapsackValue += item.value; 
+            }
+        }
+
     }
 
     public static void main(String[] args) {
