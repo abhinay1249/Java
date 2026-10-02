@@ -45,5 +45,7 @@ class Main {
 
         int result = assignCookies(students, cookies);
 
+        System.out.println(result);
+
     }
 }
