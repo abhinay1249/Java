@@ -19,7 +19,7 @@
 
 class Main {
 
-    // ================================= Greedy Algorithm Approach ==============================
+    // ============================= Greedy Algorithm Approach ==============================
 
         public static int assignCookies(int[] students, int[] cookies){
 
