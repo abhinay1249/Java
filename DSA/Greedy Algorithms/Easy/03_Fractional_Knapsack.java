@@ -29,7 +29,9 @@ class KnapSack{
 
     public static double fractionalKnapsack(int[] values, int[] weights, long capacity){
 
-        
+        double knapsackValue = 0.0;
+
+        Knapsack[] items = new KnapSack[values.length];
 
     }
 
