@@ -19,24 +19,26 @@
 
 class Main {
 
-    public static int assignCookies(int[] students, int[] cookies){
+    // ================================= Greedy Algorithm Approach ==============================
 
-        int studentsLength = students.length; 
-        int cookiesLength = cookies.length;
-        
-        int student = 0;
-        int cookie = 0;
+        public static int assignCookies(int[] students, int[] cookies){
 
-        while(student < studentsLength && cookie < cookiesLength){
-            if(students[student] <= cookies[cookie]){
-                student+=1;
+            int studentsLength = students.length; 
+            int cookiesLength = cookies.length;
+
+            int student = 0;
+            int cookie = 0;
+
+            while(student < studentsLength && cookie < cookiesLength){
+                if(students[student] <= cookies[cookie]){
+                    student+=1;
+                }
+                cookie+=1;
             }
-            cookie+=1;
+
+            return student;
+
         }
-
-        return student;
-
-    }
     
     public static void main(String[] args) {
         
