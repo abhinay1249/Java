@@ -21,6 +21,11 @@ class Main {
 
     public static int assignCookies(int[] students, int[] cookies){
 
+        int studentsLength = students.length; 
+        int cookiesLength = cookies.length;
+        
+        
+
     }
     
     public static void main(String[] args) {
