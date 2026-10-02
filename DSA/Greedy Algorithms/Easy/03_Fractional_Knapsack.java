@@ -1,3 +1,6 @@
+
+import java.time.temporal.WeekFields;
+
 // Problem Statement : You have n items; the i-th item has value val[i] and weight wt[i].
 // A knapsack can carry at most capacity units of weight. You may take any fraction of an item (i.e. split items).
 // Return the maximum total value that can be placed in the knapsack, rounded to exactly 6 decimal places.
@@ -32,6 +35,10 @@ class KnapSack{
         double knapsackValue = 0.0;
 
         Knapsack[] items = new KnapSack[values.length];
+
+        for(int index = 0 ; index < values.length ; index++){
+            items[index] = new KnapSack(values[index], weights[index]);
+        }
 
     }
 
