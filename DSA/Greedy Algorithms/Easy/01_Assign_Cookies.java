@@ -31,9 +31,9 @@ class Main {
 
             while(student < studentsLength && cookie < cookiesLength){              
                 if(students[student] <= cookies[cookie]){
-                    student+=1;                                                    // T.C = O(N Log N) + O(M Log M) + O(M), S.C = O(1)
+                    student+=1;                                                  
                 }
-                cookie+=1;
+                cookie+=1;                                                  // T.C = O(N Log N) + O(M Log M) + O(M), S.C = O(1)
             }
 
             return student;
