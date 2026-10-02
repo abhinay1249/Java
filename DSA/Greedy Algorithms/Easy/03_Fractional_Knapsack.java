@@ -20,6 +20,8 @@ import java.time.temporal.WeekFields;
 // Output: 160.000000
 // Explanation: Both items fit entirely (total weight 30 ≤ 50).
 
+import java.util.*;
+
 class KnapSack{
 
     int value;
@@ -40,12 +42,18 @@ class KnapSack{
             items[index] = new KnapSack(values[index], weights[index]);
         }
 
+        Arrays.sort(items, (a, b) -> Double.compare((double)b.value/b.weight,(double)a.value/a.weight));
+
         for(Knapsack item : items){
             if(item.weight <= capacity){
                 capacity -= item.weight;
                 knapsackValue += item.value; 
+            }else{
+
             }
         }
+
+        return knapsackValue;
 
     }
 
