@@ -40,26 +40,28 @@ class Main {
 
             for(int billNo : bills){
 
-                if(billNo == 5){
+                switch(billNo){
                 
-                    rs5Count++;
-                
-                }else if(billNo == 10){
-                    if(rs5Count >= 1){
-                        rs5Count--;
-                    }else{
-                        return false;                                           // T.C = O(N), S.C = O(1)
+                    case 5 -> rs5Count++;
+
+                    case 10 ->{ 
+                        if(rs5Count >= 1){
+                            rs5Count--;
+                        }else{
+                            return false;                                           // T.C = O(N), S.C = O(1)
+                        }
+                        rs10Count++;
                     }
-                    rs10Count++;
                 
-                }else{
-                    if(rs5Count >=1 && rs10Count >= 1){
-                       rs5Count--;
-                       rs10Count--; 
-                    }else if(rs5Count >= 3){
-                        rs5Count-=3;
-                    }else{
-                        return false;
+                    case 20 -> {   
+                        if(rs5Count >=1 && rs10Count >= 1){
+                           rs5Count--;
+                           rs10Count--; 
+                        }else if(rs5Count >= 3){
+                            rs5Count-=3;
+                        }else{
+                            return false;
+                        }
                     }
                 }
             }
