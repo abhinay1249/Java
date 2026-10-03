@@ -16,3 +16,9 @@
 // Input: val = [60,100], wt = [10,20], capacity = 50
 // Output: 160.000000
 // Explanation: Both items fit entirely (total weight 30 ≤ 50).
+
+class Main {
+    public static void main(String[] args) {
+        
+    }
+}
