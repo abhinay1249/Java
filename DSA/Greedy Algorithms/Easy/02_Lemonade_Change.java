@@ -17,7 +17,7 @@
 // From the third customer , we collect bill of $10 and give back $5. After third customer we have one $5 and one $10 bill available with us for change.
 // From fourth customer , we collect $5 bill. After fourth customer we have two $5 and one $10 bills available with us for change if required.
 // From fifth customer , we collect bill of $20 and give back $15 (one $10 + one $5 bill).
-// Since all the customers did receive the change correctly , so we return true.
+// Since all the customers did receive the change correctly, so we return true.
 
 // Example 2:
 
