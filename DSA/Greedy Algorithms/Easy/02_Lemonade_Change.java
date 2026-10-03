@@ -28,3 +28,17 @@
 // From fourth customer, we collect $10 and give back $5. After the fourth customer we have two $10 bill available with us for change.
 // From fifth customer, we collect $20, we cannot give the $15 change as we have two $10 bills.
 // Since all the customers did not receive the change correctly, the we return false.
+
+class Main {
+
+    
+    public static void main(String[] args) {
+        
+        int[] bills = {5, 5, 10, 10, 20};
+
+        boolean result = lemonadeChange(bills);
+
+        System.out.println(result);
+
+    }
+}
