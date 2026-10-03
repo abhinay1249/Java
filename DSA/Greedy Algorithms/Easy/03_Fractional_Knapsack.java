@@ -18,7 +18,19 @@
 // Explanation: Both items fit entirely (total weight 30 ≤ 50).
 
 class Main {
-    public static void main(String[] args) {
+
+    public static float fractionalKnapsack(int[] values, int[] weights){
         
+    }
+
+    public static void main(String[] args) {
+
+        int[] values = {60, 100, 120};
+        int[] weights = {10, 20, 30};
+        
+        float result = fractionalKnapsack(values, weights);
+        
+        System.out.println(result);
+
     }
 }
