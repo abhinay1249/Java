@@ -31,7 +31,40 @@
 
 class Main {
 
-    
+    public static boolean lemonadeChange(int[] bills){
+
+        int rs5Count = 0;
+        int rs10Count = 0;
+
+        for(int billNo : bills){
+
+            if(billNo == 5){
+            
+                rs5Count++;
+            
+            }else if(billNo == 10){
+                if(rs5Count >= 1){
+                    rs5Count--;
+                }else{
+                    return false;
+                }
+                rs10Count++;
+            
+            }else{
+                if(rs5Count >=1 && rs10Count >= 1){
+                   rs5Count--;
+                   rs10Count--; 
+                }else if(rs5Count >= 3){
+                    rs5Count-=3;
+                }else{
+                    return false;
+                }
+            }
+        }
+
+        return true;
+        
+    }
     public static void main(String[] args) {
         
         int[] bills = {5, 5, 10, 10, 20};
