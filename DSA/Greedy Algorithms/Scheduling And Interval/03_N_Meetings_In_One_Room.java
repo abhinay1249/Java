@@ -38,7 +38,7 @@ class Main {
             for(int[] meeting : meetings){
                 if(meeting[1] > freeTime){
                     freeTime = meeting[1];
-                    countOfMeetings++;
+                    countOfMeetings+=1;
                 }
             }
 
