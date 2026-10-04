@@ -18,16 +18,30 @@
 // Output : 2
 // Explanation : The total waiting time is 10. So the average waiting time will be 10/4 => 2.
 
+import java.util.Arrays;
+
 class Main {
 
-    public static int shortestJobFirst(int[] bit){
-        
+    public static long shortestJobFirst(int[] burstTimes){
+
+        Arrays.sort(burstTimes);
+
+        long timer = 0;
+        long waitingTime = 0;
+
+        for(int burstTime : burstTimes){
+            waitingTime += timer;
+            timer += burstTime;
+        }
+
+        return waitingTime/burstTimes.length;
+
     }
     public static void main(String[] args) {
         
         int[] bt = {4, 1, 3, 7, 2};
 
-        int result = shortestJobFirst(bt);
+        long result = shortestJobFirst(bt);
 
         System.out.println(result);
 
