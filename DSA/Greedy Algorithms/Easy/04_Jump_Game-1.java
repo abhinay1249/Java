@@ -30,7 +30,7 @@ class Main {
             }
 
             int length = nums.length;
-            int maxIdx = 0, index = 0, jumpLength = 0;                      // T.C = O(N), S.C = O(1)
+            int maxIdx = 0, index = 0, jumpLength = 0;                              // T.C = O(N), S.C = O(1)
 
             while(index < length && index <= maxIdx){
 
