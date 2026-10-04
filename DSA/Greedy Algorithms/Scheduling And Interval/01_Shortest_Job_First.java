@@ -18,3 +18,18 @@
 // Output : 2
 // Explanation : The total waiting time is 10. So the average waiting time will be 10/4 => 2.
 
+class Main {
+
+    public static int shortestJobFirst(int[] bit){
+        
+    }
+    public static void main(String[] args) {
+        
+        int[] bt = {4, 1, 3, 7, 2};
+
+        int result = shortestJobFirst(bt);
+
+        System.out.println(result);
+
+    }
+}
