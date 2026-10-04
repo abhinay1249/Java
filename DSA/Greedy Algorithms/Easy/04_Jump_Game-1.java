@@ -1,4 +1,4 @@
-// Problem Statement : Given an array of integers nums, each element in the array represents the maximum jump length at that position.
+
 // Initially starting at the first index of the array, determine if it is possible to reach the last index.
 // Return true if the last index can be reached, otherwise return false.
 
@@ -28,7 +28,18 @@ class Main {
         }
 
         int length = nums.length;
+        int maxIdx = 0, index = 0, jumpLength = 0;
 
+        while(index < length && index <= maxIdx){
+            
+            jumpLength = index + nums[index];
+            maxIdx = Math.max(jumpLength, maxIdx);
+            if(maxIdx >= length - 1) return true;
+
+            index++;
+        }
+
+        return false;
 
     }
     public static void main(String[] args) {
