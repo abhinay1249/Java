@@ -23,38 +23,40 @@ import java.util.Arrays;
 
 class Main {
 
-    public static int[] jobSequencing(int[][] jobs){
+    // ============================== Greedy Algorithm Approach ==================================
 
-        int maxDeadline = 0;
+        public static int[] jobSequencing(int[][] jobs){
 
-        for(int index = 0 ; index < jobs.length ; index++){
-            maxDeadline = Math.max(maxDeadline, jobs[index][2]);
-        }
+            int maxDeadline = 0;
 
-        Arrays.sort(jobs, (a, b) -> Integer.compare(b[2],a[2]));
+            for(int index = 0 ; index < jobs.length ; index++){
+                maxDeadline = Math.max(maxDeadline, jobs[index][2]);
+            }
 
-        boolean[] hash = new boolean[maxDeadline+1];
+            Arrays.sort(jobs, (a, b) -> Integer.compare(b[2],a[2]));
 
-        int maxProfit = 0, noOfJobs = 0;
+            boolean[] hash = new boolean[maxDeadline+1];
 
-        for(int row = 0 ; row < jobs.length ; row++){
-            
-            int deadline = jobs[row][1];
-            int profit = jobs[row][2];
-            
-            for(int col = deadline ; col >= 1 ; col--){
-                if(!hash[col]){
-                    hash[col]=true;
-                    noOfJobs++;
-                    maxProfit+=profit;
-                    break;
+            int maxProfit = 0, noOfJobs = 0;
+
+            for(int row = 0 ; row < jobs.length ; row++){                   // T.C = O(Rows) + O(X Log X) + O(X), S.C = O(maxDeadline)
+
+                int deadline = jobs[row][1];                                // where X is (Row * Col)
+                int profit = jobs[row][2];  
+
+                for(int col = deadline ; col >= 1 ; col--){
+                    if(!hash[col]){
+                        hash[col]=true;
+                        noOfJobs++;
+                        maxProfit+=profit;
+                        break;
+                    }
                 }
             }
+
+            return new int[]{noOfJobs, maxProfit};
+
         }
-
-        return new int[]{noOfJobs, maxProfit};
-
-    }
 
     public static void main(String[] args) {
         
