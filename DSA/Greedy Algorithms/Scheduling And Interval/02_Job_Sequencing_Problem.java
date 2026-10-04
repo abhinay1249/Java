@@ -19,7 +19,7 @@
 // Job with JobID 3 can be performed at time t=2 giving a profit of 27. No more jobs can be scheduled, So total Profit = 100 + 27 => 127.
 // Total number of jobs completed are two, JobID 1, JobID 3. So answer is 2 127.
 
-import java.util.*;
+import java.util.Arrays;
 
 class Main {
 
@@ -31,6 +31,8 @@ class Main {
             maxDeadline = Math.max(maxDeadline, jobs[index][2]);
         }
 
+        Arrays.sort(jobs, (a, b) -> Integer.compare(b[2],a[2]));
+
         boolean[] hash = new boolean[maxDeadline+1];
 
         int maxProfit = 0, noOfJobs = 0;
@@ -41,16 +43,22 @@ class Main {
             int profit = jobs[row][2];
             
             for(int col = deadline ; col >= 1; col--){
-                
+                if(!hash[col]){
+                    hash[col]=true;
+                    noOfJobs++;
+                    maxProfit+=profit;
+                    break;
+                }
             }
         }
 
+        return new int[]{noOfJobs, maxProfit};
 
     }
 
     public static void main(String[] args) {
         
-        int[][] = {{1,2,100}, {2,1,19}, {3,2,27}, {4,1,25},{5,1,15}};
+        int[][] jobs= {{1,2,100}, {2,1,19}, {3,2,27}, {4,1,25},{5,1,15}};
 
         int[] result = jobSequencing(jobs);
 
