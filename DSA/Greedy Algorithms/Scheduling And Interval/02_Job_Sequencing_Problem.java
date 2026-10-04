@@ -42,7 +42,7 @@ class Main {
             int deadline = jobs[row][1];
             int profit = jobs[row][2];
             
-            for(int col = deadline ; col >= 1; col--){
+            for(int col = deadline ; col >= 1 ; col--){
                 if(!hash[col]){
                     hash[col]=true;
                     noOfJobs++;
@@ -58,7 +58,7 @@ class Main {
 
     public static void main(String[] args) {
         
-        int[][] jobs= {{1,2,100}, {2,1,19}, {3,2,27}, {4,1,25},{5,1,15}};
+        int[][] jobs = {{1,2,100}, {2,1,19}, {3,2,27}, {4,1,25},{5,1,15}};
 
         int[] result = jobSequencing(jobs);
 
