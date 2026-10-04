@@ -17,31 +17,33 @@
 
 class Main {
 
-    public static boolean jumpGame(int[] nums){
+    // ========================== Greedy Algorithm Approach ===============================
 
-        if(nums.length == 1){
-            return true;
+        public static boolean jumpGame(int[] nums){
+
+            if(nums.length == 1){
+                return true;
+            }
+
+            if(nums.length == 2){
+                return nums[0] > 0;
+            }
+
+            int length = nums.length;
+            int maxIdx = 0, index = 0, jumpLength = 0;                      // T.C = O(N), S.C = O(1)
+
+            while(index < length && index <= maxIdx){
+
+                jumpLength = index + nums[index];
+                maxIdx = Math.max(jumpLength, maxIdx);
+                if(maxIdx >= length - 1) return true;
+
+                index++;
+            }
+
+            return false;
+
         }
-
-        if(nums.length == 2){
-            return nums[0] > 0;
-        }
-
-        int length = nums.length;
-        int maxIdx = 0, index = 0, jumpLength = 0;
-
-        while(index < length && index <= maxIdx){
-            
-            jumpLength = index + nums[index];
-            maxIdx = Math.max(jumpLength, maxIdx);
-            if(maxIdx >= length - 1) return true;
-
-            index++;
-        }
-
-        return false;
-
-    }
     public static void main(String[] args) {
 
         int[] nums = {3, 2, 1, 0, 4};
