@@ -22,21 +22,23 @@ import java.util.Arrays;
 
 class Main {
 
-    public static long shortestJobFirst(int[] burstTimes){
+    // ============================ Greedy Algorithm Approach ==============================
 
-        Arrays.sort(burstTimes);
+        public static long shortestJobFirst(int[] burstTimes){
 
-        long timer = 0;
-        long waitingTime = 0;
+            Arrays.sort(burstTimes);
 
-        for(int burstTime : burstTimes){                                    // T.C = O(N Log N) +  O(N), S.C = O(1)
-            waitingTime += timer;
-            timer += burstTime;
+            long timer = 0;
+            long waitingTime = 0;
+
+            for(int burstTime : burstTimes){                                    // T.C = O(N Log N) +  O(N), S.C = O(1)
+                waitingTime += timer;
+                timer += burstTime;
+            }
+
+            return waitingTime/burstTimes.length;
+
         }
-
-        return waitingTime/burstTimes.length;
-
-    }
     public static void main(String[] args) {
         
         int[] bt = {4, 1, 3, 7, 2};
