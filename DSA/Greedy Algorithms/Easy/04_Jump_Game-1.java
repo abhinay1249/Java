@@ -51,5 +51,6 @@ class Main {
         boolean result = jumpGame(nums);
 
         System.out.println(result);
+        
     }
 }
