@@ -39,9 +39,9 @@ class Main {
 
             int maxProfit = 0, noOfJobs = 0;
 
-            for(int row = 0 ; row < jobs.length ; row++){                   // T.C = O(Rows) + O(X Log X) + O(X), S.C = O(maxDeadline)
+            for(int row = 0 ; row < jobs.length ; row++){                   // T.C = O(N) + O(N Log N) + O(N*D), S.C = O(D)
 
-                int deadline = jobs[row][1];                                // where X is (Row * Col)
+                int deadline = jobs[row][1];                                // where D is maxDeadline
                 int profit = jobs[row][2];  
 
                 for(int col = deadline ; col >= 1 ; col--){
