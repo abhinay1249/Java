@@ -36,7 +36,7 @@ class Main {
             int countOfMeetings = 0, freeTime = 0;
 
             for(int[] meeting : meetings){
-                if(meeting[1] > freeTime){
+                if(meeting[0] > freeTime){
                     freeTime = meeting[1];
                     countOfMeetings+=1;
                 }
