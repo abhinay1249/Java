@@ -85,9 +85,6 @@ class Main {
             }
             return jobPositions;
         }
-
-    
-
     public static void main(String[] args) {
         
         int[] start = {1, 3, 0, 5, 8, 5};
@@ -99,7 +96,7 @@ class Main {
 
         List<Integer> result_1 = meetingsInOneRoom_1(start, end);
 
-        System.out.println(result);
+        System.out.println(result_1);
 
     }
 }
