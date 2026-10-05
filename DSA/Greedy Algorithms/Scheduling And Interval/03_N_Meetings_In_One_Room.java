@@ -97,5 +97,9 @@ class Main {
 
         System.out.println(result);
 
+        List<Integer> result_1 = meetingsInOneRoom_1(start, end);
+
+        System.out.println(result);
+
     }
 }
