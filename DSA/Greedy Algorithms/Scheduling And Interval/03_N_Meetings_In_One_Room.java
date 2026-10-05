@@ -42,7 +42,7 @@ class Main {
             for(int index = 0 ; index < start.length ; index++){
                 meetings[index][0] = start[index];
                 meetings[index][1] = end[index];
-                meetings[index][2] = index + 1;                                 // T.C = , S.C = 
+                meetings[index][2] = index + 1;                                 // T.C = O(N) + O(N Log N) + O(M), S.C = O(N)
             }
 
             Arrays.sort(meetings, (a, b) -> Integer.compare(a[1], b[1]));               
@@ -50,7 +50,7 @@ class Main {
             int countOfMeetings = 0, freeTime = 0;
 
             for(int[] meeting : meetings){
-                if(meeting[0] > freeTime){
+                if(meeting[0] >= freeTime){
                     freeTime = meeting[1];
                     countOfMeetings+=1;
                 }
