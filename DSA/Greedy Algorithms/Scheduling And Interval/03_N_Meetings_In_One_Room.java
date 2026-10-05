@@ -72,7 +72,7 @@ class Main {
 
             Arrays.sort(meet, (a,b) -> Integer.compare(a.end,b.end));
 
-            int countOfJobs = 0, freeTime = 0;
+            int countOfJobs = 0, freeTime = 0;                                      // T.C = , S.C = 
 
             List<Integer> jobPositions = new ArrayList<>();
 
