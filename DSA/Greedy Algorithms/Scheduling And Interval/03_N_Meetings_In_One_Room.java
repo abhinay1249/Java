@@ -15,7 +15,9 @@
 // Output : 1
 // Explanation : Given the start and end time, only one meeting can be held in meeting room.
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 class Meetings{
     int start;
@@ -60,7 +62,7 @@ class Main {
 
     // ============================== Greedy Algorithm Approach - 2 ================================
 
-        public static int meetingsInOneRoom_1(int[] start, int[] end){
+        public static List<Integer> meetingsInOneRoom_1(int[] start, int[] end){
         
             Meetings[] meet = new Meetings[start.length];
 
@@ -72,13 +74,16 @@ class Main {
 
             int countOfJobs = 0, freeTime = 0;
 
+            List<Integer> jobPositions = new ArrayList<>();
+
             for(Meetings meeting : meet){
                 if(meeting.start >= freeTime){
+                    jobPositions.add(meeting.position);
                     freeTime = meeting.end;
                     countOfJobs++;
                 }
             }
-            return countOfJobs;
+            return jobPositions;
         }
 
     
