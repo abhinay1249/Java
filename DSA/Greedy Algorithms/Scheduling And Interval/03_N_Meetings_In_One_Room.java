@@ -14,3 +14,14 @@
 // Input : Start = [10, 12, 20] , End = [20, 25, 30]
 // Output : 1
 // Explanation : Given the start and end time, only one meeting can be held in meeting room.
+
+class Main {
+
+    public static int meetingsInOneRoom(int[] start, int[] end){
+
+    }
+
+    public static void main(String[] args) {
+        
+    }
+}
