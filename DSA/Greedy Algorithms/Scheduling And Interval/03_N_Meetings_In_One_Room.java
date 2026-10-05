@@ -17,9 +17,21 @@
 
 import java.util.Arrays;
 
+class Meetings{
+    int start;
+    int end;
+    int position;
+
+    Meetings(int s, int e, int p){
+        this.start = s;
+        this.end = e;
+        this.position = p;
+    }
+}
+
 class Main {
 
-    // ============================== Greedy Algorithm Approach ================================
+    // ============================== Greedy Algorithm Approach - 1 ================================
 
         public static int meetingsInOneRoom(int[] start, int[] end){
 
@@ -45,6 +57,8 @@ class Main {
             return countOfMeetings;
 
         }
+
+    
 
     public static void main(String[] args) {
         
