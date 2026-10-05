@@ -17,9 +17,11 @@
 
 class Main {
 
-    public static int meetingsInOneRoom(int[] start, int[] end){
+    // ============================== Greedy Algorithm Approach ================================
 
-    }
+        public static int meetingsInOneRoom(int[] start, int[] end){
+
+        }
 
     public static void main(String[] args) {
         
