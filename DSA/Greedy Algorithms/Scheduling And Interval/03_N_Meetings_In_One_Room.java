@@ -29,6 +29,8 @@ class Main {
                 meetings[index][2] = index + 1;
             }
 
+            Arrays.sort(meetings, (a, b) -> Integer.compare(a[1], b[1]));
+
             int countOfMeetings = 0, freeTime = 0;
 
             for(int[] meeting : meetings){
