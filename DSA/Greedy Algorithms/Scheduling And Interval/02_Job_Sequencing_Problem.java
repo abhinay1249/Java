@@ -23,7 +23,7 @@ import java.util.Arrays;
 
 class Main {
 
-    // ============================== Greedy Algorithm Approach ==================================
+    // ============================== Greedy Algorithm Approach - 1 ==================================
 
         public static int[] jobSequencing(int[][] jobs){
 
@@ -57,6 +57,8 @@ class Main {
             return new int[]{noOfJobs, maxProfit};
 
         }
+
+    // ============================== Greedy Algorithm Approach - 2 ==================================
 
     public static void main(String[] args) {
         
