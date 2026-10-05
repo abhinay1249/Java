@@ -58,6 +58,29 @@ class Main {
 
         }
 
+    // ============================== Greedy Algorithm Approach - 2 ================================
+
+        public static int meetingsInOneRoom_1(int[] start, int[] end){
+        
+            Meetings[] meet = new Meetings[start.length];
+
+            for(int index = 0 ; index < start.length ; index++){
+                meet[index] = new Meetings(start[index], end[index], index+1);
+            }
+
+            Arrays.sort(meet, (a,b) -> Integer.compare(a.end,b.end));
+
+            int countOfJobs = 0, freeTime = 0;
+
+            for(Meetings meeting : meet){
+                if(meeting.start >= freeTime){
+                    freeTime = meeting.end;
+                    countOfJobs++;
+                }
+            }
+            return countOfJobs;
+        }
+
     
 
     public static void main(String[] args) {
