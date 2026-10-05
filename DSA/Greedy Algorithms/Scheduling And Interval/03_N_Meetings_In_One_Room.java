@@ -42,10 +42,10 @@ class Main {
             for(int index = 0 ; index < start.length ; index++){
                 meetings[index][0] = start[index];
                 meetings[index][1] = end[index];
-                meetings[index][2] = index + 1;
+                meetings[index][2] = index + 1;                                 // T.C = , S.C = 
             }
 
-            Arrays.sort(meetings, (a, b) -> Integer.compare(a[1], b[1]));
+            Arrays.sort(meetings, (a, b) -> Integer.compare(a[1], b[1]));               
 
             int countOfMeetings = 0, freeTime = 0;
 
