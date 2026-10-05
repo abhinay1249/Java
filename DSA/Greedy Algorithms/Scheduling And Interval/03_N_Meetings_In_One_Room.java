@@ -21,6 +21,25 @@ class Main {
 
         public static int meetingsInOneRoom(int[] start, int[] end){
 
+            int[][] meetings = new int[start.length][3];
+
+            for(int index = 0 ; index < start.length ; index++){
+                meetings[index][0] = start[index];
+                meetings[index][1] = end[index];
+                meetings[index][2] = index + 1;
+            }
+
+            int countOfMeetings = 0, freeTime = 0;
+
+            for(int[] meeting : meetings){
+                if(meeting[1] > freeTime){
+                    freeTime = meeting[1];
+                    countOfMeetings++;
+                }
+            }
+
+            return countOfMeetings;
+
         }
 
     public static void main(String[] args) {
