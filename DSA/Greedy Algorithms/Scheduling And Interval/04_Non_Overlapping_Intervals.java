@@ -21,6 +21,8 @@ class Main{
 
     public static int nonOverlappingIntervals(int[][] intervals){
 
+        int noOfinterval = 0;
+
     }
 
     public static void main(String[] args) {
