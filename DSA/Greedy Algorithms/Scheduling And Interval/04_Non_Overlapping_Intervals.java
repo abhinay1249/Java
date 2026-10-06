@@ -23,6 +23,10 @@ class Main{
 
         int minIntervals = 0;
 
+        for(int index = 0 ; index < intervals.length ; index++){
+            
+        }
+
 
     }
 
