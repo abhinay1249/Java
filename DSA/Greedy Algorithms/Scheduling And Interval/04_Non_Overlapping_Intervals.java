@@ -18,11 +18,14 @@
 // Explanation : You can remove the intervals [1, 4] and [3, 5] and the remaining intervals becomes non overlapping.
 
 class Main{
+
     public static int nonOverlappingIntervals(int[][] intervals){
-        
+
     }
 
     public static void main(String[] args) {
+
+        int[][] intervals = {{1, 2}, {2, 3}, {3, 4}, {1, 3}};
         
     }
 }
