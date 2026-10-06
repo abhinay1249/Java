@@ -18,6 +18,10 @@
 // Explanation : You can remove the intervals [1, 4] and [3, 5] and the remaining intervals becomes non overlapping.
 
 class Main{
+    public static int nonOverlappingIntervals(int[][] intervals){
+        
+    }
+
     public static void main(String[] args) {
         
     }
