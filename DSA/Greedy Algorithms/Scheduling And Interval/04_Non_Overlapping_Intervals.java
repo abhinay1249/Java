@@ -27,11 +27,11 @@ class Main{
 
         Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0]));
 
-        for(int index = 0 ; index < intervals.length ; index++){
-            if(intervals[index][0] >= endTime){
-                endTime = intervals[index][1];
+        for(int[] interval : intervals){
+            if(interval[0] >= endTime){
+                endTime = interval[1];
             }else{
-                endTime = Math.min(endTime, intervals[index][1]);
+                endTime = Math.min(endTime, interval[1]);
                 minIntervals++;
             }
         }
