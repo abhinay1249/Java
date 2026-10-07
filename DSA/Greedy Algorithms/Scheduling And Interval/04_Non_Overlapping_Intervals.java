@@ -19,30 +19,32 @@
 
 import java.util.Arrays;
 
-class Main{
+class Main {
 
-    public static int nonOverlappingIntervals(int[][] intervals){
+    // ============================== Greedy Algorithm Approach ==============================
 
-        int minIntervals = 0, endTime = 0;
+        public static int nonOverlappingIntervals(int[][] intervals){
 
-        Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0]));
+            int minIntervals = 0, endTime = 0;
 
-        for(int[] interval : intervals){
-            if(interval[0] >= endTime){
-                endTime = interval[1];
-            }else{
-                endTime = Math.min(endTime, interval[1]);
-                minIntervals++;
+            Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0]));
+
+            for(int[] interval : intervals){
+                if(interval[0] >= endTime){
+                    endTime = interval[1];
+                }else{
+                    endTime = Math.min(endTime, interval[1]);
+                    minIntervals++;
+                }
             }
+
+            return minIntervals;
+
         }
-
-        return minIntervals;
-
-    }
 
     public static void main(String[] args) {
 
-        int[][] intervals = {{1, 2}, {2, 3}, {3, 4}, {1, 3}};
+        int[][] intervals = {{1, 3} , {1, 4} , {3, 5} , {3, 4} , {4, 5}};
 
         int result = nonOverlappingIntervals(intervals);
 
