@@ -17,6 +17,8 @@
 // Output : 2
 // Explanation : You can remove the intervals [1, 4] and [3, 5] and the remaining intervals becomes non overlapping.
 
+import java.util.Arrays;
+
 class Main{
 
     public static int nonOverlappingIntervals(int[][] intervals){
