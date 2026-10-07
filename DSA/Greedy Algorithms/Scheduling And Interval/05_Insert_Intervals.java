@@ -12,3 +12,26 @@
 // Output : [ [1, 5] , [6, 9] ]
 // Explanation : After inserting the newInterval the Intervals array becomes [ [1, 3] , [2, 5] , [6, 9] ].
 // So to make them non overlapping we can merge the intervals [1, 3] and [2, 5]. So the Intervals array is [ [1, 5] , [6, 9] ].
+
+// Example 2:
+
+// Input : Intervals = [ [1, 2] , [3, 5] , [6, 7] , [8,10] ] , newInterval = [4, 8]
+// Output : [ [1, 2] , [3, 10] ]
+// Explanation : The Intervals array after inserting newInterval is [ [1, 2] , [3, 5] , [4, 8] , [6, 7] , [8, 10] ].
+// We merge the required intervals to make it non overlapping. So final array is [ [1, 2] , [3, 10] ].
+
+class Main {
+
+    public static int[][] insertInterval(int[][] intervals, int[] newInterval){
+
+    }
+
+    public static void main(String[] args) {
+
+        int[][] intervals = {{1, 3}, {6, 9}};
+        int[] newInterval = {2, 5};
+
+        insertInterval(intervals, newInterval);
+        
+    }
+}
