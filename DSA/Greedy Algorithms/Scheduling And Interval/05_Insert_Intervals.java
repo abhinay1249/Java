@@ -46,6 +46,11 @@ class Main {
             
             timeIntervals.add(intervals[index]);
 
+            while(index < length){
+                timeIntervals.add(intervals[index]);
+                index+=1;
+            }
+
         
         }
 
