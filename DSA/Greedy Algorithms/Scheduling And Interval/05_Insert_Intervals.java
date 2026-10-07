@@ -5,3 +5,10 @@
 // merge newInterval into Intervals such that Intervals remain non-overlapping and sorted in ascending order by start[i].
 
 // Return Intervals after the insertion of newInterval.
+
+// Example 1:
+
+// Input : Intervals = [ [1, 3] , [6, 9] ] , newInterval = [2, 5]
+// Output : [ [1, 5] , [6, 9] ]
+// Explanation : After inserting the newInterval the Intervals array becomes [ [1, 3] , [2, 5] , [6, 9] ].
+// So to make them non overlapping we can merge the intervals [1, 3] and [2, 5]. So the Intervals array is [ [1, 5] , [6, 9] ].
