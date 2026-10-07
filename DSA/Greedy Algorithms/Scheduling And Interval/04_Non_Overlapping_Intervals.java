@@ -4,7 +4,6 @@
 
 // Note: Intervals which only touch at a point are also considered as non-overlapping. For example, [1, 3] and [3, 4] are non-overlapping.
 
-
 // Example 1:
 
 // Input : Intervals = [ [1, 2] , [2, 3] , [3, 4] ,[1, 3] ]
