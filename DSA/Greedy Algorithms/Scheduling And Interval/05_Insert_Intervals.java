@@ -24,6 +24,8 @@ class Main {
 
     public static int[][] insertInterval(int[][] intervals, int[] newInterval){
 
+
+
     }
 
     public static void main(String[] args) {
@@ -31,7 +33,7 @@ class Main {
         int[][] intervals = {{1, 3}, {6, 9}};
         int[] newInterval = {2, 5};
 
-        insertInterval(intervals, newInterval);
+        int[][] newInterval = insertInterval(intervals, newInterval);
         
     }
 }
