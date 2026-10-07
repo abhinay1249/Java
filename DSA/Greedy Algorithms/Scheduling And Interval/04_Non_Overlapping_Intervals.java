@@ -31,7 +31,7 @@ class Main {
 
             for(int[] interval : intervals){
                 if(interval[0] >= endTime){
-                    endTime = interval[1];
+                    endTime = interval[1];                                      // T.C = O(N Log N) + O(N), S.C = O(1) 
                 }else{
                     endTime = Math.min(endTime, interval[1]);
                     minIntervals++;
