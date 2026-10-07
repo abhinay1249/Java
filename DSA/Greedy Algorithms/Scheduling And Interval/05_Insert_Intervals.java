@@ -33,7 +33,7 @@ class Main {
         int[][] intervals = {{1, 3}, {6, 9}};
         int[] newInterval = {2, 5};
 
-        int[][] newInterval = insertInterval(intervals, newInterval);
+        int[][] newIntervals = insertInterval(intervals, newInterval);
         
     }
 }
