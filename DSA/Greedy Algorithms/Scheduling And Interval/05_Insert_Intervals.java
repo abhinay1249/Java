@@ -20,6 +20,8 @@
 // Explanation : The Intervals array after inserting newInterval is [ [1, 2] , [3, 5] , [4, 8] , [6, 7] , [8, 10] ].
 // We merge the required intervals to make it non overlapping. So final array is [ [1, 2] , [3, 10] ].
 
+import java.util.*;
+
 class Main {
 
         public static int[][] insertInterval(int[][] intervals, int[] newInterval){
@@ -27,6 +29,8 @@ class Main {
             int index = 0;
 
             List<int[]> timeIntervals = new ArrayList<>();
+
+
             
         
         }
