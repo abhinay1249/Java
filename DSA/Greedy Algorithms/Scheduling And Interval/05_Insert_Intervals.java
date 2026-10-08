@@ -32,7 +32,10 @@ class Main {
 
             int length = intervals.length;
 
-            while(index < )
+            while(index < length && intervals[index][1] < newInterval[0]){
+                timeIntervals.add(intervals[index]);
+                index+=1;
+            }
             
         
         }
