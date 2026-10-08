@@ -22,11 +22,11 @@
 
 class Main {
 
-    public static int[][] insertInterval(int[][] intervals, int[] newInterval){
-
-
-
-    }
+        public static int[][] insertInterval(int[][] intervals, int[] newInterval){
+        
+            
+        
+        }
 
     public static void main(String[] args) {
 
