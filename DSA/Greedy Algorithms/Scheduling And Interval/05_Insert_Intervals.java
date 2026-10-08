@@ -25,6 +25,8 @@ import java.util.List;
 
 class Main {
 
+    // =============================== Greedy Algorithm Approach ============================
+
         public static int[][] insertInterval(int[][] intervals, int[] newInterval){
         
             int index = 0;
