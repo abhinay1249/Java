@@ -20,7 +20,8 @@
 // Explanation : The Intervals array after inserting newInterval is [ [1, 2] , [3, 5] , [4, 8] , [6, 7] , [8, 10] ].
 // We merge the required intervals to make it non overlapping. So final array is [ [1, 2] , [3, 10] ].
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 class Main {
 
@@ -57,6 +58,8 @@ class Main {
                 newIntervals[timeIntervalIndex] = timeIntervals.get(timeIntervalIndex);
             }
         
+            return newIntervals;
+
         }
 
     public static void main(String[] args) {
