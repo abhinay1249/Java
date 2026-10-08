@@ -36,6 +36,10 @@ class Main {
                 timeIntervals.add(intervals[index]);
                 index+=1;
             }
+
+            while(index < length && intervals[index][0] <= newInterval[1]){
+                newInterval[0] = Math.min(newInterval[0], intervals[index][0]);
+            }
             
         
         }
