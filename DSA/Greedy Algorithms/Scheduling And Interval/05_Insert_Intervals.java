@@ -25,6 +25,8 @@ class Main {
         public static int[][] insertInterval(int[][] intervals, int[] newInterval){
         
             int index = 0;
+
+            List<int[]> timeIntervals = new ArrayList<>();
             
         
         }
