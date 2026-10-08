@@ -44,6 +44,8 @@ class Main {
                 index+=1;
             }
             
+            timeIntervals.add(intervals[index]);
+
         
         }
 
