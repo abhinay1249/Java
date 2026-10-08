@@ -30,7 +30,9 @@ class Main {
 
             List<int[]> timeIntervals = new ArrayList<>();
 
+            int length = intervals.length;
 
+            while(index < )
             
         
         }
