@@ -44,7 +44,7 @@ class Main {
                 newInterval[0] = Math.min(newInterval[0], intervals[index][0]);
                 newInterval[1] = Math.max(newInterval[1], intervals[index][1]);
 
-                index+=1;                                                               // T.C = O(M * N), S.C = O(1)
+                index+=1;                                                               // T.C = O(N), S.C = O(N)
             }
             
             timeIntervals.add(newInterval);
