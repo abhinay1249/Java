@@ -54,11 +54,8 @@ class Main {
             int[][] newIntervals = new int[timeIntervals.size()][2];
 
             for(int timeIntervalIndex = 0 ; timeIntervalIndex < timeIntervals.size() ; timeIntervalIndex++){
-                newInterval[timeIntervalIndex] = timeIntervals.get(timeIntervalIndex);
+                newIntervals[timeIntervalIndex] = timeIntervals.get(timeIntervalIndex);
             }
-
-
-
         
         }
 
