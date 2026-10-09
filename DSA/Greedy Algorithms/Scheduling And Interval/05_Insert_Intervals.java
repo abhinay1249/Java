@@ -70,6 +70,11 @@ class Main {
         int[] newInterval = {2, 5};
 
         int[][] newIntervals = insertInterval(intervals, newInterval);
-        
+
+        for(int row = 0 ; row < newIntervals.length ; row++){
+            for(int col = 0 ; col < newIntervals[0].length ; col++){
+                System.out.println(newIntervals[row][col]);
+            }
+        }
     }
 }
