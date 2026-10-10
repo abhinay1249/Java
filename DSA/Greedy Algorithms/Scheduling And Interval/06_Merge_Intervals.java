@@ -58,14 +58,18 @@ class Main {
             
             }
         
-            return mergedIntervals.toArray(new int[mergedIntervals.size()][]);
+            return mergedIntervals.stream().map(list -> list.stream().mapToInt(Integer::intValue).toArray()).toArray(int[][]::new);
         
         }
 
     // ============================ Greedy Algorithm Approach ================================
 
         public static int[][] mergeIntervals_1(int[][] intervals){
-            
+
+            int length = 
+
+
+
         }
 
     public static void main(String[] args) {
