@@ -66,9 +66,27 @@ class Main {
 
         public static int[][] mergeIntervals_1(int[][] intervals){
 
-            int length = 
+            int length = intervals.length;
 
+            if(length == 1) return intervals;
+        
+            List<List<Integer>> mergedIntervals = new ArrayList<>();                        // T.C = O(N Log N) + O(N), S.C = O(N)
+        
+            Arrays.sort(intervals, (start, end) -> Integer.compare(start[0], end[0]));
 
+            for(int interval = 0 ; interval < length ; interval++){                                         
+                int start = intervals[interval][0];
+                int end = intervals[interval][1];
+
+                if(mergedIntervals.isEmpty() || mergedIntervals.get(mergedIntervals.size()-1).get(1) < start){
+                    mergedIntervals.add(Arrays.asList(start, end));
+                }else{
+                    List<Integer> lastInterval = mergedIntervals.get(mergedIntervals.size()-1);
+                    lastInterval.set(1, Math.max(end, mergedIntervals.get(mergedIntervals.size()-1).get(1)));
+                }
+            }
+
+            return mergedIntervals.stream().map(list -> list.stream().mapToInt(Integer::intValue).toArray()).toArray(int[][]::new);
 
         }
 
