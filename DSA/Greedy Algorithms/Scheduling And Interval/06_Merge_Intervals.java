@@ -65,7 +65,7 @@ class Main {
     // ============================ Greedy Algorithm Approach ================================
 
         public static int[][] mergeIntervals_1(int[][] intervals){
-            
+
         }
 
     public static void main(String[] args) {
@@ -75,6 +75,13 @@ class Main {
         int[][] newIntervals = mergeIntervals(intervals);
 
         for(int[] rows : newIntervals){
+            System.out.println(rows[0]);
+            System.out.println(rows[1]);
+        }
+
+        int[][] newIntervals_1 = mergeIntervals_1(intervals);
+
+        for(int[] rows : newIntervals_1){
             System.out.println(rows[0]);
             System.out.println(rows[1]);
         }
