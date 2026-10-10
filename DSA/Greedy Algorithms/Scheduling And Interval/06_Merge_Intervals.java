@@ -21,45 +21,46 @@ import java.util.List;
 
 class Main {
 
-    public static int[][] mergeIntervals(int[][] intervals){
+    // ============================= Brute Force Approach ==================================
 
-        int length = intervals.length;
-
-        if(length == 1) return intervals;
-
-        List<List<Integer>> mergedIntervals = new ArrayList<>();
-
-        Arrays.sort(intervals, (start, end) -> Integer.compare(start[0], end[0]));
-
-        for(int interval_1 = 0; interval_1 < length ; interval_1++){
-            int start = intervals[interval_1][0];
-            int end = intervals[interval_1][1];
-
-            if(!mergedIntervals.isEmpty()){
-                List<Integer> lastInterval = mergedIntervals.get(mergedIntervals.size()-1);
-                if(lastInterval.get(1) >= end){
-                    continue;
+        public static int[][] mergeIntervals(int[][] intervals){
+        
+            int length = intervals.length;
+        
+            if(length == 1) return intervals;
+        
+            List<List<Integer>> mergedIntervals = new ArrayList<>();
+        
+            Arrays.sort(intervals, (start, end) -> Integer.compare(start[0], end[0]));
+        
+            for(int interval_1 = 0; interval_1 < length ; interval_1++){
+                int start = intervals[interval_1][0];
+                int end = intervals[interval_1][1];                                 // T.C = O(N Log N) + O(N^2), S.C = O(N)
+            
+                if(!mergedIntervals.isEmpty()){
+                    List<Integer> lastInterval = mergedIntervals.get(mergedIntervals.size()-1);
+                    if(lastInterval.get(1) >= end){
+                        continue;
+                    }
                 }
-            }
-
-            for(int interval_2 = interval_1+1 ; interval_2 < length ; interval_2++){
-
-                if(end >= intervals[interval_2][0]){
-                    end = Math.max(end, intervals[interval_2][1]);
-                }else{
-                    break;
-                }
-                    
-            }
+            
+                for(int interval_2 = interval_1+1 ; interval_2 < length ; interval_2++){
                 
-            mergedIntervals.add(Arrays.asList(start, end));
+                    if(end >= intervals[interval_2][0]){
+                        end = Math.max(end, intervals[interval_2][1]);
+                    }else{
+                        break;
+                    }
 
+                }
+
+                mergedIntervals.add(Arrays.asList(start, end));
+            
+            }
+        
+            return mergedIntervals.toArray(new int[mergedIntervals.size()][]);
+        
         }
-
-        return mergedIntervals.toArray(new int[mergedIntervals.size()][]);
-
-
-    }
 
     public static void main(String[] args) {
         
