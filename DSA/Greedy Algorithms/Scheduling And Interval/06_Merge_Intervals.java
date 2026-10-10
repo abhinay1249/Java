@@ -21,7 +21,7 @@ import java.util.List;
 
 class Main {
 
-    // ============================= Brute Force Approach ==================================
+    // =========================== Brute Force Approach ======================================
 
         public static int[][] mergeIntervals(int[][] intervals){
         
@@ -60,6 +60,12 @@ class Main {
         
             return mergedIntervals.toArray(new int[mergedIntervals.size()][]);
         
+        }
+
+    // ============================ Greedy Algorithm Approach ================================
+
+        public static int[][] mergeIntervals_1(int[][] intervals){
+            
         }
 
     public static void main(String[] args) {
