@@ -30,6 +30,12 @@ class Main {
 
         }
 
+    // ============================ Greedy Algorithm Approach ==============================
+
+        public static int minimumNumberOfPlatforms_1(int[] arrivals, int[] departures){
+            
+        }
+
     public static void main(String[] args) {
         
         int[] arrivals = {900, 940, 950, 1100, 1500, 1800};
