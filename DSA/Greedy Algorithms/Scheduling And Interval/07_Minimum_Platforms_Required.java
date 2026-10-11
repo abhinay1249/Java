@@ -21,3 +21,23 @@
 // Output : 1
 // Explanation : All the three trains can use the platform 1.
 // So we required only 1 platform.
+
+class Main {
+
+    // ============================ Brute Force Approach ===================================
+
+        public static int minimumNumberOfPlatforms(int[] arrivals, int[] departures){
+
+        }
+
+    public static void main(String[] args) {
+        
+        int[] arrivals = {900, 940, 950, 1100, 1500, 1800};
+        int[] departures = {910, 1200, 1120, 1130, 1900, 2000};
+
+        int result = minimumNumberOfPlatforms(arrivals, departures);
+
+        System.out.println(result);
+
+    }
+}
