@@ -45,17 +45,13 @@ class Main {
                 }
             
                 for(int interval_2 = interval_1+1 ; interval_2 < length ; interval_2++){
-                
                     if(end >= intervals[interval_2][0]){
                         end = Math.max(end, intervals[interval_2][1]);
                     }else{
                         break;
                     }
-
                 }
-
                 mergedIntervals.add(Arrays.asList(start, end));
-            
             }
         
             return mergedIntervals.stream().map(list -> list.stream().mapToInt(Integer::intValue).toArray()).toArray(int[][]::new);
