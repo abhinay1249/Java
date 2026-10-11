@@ -47,5 +47,7 @@ class Main {
 
         int result_1 = minimumNumberOfPlatforms_1(arrivals, departures);
 
+        System.out.println(result_1);
+
     }
 }
