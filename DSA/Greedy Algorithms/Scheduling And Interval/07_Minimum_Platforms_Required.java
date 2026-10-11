@@ -11,8 +11,7 @@
 // Input : Arrival = [900, 940, 950, 1100, 1500, 1800] , Departure = [910, 1200, 1120, 1130, 1900, 2000]
 // Output : 3
 // Explanation : The first , second , fifth number train can use the platform 1.
-// The third and sixth train can use the platform 2.
-// The fourth train will use platform 3.
+// The third and sixth train can use the platform 2. The fourth train will use platform 3.
 // So total we need 3 different platforms for the railway station so that no train is kept waiting.
 
 // Example 2:
