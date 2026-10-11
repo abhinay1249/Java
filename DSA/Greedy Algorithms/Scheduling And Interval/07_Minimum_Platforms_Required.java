@@ -33,7 +33,7 @@ class Main {
     // ============================ Greedy Algorithm Approach ==============================
 
         public static int minimumNumberOfPlatforms_1(int[] arrivals, int[] departures){
-            
+
         }
 
     public static void main(String[] args) {
@@ -44,6 +44,8 @@ class Main {
         int result = minimumNumberOfPlatforms(arrivals, departures);
 
         System.out.println(result);
+
+        int result_1 = minimumNumberOfPlatforms_1(arrivals, departures);
 
     }
 }
