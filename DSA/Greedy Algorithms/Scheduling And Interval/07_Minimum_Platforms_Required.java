@@ -19,8 +19,7 @@
 
 // Input : Arrival = [900, 1100, 1235] , Departure = [1000, 1200, 1240]
 // Output : 1
-// Explanation : All the three trains can use the platform 1.
-// So we required only 1 platform.
+// Explanation : All the three trains can use the platform 1. So we required only 1 platform.
 
 class Main {
 
