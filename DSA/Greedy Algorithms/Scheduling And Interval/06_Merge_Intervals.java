@@ -35,7 +35,7 @@ class Main {
         
             for(int interval_1 = 0; interval_1 < length ; interval_1++){
                 int start = intervals[interval_1][0];
-                int end = intervals[interval_1][1];                                 // T.C = O(N Log N) + O(N^2), S.C = O(N)
+                int end = intervals[interval_1][1];                                           // T.C = O(N Log N) + O(N^2), S.C = O(N)
             
                 if(!mergedIntervals.isEmpty()){
                     List<Integer> lastInterval = mergedIntervals.get(mergedIntervals.size()-1);
