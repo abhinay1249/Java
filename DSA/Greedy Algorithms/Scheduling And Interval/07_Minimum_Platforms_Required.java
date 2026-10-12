@@ -45,7 +45,7 @@ class Main {
 
             }
 
-
+            return minimumPlatforms;
 
         }
 
