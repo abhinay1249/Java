@@ -41,7 +41,7 @@ class Main {
                     }
                 }
 
-                minimumPlatforms = Math.max()
+                minimumPlatforms = Math.max(platformCount, minimumPlatforms);
 
             }
 
