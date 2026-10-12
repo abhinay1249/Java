@@ -33,11 +33,15 @@ class Main {
 
             for(int interval_1 = 0 ; interval_1 < arrivalLength ; interval_1++){
                 
-                int possiblePlatforms = 0;
+                int platformCount = 0;
                 
                 for(int interval_2 = 0 ; interval_2 < departureLength ; interval_2++){
-                    if(arrivals[interval_1] >= arrivals[interval_2] && departures[interval_2] >= arrivals[interval_1])
+                    if(arrivals[interval_1] >= arrivals[interval_2] && departures[interval_2] >= arrivals[interval_1]){
+                        platformCount++;
+                    }
                 }
+
+                minimumPlatforms = Math.max()
 
             }
 
