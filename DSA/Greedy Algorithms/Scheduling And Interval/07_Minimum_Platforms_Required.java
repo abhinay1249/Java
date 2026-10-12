@@ -26,6 +26,13 @@ class Main {
 
         public static int minimumNumberOfPlatforms(int[] arrivals, int[] departures){
 
+            int arrivalLength = arrivals.length;
+            int departureLength = departures.length;
+
+            
+
+
+
         }
 
     // ============================ Greedy Algorithm Approach ==============================
