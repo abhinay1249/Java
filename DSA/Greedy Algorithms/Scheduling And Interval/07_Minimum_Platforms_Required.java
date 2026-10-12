@@ -29,7 +29,11 @@ class Main {
             int arrivalLength = arrivals.length;
             int departureLength = departures.length;
 
-            
+            int minimumPlatforms = 0;
+
+            for(int interval_1 = 0 ; interval_1 < arrivalLength ; interval_1++){
+                
+            }
 
 
 
