@@ -41,7 +41,7 @@ class Main {
                     }
                 }
 
-                minimumPlatforms = Math.max(platformCount, minimumPlatforms);                       // T.C = O(N^2)
+                minimumPlatforms = Math.max(platformCount, minimumPlatforms);                       // T.C = O(N^2), S.C = O(1)
 
             }
 
