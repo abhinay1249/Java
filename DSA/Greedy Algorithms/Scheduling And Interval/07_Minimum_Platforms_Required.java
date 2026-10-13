@@ -74,6 +74,8 @@ class Main {
                 minimumPlatforms = Math.max(possiblePlatforms, minimumPlatforms);
             }
 
+            return minimumPlatforms;
+
         }
 
     public static void main(String[] args) {
