@@ -58,10 +58,12 @@ class Main {
             int arrivalPtr = 0;
             int deptPtr = 0;
 
+            int possiblePlatforms = 0, minimumPlatforms = 0;
+
 
             while(arrivalPtr < length && deptPtr < length){
                 if(arrivals[arrivalPtr] <= departures[deptPtr]){
-                    
+
                 }
             }
 
