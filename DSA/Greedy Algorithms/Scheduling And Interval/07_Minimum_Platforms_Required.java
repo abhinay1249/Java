@@ -60,6 +60,9 @@ class Main {
 
             int possiblePlatforms = 0, minimumPlatforms = 0;
 
+            Arrays.sort(arrivals);
+            Arrays.sort(departures);
+
 
             while(arrivalPtr < length && deptPtr < length){
                 if(arrivals[arrivalPtr] <= departures[deptPtr]){
