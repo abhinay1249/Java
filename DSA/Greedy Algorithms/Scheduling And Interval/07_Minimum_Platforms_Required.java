@@ -58,6 +58,9 @@ class Main {
             int arrivalPtr = 0;
             int deptPtr = 0;
 
+
+            while(arrivalPtr < length )
+
         }
 
     public static void main(String[] args) {
