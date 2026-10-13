@@ -53,6 +53,11 @@ class Main {
 
         public static int minimumNumberOfPlatforms_1(int[] arrivals, int[] departures){
 
+            int length = arrivals.length;
+        
+            int arrivalPtr = 0;
+            int deptPtr = 0;
+
         }
 
     public static void main(String[] args) {
