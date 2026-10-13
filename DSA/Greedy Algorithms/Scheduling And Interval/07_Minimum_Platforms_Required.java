@@ -70,6 +70,8 @@ class Main {
                     possiblePlatforms--;
                     deptPtr+=1;
                 }
+
+                minimumPlatforms = Math.max(possiblePlatforms, minimumPlatforms);
             }
 
         }
