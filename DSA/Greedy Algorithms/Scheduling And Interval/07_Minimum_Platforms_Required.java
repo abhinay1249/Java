@@ -59,7 +59,11 @@ class Main {
             int deptPtr = 0;
 
 
-            while(arrivalPtr < length )
+            while(arrivalPtr < length && deptPtr < length){
+                if(arrivals[arrivalPtr] <= departures[deptPtr]){
+                    
+                }
+            }
 
         }
 
