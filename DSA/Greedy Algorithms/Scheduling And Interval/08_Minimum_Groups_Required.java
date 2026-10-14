@@ -21,16 +21,19 @@
 class Main {
 
         public static int minimumGroups(int[][] intervals){
-            
+
         }
 
     public static void main(String[] args) {
         
         int[][] intervals = {{5, 10},{6, 8},{1, 5},{2, 3}, {1, 10}};
+
         int result = minimumGroups(intervals);
 
         System.out.println(result);
         
+        int result_1 = minimumGroups_1(intervals);
 
+        System.out.println(result_1);
     }
 }
