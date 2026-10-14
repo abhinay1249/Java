@@ -18,3 +18,9 @@
 // Output: 1
 // Explanation: None of the intervals overlap, so we can put all of them in one group.
 
+class Main {
+    
+    public static void main(String[] args) {
+        
+    }
+}
