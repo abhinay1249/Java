@@ -51,7 +51,7 @@ class Main {
 
         }
 
-    // ============================ Greedy Algorithm Approach ==============================
+    // ============================ Greedy Algorithm Approach =================================
 
         public static int minimumNumberOfPlatforms_1(int[] arrivals, int[] departures){
 
@@ -68,12 +68,12 @@ class Main {
 
             while(arrivalPtr < length && deptPtr < length){
                 if(arrivals[arrivalPtr] <= departures[deptPtr]){
-                    possiblePlatforms++;
+                    possiblePlatforms++;                                    // T.C = O(N)
                     arrivalPtr+=1;
 
                 }else{
                     possiblePlatforms--;
-                    deptPtr+=1;
+                    deptPtr+=1;                                                 
                 }
 
                 minimumPlatforms = Math.max(possiblePlatforms, minimumPlatforms);
