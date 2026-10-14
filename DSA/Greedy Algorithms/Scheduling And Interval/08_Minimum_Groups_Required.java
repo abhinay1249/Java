@@ -19,8 +19,18 @@
 // Explanation: None of the intervals overlap, so we can put all of them in one group.
 
 class Main {
-    
+
+        public static int minimumGroups(int[][] intervals){
+            
+        }
+
     public static void main(String[] args) {
         
+        int[][] intervals = {{5, 10},{6, 8},{1, 5},{2, 3}, {1, 10}};
+        int result = minimumGroups(intervals);
+
+        System.out.println(result);
+        
+
     }
 }
