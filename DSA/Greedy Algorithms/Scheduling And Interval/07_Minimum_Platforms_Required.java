@@ -65,7 +65,6 @@ class Main {
             Arrays.sort(arrivals);
             Arrays.sort(departures);
 
-
             while(arrivalPtr < length && deptPtr < length){
 
                 if(arrivals[arrivalPtr] <= departures[deptPtr]){
