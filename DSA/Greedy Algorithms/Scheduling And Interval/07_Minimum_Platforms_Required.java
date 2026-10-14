@@ -67,9 +67,9 @@ class Main {
 
 
             while(arrivalPtr < length && deptPtr < length){
-                
+
                 if(arrivals[arrivalPtr] <= departures[deptPtr]){
-                    possiblePlatforms++;                                    // T.C = O(N), S.C = O(1)
+                    possiblePlatforms++;                                    // T.C = O(2N) + O(2(N Log N)), S.C = O(1)
                     arrivalPtr+=1;
 
                 }else{
