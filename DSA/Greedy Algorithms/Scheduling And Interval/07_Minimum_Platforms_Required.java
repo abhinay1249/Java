@@ -20,6 +20,8 @@
 // Output : 1
 // Explanation : All the three trains can use the platform 1. So we required only 1 platform.
 
+import java.util.Arrays;
+
 class Main {
 
     // ============================ Brute Force Approach ===================================
