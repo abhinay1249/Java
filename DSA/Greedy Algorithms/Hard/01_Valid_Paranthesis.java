@@ -19,12 +19,21 @@
 
 class Main {
 
-    // ============================= Greedy Algorithm Approach ===========================
+    // ============================= Brute Force Approach ===========================
 
-        public static boolean validParanthesis(String str){
+        public static boolean validParanthesis(String str, int counter, int index){
 
+            if(counter < 0) return false;
+
+            if(index == str.length()) return (counter == 0);
+
+            char ch = str.charAt(index);
+
+            if(ch == '(')  return validParanthesis(str, counter+1, index+1);
             
+            else if( ch == ')') return validParanthesis(str, counter-1, index+1);
 
+            return validParanthesis(str, counter+1, index+1) || validParanthesis(str, counter-1, index+1) || validParanthesis(str, counter, index+1);
 
         }
     
@@ -32,7 +41,7 @@ class Main {
 
         String str = "(*))";
 
-        boolean result = validParanthesis(str);
+        boolean result = validParanthesis(str, 0, 0 );
 
         System.out.println(result);
 
