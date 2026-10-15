@@ -1,4 +1,4 @@
-// Problem Statement: Find the validity of an input string s that only contains the letters '(', ')' and '*'.
+// Problem Statement : Find the validity of an input string s that only contains the letters '(', ')' and '*'.
 // A string entered is legitimate if
 // Any left parenthesis '(' must have a corresponding right parenthesis ')'.
 // Any right parenthesis ')' must have a corresponding left parenthesis '('.
@@ -39,7 +39,7 @@ class Main {
 
     // ========================= Greedy Algorithm Approach =============================
 
-        public static boolean validParanthesis(String str){
+        public static boolean validParanthesis_1(String str){
 
             int minimum = 0;
             int maximum = 0;
