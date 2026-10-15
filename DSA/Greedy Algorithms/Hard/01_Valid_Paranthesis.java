@@ -55,7 +55,7 @@ class Main {
                     maximum += 1;
                 }else if(ch == ')'){
                     minimum -= 1;
-                    maximum -= 1;                                           // T.C = O(N)
+                    maximum -= 1;                                           // T.C = O(N), S.C= O(1)
                 }else{
                     minimum -= 1;
                     maximum += 1;   
