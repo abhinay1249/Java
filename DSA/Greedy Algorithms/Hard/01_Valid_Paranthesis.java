@@ -41,6 +41,31 @@ class Main {
 
         public static boolean validParanthesis(String str){
 
+            int minimum = 0;
+            int maximum = 0;
+
+            int length = str.length();
+
+            for(int index = 0 ; index < length ; index++){
+                
+                char ch = str.charAt(index);
+
+                if(ch == '('){
+                    minimum += 1;
+                    maximum += 1;
+                }else if(ch == ')'){
+                    minimum -= 1;
+                    maximum -= 1;                    
+                }else{
+                    minimum -= 1;
+                    maximum += 1;
+                }
+                
+                
+
+                
+            }
+
         }
     
     public static void main(String[] args){
