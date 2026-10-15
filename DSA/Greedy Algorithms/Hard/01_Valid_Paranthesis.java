@@ -61,7 +61,7 @@ class Main {
                     maximum += 1;
                 }
                 
-                
+                if(minimum < 0) minimum = 0;
 
                 
             }
