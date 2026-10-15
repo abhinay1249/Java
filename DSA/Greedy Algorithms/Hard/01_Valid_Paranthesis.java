@@ -36,12 +36,22 @@ class Main {
             return validParanthesis(str, counter+1, index+1) || validParanthesis(str, counter-1, index+1) || validParanthesis(str, counter, index+1);
 
         }
+
+    // ========================= Greedy Algorithm Approach ==============================
+
+        public static boolean validParanthesis(String str){
+
+        }
     
     public static void main(String[] args){
 
         String str = "(*))";
 
-        boolean result = validParanthesis(str, 0, 0 );
+        boolean result = validParanthesis(str, 0, 0);
+
+        System.out.println(result);
+
+        boolean result = validParanthesis_1(str);
 
         System.out.println(result);
 
