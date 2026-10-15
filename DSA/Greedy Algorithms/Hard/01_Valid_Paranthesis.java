@@ -51,9 +51,9 @@ class Main {
 
         System.out.println(result);
 
-        boolean result = validParanthesis_1(str);
+        boolean result_1 = validParanthesis_1(str);
 
-        System.out.println(result);
+        System.out.println(result_1);
 
     }
 }
