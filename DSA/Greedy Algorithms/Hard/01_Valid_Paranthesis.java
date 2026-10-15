@@ -37,7 +37,7 @@ class Main {
 
         }
 
-    // ========================= Greedy Algorithm Approach ==============================
+    // ========================= Greedy Algorithm Approach =============================
 
         public static boolean validParanthesis(String str){
 
@@ -55,10 +55,10 @@ class Main {
                     maximum += 1;
                 }else if(ch == ')'){
                     minimum -= 1;
-                    maximum -= 1;                    
+                    maximum -= 1;                                           // T.C = O(N)
                 }else{
                     minimum -= 1;
-                    maximum += 1;
+                    maximum += 1;   
                 }
                 
                 if(minimum < 0) minimum = 0;
