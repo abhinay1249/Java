@@ -64,9 +64,10 @@ class Main {
                 if(minimum < 0) minimum = 0;
 
                 if(maximum < 0) return false;
-
                 
             }
+
+            return minimum == 0;
 
         }
     
