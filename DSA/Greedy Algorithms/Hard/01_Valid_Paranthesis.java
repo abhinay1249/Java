@@ -29,7 +29,7 @@ class Main {
 
             char ch = str.charAt(index);
 
-            if(ch == '(')  return validParanthesis(str, counter+1, index+1);
+            if(ch == '(')  return validParanthesis(str, counter+1, index+1);            // T.C = O(3^N), S.C = O(N)
             
             else if( ch == ')') return validParanthesis(str, counter-1, index+1);
 
