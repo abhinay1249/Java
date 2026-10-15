@@ -19,12 +19,14 @@
 
 class Main {
 
-    public static boolean validParanthesis(String str){
+    // ============================= Greedy Algorithm Approach ===========================
 
-        
+        public static boolean validParanthesis(String str){
+
+            
 
 
-    }
+        }
     
     public static void main(String[] args){
 
