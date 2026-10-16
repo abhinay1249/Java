@@ -28,7 +28,7 @@ class Main {
 
         public static int minimumGroups(int[][] intervals){
 
-            int minNumberOfGroups = 0;
+            int minNumberOfGroups = 0;(
 
             for(int interval_1 = 0 ; interval_1 < intervals.length ; interval_1++){
                 
@@ -59,7 +59,7 @@ class Main {
 
                 if(pq.isEmpty()) {
                     pq.add(interval[1]);
-                } else if(pq.peek() < interval[0]) {
+                } else if(pq.peek() < interval[0]) {                    // T.C = O(N Log N) + O(N) + O(2 Log N), S.C = O(N)
                     pq.poll();
                     pq.add(interval[1]);                
                 }else if (pq.peek() >= interval[0]){
