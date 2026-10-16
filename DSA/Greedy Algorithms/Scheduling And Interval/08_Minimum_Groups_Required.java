@@ -46,7 +46,24 @@ class Main {
     // ============================ Greedy Algorithm Approach =================================    
 
         public static int minimumGroups_1(int[][] intervals){
+            
+            Arrays.sort(intervals, (left, right) -> Integer.compare(left[0], right[0]));
 
+            Queue<Integer> pq = new PriorityQueue<>();
+
+            for(int[] interval : intervals){
+
+                if(pq.isEmpty()) {
+                    pq.add(interval[1]);
+                } else if(pq.peek() < interval[0]) {
+                    pq.poll();
+                    pq.add(interval[1]);                
+                }else if (pq.peek() >= interval[0]){
+                    pq.add(interval[1]);
+                }
+            }
+
+            return pq.size();
         }
 
     public static void main(String[] args) {
