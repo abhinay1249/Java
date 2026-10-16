@@ -18,6 +18,10 @@
 // Output: 1
 // Explanation: None of the intervals overlap, so we can put all of them in one group.
 
+import java.util.Arrays;
+import java.util.PriorityQueue;
+import java.util.Queue;
+
 class Main {
 
     // ============================ Brute Force Approach =================================== 
@@ -46,7 +50,7 @@ class Main {
     // ============================ Greedy Algorithm Approach =================================    
 
         public static int minimumGroups_1(int[][] intervals){
-            
+
             Arrays.sort(intervals, (left, right) -> Integer.compare(left[0], right[0]));
 
             Queue<Integer> pq = new PriorityQueue<>();
