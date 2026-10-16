@@ -16,3 +16,20 @@
 // Input : s = *(()
 // Output : false
 // Explanation : The * replaced with any bracket does not form a valid string.
+
+class Main {
+
+    public static boolean validParanthesis(String str){
+        
+    }
+    
+    public static void main(String[] args){
+
+        String str = "(*))";
+
+        boolean result = validParanthesis(str);
+
+        System.out.println(result);
+
+    }
+}
