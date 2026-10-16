@@ -81,5 +81,6 @@ class Main {
         int result_1 = minimumGroups_1(intervals);
 
         System.out.println(result_1);
+        
     }
 }
