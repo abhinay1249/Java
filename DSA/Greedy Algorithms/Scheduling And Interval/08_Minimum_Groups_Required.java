@@ -43,6 +43,8 @@ class Main {
             return minNumberOfGroups;
         }
 
+    // ============================ Greedy Algorithm Approach =================================    
+
         public static int minimumGroups_1(int[][] intervals){
 
         }
