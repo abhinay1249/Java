@@ -1,4 +1,4 @@
-// Problem Statement: A software engineer is tasked with using the shortest job first (SJF) policy to calculate the average waiting time for each process.
+// Problem Statement : A software engineer is tasked with using the shortest job first (SJF) policy to calculate the average waiting time for each process.
 // The shortest job first also known as shortest job next (SJN) scheduling policy selects the waiting process with the least execution time to run next.
 // You are given an array of integers bt of size n representing the burst times (execution times) of n processes.
 // Your task is to calculate the average waiting time for all processes when scheduled using the SJF policy. 
