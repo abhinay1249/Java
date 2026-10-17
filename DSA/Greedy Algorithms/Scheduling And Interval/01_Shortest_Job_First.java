@@ -10,7 +10,7 @@
 
 // Input : bt = [4, 1, 3, 7, 2]
 // Output : 4
-// Explanation : The total waiting time is 20. So the average waiting time will be 20/5 => 4.
+// Explanation : The total waiting time is 20. So the average waiting time will be 20/5 -> 4.
 
 // Example 2:
 
