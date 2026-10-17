@@ -4,7 +4,7 @@
 // Your task is to calculate the average waiting time for all processes when scheduled using the SJF policy. 
 // The waiting time of a process is the total time a process has to wait before its execution starts,
 // which is the sum of burst times of all previously executed processes.
-// Return the floor of the average waiting time, i.e., the largest whole number less than or equal to the actual.
+// Return the floor of the average waiting time, i.e the largest whole number less than or equal to the actual.
 
 // Example 1:
 
