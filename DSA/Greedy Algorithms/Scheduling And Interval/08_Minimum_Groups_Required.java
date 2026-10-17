@@ -37,7 +37,7 @@ class Main {
                         possibleGroups++;
                     }
                 }
-                minNumberOfGroups = Math.max(minNumberOfGroups, possibleGroups);        // T.C = O(N^2)
+                minNumberOfGroups = Math.max(minNumberOfGroups, possibleGroups);        // T.C = O(N^2), S.C = O(1)
             }
 
             return minNumberOfGroups;
