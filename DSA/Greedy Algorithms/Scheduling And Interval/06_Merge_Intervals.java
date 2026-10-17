@@ -13,7 +13,7 @@
 
 // Input : intervals = [[1,4],[4,5]]
 // Output : [[1,5]]
-// Explanation : Because the end of [1,4] equals the start of [4,5], they are considered overlapping.
+// Explanation : Because the end of [1,4] equals the start of [4,5] they are considered overlapping.
 
 import java.util.ArrayList;
 import java.util.Arrays;
