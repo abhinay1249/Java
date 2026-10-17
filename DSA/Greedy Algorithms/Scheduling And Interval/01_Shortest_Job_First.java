@@ -16,7 +16,7 @@
 
 // Input : bt = [1, 2, 3, 4]
 // Output : 2
-// Explanation : The total waiting time is 10. So the average waiting time will be 10/4 => 2.
+// Explanation : The total waiting time is 10. So the average waiting time will be 10/4 -> 2.
 
 import java.util.Arrays;
 
