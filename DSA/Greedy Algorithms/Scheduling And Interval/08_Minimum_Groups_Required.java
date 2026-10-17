@@ -20,7 +20,30 @@
 
 class Main {
 
+    // ============================ Brute Force Approach =================================== 
+
         public static int minimumGroups(int[][] intervals){
+
+            int minNumberOfGroups = 0;
+
+            for(int interval_1 = 0 ; interval_1 < intervals.length ; interval_1++){
+                
+                int possibleGroups = 0;
+                int currentLeft = intervals[interval_1][0];
+
+                for(int interval_2 = 0 ; interval_2 < intervals.length ; interval_2++){
+
+                    if(currentLeft >= intervals[interval_2][0] && intervals[interval_2][1] >= intervals[interval_1][0]){
+                        possibleGroups++;
+                    }
+                }
+                minNumberOfGroups = Math.max(minNumberOfGroups, possibleGroups);
+            }
+
+            return minNumberOfGroups;
+        }
+
+        public static int minimumGroups_1(int[][] intervals){
 
         }
 
