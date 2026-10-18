@@ -43,7 +43,7 @@ class Main {
             }
 
             int rightCounter = 1;
-            rightCheck[length-1] = rightCounter;
+            rightCheck[length-1] = rightCounter;                            // T.C = O(3N), S.C = O(N) + O(N)
 
             for(int index = length - 2 ; index >= 0 ; index--){
                 if(ratings[index] > ratings[index+1]){
@@ -58,7 +58,6 @@ class Main {
 
             int leftPtr = 0, rightPtr = 0;
             int minCandies = 0;
-
 
             while(leftPtr < length && rightPtr < length){
 
