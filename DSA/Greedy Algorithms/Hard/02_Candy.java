@@ -151,22 +151,29 @@ class Main {
             return minCandies;
 
         }
+
+    // ============================= Greedy Algorithm Approach =============================
+
+        public static int candies_3(int[] ratings) {
+            
+        }
     
     public static void main(String[] args) {
     
         int[] ratings = {1, 0, 5};
 
         int result = candies(ratings);
-
         System.out.println(result);
 
         int result_1 = candies_1(ratings);
-
         System.out.println(result_1);
 
         int result_2 = candies_2(ratings);
-
         System.out.println(result_2);
 
+        int result_3 = candies_3(ratings);
+
+        System.out.println(result_3);
+        
     }
 }
