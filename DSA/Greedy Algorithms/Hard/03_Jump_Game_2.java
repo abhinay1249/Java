@@ -32,7 +32,7 @@ class Main {
                 minJump = Math.min(minJump, minJumps(jump+index, jumps+1, nums));
             }
 
-            return minJump;                                                             // T.C = O(2^N), S.C = O(N)
+            return minJump;                                                             // T.C = O(N^N), S.C = O(N)
 
         }
 
