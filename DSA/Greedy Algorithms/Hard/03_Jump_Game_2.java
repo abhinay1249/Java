@@ -57,6 +57,7 @@ class Main {
             int jumps = 0;
 
             while(right < length - 1){
+                
                 int farthest = 0;
 
                 for(int index = left ; index <= right ; index++){                   // T.C = O(N), S.C = O(1)            
