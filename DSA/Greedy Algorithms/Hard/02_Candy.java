@@ -19,8 +19,55 @@
 
 class Main {
 
-    public static int candy(int[] ratings){
+    public static int candies(int[] ratings){
 
+       int length = ratings.length;
+
+        int[] leftCheck = new int[length]; 
+        int[] rightCheck = new int[length];
+
+        int leftCounter = 1;
+        leftCheck[0] = leftCounter;
+        
+        for(int index = 1 ; index < length ; index++){
+
+            if(ratings[index-1] < ratings[index]){
+                leftCounter++;
+                leftCheck[index] = leftCounter; 
+            }else{
+                leftCounter = 1;
+                leftCheck[index] = leftCounter;
+            }
+        }
+
+        int rightCounter = 1;
+        rightCheck[length-1] = rightCounter;
+
+        for(int index = length - 2 ; index >= 0 ; index--){
+            if(ratings[index] > ratings[index+1]){
+                rightCounter++;
+                rightCheck[index] = rightCounter;
+                
+            }else{
+                rightCounter = 1;
+                rightCheck[index] = rightCounter;
+            }
+        } 
+
+        int leftPtr = 0, rightPtr = 0;
+        int minCandies = 0;
+
+
+        while(leftPtr < length && rightPtr < length){
+
+            int maxValue = Math.max(leftCheck[leftPtr], rightCheck[rightPtr]);
+            minCandies+= maxValue;
+
+            leftPtr++;
+            rightPtr++;
+        }
+
+        return minCandies;
         
     }
 
@@ -28,7 +75,7 @@ class Main {
     
         int[] ratings = {1, 0, 5};
 
-        int result = candy(ratings);
+        int result = candies(ratings);
 
         System.out.println(result);
 
