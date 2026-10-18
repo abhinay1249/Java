@@ -18,6 +18,8 @@
 
 class Main {
 
+    // =============================== Brute Force Approach ==================================
+
         public static int minJumps(int index, int jumps, int[] nums){
 
             if(index >= nums.length - 1){
