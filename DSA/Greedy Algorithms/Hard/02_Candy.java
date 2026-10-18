@@ -72,7 +72,7 @@ class Main {
 
         }
 
-    // =========================== Better Approach ======================================
+    // ================================ Better Approach ======================================
 
         public static int candies_1(int[] ratings){
 
@@ -121,6 +121,13 @@ class Main {
             return minCandies;
 
         }
+
+    // ========================= Greedy Algorithm Approach ==================================
+
+        public static int candies_2(int[] ratings){
+            
+        }
+    
     public static void main(String[] args) {
     
         int[] ratings = {1, 0, 5};
