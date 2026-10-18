@@ -86,13 +86,13 @@ class Main {
             for(int index = 1 ; index < length ; index++){
 
                 if(ratings[index-1] < ratings[index]){
-                    leftCheck[index] = ratings[index-1]+1;                                     // T.C = O(2N), S.C = O(2N) 
+                    leftCheck[index] = leftCheck[index-1]+1;                                     // T.C = O(2N), S.C = O(2N) 
                 }else{
                     leftCheck[index] = 1;
                 }
 
                 if(ratings[(length-index)-1] > ratings[(length-index)]){
-                    rightCheck[(length-index)-1] = ratings[(length-index)]+1;
+                    rightCheck[(length-index)-1] = rightCheck[(length-index)]+1;
                 }else{
                     rightCheck[(length-index)-1] = 1;
                 }
@@ -126,7 +126,7 @@ class Main {
             for(int index = 1 ; index < length ; index++){
 
                 if(ratings[index-1] < ratings[index]){
-                    leftCheck[index] = ratings[index-1]+1; 
+                    leftCheck[index] = leftCheck[index-1]+1; 
                 }else{
                     leftCheck[index] = 1;
                 }
@@ -143,6 +143,7 @@ class Main {
                     rightPtr = currPtr;
                 }else{
                     currPtr = 1;
+                    rightPtr = 1;
                 }
                 minCandies += Math.max(leftCheck[index], currPtr);
             } 
