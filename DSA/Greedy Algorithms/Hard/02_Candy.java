@@ -155,6 +155,42 @@ class Main {
     // ============================= Greedy Algorithm Approach =============================
 
         public static int candies_3(int[] ratings) {
+
+            int length = ratings.length;
+
+            int index = 1;
+
+            int minCandies = 1;
+
+            while(index < length){
+
+                if(ratings[index] == ratings[index-1]){
+                    minCandies += 1;
+                    index++;
+                    continue;                                                           
+                }
+
+                int peak = 1;
+
+                while(index < length && ratings[index] > ratings[index-1]){
+                    peak+=1;
+                    minCandies+=peak;
+                    index++;
+                }
+
+                int down = 1;
+
+                while(index < length && ratings[index] < ratings[index-1]){
+                    minCandies+=down; 
+                    down++;  
+                    index++;
+                }
+
+                if(down > peak) minCandies += (down-peak);
+
+            }
+
+            return minCandies;
             
         }
     
