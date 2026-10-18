@@ -43,7 +43,7 @@ class Main {
             }
 
             int rightCounter = 1;
-            rightCheck[length-1] = rightCounter;                            // T.C = O(3N), S.C = O(N) + O(N)
+            rightCheck[length-1] = rightCounter;                            // T.C = O(3N), S.C = O(2N)
 
             for(int index = length - 2 ; index >= 0 ; index--){
                 if(ratings[index] > ratings[index+1]){
@@ -80,37 +80,29 @@ class Main {
             int[] leftCheck = new int[length]; 
             int[] rightCheck = new int[length];
 
-            int leftCounter = 1;
-            leftCheck[0] = leftCounter;
-
-            int rightCounter = 1;
-            rightCheck[length-1] = rightCounter;
+            leftCheck[0] = 1;
+            rightCheck[length-1] = 1;
 
             for(int index = 1 ; index < length ; index++){
 
                 if(ratings[index-1] < ratings[index]){
-                    leftCounter++;
-                    leftCheck[index] = leftCounter;                                     // T.C = O(2N), S.C = O(N) + O(N)
+                    leftCheck[index] = ratings[index-1]+1;                                     // T.C = O(2N), S.C = O(2N) 
                 }else{
-                    leftCounter = 1;
-                    leftCheck[index] = leftCounter;
+                    leftCheck[index] = 1;
                 }
 
                 if(ratings[(length-index)-1] > ratings[(length-index)]){
-                    rightCounter++;
-                    rightCheck[(length-index)-1] = rightCounter;
+                    rightCheck[(length-index)-1] = ratings[(length-index)]+1;
                 }else{
-                    rightCounter = 1;
-                    rightCheck[(length-index)-1] = rightCounter;
+                    rightCheck[(length-index)-1] = 1;
                 }
-
             }
 
             int leftPtr = 0, rightPtr = 0;
             int minCandies = 0;
 
             while(leftPtr < length && rightPtr < length){
-                
+
                 minCandies += Math.max(leftCheck[leftPtr], rightCheck[rightPtr]);
 
                 leftPtr++;
