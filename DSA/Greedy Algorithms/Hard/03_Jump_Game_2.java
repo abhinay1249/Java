@@ -50,7 +50,26 @@ class Main {
 
         public static int jumpGame_1(int[] nums){
 
+            int left = 0, right = 0;
 
+            int length = nums.length;
+
+            int jumps = 0;
+
+            while(right < length - 1){
+                int farthest = 0;
+
+                for(int index = left ; index <= right ; index++){                       
+                    farthest = Math.max(farthest, index + nums[index]);
+                }
+
+                left = right+1;
+                right = farthest;
+
+                jumps+=1;
+            }
+
+            return jumps;
 
         }
 
