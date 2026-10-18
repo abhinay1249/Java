@@ -16,3 +16,21 @@
 // Output : 4
 // Explanation : The distribution of candies will be 1 , 2 , 1 to first , second , third child respectively.
 // The third gets only 1 candy because it satisfy above two criteria.
+
+class Main {
+
+    public static int candy(int[] ratings){
+
+        
+    }
+
+    public static void main(String[] args) {
+    
+        int[] ratings = {1, 0, 5};
+
+        int result = candy(ratings);
+
+        System.out.println(result);
+
+    }
+}
