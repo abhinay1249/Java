@@ -18,13 +18,36 @@
 
 class Main {
 
-    public static int jumpGame(int[] nums){
-        
-    }
+        public static int minJumps(int index, int jumps, int[] nums){
+
+            if(index >= nums.length - 1){
+                return jumps;
+            }
+
+            int minJump = Integer.MAX_VALUE;
+
+            for(int jump = 1 ; jump <= nums[index] ; jump++){
+                minJump = Math.min(minJump, minJumps(jump+index, jumps+1, nums));
+            }
+
+            return minJump;
+
+        }
+
+        public static int jumpGame(int[] nums) {
+
+            int index = 0;
+
+            int jumps = 0;
+
+            return minJumps(index, jumps, nums);
+
+        }
 
     public static void main(String[] args) {
         
         int[] nums = {2, 3, 1, 1, 4};
+
         int result = jumpGame(nums);
 
         System.out.println(result);
