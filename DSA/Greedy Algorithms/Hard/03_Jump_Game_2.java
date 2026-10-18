@@ -59,8 +59,8 @@ class Main {
             while(right < length - 1){
                 int farthest = 0;
 
-                for(int index = left ; index <= right ; index++){                       
-                    farthest = Math.max(farthest, index + nums[index]);
+                for(int index = left ; index <= right ; index++){                   // T.C = O(N), S.C = O(1)            
+                    farthest = Math.max(farthest, index + nums[index]);     
                 }
 
                 left = right+1;
