@@ -19,57 +19,59 @@
 
 class Main {
 
-    public static int candies(int[] ratings){
+    // ========================= Brute Force Approach ==================================
 
-       int length = ratings.length;
+        public static int candies(int[] ratings){
 
-        int[] leftCheck = new int[length]; 
-        int[] rightCheck = new int[length];
+           int length = ratings.length;
 
-        int leftCounter = 1;
-        leftCheck[0] = leftCounter;
-        
-        for(int index = 1 ; index < length ; index++){
+            int[] leftCheck = new int[length]; 
+            int[] rightCheck = new int[length];
 
-            if(ratings[index-1] < ratings[index]){
-                leftCounter++;
-                leftCheck[index] = leftCounter; 
-            }else{
-                leftCounter = 1;
-                leftCheck[index] = leftCounter;
+            int leftCounter = 1;
+            leftCheck[0] = leftCounter;
+
+            for(int index = 1 ; index < length ; index++){
+
+                if(ratings[index-1] < ratings[index]){
+                    leftCounter++;
+                    leftCheck[index] = leftCounter; 
+                }else{
+                    leftCounter = 1;
+                    leftCheck[index] = leftCounter;
+                }
             }
-        }
 
-        int rightCounter = 1;
-        rightCheck[length-1] = rightCounter;
+            int rightCounter = 1;
+            rightCheck[length-1] = rightCounter;
 
-        for(int index = length - 2 ; index >= 0 ; index--){
-            if(ratings[index] > ratings[index+1]){
-                rightCounter++;
-                rightCheck[index] = rightCounter;
-                
-            }else{
-                rightCounter = 1;
-                rightCheck[index] = rightCounter;
+            for(int index = length - 2 ; index >= 0 ; index--){
+                if(ratings[index] > ratings[index+1]){
+                    rightCounter++;
+                    rightCheck[index] = rightCounter;
+
+                }else{
+                    rightCounter = 1;
+                    rightCheck[index] = rightCounter;
+                }
+            } 
+
+            int leftPtr = 0, rightPtr = 0;
+            int minCandies = 0;
+
+
+            while(leftPtr < length && rightPtr < length){
+
+                int maxValue = Math.max(leftCheck[leftPtr], rightCheck[rightPtr]);
+                minCandies+= maxValue;
+
+                leftPtr++;
+                rightPtr++;
             }
-        } 
 
-        int leftPtr = 0, rightPtr = 0;
-        int minCandies = 0;
+            return minCandies;
 
-
-        while(leftPtr < length && rightPtr < length){
-
-            int maxValue = Math.max(leftCheck[leftPtr], rightCheck[rightPtr]);
-            minCandies+= maxValue;
-
-            leftPtr++;
-            rightPtr++;
         }
-
-        return minCandies;
-        
-    }
 
     public static void main(String[] args) {
     
