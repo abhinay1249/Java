@@ -110,7 +110,6 @@ class Main {
             int leftPtr = 0, rightPtr = 0;
             int minCandies = 0;
 
-
             while(leftPtr < length && rightPtr < length){
                 int maxValue = Math.max(leftCheck[leftPtr], rightCheck[rightPtr]);
                 minCandies+= maxValue;
@@ -129,6 +128,10 @@ class Main {
         int result = candies(ratings);
 
         System.out.println(result);
+
+        int result_1 = candies_1(ratings);
+
+        System.out.println(result_1);
 
     }
 }
