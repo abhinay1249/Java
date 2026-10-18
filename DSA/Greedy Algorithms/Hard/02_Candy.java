@@ -134,7 +134,7 @@ class Main {
 
             int minCandies = Math.max(leftCheck[length-1],1);                       // T.C = O(2N), S.C = O(N)
 
-            int currPtr;
+            int currPtr = 1;
             int rightPtr = 1;
 
             for(int index = length - 2 ; index >= 0 ; index--){
