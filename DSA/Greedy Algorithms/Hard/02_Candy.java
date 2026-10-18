@@ -19,7 +19,7 @@
 
 class Main {
 
-    // ========================= Brute Force Approach ==================================
+    // ================================= Brute Force Approach =================================
 
         public static int candies(int[] ratings){
 
@@ -71,7 +71,7 @@ class Main {
 
         }
 
-    // ================================ Better Approach ======================================
+    // ================================ Brtue - Better Approach ======================================
 
         public static int candies_1(int[] ratings){
 
@@ -113,9 +113,41 @@ class Main {
 
         }
 
-    // ========================= Greedy Algorithm Approach ==================================
+    // ================================ Better Approach ==================================
 
         public static int candies_2(int[] ratings){
+
+            int length = ratings.length;
+
+            int[] leftCheck = new int[length]; 
+
+            leftCheck[0] = 1;
+
+            for(int index = 1 ; index < length ; index++){
+
+                if(ratings[index-1] < ratings[index]){
+                    leftCheck[index] = ratings[index-1]+1; 
+                }else{
+                    leftCheck[index] = 1;
+                }
+            }
+
+            int minCandies = Math.max(leftCheck[length-1],1);
+
+            int currPtr;
+            int rightPtr = 1;
+
+            for(int index = length - 2 ; index >= 0 ; index--){
+                if(ratings[index] > ratings[index+1]){
+                    currPtr = rightPtr+1;
+                    rightPtr = currPtr;
+                }else{
+                    currPtr = 1;
+                }
+                minCandies += Math.max(leftCheck[index], currPtr);
+            } 
+
+            return minCandies;
 
         }
     
