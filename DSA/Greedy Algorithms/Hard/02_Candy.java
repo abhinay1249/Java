@@ -125,7 +125,7 @@ class Main {
     // ========================= Greedy Algorithm Approach ==================================
 
         public static int candies_2(int[] ratings){
-            
+
         }
     
     public static void main(String[] args) {
@@ -139,6 +139,10 @@ class Main {
         int result_1 = candies_1(ratings);
 
         System.out.println(result_1);
+
+        int result_2 = candies_2(ratings);
+
+        System.out.println(result_2);
 
     }
 }
