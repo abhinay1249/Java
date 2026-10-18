@@ -87,12 +87,11 @@ class Main {
             int rightCounter = 1;
             rightCheck[length-1] = rightCounter;
 
-
             for(int index = 1 ; index < length ; index++){
 
                 if(ratings[index-1] < ratings[index]){
                     leftCounter++;
-                    leftCheck[index] = leftCounter; 
+                    leftCheck[index] = leftCounter;                                     // T.C = O(2N), S.C = O(N) + O(N)
                 }else{
                     leftCounter = 1;
                     leftCheck[index] = leftCounter;
