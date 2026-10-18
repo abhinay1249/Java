@@ -60,9 +60,8 @@ class Main {
             int minCandies = 0;
 
             while(leftPtr < length && rightPtr < length){
-
-                int maxValue = Math.max(leftCheck[leftPtr], rightCheck[rightPtr]);
-                minCandies+= maxValue;
+ 
+                minCandies += Math.max(leftCheck[leftPtr], rightCheck[rightPtr]);
 
                 leftPtr++;
                 rightPtr++;
@@ -111,8 +110,8 @@ class Main {
             int minCandies = 0;
 
             while(leftPtr < length && rightPtr < length){
-                int maxValue = Math.max(leftCheck[leftPtr], rightCheck[rightPtr]);
-                minCandies+= maxValue;
+                
+                minCandies += Math.max(leftCheck[leftPtr], rightCheck[rightPtr]);
 
                 leftPtr++;
                 rightPtr++;
