@@ -26,13 +26,13 @@ class Main {
                 return jumps;
             }
 
-            int minJump = Integer.MAX_VALUE;
+            int minJump = Integer.MAX_VALUE;                
 
             for(int jump = 1 ; jump <= nums[index] ; jump++){
                 minJump = Math.min(minJump, minJumps(jump+index, jumps+1, nums));
             }
 
-            return minJump;
+            return minJump;                                                             // T.C = O(2^N), S.C = O(N)
 
         }
 
@@ -49,7 +49,9 @@ class Main {
     // ============================== Greedy Algorithm Approach ==============================
 
         public static int jumpGame_1(int[] nums){
-            
+
+
+
         }
 
     public static void main(String[] args) {
