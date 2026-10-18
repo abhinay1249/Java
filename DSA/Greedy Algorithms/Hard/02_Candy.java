@@ -132,7 +132,7 @@ class Main {
                 }
             }
 
-            int minCandies = Math.max(leftCheck[length-1],1);
+            int minCandies = Math.max(leftCheck[length-1],1);                       // T.C = O(2N), S.C = O(N)
 
             int currPtr;
             int rightPtr = 1;
