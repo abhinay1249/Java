@@ -170,7 +170,7 @@ class Main {
                     continue;                                                           
                 }
 
-                int peak = 1;
+                int peak = 1;                                                       // T.C = O(N), S.C = O(1)
 
                 while(index < length && ratings[index] > ratings[index-1]){
                     peak+=1;
